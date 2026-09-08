@@ -1,4 +1,4 @@
-export type Paragraph = { id: string; text: string; speaker?: string; ref?: string };
+export type Paragraph = { id: string; text: string; speaker?: string; ref?: string; sourcePage?: number };
 export type Option = { id: string; text: string; feedback: string };
 export type Question = {
   id: string;

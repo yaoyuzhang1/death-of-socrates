@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, BookOpen, Bookmark, Check, ChevronRight, List, Settings2, X } from 'lucide-react';
 import type { Corpus, Paragraph, Question, Save } from './model.ts';
-import { advance, chapterStats, createSave, flattenCorpus, navigate, orderedOptions, submitAnswer, useHint, validateSave } from './engine.ts';
+import { advance, chapterStats, createSave, flattenCorpus, navigate, orderedOptions, submitAnswer, validateSave } from './engine.ts';
 import './style.css';
 
 const STORAGE_KEY = 'republic-reading-v2';
@@ -12,9 +12,13 @@ type Practice = { questionId: string; choiceId?: string | null; hinted: boolean 
 
 function Text({ paragraph }: { paragraph: Paragraph }) {
   return <div className="passage" id={paragraph.id} data-paragraph-id={paragraph.id}>
-    {(paragraph.speaker || paragraph.ref) && <div className="speaker">{paragraph.speaker}{paragraph.ref && <span>{paragraph.ref}</span>}</div>}
+    {(paragraph.speaker || paragraph.ref || paragraph.sourcePage) && <div className="speaker">{paragraph.speaker}{paragraph.ref && <span>{paragraph.ref}</span>}{paragraph.sourcePage && <SourcePage page={paragraph.sourcePage} />}</div>}
     <p>{paragraph.text}</p>
   </div>;
+}
+
+function SourcePage({ page }: { page: number }) {
+  return <a className="source-page" href={`${import.meta.env.BASE_URL}text/parallel.html#p${page}`} target="_blank" rel="noreferrer" title="查看书页与译者注（含本页后文）">书页 {page} ↗</a>;
 }
 
 function Modal({ title, children, onClose }: { title: string; children: ReactNode; onClose: () => void }) {
@@ -58,7 +62,7 @@ export default function App() {
 
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`${import.meta.env.BASE_URL}text/republic.json`, { signal: controller.signal })
+    fetch(`${import.meta.env.BASE_URL}text/republic.json`, { signal: controller.signal, cache: 'no-cache' })
       .then(r => { if (!r.ok) throw new Error('正文暂时未能加载。'); return r.json(); })
       .then((data: Corpus) => {
         if (!data.edition || !data.chapters?.length || !flattenCorpus(data).length) throw new Error('正文数据不完整。');
@@ -134,7 +138,6 @@ export default function App() {
     ? practice.choiceId !== undefined ? { choiceId: practice.choiceId, hinted: practice.hinted } : undefined
     : firstAnswer;
   const revealed = !!displayedAnswer;
-  const hinted = practicing ? practice.hinted : !!question && save.hints.includes(question.id);
   const totalQuestions = units.filter(u => u.question).length;
   const characterCount = units.reduce((n, u) => n + [...u.paragraphs, ...(u.question ? [u.question.original] : []), ...u.response].reduce((a, p) => a + p.text.length, 0), 0);
   const firstOfChapter = units.findIndex(u => u.chapter.id === unit.chapter.id) === save.cursor;
@@ -155,11 +158,6 @@ export default function App() {
     else update(s => submitAnswer(s, unit, choiceId));
     setSelected(null);
     requestAnimationFrame(() => questionRef.current?.scrollIntoView({ block: 'start', behavior: 'instant' }));
-  };
-  const showHint = () => {
-    if (!question) return;
-    if (practicing) setPractice({ questionId: question.id, hinted: true });
-    else update(s => useHint(s, unit));
   };
   const next = () => {
     if (question && !firstAnswer) return;
@@ -192,18 +190,16 @@ export default function App() {
     return <section className={`question ${revealed ? 'is-revealed' : ''}`} aria-label="追问练习" ref={questionRef} data-question-id={q.id}>
       <div className="question-kicker">停一停，想一问 {practicing && <span>复习练习 · 首次记录保留</span>}</div>
       {!revealed ? <>
-        <h2>{q.prompt}</h2><p className="choice-caption">比较问法的价值，选择更能帮助思考的一项。</p>
+        <h2>{q.prompt}</h2>
         <fieldset><legend className="sr-only">选择一个追问</legend>{options.map((option, i) => <label className={`option ${selected === option.id ? 'selected' : ''}`} key={option.id}>
           <input type="radio" name={q.id} value={option.id} checked={selected === option.id} onChange={() => setSelected(option.id)} />
           <span className="option-letter" aria-hidden="true">{String.fromCharCode(65 + i)}</span><span>{option.text}</span>
         </label>)}</fieldset>
-        {hinted && <p className="hint" role="status">{q.hint}</p>}
         <div className="question-actions"><button className="primary" disabled={!selected} onClick={() => selected && choose(selected)}>确认选择 <ArrowRight size={17} /></button>
-          {!hinted && <button className="text-button" onClick={showHint}>给我一点提示</button>}
           <button className="text-button" onClick={() => choose(null)}>直接看原文</button></div>
       </> : <>
-        <p className="answer-result" role="status">{displayedAnswer!.choiceId === null ? '已揭示原问' : displayedAnswer!.choiceId === q.correctId ? '选得好，这一问抓住了关键。' : '看看苏格拉底这一问为什么更好。'}{displayedAnswer!.hinted && <span>使用过提示</span>}</p>
-        <div className="original-question"><div className="speaker">{q.original.speaker || '苏格拉底'}<span>{q.sourceRef}</span></div><p data-paragraph-id={q.original.id}>{q.original.text}</p></div>
+        <p className="answer-result" role="status">{displayedAnswer!.choiceId === null ? '已揭示原问' : displayedAnswer!.choiceId === q.correctId ? '你的选择与原问对应。' : '你的选择与原问不同。'}</p>
+        <div className="original-question"><div className="speaker">{q.original.speaker || '苏格拉底'}<span>{q.sourceRef}</span>{q.original.sourcePage && <SourcePage page={q.original.sourcePage} />}</div><p data-paragraph-id={q.original.id}>{q.original.text}</p></div>
         <aside className="explanation" aria-label="为什么这一问更好"><h3>为什么这一问更好</h3><p>{q.explanation}</p>
           <div className="comparisons">{options.filter(o => o.id !== q.correctId).map(o => <div key={o.id}><p className="comparison-question">{o.text}{displayedAnswer!.choiceId === o.id && <span className="chosen-tag">你的选择</span>}</p><p>{o.feedback}</p></div>)}</div>
         </aside>
@@ -248,7 +244,7 @@ export default function App() {
 
     {screen === 'read' && <main id="main" className="reading-shell" ref={readerTop}>
       <div className="reading-location"><button className="text-button" onClick={() => setPanel('contents')}>第{numerals[unit.chapterIndex]}章 · {unit.chapter.title}</button><button className={`icon-button bookmark-button ${save.bookmarks.includes(unit.id) ? 'bookmarked' : ''}`} aria-label={save.bookmarks.includes(unit.id) ? '移除书签' : '添加书签'} title="书签" onClick={() => update(s => ({ ...s, bookmarks: s.bookmarks.includes(unit.id) ? s.bookmarks.filter(id => id !== unit.id) : [...s.bookmarks, unit.id] }))}><Bookmark size={19} fill={save.bookmarks.includes(unit.id) ? 'currentColor' : 'none'} /></button></div>
-      {firstOfChapter && <section className="chapter-intro"><p className="eyebrow">第{numerals[unit.chapterIndex]}章 / {corpus.chapters.length}章</p><h1>{unit.chapter.title}</h1><p>{unit.chapter.introduction}</p></section>}
+      {firstOfChapter && <section className="chapter-intro"><p className="eyebrow">第{numerals[unit.chapterIndex]}章 / {corpus.chapters.length}章</p><h1>{unit.chapter.title}</h1><p>{unit.chapter.range}</p></section>}
       <div className="reading-section-heading"><h2>{unit.section.title}</h2><span>{unit.section.range}</span></div>
       <article className="reading-text" aria-label="原典正文">
         {unit.paragraphs.map(p => <Text key={p.id} paragraph={p} />)}
@@ -261,8 +257,8 @@ export default function App() {
       <div className="reading-footnote"><span>第{chapterNumber}章 · 阅读位置 {units.filter(u => u.chapter.id === unit.chapter.id && u.index <= save.cursor).length} / {units.filter(u => u.chapter.id === unit.chapter.id).length}</span><button className="text-button" onClick={() => setPanel('source')}>底本说明</button></div>
     </main>}
 
-    {screen === 'chapter-end' && <main id="main" className="chapter-end"><p className="eyebrow">这一章，读到这里</p><h1>{summary.title}</h1><p className="chapter-conclusion">{summary.conclusion}</p>
-      <div className="chapter-score"><div><strong>{summaryStats.correct}<span> / {summaryStats.total}</span></strong><p>首次答对</p></div><p>直接揭示 {summaryStats.revealed} 题<br />使用提示 {summaryStats.hinted} 题</p></div>
+    {screen === 'chapter-end' && <main id="main" className="chapter-end"><p className="eyebrow">本章已读完</p><h1>{summary.title}</h1><p className="chapter-conclusion">{summary.range}</p>
+      <div className="chapter-score"><div><strong>{summaryStats.correct}<span> / {summaryStats.total}</span></strong><p>首次答对</p></div><p>直接揭示 {summaryStats.revealed} 题</p></div>
       <h2>再看一眼这些追问</h2><div className="review-questions">{units.filter(u => u.chapter.id === summary.id && u.question).map(u => <button key={u.id} onClick={() => goTo(u.index)}><span>{u.question!.sourceRef}</span><strong>{u.question!.original.text}</strong><ArrowRight size={17} /></button>)}</div>
       {nextChapterUnit ? <button className="primary" onClick={() => goTo(nextChapterUnit.index)}>进入下一章 <ArrowRight size={18} /></button> : <><p className="end-note">你已读完本篇。讨论仍将继续；现在也可以回到任何已读章节，重新体会其中的追问。</p><button className="primary" onClick={() => setScreen('home')}>回到目录 <BookOpen size={18} /></button></>}
     </main>}
@@ -280,7 +276,7 @@ export default function App() {
         <section><h3>进度备份</h3><p>阅读位置与首次作答保存在本机。换浏览器前，可以导出一份备份。</p><div className="backup-actions"><button onClick={exportProgress}>导出进度</button><button onClick={() => fileRef.current?.click()}>导入进度</button><input ref={fileRef} type="file" accept=".json,application/json" className="sr-only" aria-label="选择进度文件" onChange={e => importProgress(e.target.files?.[0])} /></div></section>
         <section>{confirmReset ? <><p>重新开始会清除本浏览器中的阅读与答题记录。可以先导出备份。</p><div className="backup-actions"><button onClick={() => { setSave(createSave(corpus)); setScreen('home'); setPanel(null); setConfirmReset(false); }}>确认重新开始</button><button onClick={() => setConfirmReset(false)}>保留进度</button></div></> : <button className="text-button" onClick={() => setConfirmReset(true)}>重新开始阅读</button>}</section>
       </div>}
-      {panel === 'source' && <div className="source-panel"><p className="eyebrow">柏拉图 · 理想国</p><h3>{corpus.edition.label}</h3><p>{corpus.edition.description}</p><p>译文：{corpus.edition.translator}</p><ul>{corpus.edition.notes.map(note => <li key={note}>{note}</li>)}</ul><p>{corpus.edition.license}</p><a href={corpus.edition.sourceUrl} target="_blank" rel="noreferrer">查看底本来源 ↗</a><p><a href={`${import.meta.env.BASE_URL}text/parallel.html`} target="_blank" rel="noreferrer">中英对照全文（含后文） ↗</a> · <a href={`${import.meta.env.BASE_URL}TEXT-LICENSE.txt`} target="_blank" rel="noreferrer">署名与许可 ↗</a></p><hr /><h3>关于追问练习</h3><p>选项是为比较问法而写的教学表述。选择后会揭示实际译文，并解释为什么这一问在此处更有价值。解释是编辑说明，与原典正文分开。</p><p>所有选择都接回相同的原典。章节按讨论主题划分；读完一章不意味着其中所有哲学问题都已解决。</p></div>}
+      {panel === 'source' && <div className="source-panel"><p className="eyebrow">柏拉图 · 理想国</p><h3>{corpus.edition.label}</h3><p>{corpus.edition.description}</p><p>译文：{corpus.edition.translator}</p><ul>{corpus.edition.notes.map(note => <li key={note}>{note}</li>)}</ul><p>{corpus.edition.license}</p><a href={corpus.edition.sourceUrl} target="_blank" rel="noreferrer">出版社书目信息 ↗</a><p><a href={`${import.meta.env.BASE_URL}text/parallel.html`} target="_blank" rel="noreferrer">书页与连续全文（含后文） ↗</a> · <a href={`${import.meta.env.BASE_URL}TEXT-LICENSE.txt`} target="_blank" rel="noreferrer">署名与文本说明 ↗</a></p><hr /><h3>关于追问练习</h3><p>原问对应选项取自本译本；另两项是围绕同一对象、条件或关系作的小幅改写。作答后揭示原句，说明它怎样承接本段对话。选项比较与说明属于编辑文字。</p><p>所有选择都接回相同的原典。八个主题章为阅读分段，卷次、对话次序及其后续论证保持不变。</p></div>}
     </Modal>}
   </div>;
 }

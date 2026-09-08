@@ -1,135 +1,129 @@
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 
 const read = path => JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), 'utf8').replace(/^\uFEFF/, ''));
 const output = new URL('../reader-public/text/', import.meta.url);
-mkdirSync(output, {recursive: true});
-const rows = [], questions = [];
-const quote = (text, book) => [2, 4].includes(book) ? text.replace(/[‘’“”]/g, c => ({'‘':'“','’':'”','“':'‘','”':'’'}[c])) : text;
-const clean = text => text.replace(/\s/g, '');
-for (let book = 1; book <= 4; book++) {
-  const en = read(`content/source/book${book}-en.json`), zh = read(`content/source/book${book}-zh.json`);
-  assert.deepEqual(zh.map(r => r.ref), en.map(r => r.ref), `Book ${book} reference coverage`);
-  assert.equal(zh.length, [136, 132, 156, 131][book - 1]);
-  zh.forEach((r, i) => { assert.ok(r.text.trim(), r.ref); rows.push({...r, text: quote(r.text, book), book, english: en[i].english}); });
-  questions.push(...read(`content/questions/book${book}.json`).map(q => ({...q, anchor: quote(q.anchor, book)})));
-}
-assert.equal(new Set(rows.map(r => r.ref)).size, 555);
-let full = '';
-const refs = new Map();
-for (const row of rows) {
-  if (row.ref === '357a' || row.ref === '386a' || row.ref === '419a') full += '\n\n';
-  refs.set(row.ref, {start: full.length, end: full.length + row.text.length, book: row.book});
-  full += row.text;
-}
-// A normalized index permits anchors to span Stephanus boundaries, which can fall mid-sentence.
-let compact = ''; const offsets = [];
-for (let i = 0; i < full.length; i++) if (!/\s/.test(full[i])) { compact += full[i]; offsets.push(i); }
-for (const q of questions) {
-  assert.equal(q.options.length, 3, q.id);
-  assert.equal(new Set(q.options.map(o => o.id)).size, 3, q.id);
-  assert.equal(q.options.filter(o => o.id === q.correctId).length, 1, q.id);
-  assert.ok(q.explanation.length >= 80 && q.explanation.length <= 180, `${q.id} explanation`);
-  assert.ok(q.options.every(o => o.feedback.length > 15), `${q.id} feedback`);
-  const target = clean(q.anchor), index = compact.indexOf(target);
-  assert.ok(index >= 0, `Missing anchor: ${q.id}`);
-  assert.equal(compact.indexOf(target, index + 1), -1, `Ambiguous anchor: ${q.id}`);
-  q.start = offsets[index]; q.end = offsets[index + target.length - 1] + 1;
-  // Bring short speech introductions and closing quotation marks into the revealed original.
-  const lineStart = full.lastIndexOf('\n', q.start - 1) + 1;
-  const prefix = full.slice(lineStart, q.start);
-  if (prefix.length < 45 && !/[。？！]/.test(prefix)) q.start = lineStart;
-  if (/^[”’]/.test(full.slice(q.end))) q.end++;
-}
-questions.sort((a,b) => a.start - b.start);
-questions.forEach((q,i) => { if(i) assert.ok(questions[i-1].end <= q.start, `Overlapping questions ${q.id}`); });
-
-function locate(point) {
-  if (point.question) { const q = questions.find(q => q.id === point.question); assert.ok(q); return q.start; }
-  const ref = refs.get(point.ref); assert.ok(ref, point.ref);
-  if (point.before) {
-    const marker = quote(point.before, ref.book), index = full.indexOf(marker, ref.start);
-    assert.ok(index >= ref.start && index < ref.end, `Missing boundary ${point.ref}: ${marker}`);
-    return index;
+mkdirSync(output, {recursive:true});
+const source = read('content/source/guo-1986-pages.json');
+const pages = source.pages;
+assert.deepEqual(pages.map(p=>p.printedPage), Array.from({length:176},(_,i)=>i+1));
+assert.deepEqual(pages.filter(p=>[1,44,82,132].includes(p.printedPage)).map(p=>p.book),[1,2,3,4]);
+const clean = text => text.replace(/\s/g,'');
+let full=''; const spans=[], pageSpans=new Map();
+for(const page of pages) {
+  assert.equal(page.pdfPage,page.printedPage+11);
+  assert.ok(existsSync(new URL(`../reader-public/facsimile/page-${String(page.printedPage).padStart(3,'0')}.webp`,import.meta.url)));
+  const firstSpan=spans.length;
+  for(const p of page.paragraphs) {
+    assert.ok(p.text.trim(),`Empty paragraph on page ${page.printedPage}`);
+    if(full && !p.continuesPrevious)full+='\n';
+    const start=full.length;
+    full+=p.text;
+    spans.push({start,end:full.length,page:page.printedPage,ref:p.ref,book:page.book});
   }
-  if (point.paragraph) return full.lastIndexOf('\n', ref.start - 1) + 1;
-  return ref.start;
+  pageSpans.set(page.printedPage,{start:spans[firstSpan].start,end:full.length});
 }
-function refAt(offset) {
-  return rows.find(r => {const span = refs.get(r.ref); return offset >= span.start && offset < span.end;})?.ref
-    ?? rows.filter(r => refs.get(r.ref).start <= offset).at(-1)?.ref ?? rows[0].ref;
+const anchorClean=text=>text.replace(/[\s①-⑳]/g,'');
+let compact=''; const offsets=[];
+for(let i=0;i<full.length;i++) if(!/[\s①-⑳]/.test(full[i])) {compact+=full[i];offsets.push(i);}
+const questions=[1,2,3,4].flatMap(book=>read(`content/questions/book${book}.json`));
+for(const q of questions) {
+  assert.equal(q.prompt,'下面哪句话更像一个好问题？',q.id);
+  assert.equal(q.hint,'',q.id);
+  assert.equal(q.options.length,3,q.id);
+  assert.equal(new Set(q.options.map(o=>o.id)).size,3,q.id);
+  const correct=q.options.find(o=>o.id===q.correctId);
+  assert.ok(correct, q.id);
+  assert.ok(clean(q.anchor).includes(clean(correct.text)),`${q.id}: correct choice must quote the actual question`);
+  assert.ok(q.explanation.length>=30&&q.explanation.length<=100,`${q.id}: explanation`);
+  assert.ok(q.options.every(o=>o.feedback.length>=15&&o.feedback.length<=70),`${q.id}: feedback`);
+  assert.equal(q.pdfPage,q.printedPage+11,`${q.id}: source page`);
+  const target=anchorClean(q.anchor),at=compact.indexOf(target);
+  assert.ok(at>=0,`Missing anchor: ${q.id}: ${q.anchor}`);
+  assert.equal(compact.indexOf(target,at+1),-1,`Ambiguous anchor: ${q.id}`);
+  q.start=offsets[at];q.end=offsets[at+target.length-1]+1;
+  assert.ok(q.start>=pageSpans.get(q.printedPage).start&&q.start<pageSpans.get(q.printedPage).end,`${q.id}: page mismatch`);
+  const lineStart=full.lastIndexOf('\n',q.start-1)+1;
+  const prefix=full.slice(lineStart,q.start);
+  // Include only a speaker label, never editorially hide extra preceding claims.
+  if(/^[〔\[“]?苏(?:格拉底)?[：:]\s*$/.test(prefix))q.start=lineStart;
 }
-const refRange = (start, end) => refAt(start) === refAt(Math.max(start, end - 1)) ? refAt(start) : `${refAt(start)}—${refAt(end - 1)}`;
-let paragraphId = 0, unitId = 0;
-function paragraphs(start, end) {
-  const result = []; let at = start, previousRef = '';
-  for (const piece of full.slice(start, end).split(/(\n+)/)) {
-    if (piece.trim()) {
-      const ref = refRange(at, at + piece.length);
-      result.push({id: `p-${String(++paragraphId).padStart(4,'0')}`, text: piece, ...(previousRef !== ref ? {ref} : {})});
-      previousRef = ref;
+questions.sort((a,b)=>a.start-b.start);
+questions.forEach((q,i)=>{if(i)assert.ok(questions[i-1].end<=q.start,`Overlapping question: ${q.id}`);});
+function locate(point) {
+  if(point.question) {const q=questions.find(q=>q.id===point.question);assert.ok(q,point.question);return q.start;}
+  const page=pageSpans.get(point.page);assert.ok(page,`Missing page ${point.page}`);
+  if(point.before) {
+    const at=full.indexOf(point.before,page.start);
+    assert.ok(at>=page.start&&at<page.end,`Missing boundary p${point.page}: ${point.before}`);
+    const lineStart=full.lastIndexOf('\n',at-1)+1;
+    const prefix=full.slice(lineStart,at);
+    return /^[〔\[“]?(?:苏(?:格拉底)?[：:])?$/.test(prefix)?lineStart:at;
+  }
+  return page.start;
+}
+function spanAt(offset) {return spans.find(s=>offset>=s.start&&offset<s.end)??spans.filter(s=>s.start<=offset).at(-1)??spans[0];}
+function printedRange(a,b) {const first=spanAt(a).page,last=spanAt(b-1).page;return first===last?`第 ${first} 页`:`第 ${first}—${last} 页`;}
+let paragraphId=0,unitId=0;
+function paragraphs(start,end) {
+  const result=[];let at=start,previousPage=null,previousRef=null;
+  for(const piece of full.slice(start,end).split(/(\n+)/)) {
+    if(piece.trim()) {
+      const span=spanAt(at);
+      result.push({id:`p-${String(++paragraphId).padStart(4,'0')}`,text:piece,...(span.ref&&span.ref!==previousRef?{ref:span.ref}:{}),...(span.page!==previousPage?{sourcePage:span.page}:{})});
+      previousPage=span.page;previousRef=span.ref;
     }
-    at += piece.length;
+    at+=piece.length;
   }
   return result;
 }
-const structure = read('content/structure.json');
-const chapters = structure.map((chapter, ci) => {
-  const start = locate(chapter.start), end = ci + 1 < structure.length ? locate(structure[ci + 1].start) : full.length;
-  const sections = chapter.sections.map((section, si) => {
-    let a = si === 0 ? start : locate(section.start), b = si + 1 < chapter.sections.length ? locate(chapter.sections[si + 1].start) : end;
-    // A subsection marker cannot split the actual question that is being withheld.
-    const containingA = questions.find(q => a > q.start && a < q.end);
-    const containingB = questions.find(q => b > q.start && b < q.end);
-    if (containingA) a = containingA.start;
-    if (containingB) b = containingB.start;
-    assert.ok(a >= start && b <= end && b > a, `Section boundaries ${section.id}`);
-    const within = questions.filter(q => q.start >= a && q.start < b);
-    const units = []; let cursor = a;
-    for (const [qi, q] of within.entries()) {
-      assert.equal(q.chapterId, chapter.id, `Question in wrong chapter: ${q.id}`);
-      assert.ok(q.end <= b, `Question split across sections: ${q.id}`);
-      // Show the immediate reply after feedback. The rest follows in source order.
-      const limit = within[qi + 1]?.start ?? b;
-      let responseEnd = qi === within.length - 1 ? b : full.indexOf('\n', q.end + 2);
-      if (responseEnd < q.end || responseEnd > limit) responseEnd = q.end;
-      const original = {id: `p-${String(++paragraphId).padStart(4,'0')}`, speaker: '苏格拉底', ref: q.sourceRef, text: full.slice(q.start, q.end)};
-      units.push({id:`u-${String(++unitId).padStart(3,'0')}`, paragraphs:paragraphs(cursor,q.start), question: {id:q.id,sourceRef:q.sourceRef,prompt:q.prompt,original,options:q.options,correctId:q.correctId,explanation:q.explanation,hint:q.hint}, response:paragraphs(q.end,responseEnd)});
-      cursor = responseEnd;
+const structure=read('content/structure.json');
+const chapters=structure.map((chapter,ci)=>{
+  const start=locate(chapter.start),end=ci+1<structure.length?locate(structure[ci+1].start):full.length;
+  const sections=chapter.sections.map((section,si)=>{
+    let a=si===0?start:locate(section.start),b=si+1<chapter.sections.length?locate(chapter.sections[si+1].start):end;
+    for(const q of questions){if(a>q.start&&a<q.end)a=q.start;if(b>q.start&&b<q.end)b=q.start;}
+    assert.ok(a>=start&&b<=end&&b>a,`Section boundary ${section.id}`);
+    const within=questions.filter(q=>q.start>=a&&q.start<b),units=[];let cursor=a;
+    for(const [qi,q] of within.entries()) {
+      assert.equal(q.chapterId,chapter.id,`Question chapter ${q.id}`);
+      assert.ok(q.end<=b,`Split question ${q.id}`);
+      const limit=within[qi+1]?.start??b;
+      let responseEnd=qi===within.length-1?b:full.indexOf('\n',q.end+2);
+      if(responseEnd<q.end||responseEnd>limit)responseEnd=q.end;
+      const original={id:`p-${String(++paragraphId).padStart(4,'0')}`,speaker:'苏格拉底',ref:q.sourceRef,sourcePage:q.printedPage,text:full.slice(q.start,q.end)};
+      units.push({id:`u-${String(++unitId).padStart(3,'0')}`,paragraphs:paragraphs(cursor,q.start),question:{id:q.id,sourceRef:q.sourceRef,prompt:q.prompt,original,options:q.options,correctId:q.correctId,explanation:q.explanation,hint:q.hint},response:paragraphs(q.end,responseEnd)});
+      cursor=responseEnd;
     }
-    if (!within.length || cursor < b) units.push({id:`u-${String(++unitId).padStart(3,'0')}`, paragraphs:paragraphs(cursor,b),response:[]});
-    return {id:section.id,title:section.title,range:refRange(a,b),units};
+    if(!within.length||cursor<b)units.push({id:`u-${String(++unitId).padStart(3,'0')}`,paragraphs:paragraphs(cursor,b),response:[]});
+    return {id:section.id,title:section.title,range:printedRange(a,b),units};
   });
-  return {id:chapter.id,title:chapter.title,subtitle:chapter.subtitle,range:chapter.range,introduction:chapter.introduction,conclusion:chapter.conclusion,sections};
+  return {id:chapter.id,title:chapter.title,subtitle:chapter.subtitle,range:chapter.range,introduction:'',conclusion:'',sections};
 });
-const edition = {
-  id:'republic-shorey-zh-2026-09-08',
-  label:'据保罗·肖里英译的中文转译',
-  description:'阅读范围为《理想国》第一至第四卷，327a—445e。依据 Paul Shorey 英译的 Perseus 数字化文本逐段转译为中文，保留这段范围内的全部正文；按讨论主题分为八章。',
-  translator:'中文由 AI 辅助转译、交叉核对，非现成出版中文译本，尚未经古典学专家全面校订。',
-  sourceUrl:'https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg030/tlg0059.tlg030.perseus-eng2.xml',
-  license:'原作：柏拉图。英译：Paul Shorey。数字化：Perseus Project / Tufts University。中文转译、题库和数字化底本依 CC BY-SA 4.0 共享；程序代码依 MIT 许可。',
+const edition={
+  id:'republic-guo-zhang-1986-2026-09-08',
+  label:'郭斌和、张竹明译 · 商务印书馆 1986 年版',
+  description:'收录《理想国》第一至四卷（书页1—176），按讨论主题分为八章。正文依照本译本扫描整理，保留原有对话次序、人物发言及短应答。',
+  translator:'郭斌和、张竹明。商务印书馆，1986年8月第一版、北京第一次印刷。',
+  sourceUrl:'https://www.cp.com.cn/book/db77c5fe-b.html',
+  license:'译文与原版书页的权利归相应权利人，不适用本项目程序代码的MIT许可或旧版转译稿的CC BY-SA声明。',
   notes:[
-    '327a 等编号是通行的斯特凡努斯页码，可能落在句子中间。卷际页码自然跳转；正文按原有顺序接续。',
-    '诗乐教育包含故事、诗歌、音乐等养成内容；原文中的技艺、德性、灵魂等术语，也不能完全等同于今天的狭义用法。',
-    '激情对应 thumos，亦常译意气：此处特别讨论愤怒、自尊和奋起抗争的力量，并不泛指所有强烈情绪。',
-    '保留原文有关阶层、性别、奴隶、教育限制等有争议的论述，供理解和检验，不代表制作方赞同。',
-    '章节导语、题目、提示、作答解释与章末回顾为教学编辑文字。正文包括叙事、诗引、长篇发言和简短应答，不以摘要替代。',
-    '没有配音、支线、计时或自动翻页。答错也可继续；提示和直接揭示会保留记录，复习不会覆盖首次选择。',
-    '对照文本提供全部 555 个页码片段，便于查阅底本和报告转译问题。文本完整性校验验证收录与顺序，不代表所有翻译或哲学解释已获学术定论。'
+    '正文保留本译本的人物称谓、发言简称和术语。八个主题章为阅读分段，不改动原书卷次与论证顺序。',
+    '题前不附思路提示。原问选项取自译本；另两项及题后说明为编辑文字，仅围绕当前问答的对象、条件和推论。',
+    '“书页”对应1986年版印刷页码。打开后可核对原版扫描及译者注，会看到该页后文。',
+    '电子正文经本地文字识别与校正，仍可能残留录入误差。书页扫描为核查依据；字符覆盖检查不等于逐字学术校勘。',
+    '没有配音、支线、计时或自动翻页。答错和直接揭示都能继续阅读，复习保留首次记录。'
   ]
 };
-const corpus = {title:'理想国 · 苏格拉底的下一问',edition,chapters};
-const units = chapters.flatMap(c => c.sections.flatMap(s => s.units));
-const reconstructed = units.flatMap(u => [...u.paragraphs,...(u.question ? [u.question.original] : []),...u.response]).map(p => p.text).join('');
-assert.equal(clean(reconstructed),clean(full),'Every source character must appear once and in order');
-assert.equal(units.filter(u => u.question).length,questions.length);
-const coverage = {editionId:edition.id,refs:rows.map(r => r.ref),referenceCount:rows.length,chapterCount:chapters.length,sectionCount:chapters.reduce((n,c)=>n+c.sections.length,0),unitCount:units.length,questionCount:questions.length,characterCount:clean(full).length,sha256:createHash('sha256').update(clean(full)).digest('hex'),chapters:chapters.map(c=>({id:c.id,title:c.title,range:c.range,questions:c.sections.flatMap(s=>s.units).filter(u=>u.question).length}))};
-writeFileSync(new URL('republic.json',output),JSON.stringify(corpus,null,2)+'\n');
-writeFileSync(new URL('coverage.json',output),JSON.stringify(coverage,null,2)+'\n');
-writeFileSync(new URL('parallel.json',output),JSON.stringify(rows.map(({ref,book,text,english})=>({ref,book,chinese:text,english})),null,2)+'\n');
-const escape = text => text.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const page = `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>理想国 · 中英对照文本</title><style>body{max-width:1100px;margin:40px auto;padding:0 24px;background:#f7f5ee;color:#242d29;font-family:system-ui;line-height:1.8}a{color:#38644f}h1{font-size:28px}section{border-top:1px solid #d5d9ce;padding:20px 0;scroll-margin-top:20px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:32px}.pair p{white-space:pre-wrap;margin-top:0}.zh{font-family:"Noto Serif SC","Songti SC",SimSun,serif;font-size:19px}@media(max-width:700px){.pair{grid-template-columns:1fr;gap:12px}}</style><h1>《理想国》第一至四卷 · 对照文本</h1><p><a href="../index.html">返回互动阅读</a> · <a href="../TEXT-LICENSE.txt">署名与许可</a></p><p>${escape(edition.description)} ${escape(edition.translator)} 此页会显示后文，按页码连续列出全部内容。</p><p>英译：Paul Shorey；数字化：Perseus Project / Tufts University；中文：本项目转译。<a href="${edition.sourceUrl}">英文底本</a> · <a href="parallel.json" download>下载对照数据</a></p>${rows.map(r=>`<section id="${r.ref}"><h2>${r.ref} <small>第${r.book}卷</small></h2><div class="pair"><p class="zh">${escape(r.text)}</p><p lang="en">${escape(r.english)}</p></div></section>`).join('')}</html>`;
-writeFileSync(new URL('parallel.html',output),page);
-console.log(`正文：${coverage.referenceCount} 个片段 / ${coverage.chapterCount} 章 / ${coverage.sectionCount} 小节 / ${coverage.questionCount} 题 / ${coverage.characterCount} 字符；收录顺序与字符校验通过。`);
+const corpus={title:'理想国 · 苏格拉底的下一问',edition,chapters};
+const units=chapters.flatMap(c=>c.sections.flatMap(s=>s.units));
+const reconstructed=units.flatMap(u=>[...u.paragraphs,...(u.question?[u.question.original]:[]),...u.response]).map(p=>p.text).join('');
+assert.equal(clean(reconstructed),clean(full),'Every transcribed source character must occur once, in order');
+assert.equal(units.filter(u=>u.question).length,questions.length);
+const coverage={editionId:edition.id,sourcePdfSha256:source.pdfSha256,printedPages:pages.map(p=>p.printedPage),pageCount:pages.length,chapterCount:chapters.length,sectionCount:chapters.reduce((n,c)=>n+c.sections.length,0),unitCount:units.length,questionCount:questions.length,characterCount:clean(full).length,sha256:createHash('sha256').update(clean(full)).digest('hex'),chapters:chapters.map(c=>({id:c.id,title:c.title,range:c.range,questions:c.sections.flatMap(s=>s.units).filter(u=>u.question).length}))};
+for(const [name,value] of [['republic',corpus],['coverage',coverage],['parallel',source]])writeFileSync(new URL(`${name}.json`,output),JSON.stringify(value,null,2)+'\n');
+const escape=text=>text.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pageHtml=`<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>理想国 · 1986年版书页对照</title><link rel="icon" type="image/svg+xml" href="../icon.svg"><style>body{max-width:1280px;margin:32px auto;padding:0 22px;background:#f7f5ee;color:#242d29;font-family:system-ui;line-height:1.85}a{color:#38644f}h1{font-size:26px}h2{font-size:20px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.scan{width:100%;height:auto}.text{font-family:SimSun,"Songti SC",serif;font-size:20px}.text p{white-space:pre-wrap;margin:0 0 1em}.notes{font-size:15px;border-top:1px solid #d5d9ce;padding-top:12px}section{border-top:1px solid #ccc;padding:20px 0;scroll-margin-top:12px}.pager{display:flex;justify-content:space-between}small{font:12px system-ui;color:#6d756c}nav{display:flex;gap:12px;flex-wrap:wrap}summary{cursor:pointer}@media(max-width:750px){.pair{grid-template-columns:1fr}.text{font-size:19px}.scan{max-width:650px}}</style><h1>《理想国》第一至四卷 · 书页对照</h1><p>郭斌和、张竹明译 · 商务印书馆1986年8月第一版。书页1—176；含尚未读到的后文。</p><p><a href="../index.html">返回互动阅读</a> · <a href="../TEXT-LICENSE.txt">署名与文本说明</a></p><p>扫描图为本次整理的校核依据。正文经本地文字识别与校正，尚可能有录入误差；脚注保留在原版页图中。以下按书页连续展示，不加入题目与解释。</p><details><summary>跳到书页</summary><nav>${pages.map(p=>`<a href="#p${p.printedPage}">${p.printedPage}</a>`).join(' ')}</nav></details>${pages.map(p=>`<section id="p${p.printedPage}"><h2>第 ${p.printedPage} 页 <small>第${p.book}卷</small></h2><div class="pair"><a href="../facsimile/page-${String(p.printedPage).padStart(3,'0')}.webp" target="_blank"><img class="scan" loading="lazy" width="1428" height="2020" src="../facsimile/page-${String(p.printedPage).padStart(3,'0')}.webp" alt="1986年版第${p.printedPage}页扫描，含本页原文与译者注"></a><div class="text">${p.paragraphs.map(r=>`<p>${escape(r.text)}</p>`).join('')}${p.notes?.length?`<div class="notes"><p>本页译者注（扫描可核对）</p>${p.notes.map(n=>`<p>${escape(n)}</p>`).join('')}</div>`:''}</div></div><div class="pager">${p.printedPage>1?`<a href="#p${p.printedPage-1}">上一页</a>`:'<span></span>'}${p.printedPage<176?`<a href="#p${p.printedPage+1}">下一页</a>`:''}</div></section>`).join('')}</html>`;
+writeFileSync(new URL('parallel.html',output),pageHtml);
+console.log(`${coverage.pageCount}书页 / ${coverage.chapterCount}章 / ${coverage.sectionCount}小节 / ${coverage.questionCount}题 / ${coverage.characterCount}正文字符；收录次序与字符校验通过。`);
