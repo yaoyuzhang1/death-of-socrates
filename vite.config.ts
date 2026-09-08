@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   base: "./",
   plugins: [react()],
-  server: { watch: { ignored: ["**/.local/**", "**/public/voice/**"] } },
+  publicDir: "reader-public",
+  server: { watch: { ignored: ["**/.local/**"] } },
   build: { outDir: "dist" },
 });

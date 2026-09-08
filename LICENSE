@@ -20,6 +20,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Scope: This license covers this project's original software and documentation.
-It does not relicense third-party works, artwork, or audio assets. See
-THIRD_PARTY_NOTICES.md for their separate provenance and terms.
+Scope: This license covers this project's original software and general project
+documentation. It excludes the reading corpus, Chinese translation, question
+bank, and their editorial content, which are shared under CC BY-SA 4.0. It does
+not relicense third-party materials or public-domain works. See
+THIRD_PARTY_NOTICES.md and reader-public/TEXT-LICENSE.txt for attribution,
+separate provenance, and terms.

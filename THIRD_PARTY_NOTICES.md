@@ -1,43 +1,46 @@
 # 来源与许可说明
 
-本项目的 MIT 许可适用于原创软件与项目文档，不替第三方作品、图片、声库或服务重新授权。
+《理想国 · 苏格拉底的下一问》的软件、阅读文本与第三方依赖适用不同许可。代码的 MIT 许可不替代本文列出的文本或依赖许可。
 
-## 雅克-路易·大卫：《苏格拉底之死》
+## 古代作品与英文底本
 
-- 文件：`public/death-of-socrates.jpg`。
-- 作者：Jacques Louis David，1787 年。
-- 馆藏：The Metropolitan Museum of Art，藏品编号 31.45。
-- 来源：[官方作品页](https://www.metmuseum.org/art/collection/search/436105)。该页明确标记 **Public Domain**。
-- 开放获取依据：[The Met Open Access](https://www.metmuseum.org/hubs/open-access)，公有领域作品图像按 CC0 提供。
-- 本仓库不对该图像新增版权限制，也不将其标为本项目创作。画作用作后世回望苏格拉底之死的视觉表达，不是事件现场记录。
-- SHA-256：`eaff5a04103361fed9fba6f10ea7bed80ccdc595d664b6997c6bd32f0eee06a6`。
+- 作品：柏拉图《理想国》（Republic），本项目覆盖第一至四卷。
+- 英译：Paul Shorey。第一册 Books I–V 首版 1930 年；Perseus 数字版所列底本为 Harvard University Press / William Heinemann 的 1935–37 年重印。首版与后续重印的区别及书目证据见 [docs/sources.md](docs/sources.md)。
+- 古代作品及已处于公有领域的底层内容，不因本项目使用或数字化版本的许可而新增版权限制。本项目不把现代中文出版译本作为复制来源。
 
-来源与开放获取标记核对日期：2026-09-07。上述许可仅指作品图像；不打包博物馆网页文字、讲解音频或网站界面。
+## Perseus 数字化文本
 
-## 庭院场景图
+- 来源：Perseus Digital Library / Perseus Project, Tufts University。
+- 原文件：[tlg0059.tlg030.perseus-eng2.xml](https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg030/tlg0059.tlg030.perseus-eng2.xml)。
+- 标识：`urn:cts:greekLit:tlg0059.tlg030.perseus-eng2`。
+- XML 署名：Gregory Crane（项目负责人）；Lisa Cerrato、William Merrill、Elli Mylonas、David Smith（数字化整理监督）；资助方 The Annenberg CPB/Project。文本于 1992 年在 St. Olaf 扫描，数字版发布于 1996 年。
+- 仓库许可：[Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)，依据官方 [README](https://github.com/PerseusDL/canonical-greekLit/blob/master/README.md) 和 [license.md](https://github.com/PerseusDL/canonical-greekLit/blob/master/license.md)，核对日期 2026-09-08。
 
-- 文件：`public/courtyard.png`。
-- 为本项目制作的 AI 生成场景图，制作记录标明使用 OpenAI 图像生成工具。
-- 内容：比雷埃夫斯一处庭院的艺术想象，苏格拉底与克法洛斯交谈。它不是考古复原或历史照片。
-- SHA-256：`55bf8fa774321f415375e1779614aba4c0c6bc44872ebeadcff2bc8863050d57`。
-- 本图随游戏用于展示。项目代码的 MIT 许可不包含对 AI 输出在所有司法管辖区的版权状态或独立转授权作出保证；提取图像单独使用时，应保留其 AI 创作属性，并核对适用的生成服务条款。
+Perseus 对其数字图书馆的整体版权声明由来源保留。材料按许可原样提供，不附准确性、适用性或无错误保证；完整条款见上述许可。本项目的转译、题库与解释不代表 Perseus、Tufts University、译者或整理者认可。
 
-## 文本、图标与声音
+本项目的修改包括：提取第一至四卷正文，按 Stephanus 页码组织，移除电子脚注和小节编号碎片，处理列明的录入错误，制作 AI 辅助中文转译，加入主题组织、追问练习及解释。修改说明见 [docs/sources.md](docs/sources.md)。其他镜像网站的网页许可不被当作这份仓库文本的许可。
 
-柏拉图古代原典与本游戏的中文重述、玩家分支属于不同层次。文本出处和解释边界见 [docs/sources.md](docs/sources.md)。本仓库不转载现代中文译本，也不打包参考网站的编者文字。
+中英对照的展示分段参考 [ToposText 阅读页](https://topostext.org/work/768)，只取与 Perseus 同源的正文，并据 Perseus XML 清理纠错；未使用其附加地名、地图或网站编辑资料。
 
-`public/icon.svg` 为本项目的简单几何与问号图标，随原创代码采用 MIT 许可。
+## 本项目中文文本与题库
 
-本版本提供 291 段预录普通话，是根据本项目中文剧本生成的现代合成表演，供游戏播放；不是历史录音，也不是声库。录音、语音服务与声音模型不因本项目代码采用 MIT 就自动获得相同许可。制作资料不应包含服务凭据。玩家运行游戏时仅请求已生成的静态音轨，不向语音生成服务提交文本。
+`content/source/bookN-zh.json`、`content/questions/`、`content/structure.json` 中的中文正文和教学编辑内容，以及生成的 `reader-public/text/` 中相应内容，按 **CC BY-SA 4.0** 分享。署名为“《理想国 · 苏格拉底的下一问》项目 / yaoyuzhang1”；正文另保留柏拉图、Paul Shorey 和 Perseus Digital Library / Tufts University 的来源署名。
 
-## 软件依赖
+在可适用版权的范围内，复制、改编和再分享时，请保留署名及来源链接、附上许可链接、说明修改，并将相应改编按同一许可分享。公有领域元素及法律允许的其他使用不受额外限制。该许可不声称 AI 辅助输出在所有司法管辖区均具有相同的版权状态。
 
-运行时代码使用 React、React DOM 和 Lucide 图标，构建工具及其依赖由 `pnpm-lock.yaml` 记录。各包保留自身的许可证和版权声明；具体版本以锁文件为准。项目的 MIT 许可不替换这些依赖的许可。
+中文转译和题库尚未经人工专家逐段校订，不是学术定本，也不是从现代出版中文译本转载。站点可独立访问的许可声明见 [reader-public/TEXT-LICENSE.txt](reader-public/TEXT-LICENSE.txt)。
+
+## 原创软件与依赖
+
+原创阅读引擎、界面及一般项目文档采用 [MIT License](LICENSE)。`reader-public/icon.svg` 为本项目的简明几何与问号图标，随代码采用 MIT。
+
+运行时代码使用 React、React DOM 和 Lucide；构建工具与其依赖以 `pnpm-lock.yaml` 为版本依据，各自保留原有版权和许可：
 
 - [React 与 React DOM](https://github.com/facebook/react)：MIT。
-- [Lucide](https://github.com/lucide-icons/lucide)：ISC；其中承继 Feather 的图标需同时保留原 MIT 声明。
-- [Vite](https://github.com/vitejs/vite) 与 [TypeScript](https://github.com/microsoft/TypeScript)：分别依其 MIT、Apache-2.0 许可。
+- [Lucide](https://github.com/lucide-icons/lucide)：ISC；承继 Feather 的图标同时保留原 MIT 声明。
+- [Vite](https://github.com/vitejs/vite)：MIT。
+- [TypeScript](https://github.com/microsoft/TypeScript)：Apache-2.0。
 
-随运行时代码分发的 React、React DOM、Lucide 与 Feather 版权及许可全文见 [docs/dependency-licenses.md](docs/dependency-licenses.md)。
+随运行时代码分发的 React、React DOM、Lucide 与 Feather 版权及许可全文见 [docs/dependency-licenses.md](docs/dependency-licenses.md)。工作流将依赖声明复制到站点的 `THIRD-PARTY-LICENSES.txt`。
 
-随分发的依赖仍须保留其原有版权与许可声明。新增外部图像、字体、音乐或录音时，应先补充本文件中的来源与适用条款，再纳入公开发布。
+当前纯文字站点不分发旧叙事版本的场景图、绘画或配音。Git 历史中的旧资源如被单独取用，仍应查阅它们所在提交的来源与条款，不能依据当前代码许可重新授权。

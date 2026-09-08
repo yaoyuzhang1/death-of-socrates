@@ -1,0 +1,64 @@
+理想国 · 苏格拉底的下一问 — 文本来源与许可
+Republic · Socrates' Next Question — Text attribution and license
+
+古代作者 / Ancient author: Plato（柏拉图）
+英文译者 / English translator: Paul Shorey
+范围 / Scope: Republic, Books I–IV
+
+Shorey 的第一册 Books I–V 首版于 1930 年。Perseus 数字化文本的
+书目记录列 Harvard University Press / William Heinemann 的 1935–37 年重印。
+古代原典及已经处于公有领域的底层内容不因本项目而新增版权限制。
+
+数字化来源 / Digital source:
+Perseus Digital Library / Perseus Project, Tufts University
+urn:cts:greekLit:tlg0059.tlg030.perseus-eng2
+https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg030/tlg0059.tlg030.perseus-eng2.xml
+
+展示分段参考 ToposText 的同源正文阅读页：
+https://topostext.org/work/768
+并按 Perseus XML 清理纠错；未使用其附加地名、地图或网站编辑资料。
+
+项目负责人 / Principal: Gregory Crane
+整理监督 / Preparation supervised by:
+Lisa Cerrato, William Merrill, Elli Mylonas, David Smith
+资助 / Funder: The Annenberg CPB/Project
+Scanned at St. Olaf, Spring 1992; digital release 1996.
+Tufts University holds the overall copyright to the Perseus Digital Library.
+
+Perseus canonical-greekLit 仓库现行许可 / Repository license:
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+https://github.com/PerseusDL/canonical-greekLit/blob/master/license.md
+https://creativecommons.org/licenses/by-sa/4.0/
+
+本项目中文转译、题库、主题导言及解释由 AI 辅助制作，署名为：
+《理想国 · 苏格拉底的下一问》项目 / yaoyuzhang1
+https://github.com/yaoyuzhang1/death-of-socrates
+
+这些中文文本及教学编辑内容同样按 CC BY-SA 4.0 分享。
+修改包括：正文提取和分段、电子脚注与小节号清理、记录在案的录入错误
+修正、英文至简体中文的转译、主题章组织以及追问练习和讲解的加入。
+未复制现代出版中文译本；不是直接从希腊文完成的独立校译。
+
+转载或改编时，请保留相应作者与整理者署名、来源和许可链接，说明修改，
+并按同一许可分享相应改编。许可不对公有领域元素新增限制，也不限制
+适用法律允许的其他使用。不暗示原作者、Perseus 或 Tufts University
+对本项目及其修改作出认可。
+
+The Chinese translation, question bank, and editorial reading material are
+shared under CC BY-SA 4.0. Give appropriate credit, link to the license,
+indicate changes, and share adapted material under the same license.
+Public-domain elements are not made subject to new copyright restrictions.
+
+材料按原样提供，不附保证。中文转译和题库尚未经人工专家逐段校订，
+不能作为学术定本或经过学术审定的出版译本。
+The material is provided as-is, without warranties. The AI-assisted Chinese
+translation and exercises have not received complete human expert review.
+
+详细来源与校订记录 / Detailed provenance and editorial corrections:
+https://github.com/yaoyuzhang1/death-of-socrates/blob/main/docs/sources.md
+https://github.com/yaoyuzhang1/death-of-socrates/blob/main/THIRD_PARTY_NOTICES.md
+
+原创软件代码另采用 MIT。软件许可不替代上述文本许可。
+Original software is separately licensed under MIT.
+
+许可与书目核对 / License and bibliography checked: 2026-09-08

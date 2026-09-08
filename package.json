@@ -1,15 +1,15 @@
 {
   "name": "death-of-socrates",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "A complete Chinese philosophical narrative game based on Plato's dialogues.",
+  "description": "Read Plato's Republic and learn to recognize a better question.",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
+    "build": "node scripts/build-reader.mjs && tsc --noEmit && vite build",
+    "text:build": "node scripts/build-reader.mjs",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node --experimental-strip-types --test tests/*.test.mts",
-    "voice:export": "node --experimental-strip-types scripts/export-voice.mts"
+    "test": "node --experimental-strip-types --test tests/*.test.mts"
   },
   "dependencies": {
     "lucide-react": "1.31.0",
