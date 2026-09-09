@@ -28,7 +28,7 @@
 
 ## early-01-servant
 
-最终文件：`illustrations/progression/early-01-servant.webp`  
+最终文件：`illustrations/progression/early-01-servant.webp`
 参考图：`reader-public/illustrations/arrival.webp`
 
 ```text
@@ -37,7 +37,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-02-cephalus
 
-最终文件：`illustrations/progression/early-02-cephalus.webp`  
+最终文件：`illustrations/progression/early-02-cephalus.webp`
 参考图：`reader-public/illustrations/obligations.webp`
 
 ```text
@@ -46,7 +46,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-03-polemarchus
 
-最终文件：`illustrations/progression/early-03-polemarchus.webp`  
+最终文件：`illustrations/progression/early-03-polemarchus.webp`
 参考图：`reader-public/illustrations/arrival.webp`
 
 ```text
@@ -55,7 +55,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-04-polemarchus-listens
 
-最终文件：`illustrations/progression/early-04-polemarchus-listens.webp`  
+最终文件：`illustrations/progression/early-04-polemarchus-listens.webp`
 参考图：`reader-public/illustrations/arrival.webp`
 
 ```text
@@ -64,7 +64,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-05-interruption
 
-最终文件：`illustrations/progression/early-05-interruption.webp`  
+最终文件：`illustrations/progression/early-05-interruption.webp`
 参考图：`reader-public/illustrations/rule.webp`
 
 ```text
@@ -73,7 +73,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-06-listeners-intervene
 
-最终文件：`illustrations/progression/early-06-listeners-intervene.webp`  
+最终文件：`illustrations/progression/early-06-listeners-intervene.webp`
 参考图：`reader-public/illustrations/rule.webp`
 
 ```text
@@ -82,7 +82,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-07-socrates-rule
 
-最终文件：`illustrations/progression/early-07-socrates-rule.webp`  
+最终文件：`illustrations/progression/early-07-socrates-rule.webp`
 参考图：`reader-public/illustrations/rule.webp`
 
 ```text
@@ -91,7 +91,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-08-shepherd
 
-最终文件：`illustrations/progression/early-08-shepherd.webp`  
+最终文件：`illustrations/progression/early-08-shepherd.webp`
 参考图：`reader-public/illustrations/rule.webp`
 
 ```text
@@ -100,7 +100,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-09-lyre
 
-最终文件：`illustrations/progression/early-09-lyre.webp`  
+最终文件：`illustrations/progression/early-09-lyre.webp`
 参考图：`reader-public/illustrations/rule.webp`
 
 ```text
@@ -109,7 +109,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-10-summer-pause
 
-最终文件：`illustrations/progression/early-10-summer-pause.webp`  
+最终文件：`illustrations/progression/early-10-summer-pause.webp`
 参考图：`reader-public/illustrations/rule.webp`
 
 ```text
@@ -118,7 +118,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-11-shared-discussion
 
-最终文件：`illustrations/progression/early-11-shared-discussion.webp`  
+最终文件：`illustrations/progression/early-11-shared-discussion.webp`
 参考图：`reader-public/illustrations/rule.webp`
 
 ```text
@@ -127,7 +127,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-12-reflective-pause
 
-最终文件：`illustrations/progression/early-12-reflective-pause.webp`  
+最终文件：`illustrations/progression/early-12-reflective-pause.webp`
 参考图：`reader-public/illustrations/rule.webp`
 
 ```text
@@ -136,7 +136,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-13-glaucon
 
-最终文件：`illustrations/progression/early-13-glaucon.webp`  
+最终文件：`illustrations/progression/early-13-glaucon.webp`
 参考图：`reader-public/illustrations/worth.webp`
 
 ```text
@@ -145,7 +145,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-14-ring-story
 
-最终文件：`illustrations/progression/early-14-ring-story.webp`  
+最终文件：`illustrations/progression/early-14-ring-story.webp`
 参考图：`reader-public/illustrations/worth.webp`
 
 ```text
@@ -154,7 +154,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-15-adeimantus
 
-最终文件：`illustrations/progression/early-15-adeimantus.webp`  
+最终文件：`illustrations/progression/early-15-adeimantus.webp`
 参考图：`reader-public/illustrations/worth.webp`
 
 ```text
@@ -163,7 +163,7 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-16-socrates-brothers
 
-最终文件：`illustrations/progression/early-16-socrates-brothers.webp`  
+最终文件：`illustrations/progression/early-16-socrates-brothers.webp`
 参考图：`reader-public/illustrations/worth.webp`
 
 ```text
@@ -172,10 +172,9 @@ Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphi
 
 ## early-17-cephalus-departs
 
-最终文件：`illustrations/progression/early-17-cephalus-departs.webp`  
+最终文件：`illustrations/progression/early-17-cephalus-departs.webp`
 参考图：`reader-public/illustrations/obligations.webp`
 
 ```text
 Use case: illustration-story. Create one NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for a Plato Republic reading game. Attached image is only character and mature ink-drawn style reference. Depict a specific faithful narrative transition in Cephalus' modest Piraeus house: Cephalus, elderly white-haired white-bearded man in cream robe with a leafy wreath, has risen from his cushioned wooden chair and is beginning to leave through a shaded domestic doorway, turning back with a small warm smile toward his son and Socrates as he entrusts their continuing conversation to them. Socrates seated left, bald crown short grey beard broad nose in plain ochre robe, looks up gently. Polemarchus, younger dark-wavy-haired man with modest short dark beard in muted rust-brown robe, sits beside him and listens. The elderly man's cushioned chair is visibly unoccupied behind him, no extra duplicate person. Hot summer soft daylight, plain chairs, pottery, terracotta paving. No actual sacrifice depicted, no altar or invented ritual. Precise expressive ink lines, restrained warm ochre and terracotta, muted teal shadows, slight paper grain, believable natural anatomy. New diagonal camera composition with Cephalus mid-right near doorway, seated men left; faces and gestures in center horizontal strip. No text, speech bubbles, labels, symbols, logos, watermarks, modern objects, comedy or philosophical answer cues.
 ```
-
