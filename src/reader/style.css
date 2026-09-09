@@ -8,3 +8,4 @@ dialog{border:1px solid var(--line);border-radius:8px;background:var(--paper);co
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
 .source-page{font-size:11px;font-weight:400;margin-left:14px;color:var(--muted);text-decoration:none;letter-spacing:0}.source-page:hover{text-decoration:underline}.speaker{display:flex;align-items:baseline;flex-wrap:wrap;row-gap:4px}
+.original-reply{font-family:var(--serif);font-size:var(--reading-font-size);letter-spacing:.025em;line-height:2}

@@ -1,4 +1,4 @@
-export type Paragraph = { id: string; text: string; speaker?: string; ref?: string; sourcePage?: number };
+export type Paragraph = { id: string; text: string; speaker?: string; ref?: string; sourcePage?: number; sourcePages?: number[] };
 export type Option = { id: string; text: string; feedback: string };
 export type Question = {
   id: string;
@@ -14,6 +14,7 @@ export type Unit = {
   id: string;
   paragraphs: Paragraph[];
   question?: Question;
+  replyCount?: number;
   response: Paragraph[];
 };
 export type Section = { id: string; title: string; range: string; units: Unit[] };

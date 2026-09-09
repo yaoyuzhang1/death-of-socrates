@@ -12,13 +12,18 @@ type Practice = { questionId: string; choiceId?: string | null; hinted: boolean 
 
 function Text({ paragraph }: { paragraph: Paragraph }) {
   return <div className="passage" id={paragraph.id} data-paragraph-id={paragraph.id}>
-    {(paragraph.speaker || paragraph.ref || paragraph.sourcePage) && <div className="speaker">{paragraph.speaker}{paragraph.ref && <span>{paragraph.ref}</span>}{paragraph.sourcePage && <SourcePage page={paragraph.sourcePage} />}</div>}
+    {(paragraph.speaker || paragraph.ref || paragraph.sourcePage) && <div className="speaker">{paragraph.speaker}{paragraph.ref && <span>{paragraph.ref}</span>}<SourcePages paragraph={paragraph} /></div>}
     <p>{paragraph.text}</p>
   </div>;
 }
 
 function SourcePage({ page }: { page: number }) {
   return <a className="source-page" href={`${import.meta.env.BASE_URL}text/parallel.html#p${page}`} target="_blank" rel="noreferrer" title="查看书页与译者注（含本页后文）">书页 {page} ↗</a>;
+}
+
+function SourcePages({ paragraph }: { paragraph: Paragraph }) {
+  const pages = paragraph.sourcePages ?? (paragraph.sourcePage ? [paragraph.sourcePage] : []);
+  return <>{pages.map(page => <SourcePage page={page} key={page} />)}</>;
 }
 
 function Modal({ title, children, onClose }: { title: string; children: ReactNode; onClose: () => void }) {
@@ -199,7 +204,8 @@ export default function App() {
           <button className="text-button" onClick={() => choose(null)}>直接看原文</button></div>
       </> : <>
         <p className="answer-result" role="status">{displayedAnswer!.choiceId === null ? '已揭示原问' : displayedAnswer!.choiceId === q.correctId ? '你的选择与原问对应。' : '你的选择与原问不同。'}</p>
-        <div className="original-question"><div className="speaker">{q.original.speaker || '苏格拉底'}<span>{q.sourceRef}</span>{q.original.sourcePage && <SourcePage page={q.original.sourcePage} />}</div><p data-paragraph-id={q.original.id}>{q.original.text}</p></div>
+        <div className="original-question"><div className="speaker">{q.original.speaker || '苏格拉底'}<span>{q.sourceRef}</span><SourcePages paragraph={q.original} /></div><p data-paragraph-id={q.original.id}>{q.original.text}</p></div>
+        <div className="original-reply">{unit.response.slice(0, unit.replyCount ?? 0).map(p => <Text key={p.id} paragraph={p} />)}</div>
         <aside className="explanation" aria-label="为什么这一问更好"><h3>为什么这一问更好</h3><p>{q.explanation}</p>
           <div className="comparisons">{options.filter(o => o.id !== q.correctId).map(o => <div key={o.id}><p className="comparison-question">{o.text}{displayedAnswer!.choiceId === o.id && <span className="chosen-tag">你的选择</span>}</p><p>{o.feedback}</p></div>)}</div>
         </aside>
@@ -249,7 +255,7 @@ export default function App() {
       <article className="reading-text" aria-label="原典正文">
         {unit.paragraphs.map(p => <Text key={p.id} paragraph={p} />)}
         {question && questionCard(question)}
-        {(!question || revealed) && unit.response.map(p => <Text key={p.id} paragraph={p} />)}
+        {(!question || revealed) && unit.response.slice(question ? unit.replyCount ?? 0 : 0).map(p => <Text key={p.id} paragraph={p} />)}
       </article>
       <footer className="reading-navigation"><button className="text-button" disabled={save.cursor === 0} onClick={() => goTo(save.cursor - 1)}><ArrowLeft size={17} />上一节</button>
         {(!question || revealed) ? <button className="primary" onClick={next}>{lastOfChapter ? '完成本章' : '继续阅读'}<ArrowRight size={18} /></button> : <span className="reading-pause">选一个问题，或直接揭示原文。</span>}

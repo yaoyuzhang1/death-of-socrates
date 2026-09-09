@@ -56,12 +56,53 @@ test('Every exercise quotes its verified source question and gives immediate, re
 });
 test('Theme boundaries use the source transitions and do not drop introductions or replies',()=>{
  const chapter=(id:string)=>compact(textOf(units.filter(u=>u.chapter.id===id)));
- assert.match(chapter('rule'),/^[〔]?当我们正谈话的时候/);
+ assert.match(chapter('rule'),/^[〔［【\[]?当我们正谈话的时候/);
  assert.match(chapter('life'),/^不过他所说的，不正义的人生活/);
  assert.match(chapter('city'),/^苏：那么很好。在我看来/);
  assert.match(chapter('education'),/^苏：那么，护卫者的天性基础/);
  assert.match(chapter('guardians'),/^苏：那么好，下面我们要确定什么呢/);
  assert.match(chapter('soul'),/^苏：因此，阿里斯同之子/);
+ const section=(id:string)=>compact(textOf(units.filter(u=>u.section.id===id)));
+ assert.match(section('age-wealth'),/^苏：说真的，克法洛斯，我喜欢跟你们上了年纪的人谈话/);
+ assert.match(section('large-small'),/^苏：[〔［【\[]我对于格劳孔/);
+ assert.match(section('luxury'),/^[〔［【\[]这时候格劳孔/);
+ for(const chapter of corpus.chapters) for(const section of chapter.sections) {
+  const last=section.units.at(-1)!;
+  const ending=(last.response.at(-1)??last.question?.original??last.paragraphs.at(-1))!.text;
+  assert.doesNotMatch(ending,/(?:[〔［【\[]|苏：)$/u,section.id);
+ }
+});
+test('Complete alternative questions and the interlocutor reply stay together before explanations',()=>{
+ for(const unit of units.filter(u=>u.question)) {
+  const reply=unit.response.slice(0,unit.replyCount);
+  assert.ok(unit.replyCount&&unit.replyCount<=unit.response.length,unit.question!.id);
+  assert.match(reply.map(p=>p.text).join('\n'),/(?:^|\n)[〔［【\[“]?[克玻色格阿]：/,unit.question!.id);
+ }
+ const find=(id:string)=>units.find(u=>u.question?.id===id)!;
+ assert.match(find('book2-division-alternatives').question!.original.text,/还是不管别人[\s\S]+只顾自己的需要呢？$/);
+ assert.match(find('book4-spirit-reason').question!.original.text,/或者还是说[\s\S]+如果不被坏教育所败坏的话）？$/);
+ assert.equal(find('book1-what-harm-means').response[0].text,'玻：当然可以这么说。');
+ assert.equal(find('book4-opposites').response[0].text,'格：是无论如何不可能的。');
+});
+test('Translator notes remain outside the dialogue and verified marginal artifacts are absent',()=>{
+ const body=textOf(units);
+ for(const [page,note] of [[15,'公元前6世纪中叶人'],[69,'对智慧的爱好'],[71,'当时托儿所里']] as const) {
+  const sourceNote=source.pages[page-1].notes.find((n:string)=>n.includes(note));
+  assert.ok(sourceNote,`p${page}`);
+  assert.ok(!body.includes(sourceNote),`footnote in dialogue p${page}`);
+ }
+ assert.ok(!body.includes('里塑'));
+ assert.ok(!body.includes('衣服.上'));
+ assert.ok(!source.pages[6].paragraphs.some((p:any)=>p.text==='品'));
+});
+test('Cross-page passages expose each source page without duplicating the text',()=>{
+ const passages=units.flatMap(u=>[...u.paragraphs,...(u.question?[u.question.original]:[]),...u.response]);
+ assert.ok(passages.some(p=>(p.sourcePages?.length??0)>1));
+ for(const p of passages.filter(p=>p.sourcePages)) {
+  assert.equal(p.sourcePages![0],p.sourcePage);
+  assert.equal(new Set(p.sourcePages).size,p.sourcePages!.length);
+  for(const page of p.sourcePages!) assert.ok(page>=1&&page<=176);
+ }
 });
 test('Wrong answers, direct reveals and cross-page questions can finish the entire journey',()=>{
  let save={...createSave(corpus,'complete-guo-content-test'),started:true};

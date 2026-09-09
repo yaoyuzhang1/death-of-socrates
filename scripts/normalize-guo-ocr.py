@@ -37,7 +37,11 @@ def shape(s):
     return s.replace(' ', '').replace('\u3000','').replace('?', '？').replace('!', '！').replace(',', '，').replace(';','；')
 
 corrections=json.loads((ROOT/'content/source/guo-1986-corrections.json').read_text(encoding='utf-8'))
-correction_log=[]
+correction_log=[];layout_log=[]
+# Role labels begin new printed dialogue paragraphs even on pages where most
+# lines are indented and the geometric left-margin estimate is too far right.
+# Apply this to OCR line starts only: quoted labels inside speech are untouched.
+speaker_start=re.compile(r'^[〔【［\[]?(?:苏格拉底|苏|格|阿|玻|色|克)(?:[（(][^（）()]{1,20}[）)])?[：:]')
 pages=[];debug=[]
 for n in range(12,188):
     win=json.loads((LOCAL/f'ocr/page-{n:03}.json').read_text(encoding='utf-8-sig'))
@@ -60,9 +64,11 @@ for n in range(12,188):
     for correction in [c for c in corrections if c['pdfPage']==n]:
         hits=0
         for line in lines:
-            if correction['old'] in line['text']:
-                hits+=line['text'].count(correction['old'])
+            matched=(line['text']==correction['old']) if correction.get('match')=='exact' else correction['old'] in line['text']
+            if matched:
+                hits+=1 if correction.get('match')=='exact' else line['text'].count(correction['old'])
                 line['text']=line['text'].replace(correction['old'],correction['new'])
+                if correction.get('action')=='move-to-notes':line['sourceKind']='note'
         correction_log.append({**correction,'appliedOccurrences':hits})
     lines.sort(key=lambda l:(round(l['bbox']['y']/15),l['bbox']['x']))
     paragraphs=[];notes=[];pending_ref='';last_ref='';ignored=[]
@@ -71,7 +77,7 @@ for n in range(12,188):
         if not s:continue
         if y<h*.13 or y>h*.94 or re.fullmatch('[第理想国一二三四五六七八九十卷0-9]+',s) and y<h*.29:
             ignored.append(s);continue
-        if y>rule:
+        if y>rule or l.get('sourceKind')=='note':
             notes.append(s);continue
         # Stephanus numbers and A-E are printed in the outer margin.
         match=re.fullmatch('(3[2-9][0-9]|4[0-4][0-9]|[A-Ea-e])',s)
@@ -86,6 +92,9 @@ for n in range(12,188):
         first_chinese=next((word for word in l.get('words',[]) if re.search('[\u3400-\u9fff]',word['text'])),None)
         if first_chinese: x=first_chinese['bbox']['x']
         indented=x>base+42
+        if speaker_start.match(s) and not indented:
+            layout_log.append({'printedPage':n-11,'pdfPage':n,'action':'restore-speaker-paragraph','text':s,'lineY':y,'pageOpening':not paragraphs})
+            indented=True
         if not paragraphs or indented:
             paragraphs.append({'text':s,'continuesPrevious':not indented if not paragraphs else False})
         else:
@@ -98,4 +107,5 @@ source={'edition':'郭斌和、张竹明译《理想国》，商务印书馆，1
 (LOCAL/'parse-report.json').write_text(json.dumps(debug,ensure_ascii=False,indent=2),encoding='utf-8')
 (LOCAL/'plain.txt').write_text('\n\n'.join(f"【书页{p['printedPage']}】\n"+'\n'.join(r['text'] for r in p['paragraphs']) for p in pages),encoding='utf-8')
 (LOCAL/'correction-log.json').write_text(json.dumps(correction_log,ensure_ascii=False,indent=2),encoding='utf-8')
+(LOCAL/'layout-correction-log.json').write_text(json.dumps(layout_log,ensure_ascii=False,indent=2),encoding='utf-8')
 print(len(pages),sum(d['characters'] for d in debug),'chars;',sum(c['appliedOccurrences'] for c in correction_log),'corrections; missed',sum(c['appliedOccurrences']==0 for c in correction_log))

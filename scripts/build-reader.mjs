@@ -28,6 +28,11 @@ const anchorClean=text=>text.replace(/[\s①-⑳]/g,'');
 let compact=''; const offsets=[];
 for(let i=0;i<full.length;i++) if(!/[\s①-⑳]/.test(full[i])) {compact+=full[i];offsets.push(i);}
 const questions=[1,2,3,4].flatMap(book=>read(`content/questions/book${book}.json`));
+const speakerPrefix=/^(?:[〔\[［【“]|苏(?:格拉底)?[：:])*\s*$/;
+function withSpeakerPrefix(at) {
+  const lineStart=full.lastIndexOf('\n',at-1)+1;
+  return speakerPrefix.test(full.slice(lineStart,at))?lineStart:at;
+}
 for(const q of questions) {
   assert.equal(q.prompt,'下面哪句话更像一个好问题？',q.id);
   assert.equal(q.hint,'',q.id);
@@ -44,10 +49,8 @@ for(const q of questions) {
   assert.equal(compact.indexOf(target,at+1),-1,`Ambiguous anchor: ${q.id}`);
   q.start=offsets[at];q.end=offsets[at+target.length-1]+1;
   assert.ok(q.start>=pageSpans.get(q.printedPage).start&&q.start<pageSpans.get(q.printedPage).end,`${q.id}: page mismatch`);
-  const lineStart=full.lastIndexOf('\n',q.start-1)+1;
-  const prefix=full.slice(lineStart,q.start);
   // Include only a speaker label, never editorially hide extra preceding claims.
-  if(/^[〔\[“]?苏(?:格拉底)?[：:]\s*$/.test(prefix))q.start=lineStart;
+  q.start=withSpeakerPrefix(q.start);
 }
 questions.sort((a,b)=>a.start-b.start);
 questions.forEach((q,i)=>{if(i)assert.ok(questions[i-1].end<=q.start,`Overlapping question: ${q.id}`);});
@@ -57,21 +60,30 @@ function locate(point) {
   if(point.before) {
     const at=full.indexOf(point.before,page.start);
     assert.ok(at>=page.start&&at<page.end,`Missing boundary p${point.page}: ${point.before}`);
-    const lineStart=full.lastIndexOf('\n',at-1)+1;
-    const prefix=full.slice(lineStart,at);
-    return /^[〔\[“]?(?:苏(?:格拉底)?[：:])?$/.test(prefix)?lineStart:at;
+    return withSpeakerPrefix(at);
   }
   return page.start;
 }
 function spanAt(offset) {return spans.find(s=>offset>=s.start&&offset<s.end)??spans.filter(s=>s.start<=offset).at(-1)??spans[0];}
 function printedRange(a,b) {const first=spanAt(a).page,last=spanAt(b-1).page;return first===last?`第 ${first} 页`:`第 ${first}—${last} 页`;}
+function sourcePages(a,b) {return [...new Set(spans.filter(s=>s.end>a&&s.start<b).map(s=>s.page))];}
+// Keep the speaker's remaining words and the first interlocutor's full reply
+// beside the revealed question, before the editorial explanation.
+function replyEnd(start,limit,id) {
+  const turns=[...full.slice(start,limit).matchAll(/(?:^|\n)[〔\[［【“]?([苏克玻色格阿])[：:]/g)];
+  const reply=turns.findIndex(turn=>turn[1]!=='苏');
+  assert.ok(reply>=0,`Missing interlocutor reply: ${id}`);
+  const next=turns[reply+1];
+  return next?start+next.index:limit;
+}
 let paragraphId=0,unitId=0;
 function paragraphs(start,end) {
   const result=[];let at=start,previousPage=null,previousRef=null;
   for(const piece of full.slice(start,end).split(/(\n+)/)) {
     if(piece.trim()) {
       const span=spanAt(at);
-      result.push({id:`p-${String(++paragraphId).padStart(4,'0')}`,text:piece,...(span.ref&&span.ref!==previousRef?{ref:span.ref}:{}),...(span.page!==previousPage?{sourcePage:span.page}:{})});
+      const coveredPages=sourcePages(at,at+piece.length);
+      result.push({id:`p-${String(++paragraphId).padStart(4,'0')}`,text:piece,...(span.ref&&span.ref!==previousRef?{ref:span.ref}:{}),...(span.page!==previousPage||coveredPages.length>1?{sourcePage:span.page}:{}),...(coveredPages.length>1?{sourcePages:coveredPages}:{})});
       previousPage=span.page;previousRef=span.ref;
     }
     at+=piece.length;
@@ -90,10 +102,12 @@ const chapters=structure.map((chapter,ci)=>{
       assert.equal(q.chapterId,chapter.id,`Question chapter ${q.id}`);
       assert.ok(q.end<=b,`Split question ${q.id}`);
       const limit=within[qi+1]?.start??b;
-      let responseEnd=qi===within.length-1?b:full.indexOf('\n',q.end+2);
-      if(responseEnd<q.end||responseEnd>limit)responseEnd=q.end;
-      const original={id:`p-${String(++paragraphId).padStart(4,'0')}`,speaker:'苏格拉底',ref:q.sourceRef,sourcePage:q.printedPage,text:full.slice(q.start,q.end)};
-      units.push({id:`u-${String(++unitId).padStart(3,'0')}`,paragraphs:paragraphs(cursor,q.start),question:{id:q.id,sourceRef:q.sourceRef,prompt:q.prompt,original,options:q.options,correctId:q.correctId,explanation:q.explanation,hint:q.hint},response:paragraphs(q.end,responseEnd)});
+      const immediateEnd=replyEnd(q.end,limit,q.id);
+      const responseEnd=qi===within.length-1?b:immediateEnd;
+      const coveredPages=sourcePages(q.start,q.end);
+      const original={id:`p-${String(++paragraphId).padStart(4,'0')}`,speaker:'苏格拉底',ref:q.sourceRef,sourcePage:q.printedPage,...(coveredPages.length>1?{sourcePages:coveredPages}:{}),text:full.slice(q.start,q.end)};
+      const before=paragraphs(cursor,q.start),reply=paragraphs(q.end,immediateEnd);
+      units.push({id:`u-${String(++unitId).padStart(3,'0')}`,paragraphs:before,question:{id:q.id,sourceRef:q.sourceRef,prompt:q.prompt,original,options:q.options,correctId:q.correctId,explanation:q.explanation,hint:q.hint},replyCount:reply.length,response:[...reply,...paragraphs(immediateEnd,responseEnd)]});
       cursor=responseEnd;
     }
     if(!within.length||cursor<b)units.push({id:`u-${String(++unitId).padStart(3,'0')}`,paragraphs:paragraphs(cursor,b),response:[]});
@@ -102,7 +116,7 @@ const chapters=structure.map((chapter,ci)=>{
   return {id:chapter.id,title:chapter.title,subtitle:chapter.subtitle,range:chapter.range,introduction:'',conclusion:'',sections};
 });
 const edition={
-  id:'republic-guo-zhang-1986-2026-09-08',
+  id:'republic-guo-zhang-1986-2026-09-09',
   label:'郭斌和、张竹明译 · 商务印书馆 1986 年版',
   description:'收录《理想国》第一至四卷（书页1—176），按讨论主题分为八章。正文依照本译本扫描整理，保留原有对话次序、人物发言及短应答。',
   translator:'郭斌和、张竹明。商务印书馆，1986年8月第一版、北京第一次印刷。',
