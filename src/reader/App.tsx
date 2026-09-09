@@ -9,6 +9,8 @@ import ComicScene from './ComicScene.tsx';
 import ChapterCards from './ChapterCards.tsx';
 import CompletionScreen from './CompletionScreen.tsx';
 import BonusChapter from './BonusChapter.tsx';
+import BonusPreview from './BonusPreview.tsx';
+import { BONUS_PREVIEW_HASH } from './preview-entry.ts';
 import { playCelebration, stopCelebration } from './completion-audio.ts';
 import { makeReadingPages } from './pagination.ts';
 import { stopFeedback } from './feedback-audio.ts';
@@ -40,6 +42,16 @@ function Modal({ title, children, onClose }: { title: string; children: ReactNod
 }
 
 export default function App() {
+  const [preview, setPreview] = useState(() => location.hash === BONUS_PREVIEW_HASH);
+  useEffect(() => {
+    const route = () => setPreview(location.hash === BONUS_PREVIEW_HASH);
+    window.addEventListener('hashchange', route);
+    return () => window.removeEventListener('hashchange', route);
+  }, []);
+  return preview ? <BonusPreview /> : <ReadingApp />;
+}
+
+function ReadingApp() {
   const [corpus, setCorpus] = useState<Corpus | null>(null);
   const [save, setSave] = useState<Save | null>(null);
   const [screen, setScreen] = useState<Screen>('home');
@@ -141,7 +153,7 @@ export default function App() {
     };
     window.addEventListener('scroll', record, { passive: true });
     window.addEventListener('pagehide', flush);
-    return () => { if (scrollTimer.current !== null) clearTimeout(scrollTimer.current); window.removeEventListener('scroll', record); window.removeEventListener('pagehide', flush); };
+    return () => { flush(); if (scrollTimer.current !== null) clearTimeout(scrollTimer.current); window.removeEventListener('scroll', record); window.removeEventListener('pagehide', flush); };
   }, []);
 
   useEffect(() => {

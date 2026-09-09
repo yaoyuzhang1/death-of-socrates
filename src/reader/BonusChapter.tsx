@@ -13,8 +13,8 @@ function Passages({ passages }: { passages: Passage[] }) {
   </p>)}</div>;
 }
 
-export default function BonusChapter({ save, units, onUpdate, onExit }: {
-  save: Save; units: ReadingUnit[]; onUpdate: (fn: (save: Save) => Save) => void; onExit: () => void;
+export default function BonusChapter({ save, units, onUpdate, onExit, preview = false }: {
+  save: Save; units: ReadingUnit[]; onUpdate: (fn: (save: Save) => Save) => void; onExit: () => void; preview?: boolean;
 }) {
   const [ending, setEnding] = useState(save.bonus.completed && save.bonus.cursor === content.scenes.length - 1);
   const [selected, setSelected] = useState<string | null>(null);
@@ -35,21 +35,22 @@ export default function BonusChapter({ save, units, onUpdate, onExit }: {
     heading.current?.focus({ preventScroll: true });
   }, [scene.id, ending]);
 
-  const navigate = (index: number) => { onUpdate(current => navigateBonus(current, units, index)); setEnding(false); };
+  const access = preview ? 'preview' : 'earned';
+  const navigate = (index: number) => { onUpdate(current => navigateBonus(current, units, index, access)); setEnding(false); };
   const confirm = () => {
     if (!selected) return;
-    onUpdate(current => chooseBonus(current, units, scene.id, selected));
+    onUpdate(current => chooseBonus(current, units, scene.id, selected, access));
     setResponseId(selected);
     setSelected(null);
     requestAnimationFrame(() => feedback.current?.focus({ preventScroll: false }));
   };
   const finish = () => {
-    onUpdate(current => finishBonus(current, units));
+    onUpdate(current => finishBonus(current, units, access));
     setEnding(true);
   };
 
   return <main id="main" className="bonus-shell" data-testid="bonus-chapter">
-    <div className="bonus-location"><button className="text-button" onClick={onExit}><ArrowLeft size={16} />八章总结</button><span>隐藏章节 · {Object.keys(save.bonus.choices).length} / {content.scenes.length} 场已探索</span></div>
+    <div className="bonus-location"><button className="text-button" onClick={onExit}><ArrowLeft size={16} />{preview ? '返回主篇' : '八章总结'}</button><span>隐藏章节 · {Object.keys(save.bonus.choices).length} / {content.scenes.length} 场已探索</span></div>
     {ending ? <section className="bonus-ending" data-testid="bonus-ending">
       <p className="eyebrow">苏格拉底之死 · 对话结束</p><h1 ref={heading} tabIndex={-1}>{content.ending.title}</h1>
       <Passages passages={content.ending.passages} />
