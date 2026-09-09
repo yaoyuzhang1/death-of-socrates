@@ -21,8 +21,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 Scope: This license covers this project's original software and general project
-documentation. It excludes the reading corpus, Chinese translation, question
-bank, and their editorial content, which are shared under CC BY-SA 4.0. It does
-not relicense third-party materials or public-domain works. See
-THIRD_PARTY_NOTICES.md and reader-public/TEXT-LICENSE.txt for attribution,
+documentation. It does not license the current Guo Binhe / Zhang Zhuming Chinese
+translation, its book facsimiles, or quotations from that edition. Those materials
+remain subject to their respective rights holders' rights. Previously distributed
+Shorey / Perseus material retains its separately stated CC BY-SA 4.0 terms.
+This license does not relicense third-party materials or public-domain works.
+See THIRD_PARTY_NOTICES.md and reader-public/TEXT-LICENSE.txt for attribution,
 separate provenance, and terms.
