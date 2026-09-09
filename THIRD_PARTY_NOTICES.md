@@ -16,6 +16,8 @@
 
 ## 程序与依赖
 
+新增 `reader-public/illustrations/` 为本项目通过内置图像生成工具制作的彩色漫画场景，并非原书插图；创作约束、提示词与文件清单见 [docs/art-direction.md](docs/art-direction.md)。新增 `reader-public/audio/feedback/` 为微软在线语音服务 `zh-CN-XiaoxiaoNeural` 生成的141条编辑解释录音；精确文本、声线与文件校验见该目录的 `manifest.json`。它们不包含旧剧情角色配音，亦不表示原译者或出版方参与制作。
+
 原创阅读引擎、界面代码和几何图标采用 [MIT](LICENSE)。依赖按 `pnpm-lock.yaml` 的锁定版本保留原许可：React / React DOM 为 MIT；Lucide 为 ISC，承继的 Feather 图标保留 MIT；Vite 为 MIT；TypeScript 为 Apache-2.0。
 
 运行时依赖的完整版权及许可文本见 [docs/dependency-licenses.md](docs/dependency-licenses.md)。工作流将其随站点分发为 `THIRD-PARTY-LICENSES.txt`。

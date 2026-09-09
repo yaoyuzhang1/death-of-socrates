@@ -1,4 +1,5 @@
 .review-round{padding-top:30px;overflow-wrap:anywhere}
+.review-round:focus{outline:none}.review-round>.comic-scene{margin-bottom:20px}.context-pagination{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;padding:0 0 18px}.context-pagination button{font-size:12px}
 .review-round>h1{font-family:var(--serif);font-size:30px;font-weight:500;line-height:1.6;margin:22px 0;scroll-margin-top:112px}
 .review-round-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:10px}
 .review-round-top .eyebrow{margin:0;display:flex;align-items:center;gap:16px;letter-spacing:.1em;font-size:12px;scroll-margin-top:112px}

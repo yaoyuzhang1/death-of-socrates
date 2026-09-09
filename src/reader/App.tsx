@@ -1,35 +1,21 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, BookOpen, Bookmark, Check, ChevronRight, List, RotateCcw, Settings2, X } from 'lucide-react';
-import type { Corpus, Paragraph, Question, Save } from './model.ts';
-import { advance, chapterStats, createSave, flattenCorpus, navigate, orderedOptions, submitAnswer, validateSave, readingBatches, readingPosition, setReadingPosition, setReadingMode, recordReview, reviewQueue, progressStats } from './engine.ts';
+import type { Corpus, Save } from './model.ts';
+import { advance, chapterStats, createSave, flattenCorpus, navigate, submitAnswer, validateSave, recordReview, reviewQueue, progressStats, pagePosition, setPagePosition, isQuestionResolved } from './engine.ts';
 import ReviewRound from './ReviewRound.tsx';
-import QuestionChoices from './QuestionChoices.tsx';
-import { SourcePageLink } from './SourceViewer.tsx';
+import QuestionChallenge, { type AudioPreferences } from './QuestionChallenge.tsx';
+import ReadingPassage, { passageRoles } from './ReadingPassage.tsx';
+import ComicScene from './ComicScene.tsx';
+import { makeReadingPages } from './pagination.ts';
+import { stopFeedback } from './feedback-audio.ts';
 import './style.css';
 import './play.css';
+import './paged-reader.css';
 
 const STORAGE_KEY = 'republic-reading-v2';
 const numerals = ['一', '二', '三', '四', '五', '六', '七', '八'];
 type Screen = 'home' | 'read' | 'chapter-end' | 'review';
 type Panel = 'contents' | 'settings' | 'source' | null;
-type Practice = { questionId: string; choiceId?: string | null; hinted: boolean };
-
-function Text({ paragraph }: { paragraph: Paragraph }) {
-  return <div className="passage" id={paragraph.id} data-paragraph-id={paragraph.id}>
-    {(paragraph.speaker || paragraph.ref || paragraph.sourcePage) && <div className="speaker">{paragraph.speaker}{paragraph.ref && <span>{paragraph.ref}</span>}<SourcePages paragraph={paragraph} /></div>}
-    <p>{paragraph.text}</p>
-  </div>;
-}
-
-function SourcePage({ page }: { page: number }) {
-  return <SourcePageLink page={page} />;
-}
-
-function SourcePages({ paragraph }: { paragraph: Paragraph }) {
-  const pages = paragraph.sourcePages ?? (paragraph.sourcePage ? [paragraph.sourcePage] : []);
-  return <>{pages.map(page => <SourcePage page={page} key={page} />)}</>;
-}
-
 function Modal({ title, children, onClose }: { title: string; children: ReactNode; onClose: () => void }) {
   const ref = useRef<HTMLDialogElement>(null);
   const onCloseRef = useRef(onClose);
@@ -52,8 +38,10 @@ export default function App() {
   const [save, setSave] = useState<Save | null>(null);
   const [screen, setScreen] = useState<Screen>('home');
   const [panel, setPanel] = useState<Panel>(null);
-  const [selected, setSelected] = useState<string | null>(null);
-  const [practice, setPractice] = useState<Practice | null>(null);
+  const [audio, setAudio] = useState<AudioPreferences>(() => {
+    try { const saved = JSON.parse(localStorage.getItem('republic-feedback-audio') || '{}'); return { sound: saved.sound !== false, voice: saved.voice !== false }; }
+    catch { return { sound: true, voice: true }; }
+  });
   const [summaryId, setSummaryId] = useState<string | null>(null);
   const [error, setError] = useState('');
   const [notice, setNotice] = useState('');
@@ -68,9 +56,20 @@ export default function App() {
   const scrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const readerTop = useRef<HTMLDivElement>(null);
-  const questionRef = useRef<HTMLElement>(null);
+
   saveRef.current = save;
   screenRef.current = screen;
+
+  useEffect(() => {
+    stopFeedback();
+    try { localStorage.setItem('republic-feedback-audio', JSON.stringify(audio)); } catch { /* Reading still works without preference persistence. */ }
+  }, [audio]);
+  useEffect(() => { stopFeedback(); }, [screen, panel, save?.cursor]);
+  useEffect(() => {
+    const stopWhenHidden = () => { if (document.hidden) stopFeedback(); };
+    document.addEventListener('visibilitychange', stopWhenHidden);
+    return () => { document.removeEventListener('visibilitychange', stopWhenHidden); stopFeedback(); };
+  }, []);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -133,8 +132,6 @@ export default function App() {
       window.scrollTo(0, screen === 'read' ? saveRef.current?.scroll ?? 0 : 0);
       releaseFrame = requestAnimationFrame(() => { restoringScroll.current = false; });
     });
-    setSelected(null);
-    setPractice(null);
     return () => { cancelAnimationFrame(id); cancelAnimationFrame(releaseFrame); };
   }, [screen, save?.cursor, corpus, locationVersion]);
 
@@ -144,37 +141,30 @@ export default function App() {
   const units = flattenCorpus(corpus);
   const unit = units[save.cursor];
   const question = unit.question;
-  const firstAnswer = question ? save.answers[question.id] : undefined;
-  const practicing = !!question && practice?.questionId === question.id;
-  const displayedAnswer = practicing
-    ? practice.choiceId !== undefined ? { choiceId: practice.choiceId, hinted: practice.hinted } : undefined
-    : firstAnswer;
-  const revealed = !!displayedAnswer;
   const totalQuestions = units.filter(u => u.question).length;
   const characterCount = units.reduce((n, u) => n + [...u.paragraphs, ...(u.question ? [u.question.original] : []), ...u.response].reduce((a, p) => a + p.text.length, 0), 0);
   const firstOfChapter = units.findIndex(u => u.chapter.id === unit.chapter.id) === save.cursor;
   const lastOfChapter = save.cursor === units.length - 1 || units[save.cursor + 1].chapter.id !== unit.chapter.id;
   const chapterNumber = unit.chapterIndex + 1;
   const overall = progressStats(units, save);
-  const beforeBatches = readingBatches(unit.paragraphs);
-  const afterBatches = readingBatches(unit.response.slice(unit.replyCount ?? 0));
-  const position = readingPosition(save, unit);
-  const stepMode = save.reading.mode === 'step';
-  const beforeComplete = !stepMode || position.before >= beforeBatches.length;
-  const afterComplete = !stepMode || position.after >= afterBatches.length;
-  const chapterQuestions = units.filter(u => u.chapter.id === unit.chapter.id && u.question);
-  const currentQuestionNumber = chapterQuestions.findIndex(u => u.id === unit.id) + 1;
+  const pages = makeReadingPages(unit);
+  const pageIndex = pagePosition(save, unit);
+  const page = pages[pageIndex];
+  const roles = passageRoles(corpus);
+  const resolved = question ? isQuestionResolved(save, question) : true;
+  const currentSpeaker = page.kind === 'text' ? roles.get(page.paragraphs[0]?.sourceId)?.name : '苏格拉底';
+  const sceneId = unit.id === 'u-001' && page.kind === 'text' && page.paragraphs.every(fragment => Number(fragment.sourceId.slice(2)) <= 18) ? 'arrival' : undefined;
   const latestIndex = Math.min(save.completed, units.length - 1);
   const revisiting = save.cursor < latestIndex;
   const update = (fn: (s: Save) => Save) => setSave(s => s ? { ...fn(s), updatedAt: new Date().toISOString() } : s);
   const goTo = (index: number) => {
-    update(s => ({ ...navigate(s, units, index), started: true }));
+    update(s => { const moved = { ...navigate(s, units, index), started: true }; return setPagePosition(moved, units[moved.cursor], pagePosition(moved, units[moved.cursor])); });
     setLocationVersion(version => version + 1);
     setSummaryId(null);
     setPanel(null);
     setScreen('read');
   };
-  const start = () => { update(s => ({ ...s, started: true })); setScreen('read'); };
+  const start = () => { update(s => ({ ...setPagePosition({ ...s, started: true }, unit, pagePosition(s, unit)), scroll: s.scroll })); setScreen('read'); };
   const goHome = () => {
     if (screen === 'read') update(s => ({ ...s, scroll: Math.max(0, Math.round(window.scrollY)) }));
     setScreen('home');
@@ -189,47 +179,22 @@ export default function App() {
     setPanel(null);
     setScreen('review');
   };
-  const choose = (choiceId: string | null) => {
-    if (!question) return;
-    if (practicing) {
-      setPractice({ questionId: question.id, choiceId, hinted: practice.hinted });
-      update(s => recordReview(s, units, question.id, choiceId));
-    }
-    else update(s => submitAnswer(s, unit, choiceId));
-    setSelected(null);
-    requestAnimationFrame(() => {
-      questionRef.current?.querySelector<HTMLElement>('.answer-result')?.focus({ preventScroll: true });
-      questionRef.current?.scrollIntoView({ block: 'start', behavior: 'instant' });
-    });
+  const turnPage = (index: number) => {
+    stopFeedback();
+    update(s => s.cursor !== unit.index || pagePosition(s, unit) !== pageIndex ? s : setPagePosition(s, unit, index));
+    setLocationVersion(value => value + 1);
+    requestAnimationFrame(() => readerTop.current?.focus({ preventScroll: true }));
   };
-  const refocusQuestion = () => requestAnimationFrame(() => {
-    questionRef.current?.querySelector<HTMLInputElement>('input')?.focus({ preventScroll: true });
-    questionRef.current?.scrollIntoView({ block: 'start', behavior: 'instant' });
-  });
   const next = () => {
-    if ((question && !firstAnswer) || !beforeComplete || !afterComplete) return;
-    update(s => advance(s, units));
+    stopFeedback();
+    if (pageIndex < pages.length - 1 || !resolved) return;
+    update(s => s.cursor !== unit.index || pagePosition(s, unit) !== pageIndex ? s : advance(setPagePosition(s, unit, pageIndex), units));
     if (lastOfChapter) { setSummaryId(unit.chapter.id); setScreen('chapter-end'); }
   };
-
-  function readingPart(side: 'before' | 'after') {
-    const batches = side === 'before' ? beforeBatches : afterBatches;
-    const shown = stepMode ? position[side] : batches.length;
-    return <div className={`reading-part reading-part-${side}`}>
-      {batches.slice(0, shown).map((batch, index) => <div className="reading-batch" key={batch[0].id} id={`batch-${unit.id}-${side}-${index}`} tabIndex={-1} role="group" aria-label={`原文第 ${index + 1} 段`}>{batch.map(p => <Text key={p.id} paragraph={p} />)}</div>)}
-      {shown < batches.length && <div className="reading-step" data-reading-side={side}>
-        <p>已展开 {shown} / {batches.length} 段{side === 'before' && question ? ' · 读完后进入这一问' : ''}</p>
-        <button className="primary" onClick={() => {
-          update(s => setReadingPosition(s, unit, side, shown + 1));
-          requestAnimationFrame(() => {
-            const batch = document.getElementById(`batch-${unit.id}-${side}-${shown}`);
-            batch?.focus({ preventScroll: true });
-            batch?.scrollIntoView({ block: 'start', behavior: 'instant' });
-          });
-        }}>{side === 'before' ? '读下一段' : '继续读原文'} <ArrowRight size={17} /></button>
-      </div>}
-    </div>;
-  }
+  const attemptQuestion = (choiceId: string) => {
+    if (!question) return;
+    update(s => s.cursor !== unit.index || pagePosition(s, unit) !== pageIndex ? s : isQuestionResolved(s, question) ? recordReview(s, units, question.id, choiceId) : submitAnswer(setPagePosition(s, unit, pageIndex), unit, choiceId));
+  };
   const exportProgress = () => {
     const url = URL.createObjectURL(new Blob([JSON.stringify(save, null, 2)], { type: 'application/json' }));
     const anchor = document.createElement('a'); anchor.href = url; anchor.download = '理想国-阅读进度.json'; anchor.click(); URL.revokeObjectURL(url);
@@ -251,27 +216,6 @@ export default function App() {
     if (fileRef.current) fileRef.current.value = '';
   };
 
-  function questionCard(q: Question) {
-    const options = orderedOptions(q, save!.seed);
-    return <section className={`question ${revealed ? 'is-revealed' : ''}`} aria-label="追问练习" ref={questionRef} data-question-id={q.id}>
-      <div className="question-kicker">停一停，想一问 <span>本章第 {currentQuestionNumber} / {chapterQuestions.length} 问</span>{practicing && <span>复习练习 · 首次记录保留</span>}</div>
-      {!revealed ? <>
-        <h2>{q.prompt}</h2>
-        <QuestionChoices questionId={q.id} options={options} selected={selected} onSelect={setSelected} onConfirm={choose} onReveal={() => choose(null)} />
-      </> : <>
-        <p className="answer-result" role="status" tabIndex={-1}>{displayedAnswer!.choiceId === null ? '已揭示原问' : displayedAnswer!.choiceId === q.correctId ? '你的选择与原问对应。' : '你的选择与原问不同。'}</p>
-        <p className="answer-followup">{displayedAnswer!.choiceId === q.correctId ? '这一问已选中，可以继续读下去。' : '这一问可以稍后重练；先接着看原文。'}</p>
-        <div className="original-question"><div className="speaker">{q.original.speaker || '苏格拉底'}<span>{q.sourceRef}</span><SourcePages paragraph={q.original} /></div><p data-paragraph-id={q.original.id}>{q.original.text}</p></div>
-        <div className="original-reply">{unit.response.slice(0, unit.replyCount ?? 0).map(p => <Text key={p.id} paragraph={p} />)}</div>
-        <aside className="explanation" aria-label="为什么这一问更好"><h3>为什么这一问更好</h3><p>{q.explanation}</p>
-          <div className="comparisons">{options.filter(o => o.id !== q.correctId).map(o => <div key={o.id}><p className="comparison-question">{o.text}{displayedAnswer!.choiceId === o.id && <span className="chosen-tag">你的选择</span>}</p><p>{o.feedback}</p></div>)}</div>
-        </aside>
-        <button className="text-button practice-button" onClick={() => { setPractice({ questionId: q.id, hinted: false }); setSelected(null); refocusQuestion(); }}>重新练习这一问</button>
-      </>}
-      {practicing && <button className="text-button practice-button" onClick={() => { setPractice(null); setSelected(null); }}>退出复习，查看首次记录</button>}
-    </section>;
-  }
-
   const summary = corpus.chapters.find(c => c.id === summaryId) ?? unit.chapter;
   const summaryStats = chapterStats(summary, save);
   const summaryChapterIndex = corpus.chapters.findIndex(chapter => chapter.id === summary.id);
@@ -287,8 +231,8 @@ export default function App() {
 
     {screen === 'home' && <main id="main" className="home">
       <section className="hero"><p className="eyebrow">柏拉图 · 原典互动阅读</p><h1>苏格拉底的<span>下一问</span></h1>
-        <p className="hero-description">沿着《理想国》阅读，在关键处选择更好的追问。<br className="desktop-break" />每次作答后，看看这一问为什么更好。</p>
-        <p className="play-rules">读一段原文 · 选一个问题 · 对照原问 · 再练一轮</p>
+        <p className="hero-description">沿着《理想国》逐页阅读，在关键处选择更好的追问。<br className="desktop-break" />每次作答后，看看这一问为什么更好。</p>
+        <p className="play-rules">翻一页原文 · 选一个问题 · 听解释 · 再想一步</p>
         <div className="hero-actions"><button className="primary" onClick={start}>{save.started ? '继续阅读' : '开始阅读'}<ArrowRight size={19} /></button>{save.started && <span className="resume-note">第{numerals[unit.chapterIndex]}章 · {unit.section.title}</span>}</div>
         {revisiting && <button className="text-button latest-home" onClick={() => goTo(latestIndex)}>回到最新进度 <ArrowRight size={15} /></button>}
         <div className="book-facts"><span>第一至四卷</span><span>{corpus.chapters.length} 个主题章</span><span>{totalQuestions} 次追问</span><span>约 {(characterCount / 10000).toFixed(1)} 万字</span></div>
@@ -312,23 +256,19 @@ export default function App() {
       <footer className="home-footer"><p>{corpus.edition.label}</p><button className="text-button" onClick={() => setPanel('source')}>底本与阅读说明 <ChevronRight size={15} /></button><p className="small">进度保存在当前浏览器中。无需登录。</p></footer>
     </main>}
 
-    {screen === 'read' && <main id="main" className="reading-shell" ref={readerTop}>
+    {screen === 'read' && <main id="main" className="reading-shell paged-reading" ref={readerTop} tabIndex={-1}>
       {revisiting && <div className="return-latest"><span>正在回看已读内容</span><button className="text-button" onClick={() => goTo(latestIndex)}>回到最新进度 <ArrowRight size={15} /></button></div>}
       <div className="reading-location"><button className="text-button" onClick={() => setPanel('contents')}>第{numerals[unit.chapterIndex]}章 · {unit.chapter.title}</button><button className={`icon-button bookmark-button ${save.bookmarks.includes(unit.id) ? 'bookmarked' : ''}`} aria-label={save.bookmarks.includes(unit.id) ? '移除书签' : '添加书签'} title="书签" onClick={() => update(s => ({ ...s, bookmarks: s.bookmarks.includes(unit.id) ? s.bookmarks.filter(id => id !== unit.id) : [...s.bookmarks, unit.id] }))}><Bookmark size={19} fill={save.bookmarks.includes(unit.id) ? 'currentColor' : 'none'} /></button></div>
-      {firstOfChapter && <section className="chapter-intro"><p className="eyebrow">第{numerals[unit.chapterIndex]}章 / {corpus.chapters.length}章</p><h1>{unit.chapter.title}</h1><p>{unit.chapter.range}</p></section>}
+      {firstOfChapter && pageIndex === 0 && <section className="chapter-intro"><p className="eyebrow">第{numerals[unit.chapterIndex]}章 / {corpus.chapters.length}章</p><h1>{unit.chapter.title}</h1><p>{unit.chapter.range}</p></section>}
       <div className="reading-section-heading"><h2>{unit.section.title}</h2><span>{unit.section.range}</span></div>
-      <div className="chapter-question-track" aria-label="本章追问进度">{chapterQuestions.map((u, i) => {
-        const answer = save.answers[u.question!.id];
-        const state = answer ? answer.choiceId === u.question!.correctId ? 'matched' : 'encountered' : 'upcoming';
-        return <span key={u.id} className={state} title={`第${i + 1}问：${answer ? state === 'matched' ? '首次选中' : '已作答' : '尚未作答'}`} aria-label={`第${i + 1}问：${answer ? state === 'matched' ? '首次选中' : '已作答' : '尚未作答'}`}>{i + 1}</span>;
-      })}<small>本章已答 {chapterQuestions.filter(u => save.answers[u.question!.id]).length} / {chapterQuestions.length}</small></div>
-      <article className="reading-text" aria-label="原典正文">
-        {readingPart('before')}
-        {question && beforeComplete && questionCard(question)}
-        {beforeComplete && (!question || revealed) && readingPart('after')}
+      <div className="page-position" aria-label="当前阅读页"><span>{page.kind === 'question' ? '追问时刻' : '原文阅读'}</span><span>本节 {pageIndex + 1} / {pages.length} 页</span><progress value={pageIndex + 1} max={pages.length} /></div>
+      <ComicScene chapterId={unit.chapter.id} sceneId={sceneId} speaker={currentSpeaker} compact={page.kind === 'question'} />
+      <article className="reading-text page-content" aria-label="原典正文" key={unit.id + ':' + pageIndex} data-page-index={pageIndex} data-page-kind={page.kind}>
+        {page.kind === 'text' ? <div className="text-page">{page.paragraphs.map(fragment => <ReadingPassage key={fragment.id} paragraph={fragment} sourceId={fragment.sourceId} role={roles.get(fragment.sourceId)} continuation={fragment.fragmentIndex > 0} />)}</div> : <QuestionChallenge question={page.question} seed={save.seed} resolved={resolved} onAttempt={attemptQuestion} onContinue={() => turnPage(pageIndex + 1)} audio={audio} />}
       </article>
-      <footer className="reading-navigation"><button className="text-button" disabled={save.cursor === 0} onClick={() => goTo(save.cursor - 1)}><ArrowLeft size={17} />上一节</button>
-        {beforeComplete && afterComplete && (!question || revealed) ? <button className="primary" onClick={next}>{lastOfChapter ? '完成本章' : '继续阅读'}<ArrowRight size={18} /></button> : <span className="reading-pause">{!beforeComplete || (revealed && !afterComplete) ? '按自己的节奏，把这一段读完。' : '选一个问题，或直接揭示原文。'}</span>}
+      <footer className="reading-navigation page-navigation"><button className="text-button" disabled={pageIndex === 0 && save.cursor === 0} onClick={() => pageIndex > 0 ? turnPage(pageIndex - 1) : goTo(save.cursor - 1)}><ArrowLeft size={17} />上一页</button>
+        {page.kind === 'text' && (pageIndex < pages.length - 1 ? <button className="primary" onClick={() => turnPage(pageIndex + 1)} data-testid="next-page">{pages[pageIndex + 1].kind === 'question' ? '试着问一问' : '下一页'}<ArrowRight size={18} /></button> : <button className="primary" onClick={next} data-testid="next-unit">{lastOfChapter ? '完成本章' : '继续下一节'}<ArrowRight size={18} /></button>)}
+        {page.kind === 'question' && !resolved && <span className="reading-pause">选对问题，再继续原文。</span>}
       </footer>
       <div className="reading-footnote"><span>第{chapterNumber}章 · 阅读位置 {units.filter(u => u.chapter.id === unit.chapter.id && u.index <= save.cursor).length} / {units.filter(u => u.chapter.id === unit.chapter.id).length}</span><button className="text-button" onClick={() => setPanel('source')}>底本说明</button></div>
     </main>}
@@ -340,7 +280,7 @@ export default function App() {
       {nextChapterUnit ? <button className="primary" onClick={() => goTo(nextChapterUnit.index)}>进入下一章 <ArrowRight size={18} /></button> : <><p className="end-note">你已读完本篇。讨论仍将继续；现在也可以回到任何已读章节，重新体会其中的追问。</p><button className="primary" onClick={() => setScreen('home')}>回到目录 <BookOpen size={18} /></button></>}
     </main>}
 
-    {screen === 'review' && <ReviewRound key={reviewSession} corpus={corpus} save={save} questionIds={reviewIds} onAnswer={(id, choiceId) => update(s => recordReview(s, units, id, choiceId))} onClose={() => setScreen(reviewReturn)} returnLabel={reviewReturn === 'home' ? '返回首页' : reviewReturn === 'chapter-end' ? '返回本章小结' : '返回阅读'} />}
+    {screen === 'review' && <ReviewRound key={reviewSession} corpus={corpus} save={save} questionIds={reviewIds} onAnswer={(id, choiceId) => update(s => recordReview(s, units, id, choiceId))} onClose={() => setScreen(reviewReturn)} audio={audio} returnLabel={reviewReturn === 'home' ? '返回首页' : reviewReturn === 'chapter-end' ? '返回本章小结' : '返回阅读'} />}
 
     {panel && <Modal title={panel === 'contents' ? '阅读目录' : panel === 'settings' ? '阅读设置' : '底本与阅读说明'} onClose={() => setPanel(null)}>
       {panel === 'contents' && <><p className="panel-intro">按原文顺序阅读。已读部分可以随时回看，首次作答记录会保留。</p>
@@ -352,7 +292,7 @@ export default function App() {
           return <li key={section.id}><button disabled={!accessible} onClick={() => goTo(index)}>{section.title}{accessible ? <ChevronRight size={16} /> : <small>待阅读</small>}</button></li>;
         })}</ul></li>)}</ol></>}
       {panel === 'settings' && <div className="settings-panel"><section><h3>正文字号</h3><div className="font-control"><button aria-label="减小字号" disabled={save.settings.fontSize <= 16} onClick={() => update(s => ({ ...s, settings: { ...s.settings, fontSize: Math.max(16, s.settings.fontSize - 2) } }))}>A−</button><output>{save.settings.fontSize}px</output><button aria-label="增大字号" disabled={save.settings.fontSize >= 32} onClick={() => update(s => ({ ...s, settings: { ...s.settings, fontSize: Math.min(32, s.settings.fontSize + 2) } }))}>A＋</button></div><p className="font-sample">从一个更好的问题，开始一段更清楚的思考。</p></section>
-        <section><h3>阅读节奏</h3><div className="segmented">{(['step', 'continuous'] as const).map(mode => <button key={mode} aria-pressed={save.reading.mode === mode} onClick={() => update(s => setReadingMode(s, mode, s.started ? unit : undefined))}>{mode === 'step' ? '分段阅读' : '连续全文'}</button>)}</div><p>分段阅读按原文段落逐步展开。切回分段时保留已显示的正文，从下一节采用新的节奏。</p></section>
+        <section><h3>答题声音</h3><div className="audio-setting"><span>选项解释 · 普通话配音</span><button aria-pressed={audio.voice} onClick={() => setAudio(value => ({ ...value, voice: !value.voice }))}>{audio.voice ? '已开启' : '已关闭'}</button></div><div className="audio-setting"><span>答对、答错提示音</span><button aria-pressed={audio.sound} onClick={() => setAudio(value => ({ ...value, sound: !value.sound }))}>{audio.sound ? '已开启' : '已关闭'}</button></div><p>确认选择后播放；翻页或退出时停止。阅读原文时保持安静。</p></section>
         <section><h3>阅读背景</h3><div className="segmented">{(['paper', 'night'] as const).map(theme => <button key={theme} aria-pressed={save.settings.theme === theme} onClick={() => update(s => ({ ...s, settings: { ...s.settings, theme } }))}>{theme === 'paper' ? '纸色' : '夜间'}</button>)}</div></section>
         <section><h3>进度备份</h3><p>阅读位置、首次作答和重练记录保存在本机。换浏览器前，可以导出一份备份。</p><div className="backup-actions"><button onClick={exportProgress}>导出进度</button><button onClick={() => fileRef.current?.click()}>导入进度</button><input ref={fileRef} type="file" accept=".json,application/json" className="sr-only" aria-label="选择进度文件" onChange={e => importProgress(e.target.files?.[0])} /></div></section>
         <section>{confirmReset ? <><p>重新开始会清除本浏览器中的阅读与答题记录。可以先导出备份。</p><div className="backup-actions"><button onClick={() => { setSave(createSave(corpus)); setScreen('home'); setPanel(null); setConfirmReset(false); }}>确认重新开始</button><button onClick={() => setConfirmReset(false)}>保留进度</button></div></> : <button className="text-button" onClick={() => setConfirmReset(true)}>重新开始阅读</button>}</section>

@@ -11,6 +11,7 @@ import type {
   Review,
   Save,
 } from './model.ts';
+import { makeReadingPages } from './pagination.ts';
 
 const own = (value: object, key: PropertyKey) => Object.prototype.hasOwnProperty.call(value, key);
 const record = (value: unknown): value is Record<string, unknown> =>
@@ -67,13 +68,15 @@ export function createSave(corpus: Corpus, seed?: string): Save {
   const selectedSeed = seed ?? crypto.randomUUID();
   if (!validSeed(selectedSeed)) throw new Error('选项顺序种子必须是1至128个字符的非空字符串。');
   return {
-    version: 3,
+    version: 4,
     editionId: corpus.edition.id,
     seed: selectedSeed,
     started: false,
     cursor: 0,
     completed: 0,
     answers: {},
+    resolved: [],
+    pages: {},
     reading: { mode: 'step', positions: {} },
     reviews: {},
     hints: [],
@@ -89,12 +92,13 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
     const { units, unitIds, questions } = indexCorpus(corpus);
     if (!record(input)) return null;
     const oldVersion = input.version === 2;
+    const legacy = oldVersion || input.version === 3;
     const commonKeys = [
       'version', 'editionId', 'seed', 'started', 'cursor', 'completed', 'answers',
       'hints', 'bookmarks', 'scroll', 'settings', 'updatedAt',
     ];
-    if (!keysAre(input, oldVersion ? commonKeys : [...commonKeys, 'reading', 'reviews'])) return null;
-    if ((!oldVersion && input.version !== 3) || input.editionId !== corpus.edition.id || !validSeed(input.seed) ||
+    if (!keysAre(input, oldVersion ? commonKeys : [...commonKeys, 'reading', 'reviews', ...(legacy ? [] : ['resolved', 'pages'])])) return null;
+    if ((!legacy && input.version !== 4) || input.editionId !== corpus.edition.id || !validSeed(input.seed) ||
       typeof input.started !== 'boolean' || !integerIn(input.cursor, 0, units.length - 1) ||
       !integerIn(input.completed, 0, units.length) || input.cursor > input.completed ||
       !validDate(input.updatedAt)) return null;
@@ -132,8 +136,18 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
         enumerable: true, configurable: true, writable: true,
       });
     }
+    const resolvedInput = legacy ? Object.keys(answers) : input.resolved;
+    if (!Array.isArray(resolvedInput) || resolvedInput.length > questions.size) return null;
+    const resolved = new Set<string>();
+    for (const id of resolvedInput) {
+      if (typeof id !== 'string' || resolved.has(id) || !questions.has(id) || !own(answers, id)) return null;
+      resolved.add(id);
+    }
+    for (const [id, answer] of Object.entries(answers)) {
+      if (answer.choiceId === questions.get(id)!.question.correctId && !resolved.has(id)) return null;
+    }
     for (const unit of units.slice(0, input.completed)) {
-      if (unit.question && !own(answers, unit.question.id)) return null;
+      if (unit.question && !resolved.has(unit.question.id)) return null;
     }
     const migratedPositions: Record<string, ReadingPosition> = {};
     if (oldVersion && input.started) {
@@ -166,7 +180,7 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
       if (!integerIn(position.before, Math.min(1, limits.before), limits.before) ||
         !integerIn(position.after, Math.min(1, limits.after), limits.after)) return null;
       if (index < input.completed && (position.before !== limits.before || position.after !== limits.after)) return null;
-      if (unit.question && !own(answers, unit.question.id) && position.after > Math.min(1, limits.after)) return null;
+      if (unit.question && !resolved.has(unit.question.id) && position.after > Math.min(1, limits.after)) return null;
       if (unit.question && own(answers, unit.question.id) && position.before !== limits.before) return null;
       Object.defineProperty(positions, id, {
         value: { before: position.before, after: position.after },
@@ -190,16 +204,34 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
         enumerable: true, configurable: true, writable: true,
       });
     }
+    const pageInput = legacy ? {} : input.pages;
+    if (!record(pageInput) || Reflect.ownKeys(pageInput).length > units.length) return null;
+    const pages: Record<string, number> = {};
+    for (const id of Reflect.ownKeys(pageInput)) {
+      if (typeof id !== 'string') return null;
+      const index = unitIds.get(id);
+      if (index === undefined || index > input.completed) return null;
+      const unit = units[index];
+      const unitPages = makeReadingPages(unit);
+      const position = pageInput[id];
+      if (!integerIn(position, 0, Math.max(0, unitPages.length - 1))) return null;
+      const questionIndex = unitPages.findIndex(page => page.kind === 'question');
+      if (questionIndex >= 0 && !resolved.has(unit.question!.id) && position > questionIndex) return null;
+      Object.defineProperty(pages, id, { value: position, enumerable: true, configurable: true, writable: true });
+    }
     if (!input.started && (input.cursor !== 0 || input.completed !== 0 || Object.keys(answers).length ||
-      hints.size || bookmarks.size || Object.keys(positions).length || Object.keys(reviews).length || input.scroll !== 0)) return null;
-    return {
-      version: 3,
+      hints.size || bookmarks.size || Object.keys(positions).length || Object.keys(reviews).length ||
+      resolved.size || Object.keys(pages).length || input.scroll !== 0)) return null;
+    const result: Save = {
+      version: 4,
       editionId: corpus.edition.id,
       seed: input.seed,
       started: input.started,
       cursor: input.cursor,
       completed: input.completed,
       answers,
+      resolved: [...resolved],
+      pages,
       reading: { mode: reading.mode as ReadingMode, positions },
       reviews,
       hints: [...hints],
@@ -208,6 +240,11 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
       settings: { fontSize: input.settings.fontSize, theme: input.settings.theme as 'paper' | 'night' },
       updatedAt: input.updatedAt,
     };
+    if (legacy && result.started) {
+      const current = units[result.cursor];
+      result.pages[current.id] = migratedPagePosition(result, current);
+    }
+    return result;
   } catch {
     return null;
   }
@@ -265,6 +302,68 @@ function readingLimits(unit: ReadingUnit): ReadingPosition {
   };
 }
 
+export function isQuestionResolved(save: Save, question: Question | string): boolean {
+  return save.resolved.includes(typeof question === 'string' ? question : question.id);
+}
+
+function migratedPagePosition(save: Save, unit: ReadingUnit): number {
+  const pages = makeReadingPages(unit);
+  const position = readingPosition(save, unit);
+  const resolved = !unit.question || isQuestionResolved(save, unit.question);
+  const side = resolved ? 'after' : 'before';
+  const paragraphs = side === 'after' ? unit.response.slice(unit.replyCount ?? 0) : unit.paragraphs;
+  const lastVisible = readingBatches(paragraphs).slice(0, position[side]).flat().at(-1);
+  if (lastVisible) {
+    for (let index = pages.length - 1; index >= 0; index--) {
+      const page = pages[index];
+      if (page.kind === 'text' && page.side === side &&
+        page.paragraphs.some(paragraph => paragraph.sourceId === lastVisible.id)) return index;
+    }
+  }
+  const questionIndex = pages.findIndex(page => page.kind === 'question');
+  return unit.question && own(save.answers, unit.question.id) && questionIndex >= 0 ? questionIndex : 0;
+}
+
+export function pagePosition(save: Save, unit: ReadingUnit): number {
+  return own(save.pages, unit.id) ? save.pages[unit.id] : 0;
+}
+
+export function setPagePosition(save: Save, unit: ReadingUnit, page: number): Save {
+  assertCurrentUnit(save, unit);
+  const pages = makeReadingPages(unit);
+  if (!integerIn(page, 0, Math.max(0, pages.length - 1))) throw new Error('页码超出当前阅读单元。');
+  const questionIndex = pages.findIndex(current => current.kind === 'question');
+  if (questionIndex >= 0 && !isQuestionResolved(save, unit.question!) && page > questionIndex) {
+    throw new Error('答对当前问题后才能继续阅读。');
+  }
+  const previous = readingPosition(save, unit);
+  const limits = readingLimits(unit);
+  const seenPages = pages.slice(0, page + 1);
+  const completedParagraphs = new Set<string>();
+  const allFragments = pages.flatMap(current => current.kind === 'text' ? current.paragraphs : []);
+  for (const shown of seenPages.flatMap(current => current.kind === 'text' ? current.paragraphs : [])) {
+    if (!allFragments.some(fragment => fragment.sourceId === shown.sourceId && fragment.fragmentIndex > shown.fragmentIndex)) {
+      completedParagraphs.add(shown.sourceId);
+    }
+  }
+  const fullyReadBatches = (paragraphs: readonly Paragraph[]) => {
+    const batches = readingBatches(paragraphs);
+    const unfinished = batches.findIndex(batch => !batch.every(paragraph => completedParagraphs.has(paragraph.id)));
+    return unfinished < 0 ? batches.length : unfinished;
+  };
+  const before = Math.max(previous.before, fullyReadBatches(unit.paragraphs),
+    questionIndex >= 0 && page >= questionIndex ? limits.before : 0);
+  const after = Math.max(previous.after, fullyReadBatches(unit.response.slice(unit.replyCount ?? 0)));
+  if (save.started && own(save.pages, unit.id) && save.pages[unit.id] === page &&
+    previous.before === before && previous.after === after && save.scroll === 0) return save;
+  return {
+    ...save, started: true,
+    pages: { ...save.pages, [unit.id]: page },
+    reading: { ...save.reading, positions: { ...save.reading.positions, [unit.id]: { before, after } } },
+    scroll: 0, updatedAt: new Date().toISOString(),
+  };
+}
+
 export function readingPosition(save: Save, unit: ReadingUnit): ReadingPosition {
   const limits = readingLimits(unit);
   if (own(save.reading.positions, unit.id)) return { ...save.reading.positions[unit.id] };
@@ -280,8 +379,8 @@ export function setReadingPosition(save: Save, unit: ReadingUnit, side: 'before'
   if (side !== 'before' && side !== 'after') throw new Error('无效的阅读位置。');
   const maximum = readingLimits(unit)[side];
   if (!integerIn(count, Math.min(1, maximum), maximum)) throw new Error('阅读位置超出本段正文。');
-  if (side === 'after' && unit.question && !own(save.answers, unit.question.id)) {
-    throw new Error('选择或揭示原问后才能继续阅读。');
+  if (side === 'after' && unit.question && !isQuestionResolved(save, unit.question)) {
+    throw new Error('答对当前问题后才能继续阅读。');
   }
   const previous = readingPosition(save, unit);
   if (count <= previous[side]) return save;
@@ -301,7 +400,7 @@ export function setReadingMode(save: Save, mode: ReadingMode, unit?: ReadingUnit
     assertCurrentUnit(save, unit);
     const limits = readingLimits(unit);
     // Continuous mode has already shown these batches; changing pace must not hide them.
-    const after = !unit.question || own(save.answers, unit.question.id)
+    const after = !unit.question || isQuestionResolved(save, unit.question)
       ? limits.after
       : readingPosition(save, unit).after;
     positions = { ...positions, [unit.id]: { before: limits.before, after } };
@@ -314,7 +413,11 @@ export function submitAnswer(save: Save, unit: ReadingUnit, choiceId: string | n
   const question = unit.question;
   if (!question) throw new Error('这一段没有需要提交的问题。');
   if (choiceId !== null && !question.options.some(option => option.id === choiceId)) throw new Error('这个选项不属于当前问题。');
-  if (own(save.answers, question.id)) return save;
+  if (isQuestionResolved(save, question)) return save;
+  const questionPage = makeReadingPages(unit).findIndex(page => page.kind === 'question');
+  if (own(save.pages, unit.id) && save.pages[unit.id] < questionPage) {
+    throw new Error('读到当前问题所在页后再选择。');
+  }
   const limits = readingLimits(unit);
   if (save.reading.mode === 'step' && readingPosition(save, unit).before < limits.before) {
     throw new Error('读完当前问题之前的正文后再选择。');
@@ -323,7 +426,9 @@ export function submitAnswer(save: Save, unit: ReadingUnit, choiceId: string | n
   return {
     ...save,
     started: true,
-    answers: { ...save.answers, [question.id]: { choiceId, hinted: save.hints.includes(question.id), at: now } },
+    answers: own(save.answers, question.id) ? save.answers :
+      { ...save.answers, [question.id]: { choiceId, hinted: save.hints.includes(question.id), at: now } },
+    resolved: choiceId === question.correctId ? [...save.resolved, question.id] : save.resolved,
     reading: { ...save.reading, positions: {
       ...save.reading.positions, [unit.id]: { ...readingPosition(save, unit), before: limits.before },
     } },
@@ -341,7 +446,8 @@ export function useHint(save: Save, unit: ReadingUnit): Save {
 export function advance(save: Save, units: readonly ReadingUnit[]): Save {
   if (!integerIn(save.cursor, 0, units.length - 1) || !integerIn(save.completed, 0, units.length) || save.cursor > save.completed) return save;
   const unit = units[save.cursor];
-  if (unit.question && !own(save.answers, unit.question.id)) return save;
+  if (unit.question && !isQuestionResolved(save, unit.question)) return save;
+  if (own(save.pages, unit.id) && save.pages[unit.id] < makeReadingPages(unit).length - 1) return save;
   const position = readingPosition(save, unit);
   const limits = readingLimits(unit);
   if (save.reading.mode === 'step' && (position.before < limits.before || position.after < limits.after)) return save;

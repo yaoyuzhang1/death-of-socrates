@@ -53,13 +53,15 @@ export type ReadingPosition = { before: number; after: number };
 export type Review = { attempts: number; correct: number; lastChoiceId: string | null; at: string };
 export type Settings = { fontSize: number; theme: 'paper' | 'night' };
 export type Save = {
-  version: 3;
+  version: 4;
   editionId: string;
   seed: string;
   started: boolean;
   cursor: number;
   completed: number;
   answers: Record<string, Answer>;
+  resolved: string[];
+  pages: Record<string, number>;
   reading: { mode: ReadingMode; positions: Record<string, ReadingPosition> };
   reviews: Record<string, Review>;
   hints: string[];

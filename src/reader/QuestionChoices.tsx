@@ -9,7 +9,7 @@ type Props = {
   selected: string | null;
   onSelect: (id: string) => void;
   onConfirm: (id: string) => void;
-  onReveal: () => void;
+  onReveal?: () => void;
   testIdPrefix?: string;
 };
 
@@ -40,7 +40,7 @@ export default function QuestionChoices({ questionId, options, selected, onSelec
     <div className="question-actions choice-actions">
       <div className="choice-selection" role="status">{selection < 0 ? '先选一个问法' : `已选 ${String.fromCharCode(65 + selection)}，确认前可以修改`}<span className="choice-keyboard">选项内：1–3 选择，Enter 确认</span></div>
       <button className="primary" disabled={selection < 0} onClick={() => selection >= 0 && onConfirm(options[selection].id)} data-testid={testIdPrefix ? `${testIdPrefix}-confirm` : undefined}>确认选择 <ArrowRight size={17} /></button>
-      <button className="text-button" onClick={onReveal} data-testid={testIdPrefix ? `${testIdPrefix}-reveal` : undefined}>直接看原文</button>
+      {onReveal && <button className="text-button" onClick={onReveal} data-testid={testIdPrefix ? `${testIdPrefix}-reveal` : undefined}>直接看原文</button>}
     </div>
   </>;
 }

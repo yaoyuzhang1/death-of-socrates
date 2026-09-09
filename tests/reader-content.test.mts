@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync, readdirSync, existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {flattenCorpus, createSave, submitAnswer, advance, validateSave, setReadingMode} from '../src/reader/engine.ts';
+import {flattenCorpus, createSave, submitAnswer, advance, validateSave, setReadingMode, setPagePosition, pagePosition} from '../src/reader/engine.ts';
+import {makeReadingPages} from '../src/reader/pagination.ts';
 import type {Corpus} from '../src/reader/model.ts';
 const read=(path:string)=>JSON.parse(readFileSync(new URL(`../${path}`,import.meta.url),'utf8').replace(/^\uFEFF/,''));
 const corpus:Corpus=read('reader-public/text/republic.json');
@@ -104,13 +105,15 @@ test('Cross-page passages expose each source page without duplicating the text',
   for(const page of p.sourcePages!) assert.ok(page>=1&&page<=176);
  }
 });
-test('Wrong answers, direct reveals and cross-page questions can finish the entire journey',()=>{
+test('Every source question can be corrected after an initial mistake without changing the complete journey',()=>{
  let save={...setReadingMode(createSave(corpus,'complete-guo-content-test'),'continuous'),started:true};
  for(const [i,unit] of units.entries()) {
   assert.equal(save.cursor,i);
   if(unit.question) {
    const wrong=unit.question.options.find(o=>o.id!==unit.question!.correctId)!.id;
    save=submitAnswer(save,unit,i%2?wrong:null);
+   assert.equal(advance(save,units),save,unit.id);
+   save=submitAnswer(save,unit,unit.question.correctId);
   }
   save=advance(save,units);
  }
@@ -119,12 +122,43 @@ test('Wrong answers, direct reveals and cross-page questions can finish the enti
  assert.ok(validateSave(save,corpus));
  assert.equal(validateSave({...save,editionId:'republic-shorey-zh-2026-09-08'},corpus),null);
 });
-test('Public assets contain only original book facsimiles as raster images and never audio',()=>{
+test('The full short-page journey reaches every source page and question with correction and reload gates intact',()=>{
+ let save=createSave(corpus,'complete-short-page-test');
+ const body:string[]=[];
+ for(const unit of units) {
+  assert.equal(save.cursor,unit.index);
+  const pages=makeReadingPages(unit);
+  for(const [index,page] of pages.entries()) {
+   save=setPagePosition(save,unit,index);
+   assert.equal(pagePosition(save,unit),index);
+   if(page.kind==='question') {
+    const wrong=page.question.options.find(option=>option.id!==page.question.correctId)!.id;
+    save=submitAnswer(save,unit,wrong);
+    assert.equal(advance(save,units),save);
+    assert.throws(()=>setPagePosition(save,unit,index+1));
+    save=validateSave(JSON.parse(JSON.stringify(save)),corpus)!;
+    assert.ok(save,unit.id);
+    assert.equal(advance(save,units),save);
+    save=submitAnswer(save,unit,page.question.correctId);
+   } else body.push(...page.paragraphs.map(paragraph=>paragraph.text));
+   if(index<pages.length-1) assert.equal(advance(save,units),save);
+  }
+  save=advance(save,units);
+  assert.ok(validateSave(save,corpus),unit.id);
+ }
+ assert.equal(save.completed,53);
+ assert.equal(save.resolved.length,47);
+ assert.equal(body.join(''),textOf(units));
+});
+test('Original book facsimiles remain complete and game illustrations and audio stay in separate asset directories',()=>{
  const names=readdirSync(new URL('../reader-public/',import.meta.url),{recursive:true}).map(String);
- assert.ok(names.every(n=>!(/\.(mp3|wav|ogg|m4a|mp4)$/i.test(n))));
+ const audio=names.filter(n=>/\.(mp3|wav|ogg|m4a|mp4)$/i.test(n));
+ assert.ok(audio.every(n=>/^audio[\\/]/.test(n)));
  const images=names.filter(n=>/\.(png|jpg|jpeg|webp)$/i.test(n));
- assert.equal(images.length,176);
- assert.ok(images.every(n=>/^facsimile[\\/]page-\d{3}\.webp$/.test(n)));
+ const facsimiles=images.filter(n=>/^facsimile[\\/]/.test(n));
+ assert.equal(facsimiles.length,176);
+ assert.ok(facsimiles.every(n=>/^facsimile[\\/]page-\d{3}\.webp$/.test(n)));
+ assert.ok(images.every(n=>/^facsimile[\\/]|^illustrations[\\/]/.test(n)));
  assert.ok(!JSON.stringify(corpus).includes('voice-manifest'));
  assert.ok(!JSON.stringify(corpus).includes('endingId'));
  const notice=readFileSync(new URL('../reader-public/TEXT-LICENSE.txt',import.meta.url),'utf8');
