@@ -124,7 +124,9 @@ async def generate(args) -> None:
                 try:
                     communicate = edge_tts.Communicate(spec['text'], spec['voice'], rate=spec['rate'],
                                                       connect_timeout=15, receive_timeout=45)
-                    await communicate.save(str(temporary))
+                    # A websocket may keep responding without ever delivering audio.
+                    # Bound the complete attempt, not only individual socket reads.
+                    await asyncio.wait_for(communicate.save(str(temporary)), timeout=60)
                     data = temporary.read_bytes()
                     info = mp3_info(data)
                     temporary.replace(path)
@@ -135,6 +137,8 @@ async def generate(args) -> None:
                 except Exception as error:
                     temporary.unlink(missing_ok=True)
                     if attempt < 2:
+                        print(json.dumps({'retry': spec['key'], 'attempt': attempt + 1,
+                                          'error': type(error).__name__}), flush=True)
                         await asyncio.sleep(1 + attempt)
                     else:
                         failures.append({'key': spec['key'], 'error': str(error)})

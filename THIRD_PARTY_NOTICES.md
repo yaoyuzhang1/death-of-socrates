@@ -18,7 +18,7 @@
 
 `reader-public/illustrations/` 中的60幅主篇漫画及 `reader-public/illustrations/bonus/` 中的12幅隐藏章节漫画，均由本项目通过内置图像生成工具制作，并非原书插图；创作约束、提示词与文件清单见 [docs/art-direction.md](docs/art-direction.md)。
 
-`reader-public/audio/feedback/` 为微软在线语音服务 `zh-CN-XiaoxiaoNeural` 生成的141条编辑解释录音；`reader-public/audio/completion/` 另含1条八章完成祝贺。`reader-public/audio/bonus/` 新增119段隐藏章节普通话正文、人物回应与说明，采用晓晓、云希、云扬声线。精确文本、声线与文件校验分别见各目录的 `manifest.json`。这些声音由项目合成制作，不表示原译者、出版方或历史人物参与录制。
+`reader-public/audio/feedback/` 为微软在线语音服务 `zh-CN-XiaoxiaoNeural` 生成的141条编辑解释录音；`reader-public/audio/completion/` 另含1条八章完成祝贺。`reader-public/audio/bonus/` 包含119段隐藏章节普通话正文、人物回应与说明，采用晓晓、云希、云扬声线。`reader-public/audio/study/` 包含50道理解判断的150段选项解释，采用晓晓标准普通话声线，只朗读已经确认的选项反馈。精确文本、声线与文件校验分别见各目录的 `manifest.json`。这些声音由项目合成制作，不表示原译者、出版方或历史人物参与录制。
 
 `content/bonus/death.json` 是本项目依据柏拉图《申辩篇》《克里同篇》《斐多篇》另作的中文戏剧化改编，包含场景对白、探索选项、回应及札记。它不属于郭斌和、张竹明《理想国》译文。参考底本主要是 Benjamin Jowett 历史英译，并辅助核对 Perseus 和 Harvard Center for Hellenic Studies 的原作段落；逐幕出处和材料使用方式见 [docs/death-sources.md](docs/death-sources.md)。网站链接用于追溯来源，不表示相关机构为本游戏背书。
 

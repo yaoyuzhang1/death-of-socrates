@@ -1,0 +1,1061 @@
+{
+  "status": "passed",
+  "decoded": 150,
+  "decoder": "Chrome AudioContext",
+  "shortestSeconds": 3.672,
+  "longestSeconds": 12.816,
+  "minimumRms": 0.09126616435683457,
+  "note": "Every MP3 decoded successfully with a non-silent waveform. This is not a claim of human listening or word-by-word pronunciation transcription.",
+  "recordings": [
+    {
+      "key": "reading-willing-listeners--a",
+      "durationSeconds": 7.44,
+      "channels": 1,
+      "rms": 0.10198076764648037,
+      "peak": 0.6357814073562622
+    },
+    {
+      "key": "reading-willing-listeners--b",
+      "durationSeconds": 5.616,
+      "channels": 1,
+      "rms": 0.10934257314871328,
+      "peak": 0.6264488101005554
+    },
+    {
+      "key": "reading-willing-listeners--c",
+      "durationSeconds": 6.624,
+      "channels": 1,
+      "rms": 0.10248704163186889,
+      "peak": 0.6171950101852417
+    },
+    {
+      "key": "reading-return-conditions--b",
+      "durationSeconds": 6.048,
+      "channels": 1,
+      "rms": 0.10701181012605988,
+      "peak": 0.5547574758529663
+    },
+    {
+      "key": "reading-return-conditions--a",
+      "durationSeconds": 7.728,
+      "channels": 1,
+      "rms": 0.10880702371563972,
+      "peak": 0.665520191192627
+    },
+    {
+      "key": "reading-return-conditions--c",
+      "durationSeconds": 6.72,
+      "channels": 1,
+      "rms": 0.09767420845985687,
+      "peak": 0.6322657465934753
+    },
+    {
+      "key": "reading-stronger-definition--c",
+      "durationSeconds": 9.096,
+      "channels": 1,
+      "rms": 0.1021212034457345,
+      "peak": 0.6034711003303528
+    },
+    {
+      "key": "reading-stronger-definition--a",
+      "durationSeconds": 6.48,
+      "channels": 1,
+      "rms": 0.09375029952774688,
+      "peak": 0.5315632224082947
+    },
+    {
+      "key": "reading-stronger-definition--b",
+      "durationSeconds": 5.52,
+      "channels": 1,
+      "rms": 0.10357213573958901,
+      "peak": 0.5801655650138855
+    },
+    {
+      "key": "reading-craft-object--a",
+      "durationSeconds": 7.968,
+      "channels": 1,
+      "rms": 0.09707655039700827,
+      "peak": 0.5524755716323853
+    },
+    {
+      "key": "reading-craft-object--b",
+      "durationSeconds": 5.52,
+      "channels": 1,
+      "rms": 0.09653824668546299,
+      "peak": 0.630725622177124
+    },
+    {
+      "key": "reading-craft-object--c",
+      "durationSeconds": 6.624,
+      "channels": 1,
+      "rms": 0.10141484742122686,
+      "peak": 0.6605174541473389
+    },
+    {
+      "key": "reading-shepherd-objection--b",
+      "durationSeconds": 8.544,
+      "channels": 1,
+      "rms": 0.10753871824172898,
+      "peak": 0.602770209312439
+    },
+    {
+      "key": "reading-shepherd-objection--a",
+      "durationSeconds": 5.4,
+      "channels": 1,
+      "rms": 0.09186235124092579,
+      "peak": 0.5489994287490845
+    },
+    {
+      "key": "reading-shepherd-objection--c",
+      "durationSeconds": 5.592,
+      "channels": 1,
+      "rms": 0.11354263840046253,
+      "peak": 0.6415660381317139
+    },
+    {
+      "key": "reading-claim-needs-proof--c",
+      "durationSeconds": 8.112,
+      "channels": 1,
+      "rms": 0.10729245435576797,
+      "peak": 0.5574567317962646
+    },
+    {
+      "key": "reading-claim-needs-proof--a",
+      "durationSeconds": 4.992,
+      "channels": 1,
+      "rms": 0.1078752946591526,
+      "peak": 0.646127462387085
+    },
+    {
+      "key": "reading-claim-needs-proof--b",
+      "durationSeconds": 5.52,
+      "channels": 1,
+      "rms": 0.0938862965275541,
+      "peak": 0.5493624806404114
+    },
+    {
+      "key": "reading-outdo-groups--a",
+      "durationSeconds": 8.448,
+      "channels": 1,
+      "rms": 0.10330703321577503,
+      "peak": 0.5638261437416077
+    },
+    {
+      "key": "reading-outdo-groups--b",
+      "durationSeconds": 3.672,
+      "channels": 1,
+      "rms": 0.11045702738226727,
+      "peak": 0.6312716603279114
+    },
+    {
+      "key": "reading-outdo-groups--c",
+      "durationSeconds": 5.76,
+      "channels": 1,
+      "rms": 0.11020359175559473,
+      "peak": 0.6754060387611389
+    },
+    {
+      "key": "reading-knowledge-agreement--b",
+      "durationSeconds": 8.424,
+      "channels": 1,
+      "rms": 0.10599356645737214,
+      "peak": 0.5343751311302185
+    },
+    {
+      "key": "reading-knowledge-agreement--a",
+      "durationSeconds": 6.024,
+      "channels": 1,
+      "rms": 0.10520486201556235,
+      "peak": 0.6007833480834961
+    },
+    {
+      "key": "reading-knowledge-agreement--c",
+      "durationSeconds": 6.888,
+      "channels": 1,
+      "rms": 0.09857317217333579,
+      "peak": 0.5654190182685852
+    },
+    {
+      "key": "reading-glaucon-demand--c",
+      "durationSeconds": 8.712,
+      "channels": 1,
+      "rms": 0.11113701805284179,
+      "peak": 0.8130668997764587
+    },
+    {
+      "key": "reading-glaucon-demand--a",
+      "durationSeconds": 5.208,
+      "channels": 1,
+      "rms": 0.09126616435683457,
+      "peak": 0.6215907335281372
+    },
+    {
+      "key": "reading-glaucon-demand--b",
+      "durationSeconds": 5.256,
+      "channels": 1,
+      "rms": 0.10441634923169417,
+      "peak": 0.6129624843597412
+    },
+    {
+      "key": "reading-unrestricted-power--a",
+      "durationSeconds": 9.936,
+      "channels": 1,
+      "rms": 0.10861143315848286,
+      "peak": 0.6027190089225769
+    },
+    {
+      "key": "reading-unrestricted-power--b",
+      "durationSeconds": 5.832,
+      "channels": 1,
+      "rms": 0.09517077441021694,
+      "peak": 0.50327467918396
+    },
+    {
+      "key": "reading-unrestricted-power--c",
+      "durationSeconds": 6.096,
+      "channels": 1,
+      "rms": 0.0987105872857392,
+      "peak": 0.6011699438095093
+    },
+    {
+      "key": "reading-reputation-advantage--b",
+      "durationSeconds": 9,
+      "channels": 1,
+      "rms": 0.11079035262508163,
+      "peak": 0.569257378578186
+    },
+    {
+      "key": "reading-reputation-advantage--a",
+      "durationSeconds": 6.456,
+      "channels": 1,
+      "rms": 0.10900142366172477,
+      "peak": 0.6254644393920898
+    },
+    {
+      "key": "reading-reputation-advantage--c",
+      "durationSeconds": 6.432,
+      "channels": 1,
+      "rms": 0.10155204260474017,
+      "peak": 0.6127553582191467
+    },
+    {
+      "key": "reading-appearance-inference--c",
+      "durationSeconds": 10.488,
+      "channels": 1,
+      "rms": 0.11141586921299704,
+      "peak": 0.6531223654747009
+    },
+    {
+      "key": "reading-appearance-inference--a",
+      "durationSeconds": 6.048,
+      "channels": 1,
+      "rms": 0.10691193485905652,
+      "peak": 0.5735745429992676
+    },
+    {
+      "key": "reading-appearance-inference--b",
+      "durationSeconds": 5.496,
+      "channels": 1,
+      "rms": 0.10749159484796744,
+      "peak": 0.7185279726982117
+    },
+    {
+      "key": "reading-inner-effect--a",
+      "durationSeconds": 7.56,
+      "channels": 1,
+      "rms": 0.10406342526489315,
+      "peak": 0.5916968584060669
+    },
+    {
+      "key": "reading-inner-effect--b",
+      "durationSeconds": 5.88,
+      "channels": 1,
+      "rms": 0.09969580347789608,
+      "peak": 0.5093104243278503
+    },
+    {
+      "key": "reading-inner-effect--c",
+      "durationSeconds": 6.984,
+      "channels": 1,
+      "rms": 0.10384748905716955,
+      "peak": 0.6667532920837402
+    },
+    {
+      "key": "reading-justice-still-open--b",
+      "durationSeconds": 8.544,
+      "channels": 1,
+      "rms": 0.09680461670240377,
+      "peak": 0.6727313995361328
+    },
+    {
+      "key": "reading-justice-still-open--a",
+      "durationSeconds": 4.776,
+      "channels": 1,
+      "rms": 0.1042027350573939,
+      "peak": 0.6506590843200684
+    },
+    {
+      "key": "reading-justice-still-open--c",
+      "durationSeconds": 4.992,
+      "channels": 1,
+      "rms": 0.10784475409013658,
+      "peak": 0.5324562191963196
+    },
+    {
+      "key": "reading-war-craft--c",
+      "durationSeconds": 9.648,
+      "channels": 1,
+      "rms": 0.11659973311893898,
+      "peak": 0.6076021790504456
+    },
+    {
+      "key": "reading-war-craft--a",
+      "durationSeconds": 6.072,
+      "channels": 1,
+      "rms": 0.11535732602604395,
+      "peak": 0.6283178329467773
+    },
+    {
+      "key": "reading-war-craft--b",
+      "durationSeconds": 5.736,
+      "channels": 1,
+      "rms": 0.1098921713566081,
+      "peak": 0.6830456852912903
+    },
+    {
+      "key": "reading-stories-shape--a",
+      "durationSeconds": 8.184,
+      "channels": 1,
+      "rms": 0.10825588985703113,
+      "peak": 0.6524184346199036
+    },
+    {
+      "key": "reading-stories-shape--b",
+      "durationSeconds": 6.384,
+      "channels": 1,
+      "rms": 0.1004395942163255,
+      "peak": 0.46475908160209656
+    },
+    {
+      "key": "reading-stories-shape--c",
+      "durationSeconds": 6,
+      "channels": 1,
+      "rms": 0.10386217504550244,
+      "peak": 0.5509577393531799
+    },
+    {
+      "key": "reading-hero-lament--b",
+      "durationSeconds": 8.904,
+      "channels": 1,
+      "rms": 0.10953743677168945,
+      "peak": 0.686176061630249
+    },
+    {
+      "key": "reading-hero-lament--a",
+      "durationSeconds": 6.912,
+      "channels": 1,
+      "rms": 0.10261581152964831,
+      "peak": 0.5560811758041382
+    },
+    {
+      "key": "reading-hero-lament--c",
+      "durationSeconds": 6.384,
+      "channels": 1,
+      "rms": 0.1023115306164756,
+      "peak": 0.5991387367248535
+    },
+    {
+      "key": "reading-falsehood-medicine--c",
+      "durationSeconds": 8.664,
+      "channels": 1,
+      "rms": 0.10681793145425574,
+      "peak": 0.6991549134254456
+    },
+    {
+      "key": "reading-falsehood-medicine--a",
+      "durationSeconds": 5.232,
+      "channels": 1,
+      "rms": 0.10446695059083323,
+      "peak": 0.5671523213386536
+    },
+    {
+      "key": "reading-falsehood-medicine--b",
+      "durationSeconds": 6.84,
+      "channels": 1,
+      "rms": 0.10835808752958881,
+      "peak": 0.6796202063560486
+    },
+    {
+      "key": "reading-achilles-character--a",
+      "durationSeconds": 8.232,
+      "channels": 1,
+      "rms": 0.10201830695385164,
+      "peak": 0.591554582118988
+    },
+    {
+      "key": "reading-achilles-character--b",
+      "durationSeconds": 7.008,
+      "channels": 1,
+      "rms": 0.0987488812083371,
+      "peak": 0.6100439429283142
+    },
+    {
+      "key": "reading-achilles-character--c",
+      "durationSeconds": 5.376,
+      "channels": 1,
+      "rms": 0.09984077201241463,
+      "peak": 0.534482479095459
+    },
+    {
+      "key": "reading-content-and-form--b",
+      "durationSeconds": 7.704,
+      "channels": 1,
+      "rms": 0.10404631098956164,
+      "peak": 0.6900092363357544
+    },
+    {
+      "key": "reading-content-and-form--a",
+      "durationSeconds": 6.312,
+      "channels": 1,
+      "rms": 0.11280782231428808,
+      "peak": 0.6964660286903381
+    },
+    {
+      "key": "reading-content-and-form--c",
+      "durationSeconds": 5.208,
+      "channels": 1,
+      "rms": 0.10431987230718456,
+      "peak": 0.5979481935501099
+    },
+    {
+      "key": "reading-know-not-imitate--c",
+      "durationSeconds": 8.808,
+      "channels": 1,
+      "rms": 0.10907246861008628,
+      "peak": 0.6637084484100342
+    },
+    {
+      "key": "reading-know-not-imitate--a",
+      "durationSeconds": 4.92,
+      "channels": 1,
+      "rms": 0.1034484094681182,
+      "peak": 0.549129068851471
+    },
+    {
+      "key": "reading-know-not-imitate--b",
+      "durationSeconds": 6.264,
+      "channels": 1,
+      "rms": 0.1042556168891509,
+      "peak": 0.6630988717079163
+    },
+    {
+      "key": "reading-song-parts--a",
+      "durationSeconds": 8.904,
+      "channels": 1,
+      "rms": 0.100790991110489,
+      "peak": 0.6154433488845825
+    },
+    {
+      "key": "reading-song-parts--b",
+      "durationSeconds": 5.304,
+      "channels": 1,
+      "rms": 0.1038792344638743,
+      "peak": 0.6498794555664062
+    },
+    {
+      "key": "reading-song-parts--c",
+      "durationSeconds": 5.472,
+      "channels": 1,
+      "rms": 0.1081741100207728,
+      "peak": 0.608198344707489
+    },
+    {
+      "key": "reading-music-selection--b",
+      "durationSeconds": 7.608,
+      "channels": 1,
+      "rms": 0.10158859782171303,
+      "peak": 0.6419070959091187
+    },
+    {
+      "key": "reading-music-selection--a",
+      "durationSeconds": 6.216,
+      "channels": 1,
+      "rms": 0.1088526733747005,
+      "peak": 0.6252586841583252
+    },
+    {
+      "key": "reading-music-selection--c",
+      "durationSeconds": 4.512,
+      "channels": 1,
+      "rms": 0.10605711738427002,
+      "peak": 0.5491208434104919
+    },
+    {
+      "key": "reading-letters-and-virtues--c",
+      "durationSeconds": 7.8,
+      "channels": 1,
+      "rms": 0.106735851235769,
+      "peak": 0.6621338725090027
+    },
+    {
+      "key": "reading-letters-and-virtues--a",
+      "durationSeconds": 6.96,
+      "channels": 1,
+      "rms": 0.10705372635353462,
+      "peak": 0.5909284353256226
+    },
+    {
+      "key": "reading-letters-and-virtues--b",
+      "durationSeconds": 6.528,
+      "channels": 1,
+      "rms": 0.11011718694068742,
+      "peak": 0.9328869581222534
+    },
+    {
+      "key": "reading-music-end--a",
+      "durationSeconds": 7.152,
+      "channels": 1,
+      "rms": 0.09868723007444707,
+      "peak": 0.6259559392929077
+    },
+    {
+      "key": "reading-music-end--b",
+      "durationSeconds": 4.8,
+      "channels": 1,
+      "rms": 0.10405382304184362,
+      "peak": 0.7092487812042236
+    },
+    {
+      "key": "reading-music-end--c",
+      "durationSeconds": 5.328,
+      "channels": 1,
+      "rms": 0.10254025179918898,
+      "peak": 0.5994787812232971
+    },
+    {
+      "key": "reading-flexible-training--b",
+      "durationSeconds": 9.36,
+      "channels": 1,
+      "rms": 0.10742068979452385,
+      "peak": 0.6856285929679871
+    },
+    {
+      "key": "reading-flexible-training--a",
+      "durationSeconds": 4.2,
+      "channels": 1,
+      "rms": 0.10673941849129259,
+      "peak": 0.5200422406196594
+    },
+    {
+      "key": "reading-flexible-training--c",
+      "durationSeconds": 5.328,
+      "channels": 1,
+      "rms": 0.1072255677536629,
+      "peak": 0.5977348685264587
+    },
+    {
+      "key": "reading-lawsuit-living--c",
+      "durationSeconds": 8.568,
+      "channels": 1,
+      "rms": 0.10601479984345795,
+      "peak": 0.6231342554092407
+    },
+    {
+      "key": "reading-lawsuit-living--a",
+      "durationSeconds": 4.872,
+      "channels": 1,
+      "rms": 0.09953060720742084,
+      "peak": 0.5095391869544983
+    },
+    {
+      "key": "reading-lawsuit-living--b",
+      "durationSeconds": 7.464,
+      "channels": 1,
+      "rms": 0.10589697196590839,
+      "peak": 0.6456999182701111
+    },
+    {
+      "key": "reading-asclepius-story--a",
+      "durationSeconds": 8.064,
+      "channels": 1,
+      "rms": 0.10825464004710617,
+      "peak": 0.657253086566925
+    },
+    {
+      "key": "reading-asclepius-story--b",
+      "durationSeconds": 4.344,
+      "channels": 1,
+      "rms": 0.1104934892904107,
+      "peak": 0.5864351987838745
+    },
+    {
+      "key": "reading-asclepius-story--c",
+      "durationSeconds": 6.408,
+      "channels": 1,
+      "rms": 0.10262058719104974,
+      "peak": 0.6661553978919983
+    },
+    {
+      "key": "reading-guardians-constancy--b",
+      "durationSeconds": 6.84,
+      "channels": 1,
+      "rms": 0.10031644111593557,
+      "peak": 0.6209954619407654
+    },
+    {
+      "key": "reading-guardians-constancy--a",
+      "durationSeconds": 6.24,
+      "channels": 1,
+      "rms": 0.11248491497114274,
+      "peak": 0.5933049917221069
+    },
+    {
+      "key": "reading-guardians-constancy--c",
+      "durationSeconds": 7.248,
+      "channels": 1,
+      "rms": 0.10367809276446585,
+      "peak": 0.6797131896018982
+    },
+    {
+      "key": "reading-guardian-happiness-objection--c",
+      "durationSeconds": 8.16,
+      "channels": 1,
+      "rms": 0.10680593418513688,
+      "peak": 0.8168784379959106
+    },
+    {
+      "key": "reading-guardian-happiness-objection--a",
+      "durationSeconds": 5.448,
+      "channels": 1,
+      "rms": 0.10219451246058145,
+      "peak": 0.6249033212661743
+    },
+    {
+      "key": "reading-guardian-happiness-objection--b",
+      "durationSeconds": 5.64,
+      "channels": 1,
+      "rms": 0.10571610450462819,
+      "peak": 0.6517430543899536
+    },
+    {
+      "key": "reading-whole-city-happiness--a",
+      "durationSeconds": 7.392,
+      "channels": 1,
+      "rms": 0.1068332489282895,
+      "peak": 0.657925546169281
+    },
+    {
+      "key": "reading-whole-city-happiness--b",
+      "durationSeconds": 6.192,
+      "channels": 1,
+      "rms": 0.11743633994690411,
+      "peak": 0.6211376786231995
+    },
+    {
+      "key": "reading-whole-city-happiness--c",
+      "durationSeconds": 6.816,
+      "channels": 1,
+      "rms": 0.10316603472707123,
+      "peak": 0.6583629250526428
+    },
+    {
+      "key": "reading-one-city--b",
+      "durationSeconds": 8.424,
+      "channels": 1,
+      "rms": 0.10453996977730515,
+      "peak": 0.6328824162483215
+    },
+    {
+      "key": "reading-one-city--a",
+      "durationSeconds": 7.344,
+      "channels": 1,
+      "rms": 0.09555362390657483,
+      "peak": 0.6466501951217651
+    },
+    {
+      "key": "reading-one-city--c",
+      "durationSeconds": 5.304,
+      "channels": 1,
+      "rms": 0.10777990290239173,
+      "peak": 0.5840228796005249
+    },
+    {
+      "key": "reading-education-foundation--c",
+      "durationSeconds": 7.416,
+      "channels": 1,
+      "rms": 0.09655719263926604,
+      "peak": 0.6143670082092285
+    },
+    {
+      "key": "reading-education-foundation--a",
+      "durationSeconds": 5.832,
+      "channels": 1,
+      "rms": 0.1060738579296713,
+      "peak": 0.5685385465621948
+    },
+    {
+      "key": "reading-education-foundation--b",
+      "durationSeconds": 5.304,
+      "channels": 1,
+      "rms": 0.10622501737971703,
+      "peak": 0.6446546912193298
+    },
+    {
+      "key": "reading-education-not-rules-alone--a",
+      "durationSeconds": 5.76,
+      "channels": 1,
+      "rms": 0.10273377991146736,
+      "peak": 0.5505533814430237
+    },
+    {
+      "key": "reading-education-not-rules-alone--b",
+      "durationSeconds": 4.8,
+      "channels": 1,
+      "rms": 0.11369021547265266,
+      "peak": 0.6727814674377441
+    },
+    {
+      "key": "reading-education-not-rules-alone--c",
+      "durationSeconds": 8.16,
+      "channels": 1,
+      "rms": 0.10567345640113486,
+      "peak": 0.7944527864456177
+    },
+    {
+      "key": "reading-courage-preserving--b",
+      "durationSeconds": 7.44,
+      "channels": 1,
+      "rms": 0.10618592865507838,
+      "peak": 0.7231776714324951
+    },
+    {
+      "key": "reading-courage-preserving--a",
+      "durationSeconds": 5.184,
+      "channels": 1,
+      "rms": 0.10586685888806728,
+      "peak": 0.48008471727371216
+    },
+    {
+      "key": "reading-courage-preserving--c",
+      "durationSeconds": 7.104,
+      "channels": 1,
+      "rms": 0.10732014779012956,
+      "peak": 0.6310449838638306
+    },
+    {
+      "key": "reading-moderation-throughout--c",
+      "durationSeconds": 7.872,
+      "channels": 1,
+      "rms": 0.10085637186380271,
+      "peak": 0.6415200233459473
+    },
+    {
+      "key": "reading-moderation-throughout--a",
+      "durationSeconds": 6.096,
+      "channels": 1,
+      "rms": 0.1077540966354448,
+      "peak": 0.6204210519790649
+    },
+    {
+      "key": "reading-moderation-throughout--b",
+      "durationSeconds": 6.744,
+      "channels": 1,
+      "rms": 0.1086008921315064,
+      "peak": 0.6164272427558899
+    },
+    {
+      "key": "reading-correlative-qualification--a",
+      "durationSeconds": 9,
+      "channels": 1,
+      "rms": 0.11642360001612898,
+      "peak": 0.6463838815689087
+    },
+    {
+      "key": "reading-correlative-qualification--b",
+      "durationSeconds": 5.208,
+      "channels": 1,
+      "rms": 0.10323475113829943,
+      "peak": 0.5978618860244751
+    },
+    {
+      "key": "reading-correlative-qualification--c",
+      "durationSeconds": 5.616,
+      "channels": 1,
+      "rms": 0.10574212892527281,
+      "peak": 0.5786150097846985
+    },
+    {
+      "key": "reading-person-city-functions--b",
+      "durationSeconds": 9.072,
+      "channels": 1,
+      "rms": 0.11002973205004007,
+      "peak": 0.9165341854095459
+    },
+    {
+      "key": "reading-person-city-functions--a",
+      "durationSeconds": 6.744,
+      "channels": 1,
+      "rms": 0.1104495237952672,
+      "peak": 0.6120602488517761
+    },
+    {
+      "key": "reading-person-city-functions--c",
+      "durationSeconds": 6.408,
+      "channels": 1,
+      "rms": 0.10903003038666184,
+      "peak": 0.6480135321617126
+    },
+    {
+      "key": "bonus-check-trial-gate--b",
+      "durationSeconds": 11.28,
+      "channels": 1,
+      "rms": 0.10239676445680991,
+      "peak": 0.6683188676834106
+    },
+    {
+      "key": "bonus-check-trial-gate--a",
+      "durationSeconds": 10.968,
+      "channels": 1,
+      "rms": 0.10429010729152806,
+      "peak": 0.6971710324287415
+    },
+    {
+      "key": "bonus-check-trial-gate--c",
+      "durationSeconds": 10.944,
+      "channels": 1,
+      "rms": 0.10261055669669346,
+      "peak": 0.6291272044181824
+    },
+    {
+      "key": "bonus-check-old-accusations--a",
+      "durationSeconds": 10.968,
+      "channels": 1,
+      "rms": 0.10492346221254555,
+      "peak": 0.6837164163589478
+    },
+    {
+      "key": "bonus-check-old-accusations--b",
+      "durationSeconds": 9.96,
+      "channels": 1,
+      "rms": 0.11373210651285416,
+      "peak": 0.6886256337165833
+    },
+    {
+      "key": "bonus-check-old-accusations--c",
+      "durationSeconds": 11.088,
+      "channels": 1,
+      "rms": 0.1069286422279939,
+      "peak": 0.7061755657196045
+    },
+    {
+      "key": "bonus-check-charges--c",
+      "durationSeconds": 12.816,
+      "channels": 1,
+      "rms": 0.105587915265306,
+      "peak": 0.6082642674446106
+    },
+    {
+      "key": "bonus-check-charges--a",
+      "durationSeconds": 10.896,
+      "channels": 1,
+      "rms": 0.10846315777052082,
+      "peak": 0.6134104132652283
+    },
+    {
+      "key": "bonus-check-charges--b",
+      "durationSeconds": 8.52,
+      "channels": 1,
+      "rms": 0.09827694617321286,
+      "peak": 0.6431897282600403
+    },
+    {
+      "key": "bonus-check-examination--b",
+      "durationSeconds": 11.064,
+      "channels": 1,
+      "rms": 0.10384350563731733,
+      "peak": 0.6348006725311279
+    },
+    {
+      "key": "bonus-check-examination--a",
+      "durationSeconds": 11.4,
+      "channels": 1,
+      "rms": 0.11095225364909521,
+      "peak": 0.5220061540603638
+    },
+    {
+      "key": "bonus-check-examination--c",
+      "durationSeconds": 9.312,
+      "channels": 1,
+      "rms": 0.11244560728088888,
+      "peak": 0.6429041028022766
+    },
+    {
+      "key": "bonus-check-commitment--c",
+      "durationSeconds": 10.416,
+      "channels": 1,
+      "rms": 0.10283736062047442,
+      "peak": 0.6298900246620178
+    },
+    {
+      "key": "bonus-check-commitment--a",
+      "durationSeconds": 8.784,
+      "channels": 1,
+      "rms": 0.10200103724068779,
+      "peak": 0.6082550883293152
+    },
+    {
+      "key": "bonus-check-commitment--b",
+      "durationSeconds": 9.312,
+      "channels": 1,
+      "rms": 0.11256053620982313,
+      "peak": 0.6617432832717896
+    },
+    {
+      "key": "bonus-check-verdict--a",
+      "durationSeconds": 10.608,
+      "channels": 1,
+      "rms": 0.10115693134631723,
+      "peak": 0.6700406074523926
+    },
+    {
+      "key": "bonus-check-verdict--b",
+      "durationSeconds": 10.728,
+      "channels": 1,
+      "rms": 0.11288069911243165,
+      "peak": 0.6875061988830566
+    },
+    {
+      "key": "bonus-check-verdict--c",
+      "durationSeconds": 8.808,
+      "channels": 1,
+      "rms": 0.10405706378803367,
+      "peak": 0.5959087610244751
+    },
+    {
+      "key": "bonus-check-sentence--b",
+      "durationSeconds": 12.456,
+      "channels": 1,
+      "rms": 0.092754164552748,
+      "peak": 0.6493059992790222
+    },
+    {
+      "key": "bonus-check-sentence--a",
+      "durationSeconds": 9.168,
+      "channels": 1,
+      "rms": 0.10131480827196501,
+      "peak": 0.6132663488388062
+    },
+    {
+      "key": "bonus-check-sentence--c",
+      "durationSeconds": 10.344,
+      "channels": 1,
+      "rms": 0.10576385058912911,
+      "peak": 0.6652905344963074
+    },
+    {
+      "key": "bonus-check-escape--c",
+      "durationSeconds": 11.952,
+      "channels": 1,
+      "rms": 0.10419767356066134,
+      "peak": 0.6653003692626953
+    },
+    {
+      "key": "bonus-check-escape--a",
+      "durationSeconds": 8.664,
+      "channels": 1,
+      "rms": 0.11363283919433766,
+      "peak": 0.5521785616874695
+    },
+    {
+      "key": "bonus-check-escape--b",
+      "durationSeconds": 9.24,
+      "channels": 1,
+      "rms": 0.10932412205758159,
+      "peak": 0.6268877983093262
+    },
+    {
+      "key": "bonus-check-laws--a",
+      "durationSeconds": 11.856,
+      "channels": 1,
+      "rms": 0.11283065452996323,
+      "peak": 0.6677539348602295
+    },
+    {
+      "key": "bonus-check-laws--b",
+      "durationSeconds": 9.048,
+      "channels": 1,
+      "rms": 0.10410311797292032,
+      "peak": 0.6527884006500244
+    },
+    {
+      "key": "bonus-check-laws--c",
+      "durationSeconds": 11.952,
+      "channels": 1,
+      "rms": 0.1053463439916099,
+      "peak": 0.6897854804992676
+    },
+    {
+      "key": "bonus-check-last-day--b",
+      "durationSeconds": 11.28,
+      "channels": 1,
+      "rms": 0.09386990343902972,
+      "peak": 0.5860259532928467
+    },
+    {
+      "key": "bonus-check-last-day--a",
+      "durationSeconds": 9.72,
+      "channels": 1,
+      "rms": 0.10427793925079491,
+      "peak": 0.6496379971504211
+    },
+    {
+      "key": "bonus-check-last-day--c",
+      "durationSeconds": 9.96,
+      "channels": 1,
+      "rms": 0.10679098136019526,
+      "peak": 0.618906557559967
+    },
+    {
+      "key": "bonus-check-cup--c",
+      "durationSeconds": 10.896,
+      "channels": 1,
+      "rms": 0.10093479239957015,
+      "peak": 0.6604806780815125
+    },
+    {
+      "key": "bonus-check-cup--a",
+      "durationSeconds": 8.664,
+      "channels": 1,
+      "rms": 0.11463956280830093,
+      "peak": 0.7301831245422363
+    },
+    {
+      "key": "bonus-check-cup--b",
+      "durationSeconds": 8.256,
+      "channels": 1,
+      "rms": 0.10205322139738901,
+      "peak": 0.6769567131996155
+    },
+    {
+      "key": "bonus-check-last-words--a",
+      "durationSeconds": 11.688,
+      "channels": 1,
+      "rms": 0.11014717418902314,
+      "peak": 0.6840311288833618
+    },
+    {
+      "key": "bonus-check-last-words--b",
+      "durationSeconds": 11.592,
+      "channels": 1,
+      "rms": 0.10931001823083711,
+      "peak": 0.5134397149085999
+    },
+    {
+      "key": "bonus-check-last-words--c",
+      "durationSeconds": 9.312,
+      "channels": 1,
+      "rms": 0.10842951712682221,
+      "peak": 0.6442978382110596
+    }
+  ]
+}
