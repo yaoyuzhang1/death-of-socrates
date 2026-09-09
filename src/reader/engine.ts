@@ -11,7 +11,7 @@ import type {
   Review,
   Save,
 } from './model.ts';
-import { makeReadingPages } from './pagination.ts';
+import { makeReadingPages, makeVersion4ReadingPages, migrateVersion4Page } from './pagination.ts';
 
 const own = (value: object, key: PropertyKey) => Object.prototype.hasOwnProperty.call(value, key);
 const record = (value: unknown): value is Record<string, unknown> =>
@@ -68,7 +68,7 @@ export function createSave(corpus: Corpus, seed?: string): Save {
   const selectedSeed = seed ?? crypto.randomUUID();
   if (!validSeed(selectedSeed)) throw new Error('选项顺序种子必须是1至128个字符的非空字符串。');
   return {
-    version: 4,
+    version: 5,
     editionId: corpus.edition.id,
     seed: selectedSeed,
     started: false,
@@ -93,12 +93,13 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
     if (!record(input)) return null;
     const oldVersion = input.version === 2;
     const legacy = oldVersion || input.version === 3;
+    const previousPages = input.version === 4;
     const commonKeys = [
       'version', 'editionId', 'seed', 'started', 'cursor', 'completed', 'answers',
       'hints', 'bookmarks', 'scroll', 'settings', 'updatedAt',
     ];
     if (!keysAre(input, oldVersion ? commonKeys : [...commonKeys, 'reading', 'reviews', ...(legacy ? [] : ['resolved', 'pages'])])) return null;
-    if ((!legacy && input.version !== 4) || input.editionId !== corpus.edition.id || !validSeed(input.seed) ||
+    if ((!legacy && !previousPages && input.version !== 5) || input.editionId !== corpus.edition.id || !validSeed(input.seed) ||
       typeof input.started !== 'boolean' || !integerIn(input.cursor, 0, units.length - 1) ||
       !integerIn(input.completed, 0, units.length) || input.cursor > input.completed ||
       !validDate(input.updatedAt)) return null;
@@ -212,18 +213,21 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
       const index = unitIds.get(id);
       if (index === undefined || index > input.completed) return null;
       const unit = units[index];
-      const unitPages = makeReadingPages(unit);
+      const unitPages = previousPages ? makeVersion4ReadingPages(unit) : makeReadingPages(unit);
       const position = pageInput[id];
       if (!integerIn(position, 0, Math.max(0, unitPages.length - 1))) return null;
       const questionIndex = unitPages.findIndex(page => page.kind === 'question');
       if (questionIndex >= 0 && !resolved.has(unit.question!.id) && position > questionIndex) return null;
-      Object.defineProperty(pages, id, { value: position, enumerable: true, configurable: true, writable: true });
+      Object.defineProperty(pages, id, {
+        value: previousPages ? migrateVersion4Page(unit, position) : position,
+        enumerable: true, configurable: true, writable: true,
+      });
     }
     if (!input.started && (input.cursor !== 0 || input.completed !== 0 || Object.keys(answers).length ||
       hints.size || bookmarks.size || Object.keys(positions).length || Object.keys(reviews).length ||
       resolved.size || Object.keys(pages).length || input.scroll !== 0)) return null;
     const result: Save = {
-      version: 4,
+      version: 5,
       editionId: corpus.edition.id,
       seed: input.seed,
       started: input.started,
@@ -236,7 +240,8 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
       reviews,
       hints: [...hints],
       bookmarks: [...bookmarks],
-      scroll: input.scroll,
+      // The old pixel offset belongs to a different page layout; the source anchor above is retained.
+      scroll: previousPages ? 0 : input.scroll,
       settings: { fontSize: input.settings.fontSize, theme: input.settings.theme as 'paper' | 'night' },
       updatedAt: input.updatedAt,
     };

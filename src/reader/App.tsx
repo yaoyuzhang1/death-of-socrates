@@ -152,8 +152,8 @@ export default function App() {
   const page = pages[pageIndex];
   const roles = passageRoles(corpus);
   const resolved = question ? isQuestionResolved(save, question) : true;
-  const currentSpeaker = page.kind === 'text' ? roles.get(page.paragraphs[0]?.sourceId)?.name : '苏格拉底';
-  const sceneId = unit.id === 'u-001' && page.kind === 'text' && page.paragraphs.every(fragment => Number(fragment.sourceId.slice(2)) <= 18) ? 'arrival' : undefined;
+  const followingPage = pages[pageIndex + 1];
+  const preloadPageId = page.kind === 'text' && followingPage?.kind === 'text' && page.side === followingPage.side ? followingPage.id : undefined;
   const latestIndex = Math.min(save.completed, units.length - 1);
   const revisiting = save.cursor < latestIndex;
   const update = (fn: (s: Save) => Save) => setSave(s => s ? { ...fn(s), updatedAt: new Date().toISOString() } : s);
@@ -262,7 +262,7 @@ export default function App() {
       {firstOfChapter && pageIndex === 0 && <section className="chapter-intro"><p className="eyebrow">第{numerals[unit.chapterIndex]}章 / {corpus.chapters.length}章</p><h1>{unit.chapter.title}</h1><p>{unit.chapter.range}</p></section>}
       <div className="reading-section-heading"><h2>{unit.section.title}</h2><span>{unit.section.range}</span></div>
       <div className="page-position" aria-label="当前阅读页"><span>{page.kind === 'question' ? '追问时刻' : '原文阅读'}</span><span>本节 {pageIndex + 1} / {pages.length} 页</span><progress value={pageIndex + 1} max={pages.length} /></div>
-      <ComicScene chapterId={unit.chapter.id} sceneId={sceneId} speaker={currentSpeaker} compact={page.kind === 'question'} />
+      <ComicScene chapterId={unit.chapter.id} pageId={page.id} nextPageId={preloadPageId} compact={page.kind === 'question'} />
       <article className="reading-text page-content" aria-label="原典正文" key={unit.id + ':' + pageIndex} data-page-index={pageIndex} data-page-kind={page.kind}>
         {page.kind === 'text' ? <div className="text-page">{page.paragraphs.map(fragment => <ReadingPassage key={fragment.id} paragraph={fragment} sourceId={fragment.sourceId} role={roles.get(fragment.sourceId)} continuation={fragment.fragmentIndex > 0} />)}</div> : <QuestionChallenge question={page.question} seed={save.seed} resolved={resolved} onAttempt={attemptQuestion} onContinue={() => turnPage(pageIndex + 1)} audio={audio} />}
       </article>

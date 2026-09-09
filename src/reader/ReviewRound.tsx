@@ -70,12 +70,13 @@ export default function ReviewRound({ corpus, save, questionIds, onAnswer, onClo
   const contextPages = makeReadingPages({ id: unit.id + '-context', paragraphs: unit.paragraphs, response: [] }).filter(page => page.kind === 'text');
   const originalPages = makeReadingPages({ id: unit.id + '-original', paragraphs: [question.original, ...unit.response.slice(0, unit.replyCount ?? 0)], response: [] }).filter(page => page.kind === 'text');
   const currentOriginal = originalPages[originalIndex];
+  const mainOriginalPage = currentOriginal ? makeReadingPages(unit).find(page => page.kind === 'text' && page.side === 'after' && page.paragraphs.some(fragment => fragment.sourceId === currentOriginal.paragraphs[0]?.sourceId && fragment.fragmentIndex === currentOriginal.paragraphs[0]?.fragmentIndex)) : undefined;
   const showOriginal = () => { setStage('original'); setOriginalIndex(0); };
   return <main id="main" className="review-round reading-shell paged-reading" ref={mainRef} tabIndex={-1} data-testid="review-round" data-review-round={round.seed}>
     <div className="review-round-top"><h1 className="eyebrow">一轮复习 <span data-testid="review-progress">{round.index + 1} / {round.units.length}</span></h1><button className="text-button" onClick={onClose} data-testid="review-close"><ArrowLeft size={16} />{returnLabel}</button></div>
     <progress className="review-round-progress" value={round.index} max={round.units.length} aria-label={`本轮已完成 ${round.index} 问，共 ${round.units.length} 问`} />
     <p className="review-round-location">{unit.chapter.title} · {unit.section.title}<span>{question.sourceRef}</span></p>
-    <ComicScene chapterId={unit.chapter.id} speaker="苏格拉底" compact />
+    <ComicScene chapterId={unit.chapter.id} pageId={stage === 'question' ? `${unit.id}-question` : mainOriginalPage?.id} compact conversationOnly />
     {stage === 'question' ? <>
       <details className="review-round-context" key={round.seed + question.id} data-testid="review-context"><summary>回看这段原文</summary><div className="reading-text">
         {contextPages[contextIndex]?.paragraphs.map(fragment => <ReadingPassage key={fragment.id} paragraph={fragment} role={roles.get(fragment.sourceId)} sourceId={fragment.sourceId} continuation={fragment.fragmentIndex > 0} showSource={false} />)}

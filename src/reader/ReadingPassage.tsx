@@ -10,12 +10,12 @@ export function passageRoles(corpus: Corpus): Map<string, PassageRole> {
   let narration = false;
   for (const chapter of corpus.chapters) for (const section of chapter.sections) for (const unit of section.units) {
     for (const paragraph of [...unit.paragraphs, ...(unit.question ? [unit.question.original] : []), ...unit.response]) {
-      if (paragraph.text.startsWith('〔')) narration = true;
+      if (/^[〔［]/u.test(paragraph.text)) narration = true;
       const prefix = paragraph.text.match(/^[·]?([^：]{1,6})：/)?.[1]?.replace(/（.*）/, '');
       if (narration) current = { kind: 'narration', name: '叙述' };
       else if (prefix && names[prefix]) current = { kind: prefix === '苏' ? 'socrates' : 'dialogue', name: names[prefix] };
       roles.set(paragraph.id, current);
-      if (paragraph.text.includes('〕')) narration = false;
+      if (/[〕］]/u.test(paragraph.text)) narration = false;
     }
   }
   return roles;
@@ -25,7 +25,7 @@ export default function ReadingPassage({ paragraph, role, continuation = false, 
   paragraph: Paragraph; role?: PassageRole; continuation?: boolean; sourceId?: string; showSource?: boolean;
 }) {
   const pages = paragraph.sourcePages ?? (paragraph.sourcePage ? [paragraph.sourcePage] : []);
-  return <div className={`passage dialogue-panel role-${role?.kind ?? 'dialogue'}`} data-paragraph-id={paragraph.id} data-source-id={sourceId ?? paragraph.id}>
+  return <div className={`passage dialogue-panel role-${role?.kind ?? 'dialogue'}${paragraph.text.length <= 90 ? ' passage-brief' : ''}`} data-paragraph-id={paragraph.id} data-source-id={sourceId ?? paragraph.id}>
     <div className="speaker"><span className="speaker-name">{role?.name ?? paragraph.speaker ?? '对话'}{continuation && <small> · 续</small>}</span>{paragraph.ref && <span>{paragraph.ref}</span>}{showSource && pages.map(page => <SourcePageLink key={page} page={page} />)}</div>
     <p>{paragraph.text}</p>
   </div>;

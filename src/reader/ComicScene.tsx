@@ -1,39 +1,39 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { Expand, X } from 'lucide-react';
+import manifest from '../../reader-public/illustrations/manifest.json';
 import './comic-scene.css';
 
-type Scene = { alt: string; focalY: number };
-const scenes: Record<string, Scene> = {
-  arrival: { alt: '苏格拉底与格劳孔在比雷埃夫斯港旁遇见前来挽留的友人', focalY: 27 },
-  obligations: { alt: '苏格拉底与克法洛斯在家中聚谈，年轻人在旁倾听', focalY: 32 },
-  rule: { alt: '苏格拉底与色拉叙马霍斯相对而坐，继续交谈', focalY: 30 },
-  life: { alt: '苏格拉底与色拉叙马霍斯的交谈近景', focalY: 25 },
-  worth: { alt: '苏格拉底倾听格劳孔与阿得曼托斯说话', focalY: 31 },
-  city: { alt: '苏格拉底与两位年轻人在庭院边围坐交谈', focalY: 38 },
-  education: { alt: '从听者肩后望向正在交谈的苏格拉底与阿得曼托斯', focalY: 33 },
-  guardians: { alt: '阿得曼托斯与苏格拉底在庭院中交谈', focalY: 34 },
-  soul: { alt: '苏格拉底与格劳孔相对交谈，阿得曼托斯在旁倾听', focalY: 31 },
-};
+type Scene = { alt: string; file: string; focalY: number; kind: string };
+const scenes: Record<string, Scene> = manifest.assets;
+const pageScenes: Record<string, string> = manifest.pages;
 
-export default function ComicScene({ chapterId, sceneId, speaker, compact = false }: { chapterId: string; sceneId?: string; speaker?: string; compact?: boolean }) {
-  const assetId = sceneId && scenes[sceneId] ? sceneId : chapterId;
+export default function ComicScene({ chapterId, pageId, nextPageId, compact = false, conversationOnly = false }: { chapterId: string; pageId?: string; nextPageId?: string; compact?: boolean; conversationOnly?: boolean }) {
+  const requestedId = pageId && pageScenes[pageId] ? pageScenes[pageId] : chapterId;
+  const assetId = conversationOnly && scenes[requestedId]?.kind === 'example' ? chapterId : requestedId;
   const scene = scenes[assetId];
+  const followingScene = nextPageId ? scenes[pageScenes[nextPageId]] : undefined;
+  const nextFile = conversationOnly && followingScene?.kind === 'example' ? undefined : followingScene?.file;
+  useEffect(() => {
+    if (!nextFile || nextFile === scene?.file) return;
+    const image = new Image();
+    image.decoding = 'async';
+    image.src = `${import.meta.env.BASE_URL}illustrations/${nextFile}`;
+  }, [nextFile, scene?.file]);
   if (!scene) return null;
-  return <SceneImage key={assetId} chapterId={assetId} scene={scene} speaker={speaker} compact={compact} />;
+  return <SceneImage key={assetId} assetId={assetId} scene={scene} compact={compact} />;
 }
 
-function SceneImage({ chapterId, scene, speaker, compact }: { chapterId: string; scene: Scene; speaker?: string; compact: boolean }) {
+function SceneImage({ assetId, scene, compact }: { assetId: string; scene: Scene; compact: boolean }) {
   const [failed, setFailed] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);
-  const imageUrl = `${import.meta.env.BASE_URL}illustrations/${chapterId}.webp`;
-  const socratesX = chapterId === 'guardians' ? 57 : 43;
-  const focalX = speaker === '苏' || speaker === '苏格拉底' ? socratesX : speaker && speaker !== '旁白' ? 100 - socratesX : 50;
-  return <figure className={`comic-scene${compact ? ' comic-scene-compact' : ''}`} style={{ '--comic-focal-x': `${focalX}%`, '--comic-focal-y': `${scene.focalY}%` } as CSSProperties}>
+  const imageUrl = `${import.meta.env.BASE_URL}illustrations/${scene.file}`;
+  return <figure className={`comic-scene${compact ? ' comic-scene-compact' : ''}`} data-scene-id={assetId} data-scene-kind={scene.kind} style={{ '--comic-focal-y': `${scene.focalY}%` } as CSSProperties}>
     {failed ? <div className="comic-scene-fallback"><span>{scene.alt}</span></div> : <button ref={trigger} type="button" className="comic-scene-open" aria-label="放大场景插图" onClick={() => setExpanded(true)}>
       <img src={imageUrl} alt={scene.alt} width={1672} height={941} decoding="async" onError={() => setFailed(true)} />
       <span className="comic-scene-expand" aria-hidden="true"><Expand size={15} /></span>
     </button>}
+    {scene.kind === 'example' && <figcaption className="comic-scene-caption">谈话中的图景</figcaption>}
     {expanded && <SceneDialog imageUrl={imageUrl} alt={scene.alt} onClose={() => setExpanded(false)} trigger={trigger.current} />}
   </figure>;
 }

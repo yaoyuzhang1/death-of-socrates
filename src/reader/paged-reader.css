@@ -3,3 +3,10 @@
 @keyframes page-reveal{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:640px){.paged-reading{padding:18px 20px 24px}.paged-reading .reading-location{margin-bottom:12px}.paged-reading .chapter-intro h1{font-size:25px}.paged-reading .chapter-intro .eyebrow{font-size:10px}.paged-reading .reading-section-heading h2{font-size:13px}.page-content{margin-top:15px}.dialogue-panel{padding:12px 14px;margin-bottom:11px}.dialogue-panel p{line-height:1.9}.role-narration{padding-inline:13px}.page-navigation{gap:12px}.page-navigation .primary{padding:11px 17px}.page-position{gap:8px;margin-bottom:13px}}
 @media(prefers-reduced-motion:reduce){.text-page{animation:none}}
+.paged-reading .dialogue-panel{padding:11px 17px;margin-bottom:8px}
+.paged-reading .dialogue-panel .speaker{margin-bottom:5px}
+.paged-reading .dialogue-panel p{line-height:1.85}
+.paged-reading .passage-brief .speaker{display:inline-flex;vertical-align:baseline;margin:0 12px 0 0;gap:8px}
+.paged-reading .passage-brief p{display:inline}
+.paged-reading .role-narration{padding-block:10px}
+@media(max-width:640px){.paged-reading .dialogue-panel{padding:9px 12px;margin-bottom:7px}.paged-reading .passage-brief .speaker{margin-right:9px}}

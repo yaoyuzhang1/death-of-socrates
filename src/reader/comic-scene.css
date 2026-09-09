@@ -1,6 +1,7 @@
 .comic-scene {
+  position: relative;
   margin: 0 0 24px;
-  height: 240px;
+  height: 340px;
   overflow: hidden;
   border: 1px solid var(--line, #d8d0c2);
   border-radius: 8px;
@@ -39,6 +40,7 @@
   border-radius: 5px;
 }
 .comic-scene-fallback { height: 100%; display: grid; place-items: center; padding: 20px; text-align: center; color: #665e4f; font-size: 15px; }
+.comic-scene-caption { position: absolute; bottom: 9px; left: 10px; padding: 4px 8px; color: #fffaf0; background: rgb(37 42 34 / 72%); font: 11px/1.5 sans-serif; border-radius: 3px; pointer-events: none; }
 .comic-scene-compact { height: 180px; }
 .comic-scene-dialog {
   width: min(1100px, calc(100vw - 32px));
@@ -55,6 +57,7 @@
 .comic-scene-dialog-top { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; font: 14px/1.5 sans-serif; }
 .comic-scene-dialog img { display: block; width: 100%; height: auto; }
 @media (max-width: 640px) {
-  .comic-scene, .comic-scene-compact { height: 160px; margin-bottom: 18px; border-radius: 6px; }
+  .comic-scene { height: auto; aspect-ratio: 16 / 9; margin-bottom: 18px; border-radius: 6px; }
+  .comic-scene-compact { height: 160px; aspect-ratio: auto; }
   .comic-scene-dialog { width: calc(100vw - 20px); max-width: calc(100vw - 20px); max-height: calc(100dvh - 20px); }
 }

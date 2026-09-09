@@ -7,7 +7,7 @@ import {
   recordReview, reviewQueue, progressStats,
   isQuestionResolved, pagePosition, setPagePosition,
 } from '../src/reader/engine.ts';
-import { makeReadingPages } from '../src/reader/pagination.ts';
+import { makeReadingPages, makeVersion4ReadingPages } from '../src/reader/pagination.ts';
 import type { Corpus, Question, Save, Unit } from '../src/reader/model.ts';
 
 function question(id: string): Question {
@@ -69,7 +69,7 @@ test('flattening keeps canonical reading order and chapter/section metadata with
 
 test('fresh saves have a fixed edition and deterministic option seed, and can be imported before starting', () => {
   const save = fresh();
-  assert.equal(save.version, 4);
+  assert.equal(save.version, 5);
   assert.equal(save.editionId, 'reader-fixture-1');
   assert.equal(save.seed, 'repeatable-reader-seed');
   assert.equal(save.started, false);
@@ -335,7 +335,7 @@ test('version 2 import migrates without changing the edition, cursor, first answ
   delete legacy.reviews;
   const restored = validateSave(legacy, corpus)!;
   assert.ok(restored);
-  assert.equal(restored.version, 4);
+  assert.equal(restored.version, 5);
   assert.deepEqual(restored.resolved, Object.keys(legacy.answers));
   for (const key of ['editionId', 'seed', 'started', 'cursor', 'completed', 'answers', 'hints', 'bookmarks', 'scroll', 'settings', 'updatedAt']) {
     assert.deepEqual(restored[key as keyof Save], legacy[key]);
@@ -564,7 +564,7 @@ test('review queues prioritize unresolved first answers and rotate through answe
   assert.deepEqual(reviewQueue(roundUnits, roundSave).slice(0, 4), ['round-q5', 'round-q6', 'round-q7', 'round-q8']);
 });
 
-test('version 4 imports strictly validate reading and review data, including unopened content and impossible totals', () => {
+test('current imports strictly validate reading and review data, including unopened content and impossible totals', () => {
   let save = complete(['q1-rule', null, 'q3-context']);
   save = recordReview(save, units, 'q1', 'q1-context');
   const review = save.reviews.q1;
@@ -610,7 +610,7 @@ test('version 3 migration preserves all historical answers as resolved and maps 
   legacy.scroll = 924;
   const restored = validateSave(legacy, source)!;
   assert.ok(restored);
-  assert.equal(restored.version, 4);
+  assert.equal(restored.version, 5);
   assert.deepEqual(restored.answers, legacy.answers);
   assert.deepEqual(restored.resolved, ['q1']);
   assert.equal(restored.cursor, legacy.cursor);
@@ -627,6 +627,69 @@ test('version 3 migration preserves all historical answers as resolved and maps 
   delete historical.resolved;
   delete historical.pages;
   assert.deepEqual(validateSave(historical, corpus)!.resolved, ['q1', 'q2', 'q3']);
+});
+
+test('version 4 page migration retains source location and unresolved gates before, on and after the question', () => {
+  const source = longCorpus();
+  const sourceUnits = flattenCorpus(source);
+  const current = sourceUnits[0];
+  const oldPages = makeVersion4ReadingPages(current);
+  const pages = makeReadingPages(current);
+  const oldQuestion = oldPages.findIndex(page => page.kind === 'question');
+  const questionPage = pages.findIndex(page => page.kind === 'question');
+  const initial = { ...setReadingMode(createSave(source, 'v4-position'), 'continuous'), started: true };
+  const wrong = submitAnswer(initial, current, 'q1-rule');
+  const corrected = submitAnswer(wrong, current, 'q1-context');
+  for (const [base, oldIndex] of [
+    [initial, 0], [initial, 1], [initial, oldQuestion - 1],
+    [wrong, oldQuestion], [corrected, oldQuestion + 1], [corrected, oldPages.length - 1],
+  ] as const) {
+    const snapshot = { ...exported(base), version: 4, pages: { u1: oldIndex }, scroll: 683 };
+    const restored = validateSave(snapshot, source)!;
+    assert.ok(restored, String(oldIndex));
+    assert.equal(restored.version, 5);
+    assert.equal(restored.cursor, snapshot.cursor);
+    assert.equal(restored.completed, snapshot.completed);
+    assert.equal(restored.seed, snapshot.seed);
+    assert.deepEqual(restored.answers, snapshot.answers);
+    assert.deepEqual(restored.resolved, snapshot.resolved);
+    assert.equal(restored.scroll, 0, 'pixel scrolling cannot be carried to a different page layout');
+    const mapped = pages[pagePosition(restored, current)];
+    const old = oldPages[oldIndex];
+    assert.equal(mapped.kind, old.kind);
+    if (old.kind === 'question') {
+      assert.equal(pagePosition(restored, current), questionPage);
+      assert.equal(isQuestionResolved(restored, 'q1'), false);
+      assert.throws(() => setPagePosition(restored, current, questionPage + 1));
+      assert.equal(advance(restored, sourceUnits), restored);
+      assert.deepEqual(submitAnswer(restored, current, 'q1-context').answers, wrong.answers);
+    } else {
+      assert.ok(mapped.kind === 'text');
+      assert.equal(mapped.side, old.side);
+      assert.ok(mapped.paragraphs.some(part => part.sourceId === old.paragraphs[0].sourceId));
+      if (old.side === 'before') assert.ok(pagePosition(restored, current) < questionPage);
+      else assert.ok(pagePosition(restored, current) > questionPage);
+    }
+    assert.deepEqual(validateSave(exported(restored), source), restored, 'migration is applied once');
+  }
+  const wrongSnapshot = { ...exported(wrong), version: 4 };
+  assert.equal(validateSave({ ...wrongSnapshot, pages: { u1: oldQuestion + 1 } }, source), null);
+  assert.equal(validateSave({ ...wrongSnapshot, pages: { u1: oldPages.length } }, source), null);
+
+  const oldEnd = { ...exported(corrected), version: 4, pages: { u1: oldPages.length - 1 },
+    reading: { mode: 'step', positions: { u1: { before: 3, after: 3 } } } };
+  assert.ok(oldEnd.pages.u1 >= pages.length, 'fixture exercises an old page number outside the new range');
+  const atEnd = validateSave(oldEnd, source)!;
+  assert.ok(atEnd);
+  assert.equal(pagePosition(atEnd, current), pages.length - 1);
+  assert.equal(advance(atEnd, sourceUnits).cursor, 1);
+
+  const completedOld = { ...oldEnd, cursor: 1, completed: 1, pages: { ...oldEnd.pages, u2: 0 } };
+  const completedNew = validateSave(completedOld, source)!;
+  assert.ok(completedNew);
+  assert.equal(completedNew.pages.u1, pages.length - 1, 'previously visited units are migrated too');
+  assert.equal(completedNew.pages.u2, 0);
+  assert.deepEqual(completedNew.answers, completedOld.answers);
 });
 
 test('short pages persist the current page and keep wrong-answer gates closed across refresh and revisiting the context', () => {

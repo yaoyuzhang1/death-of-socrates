@@ -1,0 +1,2682 @@
+{
+  "version": 1,
+  "editionId": "republic-guo-zhang-1986-2026-09-09",
+  "paginationVersion": 5,
+  "assets": {
+    "arrival": {
+      "file": "arrival.webp",
+      "alt": "比雷埃夫斯港旁，苏格拉底和格劳孔与前来挽留的友人交谈",
+      "kind": "conversation",
+      "focalY": 38,
+      "bytes": 270654,
+      "sha256": "c3f605bc3bee14ed59fac2cbb609c67f678c255b40cd775cb3e903e68b1c6885"
+    },
+    "obligations": {
+      "file": "obligations.webp",
+      "alt": "克法洛斯坐在椅上，苏格拉底和年轻人围坐交谈",
+      "kind": "conversation",
+      "focalY": 38,
+      "bytes": 233794,
+      "sha256": "4cd729416f5cd40ac267e4eae930d3d95698aeb34e2561c01c177eb3bedede3c"
+    },
+    "rule": {
+      "file": "rule.webp",
+      "alt": "色拉叙马霍斯向苏格拉底陈述自己的看法",
+      "kind": "conversation",
+      "focalY": 38,
+      "bytes": 230932,
+      "sha256": "fe494fa94e94dd4b76791d2d8bbd38391446188c900db0c0c0567c58690d4db1"
+    },
+    "life": {
+      "file": "life.webp",
+      "alt": "苏格拉底继续与色拉叙马霍斯交谈，众人在旁倾听",
+      "kind": "conversation",
+      "focalY": 38,
+      "bytes": 238606,
+      "sha256": "1a21a11a55fea6ed66853309e6aee6086ead7e14f5cbb9d92fc4ce4e36075c26"
+    },
+    "worth": {
+      "file": "worth.webp",
+      "alt": "格劳孔发言，苏格拉底和阿得曼托斯倾听",
+      "kind": "conversation",
+      "focalY": 38,
+      "bytes": 237120,
+      "sha256": "4fd47bf24edf6154755ae01b6e013a7ff5c5b661704344e2e188c719b9058e0e"
+    },
+    "city": {
+      "file": "city.webp",
+      "alt": "三人在庭院边讨论共同生活的起点",
+      "kind": "conversation",
+      "focalY": 38,
+      "bytes": 290322,
+      "sha256": "50d5fa5ad601084c9fdd290d7f9a0006ec6c83270c48eff0668d8d013128b9f5"
+    },
+    "education": {
+      "file": "education.webp",
+      "alt": "从听者肩后望向苏格拉底和阿得曼托斯的交谈",
+      "kind": "conversation",
+      "focalY": 38,
+      "bytes": 232206,
+      "sha256": "393932bf50acc459830e78265cff3528539c2e78ea0c37540bcf32d38868267c"
+    },
+    "guardians": {
+      "file": "guardians.webp",
+      "alt": "阿得曼托斯与苏格拉底相对而坐，讨论仍在继续",
+      "kind": "conversation",
+      "focalY": 38,
+      "bytes": 264576,
+      "sha256": "3ca24e3b89978abd11e2701b8ea4bce4099c8d9fd67439dff151a49d9347b729"
+    },
+    "soul": {
+      "file": "soul.webp",
+      "alt": "苏格拉底与格劳孔相对交谈，阿得曼托斯在旁倾听",
+      "kind": "conversation",
+      "focalY": 38,
+      "bytes": 199818,
+      "sha256": "50891be3ecd7c6f086837f2a4d53558e401c7843dba37265c245a3ba2746e500"
+    },
+    "dialogue-01": {
+      "file": "progression/dialogue-01.webp",
+      "alt": "港口旁，玻勒马霍斯挽留苏格拉底和格劳孔，众人站着交谈。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 326690,
+      "sha256": "e8c9b34a2abc7f6131a8da5ed394b18ad3ec25ffb99541dc5af2e5efb4087999"
+    },
+    "dialogue-02": {
+      "file": "progression/dialogue-02.webp",
+      "alt": "苏格拉底从玻勒马霍斯的肩后望来，两人继续在家中讨论。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 254076,
+      "sha256": "12a0197d11015b700ddb20875fce06d84d64d98830ea7ea4d28ad17a6d1a28c9"
+    },
+    "dialogue-03": {
+      "file": "progression/dialogue-03.webp",
+      "alt": "玻勒马霍斯坐在苏格拉底对面，神情专注地继续答话。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 244132,
+      "sha256": "477648f4eae823b039854ec356dde68e8970a5be7648b5d2f26a1ae3cf90aeb6"
+    },
+    "dialogue-04": {
+      "file": "progression/dialogue-04.webp",
+      "alt": "色拉叙马霍斯听着苏格拉底的追问，身旁的人安静旁听。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 179710,
+      "sha256": "1eea2d602639452a4e6a573a95e7665697909eab05ab9d0301cf7a149e2e91fa"
+    },
+    "dialogue-05": {
+      "file": "progression/dialogue-05.webp",
+      "alt": "色拉叙马霍斯向苏格拉底陈述看法，两人的对话仍在继续。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 282238,
+      "sha256": "279248a88d36c30eb91ba3074fe38fa7d65ac0ec0ecb900c879ae6342001a544"
+    },
+    "dialogue-06": {
+      "file": "progression/dialogue-06.webp",
+      "alt": "苏格拉底说话时，色拉叙马霍斯转过身专注地听着。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 239902,
+      "sha256": "ab09b667ce665ef26431c616d4920a89f73c8b879b9606c19ca88895012d1bd7"
+    },
+    "dialogue-07": {
+      "file": "progression/dialogue-07.webp",
+      "alt": "苏格拉底、格劳孔和阿得曼托斯围坐着，讨论逐渐展开。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 263620,
+      "sha256": "4695ffb85e3efe3bfebee6e5dacfa539134e9339de03a5e15b10059985e54e46"
+    },
+    "dialogue-08": {
+      "file": "progression/dialogue-08.webp",
+      "alt": "从庭院侧面看去，三人继续一问一答，旁听者静静思索。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 260206,
+      "sha256": "86ebfe2e9f642e82ad5edb3897ad8ba6ff7fc688505e4537c41fef9b84c39095"
+    },
+    "dialogue-09": {
+      "file": "progression/dialogue-09.webp",
+      "alt": "阿得曼托斯继续讲述，苏格拉底专心听着。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 241814,
+      "sha256": "9bbb37096f330ab4b13126d53077b64a65a3b8c68f0695b9d4a8eaa56d755cae"
+    },
+    "dialogue-10": {
+      "file": "progression/dialogue-10.webp",
+      "alt": "阿得曼托斯神情平静地答话，苏格拉底侧耳聆听。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 241962,
+      "sha256": "f01636a618d9814dfa67c93f4aa1faf32ec3500ae2509cc3831a2c6ff1e90526"
+    },
+    "dialogue-11": {
+      "file": "progression/dialogue-11.webp",
+      "alt": "格劳孔接着发问，苏格拉底坐在对面听他把话说完。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 223832,
+      "sha256": "deb7f2b4292f8d9673a6c99d15f9db3faba63bf73f955a8a42afa6dc776b3f67"
+    },
+    "dialogue-12": {
+      "file": "progression/dialogue-12.webp",
+      "alt": "短暂的停顿中，格劳孔和苏格拉底思索着刚才的话。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 263048,
+      "sha256": "729dc9c9cfd2741761f68ccf0f28f08da335400bba77d692d5cd9a32c361ea3a"
+    },
+    "dialogue-13": {
+      "file": "progression/dialogue-13.webp",
+      "alt": "苏格拉底继续说明，阿得曼托斯听着，格劳孔坐在一旁。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 200420,
+      "sha256": "e72fa87c3463f81e9424c65bebdce219e6f57e66ce0802daa12a95808436f37b"
+    },
+    "dialogue-14": {
+      "file": "progression/dialogue-14.webp",
+      "alt": "格劳孔微微向前倾身，向苏格拉底接着提问。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 225096,
+      "sha256": "ba42c0e2abeea72ee5dda384d639878a3218b0c5df5e927f0af308d20c76f47f"
+    },
+    "dialogue-15": {
+      "file": "progression/dialogue-15.webp",
+      "alt": "苏格拉底与格劳孔面对面坐着，继续讨论个人与城邦。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 247888,
+      "sha256": "c29281fc6d6465a1bafddb402c803e7c6e0987f5efa8993eb5a849b8a1f5405e"
+    },
+    "dialogue-16": {
+      "file": "progression/dialogue-16.webp",
+      "alt": "格劳孔的回答接续着谈话，苏格拉底与阿得曼托斯安静地听。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 269626,
+      "sha256": "73cd6b788e4e5da1dc32685c84619a4cd63c5b420df70d478218372b3bf8b441"
+    },
+    "early-01-servant": {
+      "file": "progression/early-01-servant.webp",
+      "alt": "家奴在港口石路上轻拉苏格拉底的披风，请他等候。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 297130,
+      "sha256": "b483f130df928a6e07be51b09db207d44f5362fa80ffe09cd012a5d603b97faf"
+    },
+    "early-02-cephalus": {
+      "file": "progression/early-02-cephalus.webp",
+      "alt": "克法洛斯倚坐在靠垫椅上谈论晚年，苏格拉底专心倾听。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 266096,
+      "sha256": "43d917fef7e6ad6610cdf4d41b9314c625d4f6e48611b59536ecba1b3505bc25"
+    },
+    "early-03-polemarchus": {
+      "file": "progression/early-03-polemarchus.webp",
+      "alt": "玻勒马霍斯接着话题与苏格拉底交谈，身旁年轻人静听。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 210318,
+      "sha256": "2f832df6094f8dbfa36b0f237834b56bbd97886ef8f6c5565a6ab8f14d0396ef"
+    },
+    "early-04-polemarchus-listens": {
+      "file": "progression/early-04-polemarchus-listens.webp",
+      "alt": "苏格拉底向玻勒马霍斯追问，双方在庭院边仔细商量。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 218474,
+      "sha256": "5559ec270caf73a19b6310390302d0eade51efae70c40d90b550b7c8f7996491"
+    },
+    "early-05-interruption": {
+      "file": "progression/early-05-interruption.webp",
+      "alt": "色拉叙马霍斯忍不住起身插话，苏格拉底和玻勒马霍斯转头。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 247340,
+      "sha256": "7af35469d21b856d3eb92e98161cba7613da34ab0a8615aa35de8a3eb5e1ad4f"
+    },
+    "early-06-listeners-intervene": {
+      "file": "progression/early-06-listeners-intervene.webp",
+      "alt": "众人围坐在苏格拉底与色拉叙马霍斯旁，随着辩论转头倾听。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 267948,
+      "sha256": "99683fea3cf2d0faa8c602fcfe642dc1bc77b34122ea53ac3c9bb2b3e0493043"
+    },
+    "early-07-socrates-rule": {
+      "file": "progression/early-07-socrates-rule.webp",
+      "alt": "苏格拉底端坐着追问，色拉叙马霍斯在近处听着。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 215744,
+      "sha256": "384d780b3bcb099f01a6b880c611fd06a14a75d25e7a268663429e1205449262"
+    },
+    "early-08-shepherd": {
+      "file": "progression/early-08-shepherd.webp",
+      "alt": "谈话中提到的牧羊场景：牧人照看坡地上的羊群。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 368960,
+      "sha256": "eed3677946e0a1016ac430f79a5da80b4038ccea167b371600a910d330370763"
+    },
+    "early-09-lyre": {
+      "file": "progression/early-09-lyre.webp",
+      "alt": "谈话中提到的调弦：乐师细听里拉琴的音高。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 223358,
+      "sha256": "4210c806d1bc03e6b3773db84c831baabe009fee3838e88b4a8d08776f6624b6"
+    },
+    "early-10-summer-pause": {
+      "file": "progression/early-10-summer-pause.webp",
+      "alt": "盛暑中的色拉叙马霍斯面色发红，仍坐着回答苏格拉底。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 220332,
+      "sha256": "08f105517cc5164b23366de3fc45d388618d1c1ac55ed963ee883d7e2a8310b2"
+    },
+    "early-11-shared-discussion": {
+      "file": "progression/early-11-shared-discussion.webp",
+      "alt": "苏格拉底与色拉叙马霍斯继续问答，年轻的旁听者沉思。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 253492,
+      "sha256": "5ca298198303c83e5a6743bf1e656d42c298208033f61951cd3e4705acb6e855"
+    },
+    "early-12-reflective-pause": {
+      "file": "progression/early-12-reflective-pause.webp",
+      "alt": "在接连的问答间，苏格拉底稍作停顿，色拉叙马霍斯等他续说。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 192820,
+      "sha256": "568e8bfc8f1a2c1469a3adb414b89dc515fc9103f2022f93e25fb877c554c6d5"
+    },
+    "early-13-glaucon": {
+      "file": "progression/early-13-glaucon.webp",
+      "alt": "格劳孔精神振作地继续发言，苏格拉底与阿得曼托斯倾听。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 253426,
+      "sha256": "71887048477ee48d324704fd321a80e91b01ebd60487496002b20a4234a4f6c6"
+    },
+    "early-14-ring-story": {
+      "file": "progression/early-14-ring-story.webp",
+      "alt": "格劳孔已经讲过的故事中，牧羊人在掌心转动戒指。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 305932,
+      "sha256": "1f77a9a0cb29d8ed72b8e4977429d049a4e93a271331e5db184ac904afcba37c"
+    },
+    "early-15-adeimantus": {
+      "file": "progression/early-15-adeimantus.webp",
+      "alt": "阿得曼托斯补充兄长的挑战，格劳孔在一旁认真听。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 245614,
+      "sha256": "460a8410da622a06dfbff7e057f69f4aa1adb190ce2dff8c0fe8ee99d5d7ccc4"
+    },
+    "early-16-socrates-brothers": {
+      "file": "progression/early-16-socrates-brothers.webp",
+      "alt": "苏格拉底面向兄弟二人，思索如何继续这场讨论。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 216946,
+      "sha256": "d475e48af3d6580f83938a2cce2526eeb88272f37c687b249fa705db31d74cab"
+    },
+    "early-17-cephalus-departs": {
+      "file": "progression/early-17-cephalus-departs.webp",
+      "alt": "克法洛斯含笑起身，把话题留给苏格拉底和玻勒马霍斯。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 238540,
+      "sha256": "9a79afa5c56041d4c281a1ff7413ff76d9798c86c7485bd32b1b6bb189483025"
+    },
+    "late-city-crafts": {
+      "file": "progression/late-city-crafts.webp",
+      "alt": "城邦设想中的农夫、建屋者与织工各自劳动。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 469028,
+      "sha256": "322f9658a4063597b7c81c26b4ff30686d295e6da89f987d1de01422dadc0d70"
+    },
+    "late-city-market": {
+      "file": "progression/late-city-market.webp",
+      "alt": "市场上的农人把粮食交给常驻摊位的商人。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 359658,
+      "sha256": "350300bfb9417664e280226db463686ef94447042c8f34be076ceac60a85e9da"
+    },
+    "late-city-luxury": {
+      "file": "progression/late-city-luxury.webp",
+      "alt": "格劳孔与苏格拉底交谈，阿得曼托斯侧身听着。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 299062,
+      "sha256": "bff087deef5c008d8e4b7713d544db1708312d2fe0871b6a672d82ec9be96455"
+    },
+    "late-city-dog": {
+      "file": "progression/late-city-dog.webp",
+      "alt": "原文用狗识别熟人作比：院门旁的狗温和地迎向熟识的人。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 335550,
+      "sha256": "978c690cc7a37cc81f4c7008b1c6a8ca7761212369ea4f6eebb333af4c186528"
+    },
+    "late-education-stories": {
+      "file": "progression/late-education-stories.webp",
+      "alt": "苏格拉底展开话题，阿得曼托斯倾听，格劳孔安静思索。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 319764,
+      "sha256": "5d82bd6a81d2c75092cd5b8c6c94cd4152c6782bd68cdbbe16745fad23fc770e"
+    },
+    "late-education-narration": {
+      "file": "progression/late-education-narration.webp",
+      "alt": "一名古希腊讲述者面对听众朗诵，呈现原文谈到的叙述场景。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 341850,
+      "sha256": "54128725c82b5ece270bc8e6d6e5081a267195a436470b96a46b531abdd4ad73"
+    },
+    "late-education-music": {
+      "file": "progression/late-education-music.webp",
+      "alt": "青年在教师身旁练习里拉琴，对应原文关于音乐与节奏的讨论。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 359616,
+      "sha256": "3d30a6e47b06749a23022deb4971111d74e4a8e9c5f581f6ee03fd7315529e04"
+    },
+    "late-education-training": {
+      "file": "progression/late-education-training.webp",
+      "alt": "青年在庭院中练习跑步，教师在旁观察。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 355018,
+      "sha256": "200a1cb0f9e83cb36684e83686977a97fccfba47ec01af7f41de9954d7defd0a"
+    },
+    "late-guardians-selection": {
+      "file": "progression/late-guardians-selection.webp",
+      "alt": "苏格拉底听着格劳孔回应，阿得曼托斯坐在近旁。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 271918,
+      "sha256": "9e5dd820901621f51f9ae54792415ea2cf712e40fa8b2907a10f9bdbf5907404"
+    },
+    "late-guardians-shared": {
+      "file": "progression/late-guardians-shared.webp",
+      "alt": "原文设想卫士共同用餐，桌上摆着朴素的食物。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 289494,
+      "sha256": "decec4fba4ed848db42b4b16d327f4857fc5da577d6b31054bb9b12940272eb3"
+    },
+    "late-guardians-potter": {
+      "file": "progression/late-guardians-potter.webp",
+      "alt": "陶工在工作台旁整理陶器，呼应关于贫富与技艺的讨论。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 310916,
+      "sha256": "16be7d5342ec5dd9fc70a6aeb45f5d5f4554964c3449b3843a70b717cd5d237e"
+    },
+    "late-guardians-continuity": {
+      "file": "progression/late-guardians-continuity.webp",
+      "alt": "阿得曼托斯接着发问，苏格拉底侧身听取，庭院中的讨论继续。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 232990,
+      "sha256": "6fc6f487b62771ae958651763088077889db3e77cfe1b3429c8a09f601e275a0"
+    },
+    "late-soul-dye": {
+      "file": "progression/late-soul-dye.webp",
+      "alt": "染工把整理好的白羊毛放入紫色染液，对应原文中的染色比喻。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 345584,
+      "sha256": "01c7078d41dc93c5f9e316e96c366906283d043efc71a877c40662e18ff879dd"
+    },
+    "late-soul-search": {
+      "file": "progression/late-soul-search.webp",
+      "alt": "苏格拉底与格劳孔相对讨论，阿得曼托斯留意两人的往复。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 227742,
+      "sha256": "85eb81c0785186bc2b05ea7c38ec14bf8af5ff00c88a21434560a0856af543c6"
+    },
+    "late-soul-thirst": {
+      "file": "progression/late-soul-thirst.webp",
+      "alt": "一个人伸手接近水杯又稍停，呈现原文谈到的渴与不饮的例子。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 291414,
+      "sha256": "2d84fa10239e01e9d6a8997a0d85d72be03b213ef477c549d966fc80aa7366f5"
+    },
+    "late-soul-close": {
+      "file": "progression/late-soul-close.webp",
+      "alt": "格劳孔与阿得曼托斯安静听着苏格拉底。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 287470,
+      "sha256": "8378efaf8ed4c6fc3a77b1d2914af4d157b5f509625949384cf3fe36adefb3b3"
+    },
+    "late-city-turn": {
+      "file": "progression/late-city-turn.webp",
+      "alt": "苏格拉底与阿得曼托斯对坐交谈，格劳孔随时准备接话。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 330108,
+      "sha256": "a12cd93e315fa403e4746034627aa1fc4579a2bc46ea8711f44c6d521b993b68"
+    },
+    "late-education-turn": {
+      "file": "progression/late-education-turn.webp",
+      "alt": "格劳孔回应苏格拉底，阿得曼托斯在旁认真听着。",
+      "kind": "conversation",
+      "focalY": 45,
+      "bytes": 307912,
+      "sha256": "44189186f96efd8e58324b781f251506314e0e3279f7141e4e8dc986a1e48e89"
+    }
+  },
+  "pages": {
+    "u-001-before-0": "early-01-servant",
+    "u-001-before-1": "dialogue-01",
+    "u-001-before-2": "early-02-cephalus",
+    "u-002-before-0": "obligations",
+    "u-002-question": "early-02-cephalus",
+    "u-002-after-0": "obligations",
+    "u-003-before-0": "early-02-cephalus",
+    "u-003-question": "obligations",
+    "u-003-after-0": "early-02-cephalus",
+    "u-004-before-0": "obligations",
+    "u-004-question": "early-02-cephalus",
+    "u-004-after-0": "obligations",
+    "u-005-before-0": "early-17-cephalus-departs",
+    "u-005-before-1": "early-03-polemarchus",
+    "u-005-question": "early-04-polemarchus-listens",
+    "u-005-after-0": "dialogue-02",
+    "u-006-before-0": "dialogue-03",
+    "u-006-before-1": "early-03-polemarchus",
+    "u-006-before-2": "early-04-polemarchus-listens",
+    "u-006-before-3": "early-03-polemarchus",
+    "u-006-question": "dialogue-02",
+    "u-006-after-0": "early-04-polemarchus-listens",
+    "u-006-after-1": "dialogue-03",
+    "u-007-before-0": "early-03-polemarchus",
+    "u-007-question": "early-04-polemarchus-listens",
+    "u-007-after-0": "dialogue-02",
+    "u-008-before-0": "early-03-polemarchus",
+    "u-008-before-1": "early-04-polemarchus-listens",
+    "u-008-before-2": "dialogue-03",
+    "u-008-question": "early-03-polemarchus",
+    "u-008-after-0": "early-04-polemarchus-listens",
+    "u-009-before-0": "dialogue-02",
+    "u-009-question": "early-03-polemarchus",
+    "u-009-after-0": "early-04-polemarchus-listens",
+    "u-009-after-1": "dialogue-03",
+    "u-010-before-0": "early-05-interruption",
+    "u-010-before-1": "early-06-listeners-intervene",
+    "u-010-question": "early-07-socrates-rule",
+    "u-010-after-0": "dialogue-04",
+    "u-010-after-1": "dialogue-05",
+    "u-010-after-2": "dialogue-06",
+    "u-011-before-0": "rule",
+    "u-011-question": "early-06-listeners-intervene",
+    "u-011-after-0": "early-07-socrates-rule",
+    "u-011-after-1": "dialogue-04",
+    "u-011-after-2": "dialogue-05",
+    "u-012-before-0": "early-06-listeners-intervene",
+    "u-012-question": "dialogue-06",
+    "u-012-after-0": "early-07-socrates-rule",
+    "u-012-after-1": "rule",
+    "u-012-after-2": "early-06-listeners-intervene",
+    "u-013-before-0": "early-08-shepherd",
+    "u-013-before-1": "dialogue-04",
+    "u-013-before-2": "dialogue-05",
+    "u-013-before-3": "early-07-socrates-rule",
+    "u-013-question": "dialogue-06",
+    "u-013-after-0": "early-06-listeners-intervene",
+    "u-013-after-1": "rule",
+    "u-014-before-0": "life",
+    "u-014-before-1": "dialogue-04",
+    "u-014-question": "early-11-shared-discussion",
+    "u-014-after-0": "early-12-reflective-pause",
+    "u-015-before-0": "dialogue-05",
+    "u-015-question": "dialogue-06",
+    "u-015-after-0": "early-11-shared-discussion",
+    "u-015-after-1": "early-12-reflective-pause",
+    "u-015-after-2": "early-09-lyre",
+    "u-015-after-3": "life",
+    "u-015-after-4": "early-10-summer-pause",
+    "u-015-after-5": "dialogue-04",
+    "u-016-before-0": "early-11-shared-discussion",
+    "u-016-question": "dialogue-05",
+    "u-016-after-0": "early-12-reflective-pause",
+    "u-017-before-0": "dialogue-06",
+    "u-017-question": "early-10-summer-pause",
+    "u-017-after-0": "early-11-shared-discussion",
+    "u-018-before-0": "life",
+    "u-018-question": "dialogue-04",
+    "u-018-after-0": "early-12-reflective-pause",
+    "u-019-before-0": "dialogue-05",
+    "u-019-before-1": "early-10-summer-pause",
+    "u-019-before-2": "early-11-shared-discussion",
+    "u-019-question": "dialogue-06",
+    "u-019-after-0": "early-12-reflective-pause",
+    "u-019-after-1": "life",
+    "u-020-before-0": "early-13-glaucon",
+    "u-020-before-1": "early-16-socrates-brothers",
+    "u-020-before-2": "dialogue-07",
+    "u-020-before-3": "dialogue-08",
+    "u-020-before-4": "early-14-ring-story",
+    "u-020-before-5": "worth",
+    "u-020-before-6": "early-13-glaucon",
+    "u-021-before-0": "early-15-adeimantus",
+    "u-021-before-1": "dialogue-09",
+    "u-021-before-2": "dialogue-10",
+    "u-021-before-3": "early-16-socrates-brothers",
+    "u-021-before-4": "dialogue-07",
+    "u-021-before-5": "dialogue-08",
+    "u-022-before-0": "early-13-glaucon",
+    "u-022-question": "early-15-adeimantus",
+    "u-022-after-0": "worth",
+    "u-023-before-0": "late-city-luxury",
+    "u-023-before-1": "late-city-turn",
+    "u-023-question": "dialogue-11",
+    "u-023-after-0": "dialogue-12",
+    "u-024-before-0": "late-city-crafts",
+    "u-024-before-1": "city",
+    "u-024-before-2": "dialogue-09",
+    "u-024-question": "dialogue-10",
+    "u-024-after-0": "late-city-market",
+    "u-024-after-1": "dialogue-07",
+    "u-025-before-0": "dialogue-08",
+    "u-025-before-1": "late-city-luxury",
+    "u-025-question": "late-city-turn",
+    "u-025-after-0": "dialogue-11",
+    "u-026-before-0": "dialogue-12",
+    "u-026-before-1": "city",
+    "u-026-before-2": "dialogue-09",
+    "u-026-question": "dialogue-10",
+    "u-026-after-0": "late-city-luxury",
+    "u-026-after-1": "late-city-dog",
+    "u-026-after-2": "dialogue-07",
+    "u-027-before-0": "late-education-stories",
+    "u-027-before-1": "late-education-turn",
+    "u-027-question": "dialogue-13",
+    "u-027-after-0": "dialogue-14",
+    "u-028-before-0": "education",
+    "u-028-before-1": "dialogue-08",
+    "u-028-before-2": "dialogue-11",
+    "u-028-question": "dialogue-12",
+    "u-028-after-0": "dialogue-09",
+    "u-029-before-0": "dialogue-10",
+    "u-029-before-1": "late-education-stories",
+    "u-029-question": "late-education-turn",
+    "u-029-after-0": "dialogue-07",
+    "u-030-before-0": "dialogue-13",
+    "u-030-before-1": "dialogue-14",
+    "u-030-before-2": "education",
+    "u-030-before-3": "dialogue-08",
+    "u-030-question": "dialogue-11",
+    "u-030-after-0": "dialogue-12",
+    "u-031-before-0": "late-education-stories",
+    "u-031-before-1": "dialogue-09",
+    "u-031-before-2": "late-education-turn",
+    "u-031-question": "dialogue-10",
+    "u-031-after-0": "dialogue-07",
+    "u-031-after-1": "dialogue-13",
+    "u-031-after-2": "dialogue-14",
+    "u-031-after-3": "education",
+    "u-031-after-4": "dialogue-08",
+    "u-031-after-5": "late-education-stories",
+    "u-031-after-6": "dialogue-11",
+    "u-031-after-7": "dialogue-12",
+    "u-031-after-8": "late-education-turn",
+    "u-031-after-9": "dialogue-09",
+    "u-031-after-10": "dialogue-10",
+    "u-031-after-11": "dialogue-07",
+    "u-032-before-0": "dialogue-13",
+    "u-032-question": "dialogue-14",
+    "u-032-after-0": "late-education-stories",
+    "u-032-after-1": "education",
+    "u-032-after-2": "late-education-narration",
+    "u-032-after-3": "dialogue-08",
+    "u-032-after-4": "late-education-turn",
+    "u-032-after-5": "dialogue-11",
+    "u-032-after-6": "dialogue-12",
+    "u-033-before-0": "dialogue-09",
+    "u-033-before-1": "dialogue-10",
+    "u-033-before-2": "late-education-music",
+    "u-033-before-3": "dialogue-07",
+    "u-033-before-4": "late-education-stories",
+    "u-033-question": "dialogue-13",
+    "u-033-after-0": "dialogue-14",
+    "u-033-after-1": "late-education-turn",
+    "u-033-after-2": "education",
+    "u-033-after-3": "dialogue-08",
+    "u-034-before-0": "late-education-training",
+    "u-034-before-1": "dialogue-11",
+    "u-034-before-2": "dialogue-12",
+    "u-034-before-3": "dialogue-09",
+    "u-034-before-4": "dialogue-10",
+    "u-034-before-5": "late-education-stories",
+    "u-034-before-6": "dialogue-07",
+    "u-034-before-7": "late-education-turn",
+    "u-034-before-8": "dialogue-13",
+    "u-035-before-0": "dialogue-14",
+    "u-035-question": "education",
+    "u-035-after-0": "late-education-training",
+    "u-036-before-0": "dialogue-08",
+    "u-036-before-1": "dialogue-11",
+    "u-036-before-2": "dialogue-12",
+    "u-036-question": "late-education-stories",
+    "u-036-after-0": "dialogue-09",
+    "u-037-before-0": "late-guardians-continuity",
+    "u-037-question": "late-guardians-selection",
+    "u-037-after-0": "guardians",
+    "u-038-before-0": "dialogue-10",
+    "u-038-before-1": "dialogue-07",
+    "u-038-before-2": "dialogue-08",
+    "u-038-before-3": "late-guardians-continuity",
+    "u-038-question": "late-guardians-selection",
+    "u-038-after-0": "dialogue-09",
+    "u-039-before-0": "guardians",
+    "u-039-question": "dialogue-10",
+    "u-039-after-0": "late-guardians-continuity",
+    "u-039-after-1": "late-guardians-shared",
+    "u-040-before-0": "dialogue-07",
+    "u-040-before-1": "late-guardians-selection",
+    "u-040-before-2": "dialogue-08",
+    "u-041-before-0": "dialogue-09",
+    "u-041-question": "late-guardians-continuity",
+    "u-041-after-0": "late-guardians-potter",
+    "u-041-after-1": "guardians",
+    "u-041-after-2": "dialogue-10",
+    "u-041-after-3": "late-guardians-selection",
+    "u-042-before-0": "dialogue-07",
+    "u-042-before-1": "late-guardians-continuity",
+    "u-042-before-2": "dialogue-08",
+    "u-042-before-3": "dialogue-09",
+    "u-042-before-4": "late-guardians-selection",
+    "u-043-before-0": "late-soul-close",
+    "u-043-before-1": "late-soul-search",
+    "u-043-before-2": "dialogue-15",
+    "u-043-question": "dialogue-16",
+    "u-043-after-0": "soul",
+    "u-043-after-1": "dialogue-11",
+    "u-043-after-2": "late-soul-dye",
+    "u-043-after-3": "dialogue-12",
+    "u-044-before-0": "dialogue-07",
+    "u-044-before-1": "dialogue-08",
+    "u-044-before-2": "late-soul-close",
+    "u-044-question": "late-soul-search",
+    "u-044-after-0": "dialogue-15",
+    "u-045-before-0": "dialogue-16",
+    "u-045-before-1": "soul",
+    "u-045-before-2": "dialogue-11",
+    "u-045-before-3": "dialogue-12",
+    "u-045-question": "late-soul-close",
+    "u-045-after-0": "dialogue-07",
+    "u-045-after-1": "late-soul-search",
+    "u-046-before-0": "dialogue-08",
+    "u-046-question": "dialogue-15",
+    "u-046-after-0": "dialogue-16",
+    "u-046-after-1": "late-soul-close",
+    "u-047-before-0": "soul",
+    "u-047-question": "dialogue-11",
+    "u-047-after-0": "dialogue-12",
+    "u-048-before-0": "late-soul-search",
+    "u-048-before-1": "dialogue-07",
+    "u-048-question": "dialogue-08",
+    "u-048-after-0": "late-soul-close",
+    "u-049-before-0": "dialogue-15",
+    "u-049-before-1": "dialogue-16",
+    "u-049-before-2": "late-soul-thirst",
+    "u-049-question": "late-soul-search",
+    "u-049-after-0": "soul",
+    "u-050-before-0": "dialogue-11",
+    "u-050-question": "dialogue-12",
+    "u-050-after-0": "late-soul-close",
+    "u-051-before-0": "dialogue-07",
+    "u-051-before-1": "dialogue-08",
+    "u-051-question": "dialogue-15",
+    "u-051-after-0": "late-soul-search",
+    "u-052-before-0": "dialogue-16",
+    "u-052-before-1": "late-soul-close",
+    "u-052-before-2": "soul",
+    "u-052-question": "dialogue-11",
+    "u-052-after-0": "dialogue-12",
+    "u-053-before-0": "dialogue-07",
+    "u-053-before-1": "late-soul-search",
+    "u-053-question": "dialogue-08",
+    "u-053-after-0": "dialogue-15",
+    "u-053-after-1": "late-soul-close"
+  },
+  "pageSources": {
+    "u-001-before-0": {
+      "chapterId": "obligations",
+      "sectionId": "arrival",
+      "first": "p-0001",
+      "last": "p-0006",
+      "kind": "text"
+    },
+    "u-001-before-1": {
+      "chapterId": "obligations",
+      "sectionId": "arrival",
+      "first": "p-0007",
+      "last": "p-0018",
+      "kind": "text"
+    },
+    "u-001-before-2": {
+      "chapterId": "obligations",
+      "sectionId": "arrival",
+      "first": "p-0019",
+      "last": "p-0021",
+      "kind": "text"
+    },
+    "u-002-before-0": {
+      "chapterId": "obligations",
+      "sectionId": "age-wealth",
+      "first": "p-0023",
+      "last": "p-0023",
+      "kind": "text"
+    },
+    "u-002-question": {
+      "chapterId": "obligations",
+      "sectionId": "age-wealth",
+      "first": "p-0022",
+      "last": "p-0022",
+      "kind": "question"
+    },
+    "u-002-after-0": {
+      "chapterId": "obligations",
+      "sectionId": "age-wealth",
+      "first": "p-0022",
+      "last": "p-0024",
+      "kind": "text"
+    },
+    "u-003-before-0": {
+      "chapterId": "obligations",
+      "sectionId": "age-wealth",
+      "first": "p-0026",
+      "last": "p-0032",
+      "kind": "text"
+    },
+    "u-003-question": {
+      "chapterId": "obligations",
+      "sectionId": "age-wealth",
+      "first": "p-0025",
+      "last": "p-0025",
+      "kind": "question"
+    },
+    "u-003-after-0": {
+      "chapterId": "obligations",
+      "sectionId": "age-wealth",
+      "first": "p-0025",
+      "last": "p-0035",
+      "kind": "text"
+    },
+    "u-004-before-0": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0037",
+      "last": "p-0037",
+      "kind": "text"
+    },
+    "u-004-question": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0036",
+      "last": "p-0036",
+      "kind": "question"
+    },
+    "u-004-after-0": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0036",
+      "last": "p-0039",
+      "kind": "text"
+    },
+    "u-005-before-0": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0041",
+      "last": "p-0051",
+      "kind": "text"
+    },
+    "u-005-before-1": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0052",
+      "last": "p-0063",
+      "kind": "text"
+    },
+    "u-005-question": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0040",
+      "last": "p-0040",
+      "kind": "question"
+    },
+    "u-005-after-0": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0040",
+      "last": "p-0064",
+      "kind": "text"
+    },
+    "u-006-before-0": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0066",
+      "last": "p-0076",
+      "kind": "text"
+    },
+    "u-006-before-1": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0077",
+      "last": "p-0088",
+      "kind": "text"
+    },
+    "u-006-before-2": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0089",
+      "last": "p-0097",
+      "kind": "text"
+    },
+    "u-006-before-3": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0098",
+      "last": "p-0107",
+      "kind": "text"
+    },
+    "u-006-question": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0065",
+      "last": "p-0065",
+      "kind": "question"
+    },
+    "u-006-after-0": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0065",
+      "last": "p-0118",
+      "kind": "text"
+    },
+    "u-006-after-1": {
+      "chapterId": "obligations",
+      "sectionId": "obligation-craft",
+      "first": "p-0119",
+      "last": "p-0126",
+      "kind": "text"
+    },
+    "u-007-before-0": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0128",
+      "last": "p-0129",
+      "kind": "text"
+    },
+    "u-007-question": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0127",
+      "last": "p-0127",
+      "kind": "question"
+    },
+    "u-007-after-0": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0127",
+      "last": "p-0130",
+      "kind": "text"
+    },
+    "u-008-before-0": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0132",
+      "last": "p-0142",
+      "kind": "text"
+    },
+    "u-008-before-1": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0143",
+      "last": "p-0149",
+      "kind": "text"
+    },
+    "u-008-before-2": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0150",
+      "last": "p-0159",
+      "kind": "text"
+    },
+    "u-008-question": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0131",
+      "last": "p-0131",
+      "kind": "question"
+    },
+    "u-008-after-0": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0131",
+      "last": "p-0160",
+      "kind": "text"
+    },
+    "u-009-before-0": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0162",
+      "last": "p-0169",
+      "kind": "text"
+    },
+    "u-009-question": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0161",
+      "last": "p-0161",
+      "kind": "question"
+    },
+    "u-009-after-0": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0161",
+      "last": "p-0180",
+      "kind": "text"
+    },
+    "u-009-after-1": {
+      "chapterId": "obligations",
+      "sectionId": "friends-harm",
+      "first": "p-0181",
+      "last": "p-0190",
+      "kind": "text"
+    },
+    "u-010-before-0": {
+      "chapterId": "rule",
+      "sectionId": "challenge",
+      "first": "p-0192",
+      "last": "p-0193",
+      "kind": "text"
+    },
+    "u-010-before-1": {
+      "chapterId": "rule",
+      "sectionId": "challenge",
+      "first": "p-0194",
+      "last": "p-0197",
+      "kind": "text"
+    },
+    "u-010-question": {
+      "chapterId": "rule",
+      "sectionId": "challenge",
+      "first": "p-0191",
+      "last": "p-0191",
+      "kind": "question"
+    },
+    "u-010-after-0": {
+      "chapterId": "rule",
+      "sectionId": "challenge",
+      "first": "p-0191",
+      "last": "p-0208",
+      "kind": "text"
+    },
+    "u-010-after-1": {
+      "chapterId": "rule",
+      "sectionId": "challenge",
+      "first": "p-0209",
+      "last": "p-0213",
+      "kind": "text"
+    },
+    "u-010-after-2": {
+      "chapterId": "rule",
+      "sectionId": "challenge",
+      "first": "p-0214",
+      "last": "p-0222",
+      "kind": "text"
+    },
+    "u-011-before-0": {
+      "chapterId": "rule",
+      "sectionId": "fallible-rule",
+      "first": "p-0224",
+      "last": "p-0227",
+      "kind": "text"
+    },
+    "u-011-question": {
+      "chapterId": "rule",
+      "sectionId": "fallible-rule",
+      "first": "p-0223",
+      "last": "p-0223",
+      "kind": "question"
+    },
+    "u-011-after-0": {
+      "chapterId": "rule",
+      "sectionId": "fallible-rule",
+      "first": "p-0223",
+      "last": "p-0238",
+      "kind": "text"
+    },
+    "u-011-after-1": {
+      "chapterId": "rule",
+      "sectionId": "fallible-rule",
+      "first": "p-0239",
+      "last": "p-0249",
+      "kind": "text"
+    },
+    "u-011-after-2": {
+      "chapterId": "rule",
+      "sectionId": "fallible-rule",
+      "first": "p-0250",
+      "last": "p-0260",
+      "kind": "text"
+    },
+    "u-012-before-0": {
+      "chapterId": "rule",
+      "sectionId": "craft-benefit",
+      "first": "p-0262",
+      "last": "p-0262",
+      "kind": "text"
+    },
+    "u-012-question": {
+      "chapterId": "rule",
+      "sectionId": "craft-benefit",
+      "first": "p-0261",
+      "last": "p-0261",
+      "kind": "question"
+    },
+    "u-012-after-0": {
+      "chapterId": "rule",
+      "sectionId": "craft-benefit",
+      "first": "p-0261",
+      "last": "p-0272",
+      "kind": "text"
+    },
+    "u-012-after-1": {
+      "chapterId": "rule",
+      "sectionId": "craft-benefit",
+      "first": "p-0273",
+      "last": "p-0281",
+      "kind": "text"
+    },
+    "u-012-after-2": {
+      "chapterId": "rule",
+      "sectionId": "craft-benefit",
+      "first": "p-0282",
+      "last": "p-0293",
+      "kind": "text"
+    },
+    "u-013-before-0": {
+      "chapterId": "rule",
+      "sectionId": "shepherd-pay",
+      "first": "p-0295",
+      "last": "p-0300",
+      "kind": "text"
+    },
+    "u-013-before-1": {
+      "chapterId": "rule",
+      "sectionId": "shepherd-pay",
+      "first": "p-0300",
+      "last": "p-0300",
+      "kind": "text"
+    },
+    "u-013-before-2": {
+      "chapterId": "rule",
+      "sectionId": "shepherd-pay",
+      "first": "p-0301",
+      "last": "p-0305",
+      "kind": "text"
+    },
+    "u-013-before-3": {
+      "chapterId": "rule",
+      "sectionId": "shepherd-pay",
+      "first": "p-0306",
+      "last": "p-0315",
+      "kind": "text"
+    },
+    "u-013-question": {
+      "chapterId": "rule",
+      "sectionId": "shepherd-pay",
+      "first": "p-0294",
+      "last": "p-0294",
+      "kind": "question"
+    },
+    "u-013-after-0": {
+      "chapterId": "rule",
+      "sectionId": "shepherd-pay",
+      "first": "p-0294",
+      "last": "p-0326",
+      "kind": "text"
+    },
+    "u-013-after-1": {
+      "chapterId": "rule",
+      "sectionId": "shepherd-pay",
+      "first": "p-0327",
+      "last": "p-0331",
+      "kind": "text"
+    },
+    "u-014-before-0": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0333",
+      "last": "p-0342",
+      "kind": "text"
+    },
+    "u-014-before-1": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0343",
+      "last": "p-0354",
+      "kind": "text"
+    },
+    "u-014-question": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0332",
+      "last": "p-0332",
+      "kind": "question"
+    },
+    "u-014-after-0": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0332",
+      "last": "p-0355",
+      "kind": "text"
+    },
+    "u-015-before-0": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0357",
+      "last": "p-0363",
+      "kind": "text"
+    },
+    "u-015-question": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0356",
+      "last": "p-0356",
+      "kind": "question"
+    },
+    "u-015-after-0": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0356",
+      "last": "p-0374",
+      "kind": "text"
+    },
+    "u-015-after-1": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0375",
+      "last": "p-0386",
+      "kind": "text"
+    },
+    "u-015-after-2": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0387",
+      "last": "p-0398",
+      "kind": "text"
+    },
+    "u-015-after-3": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0399",
+      "last": "p-0410",
+      "kind": "text"
+    },
+    "u-015-after-4": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0411",
+      "last": "p-0419",
+      "kind": "text"
+    },
+    "u-015-after-5": {
+      "chapterId": "life",
+      "sectionId": "outdoing",
+      "first": "p-0420",
+      "last": "p-0425",
+      "kind": "text"
+    },
+    "u-016-before-0": {
+      "chapterId": "life",
+      "sectionId": "cooperation",
+      "first": "p-0427",
+      "last": "p-0433",
+      "kind": "text"
+    },
+    "u-016-question": {
+      "chapterId": "life",
+      "sectionId": "cooperation",
+      "first": "p-0426",
+      "last": "p-0426",
+      "kind": "question"
+    },
+    "u-016-after-0": {
+      "chapterId": "life",
+      "sectionId": "cooperation",
+      "first": "p-0426",
+      "last": "p-0434",
+      "kind": "text"
+    },
+    "u-017-before-0": {
+      "chapterId": "life",
+      "sectionId": "cooperation",
+      "first": "p-0436",
+      "last": "p-0444",
+      "kind": "text"
+    },
+    "u-017-question": {
+      "chapterId": "life",
+      "sectionId": "cooperation",
+      "first": "p-0435",
+      "last": "p-0435",
+      "kind": "question"
+    },
+    "u-017-after-0": {
+      "chapterId": "life",
+      "sectionId": "cooperation",
+      "first": "p-0435",
+      "last": "p-0454",
+      "kind": "text"
+    },
+    "u-018-before-0": {
+      "chapterId": "life",
+      "sectionId": "function",
+      "first": "p-0456",
+      "last": "p-0459",
+      "kind": "text"
+    },
+    "u-018-question": {
+      "chapterId": "life",
+      "sectionId": "function",
+      "first": "p-0455",
+      "last": "p-0455",
+      "kind": "question"
+    },
+    "u-018-after-0": {
+      "chapterId": "life",
+      "sectionId": "function",
+      "first": "p-0455",
+      "last": "p-0460",
+      "kind": "text"
+    },
+    "u-019-before-0": {
+      "chapterId": "life",
+      "sectionId": "function",
+      "first": "p-0462",
+      "last": "p-0473",
+      "kind": "text"
+    },
+    "u-019-before-1": {
+      "chapterId": "life",
+      "sectionId": "function",
+      "first": "p-0474",
+      "last": "p-0485",
+      "kind": "text"
+    },
+    "u-019-before-2": {
+      "chapterId": "life",
+      "sectionId": "function",
+      "first": "p-0486",
+      "last": "p-0494",
+      "kind": "text"
+    },
+    "u-019-question": {
+      "chapterId": "life",
+      "sectionId": "function",
+      "first": "p-0461",
+      "last": "p-0461",
+      "kind": "question"
+    },
+    "u-019-after-0": {
+      "chapterId": "life",
+      "sectionId": "function",
+      "first": "p-0461",
+      "last": "p-0505",
+      "kind": "text"
+    },
+    "u-019-after-1": {
+      "chapterId": "life",
+      "sectionId": "function",
+      "first": "p-0506",
+      "last": "p-0517",
+      "kind": "text"
+    },
+    "u-020-before-0": {
+      "chapterId": "worth",
+      "sectionId": "glaucon",
+      "first": "p-0518",
+      "last": "p-0529",
+      "kind": "text"
+    },
+    "u-020-before-1": {
+      "chapterId": "worth",
+      "sectionId": "glaucon",
+      "first": "p-0530",
+      "last": "p-0532",
+      "kind": "text"
+    },
+    "u-020-before-2": {
+      "chapterId": "worth",
+      "sectionId": "glaucon",
+      "first": "p-0533",
+      "last": "p-0533",
+      "kind": "text"
+    },
+    "u-020-before-3": {
+      "chapterId": "worth",
+      "sectionId": "glaucon",
+      "first": "p-0534",
+      "last": "p-0534",
+      "kind": "text"
+    },
+    "u-020-before-4": {
+      "chapterId": "worth",
+      "sectionId": "glaucon",
+      "first": "p-0534",
+      "last": "p-0535",
+      "kind": "text"
+    },
+    "u-020-before-5": {
+      "chapterId": "worth",
+      "sectionId": "glaucon",
+      "first": "p-0536",
+      "last": "p-0538",
+      "kind": "text"
+    },
+    "u-020-before-6": {
+      "chapterId": "worth",
+      "sectionId": "glaucon",
+      "first": "p-0539",
+      "last": "p-0543",
+      "kind": "text"
+    },
+    "u-021-before-0": {
+      "chapterId": "worth",
+      "sectionId": "adeimantus",
+      "first": "p-0544",
+      "last": "p-0555",
+      "kind": "text"
+    },
+    "u-021-before-1": {
+      "chapterId": "worth",
+      "sectionId": "adeimantus",
+      "first": "p-0556",
+      "last": "p-0557",
+      "kind": "text"
+    },
+    "u-021-before-2": {
+      "chapterId": "worth",
+      "sectionId": "adeimantus",
+      "first": "p-0558",
+      "last": "p-0562",
+      "kind": "text"
+    },
+    "u-021-before-3": {
+      "chapterId": "worth",
+      "sectionId": "adeimantus",
+      "first": "p-0562",
+      "last": "p-0563",
+      "kind": "text"
+    },
+    "u-021-before-4": {
+      "chapterId": "worth",
+      "sectionId": "adeimantus",
+      "first": "p-0564",
+      "last": "p-0564",
+      "kind": "text"
+    },
+    "u-021-before-5": {
+      "chapterId": "worth",
+      "sectionId": "adeimantus",
+      "first": "p-0564",
+      "last": "p-0564",
+      "kind": "text"
+    },
+    "u-022-before-0": {
+      "chapterId": "worth",
+      "sectionId": "large-small",
+      "first": "p-0566",
+      "last": "p-0573",
+      "kind": "text"
+    },
+    "u-022-question": {
+      "chapterId": "worth",
+      "sectionId": "large-small",
+      "first": "p-0565",
+      "last": "p-0565",
+      "kind": "question"
+    },
+    "u-022-after-0": {
+      "chapterId": "worth",
+      "sectionId": "large-small",
+      "first": "p-0565",
+      "last": "p-0582",
+      "kind": "text"
+    },
+    "u-023-before-0": {
+      "chapterId": "city",
+      "sectionId": "needs",
+      "first": "p-0584",
+      "last": "p-0588",
+      "kind": "text"
+    },
+    "u-023-before-1": {
+      "chapterId": "city",
+      "sectionId": "needs",
+      "first": "p-0589",
+      "last": "p-0600",
+      "kind": "text"
+    },
+    "u-023-question": {
+      "chapterId": "city",
+      "sectionId": "needs",
+      "first": "p-0583",
+      "last": "p-0583",
+      "kind": "question"
+    },
+    "u-023-after-0": {
+      "chapterId": "city",
+      "sectionId": "needs",
+      "first": "p-0583",
+      "last": "p-0601",
+      "kind": "text"
+    },
+    "u-024-before-0": {
+      "chapterId": "city",
+      "sectionId": "needs",
+      "first": "p-0603",
+      "last": "p-0612",
+      "kind": "text"
+    },
+    "u-024-before-1": {
+      "chapterId": "city",
+      "sectionId": "needs",
+      "first": "p-0613",
+      "last": "p-0622",
+      "kind": "text"
+    },
+    "u-024-before-2": {
+      "chapterId": "city",
+      "sectionId": "needs",
+      "first": "p-0623",
+      "last": "p-0634",
+      "kind": "text"
+    },
+    "u-024-question": {
+      "chapterId": "city",
+      "sectionId": "needs",
+      "first": "p-0602",
+      "last": "p-0602",
+      "kind": "question"
+    },
+    "u-024-after-0": {
+      "chapterId": "city",
+      "sectionId": "needs",
+      "first": "p-0602",
+      "last": "p-0644",
+      "kind": "text"
+    },
+    "u-024-after-1": {
+      "chapterId": "city",
+      "sectionId": "needs",
+      "first": "p-0645",
+      "last": "p-0651",
+      "kind": "text"
+    },
+    "u-025-before-0": {
+      "chapterId": "city",
+      "sectionId": "luxury",
+      "first": "p-0653",
+      "last": "p-0658",
+      "kind": "text"
+    },
+    "u-025-before-1": {
+      "chapterId": "city",
+      "sectionId": "luxury",
+      "first": "p-0659",
+      "last": "p-0664",
+      "kind": "text"
+    },
+    "u-025-question": {
+      "chapterId": "city",
+      "sectionId": "luxury",
+      "first": "p-0652",
+      "last": "p-0652",
+      "kind": "question"
+    },
+    "u-025-after-0": {
+      "chapterId": "city",
+      "sectionId": "luxury",
+      "first": "p-0652",
+      "last": "p-0671",
+      "kind": "text"
+    },
+    "u-026-before-0": {
+      "chapterId": "city",
+      "sectionId": "defenders",
+      "first": "p-0673",
+      "last": "p-0681",
+      "kind": "text"
+    },
+    "u-026-before-1": {
+      "chapterId": "city",
+      "sectionId": "defenders",
+      "first": "p-0682",
+      "last": "p-0693",
+      "kind": "text"
+    },
+    "u-026-before-2": {
+      "chapterId": "city",
+      "sectionId": "defenders",
+      "first": "p-0694",
+      "last": "p-0703",
+      "kind": "text"
+    },
+    "u-026-question": {
+      "chapterId": "city",
+      "sectionId": "defenders",
+      "first": "p-0672",
+      "last": "p-0672",
+      "kind": "question"
+    },
+    "u-026-after-0": {
+      "chapterId": "city",
+      "sectionId": "defenders",
+      "first": "p-0672",
+      "last": "p-0713",
+      "kind": "text"
+    },
+    "u-026-after-1": {
+      "chapterId": "city",
+      "sectionId": "defenders",
+      "first": "p-0714",
+      "last": "p-0724",
+      "kind": "text"
+    },
+    "u-026-after-2": {
+      "chapterId": "city",
+      "sectionId": "defenders",
+      "first": "p-0725",
+      "last": "p-0734",
+      "kind": "text"
+    },
+    "u-027-before-0": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0736",
+      "last": "p-0745",
+      "kind": "text"
+    },
+    "u-027-before-1": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0746",
+      "last": "p-0757",
+      "kind": "text"
+    },
+    "u-027-question": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0735",
+      "last": "p-0735",
+      "kind": "question"
+    },
+    "u-027-after-0": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0735",
+      "last": "p-0758",
+      "kind": "text"
+    },
+    "u-028-before-0": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0760",
+      "last": "p-0771",
+      "kind": "text"
+    },
+    "u-028-before-1": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0772",
+      "last": "p-0776",
+      "kind": "text"
+    },
+    "u-028-before-2": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0777",
+      "last": "p-0787",
+      "kind": "text"
+    },
+    "u-028-question": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0759",
+      "last": "p-0759",
+      "kind": "question"
+    },
+    "u-028-after-0": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0759",
+      "last": "p-0788",
+      "kind": "text"
+    },
+    "u-029-before-0": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0790",
+      "last": "p-0801",
+      "kind": "text"
+    },
+    "u-029-before-1": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0802",
+      "last": "p-0813",
+      "kind": "text"
+    },
+    "u-029-question": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0789",
+      "last": "p-0789",
+      "kind": "question"
+    },
+    "u-029-after-0": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0789",
+      "last": "p-0814",
+      "kind": "text"
+    },
+    "u-030-before-0": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0816",
+      "last": "p-0826",
+      "kind": "text"
+    },
+    "u-030-before-1": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0827",
+      "last": "p-0838",
+      "kind": "text"
+    },
+    "u-030-before-2": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0839",
+      "last": "p-0848",
+      "kind": "text"
+    },
+    "u-030-before-3": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0849",
+      "last": "p-0856",
+      "kind": "text"
+    },
+    "u-030-question": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0815",
+      "last": "p-0815",
+      "kind": "question"
+    },
+    "u-030-after-0": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0815",
+      "last": "p-0858",
+      "kind": "text"
+    },
+    "u-031-before-0": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0860",
+      "last": "p-0871",
+      "kind": "text"
+    },
+    "u-031-before-1": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0872",
+      "last": "p-0880",
+      "kind": "text"
+    },
+    "u-031-before-2": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0881",
+      "last": "p-0885",
+      "kind": "text"
+    },
+    "u-031-question": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0859",
+      "last": "p-0859",
+      "kind": "question"
+    },
+    "u-031-after-0": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0859",
+      "last": "p-0896",
+      "kind": "text"
+    },
+    "u-031-after-1": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0897",
+      "last": "p-0908",
+      "kind": "text"
+    },
+    "u-031-after-2": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0909",
+      "last": "p-0919",
+      "kind": "text"
+    },
+    "u-031-after-3": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0920",
+      "last": "p-0931",
+      "kind": "text"
+    },
+    "u-031-after-4": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0932",
+      "last": "p-0943",
+      "kind": "text"
+    },
+    "u-031-after-5": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0944",
+      "last": "p-0955",
+      "kind": "text"
+    },
+    "u-031-after-6": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0956",
+      "last": "p-0966",
+      "kind": "text"
+    },
+    "u-031-after-7": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0967",
+      "last": "p-0978",
+      "kind": "text"
+    },
+    "u-031-after-8": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0979",
+      "last": "p-0990",
+      "kind": "text"
+    },
+    "u-031-after-9": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0991",
+      "last": "p-0997",
+      "kind": "text"
+    },
+    "u-031-after-10": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-0998",
+      "last": "p-1005",
+      "kind": "text"
+    },
+    "u-031-after-11": {
+      "chapterId": "education",
+      "sectionId": "stories",
+      "first": "p-1006",
+      "last": "p-1017",
+      "kind": "text"
+    },
+    "u-032-before-0": {
+      "chapterId": "education",
+      "sectionId": "narration",
+      "first": "p-1019",
+      "last": "p-1022",
+      "kind": "text"
+    },
+    "u-032-question": {
+      "chapterId": "education",
+      "sectionId": "narration",
+      "first": "p-1018",
+      "last": "p-1018",
+      "kind": "question"
+    },
+    "u-032-after-0": {
+      "chapterId": "education",
+      "sectionId": "narration",
+      "first": "p-1018",
+      "last": "p-1033",
+      "kind": "text"
+    },
+    "u-032-after-1": {
+      "chapterId": "education",
+      "sectionId": "narration",
+      "first": "p-1034",
+      "last": "p-1043",
+      "kind": "text"
+    },
+    "u-032-after-2": {
+      "chapterId": "education",
+      "sectionId": "narration",
+      "first": "p-1044",
+      "last": "p-1055",
+      "kind": "text"
+    },
+    "u-032-after-3": {
+      "chapterId": "education",
+      "sectionId": "narration",
+      "first": "p-1056",
+      "last": "p-1067",
+      "kind": "text"
+    },
+    "u-032-after-4": {
+      "chapterId": "education",
+      "sectionId": "narration",
+      "first": "p-1068",
+      "last": "p-1079",
+      "kind": "text"
+    },
+    "u-032-after-5": {
+      "chapterId": "education",
+      "sectionId": "narration",
+      "first": "p-1080",
+      "last": "p-1091",
+      "kind": "text"
+    },
+    "u-032-after-6": {
+      "chapterId": "education",
+      "sectionId": "narration",
+      "first": "p-1092",
+      "last": "p-1103",
+      "kind": "text"
+    },
+    "u-033-before-0": {
+      "chapterId": "education",
+      "sectionId": "harmony",
+      "first": "p-1105",
+      "last": "p-1116",
+      "kind": "text"
+    },
+    "u-033-before-1": {
+      "chapterId": "education",
+      "sectionId": "harmony",
+      "first": "p-1117",
+      "last": "p-1127",
+      "kind": "text"
+    },
+    "u-033-before-2": {
+      "chapterId": "education",
+      "sectionId": "harmony",
+      "first": "p-1128",
+      "last": "p-1139",
+      "kind": "text"
+    },
+    "u-033-before-3": {
+      "chapterId": "education",
+      "sectionId": "harmony",
+      "first": "p-1140",
+      "last": "p-1146",
+      "kind": "text"
+    },
+    "u-033-before-4": {
+      "chapterId": "education",
+      "sectionId": "harmony",
+      "first": "p-1147",
+      "last": "p-1158",
+      "kind": "text"
+    },
+    "u-033-question": {
+      "chapterId": "education",
+      "sectionId": "harmony",
+      "first": "p-1104",
+      "last": "p-1104",
+      "kind": "question"
+    },
+    "u-033-after-0": {
+      "chapterId": "education",
+      "sectionId": "harmony",
+      "first": "p-1104",
+      "last": "p-1161",
+      "kind": "text"
+    },
+    "u-033-after-1": {
+      "chapterId": "education",
+      "sectionId": "harmony",
+      "first": "p-1162",
+      "last": "p-1168",
+      "kind": "text"
+    },
+    "u-033-after-2": {
+      "chapterId": "education",
+      "sectionId": "harmony",
+      "first": "p-1169",
+      "last": "p-1180",
+      "kind": "text"
+    },
+    "u-033-after-3": {
+      "chapterId": "education",
+      "sectionId": "harmony",
+      "first": "p-1181",
+      "last": "p-1192",
+      "kind": "text"
+    },
+    "u-034-before-0": {
+      "chapterId": "education",
+      "sectionId": "body-judgment",
+      "first": "p-1193",
+      "last": "p-1204",
+      "kind": "text"
+    },
+    "u-034-before-1": {
+      "chapterId": "education",
+      "sectionId": "body-judgment",
+      "first": "p-1205",
+      "last": "p-1215",
+      "kind": "text"
+    },
+    "u-034-before-2": {
+      "chapterId": "education",
+      "sectionId": "body-judgment",
+      "first": "p-1216",
+      "last": "p-1227",
+      "kind": "text"
+    },
+    "u-034-before-3": {
+      "chapterId": "education",
+      "sectionId": "body-judgment",
+      "first": "p-1228",
+      "last": "p-1236",
+      "kind": "text"
+    },
+    "u-034-before-4": {
+      "chapterId": "education",
+      "sectionId": "body-judgment",
+      "first": "p-1237",
+      "last": "p-1246",
+      "kind": "text"
+    },
+    "u-034-before-5": {
+      "chapterId": "education",
+      "sectionId": "body-judgment",
+      "first": "p-1247",
+      "last": "p-1255",
+      "kind": "text"
+    },
+    "u-034-before-6": {
+      "chapterId": "education",
+      "sectionId": "body-judgment",
+      "first": "p-1256",
+      "last": "p-1263",
+      "kind": "text"
+    },
+    "u-034-before-7": {
+      "chapterId": "education",
+      "sectionId": "body-judgment",
+      "first": "p-1264",
+      "last": "p-1271",
+      "kind": "text"
+    },
+    "u-034-before-8": {
+      "chapterId": "education",
+      "sectionId": "body-judgment",
+      "first": "p-1272",
+      "last": "p-1283",
+      "kind": "text"
+    },
+    "u-035-before-0": {
+      "chapterId": "education",
+      "sectionId": "balance",
+      "first": "p-1285",
+      "last": "p-1288",
+      "kind": "text"
+    },
+    "u-035-question": {
+      "chapterId": "education",
+      "sectionId": "balance",
+      "first": "p-1284",
+      "last": "p-1284",
+      "kind": "question"
+    },
+    "u-035-after-0": {
+      "chapterId": "education",
+      "sectionId": "balance",
+      "first": "p-1284",
+      "last": "p-1289",
+      "kind": "text"
+    },
+    "u-036-before-0": {
+      "chapterId": "education",
+      "sectionId": "balance",
+      "first": "p-1291",
+      "last": "p-1302",
+      "kind": "text"
+    },
+    "u-036-before-1": {
+      "chapterId": "education",
+      "sectionId": "balance",
+      "first": "p-1303",
+      "last": "p-1311",
+      "kind": "text"
+    },
+    "u-036-before-2": {
+      "chapterId": "education",
+      "sectionId": "balance",
+      "first": "p-1312",
+      "last": "p-1319",
+      "kind": "text"
+    },
+    "u-036-question": {
+      "chapterId": "education",
+      "sectionId": "balance",
+      "first": "p-1290",
+      "last": "p-1290",
+      "kind": "question"
+    },
+    "u-036-after-0": {
+      "chapterId": "education",
+      "sectionId": "balance",
+      "first": "p-1290",
+      "last": "p-1322",
+      "kind": "text"
+    },
+    "u-037-before-0": {
+      "chapterId": "guardians",
+      "sectionId": "selection",
+      "first": "p-1324",
+      "last": "p-1331",
+      "kind": "text"
+    },
+    "u-037-question": {
+      "chapterId": "guardians",
+      "sectionId": "selection",
+      "first": "p-1323",
+      "last": "p-1323",
+      "kind": "question"
+    },
+    "u-037-after-0": {
+      "chapterId": "guardians",
+      "sectionId": "selection",
+      "first": "p-1323",
+      "last": "p-1332",
+      "kind": "text"
+    },
+    "u-038-before-0": {
+      "chapterId": "guardians",
+      "sectionId": "selection",
+      "first": "p-1334",
+      "last": "p-1345",
+      "kind": "text"
+    },
+    "u-038-before-1": {
+      "chapterId": "guardians",
+      "sectionId": "selection",
+      "first": "p-1346",
+      "last": "p-1357",
+      "kind": "text"
+    },
+    "u-038-before-2": {
+      "chapterId": "guardians",
+      "sectionId": "selection",
+      "first": "p-1358",
+      "last": "p-1367",
+      "kind": "text"
+    },
+    "u-038-before-3": {
+      "chapterId": "guardians",
+      "sectionId": "selection",
+      "first": "p-1368",
+      "last": "p-1373",
+      "kind": "text"
+    },
+    "u-038-question": {
+      "chapterId": "guardians",
+      "sectionId": "selection",
+      "first": "p-1333",
+      "last": "p-1333",
+      "kind": "question"
+    },
+    "u-038-after-0": {
+      "chapterId": "guardians",
+      "sectionId": "selection",
+      "first": "p-1333",
+      "last": "p-1375",
+      "kind": "text"
+    },
+    "u-039-before-0": {
+      "chapterId": "guardians",
+      "sectionId": "shared-life",
+      "first": "p-1377",
+      "last": "p-1384",
+      "kind": "text"
+    },
+    "u-039-question": {
+      "chapterId": "guardians",
+      "sectionId": "shared-life",
+      "first": "p-1376",
+      "last": "p-1376",
+      "kind": "question"
+    },
+    "u-039-after-0": {
+      "chapterId": "guardians",
+      "sectionId": "shared-life",
+      "first": "p-1376",
+      "last": "p-1391",
+      "kind": "text"
+    },
+    "u-039-after-1": {
+      "chapterId": "guardians",
+      "sectionId": "shared-life",
+      "first": "p-1392",
+      "last": "p-1394",
+      "kind": "text"
+    },
+    "u-040-before-0": {
+      "chapterId": "guardians",
+      "sectionId": "happiness",
+      "first": "p-1395",
+      "last": "p-1400",
+      "kind": "text"
+    },
+    "u-040-before-1": {
+      "chapterId": "guardians",
+      "sectionId": "happiness",
+      "first": "p-1401",
+      "last": "p-1401",
+      "kind": "text"
+    },
+    "u-040-before-2": {
+      "chapterId": "guardians",
+      "sectionId": "happiness",
+      "first": "p-1401",
+      "last": "p-1402",
+      "kind": "text"
+    },
+    "u-041-before-0": {
+      "chapterId": "guardians",
+      "sectionId": "wealth-size",
+      "first": "p-1404",
+      "last": "p-1410",
+      "kind": "text"
+    },
+    "u-041-question": {
+      "chapterId": "guardians",
+      "sectionId": "wealth-size",
+      "first": "p-1403",
+      "last": "p-1403",
+      "kind": "question"
+    },
+    "u-041-after-0": {
+      "chapterId": "guardians",
+      "sectionId": "wealth-size",
+      "first": "p-1403",
+      "last": "p-1420",
+      "kind": "text"
+    },
+    "u-041-after-1": {
+      "chapterId": "guardians",
+      "sectionId": "wealth-size",
+      "first": "p-1421",
+      "last": "p-1431",
+      "kind": "text"
+    },
+    "u-041-after-2": {
+      "chapterId": "guardians",
+      "sectionId": "wealth-size",
+      "first": "p-1432",
+      "last": "p-1441",
+      "kind": "text"
+    },
+    "u-041-after-3": {
+      "chapterId": "guardians",
+      "sectionId": "wealth-size",
+      "first": "p-1442",
+      "last": "p-1449",
+      "kind": "text"
+    },
+    "u-042-before-0": {
+      "chapterId": "guardians",
+      "sectionId": "continuity",
+      "first": "p-1450",
+      "last": "p-1460",
+      "kind": "text"
+    },
+    "u-042-before-1": {
+      "chapterId": "guardians",
+      "sectionId": "continuity",
+      "first": "p-1461",
+      "last": "p-1472",
+      "kind": "text"
+    },
+    "u-042-before-2": {
+      "chapterId": "guardians",
+      "sectionId": "continuity",
+      "first": "p-1473",
+      "last": "p-1484",
+      "kind": "text"
+    },
+    "u-042-before-3": {
+      "chapterId": "guardians",
+      "sectionId": "continuity",
+      "first": "p-1485",
+      "last": "p-1496",
+      "kind": "text"
+    },
+    "u-042-before-4": {
+      "chapterId": "guardians",
+      "sectionId": "continuity",
+      "first": "p-1497",
+      "last": "p-1506",
+      "kind": "text"
+    },
+    "u-043-before-0": {
+      "chapterId": "soul",
+      "sectionId": "wisdom-courage",
+      "first": "p-1508",
+      "last": "p-1514",
+      "kind": "text"
+    },
+    "u-043-before-1": {
+      "chapterId": "soul",
+      "sectionId": "wisdom-courage",
+      "first": "p-1515",
+      "last": "p-1525",
+      "kind": "text"
+    },
+    "u-043-before-2": {
+      "chapterId": "soul",
+      "sectionId": "wisdom-courage",
+      "first": "p-1526",
+      "last": "p-1537",
+      "kind": "text"
+    },
+    "u-043-question": {
+      "chapterId": "soul",
+      "sectionId": "wisdom-courage",
+      "first": "p-1507",
+      "last": "p-1507",
+      "kind": "question"
+    },
+    "u-043-after-0": {
+      "chapterId": "soul",
+      "sectionId": "wisdom-courage",
+      "first": "p-1507",
+      "last": "p-1547",
+      "kind": "text"
+    },
+    "u-043-after-1": {
+      "chapterId": "soul",
+      "sectionId": "wisdom-courage",
+      "first": "p-1548",
+      "last": "p-1558",
+      "kind": "text"
+    },
+    "u-043-after-2": {
+      "chapterId": "soul",
+      "sectionId": "wisdom-courage",
+      "first": "p-1559",
+      "last": "p-1564",
+      "kind": "text"
+    },
+    "u-043-after-3": {
+      "chapterId": "soul",
+      "sectionId": "wisdom-courage",
+      "first": "p-1565",
+      "last": "p-1570",
+      "kind": "text"
+    },
+    "u-044-before-0": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1572",
+      "last": "p-1582",
+      "kind": "text"
+    },
+    "u-044-before-1": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1583",
+      "last": "p-1588",
+      "kind": "text"
+    },
+    "u-044-before-2": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1589",
+      "last": "p-1599",
+      "kind": "text"
+    },
+    "u-044-question": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1571",
+      "last": "p-1571",
+      "kind": "question"
+    },
+    "u-044-after-0": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1571",
+      "last": "p-1600",
+      "kind": "text"
+    },
+    "u-045-before-0": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1602",
+      "last": "p-1607",
+      "kind": "text"
+    },
+    "u-045-before-1": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1608",
+      "last": "p-1619",
+      "kind": "text"
+    },
+    "u-045-before-2": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1620",
+      "last": "p-1631",
+      "kind": "text"
+    },
+    "u-045-before-3": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1632",
+      "last": "p-1641",
+      "kind": "text"
+    },
+    "u-045-question": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1601",
+      "last": "p-1601",
+      "kind": "question"
+    },
+    "u-045-after-0": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1601",
+      "last": "p-1648",
+      "kind": "text"
+    },
+    "u-045-after-1": {
+      "chapterId": "soul",
+      "sectionId": "moderation-justice",
+      "first": "p-1649",
+      "last": "p-1656",
+      "kind": "text"
+    },
+    "u-046-before-0": {
+      "chapterId": "soul",
+      "sectionId": "return-person",
+      "first": "p-1658",
+      "last": "p-1659",
+      "kind": "text"
+    },
+    "u-046-question": {
+      "chapterId": "soul",
+      "sectionId": "return-person",
+      "first": "p-1657",
+      "last": "p-1657",
+      "kind": "question"
+    },
+    "u-046-after-0": {
+      "chapterId": "soul",
+      "sectionId": "return-person",
+      "first": "p-1657",
+      "last": "p-1668",
+      "kind": "text"
+    },
+    "u-046-after-1": {
+      "chapterId": "soul",
+      "sectionId": "return-person",
+      "first": "p-1669",
+      "last": "p-1676",
+      "kind": "text"
+    },
+    "u-047-before-0": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1678",
+      "last": "p-1685",
+      "kind": "text"
+    },
+    "u-047-question": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1677",
+      "last": "p-1677",
+      "kind": "question"
+    },
+    "u-047-after-0": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1677",
+      "last": "p-1686",
+      "kind": "text"
+    },
+    "u-048-before-0": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1688",
+      "last": "p-1693",
+      "kind": "text"
+    },
+    "u-048-before-1": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1694",
+      "last": "p-1705",
+      "kind": "text"
+    },
+    "u-048-question": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1687",
+      "last": "p-1687",
+      "kind": "question"
+    },
+    "u-048-after-0": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1687",
+      "last": "p-1707",
+      "kind": "text"
+    },
+    "u-049-before-0": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1709",
+      "last": "p-1720",
+      "kind": "text"
+    },
+    "u-049-before-1": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1721",
+      "last": "p-1729",
+      "kind": "text"
+    },
+    "u-049-before-2": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1730",
+      "last": "p-1740",
+      "kind": "text"
+    },
+    "u-049-question": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1708",
+      "last": "p-1708",
+      "kind": "question"
+    },
+    "u-049-after-0": {
+      "chapterId": "soul",
+      "sectionId": "conflict",
+      "first": "p-1708",
+      "last": "p-1747",
+      "kind": "text"
+    },
+    "u-050-before-0": {
+      "chapterId": "soul",
+      "sectionId": "spirit",
+      "first": "p-1749",
+      "last": "p-1749",
+      "kind": "text"
+    },
+    "u-050-question": {
+      "chapterId": "soul",
+      "sectionId": "spirit",
+      "first": "p-1748",
+      "last": "p-1748",
+      "kind": "question"
+    },
+    "u-050-after-0": {
+      "chapterId": "soul",
+      "sectionId": "spirit",
+      "first": "p-1748",
+      "last": "p-1750",
+      "kind": "text"
+    },
+    "u-051-before-0": {
+      "chapterId": "soul",
+      "sectionId": "spirit",
+      "first": "p-1752",
+      "last": "p-1757",
+      "kind": "text"
+    },
+    "u-051-before-1": {
+      "chapterId": "soul",
+      "sectionId": "spirit",
+      "first": "p-1758",
+      "last": "p-1765",
+      "kind": "text"
+    },
+    "u-051-question": {
+      "chapterId": "soul",
+      "sectionId": "spirit",
+      "first": "p-1751",
+      "last": "p-1751",
+      "kind": "question"
+    },
+    "u-051-after-0": {
+      "chapterId": "soul",
+      "sectionId": "spirit",
+      "first": "p-1751",
+      "last": "p-1771",
+      "kind": "text"
+    },
+    "u-052-before-0": {
+      "chapterId": "soul",
+      "sectionId": "personal-virtues",
+      "first": "p-1773",
+      "last": "p-1784",
+      "kind": "text"
+    },
+    "u-052-before-1": {
+      "chapterId": "soul",
+      "sectionId": "personal-virtues",
+      "first": "p-1785",
+      "last": "p-1793",
+      "kind": "text"
+    },
+    "u-052-before-2": {
+      "chapterId": "soul",
+      "sectionId": "personal-virtues",
+      "first": "p-1794",
+      "last": "p-1805",
+      "kind": "text"
+    },
+    "u-052-question": {
+      "chapterId": "soul",
+      "sectionId": "personal-virtues",
+      "first": "p-1772",
+      "last": "p-1772",
+      "kind": "question"
+    },
+    "u-052-after-0": {
+      "chapterId": "soul",
+      "sectionId": "personal-virtues",
+      "first": "p-1772",
+      "last": "p-1816",
+      "kind": "text"
+    },
+    "u-053-before-0": {
+      "chapterId": "soul",
+      "sectionId": "health-life",
+      "first": "p-1818",
+      "last": "p-1829",
+      "kind": "text"
+    },
+    "u-053-before-1": {
+      "chapterId": "soul",
+      "sectionId": "health-life",
+      "first": "p-1830",
+      "last": "p-1841",
+      "kind": "text"
+    },
+    "u-053-question": {
+      "chapterId": "soul",
+      "sectionId": "health-life",
+      "first": "p-1817",
+      "last": "p-1817",
+      "kind": "question"
+    },
+    "u-053-after-0": {
+      "chapterId": "soul",
+      "sectionId": "health-life",
+      "first": "p-1817",
+      "last": "p-1850",
+      "kind": "text"
+    },
+    "u-053-after-1": {
+      "chapterId": "soul",
+      "sectionId": "health-life",
+      "first": "p-1851",
+      "last": "p-1862",
+      "kind": "text"
+    }
+  },
+  "coverage": {
+    "pages": 273,
+    "artworks": 60,
+    "usedArtworks": 59,
+    "changedTransitions": 272,
+    "totalTransitions": 272
+  }
+}

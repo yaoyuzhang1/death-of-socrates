@@ -1,0 +1,261 @@
+[
+  {
+    "id": "early-01-servant",
+    "file": "illustrations/progression/early-01-servant.webp",
+    "chapterId": "obligations",
+    "sectionIds": [
+      "arrival"
+    ],
+    "sourceStart": "p-0001",
+    "sourceEnd": "p-0004",
+    "kind": "conversation",
+    "alt": "家奴在港口石路上轻拉苏格拉底的披风，请他等候。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A new outdoor narrative moment: on a stone lane beside Piraeus harbor, Socrates and Glaucon have stopped walking. A modestly dressed household servant has just caught up from behind and lightly holds the trailing edge of Socrates' ochre cloak, asking him to wait. Socrates turns his head back to the servant; Glaucon pauses beside him. Servant is an adult in a simple undyed tunic, respectful and breathless, no slave-chain imagery. Ships and modest houses far behind. No Polemarchus yet in the foreground. Medium-wide diagonal composition, dynamic but gentle fabric movement.",
+    "reference": "reader-public/illustrations/arrival.webp"
+  },
+  {
+    "id": "early-02-cephalus",
+    "file": "illustrations/progression/early-02-cephalus.webp",
+    "chapterId": "obligations",
+    "sectionIds": [
+      "arrival",
+      "age-wealth",
+      "obligation-craft"
+    ],
+    "sourceStart": "p-0019",
+    "sourceEnd": "p-0042",
+    "kind": "conversation",
+    "alt": "克法洛斯倚坐在靠垫椅上谈论晚年，苏格拉底专心倾听。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A new reverse-angle intimate conversation shot in Cephalus' domestic courtyard room. Elderly white-bearded Cephalus in cream robe and leafy wreath sits on a cushioned wooden chair at LEFT, speaking reflectively with a small relaxed gesture. Socrates on RIGHT, bald crown, short grey beard, ochre robe, listens with his forearms at ease. Young men are soft secondary figures at the far side. Warm summer light on the elderly face, unhurried thoughtful exchange. Strongly different camera from reference.",
+    "reference": "reader-public/illustrations/obligations.webp"
+  },
+  {
+    "id": "early-03-polemarchus",
+    "file": "illustrations/progression/early-03-polemarchus.webp",
+    "chapterId": "obligations",
+    "sectionIds": [
+      "obligation-craft",
+      "friends-harm"
+    ],
+    "sourceStart": "p-0046",
+    "sourceEnd": "p-0190",
+    "kind": "conversation",
+    "alt": "玻勒马霍斯接着话题与苏格拉底交谈，身旁年轻人静听。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A new indoor shot after Cephalus has left the conversation. Polemarchus, friendly young adult with dark wavy hair and short dark beard in muted rust-brown robe, seated LEFT, replies earnestly with an open hand. Socrates seated RIGHT in ochre robe listens, broad nose and short grey beard clearly recognizable. Glaucon in muted teal listens behind near a plaster wall and pottery shelf. Modest wooden chairs. Close three-quarter conversational framing; no old wreath-wearing man, no Thrasymachus yet dominating.",
+    "reference": "reader-public/illustrations/arrival.webp"
+  },
+  {
+    "id": "early-04-polemarchus-listens",
+    "file": "illustrations/progression/early-04-polemarchus-listens.webp",
+    "chapterId": "obligations",
+    "sectionIds": [
+      "obligation-craft",
+      "friends-harm"
+    ],
+    "sourceStart": "p-0046",
+    "sourceEnd": "p-0190",
+    "kind": "conversation",
+    "alt": "苏格拉底向玻勒马霍斯追问，双方在庭院边仔细商量。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A distinct reverse over-the-shoulder shot in the SAME domestic Greek courtyard gathering. Polemarchus is a softly focused rust-brown shoulder and partial short-bearded profile at right foreground. Socrates sits center-left in ochre, gently raising a single open conversational hand, attentive searching expression. Glaucon, clean-shaven dark curls in muted teal, seated farther left watching. Include open shaded doorway, plain terracotta paving and olive-leaf light. Cephalus absent; no props expressing any philosophical conclusion.",
+    "reference": "reader-public/illustrations/arrival.webp"
+  },
+  {
+    "id": "early-05-interruption",
+    "file": "illustrations/progression/early-05-interruption.webp",
+    "chapterId": "rule",
+    "sectionIds": [
+      "challenge"
+    ],
+    "sourceStart": "p-0192",
+    "sourceEnd": "p-0212",
+    "kind": "conversation",
+    "alt": "色拉叙马霍斯忍不住起身插话，苏格拉底和玻勒马霍斯转头。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. New dramatic narrative moment: Thrasymachus, robust dark-curly-haired thick-short-bearded middle-aged man in brick-red robe, has risen from his chair and stepped forward to interrupt. He speaks vehemently with one forceful open-hand gesture, no weapon or physical attack. Seated Socrates in ochre and Polemarchus in muted rust-brown turn toward him, startled yet dignified. Several seated listeners at edges. Domestic Piraeus courtyard room, hot summer afternoon. Wide shot slightly low eye level, believable restrained human animation, no monster imagery or comedy.",
+    "reference": "reader-public/illustrations/rule.webp"
+  },
+  {
+    "id": "early-06-listeners-intervene",
+    "file": "illustrations/progression/early-06-listeners-intervene.webp",
+    "chapterId": "rule",
+    "sectionIds": [
+      "challenge",
+      "fallible-rule",
+      "craft-benefit",
+      "shepherd-pay"
+    ],
+    "sourceStart": "p-0193",
+    "sourceEnd": "p-0331",
+    "kind": "conversation",
+    "alt": "众人围坐在苏格拉底与色拉叙马霍斯旁，随着辩论转头倾听。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A NEW broad ensemble conversation composition in the same modest courtyard. Socrates ochre at left in profile, Thrasymachus brick-red at right, both seated and looking at each other. Polemarchus short dark beard in muted brown and Cleitophon another adult listener in muted grey-green sit between them in the background, following the conversation. Natural attentive faces, hands resting or modestly open, neither triumphant nor humiliated. Camera slightly elevated from doorway, coherent semicircle of plain wooden chairs, terracotta floor and olive shade.",
+    "reference": "reader-public/illustrations/rule.webp"
+  },
+  {
+    "id": "early-07-socrates-rule",
+    "file": "illustrations/progression/early-07-socrates-rule.webp",
+    "chapterId": "rule",
+    "sectionIds": [
+      "challenge",
+      "fallible-rule",
+      "craft-benefit",
+      "shepherd-pay"
+    ],
+    "sourceStart": "p-0193",
+    "sourceEnd": "p-0331",
+    "kind": "conversation",
+    "alt": "苏格拉底端坐着追问，色拉叙马霍斯在近处听着。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A NEW intimate reverse over-the-shoulder conversation scene. Seen from behind Thrasymachus' brick-red shoulder at far LEFT, Socrates centered RIGHT in sharp three-quarter view, bald broad nose short grey beard in plain ochre himation, making a precise small open-handed question gesture. A young clean-shaven teal-robed listener farther behind, plaster wall, pottery, soft olive shadows. No Cephalus. Serious thoughtful expressions without visible victory or humiliation. Different from frontal chapter image.",
+    "reference": "reader-public/illustrations/rule.webp"
+  },
+  {
+    "id": "early-08-shepherd",
+    "file": "illustrations/progression/early-08-shepherd.webp",
+    "chapterId": "rule",
+    "sectionIds": [
+      "shepherd-pay"
+    ],
+    "sourceStart": "p-0300",
+    "sourceEnd": "p-0307",
+    "kind": "example",
+    "alt": "谈话中提到的牧羊场景：牧人照看坡地上的羊群。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. Illustrate ONLY the shepherd example already spoken in the dialogue, not the actual location of Socrates. A fifth-century BCE Greek shepherd, anonymous adult in plain undyed wool tunic, stands on a dry olive-dotted hillside with a simple wooden staff, thoughtfully watching a small healthy flock of sheep graze. No philosopher characters, no slaughter, no owner, no money, no conclusions about who benefits. Quiet medium-wide scene of work and animals, warm ochre grasses, distant muted blue ridges, physically natural sheep.",
+    "reference": "reader-public/illustrations/rule.webp"
+  },
+  {
+    "id": "early-09-lyre",
+    "file": "illustrations/progression/early-09-lyre.webp",
+    "chapterId": "life",
+    "sectionIds": [
+      "outdoing"
+    ],
+    "sourceStart": "p-0391",
+    "sourceEnd": "p-0406",
+    "kind": "example",
+    "alt": "谈话中提到的调弦：乐师细听里拉琴的音高。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. Illustrate only the lyre-tuning example already mentioned in the conversation. Anonymous ancient Greek adult musician seated in a modest domestic workspace, one hand carefully turning a tuning peg on an ancient seven-string wooden lyre while the other lightly plucks a string. Concentrated listening expression; another lyre rests discreetly behind, no competition or winner. Historically plausible lyre, no modern guitar or violin, no sheet music or written text. Mature ink-lined comic with warm ochre and subdued teal, quiet close medium view of face, instrument and anatomically natural hands.",
+    "reference": "reader-public/illustrations/rule.webp"
+  },
+  {
+    "id": "early-10-summer-pause",
+    "file": "illustrations/progression/early-10-summer-pause.webp",
+    "chapterId": "life",
+    "sectionIds": [
+      "outdoing",
+      "cooperation",
+      "function"
+    ],
+    "sourceStart": "p-0419",
+    "sourceEnd": "p-0517",
+    "kind": "conversation",
+    "alt": "盛暑中的色拉叙马霍斯面色发红，仍坐着回答苏格拉底。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A new close medium conversational two-shot in the same hot summer courtyard. Thrasymachus in brick-red sits prominently at LEFT, dark curly hair and thick short beard, forehead slightly perspiring and face naturally flushed from heat and an intense discussion. He remains dignified, thoughtful, not comic, not defeated or sick. Socrates in ochre sits at right listening without triumph. Warm sunlight on terracotta wall, deeper teal shade, relaxed chairs. Small believable expressions and hands, no sweat drops drawn as cartoon symbols.",
+    "reference": "reader-public/illustrations/rule.webp"
+  },
+  {
+    "id": "early-11-shared-discussion",
+    "file": "illustrations/progression/early-11-shared-discussion.webp",
+    "chapterId": "life",
+    "sectionIds": [
+      "outdoing",
+      "cooperation",
+      "function"
+    ],
+    "sourceStart": "p-0332",
+    "sourceEnd": "p-0517",
+    "kind": "conversation",
+    "alt": "苏格拉底与色拉叙马霍斯继续问答，年轻的旁听者沉思。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A NEW wide side-angle scene of the ongoing same courtyard discussion. Socrates on far LEFT turned toward Thrasymachus at CENTER-RIGHT, seated natural conversational posture. Glaucon clean-shaven dark curly hair muted teal at right edge listens with brow slightly furrowed, hand loosely resting on knee. Plain wooden chairs and small pottery jug, soft olive shade across a pale plaster wall. Balanced calm attention, no overt outcome, no symbols or example props. Distinct cinematic diagonal composition, retain identities and robe colors.",
+    "reference": "reader-public/illustrations/rule.webp"
+  },
+  {
+    "id": "early-12-reflective-pause",
+    "file": "illustrations/progression/early-12-reflective-pause.webp",
+    "chapterId": "life",
+    "sectionIds": [
+      "outdoing",
+      "cooperation",
+      "function"
+    ],
+    "sourceStart": "p-0332",
+    "sourceEnd": "p-0517",
+    "kind": "conversation",
+    "alt": "在接连的问答间，苏格拉底稍作停顿，色拉叙马霍斯等他续说。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A NEW contemplative close two-shot through a shaded domestic doorframe. Socrates in ochre at RIGHT foreground pauses mid-conversation, eyes engaged, open hand resting near chest. Thrasymachus in brick-red at LEFT sits with hands resting on knees, attentively waiting, no smile of victory or look of defeat. Only these two clear protagonists, one soft background listener. Same modest ancient Piraeus interior, warm side light and cool olive shadow. Opposite camera orientation to prior chapter art, natural anatomy.",
+    "reference": "reader-public/illustrations/rule.webp"
+  },
+  {
+    "id": "early-13-glaucon",
+    "file": "illustrations/progression/early-13-glaucon.webp",
+    "chapterId": "worth",
+    "sectionIds": [
+      "glaucon",
+      "adeimantus",
+      "large-small"
+    ],
+    "sourceStart": "p-0518",
+    "sourceEnd": "p-0582",
+    "kind": "conversation",
+    "alt": "格劳孔精神振作地继续发言，苏格拉底与阿得曼托斯倾听。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A NEW shot of Glaucon renewing the discussion: young clean-shaven dark-curly-haired man in muted teal robe sits prominently LEFT, speaking with earnest lively eyes and one open hand. Socrates in ochre sits CENTER-RIGHT listening, bald crown short grey beard broad nose; Adeimantus in pale stone robe and short dark beard at far right listens beside him. Same modest Piraeus courtyard, wooden chairs, plaster and olive shade, slightly closer camera and reverse layout from reference. No anger or triumph.",
+    "reference": "reader-public/illustrations/worth.webp"
+  },
+  {
+    "id": "early-14-ring-story",
+    "file": "illustrations/progression/early-14-ring-story.webp",
+    "chapterId": "worth",
+    "sectionIds": [
+      "glaucon"
+    ],
+    "sourceStart": "p-0535",
+    "sourceEnd": "p-0543",
+    "kind": "example",
+    "alt": "格劳孔已经讲过的故事中，牧羊人在掌心转动戒指。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. Illustrate only the shepherd-and-ring story already narrated by Glaucon, not an event involving Socrates. Anonymous ancient Lydian adult shepherd in a plain weathered tunic sits among a few other shepherds during their monthly gathering. Focus on his thoughtful face and his own hand carefully turning a small gold ring on one finger so a dark gemstone faces inward. Other shepherds converse naturally in soft background. The man remains visibly solid for readable storytelling; do not portray magic particles or imply a philosophical verdict. No corpse, no king, no queen, no violence, no nudity, no palace takeover. Modest ancient rural stone setting, muted ochre and teal, single wide close medium panel.",
+    "reference": "reader-public/illustrations/worth.webp"
+  },
+  {
+    "id": "early-15-adeimantus",
+    "file": "illustrations/progression/early-15-adeimantus.webp",
+    "chapterId": "worth",
+    "sectionIds": [
+      "adeimantus",
+      "large-small"
+    ],
+    "sourceStart": "p-0544",
+    "sourceEnd": "p-0582",
+    "kind": "conversation",
+    "alt": "阿得曼托斯补充兄长的挑战，格劳孔在一旁认真听。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A NEW reverse medium three-shot in the same ancient Piraeus home. Adeimantus, young adult short dark wavy hair and slight dark beard wearing pale stone robe, foreground LEFT speaking earnestly with modest open hands. Glaucon clean-shaven curly dark hair muted teal beside him center, listening. Socrates bald short grey beard broad nose ochre at RIGHT listens with attentive concern. Wooden chairs, rough plaster, pottery alcove, olive shade. No paper, writing, philosophical illustrations, grand dramatic action or answer cues. Different layout from reference.",
+    "reference": "reader-public/illustrations/worth.webp"
+  },
+  {
+    "id": "early-16-socrates-brothers",
+    "file": "illustrations/progression/early-16-socrates-brothers.webp",
+    "chapterId": "worth",
+    "sectionIds": [
+      "glaucon",
+      "adeimantus",
+      "large-small"
+    ],
+    "sourceStart": "p-0518",
+    "sourceEnd": "p-0582",
+    "kind": "conversation",
+    "alt": "苏格拉底面向兄弟二人，思索如何继续这场讨论。",
+    "prompt": "Use case: illustration-story. Create ONE NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for the Plato Republic reading game. Attached image is ONLY a reference for consistent character identities and mature precise ink-lined style, not an edit target. Create genuinely new camera composition. Mature elegant expressive ink outlines, restrained ochre and terracotta with muted teal shade, fine paper grain, natural anatomy, ancient fifth-century BCE setting. Faces and relevant gestures legible within the middle horizontal band. Absolutely no text, lettering, captions, labels, speech bubbles, watermarks, logos, modern objects, diagrams, philosophical symbols, caricature or comic exaggeration. A NEW view over the shoulders of the two brothers toward Socrates: Glaucon's teal shoulder at LEFT edge and Adeimantus' pale stone shoulder at RIGHT edge frame Socrates seated centered, his thoughtful face in sharp focus, bald crown short grey beard broad nose and plain ochre himation. He responds quietly with an open palm, earnest not triumphant. Same modest domestic Piraeus courtyard, doorway and olive leaf shade behind him. Medium-wide 16:9 conversation composition, natural proportions, restrained warm atmosphere.",
+    "reference": "reader-public/illustrations/worth.webp"
+  },
+  {
+    "id": "early-17-cephalus-departs",
+    "file": "illustrations/progression/early-17-cephalus-departs.webp",
+    "chapterId": "obligations",
+    "sectionIds": [
+      "obligation-craft"
+    ],
+    "sourceStart": "p-0043",
+    "sourceEnd": "p-0045",
+    "kind": "conversation",
+    "alt": "克法洛斯含笑起身，把话题留给苏格拉底和玻勒马霍斯。",
+    "reference": "reader-public/illustrations/obligations.webp",
+    "prompt": "Use case: illustration-story. Create one NEW wide 16:9 SINGLE-PANEL color graphic novel illustration for a Plato Republic reading game. Attached image is only character and mature ink-drawn style reference. Depict a specific faithful narrative transition in Cephalus' modest Piraeus house: Cephalus, elderly white-haired white-bearded man in cream robe with a leafy wreath, has risen from his cushioned wooden chair and is beginning to leave through a shaded domestic doorway, turning back with a small warm smile toward his son and Socrates as he entrusts their continuing conversation to them. Socrates seated left, bald crown short grey beard broad nose in plain ochre robe, looks up gently. Polemarchus, younger dark-wavy-haired man with modest short dark beard in muted rust-brown robe, sits beside him and listens. The elderly man's cushioned chair is visibly unoccupied behind him, no extra duplicate person. Hot summer soft daylight, plain chairs, pottery, terracotta paving. No actual sacrifice depicted, no altar or invented ritual. Precise expressive ink lines, restrained warm ochre and terracotta, muted teal shadows, slight paper grain, believable natural anatomy. New diagonal camera composition with Cephalus mid-right near doorway, seated men left; faces and gestures in center horizontal strip. No text, speech bubbles, labels, symbols, logos, watermarks, modern objects, comedy or philosophical answer cues."
+  }
+]

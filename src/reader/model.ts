@@ -53,7 +53,7 @@ export type ReadingPosition = { before: number; after: number };
 export type Review = { attempts: number; correct: number; lastChoiceId: string | null; at: string };
 export type Settings = { fontSize: number; theme: 'paper' | 'night' };
 export type Save = {
-  version: 4;
+  version: 5;
   editionId: string;
   seed: string;
   started: boolean;

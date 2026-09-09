@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "node scripts/build-reader.mjs && tsc --noEmit && vite build",
+    "build": "node scripts/build-reader.mjs && node --experimental-strip-types scripts/build-illustrations.mts && tsc --noEmit && vite build",
     "text:build": "node scripts/build-reader.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --experimental-strip-types --test tests/*.test.mts"
