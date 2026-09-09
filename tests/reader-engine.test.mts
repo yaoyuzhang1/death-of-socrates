@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {
   flattenCorpus, createSave, validateSave, orderedOptions, submitAnswer,
   useHint, advance, navigate, chapterStats,
+  readingBatches, readingPosition, setReadingPosition, setReadingMode,
+  recordReview, reviewQueue, progressStats,
 } from '../src/reader/engine.ts';
 import type { Corpus, Question, Save, Unit } from '../src/reader/model.ts';
 
@@ -62,13 +64,15 @@ test('flattening keeps canonical reading order and chapter/section metadata with
 
 test('fresh saves have a fixed edition and deterministic option seed, and can be imported before starting', () => {
   const save = fresh();
-  assert.equal(save.version, 2);
+  assert.equal(save.version, 3);
   assert.equal(save.editionId, 'reader-fixture-1');
   assert.equal(save.seed, 'repeatable-reader-seed');
   assert.equal(save.started, false);
   assert.equal(save.cursor, 0);
   assert.equal(save.completed, 0);
   assert.deepEqual(save.settings, { fontSize: 18, theme: 'paper' });
+  assert.deepEqual(save.reading, { mode: 'step', positions: {} });
+  assert.deepEqual(save.reviews, {});
   assert.deepEqual(validateSave(exported(save), corpus), save);
   assert.throws(() => createSave(corpus, '   '));
   assert.throws(() => createSave(corpus, 'x'.repeat(129)));
@@ -269,4 +273,233 @@ test('a corrupt corpus cannot silently validate saves against ambiguous question
     assert.equal(validateSave(fresh(), ambiguous), null);
     assert.throws(() => createSave(ambiguous));
   }
+});
+
+function longCorpus(): Corpus {
+  const source = structuredClone(corpus);
+  const first = source.chapters[0].sections[0].units[0];
+  first.paragraphs = [1, 2, 3].map(index => ({ id: `before-${index}`, text: `${index}${'前文'.repeat(200)}` }));
+  first.replyCount = 1;
+  first.response = [
+    { id: 'original-reply', text: '原文紧接的答话。' },
+    ...[1, 2, 3].map(index => ({ id: `after-${index}`, text: `${index}${'后文'.repeat(200)}` })),
+  ];
+  return source;
+}
+
+test('reading batches retain complete source paragraphs and exact order, including a paragraph longer than the target', () => {
+  const paragraphs = [
+    { id: 'short-1', text: '甲'.repeat(300), sourcePage: 1 },
+    { id: 'short-2', text: '乙'.repeat(300), sourcePages: [1, 2] },
+    { id: 'long', text: '丙'.repeat(1600), sourcePage: 2 },
+    { id: 'short-3', text: '丁'.repeat(200), speaker: '苏' },
+  ];
+  const batches = readingBatches(paragraphs);
+  assert.deepEqual(batches.map(batch => batch.map(paragraph => paragraph.id)), [['short-1', 'short-2'], ['long'], ['short-3']]);
+  assert.deepEqual(batches.flat(), paragraphs);
+  assert.equal(batches.flat().map(paragraph => paragraph.text).join(''), paragraphs.map(paragraph => paragraph.text).join(''));
+  assert.equal(batches[1][0], paragraphs[2]);
+  assert.deepEqual(readingBatches([]), []);
+  assert.throws(() => readingBatches(paragraphs, 0));
+  assert.throws(() => readingBatches(paragraphs, Infinity));
+  assert.throws(() => readingBatches(paragraphs, 1.5));
+});
+
+test('version 2 import migrates without changing the edition, cursor, first answers, seed or old settings', () => {
+  const current = navigate(complete(), units, 1);
+  const legacy = exported(current);
+  legacy.version = 2;
+  delete legacy.reading;
+  delete legacy.reviews;
+  const restored = validateSave(legacy, corpus)!;
+  assert.ok(restored);
+  assert.equal(restored.version, 3);
+  for (const key of ['editionId', 'seed', 'started', 'cursor', 'completed', 'answers', 'hints', 'bookmarks', 'scroll', 'settings', 'updatedAt']) {
+    assert.deepEqual(restored[key as keyof Save], legacy[key]);
+  }
+  assert.deepEqual(restored.reading, { mode: 'step', positions: { u2: { before: 1, after: 1 } } });
+  assert.deepEqual(restored.reviews, {});
+  assert.deepEqual(readingPosition(restored, units[1]), { before: 1, after: 1 });
+  assert.deepEqual(validateSave(exported(restored), corpus), restored);
+  assert.equal(validateSave({ ...legacy, reviews: {} }, corpus), null);
+  assert.equal(validateSave({ ...legacy, completed: units.length + 1 }, corpus), null);
+
+  const source = longCorpus();
+  const sourceUnits = flattenCorpus(source);
+  let longSave = setReadingMode(createSave(source, 'legacy-seed'), 'continuous');
+  longSave = submitAnswer(longSave, sourceUnits[0], 'q1-rule');
+  const unfinished = exported(longSave);
+  unfinished.version = 2;
+  delete unfinished.reading;
+  delete unfinished.reviews;
+  assert.deepEqual(readingPosition(validateSave(unfinished, source)!, sourceUnits[0]), { before: 3, after: 3 });
+  longSave = advance(longSave, sourceUnits);
+  const finished = exported(longSave);
+  finished.version = 2;
+  delete finished.reading;
+  delete finished.reviews;
+  assert.deepEqual(readingPosition(validateSave(finished, source)!, sourceUnits[0]), { before: 3, after: 3 });
+
+  const unanswered = exported(createSave(source, 'legacy-unanswered'));
+  unanswered.version = 2;
+  unanswered.started = true;
+  unanswered.scroll = 1942.5;
+  delete unanswered.reading;
+  delete unanswered.reviews;
+  const restoredUnanswered = validateSave(unanswered, source)!;
+  assert.equal(restoredUnanswered.scroll, 1942.5);
+  assert.equal(restoredUnanswered.cursor, 0);
+  assert.deepEqual(readingPosition(restoredUnanswered, sourceUnits[0]), { before: 3, after: 1 });
+  assert.deepEqual(validateSave(exported(restoredUnanswered), source), restoredUnanswered);
+  const unstarted = { ...unanswered, started: false, scroll: 0 };
+  const restoredUnstarted = validateSave(unstarted, source)!;
+  assert.deepEqual(restoredUnstarted.reading.positions, {});
+  assert.deepEqual(readingPosition(restoredUnstarted, sourceUnits[0]), { before: 1, after: 1 });
+});
+
+test('step mode gates questions and advancement on source batches while immediate replies stay outside the after batches', () => {
+  const source = longCorpus();
+  const sourceUnits = flattenCorpus(source);
+  const first = sourceUnits[0];
+  let save = createSave(source, 'step-test');
+  assert.deepEqual(readingPosition(save, first), { before: 1, after: 1 });
+  assert.throws(() => submitAnswer(save, first, 'q1-context'));
+  assert.throws(() => setReadingPosition(save, first, 'after', 2));
+  save = setReadingPosition(save, first, 'before', 2);
+  assert.equal(save.cursor, 0);
+  assert.equal(save.completed, 0);
+  assert.deepEqual(validateSave(exported(save), source), save);
+  assert.equal(advance(save, sourceUnits), save);
+  save = setReadingPosition(save, first, 'before', 3);
+  save = submitAnswer(save, first, 'q1-rule');
+  assert.equal(advance(save, sourceUnits), save);
+  assert.deepEqual(readingPosition(save, first), { before: 3, after: 1 });
+  save = setReadingPosition(save, first, 'after', 2);
+  assert.equal(advance(save, sourceUnits), save);
+  save = setReadingPosition(save, first, 'after', 3);
+  const next = advance(save, sourceUnits);
+  assert.equal(next.cursor, 1);
+  assert.equal(next.completed, 1);
+  assert.deepEqual(readingPosition(next, first), { before: 3, after: 3 });
+  assert.deepEqual(validateSave(exported(next), source), next);
+});
+
+test('continuous reading can finish a passage and switching back to steps preserves its completion', () => {
+  const source = longCorpus();
+  const sourceUnits = flattenCorpus(source);
+  let save = setReadingMode(createSave(source, 'continuous-test'), 'continuous');
+  assert.equal(save.started, false);
+  assert.deepEqual(validateSave(exported(save), source), save);
+  save = submitAnswer(save, sourceUnits[0], null);
+  save = advance(save, sourceUnits);
+  save = setReadingMode(save, 'step');
+  save = navigate(save, sourceUnits, 0);
+  assert.deepEqual(readingPosition(save, sourceUnits[0]), { before: 3, after: 3 });
+  assert.equal(advance(save, sourceUnits).cursor, 1);
+  assert.deepEqual(validateSave(exported(save), source), save);
+  assert.throws(() => setReadingMode(save, 'unknown' as never));
+});
+
+test('reading positions reject unopened units and out-of-range values without modifying source or earlier counts', () => {
+  const source = longCorpus();
+  const sourceUnits = flattenCorpus(source);
+  let save = createSave(source, 'position-test');
+  assert.throws(() => setReadingPosition(save, sourceUnits[1], 'before', 1));
+  for (const count of [0, -1, 4, 1.5, NaN]) assert.throws(() => setReadingPosition(save, sourceUnits[0], 'before', count));
+  save = setReadingPosition(save, sourceUnits[0], 'before', 2);
+  assert.equal(setReadingPosition(save, sourceUnits[0], 'before', 1), save);
+  const position = readingPosition(save, sourceUnits[0]);
+  position.before = 99;
+  assert.equal(readingPosition(save, sourceUnits[0]).before, 2);
+  const empty = { ...sourceUnits[0], paragraphs: [], response: [] };
+  assert.deepEqual(readingPosition(createSave(source, 'empty-position'), empty), { before: 0, after: 0 });
+});
+
+test('reviews leave first answers, reading cursor, progress and source unchanged, including direct reveals', () => {
+  const initial = navigate(complete(['q1-rule', null, 'q3-context']), units, 1);
+  const before = JSON.stringify(initial);
+  const body = JSON.stringify(units);
+  let save = recordReview(initial, units, 'q1', 'q1-context');
+  save = recordReview(save, units, 'q1', 'q1-rule');
+  save = recordReview(save, units, 'q2', null);
+  assert.deepEqual(save.answers, initial.answers);
+  assert.deepEqual(save.reading, initial.reading);
+  assert.equal(save.cursor, initial.cursor);
+  assert.equal(save.completed, initial.completed);
+  assert.equal(save.reviews.q1.attempts, 2);
+  assert.equal(save.reviews.q1.correct, 1);
+  assert.equal(save.reviews.q1.lastChoiceId, 'q1-rule');
+  assert.equal(save.reviews.q2.correct, 0);
+  assert.equal(save.reviews.q2.lastChoiceId, null);
+  assert.equal(JSON.stringify(initial), before);
+  assert.equal(JSON.stringify(units), body);
+  assert.deepEqual(validateSave(exported(save), corpus), save);
+  assert.throws(() => recordReview(fresh(), units, 'q1', 'q1-context'));
+  assert.throws(() => recordReview(save, units, 'missing', null));
+  assert.throws(() => recordReview(save, units, 'q1', 'q2-context'));
+  assert.deepEqual(progressStats(units, save), { answered: 3, correct: 1, reviewed: 2, remainingReview: 1, total: 3 });
+  assert.deepEqual(chapterStats(corpus.chapters[0], save), chapterStats(corpus.chapters[0], initial));
+});
+
+test('review queues prioritize unresolved first answers and rotate through answered questions without opening new questions', () => {
+  let save = complete(['q1-context', 'q2-rule', null]);
+  assert.deepEqual(reviewQueue(units, fresh()), []);
+  assert.deepEqual(reviewQueue(units, save), ['q2', 'q3', 'q1']);
+  assert.deepEqual(reviewQueue(units, save, 5, 'wealth'), ['q3']);
+  assert.deepEqual(reviewQueue(units, save, 5, 'missing'), []);
+  assert.deepEqual(reviewQueue(units, save, 0), []);
+  save = recordReview(save, units, 'q2', 'q2-context');
+  assert.deepEqual(reviewQueue(units, save), ['q3', 'q1', 'q2']);
+  assert.equal(progressStats(units, save).remainingReview, 1);
+  save = recordReview(save, units, 'q3', null);
+  assert.deepEqual(reviewQueue(units, save, 1), ['q3']);
+
+  const source = structuredClone(corpus);
+  source.chapters = [{ ...source.chapters[0], sections: [{
+    id: 'rounds', title: '轮次', range: '', units: Array.from({ length: 9 }, (_, index) => unit(`round-${index}`, question(`round-q${index}`))),
+  }] }];
+  const roundUnits = flattenCorpus(source);
+  let roundSave = createSave(source, 'queue-test');
+  for (const current of roundUnits) {
+    roundSave = submitAnswer(roundSave, current, null);
+    roundSave = advance(roundSave, roundUnits);
+  }
+  const firstRound = reviewQueue(roundUnits, roundSave, 99);
+  assert.equal(firstRound.length, 5);
+  assert.equal(new Set(firstRound).size, 5);
+  for (const id of firstRound) roundSave = recordReview(roundSave, roundUnits, id, null);
+  assert.deepEqual(reviewQueue(roundUnits, roundSave).slice(0, 4), ['round-q5', 'round-q6', 'round-q7', 'round-q8']);
+});
+
+test('version 3 imports strictly validate reading and review data, including unopened content and impossible totals', () => {
+  let save = complete(['q1-rule', null, 'q3-context']);
+  save = recordReview(save, units, 'q1', 'q1-context');
+  const review = save.reviews.q1;
+  const first = submitAnswer(fresh(), units[0], 'q1-context');
+  const invalid = [
+    { ...save, reading: { mode: 'unknown', positions: {} } },
+    { ...save, reading: { mode: 'step', positions: [], extra: true } },
+    { ...save, reading: { mode: 'step', positions: { missing: { before: 1, after: 1 } } } },
+    { ...first, reading: { mode: 'step', positions: { u2: { before: 1, after: 1 } } } },
+    { ...save, reading: { mode: 'step', positions: { u1: { before: 2, after: 1 } } } },
+    { ...save, reading: { mode: 'step', positions: { u1: { before: 0, after: 1 } } } },
+    { ...save, reading: { mode: 'step', positions: { u1: { before: 1, after: 1, extra: 0 } } } },
+    { ...save, reviews: [] },
+    { ...fresh(), reviews: { q1: review } },
+    { ...first, reviews: { q2: review } },
+    ...[
+      { ...review, attempts: 0 }, { ...review, attempts: 1.5 }, { ...review, attempts: 1_000_001 },
+      { ...review, correct: -1 }, { ...review, correct: 2 }, { ...review, correct: 0 },
+      { ...review, lastChoiceId: null }, { ...review, lastChoiceId: 'q1-rule' },
+      { ...review, lastChoiceId: 'q2-context' }, { ...review, at: 'invalid' },
+      { ...review, at: '2000-01-01T00:00:00.000Z' }, { ...review, at: '9999-01-01T00:00:00.000Z' },
+      { ...review, bonus: true },
+    ].map(value => ({ ...save, reviews: { q1: value } })),
+  ];
+  for (const value of invalid) assert.equal(validateSave(value, corpus), null, JSON.stringify(value));
+  const restored = validateSave(exported(save), corpus)!;
+  restored.reading.positions.u1.before = 0;
+  restored.reviews.q1.correct = 0;
+  assert.equal(save.reading.positions.u1.before, 1);
+  assert.equal(save.reviews.q1.correct, 1);
 });

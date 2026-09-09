@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync, readdirSync, existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {flattenCorpus, createSave, submitAnswer, advance, validateSave} from '../src/reader/engine.ts';
+import {flattenCorpus, createSave, submitAnswer, advance, validateSave, setReadingMode} from '../src/reader/engine.ts';
 import type {Corpus} from '../src/reader/model.ts';
 const read=(path:string)=>JSON.parse(readFileSync(new URL(`../${path}`,import.meta.url),'utf8').replace(/^\uFEFF/,''));
 const corpus:Corpus=read('reader-public/text/republic.json');
@@ -105,7 +105,7 @@ test('Cross-page passages expose each source page without duplicating the text',
  }
 });
 test('Wrong answers, direct reveals and cross-page questions can finish the entire journey',()=>{
- let save={...createSave(corpus,'complete-guo-content-test'),started:true};
+ let save={...setReadingMode(createSave(corpus,'complete-guo-content-test'),'continuous'),started:true};
  for(const [i,unit] of units.entries()) {
   assert.equal(save.cursor,i);
   if(unit.question) {

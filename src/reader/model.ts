@@ -48,15 +48,20 @@ export type ReadingUnit = Unit & {
   index: number;
 };
 export type Answer = { choiceId: string | null; hinted: boolean; at: string };
+export type ReadingMode = 'step' | 'continuous';
+export type ReadingPosition = { before: number; after: number };
+export type Review = { attempts: number; correct: number; lastChoiceId: string | null; at: string };
 export type Settings = { fontSize: number; theme: 'paper' | 'night' };
 export type Save = {
-  version: 2;
+  version: 3;
   editionId: string;
   seed: string;
   started: boolean;
   cursor: number;
   completed: number;
   answers: Record<string, Answer>;
+  reading: { mode: ReadingMode; positions: Record<string, ReadingPosition> };
+  reviews: Record<string, Review>;
   hints: string[];
   bookmarks: string[];
   scroll: number;
