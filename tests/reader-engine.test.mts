@@ -400,6 +400,66 @@ test('continuous reading can finish a passage and switching back to steps preser
   assert.throws(() => setReadingMode(save, 'unknown' as never));
 });
 
+test('switching an unanswered current passage to steps retains its displayed text without opening the answer or following text', () => {
+  const source = longCorpus();
+  const first = flattenCorpus(source)[0];
+  const continuous = { ...setReadingMode(createSave(source, 'visible-before'), 'continuous'), started: true, scroll: 1850 };
+  const original = JSON.stringify(continuous);
+  const stepped = setReadingMode(continuous, 'step', first);
+  const position = readingPosition(stepped, first);
+  assert.deepEqual(readingBatches(first.paragraphs).slice(0, position.before).flat(), first.paragraphs);
+  assert.equal(position.after, 1);
+  assert.deepEqual(stepped.answers, {});
+  assert.equal(stepped.cursor, continuous.cursor);
+  assert.equal(stepped.completed, continuous.completed);
+  assert.equal(stepped.scroll, 1850);
+  assert.equal(advance(stepped, flattenCorpus(source)), stepped);
+  assert.throws(() => setReadingPosition(stepped, first, 'after', 2));
+  assert.equal(JSON.stringify(continuous), original);
+  assert.deepEqual(validateSave(exported(stepped), source), stepped);
+});
+
+test('switching to steps retains all displayed response batches and other reading positions without changing first answers', () => {
+  const source = longCorpus();
+  const questionFree = source.chapters[0].sections[0].units[1];
+  questionFree.paragraphs = [1, 2, 3].map(index => ({ id: `free-before-${index}`, text: '未设提问的前文'.repeat(100) }));
+  questionFree.response = [1, 2, 3].map(index => ({ id: `free-after-${index}`, text: '未设提问的后文'.repeat(100) }));
+  const sourceUnits = flattenCorpus(source);
+  for (const choice of ['q1-rule', null]) {
+    let save = setReadingMode(createSave(source, 'visible-after'), 'continuous');
+    save = submitAnswer(save, sourceUnits[0], choice);
+    const firstAnswer = structuredClone(save.answers);
+    const stepped = setReadingMode(save, 'step', sourceUnits[0]);
+    const position = readingPosition(stepped, sourceUnits[0]);
+    assert.deepEqual(readingBatches(sourceUnits[0].response.slice(1)).slice(0, position.after).flat(), sourceUnits[0].response.slice(1));
+    assert.deepEqual(position, { before: 3, after: 3 });
+    assert.deepEqual(stepped.answers, firstAnswer);
+    assert.equal(stepped.cursor, save.cursor);
+    assert.deepEqual(validateSave(exported(stepped), source), stepped);
+
+    const next = setReadingMode(advance(save, sourceUnits), 'step', sourceUnits[1]);
+    assert.deepEqual(next.reading.positions.u1, { before: 3, after: 3 });
+    assert.deepEqual(next.reading.positions.u2, { before: 3, after: 3 });
+    assert.deepEqual(next.answers, firstAnswer);
+    assert.deepEqual(validateSave(exported(next), source), next);
+  }
+});
+
+test('reading-mode changes leave unstarted saves valid and reject attempts to preserve a different or unopened unit', () => {
+  const source = longCorpus();
+  const sourceUnits = flattenCorpus(source);
+  const unstarted = setReadingMode(createSave(source, 'unstarted-mode'), 'continuous');
+  const stepped = setReadingMode(unstarted, 'step', sourceUnits[0]);
+  assert.equal(stepped.started, false);
+  assert.deepEqual(stepped.reading.positions, {});
+  assert.deepEqual(validateSave(exported(stepped), source), stepped);
+  const started = { ...unstarted, started: true };
+  assert.throws(() => setReadingMode(started, 'step', sourceUnits[1]));
+  assert.throws(() => setReadingMode(started, 'step', { ...sourceUnits[0], index: -1 }));
+  assert.throws(() => setReadingMode({ ...started, cursor: 1 }, 'step', sourceUnits[1]));
+  assert.deepEqual(setReadingMode(started, 'step').reading.positions, {});
+});
+
 test('reading positions reject unopened units and out-of-range values without modifying source or earlier counts', () => {
   const source = longCorpus();
   const sourceUnits = flattenCorpus(source);

@@ -1,3 +1,4 @@
 import { createRoot } from 'react-dom/client';
 import App from './reader/App.tsx';
-createRoot(document.getElementById('root')!).render(<App />);
+import { SourceViewerProvider } from './reader/SourceViewer.tsx';
+createRoot(document.getElementById('root')!).render(<SourceViewerProvider><App /></SourceViewerProvider>);

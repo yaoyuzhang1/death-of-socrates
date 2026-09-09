@@ -3,6 +3,8 @@ import { ArrowLeft, ArrowRight, BookOpen, Bookmark, Check, ChevronRight, List, R
 import type { Corpus, Paragraph, Question, Save } from './model.ts';
 import { advance, chapterStats, createSave, flattenCorpus, navigate, orderedOptions, submitAnswer, validateSave, readingBatches, readingPosition, setReadingPosition, setReadingMode, recordReview, reviewQueue, progressStats } from './engine.ts';
 import ReviewRound from './ReviewRound.tsx';
+import QuestionChoices from './QuestionChoices.tsx';
+import { SourcePageLink } from './SourceViewer.tsx';
 import './style.css';
 import './play.css';
 
@@ -20,7 +22,7 @@ function Text({ paragraph }: { paragraph: Paragraph }) {
 }
 
 function SourcePage({ page }: { page: number }) {
-  return <a className="source-page" href={`${import.meta.env.BASE_URL}text/parallel.html#p${page}`} target="_blank" rel="noreferrer" title="查看书页与译者注（含本页后文）">书页 {page} ↗</a>;
+  return <SourcePageLink page={page} />;
 }
 
 function SourcePages({ paragraph }: { paragraph: Paragraph }) {
@@ -162,6 +164,8 @@ export default function App() {
   const afterComplete = !stepMode || position.after >= afterBatches.length;
   const chapterQuestions = units.filter(u => u.chapter.id === unit.chapter.id && u.question);
   const currentQuestionNumber = chapterQuestions.findIndex(u => u.id === unit.id) + 1;
+  const latestIndex = Math.min(save.completed, units.length - 1);
+  const revisiting = save.cursor < latestIndex;
   const update = (fn: (s: Save) => Save) => setSave(s => s ? { ...fn(s), updatedAt: new Date().toISOString() } : s);
   const goTo = (index: number) => {
     update(s => ({ ...navigate(s, units, index), started: true }));
@@ -171,6 +175,10 @@ export default function App() {
     setScreen('read');
   };
   const start = () => { update(s => ({ ...s, started: true })); setScreen('read'); };
+  const goHome = () => {
+    if (screen === 'read') update(s => ({ ...s, scroll: Math.max(0, Math.round(window.scrollY)) }));
+    setScreen('home');
+  };
   const startReview = (chapterId?: string) => {
     const ids = reviewQueue(units, save, 5, chapterId);
     if (!ids.length) { setNotice('读完并回答第一问后，就可以开始重练。'); return; }
@@ -189,8 +197,15 @@ export default function App() {
     }
     else update(s => submitAnswer(s, unit, choiceId));
     setSelected(null);
-    requestAnimationFrame(() => questionRef.current?.scrollIntoView({ block: 'start', behavior: 'instant' }));
+    requestAnimationFrame(() => {
+      questionRef.current?.querySelector<HTMLElement>('.answer-result')?.focus({ preventScroll: true });
+      questionRef.current?.scrollIntoView({ block: 'start', behavior: 'instant' });
+    });
   };
+  const refocusQuestion = () => requestAnimationFrame(() => {
+    questionRef.current?.querySelector<HTMLInputElement>('input')?.focus({ preventScroll: true });
+    questionRef.current?.scrollIntoView({ block: 'start', behavior: 'instant' });
+  });
   const next = () => {
     if ((question && !firstAnswer) || !beforeComplete || !afterComplete) return;
     update(s => advance(s, units));
@@ -201,12 +216,16 @@ export default function App() {
     const batches = side === 'before' ? beforeBatches : afterBatches;
     const shown = stepMode ? position[side] : batches.length;
     return <div className={`reading-part reading-part-${side}`}>
-      {batches.slice(0, shown).map((batch, index) => <div className="reading-batch" key={batch[0].id} id={`batch-${unit.id}-${side}-${index}`}>{batch.map(p => <Text key={p.id} paragraph={p} />)}</div>)}
+      {batches.slice(0, shown).map((batch, index) => <div className="reading-batch" key={batch[0].id} id={`batch-${unit.id}-${side}-${index}`} tabIndex={-1} role="group" aria-label={`原文第 ${index + 1} 段`}>{batch.map(p => <Text key={p.id} paragraph={p} />)}</div>)}
       {shown < batches.length && <div className="reading-step" data-reading-side={side}>
         <p>已展开 {shown} / {batches.length} 段{side === 'before' && question ? ' · 读完后进入这一问' : ''}</p>
         <button className="primary" onClick={() => {
           update(s => setReadingPosition(s, unit, side, shown + 1));
-          requestAnimationFrame(() => document.getElementById(`batch-${unit.id}-${side}-${shown}`)?.scrollIntoView({ block: 'start', behavior: 'instant' }));
+          requestAnimationFrame(() => {
+            const batch = document.getElementById(`batch-${unit.id}-${side}-${shown}`);
+            batch?.focus({ preventScroll: true });
+            batch?.scrollIntoView({ block: 'start', behavior: 'instant' });
+          });
         }}>{side === 'before' ? '读下一段' : '继续读原文'} <ArrowRight size={17} /></button>
       </div>}
     </div>;
@@ -238,21 +257,16 @@ export default function App() {
       <div className="question-kicker">停一停，想一问 <span>本章第 {currentQuestionNumber} / {chapterQuestions.length} 问</span>{practicing && <span>复习练习 · 首次记录保留</span>}</div>
       {!revealed ? <>
         <h2>{q.prompt}</h2>
-        <fieldset><legend className="sr-only">选择一个追问</legend>{options.map((option, i) => <label className={`option ${selected === option.id ? 'selected' : ''}`} key={option.id}>
-          <input type="radio" name={q.id} value={option.id} checked={selected === option.id} onChange={() => setSelected(option.id)} />
-          <span className="option-letter" aria-hidden="true">{String.fromCharCode(65 + i)}</span><span>{option.text}</span>
-        </label>)}</fieldset>
-        <div className="question-actions"><button className="primary" disabled={!selected} onClick={() => selected && choose(selected)}>确认选择 <ArrowRight size={17} /></button>
-          <button className="text-button" onClick={() => choose(null)}>直接看原文</button></div>
+        <QuestionChoices questionId={q.id} options={options} selected={selected} onSelect={setSelected} onConfirm={choose} onReveal={() => choose(null)} />
       </> : <>
-        <p className="answer-result" role="status">{displayedAnswer!.choiceId === null ? '已揭示原问' : displayedAnswer!.choiceId === q.correctId ? '你的选择与原问对应。' : '你的选择与原问不同。'}</p>
+        <p className="answer-result" role="status" tabIndex={-1}>{displayedAnswer!.choiceId === null ? '已揭示原问' : displayedAnswer!.choiceId === q.correctId ? '你的选择与原问对应。' : '你的选择与原问不同。'}</p>
         <p className="answer-followup">{displayedAnswer!.choiceId === q.correctId ? '这一问已选中，可以继续读下去。' : '这一问可以稍后重练；先接着看原文。'}</p>
         <div className="original-question"><div className="speaker">{q.original.speaker || '苏格拉底'}<span>{q.sourceRef}</span><SourcePages paragraph={q.original} /></div><p data-paragraph-id={q.original.id}>{q.original.text}</p></div>
         <div className="original-reply">{unit.response.slice(0, unit.replyCount ?? 0).map(p => <Text key={p.id} paragraph={p} />)}</div>
         <aside className="explanation" aria-label="为什么这一问更好"><h3>为什么这一问更好</h3><p>{q.explanation}</p>
           <div className="comparisons">{options.filter(o => o.id !== q.correctId).map(o => <div key={o.id}><p className="comparison-question">{o.text}{displayedAnswer!.choiceId === o.id && <span className="chosen-tag">你的选择</span>}</p><p>{o.feedback}</p></div>)}</div>
         </aside>
-        <button className="text-button practice-button" onClick={() => { setPractice({ questionId: q.id, hinted: false }); setSelected(null); }}>重新练习这一问</button>
+        <button className="text-button practice-button" onClick={() => { setPractice({ questionId: q.id, hinted: false }); setSelected(null); refocusQuestion(); }}>重新练习这一问</button>
       </>}
       {practicing && <button className="text-button practice-button" onClick={() => { setPractice(null); setSelected(null); }}>退出复习，查看首次记录</button>}
     </section>;
@@ -265,7 +279,7 @@ export default function App() {
   return <div className="app" style={{ '--reading-font-size': `${save.settings.fontSize}px` } as CSSProperties}>
     <a className="skip-link" href="#main">跳到正文</a>
     <header className="site-header"><div className="header-inner">
-      <button className="brand" onClick={() => setScreen('home')} aria-label="返回首页"><BookOpen size={23} /><span>理想国<small>苏格拉底的下一问</small></span></button>
+      <button className="brand" onClick={goHome} aria-label="返回首页"><BookOpen size={23} /><span>理想国<small>苏格拉底的下一问</small></span></button>
       <nav aria-label="阅读工具">{overall.answered > 0 && screen !== 'review' && <button onClick={() => startReview()}><RotateCcw size={17} /><span>重练</span></button>}<button onClick={() => setPanel('contents')}><List size={18} /><span>目录</span></button><button onClick={() => setPanel('settings')}><Settings2 size={18} /><span>阅读设置</span></button></nav>
     </div>{screen === 'read' && <div className="progress-track" aria-label={`已读${Math.round(save.completed / units.length * 100)}%`}><span style={{ width: `${save.completed / units.length * 100}%` }} /></div>}</header>
 
@@ -276,6 +290,7 @@ export default function App() {
         <p className="hero-description">沿着《理想国》阅读，在关键处选择更好的追问。<br className="desktop-break" />每次作答后，看看这一问为什么更好。</p>
         <p className="play-rules">读一段原文 · 选一个问题 · 对照原问 · 再练一轮</p>
         <div className="hero-actions"><button className="primary" onClick={start}>{save.started ? '继续阅读' : '开始阅读'}<ArrowRight size={19} /></button>{save.started && <span className="resume-note">第{numerals[unit.chapterIndex]}章 · {unit.section.title}</span>}</div>
+        {revisiting && <button className="text-button latest-home" onClick={() => goTo(latestIndex)}>回到最新进度 <ArrowRight size={15} /></button>}
         <div className="book-facts"><span>第一至四卷</span><span>{corpus.chapters.length} 个主题章</span><span>{totalQuestions} 次追问</span><span>约 {(characterCount / 10000).toFixed(1)} 万字</span></div>
       </section>
       {save.started && <section className="journey-panel" aria-label="我的进度">
@@ -298,6 +313,7 @@ export default function App() {
     </main>}
 
     {screen === 'read' && <main id="main" className="reading-shell" ref={readerTop}>
+      {revisiting && <div className="return-latest"><span>正在回看已读内容</span><button className="text-button" onClick={() => goTo(latestIndex)}>回到最新进度 <ArrowRight size={15} /></button></div>}
       <div className="reading-location"><button className="text-button" onClick={() => setPanel('contents')}>第{numerals[unit.chapterIndex]}章 · {unit.chapter.title}</button><button className={`icon-button bookmark-button ${save.bookmarks.includes(unit.id) ? 'bookmarked' : ''}`} aria-label={save.bookmarks.includes(unit.id) ? '移除书签' : '添加书签'} title="书签" onClick={() => update(s => ({ ...s, bookmarks: s.bookmarks.includes(unit.id) ? s.bookmarks.filter(id => id !== unit.id) : [...s.bookmarks, unit.id] }))}><Bookmark size={19} fill={save.bookmarks.includes(unit.id) ? 'currentColor' : 'none'} /></button></div>
       {firstOfChapter && <section className="chapter-intro"><p className="eyebrow">第{numerals[unit.chapterIndex]}章 / {corpus.chapters.length}章</p><h1>{unit.chapter.title}</h1><p>{unit.chapter.range}</p></section>}
       <div className="reading-section-heading"><h2>{unit.section.title}</h2><span>{unit.section.range}</span></div>
@@ -324,10 +340,11 @@ export default function App() {
       {nextChapterUnit ? <button className="primary" onClick={() => goTo(nextChapterUnit.index)}>进入下一章 <ArrowRight size={18} /></button> : <><p className="end-note">你已读完本篇。讨论仍将继续；现在也可以回到任何已读章节，重新体会其中的追问。</p><button className="primary" onClick={() => setScreen('home')}>回到目录 <BookOpen size={18} /></button></>}
     </main>}
 
-    {screen === 'review' && <ReviewRound key={reviewSession} corpus={corpus} save={save} questionIds={reviewIds} onAnswer={(id, choiceId) => update(s => recordReview(s, units, id, choiceId))} onClose={() => setScreen(reviewReturn)} />}
+    {screen === 'review' && <ReviewRound key={reviewSession} corpus={corpus} save={save} questionIds={reviewIds} onAnswer={(id, choiceId) => update(s => recordReview(s, units, id, choiceId))} onClose={() => setScreen(reviewReturn)} returnLabel={reviewReturn === 'home' ? '返回首页' : reviewReturn === 'chapter-end' ? '返回本章小结' : '返回阅读'} />}
 
     {panel && <Modal title={panel === 'contents' ? '阅读目录' : panel === 'settings' ? '阅读设置' : '底本与阅读说明'} onClose={() => setPanel(null)}>
       {panel === 'contents' && <><p className="panel-intro">按原文顺序阅读。已读部分可以随时回看，首次作答记录会保留。</p>
+        {save.started && <div className="toc-current"><button onClick={() => goTo(latestIndex)}>回到最新进度<small>{units[latestIndex].chapter.title} · {units[latestIndex].section.title}</small></button></div>}
         {save.bookmarks.length > 0 && <section className="bookmark-list"><h3>我的书签</h3>{save.bookmarks.map(id => { const u = units.find(u => u.id === id)!; return <button key={id} onClick={() => goTo(u.index)}><Bookmark size={15} />{u.chapter.title} · {u.section.title}</button>; })}</section>}
         <ol className="toc">{corpus.chapters.map((chapter, ci) => <li key={chapter.id}><h3><span>{String(ci + 1).padStart(2, '0')}</span>{chapter.title}</h3><p>{chapter.range}</p><ul>{chapter.sections.map(section => {
           const index = units.findIndex(u => u.section.id === section.id);
@@ -335,7 +352,7 @@ export default function App() {
           return <li key={section.id}><button disabled={!accessible} onClick={() => goTo(index)}>{section.title}{accessible ? <ChevronRight size={16} /> : <small>待阅读</small>}</button></li>;
         })}</ul></li>)}</ol></>}
       {panel === 'settings' && <div className="settings-panel"><section><h3>正文字号</h3><div className="font-control"><button aria-label="减小字号" disabled={save.settings.fontSize <= 16} onClick={() => update(s => ({ ...s, settings: { ...s.settings, fontSize: Math.max(16, s.settings.fontSize - 2) } }))}>A−</button><output>{save.settings.fontSize}px</output><button aria-label="增大字号" disabled={save.settings.fontSize >= 32} onClick={() => update(s => ({ ...s, settings: { ...s.settings, fontSize: Math.min(32, s.settings.fontSize + 2) } }))}>A＋</button></div><p className="font-sample">从一个更好的问题，开始一段更清楚的思考。</p></section>
-        <section><h3>阅读节奏</h3><div className="segmented">{(['step', 'continuous'] as const).map(mode => <button key={mode} aria-pressed={save.reading.mode === mode} onClick={() => update(s => setReadingMode(s, mode))}>{mode === 'step' ? '分段阅读' : '连续全文'}</button>)}</div><p>分段阅读按原文段落逐步展开。切换方式不会改变正文或首次作答。</p></section>
+        <section><h3>阅读节奏</h3><div className="segmented">{(['step', 'continuous'] as const).map(mode => <button key={mode} aria-pressed={save.reading.mode === mode} onClick={() => update(s => setReadingMode(s, mode, s.started ? unit : undefined))}>{mode === 'step' ? '分段阅读' : '连续全文'}</button>)}</div><p>分段阅读按原文段落逐步展开。切回分段时保留已显示的正文，从下一节采用新的节奏。</p></section>
         <section><h3>阅读背景</h3><div className="segmented">{(['paper', 'night'] as const).map(theme => <button key={theme} aria-pressed={save.settings.theme === theme} onClick={() => update(s => ({ ...s, settings: { ...s.settings, theme } }))}>{theme === 'paper' ? '纸色' : '夜间'}</button>)}</div></section>
         <section><h3>进度备份</h3><p>阅读位置、首次作答和重练记录保存在本机。换浏览器前，可以导出一份备份。</p><div className="backup-actions"><button onClick={exportProgress}>导出进度</button><button onClick={() => fileRef.current?.click()}>导入进度</button><input ref={fileRef} type="file" accept=".json,application/json" className="sr-only" aria-label="选择进度文件" onChange={e => importProgress(e.target.files?.[0])} /></div></section>
         <section>{confirmReset ? <><p>重新开始会清除本浏览器中的阅读与答题记录。可以先导出备份。</p><div className="backup-actions"><button onClick={() => { setSave(createSave(corpus)); setScreen('home'); setPanel(null); setConfirmReset(false); }}>确认重新开始</button><button onClick={() => setConfirmReset(false)}>保留进度</button></div></> : <button className="text-button" onClick={() => setConfirmReset(true)}>重新开始阅读</button>}</section>

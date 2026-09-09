@@ -293,10 +293,20 @@ export function setReadingPosition(save: Save, unit: ReadingUnit, side: 'before'
   };
 }
 
-export function setReadingMode(save: Save, mode: ReadingMode): Save {
+export function setReadingMode(save: Save, mode: ReadingMode, unit?: ReadingUnit): Save {
   if (mode !== 'step' && mode !== 'continuous') throw new Error('无效的阅读方式。');
   if (save.reading.mode === mode) return save;
-  return { ...save, reading: { ...save.reading, mode }, updatedAt: new Date().toISOString() };
+  let positions = save.reading.positions;
+  if (mode === 'step' && save.started && unit) {
+    assertCurrentUnit(save, unit);
+    const limits = readingLimits(unit);
+    // Continuous mode has already shown these batches; changing pace must not hide them.
+    const after = !unit.question || own(save.answers, unit.question.id)
+      ? limits.after
+      : readingPosition(save, unit).after;
+    positions = { ...positions, [unit.id]: { before: limits.before, after } };
+  }
+  return { ...save, reading: { ...save.reading, mode, positions }, updatedAt: new Date().toISOString() };
 }
 
 export function submitAnswer(save: Save, unit: ReadingUnit, choiceId: string | null): Save {

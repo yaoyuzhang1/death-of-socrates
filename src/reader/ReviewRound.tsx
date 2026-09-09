@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, RotateCcw } from 'lucide-react';
 import { flattenCorpus, orderedOptions } from './engine.ts';
 import type { Corpus, Paragraph, ReadingUnit, Save } from './model.ts';
+import QuestionChoices from './QuestionChoices.tsx';
+import { SourcePageLink } from './SourceViewer.tsx';
 import './review.css';
 
 export type ReviewRoundProps = {
@@ -10,6 +12,7 @@ export type ReviewRoundProps = {
   questionIds: string[];
   onAnswer: (questionId: string, choiceId: string | null) => void;
   onClose: () => void;
+  returnLabel?: string;
 };
 
 type RoundAnswer = { questionId: string; choiceId: string | null; correct: boolean };
@@ -29,7 +32,7 @@ function initialUnits(corpus: Corpus, save: Save, questionIds: string[]) {
 
 function SourcePages({ paragraph }: { paragraph: Paragraph }) {
   const pages = paragraph.sourcePages ?? (paragraph.sourcePage ? [paragraph.sourcePage] : []);
-  return <>{pages.map(page => <a key={page} className="source-page" href={`${import.meta.env.BASE_URL}text/parallel.html#p${page}`} target="_blank" rel="noreferrer" title="查看书页与译者注（含本页后文）">书页 {page} ↗</a>)}</>;
+  return <>{pages.map(page => <SourcePageLink page={page} key={page} />)}</>;
 }
 
 function Passage({ paragraph, showSource = false }: { paragraph: Paragraph; showSource?: boolean }) {
@@ -39,7 +42,7 @@ function Passage({ paragraph, showSource = false }: { paragraph: Paragraph; show
   </div>;
 }
 
-export default function ReviewRound({ corpus, save, questionIds, onAnswer, onClose }: ReviewRoundProps) {
+export default function ReviewRound({ corpus, save, questionIds, onAnswer, onClose, returnLabel = '返回阅读' }: ReviewRoundProps) {
   // The queue stays fixed while a parent saves each review answer.
   const [round, setRound] = useState(() => newRound(initialUnits(corpus, save, questionIds)));
   const [selected, setSelected] = useState<string | null>(null);
@@ -83,7 +86,7 @@ export default function ReviewRound({ corpus, save, questionIds, onAnswer, onClo
   if (!round.units.length) return <main id="main" className="review-round reading-shell" data-testid="review-empty">
     <h1 ref={headingRef} tabIndex={-1}>还没有可复习的提问</h1>
     <p>阅读并完成提问后，可以在这里再试一次。</p>
-    <button className="primary" onClick={onClose}><ArrowLeft size={17} />返回阅读</button>
+    <button className="primary" onClick={onClose}><ArrowLeft size={17} />{returnLabel}</button>
   </main>;
 
   if (finished) {
@@ -96,7 +99,7 @@ export default function ReviewRound({ corpus, save, questionIds, onAnswer, onClo
       <p className="review-round-note">可以接着阅读；首次选择和阅读位置都已保留。</p>
       <div className="review-round-end-actions">
         {missed > 0 && <button className="primary" onClick={retry} data-testid="review-retry"><RotateCcw size={17} />再练未选中的 {missed} 问</button>}
-        <button className={missed ? '' : 'primary'} onClick={onClose} data-testid="review-close"><ArrowLeft size={17} />返回阅读</button>
+        <button className={missed ? '' : 'primary'} onClick={onClose} data-testid="review-close"><ArrowLeft size={17} />{returnLabel}</button>
       </div>
     </main>;
   }
@@ -107,7 +110,7 @@ export default function ReviewRound({ corpus, save, questionIds, onAnswer, onClo
   return <main id="main" className="review-round reading-shell" data-testid="review-round" data-review-round={round.seed}>
     <div className="review-round-top">
       <h1 className="eyebrow" ref={headingRef} tabIndex={-1}>一轮复习 <span data-testid="review-progress">{round.index + 1} / {round.units.length}</span></h1>
-      <button className="text-button" onClick={onClose} data-testid="review-close"><ArrowLeft size={16} />返回阅读</button>
+      <button className="text-button" onClick={onClose} data-testid="review-close"><ArrowLeft size={16} />{returnLabel}</button>
     </div>
     <progress className="review-round-progress" value={round.answers.length} max={round.units.length} aria-label={`本轮已完成 ${round.answers.length} 问，共 ${round.units.length} 问`} />
     <p className="review-round-location">{unit.chapter.title} · {unit.section.title}<span>{question.sourceRef}</span></p>
@@ -119,14 +122,7 @@ export default function ReviewRound({ corpus, save, questionIds, onAnswer, onClo
       <div className="question-kicker">第 {round.index + 1} 问<span>首次选择保留</span></div>
       <h2>{question.prompt}</h2>
       {!answer ? <>
-        <fieldset><legend className="sr-only">选择一个追问</legend>{options.map((option, index) => <label className={`option ${selected === option.id ? 'selected' : ''}`} key={option.id}>
-          <input type="radio" name={`review-${question.id}`} value={option.id} checked={selected === option.id} onChange={() => setSelected(option.id)} />
-          <span className="option-letter" aria-hidden="true">{String.fromCharCode(65 + index)}</span><span>{option.text}</span>
-        </label>)}</fieldset>
-        <div className="question-actions">
-          <button className="primary" disabled={!selected} onClick={() => selected && choose(selected)} data-testid="review-confirm">确认选择<ArrowRight size={17} /></button>
-          <button className="text-button" onClick={() => choose(null)} data-testid="review-reveal">直接看原文</button>
-        </div>
+        <QuestionChoices questionId={`review-${question.id}`} options={options} selected={selected} onSelect={setSelected} onConfirm={choose} onReveal={() => choose(null)} testIdPrefix="review" />
       </> : <>
         <p className="answer-result" role="status" ref={resultRef} tabIndex={-1} data-testid="review-result">{answer.choiceId === null ? '已揭示原问' : answer.correct ? '你的选择与原问对应。' : '你的选择与原问不同。'}</p>
         <div className="original-question"><div className="speaker">{question.original.speaker || '苏格拉底'}<span>{question.sourceRef}</span><SourcePages paragraph={question.original} /></div><p data-paragraph-id={question.original.id}>{question.original.text}</p></div>
