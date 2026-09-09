@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "provider": "Microsoft Edge online TTS",
+  "language": "zh-CN",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "-3%",
+  "text": "恭喜你，完成了《理想国》的八章阅读。你走过了四卷原文，也一次次停下来，认真比较一个问题该怎样提出。阅读的终点，也是继续追问的起点。现在，隐藏章节《苏格拉底之死》已经开启。我们一起回到雅典，看看他为何接受审判，又如何走过生命的最后一天。",
+  "textSha256": "1d1ef8b845159e57b9ecc258002afe888a42a58536e514829eced93cd2b0be48",
+  "filename": "completion.mp3",
+  "sha256": "0c48bd553862a48018c3bfb3a4bd638ce6171483af71d0db43c92904d2d87522",
+  "generatedAt": "2026-09-09T06:55:37.648130+00:00",
+  "mimeType": "audio/mpeg",
+  "durationSeconds": 25.68,
+  "frames": 1070,
+  "sampleRates": [
+    24000
+  ],
+  "bytes": 154080,
+  "decodeQA": {
+    "status": "passed",
+    "decoder": "Chrome AudioContext",
+    "durationSeconds": 25.68,
+    "channels": 1,
+    "sampleRate": 48000,
+    "rms": 0.0991785914484965,
+    "peak": 0.6288447380065918,
+    "note": "MPEG integrity and decoded waveform checks; no claim of human listening or pronunciation transcription."
+  }
+}

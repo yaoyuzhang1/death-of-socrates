@@ -1,6 +1,7 @@
 import type {
   Answer,
   Chapter,
+  ChapterProgress,
   Corpus,
   Option,
   Paragraph,
@@ -11,6 +12,7 @@ import type {
   Review,
   Save,
 } from './model.ts';
+import { BONUS_SCENE_IDS } from './model.ts';
 import { makeReadingPages, makeVersion4ReadingPages, migrateVersion4Page } from './pagination.ts';
 
 const own = (value: object, key: PropertyKey) => Object.prototype.hasOwnProperty.call(value, key);
@@ -48,6 +50,11 @@ function indexCorpus(corpus: Corpus) {
   if (!units.length || typeof corpus.edition.id !== 'string' || !corpus.edition.id.trim()) {
     throw new Error('阅读文本必须包含版本标识和至少一个阅读单元。');
   }
+  const chapterIds = corpus.chapters.map(chapter => chapter.id);
+  if (chapterIds.some(id => !id) || new Set(chapterIds).size !== chapterIds.length ||
+    corpus.chapters.some(chapter => !chapter.sections.flatMap(section => section.units).length)) {
+    throw new Error('章节必须有唯一标识，并至少包含一个阅读单元。');
+  }
   for (const unit of units) {
     if (!unit.id || unitIds.has(unit.id)) throw new Error('阅读单元标识必须唯一。');
     unitIds.set(unit.id, unit.index);
@@ -64,16 +71,20 @@ function indexCorpus(corpus: Corpus) {
 }
 
 export function createSave(corpus: Corpus, seed?: string): Save {
-  indexCorpus(corpus);
+  const { units } = indexCorpus(corpus);
   const selectedSeed = seed ?? crypto.randomUUID();
   if (!validSeed(selectedSeed)) throw new Error('选项顺序种子必须是1至128个字符的非空字符串。');
   return {
-    version: 5,
+    version: 6,
     editionId: corpus.edition.id,
     seed: selectedSeed,
     started: false,
     cursor: 0,
     completed: 0,
+    chapterProgress: Object.fromEntries(corpus.chapters.map(chapter => [chapter.id, {
+      completed: 0, cursor: units.find(unit => unit.chapter.id === chapter.id)!.index, started: false, scroll: 0,
+    }])),
+    bonus: { cursor: 0, completed: false, choices: {}, visited: {} },
     answers: {},
     resolved: [],
     pages: {},
@@ -87,6 +98,66 @@ export function createSave(corpus: Corpus, seed?: string): Save {
   };
 }
 
+function chapterUnits(unit: ReadingUnit) {
+  return unit.chapter.sections.flatMap(section => section.units);
+}
+
+function localUnitIndex(unit: ReadingUnit): number {
+  return chapterUnits(unit).findIndex(current => current.id === unit.id);
+}
+
+export function getChapterProgress(save: Save, chapterId: string): ChapterProgress {
+  if (!own(save.chapterProgress, chapterId)) throw new Error('没有找到这一章的阅读进度。');
+  return { ...save.chapterProgress[chapterId] };
+}
+
+export function isUnitAccessible(save: Save, unit: ReadingUnit): boolean {
+  const local = localUnitIndex(unit);
+  const progress = own(save.chapterProgress, unit.chapter.id) ? save.chapterProgress[unit.chapter.id] : undefined;
+  return Boolean(progress && local >= 0 && local <= progress.completed);
+}
+
+function isUnitComplete(save: Save, unit: ReadingUnit): boolean {
+  return localUnitIndex(unit) < getChapterProgress(save, unit.chapter.id).completed;
+}
+
+export function latestUnitIndex(save: Save, units: readonly ReadingUnit[], chapterId = units[save.cursor]?.chapter.id): number {
+  const selected = units.filter(unit => unit.chapter.id === chapterId);
+  if (!selected.length) return save.cursor;
+  return selected[Math.min(getChapterProgress(save, chapterId).completed, selected.length - 1)].index;
+}
+
+export function allChaptersComplete(save: Save, units: readonly ReadingUnit[]): boolean {
+  return units.length > 0 && units.every(unit => isUnitComplete(save, unit));
+}
+
+function activeProgress(save: Save, unit: ReadingUnit, scroll = save.scroll): Record<string, ChapterProgress> {
+  return { ...save.chapterProgress, [unit.chapter.id]: {
+    ...getChapterProgress(save, unit.chapter.id), started: true, cursor: unit.index, scroll,
+  } };
+}
+
+export function setScrollPosition(save: Save, unit: ReadingUnit, scroll: number): Save {
+  assertCurrentUnit(save, unit);
+  if (!Number.isFinite(scroll) || scroll < 0 || scroll > 10_000_000) throw new Error('阅读位置超出有效范围。');
+  return { ...save, started: true, scroll, chapterProgress: activeProgress(save, unit, scroll), updatedAt: new Date().toISOString() };
+}
+
+export function enterChapter(save: Save, units: readonly ReadingUnit[], chapterId: string): Save {
+  const destination = units.find(unit => unit.chapter.id === chapterId);
+  const current = units[save.cursor];
+  if (!destination || !current) return save;
+  const remembered = getChapterProgress(save, chapterId);
+  if (current.chapter.id === chapterId) {
+    return { ...save, started: true, chapterProgress: activeProgress(save, current), updatedAt: new Date().toISOString() };
+  }
+  return {
+    ...save, started: true, cursor: remembered.cursor, scroll: remembered.scroll,
+    chapterProgress: { ...(save.started ? activeProgress(save, current) : save.chapterProgress), [chapterId]: { ...remembered, started: true } },
+    updatedAt: new Date().toISOString(),
+  };
+}
+
 export function validateSave(input: unknown, corpus: Corpus): Save | null {
   try {
     const { units, unitIds, questions } = indexCorpus(corpus);
@@ -94,16 +165,47 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
     const oldVersion = input.version === 2;
     const legacy = oldVersion || input.version === 3;
     const previousPages = input.version === 4;
+    const parallel = input.version === 6;
     const commonKeys = [
       'version', 'editionId', 'seed', 'started', 'cursor', 'completed', 'answers',
       'hints', 'bookmarks', 'scroll', 'settings', 'updatedAt',
     ];
-    if (!keysAre(input, oldVersion ? commonKeys : [...commonKeys, 'reading', 'reviews', ...(legacy ? [] : ['resolved', 'pages'])])) return null;
-    if ((!legacy && !previousPages && input.version !== 5) || input.editionId !== corpus.edition.id || !validSeed(input.seed) ||
+    if (!keysAre(input, oldVersion ? commonKeys : [...commonKeys, 'reading', 'reviews', ...(legacy ? [] : ['resolved', 'pages']), ...(parallel ? ['chapterProgress', 'bonus'] : [])])) return null;
+    if ((!legacy && !previousPages && !parallel && input.version !== 5) || input.editionId !== corpus.edition.id || !validSeed(input.seed) ||
       typeof input.started !== 'boolean' || !integerIn(input.cursor, 0, units.length - 1) ||
-      !integerIn(input.completed, 0, units.length) || input.cursor > input.completed ||
+      !integerIn(input.completed, 0, units.length) || (!parallel && input.cursor > input.completed) ||
       !validDate(input.updatedAt)) return null;
     if (typeof input.scroll !== 'number' || !Number.isFinite(input.scroll) || input.scroll < 0 || input.scroll > 10_000_000) return null;
+    const savedCursor = input.cursor;
+    const savedCompleted = input.completed;
+    const chapterProgress: Record<string, ChapterProgress> = {};
+    if (parallel && (!record(input.chapterProgress) || !keysAre(input.chapterProgress, corpus.chapters.map(chapter => chapter.id)))) return null;
+    for (const chapter of corpus.chapters) {
+      const selected = units.filter(unit => unit.chapter.id === chapter.id);
+      const first = selected[0].index;
+      const active: boolean = units[savedCursor].chapter.id === chapter.id;
+      const completed = Math.max(0, Math.min(selected.length, savedCompleted - first));
+      const progress: unknown = parallel ? (input.chapterProgress as Record<string, unknown>)[chapter.id] : {
+        completed, cursor: active ? input.cursor : selected[Math.min(completed, selected.length - 1)].index,
+        started: completed > 0 || (active && input.started), scroll: active && !previousPages ? input.scroll : 0,
+      };
+      if (!record(progress) || !keysAre(progress, ['completed', 'cursor', 'started', 'scroll']) ||
+        !integerIn(progress.completed, 0, selected.length) ||
+        !integerIn(progress.cursor, first, first + Math.min(progress.completed, selected.length - 1)) ||
+        typeof progress.started !== 'boolean' || typeof progress.scroll !== 'number' ||
+        !Number.isFinite(progress.scroll) || progress.scroll < 0 || progress.scroll > 10_000_000 ||
+        (!progress.started && (progress.completed !== 0 || progress.cursor !== first || progress.scroll !== 0)) ||
+        (active && progress.cursor !== input.cursor)) return null;
+      chapterProgress[chapter.id] = { completed: progress.completed, cursor: progress.cursor, started: progress.started, scroll: progress.scroll };
+    }
+    if (Object.values(chapterProgress).reduce((sum, progress) => sum + progress.completed, 0) !== input.completed) return null;
+    const accessible = (index: number) => {
+      if (!parallel) return index <= savedCompleted;
+      const unit = units[index];
+      return chapterProgress[unit.chapter.id].started && localUnitIndex(unit) <= chapterProgress[unit.chapter.id].completed;
+    };
+    const complete = (index: number) => localUnitIndex(units[index]) < chapterProgress[units[index].chapter.id].completed;
+    if (parallel && input.started && !accessible(input.cursor)) return null;
     if (!record(input.settings) || !keysAre(input.settings, ['fontSize', 'theme']) ||
       !integerIn(input.settings.fontSize, 14, 32) || !['paper', 'night'].includes(input.settings.theme as string)) return null;
     if (!Array.isArray(input.hints) || input.hints.length > questions.size ||
@@ -113,14 +215,14 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
     for (const id of input.hints) {
       if (typeof id !== 'string' || hints.has(id)) return null;
       const question = questions.get(id);
-      if (!question || question.index > input.completed) return null;
+      if (!question || !accessible(question.index)) return null;
       hints.add(id);
     }
     const bookmarks = new Set<string>();
     for (const id of input.bookmarks) {
       if (typeof id !== 'string' || bookmarks.has(id)) return null;
       const index = unitIds.get(id);
-      if (index === undefined || index > input.completed) return null;
+      if (index === undefined || !accessible(index)) return null;
       bookmarks.add(id);
     }
     const answers: Record<string, Answer> = {};
@@ -128,7 +230,7 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
       if (typeof id !== 'string') return null;
       const known = questions.get(id);
       const answer = input.answers[id];
-      if (!known || known.index > input.completed || !record(answer) ||
+      if (!known || !accessible(known.index) || !record(answer) ||
         !keysAre(answer, ['choiceId', 'hinted', 'at']) || typeof answer.hinted !== 'boolean' ||
         answer.hinted !== hints.has(id) || !validDate(answer.at) || answer.at > input.updatedAt ||
         !(answer.choiceId === null || known.question.options.some(option => option.id === answer.choiceId))) return null;
@@ -147,7 +249,7 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
     for (const [id, answer] of Object.entries(answers)) {
       if (answer.choiceId === questions.get(id)!.question.correctId && !resolved.has(id)) return null;
     }
-    for (const unit of units.slice(0, input.completed)) {
+    for (const unit of units.filter(unit => complete(unit.index))) {
       if (unit.question && !resolved.has(unit.question.id)) return null;
     }
     const migratedPositions: Record<string, ReadingPosition> = {};
@@ -174,13 +276,13 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
       if (typeof id !== 'string') return null;
       const index = unitIds.get(id);
       const position = reading.positions[id];
-      if (index === undefined || index > input.completed || !record(position) ||
+      if (index === undefined || !accessible(index) || !record(position) ||
         !keysAre(position, ['before', 'after'])) return null;
       const unit = units[index];
       const limits = readingLimits(unit);
       if (!integerIn(position.before, Math.min(1, limits.before), limits.before) ||
         !integerIn(position.after, Math.min(1, limits.after), limits.after)) return null;
-      if (index < input.completed && (position.before !== limits.before || position.after !== limits.after)) return null;
+      if (complete(index) && (position.before !== limits.before || position.after !== limits.after)) return null;
       if (unit.question && !resolved.has(unit.question.id) && position.after > Math.min(1, limits.after)) return null;
       if (unit.question && own(answers, unit.question.id) && position.before !== limits.before) return null;
       Object.defineProperty(positions, id, {
@@ -193,7 +295,7 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
       if (typeof id !== 'string') return null;
       const known = questions.get(id);
       const review = reviewInput[id];
-      if (!known || !own(answers, id) || known.index > input.completed || !record(review) ||
+      if (!known || !own(answers, id) || !accessible(known.index) || !record(review) ||
         !keysAre(review, ['attempts', 'correct', 'lastChoiceId', 'at']) ||
         !integerIn(review.attempts, 1, 1_000_000) || !integerIn(review.correct, 0, review.attempts) ||
         !validDate(review.at) || review.at < answers[id].at || review.at > input.updatedAt ||
@@ -211,7 +313,7 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
     for (const id of Reflect.ownKeys(pageInput)) {
       if (typeof id !== 'string') return null;
       const index = unitIds.get(id);
-      if (index === undefined || index > input.completed) return null;
+      if (index === undefined || !accessible(index)) return null;
       const unit = units[index];
       const unitPages = previousPages ? makeVersion4ReadingPages(unit) : makeReadingPages(unit);
       const position = pageInput[id];
@@ -223,16 +325,18 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
         enumerable: true, configurable: true, writable: true,
       });
     }
-    if (!input.started && (input.cursor !== 0 || input.completed !== 0 || Object.keys(answers).length ||
+    if (!input.started && (Object.values(chapterProgress).some(progress => progress.started) || input.cursor !== 0 || input.completed !== 0 || Object.keys(answers).length ||
       hints.size || bookmarks.size || Object.keys(positions).length || Object.keys(reviews).length ||
       resolved.size || Object.keys(pages).length || input.scroll !== 0)) return null;
     const result: Save = {
-      version: 5,
+      version: 6,
       editionId: corpus.edition.id,
       seed: input.seed,
       started: input.started,
       cursor: input.cursor,
       completed: input.completed,
+      chapterProgress,
+      bonus: { cursor: 0, completed: false, choices: {}, visited: {} },
       answers,
       resolved: [...resolved],
       pages,
@@ -248,6 +352,33 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
     if (legacy && result.started) {
       const current = units[result.cursor];
       result.pages[current.id] = migratedPagePosition(result, current);
+    }
+    if (parallel) {
+      const bonus = input.bonus;
+      if (!record(bonus) || !keysAre(bonus, ['cursor', 'completed', 'choices', 'visited']) ||
+        !integerIn(bonus.cursor, 0, BONUS_SCENE_IDS.length - 1) || typeof bonus.completed !== 'boolean' ||
+        !record(bonus.choices) || !record(bonus.visited) ||
+        Reflect.ownKeys(bonus.choices).length > BONUS_SCENE_IDS.length ||
+        Reflect.ownKeys(bonus.visited).length !== Reflect.ownKeys(bonus.choices).length) return null;
+      const choiceIds = Reflect.ownKeys(bonus.choices);
+      const choiceCount = choiceIds.length;
+      if (!keysAre(bonus.choices, BONUS_SCENE_IDS.slice(0, choiceCount)) ||
+        !keysAre(bonus.visited, BONUS_SCENE_IDS.slice(0, choiceCount)) ||
+        bonus.cursor > Math.min(choiceCount, BONUS_SCENE_IDS.length - 1) ||
+        (bonus.completed && choiceCount !== BONUS_SCENE_IDS.length) ||
+        (!allChaptersComplete(result, units) && (choiceCount || bonus.cursor !== 0 || bonus.completed))) return null;
+      const choices: Record<string, string> = {};
+      const visited: Record<string, string[]> = {};
+      for (const id of BONUS_SCENE_IDS.slice(0, choiceCount)) {
+        const choice = bonus.choices[id];
+        const seen = bonus.visited[id];
+        if (typeof choice !== 'string' || !['a', 'b', 'c'].includes(choice) || !Array.isArray(seen) ||
+          seen.length < 1 || seen.length > 3 || new Set(seen).size !== seen.length || seen[0] !== choice ||
+          seen.some(item => typeof item !== 'string' || !['a', 'b', 'c'].includes(item))) return null;
+        choices[id] = choice;
+        visited[id] = [...seen];
+      }
+      result.bonus = { cursor: bonus.cursor, completed: bonus.completed, choices, visited };
     }
     return result;
   } catch {
@@ -277,7 +408,7 @@ export function orderedOptions(question: Question, seed: string): Option[] {
 }
 
 function assertCurrentUnit(save: Save, unit: ReadingUnit) {
-  if (!Number.isInteger(unit.index) || unit.index < 0 || unit.index !== save.cursor || unit.index > save.completed) {
+  if (!Number.isInteger(unit.index) || unit.index < 0 || unit.index !== save.cursor || !isUnitAccessible(save, unit)) {
     throw new Error('只能回答当前已经开放的阅读单元。');
   }
 }
@@ -363,6 +494,7 @@ export function setPagePosition(save: Save, unit: ReadingUnit, page: number): Sa
     previous.before === before && previous.after === after && save.scroll === 0) return save;
   return {
     ...save, started: true,
+    chapterProgress: activeProgress(save, unit, 0),
     pages: { ...save.pages, [unit.id]: page },
     reading: { ...save.reading, positions: { ...save.reading.positions, [unit.id]: { before, after } } },
     scroll: 0, updatedAt: new Date().toISOString(),
@@ -372,7 +504,7 @@ export function setPagePosition(save: Save, unit: ReadingUnit, page: number): Sa
 export function readingPosition(save: Save, unit: ReadingUnit): ReadingPosition {
   const limits = readingLimits(unit);
   if (own(save.reading.positions, unit.id)) return { ...save.reading.positions[unit.id] };
-  if (unit.index < save.completed) return limits;
+  if (isUnitComplete(save, unit)) return limits;
   return {
     before: unit.question && own(save.answers, unit.question.id) ? limits.before : Math.min(1, limits.before),
     after: Math.min(1, limits.after),
@@ -392,6 +524,7 @@ export function setReadingPosition(save: Save, unit: ReadingUnit, side: 'before'
   return {
     ...save,
     started: true,
+    chapterProgress: activeProgress(save, unit),
     reading: { ...save.reading, positions: { ...save.reading.positions, [unit.id]: { ...previous, [side]: count } } },
     updatedAt: new Date().toISOString(),
   };
@@ -410,7 +543,7 @@ export function setReadingMode(save: Save, mode: ReadingMode, unit?: ReadingUnit
       : readingPosition(save, unit).after;
     positions = { ...positions, [unit.id]: { before: limits.before, after } };
   }
-  return { ...save, reading: { ...save.reading, mode, positions }, updatedAt: new Date().toISOString() };
+  return { ...save, ...(save.started && unit ? { chapterProgress: activeProgress(save, unit) } : {}), reading: { ...save.reading, mode, positions }, updatedAt: new Date().toISOString() };
 }
 
 export function submitAnswer(save: Save, unit: ReadingUnit, choiceId: string | null): Save {
@@ -431,6 +564,7 @@ export function submitAnswer(save: Save, unit: ReadingUnit, choiceId: string | n
   return {
     ...save,
     started: true,
+    chapterProgress: activeProgress(save, unit),
     answers: own(save.answers, question.id) ? save.answers :
       { ...save.answers, [question.id]: { choiceId, hinted: save.hints.includes(question.id), at: now } },
     resolved: choiceId === question.correctId ? [...save.resolved, question.id] : save.resolved,
@@ -445,23 +579,30 @@ export function useHint(save: Save, unit: ReadingUnit): Save {
   assertCurrentUnit(save, unit);
   const question = unit.question;
   if (!question || own(save.answers, question.id) || save.hints.includes(question.id)) return save;
-  return { ...save, started: true, hints: [...save.hints, question.id], updatedAt: new Date().toISOString() };
+  return { ...save, started: true, chapterProgress: activeProgress(save, unit), hints: [...save.hints, question.id], updatedAt: new Date().toISOString() };
 }
 
 export function advance(save: Save, units: readonly ReadingUnit[]): Save {
-  if (!integerIn(save.cursor, 0, units.length - 1) || !integerIn(save.completed, 0, units.length) || save.cursor > save.completed) return save;
+  if (!integerIn(save.cursor, 0, units.length - 1) || !integerIn(save.completed, 0, units.length)) return save;
   const unit = units[save.cursor];
+  if (!isUnitAccessible(save, unit)) return save;
   if (unit.question && !isQuestionResolved(save, unit.question)) return save;
   if (own(save.pages, unit.id) && save.pages[unit.id] < makeReadingPages(unit).length - 1) return save;
   const position = readingPosition(save, unit);
   const limits = readingLimits(unit);
   if (save.reading.mode === 'step' && (position.before < limits.before || position.after < limits.after)) return save;
-  if (save.completed === units.length && save.cursor === units.length - 1) return save;
+  const progress = getChapterProgress(save, unit.chapter.id);
+  const local = localUnitIndex(unit);
+  const count = chapterUnits(unit).length;
+  if (progress.completed === count && local === count - 1) return save;
+  const completed = Math.max(progress.completed, local + 1);
+  const cursor = local === count - 1 ? unit.index : unit.index + 1;
   return {
     ...save,
     started: true,
-    cursor: Math.min(save.cursor + 1, units.length - 1),
-    completed: Math.max(save.completed, save.cursor + 1),
+    cursor,
+    completed: save.completed + completed - progress.completed,
+    chapterProgress: { ...save.chapterProgress, [unit.chapter.id]: { completed, cursor, started: true, scroll: 0 } },
     reading: { ...save.reading, positions: { ...save.reading.positions, [unit.id]: limits } },
     scroll: 0,
     updatedAt: new Date().toISOString(),
@@ -469,8 +610,13 @@ export function advance(save: Save, units: readonly ReadingUnit[]): Save {
 }
 
 export function navigate(save: Save, units: readonly ReadingUnit[], index: number): Save {
-  if (!integerIn(index, 0, units.length - 1) || index > save.completed) return save;
-  return { ...save, cursor: index, scroll: 0, updatedAt: new Date().toISOString() };
+  if (!integerIn(index, 0, units.length - 1) || !isUnitAccessible(save, units[index])) return save;
+  const unit = units[index];
+  const current = units[save.cursor];
+  const outgoing = current && save.started ? activeProgress(save, current) : save.chapterProgress;
+  return { ...save, started: true, cursor: index, scroll: 0,
+    chapterProgress: { ...outgoing, [unit.chapter.id]: { ...getChapterProgress(save, unit.chapter.id), cursor: index, started: true, scroll: 0 } },
+    updatedAt: new Date().toISOString() };
 }
 
 export function chapterStats(chapter: Chapter, save: Save) {
@@ -490,7 +636,7 @@ export function chapterStats(chapter: Chapter, save: Save) {
 export function recordReview(save: Save, units: readonly ReadingUnit[], questionId: string, choiceId: string | null): Save {
   const unit = units.find(current => current.question?.id === questionId);
   const question = unit?.question;
-  if (!unit || !question || unit.index > save.completed || !own(save.answers, questionId)) {
+  if (!unit || !question || !isUnitAccessible(save, unit) || !own(save.answers, questionId)) {
     throw new Error('只能重温已经作答的问题。');
   }
   if (choiceId !== null && !question.options.some(option => option.id === choiceId)) {
@@ -518,7 +664,7 @@ function needsReview(save: Save, question: Question): boolean {
 
 export function reviewQueue(units: readonly ReadingUnit[], save: Save, limit = 5, chapterId?: string): string[] {
   if (!Number.isInteger(limit) || limit <= 0) return [];
-  const candidates = units.filter(unit => unit.index <= save.completed && unit.question &&
+  const candidates = units.filter(unit => isUnitAccessible(save, unit) && unit.question &&
     own(save.answers, unit.question.id) && (chapterId === undefined || unit.chapter.id === chapterId));
   candidates.sort((left, right) => {
     const first = left.question!;

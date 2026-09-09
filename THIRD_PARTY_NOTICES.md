@@ -16,7 +16,11 @@
 
 ## 程序与依赖
 
-新增 `reader-public/illustrations/` 为本项目通过内置图像生成工具制作的彩色漫画场景，并非原书插图；创作约束、提示词与文件清单见 [docs/art-direction.md](docs/art-direction.md)。新增 `reader-public/audio/feedback/` 为微软在线语音服务 `zh-CN-XiaoxiaoNeural` 生成的141条编辑解释录音；精确文本、声线与文件校验见该目录的 `manifest.json`。它们不包含旧剧情角色配音，亦不表示原译者或出版方参与制作。
+`reader-public/illustrations/` 中的60幅主篇漫画及 `reader-public/illustrations/bonus/` 中的12幅隐藏章节漫画，均由本项目通过内置图像生成工具制作，并非原书插图；创作约束、提示词与文件清单见 [docs/art-direction.md](docs/art-direction.md)。
+
+`reader-public/audio/feedback/` 为微软在线语音服务 `zh-CN-XiaoxiaoNeural` 生成的141条编辑解释录音；`reader-public/audio/completion/` 另含1条八章完成祝贺。精确文本、声线与文件校验分别见两目录的 `manifest.json`。声音材料不包含旧剧情角色配音，亦不表示原译者或出版方参与制作。
+
+`content/bonus/death.json` 是本项目依据柏拉图《申辩篇》《克里同篇》《斐多篇》另作的中文戏剧化改编，包含场景对白、探索选项、回应及札记。它不属于郭斌和、张竹明《理想国》译文。参考底本主要是 Benjamin Jowett 历史英译，并辅助核对 Perseus 和 Harvard Center for Hellenic Studies 的原作段落；逐幕出处和材料使用方式见 [docs/death-sources.md](docs/death-sources.md)。网站链接用于追溯来源，不表示相关机构为本游戏背书。
 
 原创阅读引擎、界面代码和几何图标采用 [MIT](LICENSE)。依赖按 `pnpm-lock.yaml` 的锁定版本保留原许可：React / React DOM 为 MIT；Lucide 为 ISC，承继的 Feather 图标保留 MIT；Vite 为 MIT；TypeScript 为 Apache-2.0。
 

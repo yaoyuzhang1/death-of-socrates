@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync, readdirSync, existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {flattenCorpus, createSave, submitAnswer, advance, validateSave, setReadingMode, setPagePosition, pagePosition} from '../src/reader/engine.ts';
+import {flattenCorpus, createSave, submitAnswer, advance, validateSave, setReadingMode, setPagePosition, pagePosition, enterChapter} from '../src/reader/engine.ts';
 import {makeReadingPages} from '../src/reader/pagination.ts';
 import type {Corpus} from '../src/reader/model.ts';
 const read=(path:string)=>JSON.parse(readFileSync(new URL(`../${path}`,import.meta.url),'utf8').replace(/^\uFEFF/,''));
@@ -108,6 +108,7 @@ test('Cross-page passages expose each source page without duplicating the text',
 test('Every source question can be corrected after an initial mistake without changing the complete journey',()=>{
  let save={...setReadingMode(createSave(corpus,'complete-guo-content-test'),'continuous'),started:true};
  for(const [i,unit] of units.entries()) {
+  if(units[save.cursor].chapter.id!==unit.chapter.id)save=enterChapter(save,units,unit.chapter.id);
   assert.equal(save.cursor,i);
   if(unit.question) {
    const wrong=unit.question.options.find(o=>o.id!==unit.question!.correctId)!.id;
@@ -126,6 +127,7 @@ test('The full short-page journey reaches every source page and question with co
  let save=createSave(corpus,'complete-short-page-test');
  const body:string[]=[];
  for(const unit of units) {
+  if(units[save.cursor].chapter.id!==unit.chapter.id)save=enterChapter(save,units,unit.chapter.id);
   assert.equal(save.cursor,unit.index);
   const pages=makeReadingPages(unit);
   for(const [index,page] of pages.entries()) {

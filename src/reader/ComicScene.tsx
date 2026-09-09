@@ -23,7 +23,7 @@ export default function ComicScene({ chapterId, pageId, nextPageId, compact = fa
   return <SceneImage key={assetId} assetId={assetId} scene={scene} compact={compact} />;
 }
 
-function SceneImage({ assetId, scene, compact }: { assetId: string; scene: Scene; compact: boolean }) {
+export function SceneImage({ assetId, scene, compact }: { assetId: string; scene: Scene; compact: boolean }) {
   const [failed, setFailed] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);

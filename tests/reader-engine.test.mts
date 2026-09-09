@@ -6,9 +6,10 @@ import {
   readingBatches, readingPosition, setReadingPosition, setReadingMode,
   recordReview, reviewQueue, progressStats,
   isQuestionResolved, pagePosition, setPagePosition,
+  enterChapter, getChapterProgress, latestUnitIndex, isUnitAccessible, allChaptersComplete, setScrollPosition,
 } from '../src/reader/engine.ts';
 import { makeReadingPages, makeVersion4ReadingPages } from '../src/reader/pagination.ts';
-import type { Corpus, Question, Save, Unit } from '../src/reader/model.ts';
+import { BONUS_SCENE_IDS, type Corpus, type Question, type Save, type Unit } from '../src/reader/model.ts';
 
 function question(id: string): Question {
   return {
@@ -43,9 +44,11 @@ const corpus: Corpus = {
 const units = flattenCorpus(corpus);
 const fresh = () => createSave(corpus, 'repeatable-reader-seed');
 const exported = (save: Save) => JSON.parse(JSON.stringify(save));
+const oldExport = (save: Save) => { const value = exported(save); delete value.chapterProgress; delete value.bonus; return value; };
 function complete(choices: (string | null)[] = ['q1-context', 'q2-compare', 'q3-rule']): Save {
   let save = fresh(); let answer = 0;
   for (const current of units) {
+    if (units[save.cursor].chapter.id !== current.chapter.id) save = enterChapter(save, units, current.chapter.id);
     if (current.question) {
       save = submitAnswer(save, current, choices[answer++]);
       save = submitAnswer(save, current, current.question.correctId);
@@ -69,7 +72,7 @@ test('flattening keeps canonical reading order and chapter/section metadata with
 
 test('fresh saves have a fixed edition and deterministic option seed, and can be imported before starting', () => {
   const save = fresh();
-  assert.equal(save.version, 5);
+  assert.equal(save.version, 6);
   assert.equal(save.editionId, 'reader-fixture-1');
   assert.equal(save.seed, 'repeatable-reader-seed');
   assert.equal(save.started, false);
@@ -177,6 +180,8 @@ test('reaching the last passage requires its answer and completion never moves t
   let save = advance(submitAnswer(fresh(), units[0], 'q1-context'), units);
   save = advance(save, units);
   save = advance(submitAnswer(save, units[2], 'q2-context'), units);
+  assert.equal(save.cursor, 2, 'completing a chapter stays on its final unit');
+  save = enterChapter(save, units, 'wealth');
   assert.equal(save.cursor, 3);
   assert.equal(save.completed, 3);
   assert.equal(advance(save, units), save);
@@ -208,6 +213,7 @@ test('chapter statistics distinguish completion, matching the original, direct r
   save = advance(advance(save, units), units);
   save = submitAnswer(save, units[2], null);
   save = advance(submitAnswer(save, units[2], 'q2-context'), units);
+  save = enterChapter(save, units, 'wealth');
   save = advance(submitAnswer(save, units[3], 'q3-rule'), units);
   assert.deepEqual(chapterStats(corpus.chapters[0], save), { total: 2, answered: 2, correct: 1, revealed: 1, hinted: 1 });
   assert.deepEqual(chapterStats(corpus.chapters[1], save), { total: 1, answered: 1, correct: 0, revealed: 0, hinted: 0 });
@@ -327,7 +333,7 @@ test('reading batches retain complete source paragraphs and exact order, includi
 
 test('version 2 import migrates without changing the edition, cursor, first answers, seed or old settings', () => {
   const current = navigate(complete(), units, 1);
-  const legacy = exported(current);
+  const legacy = oldExport(current);
   legacy.version = 2;
   delete legacy.resolved;
   delete legacy.pages;
@@ -335,7 +341,7 @@ test('version 2 import migrates without changing the edition, cursor, first answ
   delete legacy.reviews;
   const restored = validateSave(legacy, corpus)!;
   assert.ok(restored);
-  assert.equal(restored.version, 5);
+  assert.equal(restored.version, 6);
   assert.deepEqual(restored.resolved, Object.keys(legacy.answers));
   for (const key of ['editionId', 'seed', 'started', 'cursor', 'completed', 'answers', 'hints', 'bookmarks', 'scroll', 'settings', 'updatedAt']) {
     assert.deepEqual(restored[key as keyof Save], legacy[key]);
@@ -351,7 +357,7 @@ test('version 2 import migrates without changing the edition, cursor, first answ
   const sourceUnits = flattenCorpus(source);
   let longSave = setReadingMode(createSave(source, 'legacy-seed'), 'continuous');
   longSave = submitAnswer(longSave, sourceUnits[0], 'q1-rule');
-  const unfinished = exported(longSave);
+  const unfinished = oldExport(longSave);
   unfinished.version = 2;
   delete unfinished.resolved;
   delete unfinished.pages;
@@ -359,7 +365,7 @@ test('version 2 import migrates without changing the edition, cursor, first answ
   delete unfinished.reviews;
   assert.deepEqual(readingPosition(validateSave(unfinished, source)!, sourceUnits[0]), { before: 3, after: 3 });
   longSave = advance(submitAnswer(longSave, sourceUnits[0], 'q1-context'), sourceUnits);
-  const finished = exported(longSave);
+  const finished = oldExport(longSave);
   finished.version = 2;
   delete finished.resolved;
   delete finished.pages;
@@ -367,7 +373,7 @@ test('version 2 import migrates without changing the edition, cursor, first answ
   delete finished.reviews;
   assert.deepEqual(readingPosition(validateSave(finished, source)!, sourceUnits[0]), { before: 3, after: 3 });
 
-  const unanswered = exported(createSave(source, 'legacy-unanswered'));
+  const unanswered = oldExport(createSave(source, 'legacy-unanswered'));
   unanswered.version = 2;
   delete unanswered.resolved;
   delete unanswered.pages;
@@ -602,7 +608,7 @@ test('version 3 migration preserves all historical answers as resolved and maps 
   const current = flattenCorpus(source)[0];
   let save = setReadingMode(createSave(source, 'old-v3-boundary'), 'continuous');
   save = submitAnswer(save, current, 'q1-rule');
-  const legacy = exported(save);
+  const legacy = oldExport(save);
   legacy.version = 3;
   delete legacy.resolved;
   delete legacy.pages;
@@ -610,7 +616,7 @@ test('version 3 migration preserves all historical answers as resolved and maps 
   legacy.scroll = 924;
   const restored = validateSave(legacy, source)!;
   assert.ok(restored);
-  assert.equal(restored.version, 5);
+  assert.equal(restored.version, 6);
   assert.deepEqual(restored.answers, legacy.answers);
   assert.deepEqual(restored.resolved, ['q1']);
   assert.equal(restored.cursor, legacy.cursor);
@@ -622,7 +628,7 @@ test('version 3 migration preserves all historical answers as resolved and maps 
   assert.deepEqual(validateSave(exported(restored), source), restored);
   assert.equal(validateSave({ ...legacy, resolved: [] }, source), null);
 
-  const historical = exported(complete(['q1-rule', null, 'q3-context']));
+  const historical = oldExport(complete(['q1-rule', null, 'q3-context']));
   historical.version = 3;
   delete historical.resolved;
   delete historical.pages;
@@ -644,10 +650,10 @@ test('version 4 page migration retains source location and unresolved gates befo
     [initial, 0], [initial, 1], [initial, oldQuestion - 1],
     [wrong, oldQuestion], [corrected, oldQuestion + 1], [corrected, oldPages.length - 1],
   ] as const) {
-    const snapshot = { ...exported(base), version: 4, pages: { u1: oldIndex }, scroll: 683 };
+    const snapshot = { ...oldExport(base), version: 4, pages: { u1: oldIndex }, scroll: 683 };
     const restored = validateSave(snapshot, source)!;
     assert.ok(restored, String(oldIndex));
-    assert.equal(restored.version, 5);
+    assert.equal(restored.version, 6);
     assert.equal(restored.cursor, snapshot.cursor);
     assert.equal(restored.completed, snapshot.completed);
     assert.equal(restored.seed, snapshot.seed);
@@ -672,11 +678,11 @@ test('version 4 page migration retains source location and unresolved gates befo
     }
     assert.deepEqual(validateSave(exported(restored), source), restored, 'migration is applied once');
   }
-  const wrongSnapshot = { ...exported(wrong), version: 4 };
+  const wrongSnapshot = { ...oldExport(wrong), version: 4 };
   assert.equal(validateSave({ ...wrongSnapshot, pages: { u1: oldQuestion + 1 } }, source), null);
   assert.equal(validateSave({ ...wrongSnapshot, pages: { u1: oldPages.length } }, source), null);
 
-  const oldEnd = { ...exported(corrected), version: 4, pages: { u1: oldPages.length - 1 },
+  const oldEnd = { ...oldExport(corrected), version: 4, pages: { u1: oldPages.length - 1 },
     reading: { mode: 'step', positions: { u1: { before: 3, after: 3 } } } };
   assert.ok(oldEnd.pages.u1 >= pages.length, 'fixture exercises an old page number outside the new range');
   const atEnd = validateSave(oldEnd, source)!;
@@ -758,4 +764,189 @@ test('short-page validation rejects unopened pages, invalid resolutions, future 
   assert.deepEqual(correct.resolved, ['q1']);
   for (const invalid of [-1, .5, Infinity, NaN, 99_999]) assert.throws(() => setPagePosition(correct, current, invalid));
   assert.throws(() => setPagePosition(correct, sourceUnits[1], 0));
+});
+
+function eightChapterCorpus(): Corpus {
+  return { ...corpus, edition: { ...corpus.edition, id: 'parallel-eight' }, chapters: Array.from({ length: 8 }, (_, i) => ({
+    ...corpus.chapters[0], id: `chapter-${i + 1}`, title: `第${i + 1}章`, sections: [{
+      id: `section-${i + 1}`, title: '本章讨论', range: '', units: [
+        { ...unit(`chapter-${i + 1}-a`, question(`chapter-${i + 1}-q`)), paragraphs: [
+          { id: `chapter-${i + 1}-long`, text: '苏：请继续看看这段讨论。'.repeat(100) },
+        ] },
+        unit(`chapter-${i + 1}-b`),
+      ],
+    }],
+  })) };
+}
+
+function finishChapter(save: Save, source: Corpus, chapterId: string): Save {
+  const selected = flattenCorpus(source);
+  save = enterChapter(save, selected, chapterId);
+  for (const current of selected.filter(u => u.chapter.id === chapterId)) {
+    save = navigate(save, selected, current.index);
+    const pages = makeReadingPages(current);
+    for (const [index, page] of pages.entries()) {
+      save = setPagePosition(save, current, index);
+      if (page.kind === 'question') save = submitAnswer(save, current, page.question.correctId);
+    }
+    save = advance(save, selected);
+  }
+  return save;
+}
+
+test('all eight chapters start independently and switching restores each chapter page, scroll and first-answer records', () => {
+  const source = eightChapterCorpus();
+  const selected = flattenCorpus(source);
+  const eighth = selected[14];
+  const first = selected[0];
+  let save = createSave(source, 'independent-chapter-resume');
+  for (const current of selected) assert.equal(isUnitAccessible(save, current), current.index % 2 === 0);
+  save = enterChapter(save, selected, 'chapter-8');
+  assert.equal(save.cursor, 14);
+  assert.equal(getChapterProgress(save, 'chapter-1').started, false);
+  assert.equal(save.completed, 0);
+  save = setPagePosition(save, eighth, 1);
+  save = setScrollPosition(save, eighth, 437);
+  const eighthSnapshot = structuredClone(save.chapterProgress['chapter-8']);
+  save = enterChapter(save, selected, 'chapter-1');
+  assert.equal(save.cursor, 0);
+  assert.equal(save.scroll, 0);
+  save = setPagePosition(save, first, makeReadingPages(first).findIndex(page => page.kind === 'question'));
+  save = useHint(save, first);
+  save = submitAnswer(save, first, first.question!.options[1].id);
+  const firstAnswer = structuredClone(save.answers[first.question!.id]);
+  save = setScrollPosition({ ...save, bookmarks: [first.id] }, first, 619);
+  save = enterChapter(save, selected, 'chapter-8');
+  assert.equal(save.cursor, 14);
+  assert.equal(save.scroll, 437);
+  assert.equal(pagePosition(save, eighth), 1);
+  assert.deepEqual(save.chapterProgress['chapter-8'], eighthSnapshot);
+  save = validateSave(exported(save), source)!;
+  assert.ok(save);
+  save = enterChapter(save, selected, 'chapter-1');
+  assert.equal(save.scroll, 619);
+  assert.equal(makeReadingPages(first)[pagePosition(save, first)].kind, 'question');
+  assert.deepEqual(save.answers[first.question!.id], firstAnswer);
+  assert.deepEqual(save.hints, [first.question!.id]);
+  assert.deepEqual(save.bookmarks, [first.id]);
+  assert.equal(isQuestionResolved(save, first.question!), false);
+  assert.equal(advance(save, selected), save);
+  const isolatedProgress = getChapterProgress(save, 'chapter-8');
+  isolatedProgress.completed = 99;
+  assert.equal(save.chapterProgress['chapter-8'].completed, 0);
+});
+
+test('chapter-local completion works in an arbitrary order and finishing the eighth-numbered chapter alone does not unlock the finale', () => {
+  const source = eightChapterCorpus();
+  const selected = flattenCorpus(source);
+  let save = createSave(source, 'permuted-completion');
+  const order = [8, 3, 1, 6, 2, 7, 4, 5];
+  for (const [position, number] of order.entries()) {
+    const id = `chapter-${number}`;
+    save = finishChapter(save, source, id);
+    assert.equal(save.cursor, number * 2 - 1, 'completion stays within that chapter');
+    assert.equal(save.completed, (position + 1) * 2);
+    assert.equal(getChapterProgress(save, id).completed, 2);
+    assert.equal(latestUnitIndex(save, selected, id), number * 2 - 1);
+    assert.equal(allChaptersComplete(save, selected), position === 7);
+    assert.deepEqual(validateSave(exported(save), source), save);
+    assert.equal(advance(save, selected), save, 'finishing an already completed last unit is idempotent');
+  }
+  const firstRecords = structuredClone(save.answers);
+  save = enterChapter(save, selected, 'chapter-8');
+  save = navigate(save, selected, 14);
+  save = recordReview(save, selected, selected[14].question!.id, selected[14].question!.options[2].id);
+  assert.deepEqual(save.answers, firstRecords);
+  assert.equal(save.completed, 16);
+  assert.equal(allChaptersComplete(save, selected), true);
+  assert.deepEqual(reviewQueue(selected, save, 5, 'chapter-8'), [selected[14].question!.id]);
+  assert.deepEqual(validateSave(exported(save), source), save);
+});
+
+test('a chapter cannot skip its own unopened units or reuse another chapter progress to bypass a wrong answer', () => {
+  const source = eightChapterCorpus();
+  const selected = flattenCorpus(source);
+  let save = finishChapter(createSave(source, 'chapter-gates'), source, 'chapter-1');
+  save = enterChapter(save, selected, 'chapter-8');
+  const eighth = selected[14];
+  const questionPage = makeReadingPages(eighth).findIndex(page => page.kind === 'question');
+  save = setPagePosition(save, eighth, questionPage);
+  save = submitAnswer(save, eighth, eighth.question!.options[1].id);
+  assert.equal(navigate(save, selected, 15), save);
+  assert.equal(advance(save, selected), save);
+  assert.throws(() => setPagePosition(save, eighth, questionPage + 1));
+  const original = structuredClone(save);
+  const malformed = [
+    { ...save, completed: 3 },
+    { ...save, cursor: 15 },
+    { ...save, chapterProgress: { ...save.chapterProgress, 'chapter-8': { ...save.chapterProgress['chapter-8'], cursor: 15 } } },
+    { ...save, completed: 3, cursor: 15, chapterProgress: { ...save.chapterProgress, 'chapter-8': { completed: 1, cursor: 15, started: true, scroll: 0 } } },
+    { ...save, chapterProgress: { ...save.chapterProgress, 'chapter-8': { ...save.chapterProgress['chapter-8'], scroll: Infinity } } },
+    { ...save, chapterProgress: { ...save.chapterProgress, unknown: { completed: 0, cursor: 0, started: false, scroll: 0 } } },
+    { ...save, chapterProgress: { ...save.chapterProgress, 'chapter-8': { ...save.chapterProgress['chapter-8'], started: false } } },
+  ];
+  for (const value of malformed) assert.equal(validateSave(value, source), null);
+  assert.deepEqual(save, original);
+  save = enterChapter(save, selected, 'chapter-2');
+  save = enterChapter(validateSave(exported(save), source)!, selected, 'chapter-8');
+  assert.equal(pagePosition(save, eighth), questionPage);
+  assert.equal(isQuestionResolved(save, eighth.question!), false);
+});
+
+test('version 5 prefix migration preserves first answers, all stored pages and reviews while splitting progress by chapter', () => {
+  let save = complete(['q1-rule', null, 'q3-context']);
+  save = navigate(save, units, 0);
+  save = recordReview(save, units, 'q2', 'q2-context');
+  save = setScrollPosition(save, units[0], 745);
+  save = { ...save, bookmarks: ['u1', 'u4'] };
+  const legacy = { ...oldExport(save), version: 5 };
+  const migrated = validateSave(legacy, corpus)!;
+  assert.ok(migrated);
+  for (const key of ['seed', 'cursor', 'completed', 'answers', 'resolved', 'pages', 'reading', 'reviews', 'hints', 'bookmarks', 'scroll', 'settings', 'updatedAt']) {
+    assert.deepEqual(migrated[key as keyof Save], legacy[key]);
+  }
+  assert.deepEqual(migrated.chapterProgress.experience, { completed: 3, cursor: 0, started: true, scroll: 745 });
+  assert.deepEqual(migrated.chapterProgress.wealth, { completed: 1, cursor: 3, started: true, scroll: 0 });
+  const roundTrip = enterChapter(enterChapter(migrated, units, 'wealth'), units, 'experience');
+  assert.equal(roundTrip.cursor, 0);
+  assert.equal(roundTrip.scroll, 745);
+  assert.deepEqual(roundTrip.answers, legacy.answers);
+  assert.deepEqual(validateSave(exported(roundTrip), corpus), roundTrip);
+
+  const partial = advance(submitAnswer(fresh(), units[0], 'q1-context'), units);
+  const partialLegacy = { ...oldExport(partial), version: 5 };
+  const partialMigrated = validateSave(partialLegacy, corpus)!;
+  assert.ok(partialMigrated);
+  assert.deepEqual(partialMigrated.chapterProgress.experience, { completed: 1, cursor: 1, started: true, scroll: 0 });
+  assert.deepEqual(partialMigrated.chapterProgress.wealth, { completed: 0, cursor: 3, started: false, scroll: 0 });
+  assert.deepEqual(enterChapter(partialMigrated, units, 'wealth').answers, partialLegacy.answers);
+});
+
+test('bonus progress is locked until every main chapter is finished and imports preserve bounded sequential exploration', () => {
+  const initial = fresh();
+  const firstScene = BONUS_SCENE_IDS[0];
+  const firstBonus = { cursor: 0, completed: false, choices: { [firstScene]: 'b' }, visited: { [firstScene]: ['b', 'a'] } };
+  assert.equal(validateSave({ ...initial, bonus: firstBonus }, corpus), null);
+  const finished = complete();
+  const started = { ...finished, bonus: firstBonus };
+  assert.deepEqual(validateSave(started, corpus), started);
+  for (const bonus of [
+    { ...firstBonus, cursor: 2 },
+    { ...firstBonus, completed: true },
+    { ...firstBonus, choices: { [BONUS_SCENE_IDS[1]]: 'b' }, visited: { [BONUS_SCENE_IDS[1]]: ['b'] } },
+    { ...firstBonus, visited: { [firstScene]: ['a', 'b'] } },
+    { ...firstBonus, visited: { [firstScene]: ['b', 'b'] } },
+    { ...firstBonus, choices: { [firstScene]: 'd' } },
+  ]) assert.equal(validateSave({ ...finished, bonus }, corpus), null);
+  const completeBonus = { cursor: 11, completed: true,
+    choices: Object.fromEntries(BONUS_SCENE_IDS.map(id => [id, 'c'])),
+    visited: Object.fromEntries(BONUS_SCENE_IDS.map(id => [id, ['c']])),
+  };
+  const saved = { ...finished, bonus: completeBonus };
+  const restored = validateSave(saved, corpus)!;
+  assert.ok(restored);
+  const switched = enterChapter(restored, units, 'experience');
+  assert.deepEqual(switched.bonus, completeBonus);
+  restored.bonus.visited[firstScene].push('a');
+  assert.deepEqual(saved.bonus.visited[firstScene], ['c']);
 });

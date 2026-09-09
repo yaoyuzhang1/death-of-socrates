@@ -59,8 +59,42 @@ test('Every reading page has a verified source-mapped color illustration, and pa
     if (index) assert.notEqual(id, manifest.pages[pages[index - 1].id], `fresh picture on page turn ${page.id}`);
   }
   const names = readdirSync(directory, { recursive: true }).map(String);
-  assert.equal(names.filter(name => name.endsWith('.webp')).length, hashes.size);
+  assert.equal(names.filter(name => name.endsWith('.webp') && !/^bonus[\\/]/.test(name)).length, hashes.size);
   assert.ok(!names.some(name => /\.(png|jpe?g)$/i.test(name)), 'uncompressed originals stay outside the distributed game');
+});
+
+test('The unlocked epilogue has twelve distinct illustrated scenes and verified Mandarin congratulations', () => {
+  const content = JSON.parse(readFileSync(new URL('../content/bonus/death.json', import.meta.url), 'utf8'));
+  const art = JSON.parse(readFileSync(new URL('../content/art/bonus-art.json', import.meta.url), 'utf8'));
+  assert.equal(content.scenes.length, 12);
+  assert.equal(art.length, 12);
+  assert.deepEqual(content.scenes.map((scene: any) => scene.id), art.map((asset: any) => asset.id));
+  const hashes = new Set<string>();
+  for (const scene of content.scenes) {
+    assert.deepEqual(scene.question.options.map((option: any) => option.id), ['a', 'b', 'c']);
+    assert.ok(scene.sourceRef.length > 5 && new URL(scene.sourceUrl).protocol === 'https:');
+    assert.ok(scene.passages.length > 0 && !('correctId' in scene.question));
+    for (const option of scene.question.options) assert.ok(option.text && option.note && option.response.length > 0);
+    const asset = art.find((asset: any) => asset.id === scene.illustrationId);
+    assert.ok(asset && asset.alt && asset.prompt);
+    assert.equal(asset.file, `bonus/${scene.id}.webp`);
+    const bytes = readFileSync(new URL(`../reader-public/illustrations/${asset.file}`, import.meta.url));
+    assert.equal(bytes.subarray(0, 4).toString(), 'RIFF');
+    assert.equal(bytes.subarray(8, 12).toString(), 'WEBP');
+    assert.ok(bytes.length > 10_000 && bytes.length < 1_000_000);
+    assert.ok(!hashes.has(sha(bytes)), scene.id);
+    hashes.add(sha(bytes));
+  }
+  const audioDir = new URL('../reader-public/audio/completion/', import.meta.url);
+  const manifest = JSON.parse(readFileSync(new URL('manifest.json', audioDir), 'utf8'));
+  assert.equal(manifest.language, 'zh-CN');
+  assert.equal(manifest.voice, 'zh-CN-XiaoxiaoNeural');
+  assert.equal(manifest.textSha256, sha(manifest.text));
+  assert.ok(manifest.text.includes('恭喜你') && manifest.text.includes('隐藏章节《苏格拉底之死》已经开启'));
+  const bytes = readFileSync(new URL(manifest.filename, audioDir));
+  assert.equal(bytes.length, manifest.bytes);
+  assert.equal(sha(bytes), manifest.sha256);
+  assert.ok(manifest.durationSeconds > 10 && manifest.durationSeconds < 60);
 });
 
 test('Illustrated examples are only assigned inside their source range and source section', () => {
