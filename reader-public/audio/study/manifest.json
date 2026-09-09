@@ -2,7 +2,7 @@
   "version": 1,
   "provider": "Microsoft Edge online TTS",
   "language": "zh-CN",
-  "generatedAt": "2026-09-09T09:47:06.841552+00:00",
+  "generatedAt": "2026-09-09T11:04:26.929323+00:00",
   "expectedCount": 150,
   "complete": true,
   "scriptRule": "Correct: exact check.explanation. Incorrect: exact selected option.feedback. Source arrays: content/learning/checks.json and content/bonus/checks.json. Play only after answer confirmation.",
@@ -22,19 +22,19 @@
       "questionId": "reading-willing-listeners",
       "optionId": "a",
       "correct": true,
-      "text": "这段玩笑把劝说的处境摆了出来：苏格拉底愿意讲理由，对面却表示不肯听。",
-      "textSha256": "1f1c3c06b37c291c18c2469c8cecba6e0327d4266c7ee1c2539cd5618417bd81",
+      "text": "这段玩笑区分了有理由与能展开劝说：面对不愿听的人，理由尚无从被共同考察。这里没有进一步断定哪一方的理由更好。",
+      "textSha256": "5c649840ca426827f84b2dbbebd19621a8552e5ae2634f574e30479093c33884",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-willing-listeners--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 7.44,
-      "frames": 310,
+      "durationSeconds": 11.664,
+      "frames": 486,
       "sampleRates": [
         24000
       ],
-      "bytes": 44640,
-      "sha256": "fcff7637a03c5478ff1611223868bbd42742bb390d2cf7ba20e4666da4e44285"
+      "bytes": 69984,
+      "sha256": "c66c6064f8797245eeb14ca3811927c3dda42c17d8b15e4b60a3a231f5cb9f9f"
     },
     {
       "key": "reading-willing-listeners--b",
@@ -44,19 +44,19 @@
       "questionId": "reading-willing-listeners",
       "optionId": "b",
       "correct": false,
-      "text": "这里争论的是愿不愿听劝，并没有把返程路线当作困难。",
-      "textSha256": "574ef87159fa0e89d6b97a93649be0f7b7e80559cd68f13b094c89be4fc3891f",
+      "text": "人数在前面的强留玩笑中出现；这里即使有理由，也还需要对方愿意听取。",
+      "textSha256": "7401e09ce7bdde3db3551774d3d704514878c3aa40b906d1209b286c759bb2f4",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-willing-listeners--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.616,
-      "frames": 234,
+      "durationSeconds": 7.248,
+      "frames": 302,
       "sampleRates": [
         24000
       ],
-      "bytes": 33696,
-      "sha256": "4dd675c41e99369f8e2c65edbe2b95468d1d52b37ed5ceae4d3505c47891ac75"
+      "bytes": 43488,
+      "sha256": "ddf5133a250b6045de57ad4a9fd0f3aaab3e5cbc36aca2c75a2103827e7267c6"
     },
     {
       "key": "reading-willing-listeners--c",
@@ -66,19 +66,19 @@
       "questionId": "reading-willing-listeners",
       "optionId": "c",
       "correct": false,
-      "text": "比赛是随后挽留他们的理由，并非玻勒马霍斯对劝说提出的困难。",
-      "textSha256": "0aeccb1ee4d5bcec66a884ed38d00362c2334ec705d67c40396f166a6d327ec5",
+      "text": "这注意到了理由的好坏，却漏掉此刻的困难：对方表示根本不愿听取。",
+      "textSha256": "4bd988aff65a719d4e2c3563bbcfcb5b3fbcc03f8cb74985555698b42ff009f7",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-willing-listeners--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.624,
-      "frames": 276,
+      "durationSeconds": 6.768,
+      "frames": 282,
       "sampleRates": [
         24000
       ],
-      "bytes": 39744,
-      "sha256": "7178b27d7b0142d38040b521a851b02b152f01b1cb6c8fd25e4458be3d913092"
+      "bytes": 40608,
+      "sha256": "e6e6aa385f0e4119ecf3974a7a98d944a9ec360c4eabe2f95d3c407942a2ac8d"
     },
     {
       "key": "reading-return-conditions--b",
@@ -88,19 +88,19 @@
       "questionId": "reading-return-conditions",
       "optionId": "b",
       "correct": true,
-      "text": "这段没有抹去欠债关系，而是保留了归还时原主状态这一限制。",
-      "textSha256": "ad6980e64684218a2808a6f6afad58f6417531e0e9cbb0226339f048c7e62252",
+      "text": "他们保留了代管之物是欠债这一点，同时否定在原主头脑不正常时照还。所检验的是还债是否在所有条件下都正当，不是改判物品归谁所有。",
+      "textSha256": "523fbd4910da043914b050243777f1773b9f982845431c5ea1f2abca66587519",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-return-conditions--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.048,
-      "frames": 252,
+      "durationSeconds": 14.064,
+      "frames": 586,
       "sampleRates": [
         24000
       ],
-      "bytes": 36288,
-      "sha256": "04ed8756478f80794ddb90094a30d1c211ea83bd909022c95ed7e2b5ea3c74fe"
+      "bytes": 84384,
+      "sha256": "63db5838cbeb7d4b78c7ad35dcf301ab0c9732d2005025f7f4dfa226bb5105a8"
     },
     {
       "key": "reading-return-conditions--a",
@@ -132,19 +132,19 @@
       "questionId": "reading-return-conditions",
       "optionId": "c",
       "correct": false,
-      "text": "苏格拉底明确承认代管之物“的确是一种欠债”；争议在归还的情形。",
-      "textSha256": "6280cd5120632a6662ae9cefb92021e3e3c02326aa0cf1d49466471f9b00f957",
+      "text": "双方仍承认代管算是欠债；限制此次归还，并没有取消原来的债务关系。",
+      "textSha256": "09172125a2c4257baef5fe216bef46ebec118e7143587619f60bff6a1b911124",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-return-conditions--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.72,
-      "frames": 280,
+      "durationSeconds": 7.44,
+      "frames": 310,
       "sampleRates": [
         24000
       ],
-      "bytes": 40320,
-      "sha256": "d4341cd86c37a3a892889e9c001b8f91c02c1ceee75738a6d5ef451702c89fb6"
+      "bytes": 44640,
+      "sha256": "97467d666c42e69c9399476c834292e0cccc773419dce214d13acded87f368f6"
     },
     {
       "key": "reading-stronger-definition--c",
@@ -154,19 +154,19 @@
       "questionId": "reading-stronger-definition",
       "optionId": "c",
       "correct": true,
-      "text": "先辨认是谁提出了什么主张，才能接着看苏格拉底怎样检查它；提出定义还不等于已经证明。",
-      "textSha256": "4ad71e642f059662515d0a5ed58b7ea1d6770d7496db366d323b42c67ea709bd",
+      "text": "先分清定义说的是谁的利益，才可能检验它。理解色拉叙马霍斯的主张，不等于已经同意这一主张或确定了强者的含义。",
+      "textSha256": "8794337694012b37b76f4d3f84aff55d31c6a3d35eb89fa5977f0329df4a3193",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-stronger-definition--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.096,
-      "frames": 379,
+      "durationSeconds": 11.592,
+      "frames": 483,
       "sampleRates": [
         24000
       ],
-      "bytes": 54576,
-      "sha256": "a7d842e1739546f6e552cf27e4e559da093e90c245d2b722500530d7b3e0221c"
+      "bytes": 69552,
+      "sha256": "b19b3a4fa90cde7ac941d4960130ba1c9cbc9933282859fdfb93b528c1c2d353"
     },
     {
       "key": "reading-stronger-definition--a",
@@ -176,19 +176,19 @@
       "questionId": "reading-stronger-definition",
       "optionId": "a",
       "correct": false,
-      "text": "感谢是他与苏格拉底先前争执的话题，不是他最后提出的正义定义。",
-      "textSha256": "ebc411c9aab641da5027016488da217ea2116d219f74aac4e7107a29f18d6277",
+      "text": "这把受益者换成了每个行为者；色拉叙马霍斯此处指定的是强者的利益。",
+      "textSha256": "68ddef25804dfdac2274edb73259bd1b681f5e5408acb25179b54723a43182c8",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-stronger-definition--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.48,
-      "frames": 270,
+      "durationSeconds": 7.44,
+      "frames": 310,
       "sampleRates": [
         24000
       ],
-      "bytes": 38880,
-      "sha256": "907579f3b7f858f355b6405e0bec71523384cdaff37d497d63acdf798ea18141"
+      "bytes": 44640,
+      "sha256": "bb405a4fc439570dce24411ecaa1ca9f9f0b9f1926ece0dffba55b69bf8731e0"
     },
     {
       "key": "reading-stronger-definition--b",
@@ -198,19 +198,19 @@
       "questionId": "reading-stronger-definition",
       "optionId": "b",
       "correct": false,
-      "text": "本页定义指向“强者”的利益，没有声称所有人的利益相同。",
-      "textSha256": "6aa770a031d99bd6fa854da135d94e81ff2877de96e2bab2bc142cefa84dd33d",
+      "text": "这个回答改成了共同利益，而当前定义还没有提出所有人都受益的要求。",
+      "textSha256": "4c221a0c67aa3edd92297992d2dae4ac35c710b19247e7f6aff2a1fdbcda196b",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-stronger-definition--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.52,
-      "frames": 230,
+      "durationSeconds": 7.032,
+      "frames": 293,
       "sampleRates": [
         24000
       ],
-      "bytes": 33120,
-      "sha256": "0bf0f947bec03498d51adcbecda9aeecb5558b7d6c8daf1814a85f0a48720123"
+      "bytes": 42192,
+      "sha256": "1693919177af47383e1044bd6ae4e4e7e6369d7f3d6f28d3de06926a1ff81013"
     },
     {
       "key": "reading-craft-object--a",
@@ -220,19 +220,19 @@
       "questionId": "reading-craft-object",
       "optionId": "a",
       "correct": true,
-      "text": "他们把技艺依其本质来讨论：医术照料身体，骑术照料马，技艺服务于它的对象。",
-      "textSha256": "f271a0c52f365af2fd5d1837deba64b4e719e4ffafba40697329188c03d1ec0d",
+      "text": "在双方此刻采用的严格技艺定义下，医术补身体的不足，技艺的对象与技艺自身被分开考察。这一步尚未独自证明现实中的从业者总为他人谋利。",
+      "textSha256": "dfbc1f1903865e62c22e550f4e2df943d7e42abeb27dcad36cdc3a0f914a3449",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-craft-object--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 7.968,
-      "frames": 332,
+      "durationSeconds": 14.4,
+      "frames": 600,
       "sampleRates": [
         24000
       ],
-      "bytes": 47808,
-      "sha256": "9880630053bb08f5ce347a284524b52c0954b5ac024f71c3362575a80f45af43"
+      "bytes": 86400,
+      "sha256": "59ada57b188c5f382f51a02c2439e10e03a48f7efc4b68b1499214078dbe0c2d"
     },
     {
       "key": "reading-craft-object--b",
@@ -264,19 +264,19 @@
       "questionId": "reading-craft-object",
       "optionId": "c",
       "correct": false,
-      "text": "这一页从技艺及其对象来讨论，没有用谁付钱替代身体这一对象。",
-      "textSha256": "ed17ee17f0aad9812b83de43acba00e9bfa387d076017085cb8f47cb57ba2dde",
+      "text": "本段以身体需要医术为例，区分技艺所照料的对象与技艺、从业者自身。",
+      "textSha256": "0333db388bdb5315efa2569827f414ce82047a050751702419f4719aa25473de",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-craft-object--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.624,
-      "frames": 276,
+      "durationSeconds": 7.2,
+      "frames": 300,
       "sampleRates": [
         24000
       ],
-      "bytes": 39744,
-      "sha256": "8f0b80adebf6b84d0789b561cc195ef07ee40084eb12c58364cf410bb13ed7a7"
+      "bytes": 43200,
+      "sha256": "45a299ca098fd30802da93fdedd5a036f7e44911f445b15ced357fc5a577be5f"
     },
     {
       "key": "reading-shepherd-objection--b",
@@ -286,19 +286,19 @@
       "questionId": "reading-shepherd-objection",
       "optionId": "b",
       "correct": true,
-      "text": "比拟的分歧在于活动的受益者：喂肥牛羊的表面照料，是否最终服务于牧人及其主人。",
-      "textSha256": "8164510e7203734196b38744148ec68adf62df1c5a78fa5fd4272acb72facfc1",
+      "text": "反驳保留了照料牛羊这一事实，却重新追问照料最终服务于谁。因此它针对的是技艺与受益者的关系，而非否认牧人会照料动物。",
+      "textSha256": "059c5ceeda95606fc59c04c223d2ecd5ceb10b3e51da7a72331c263b2d66ca63",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-shepherd-objection--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.544,
-      "frames": 356,
+      "durationSeconds": 13.2,
+      "frames": 550,
       "sampleRates": [
         24000
       ],
-      "bytes": 51264,
-      "sha256": "3f37cc6a65a3d1e2a6862c3757dc3e1ba59753ac9ae76ab5a4f47451ca0b65df"
+      "bytes": 79200,
+      "sha256": "221be752ac4ffacd3f2db31bc7844ca586a2c022e847fde61dcc87162d25c5a7"
     },
     {
       "key": "reading-shepherd-objection--a",
@@ -308,19 +308,19 @@
       "questionId": "reading-shepherd-objection",
       "optionId": "a",
       "correct": false,
-      "text": "他反而说统治者日夜操心，争论的是操心为了谁。",
-      "textSha256": "db5011fd622565cc72c7dcdb3b745c2c5392dbd8949cd0824c7ee363aee38110",
+      "text": "他用这个例子质疑的正是从动物得到照料，直接认定照料最终为了动物利益的推断。",
+      "textSha256": "0a56354919a87bd3a47e330bf15cfe85d400015af29a082916db7fddd81a64ce",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-shepherd-objection--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.4,
-      "frames": 225,
+      "durationSeconds": 8.16,
+      "frames": 340,
       "sampleRates": [
         24000
       ],
-      "bytes": 32400,
-      "sha256": "fea5a5905e16bef2ea021ace09e8bd266d281a15e0433505e0a3765efa14f68d"
+      "bytes": 48960,
+      "sha256": "445f46651a1d05f7ede33e9f341c52263c0559de7343ead4ae8bcda98267c7af"
     },
     {
       "key": "reading-shepherd-objection--c",
@@ -330,19 +330,19 @@
       "questionId": "reading-shepherd-objection",
       "optionId": "c",
       "correct": false,
-      "text": "这段承认牛羊被喂养，没有争论牛羊是否需要食物。",
-      "textSha256": "697bcd0493b75ce815c0ea2356ecbcfb4015ce4f7af6cf4a9a34ec4b3564f12e",
+      "text": "他保留牛羊被喂肥这一事实，认为这能服务于牧人或主人；没有把停止照料说成获利条件。",
+      "textSha256": "78a5a38772cefc01588d544980cbdcaab1d797dca66b43d3ced35980935e1e76",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-shepherd-objection--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.592,
-      "frames": 233,
+      "durationSeconds": 9.024,
+      "frames": 376,
       "sampleRates": [
         24000
       ],
-      "bytes": 33552,
-      "sha256": "b0097244a5dfc91d92b371304c862e55736f9012c514b4d4c667f106d5f746ec"
+      "bytes": 54144,
+      "sha256": "a699ab161de60684590f5ebb7f8a0cc59f85881a49a02d8bee66d5e170ee86ed"
     },
     {
       "key": "reading-claim-needs-proof--c",
@@ -352,19 +352,19 @@
       "questionId": "reading-claim-needs-proof",
       "optionId": "c",
       "correct": true,
-      "text": "提出“不正义更有益”以后，仍要说明其理由，因为争论涉及做哪一种人、怎样度过一生。",
-      "textSha256": "792963f1ca6a0667b1ca024c11f4ff501e7d72cf62fa1667e285deafaa2aa368",
+      "text": "苏格拉底说自己仍未被说服，并把争论联系到整个人生该怎样过。要补足的是主张的理由，不能从对方说得坚决直接推出不正义更值得选择。",
+      "textSha256": "314cb59f7505a2ee058eaa0e24dd775beb10f1f42f1c3d8e7b143accc5aadfea",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-claim-needs-proof--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.112,
-      "frames": 338,
+      "durationSeconds": 14.04,
+      "frames": 585,
       "sampleRates": [
         24000
       ],
-      "bytes": 48672,
-      "sha256": "a5571135677d30c6cd4e331c290c4e6193741c33950f565c4c04ed0ff619d09e"
+      "bytes": 84240,
+      "sha256": "2bb843910f40215627967830ace47c2389813c29965f4239232199a59d55488c"
     },
     {
       "key": "reading-claim-needs-proof--a",
@@ -374,19 +374,19 @@
       "questionId": "reading-claim-needs-proof",
       "optionId": "a",
       "correct": false,
-      "text": "苏格拉底说自己仍未被说服，并请求充分证明。",
-      "textSha256": "f1ee02eed0e721811b44775d264f0c252ab43a6107e44be8b68cb188e179c144",
+      "text": "听众的反应不能代替证明；苏格拉底要求对方说明不正义为何值得选择。",
+      "textSha256": "8309edb263319ca06a7dfa7c5e28ade846e5c73f7779066ecf74c550f4a691ca",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-claim-needs-proof--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 4.992,
-      "frames": 208,
+      "durationSeconds": 7.296,
+      "frames": 304,
       "sampleRates": [
         24000
       ],
-      "bytes": 29952,
-      "sha256": "61e60e02218408bb8986c88c27bb7daf80fba70aa8d9b1b8e1d1bc06a756cfd0"
+      "bytes": 43776,
+      "sha256": "2fa4035256547bddfe347633be64396abca631859a01073f7446f8c9ff88db98"
     },
     {
       "key": "reading-claim-needs-proof--b",
@@ -396,19 +396,19 @@
       "questionId": "reading-claim-needs-proof",
       "optionId": "b",
       "correct": false,
-      "text": "他们要他为主张辩护，而不是只把刚才的话再说一次。",
-      "textSha256": "ad940ab27474351f8c7cafaa4315d7e05ca1b332feabf0d09b3d464ff5dfbbf8",
+      "text": "对方提出了明确主张，苏格拉底仍要求给出充分证明，自信不能替代生活选择的依据。",
+      "textSha256": "5bd177d503a4865ab31a130fa7b6c1ee812b51a67cd13d345e2bcd332b18e682",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-claim-needs-proof--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.52,
-      "frames": 230,
+      "durationSeconds": 8.544,
+      "frames": 356,
       "sampleRates": [
         24000
       ],
-      "bytes": 33120,
-      "sha256": "bb93003246f847eced9e04c40e9b37882548f1fbd346716ee13e05b3b6f92638"
+      "bytes": 51264,
+      "sha256": "7a8a3e558b0aa50d39d12cd73dd1baab3255ab10a3f3a04161aeafae75073bea"
     },
     {
       "key": "reading-outdo-groups--a",
@@ -418,19 +418,19 @@
       "questionId": "reading-outdo-groups",
       "optionId": "a",
       "correct": true,
-      "text": "这里先固定两类人的比较关系；接着转向音乐与知识，是为了继续检查由此作出的评价。",
-      "textSha256": "cc98f932fd75a3a80295d73dc87283d96ca851c4b659ba55d84d040c34ce47a1",
+      "text": "先准确分清双方关于求胜对象的回答。此处把聪明、善等名称分给谁，是正在检验的争论内容，还不能把这些称呼当作讨论已经完成的结论。",
+      "textSha256": "72dc106ff3dfc68057dda73d1868aec839bb21e5d0f7ec5b665654c62025eef9",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-outdo-groups--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.448,
-      "frames": 352,
+      "durationSeconds": 13.992,
+      "frames": 583,
       "sampleRates": [
         24000
       ],
-      "bytes": 50688,
-      "sha256": "a03e658842969e777effdb47f25953f3bf5844cfd2a8be3f6257f94dd9572a31"
+      "bytes": 83952,
+      "sha256": "0116b0a044636b2f344c6a5c3a21d0cfa68b6d980bfc34a715ccd00c893b47fa"
     },
     {
       "key": "reading-outdo-groups--b",
@@ -484,19 +484,19 @@
       "questionId": "reading-knowledge-agreement",
       "optionId": "b",
       "correct": true,
-      "text": "这一轮把有知识者的相似行动与无知识者的无差别求胜放在一起，为前面的比较提供依据。",
-      "textSha256": "c99effa07fcfd059e68be259d0f779bef6921b432b7337854d3e37d47faf8ef8",
+      "text": "双方借懂音乐、医术者的比较，承认同样的技艺判断不以处处胜过同行为目标。这是本段继续推论的共同前提，并非说所有有知识的人在一切问题上都无分歧。",
+      "textSha256": "accc613cdf61c4e6ce2db78bb0f07e99dbb9ad7a720267cc902b13da1aa29343",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-knowledge-agreement--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.424,
-      "frames": 351,
+      "durationSeconds": 15.864,
+      "frames": 661,
       "sampleRates": [
         24000
       ],
-      "bytes": 50544,
-      "sha256": "890a5d40edbbc1947467a2ddd6d390aaf3a398ee4df1c9aa88074d4a197724ce"
+      "bytes": 95184,
+      "sha256": "90db2335337f34e6e8fab76fc6c4fd4c6f41aa6e2992533d5a91ad16c324c3b8"
     },
     {
       "key": "reading-knowledge-agreement--a",
@@ -550,19 +550,19 @@
       "questionId": "reading-glaucon-demand",
       "optionId": "c",
       "correct": true,
-      "text": "格劳孔把反方论证加强，是要听到令人满意的正义辩护，而非宣布自己已经赞成不正义。",
-      "textSha256": "4dfbc176f3cdd7c8c71ee1ce8ea20b226dab2e88d180c70ae96523d8465be5ca",
+      "text": "格劳孔明确说明，他暂时代不正义一方把论证说强，希望苏格拉底说明正义本身对心灵的作用。复述对方论证与认可它，必须分开。",
+      "textSha256": "9605dc5d1366ff0b828fb306f63df14b475f72f7c87fea72a02260966c0c4554",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-glaucon-demand--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.712,
-      "frames": 363,
+      "durationSeconds": 12.816,
+      "frames": 534,
       "sampleRates": [
         24000
       ],
-      "bytes": 52272,
-      "sha256": "bee759e92166f555b36e387f16f8b4f9e65bd170631912e76d63c4bf1214e96b"
+      "bytes": 76896,
+      "sha256": "53a77cff91648149aadbd4ba4899a3e1b62f55c15efd7d5ec83e7c0caf1e347a"
     },
     {
       "key": "reading-glaucon-demand--a",
@@ -616,19 +616,19 @@
       "questionId": "reading-unrestricted-power",
       "optionId": "a",
       "correct": true,
-      "text": "这里借取消外在限制来陈述一种挑战：实践正义是否出于自愿。它仍是格劳孔正在复述的论证。",
-      "textSha256": "a0b350d682c466ca6b3173a759dbe82e0dc0b0dcf69579aad299b8b408a558df",
+      "text": "格劳孔先给两人同样的行动自由，再声称他们会走向相同方向。这个设想提出对正义动机的挑战；读懂设想，并不等于它已经证明所有人必然如此。",
+      "textSha256": "9dd30f876c2bbe0f8586b01d292a6137cf4b1622892bdba82f196bbef22f044a",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-unrestricted-power--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.936,
-      "frames": 414,
+      "durationSeconds": 14.568,
+      "frames": 607,
       "sampleRates": [
         24000
       ],
-      "bytes": 59616,
-      "sha256": "d5f15b20afe9e00c6b274dfc1dd14f9daaa221e9591cb2c5a84ef05b3da6ff8a"
+      "bytes": 87408,
+      "sha256": "518b53bd655db1674681d451ebf152066d61dbdea0428514bb38023602be6e09"
     },
     {
       "key": "reading-unrestricted-power--b",
@@ -638,19 +638,19 @@
       "questionId": "reading-unrestricted-power",
       "optionId": "b",
       "correct": false,
-      "text": "铜马属于随后讲述的故事细节，不是这项比较所要观察的事。",
-      "textSha256": "f245c9f79bc16699015a83ae3af97105573c93548f335191fbec5242ece4b4d3",
+      "text": "名声带来的赞赏不是这项安排的观察对象；它要看两人在约束放开后会怎样行动。",
+      "textSha256": "76248b14df9e4324ac749da2f5d8727a7eb1581fc0325fce95fbd64d716bddb0",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-unrestricted-power--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.832,
-      "frames": 243,
+      "durationSeconds": 8.136,
+      "frames": 339,
       "sampleRates": [
         24000
       ],
-      "bytes": 34992,
-      "sha256": "983dffbd59632c2525bd7bf18c80305cba9403c37fe977a5a9cdfeaea9738086"
+      "bytes": 48816,
+      "sha256": "7ede70f89114020535dcc187f8ca1508d4e6f51a5e857de72e33df2afe0fa296"
     },
     {
       "key": "reading-unrestricted-power--c",
@@ -660,19 +660,19 @@
       "questionId": "reading-unrestricted-power",
       "optionId": "c",
       "correct": false,
-      "text": "设想特意给出随心所欲的权力，目的是考察强迫之外的行动。",
-      "textSha256": "53c91b4ca16a8f198597b9cc4292ae3dbe3c029375b3c250199528c426666896",
+      "text": "这里暂时放开行动的限制来考察欲望，并不是在比较维持约束的刑罚。",
+      "textSha256": "beaebdf5e9a3ccc04a58e63da7db664dca73365ea14c22b1ecad56469f33d7c2",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-unrestricted-power--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.096,
-      "frames": 254,
+      "durationSeconds": 6.864,
+      "frames": 286,
       "sampleRates": [
         24000
       ],
-      "bytes": 36576,
-      "sha256": "ac1a4ee8108bff3086b0c0f153a377cc6fd036796dd910a576b81520579a5094"
+      "bytes": 41184,
+      "sha256": "1f315c5d592ec778d3479000f9530ce8b41e4e47f9fe8a3b7e915297a46dc44f"
     },
     {
       "key": "reading-reputation-advantage--b",
@@ -682,19 +682,19 @@
       "questionId": "reading-reputation-advantage",
       "optionId": "b",
       "correct": true,
-      "text": "这项比较分开真实品行与社会名声，再列出名声可能带来的利益，以加重需要回答的困难。",
-      "textSha256": "6afa92ac83bc53e19a1698894e4676b5cefb83cb9094011a2956d351443a7dc0",
+      "text": "这些好处属于格劳孔代述的不正义一方的论证：不正义者靠正义外表获得信任与资源。关键是分清实际行为和外在名声，以及这是谁正在提出的主张。",
+      "textSha256": "0790195277fcd479739f19f896e4faa2be875bc7d016bd42fe3ce1c643a5a03e",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-reputation-advantage--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9,
-      "frames": 375,
+      "durationSeconds": 15.048,
+      "frames": 627,
       "sampleRates": [
         24000
       ],
-      "bytes": 54000,
-      "sha256": "71d168976997a88594bf90f8b7229dde6b512a563b4b90e036d6b147bde986dd"
+      "bytes": 90288,
+      "sha256": "eb3a10853106b5dfcb27bfc9849d7661f762718f5abf45d41b022c643f29febf"
     },
     {
       "key": "reading-reputation-advantage--a",
@@ -748,19 +748,19 @@
       "questionId": "reading-appearance-inference",
       "optionId": "c",
       "correct": true,
-      "text": "阿得曼托斯关心的是这些赞誉和故事怎样影响听者的推理：若只强调名利，年轻人可能把工夫用在假象上。",
-      "textSha256": "3e12b74d2b42e8a49a15db06570b5324b8e3007b706953d6fcc97d4be5e6eeb2",
+      "text": "阿得曼托斯是在构造青年听到这些赞辞后可能作出的推论：保留正义的外表而暗中获利。他借此加强挑战，并没有断定每个青年都会这样选择。",
+      "textSha256": "d424333ee78a149c56421bb99f0cc041ad1b977e2595cb9bdb3970111a08d5f9",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-appearance-inference--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.488,
-      "frames": 437,
+      "durationSeconds": 14.352,
+      "frames": 598,
       "sampleRates": [
         24000
       ],
-      "bytes": 62928,
-      "sha256": "fbce7c4810be3f91b26a83dbe46dc19b92a64092c1c97f79ac5e5dc596fa5180"
+      "bytes": 86112,
+      "sha256": "23412abfa89f4b714aa99ce31f93dd2bfb3683076b31a2b31805309a5fcf3fff"
     },
     {
       "key": "reading-appearance-inference--a",
@@ -792,19 +792,19 @@
       "questionId": "reading-appearance-inference",
       "optionId": "b",
       "correct": false,
-      "text": "本段反而描写拉集团、学讲话之术等试图隐瞒的办法。",
-      "textSha256": "fb4295e055011848962bd8f91ad71aa787795a24e2ff3881945fc8cda0250a36",
+      "text": "阿得曼托斯设想的推论仍看重名声带来的好处，所以才会用正义外表遮掩不正义。",
+      "textSha256": "b79b2e056145e293c85ce0aa0371f01374f6f7023b322595d2923b46833f228e",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-appearance-inference--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.496,
-      "frames": 229,
+      "durationSeconds": 8.136,
+      "frames": 339,
       "sampleRates": [
         24000
       ],
-      "bytes": 32976,
-      "sha256": "0e210893dc2ff0ece6398ce290a64aa85debc4650d185b8cc01fadb74771ce6d"
+      "bytes": 48816,
+      "sha256": "6e87e05b57e59135d3e01fdcfa28f3ad47aa0dd0695969b692f405e845fdce5b"
     },
     {
       "key": "reading-inner-effect--a",
@@ -814,19 +814,19 @@
       "questionId": "reading-inner-effect",
       "optionId": "a",
       "correct": true,
-      "text": "他要求把正义的价值说到持有者自身，不能让关于名声的奖赏承担全部辩护。",
-      "textSha256": "e467c429490df57052b2577b4709cd63bd0b0140bbf34be891081fe493f5885e",
+      "text": "阿得曼托斯把名声、奖惩暂时拿开，要求论证正义与不正义本身对人的好坏。这是一项待回答的要求，不能拿社会赞赏来替代它。",
+      "textSha256": "d1efa5dd9c5021972f909e6dc56c2d15194403d8add7feaef4654156af211b1d",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-inner-effect--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 7.56,
-      "frames": 315,
+      "durationSeconds": 12.624,
+      "frames": 526,
       "sampleRates": [
         24000
       ],
-      "bytes": 45360,
-      "sha256": "f2246624a62de6e3a11396dcb2723b4b8b026be908b6a143bdb0f3aaef74890d"
+      "bytes": 75744,
+      "sha256": "260b7ef86a1d270edad1b6ea8e12dd8ca0c3a0b26f0cb79620a5c180d2d44ce2"
     },
     {
       "key": "reading-inner-effect--b",
@@ -858,19 +858,19 @@
       "questionId": "reading-inner-effect",
       "optionId": "c",
       "correct": false,
-      "text": "本段谈掌权后的行为，是挑战中的一环，没有把理解正义限于掌权者。",
-      "textSha256": "631c51195b2a166ded19dbbcd327d83fc8292cb388428d218f1c0bd578ab8a67",
+      "text": "被发现后的惩罚仍属于外在后果；这里要求说明无人知晓时，正义与不正义对所有者本身的作用。",
+      "textSha256": "f182a7b6247e777b084c8ea968238530b669412cd4eb81b098f121a2f1e64bf6",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-inner-effect--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.984,
-      "frames": 291,
+      "durationSeconds": 9.768,
+      "frames": 407,
       "sampleRates": [
         24000
       ],
-      "bytes": 41904,
-      "sha256": "18528918c4f1f087032062f37cb402d404f7e9befad79f8704d96d1b74fec72d"
+      "bytes": 58608,
+      "sha256": "1ed73bd632b15afe0398f896da729f8ba6d67dc9ea6c114becea7002d9b6fd6d"
     },
     {
       "key": "reading-justice-still-open--b",
@@ -902,19 +902,19 @@
       "questionId": "reading-justice-still-open",
       "optionId": "a",
       "correct": false,
-      "text": "苏格拉底明确说必须考虑这个问题、不能退缩。",
-      "textSha256": "956483fbddb60be7cf220215a72344f070bb912df6f8308abc84699582497f4c",
+      "text": "各职业组成了可供观察的城邦，但阿得曼托斯仍说不清正义在哪里，苏格拉底也要求继续考虑。",
+      "textSha256": "cac938200f204c5642799dc96725c2886fe362792b9b20ddc6bdaa0b8104c754",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-justice-still-open--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 4.776,
-      "frames": 199,
+      "durationSeconds": 9.216,
+      "frames": 384,
       "sampleRates": [
         24000
       ],
-      "bytes": 28656,
-      "sha256": "a015f2849f02943a3c7b3f15b5625264dd092b06a7db978022229c992eabe15a"
+      "bytes": 55296,
+      "sha256": "7a1da7c27c613a36bb636873a8526116d0cfe91b3102023a73d20cf029b4ba2e"
     },
     {
       "key": "reading-justice-still-open--c",
@@ -924,19 +924,19 @@
       "questionId": "reading-justice-still-open",
       "optionId": "c",
       "correct": false,
-      "text": "加入靠工资为生的人，并没有被用来直接定义正义。",
-      "textSha256": "287165e08d4822902fc66502c292f76013b330ae807b973dd7c1109a4348d631",
+      "text": "加入雇工之后才提出正义在哪里，并不意味着已经把正义的来源限定在雇工身上。",
+      "textSha256": "3ef91d066e0c1efb2d4cfce55f3942c6a7d821c4cbfca7a2863f78afccb64ff5",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-justice-still-open--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 4.992,
-      "frames": 208,
+      "durationSeconds": 8.16,
+      "frames": 340,
       "sampleRates": [
         24000
       ],
-      "bytes": 29952,
-      "sha256": "d0f370887fd45010fcf6656b2e1ad2a147ed794fb785e27adfacba6dc8b003fc"
+      "bytes": 48960,
+      "sha256": "9ff37ddb137d306ac24226f313676a530b4f10f5f19ce10995b13ef1b3d5f6cb"
     },
     {
       "key": "reading-war-craft--c",
@@ -968,19 +968,19 @@
       "questionId": "reading-war-craft",
       "optionId": "a",
       "correct": false,
-      "text": "本段结尾恰说没有一种工具能让不懂使用的人立即成为能手。",
-      "textSha256": "fe2f0762a765c54904d10d83c8b2819d91d292ff3ee7818482ab138a44a86a21",
+      "text": "为自己而战是格劳孔的疑问；苏格拉底接着区分愿意保卫与经过训练而能够作战。",
+      "textSha256": "883cbb46c52e366f4289fe1d272ac72af12aaf031681c16693fa0b75857a4064",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-war-craft--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.072,
-      "frames": 253,
+      "durationSeconds": 8.016,
+      "frames": 334,
       "sampleRates": [
         24000
       ],
-      "bytes": 36432,
-      "sha256": "fdba47804695e835d44f7675e84d3f6b00423470ab63714171d7eebce23c3f62"
+      "bytes": 48096,
+      "sha256": "a1f9eeacd79e26a2db2fb783f52cecc080b937d8e837ebf4bfb18d58d681fffb"
     },
     {
       "key": "reading-war-craft--b",
@@ -990,19 +990,19 @@
       "questionId": "reading-war-craft",
       "optionId": "b",
       "correct": false,
-      "text": "他反问军事能否被这样轻视，结论不是准许临时兼任。",
-      "textSha256": "de4c23c004eec84328e3892c427c7bb9008a699c2ad6f5793003f5d8100b68dd",
+      "text": "苏格拉底先要求承认打仗也是技艺，再把原有的专攻理由用于军事工作。",
+      "textSha256": "c2263f256fa5a94c8ca221707444ff2b949bc28573f85057cf0dcdd07811efe6",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-war-craft--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.736,
-      "frames": 239,
+      "durationSeconds": 7.224,
+      "frames": 301,
       "sampleRates": [
         24000
       ],
-      "bytes": 34416,
-      "sha256": "b10cc5dd300fd37b04865ea4947ca6d362651bfcdc8378d0a57dd964e3671a6c"
+      "bytes": 43344,
+      "sha256": "b2a8a830f06d91d8d2d9188f2bd2646a8cc9345650601931987c117b045e5c74"
     },
     {
       "key": "reading-stories-shape--a",
@@ -1012,19 +1012,19 @@
       "questionId": "reading-stories-shape",
       "optionId": "a",
       "correct": true,
-      "text": "这段说明了故事审查与培养目标的联系：被听见的神与英雄形象，会成为教育的一部分。",
-      "textSha256": "32a6577f33ac6bd7fd2e0cd45d3acc0fae8ef8bef8d0ed0ec29be33ccd5748d4",
+      "text": "在苏格拉底提出的培养方案中，故事中的神与英雄形象会参与心灵塑造，所以需要审查。理解这一步的理由，不等于已经评定这种教育方案本身是否可取。",
+      "textSha256": "6997cbb1cfea3e415d193a91d5648b0a489931c77db45ae7ff26ee4e5501a825",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-stories-shape--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.184,
-      "frames": 341,
+      "durationSeconds": 14.736,
+      "frames": 614,
       "sampleRates": [
         24000
       ],
-      "bytes": 49104,
-      "sha256": "d754419d50fd1f602ac88ad936881aef8ba8779a42b044fec64423c3079b51af"
+      "bytes": 88416,
+      "sha256": "d1fc23ad1b74ab1112058f446af7c3d8a92c8aa2a52938b695ea9e823ac064d1"
     },
     {
       "key": "reading-stories-shape--b",
@@ -1056,19 +1056,19 @@
       "questionId": "reading-stories-shape",
       "optionId": "c",
       "correct": false,
-      "text": "本页强调塑造心灵要特别仔细，未把篇幅当作主要理由。",
-      "textSha256": "f8aab4a7e0175400ce42fe999b25ba6334546b5758e08000d147265d1415dd83",
+      "text": "这里把大小故事联系在同一类影响上，关心它们如何塑造心灵，并未按篇幅长短决定取舍。",
+      "textSha256": "859f6a3f1a00d66bdbb78bd82233e945a66cc928c4e9af70f7a1be38ce73005d",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-stories-shape--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6,
-      "frames": 250,
+      "durationSeconds": 8.712,
+      "frames": 363,
       "sampleRates": [
         24000
       ],
-      "bytes": 36000,
-      "sha256": "ba441d58ac68c7573c6c7de1cd789f6649413f051536ba2017094e5b8f9c01e6"
+      "bytes": 52272,
+      "sha256": "9ccda17cd1947605dcf9a9dda0277ab4f7b28dd5825057dd28ebec30b3e59a79"
     },
     {
       "key": "reading-hero-lament--b",
@@ -1078,19 +1078,19 @@
       "questionId": "reading-hero-lament",
       "optionId": "b",
       "correct": true,
-      "text": "这是当前城邦教育方案中的取舍理由。理解文本时要把它接回培养怎样的护卫者这一问题。",
-      "textSha256": "994e7779cd744d83ed6a815ca600b437b65db3833d8ce01cf4894e0c27e8220e",
+      "text": "本段从好人如何对待失去，推到护卫者应以何种形象为榜样。这里考察的是城邦方案的取舍理由，并没有据此评判所有人的真实哀伤。",
+      "textSha256": "93ca645da678f7a19a5e413b9c96484c857a7d30135e4ed6e56ac88139563b74",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-hero-lament--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.904,
-      "frames": 371,
+      "durationSeconds": 12.816,
+      "frames": 534,
       "sampleRates": [
         24000
       ],
-      "bytes": 53424,
-      "sha256": "b84872acae42ce9c4135313af42451457e01a4e9788b4489463c0479bc456a22"
+      "bytes": 76896,
+      "sha256": "e9a73a8346a66c9e8be9f6fe4bdb1e52b809974d1c062ddef24a040b3f50efaa"
     },
     {
       "key": "reading-hero-lament--a",
@@ -1122,19 +1122,19 @@
       "questionId": "reading-hero-lament",
       "optionId": "c",
       "correct": false,
-      "text": "这里讨论的是应不应该让他们效法这种形象，并非教授挽歌创作。",
-      "textSha256": "cc4da1e6afecd582656681efb51dfaf6c51d4c30c93b44531d204f5809fa611a",
+      "text": "本页末尾把删去的安排直接系于不去效法，审美欣赏不能代替这里的培养目标。",
+      "textSha256": "1260196de888bededfa1981c44052a5e72b1c5a379b889b7fc6d619ae84de1c6",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-hero-lament--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.384,
-      "frames": 266,
+      "durationSeconds": 7.824,
+      "frames": 326,
       "sampleRates": [
         24000
       ],
-      "bytes": 38304,
-      "sha256": "c0e99dfc4b2050cfb042269e9f7d881612ef00331dce0370411bc3a9555c0825"
+      "bytes": 46944,
+      "sha256": "102e859d5d0225daea3a2e378c8120bfa3fc2d4ca32c0d72ebe61f0618512308"
     },
     {
       "key": "reading-falsehood-medicine--c",
@@ -1210,19 +1210,19 @@
       "questionId": "reading-achilles-character",
       "optionId": "a",
       "correct": true,
-      "text": "零散的神话事件在这里被归入性格塑造的问题：青年会从故事中认识怎样的英雄。",
-      "textSha256": "e6944ff35e1264b62fb39a5a760dbd1ddabf7c051be2671c9d97e0cd42b3f062",
+      "text": "这一页不是分别考神话细节，而是把若干行为归入卑鄙贪婪、蔑视神与人的性格描绘，并按先前的英雄形象要求拒绝它们。",
+      "textSha256": "d6076d113083aa6a4ab89d28dac877071861ebb9f93d98564a10e4354d241e51",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-achilles-character--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.232,
-      "frames": 343,
+      "durationSeconds": 11.976,
+      "frames": 499,
       "sampleRates": [
         24000
       ],
-      "bytes": 49392,
-      "sha256": "8708450d92ad44269766578197b9b6b2ff6df99f0a4ba1ea676633f0178c7da2"
+      "bytes": 71856,
+      "sha256": "48b90660dc6c589251e8cc67ccfc15af405a05edb764988a03b94538c432312a"
     },
     {
       "key": "reading-achilles-character--b",
@@ -1232,19 +1232,19 @@
       "questionId": "reading-achilles-character",
       "optionId": "b",
       "correct": false,
-      "text": "所列故事涉及收财、无礼和残酷行为，不是这里给出的性格概括。",
-      "textSha256": "a2659dd053424f184c6ba7aa1392ed0a700228e0a92e5965c161c66848f71c24",
+      "text": "这里列的是收财和对神、人无礼的行为；害怕死亡属于前面另一组故事的讨论。",
+      "textSha256": "4a28ffc9bd5811625ac104b3e4bc4890f731e088fcfb013f289b26be168d3376",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-achilles-character--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 7.008,
-      "frames": 292,
+      "durationSeconds": 7.776,
+      "frames": 324,
       "sampleRates": [
         24000
       ],
-      "bytes": 42048,
-      "sha256": "d72515a73d320ae25177acf22ac5b20947c9a965d9dc11172f85fb40bb6ee77c"
+      "bytes": 46656,
+      "sha256": "7587dc24cfdb7691690d6d3a0b68bc493473096f63eb479faf0f9c03c7df47b8"
     },
     {
       "key": "reading-achilles-character--c",
@@ -1254,19 +1254,19 @@
       "questionId": "reading-achilles-character",
       "optionId": "c",
       "correct": false,
-      "text": "这些不是本页所批评的毛病；它正在排斥相反的描绘。",
-      "textSha256": "5f101e7ee7152390d9e973fe80d27403948f883da1687ff8d7ef3a78f075051e",
+      "text": "这能注意到故事中的几项行动，但本页最终概括的是贪婪与蔑视神、人，并未论证两项职责必然冲突。",
+      "textSha256": "02ececead1eb7f9a75133a6ca8653c3db337a0c7b7e3b643743465869853fed8",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-achilles-character--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.376,
-      "frames": 224,
+      "durationSeconds": 9.936,
+      "frames": 414,
       "sampleRates": [
         24000
       ],
-      "bytes": 32256,
-      "sha256": "a458e7ae9acd6c715ae7438400c6b11b5869183623776cd13aaef40566029e5d"
+      "bytes": 59616,
+      "sha256": "f8d61d40060deb61187aeef74c44f7125340a0875b5a975900d8ba92d5596b1d"
     },
     {
       "key": "reading-content-and-form--b",
@@ -1298,19 +1298,19 @@
       "questionId": "reading-content-and-form",
       "optionId": "a",
       "correct": false,
-      "text": "护卫者应该如何模仿仍是本页焦点，并未用观众数量作标准。",
-      "textSha256": "049a8864a7f99926cfd4c142b0fc33f16da5f39a6cc2a914f1156a08bda29516",
+      "text": "人物形象仍有关联，但本页明确转向怎样讲，区分模仿、抒情与二者并用。",
+      "textSha256": "7fb49b84e5bc7e0f5ec36687e79189852663c3bb213c1cb99a9380cfb9e0b89e",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-content-and-form--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.312,
-      "frames": 263,
+      "durationSeconds": 7.872,
+      "frames": 328,
       "sampleRates": [
         24000
       ],
-      "bytes": 37872,
-      "sha256": "4626c024a1addf9fdf89efce18d1b0fc02fa08fce082fc4fc7786eed457f8330"
+      "bytes": 47232,
+      "sha256": "4332f4f8d1d533c5d8cc6271d1cfd6626e733cdb21fbf8a6394593399d6960a4"
     },
     {
       "key": "reading-content-and-form--c",
@@ -1320,19 +1320,19 @@
       "questionId": "reading-content-and-form",
       "optionId": "c",
       "correct": false,
-      "text": "本页没有计算报酬，问题集中在怎样叙述与模仿。",
-      "textSha256": "834895a44ff55b689ed5eb66a396374a5af37c8d53cb4f196c1e58a38cdb22d8",
+      "text": "苏格拉底尚在比较模仿的范围，并借一人一业追问能否样样模仿得好。",
+      "textSha256": "23442bce32e2a732e47cb7bf9d58f683855270936559fc95329193b02068882b",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-content-and-form--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.208,
-      "frames": 217,
+      "durationSeconds": 7.176,
+      "frames": 299,
       "sampleRates": [
         24000
       ],
-      "bytes": 31248,
-      "sha256": "162bdc4b126a364233b7950dc14e6cc0ecd042618dc79f5f7c6ec2716077e35b"
+      "bytes": 43056,
+      "sha256": "bed0414b68fe5316896dece0491de46463d9be8ea2e0ac4480b4b784b7c882cb"
     },
     {
       "key": "reading-know-not-imitate--c",
@@ -1496,19 +1496,19 @@
       "questionId": "reading-music-selection",
       "optionId": "a",
       "correct": false,
-      "text": "本页仍保留城里的琴与乡间牧人的短笛，没有废除全部音乐。",
-      "textSha256": "73ab63a04f9934dc976506f4a54388d72ae88442662f65b459f33b1866b36f30",
+      "text": "这里的取舍针对能否奏出许多音调及使用哪类乐器，没有用音量大小作选择标准。",
+      "textSha256": "1ba6dbb6e2a90c50dd92372c81cda3382aeb51a7c8504081386db7555ad11af6",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-music-selection--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.216,
-      "frames": 259,
+      "durationSeconds": 8.256,
+      "frames": 344,
       "sampleRates": [
         24000
       ],
-      "bytes": 37296,
-      "sha256": "527978f1f4fba8ec8c8bdcd379c3fc337abe07377415dd80ad3c20cf7bf22ab0"
+      "bytes": 49536,
+      "sha256": "73a3670bb7985d637887446ed1dd5f9fe826ad09d3f0afbc53a2ea6fa500e326"
     },
     {
       "key": "reading-music-selection--c",
@@ -1518,19 +1518,19 @@
       "questionId": "reading-music-selection",
       "optionId": "c",
       "correct": false,
-      "text": "这与本页“不需要用许多弦子的乐器”的说法相反。",
-      "textSha256": "2e0be06dbaa64c7fc23a1b4dfd0299ede5f93d37a0e96b1f3f14ac9d327690fb",
+      "text": "苏格拉底将当前变化称作净化：撤去多弦多调的选择，保留较有限的乐器。",
+      "textSha256": "781232a5f5c4ffdb526df5dfcd433e9a2b584aea960c6255785d63f6f5b5c957",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-music-selection--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 4.512,
-      "frames": 188,
+      "durationSeconds": 7.656,
+      "frames": 319,
       "sampleRates": [
         24000
       ],
-      "bytes": 27072,
-      "sha256": "f770a6388c7759dc2c79bf01ba234487ecda9ebf43c25fffb3caa3df56767d1f"
+      "bytes": 45936,
+      "sha256": "54dd70a35a5317b161fac37923726551806c85c7e17aac5408370532b0714664"
     },
     {
       "key": "reading-letters-and-virtues--c",
@@ -1716,19 +1716,19 @@
       "questionId": "reading-flexible-training",
       "optionId": "c",
       "correct": false,
-      "text": "本页用终宵警觉的狗作比较，要求的是敏锐与适应。",
-      "textSha256": "159639bf5f08e172a8282387f38617c325df909b715fe275d17643b122d5348c",
+      "text": "本段正担心一偏离规定生活就生病；要求的是在变动的战争条件中仍能胜任。",
+      "textSha256": "a66b37aeaed4b0b05206b9cb9c4b15655464b003576e9c563135923ae9d142fc",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-flexible-training--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.328,
-      "frames": 222,
+      "durationSeconds": 8.28,
+      "frames": 345,
       "sampleRates": [
         24000
       ],
-      "bytes": 31968,
-      "sha256": "2e3a9ca0e7a915a8087d096a6e568db6b33e29343930ad7c3466a963859cbbc8"
+      "bytes": 49680,
+      "sha256": "26cde46d34816b39baf50e2c5a5f5b022ed1d930fe6698d6139f05bb98fdb032"
     },
     {
       "key": "reading-lawsuit-living--c",
@@ -1804,19 +1804,19 @@
       "questionId": "reading-asclepius-story",
       "optionId": "a",
       "correct": true,
-      "text": "这段又把具体诗歌故事带回关于神及其后裔的既有原则，检查描绘能否彼此相容。",
-      "textSha256": "17ca143f5ec1b64d2e9f3124adbf95f3b5fc88d2fcb7e39956da86825b9c36f0",
+      "text": "本段在已接受的神与其后裔的性质要求下，检查故事的两项描绘能否相容。这说明苏格拉底如何使用先前原则，并不单靠这种相容性就证明了神话的历史真伪。",
+      "textSha256": "f048bc21ed9f364316bc4742040368d530c758397b3bf71cc18d91abfa1a61b7",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-asclepius-story--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.064,
-      "frames": 336,
+      "durationSeconds": 15.576,
+      "frames": 649,
       "sampleRates": [
         24000
       ],
-      "bytes": 48384,
-      "sha256": "18cd92993598fe20994c6ec80a93e0c039d8f14a7bedc44139b7010465cb4073"
+      "bytes": 93456,
+      "sha256": "68497ddb27d7e54b859bc625c9f0c0b293eb5f15a8b7504e413e20c07194650a"
     },
     {
       "key": "reading-asclepius-story--b",
@@ -1826,19 +1826,19 @@
       "questionId": "reading-asclepius-story",
       "optionId": "b",
       "correct": false,
-      "text": "本页恰拒绝把贪心当成神明后裔的性格。",
-      "textSha256": "7c44ef35188e9b719fa46691716b4fc7c28ab9e156c91e8517779d679f53f9e5",
+      "text": "这以治愈的效果回避了贪心与神之子身份的相容性，而本页正按先前原则检查二者。",
+      "textSha256": "0fd64b7e553c520a93ee573dad06ae971e7ef1916461cb89b807ccb82068767d",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-asclepius-story--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 4.344,
-      "frames": 181,
+      "durationSeconds": 8.328,
+      "frames": 347,
       "sampleRates": [
         24000
       ],
-      "bytes": 26064,
-      "sha256": "2318519f38f9cf848e97faaf45222decb1b36ef2d4c0a03f08137460d6a4d989"
+      "bytes": 49968,
+      "sha256": "303a3b2d0ea2c11d42e64a4d602a61d1fed0508b40fdf3029db9c6b0c0608747"
     },
     {
       "key": "reading-asclepius-story--c",
@@ -1848,19 +1848,19 @@
       "questionId": "reading-asclepius-story",
       "optionId": "c",
       "correct": false,
-      "text": "苏格拉底指出诗人的故事与先前原则有分歧，正在检查两者。",
-      "textSha256": "9c663c8d57286a451ce7fa2b88160b416454ae2b0c44230fc5a1ce3b6d28acef",
+      "text": "苏格拉底知道故事来自诗人，仍用已经接受的原则检查描绘是否矛盾。",
+      "textSha256": "58a8c57b5396c8eba8d7396285466b7530f4f420189f672951786cece7547d8b",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-asclepius-story--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.408,
-      "frames": 267,
+      "durationSeconds": 7.056,
+      "frames": 294,
       "sampleRates": [
         24000
       ],
-      "bytes": 38448,
-      "sha256": "423e283921269c0895ac779ba14b69c2d73bdd4d358d5b2d7bf235577126cd55"
+      "bytes": 42336,
+      "sha256": "a8e54f6b8e195465c1afca83ca4e10a188a575b48f09ec3bbd2d2590664dbb42"
     },
     {
       "key": "reading-guardians-constancy--b",
@@ -1958,19 +1958,19 @@
       "questionId": "reading-guardian-happiness-objection",
       "optionId": "a",
       "correct": false,
-      "text": "反对意见恰在说他们没有这些通常的好处，只能驻守。",
-      "textSha256": "4152034064cc9ff1218a769c34261ad287ad4d8bd2dcddbdddc45186f1e8c2c3",
+      "text": "反对意见集中列举他们被剥夺的通常幸福条件，尚未把困难转成统治本领不足。",
+      "textSha256": "e13250c836405fc0c9f4ae929ddb09d37bf4d23965ce1a17ac6f7ac30245f40c",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-guardian-happiness-objection--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.448,
-      "frames": 227,
+      "durationSeconds": 7.992,
+      "frames": 333,
       "sampleRates": [
         24000
       ],
-      "bytes": 32688,
-      "sha256": "8de59a042b7d683c4c4a893c234c41c35f245cefa313ff5920c8744da8d3b0d1"
+      "bytes": 47952,
+      "sha256": "8ac150c8caf644dd48283288381b1945b5e437adcdc48648d9e14166a3f9b582"
     },
     {
       "key": "reading-guardian-happiness-objection--b",
@@ -1980,19 +1980,19 @@
       "questionId": "reading-guardian-happiness-objection",
       "optionId": "b",
       "correct": false,
-      "text": "苏格拉底明确说他们得到吃的，讨论没有主张取消食物。",
-      "textSha256": "6b49a049dc6329fa7a670d72fa5aa0e1d21021b49d190ea787c8f31bbf35240e",
+      "text": "阿得曼托斯恰用城邦属于他们、却不能享有通常好处这一反差提出困难。",
+      "textSha256": "4c8c0855285190b5f67c3d1a281b0ea35c76a98b4fd5f6f992eb88fd825acba3",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-guardian-happiness-objection--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.64,
-      "frames": 235,
+      "durationSeconds": 7.272,
+      "frames": 303,
       "sampleRates": [
         24000
       ],
-      "bytes": 33840,
-      "sha256": "27a14af5e8f6cc0d323f8bcae02175d375d842b6a41ab471ee8585edfd116393"
+      "bytes": 43632,
+      "sha256": "a4c0cff205d3ead9e653d4bae7cca87b269f729d01c6ad6726bfa4cf2d2d4233"
     },
     {
       "key": "reading-whole-city-happiness--a",
@@ -2002,19 +2002,19 @@
       "questionId": "reading-whole-city-happiness",
       "optionId": "a",
       "correct": true,
-      "text": "回答将幸福放在国家整体中考察：各部分怎样尽职，是本段论证的关键。",
-      "textSha256": "e7a5006af38962f6c78bdba487e66d9d57eb92a54035ee9a1163727a42828fd6",
+      "text": "苏格拉底的回答以国家作为整体为条件，检验某种幸福安排会不会使其部分不再履行职能。它提出了整体与部分的关系，不能仅复述全城幸福便算完成证明。",
+      "textSha256": "4e65e6ecd494105714aa0a92d7e976569d2c8ae16033725b1f2114882d90227f",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-whole-city-happiness--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 7.392,
-      "frames": 308,
+      "durationSeconds": 15.384,
+      "frames": 641,
       "sampleRates": [
         24000
       ],
-      "bytes": 44352,
-      "sha256": "b6b8e57941b8caee3a9aa0b61eccaaa84251155b248754006de6bcd1ee308200"
+      "bytes": 92304,
+      "sha256": "ea7eb2856fc3e7fcb77bace9f3e221f67e001ae2d7d6e55f3a183d019ceb5ede"
     },
     {
       "key": "reading-whole-city-happiness--b",
@@ -2024,19 +2024,19 @@
       "questionId": "reading-whole-city-happiness",
       "optionId": "b",
       "correct": false,
-      "text": "本页用农民和陶工不再做本职说明，这样就不成其为一个国家。",
-      "textSha256": "f0b75a3d22b6729c46fe584da58cfd654169734f71d3fba6a0446aa6d4d1aae9",
+      "text": "本页用农民、陶工停止本职的设想质疑这种安排：部分的享乐可能破坏它作为城邦部分的职能。",
+      "textSha256": "4d70e3e6785477aeeea1d274ff91c15a362fdf1280436503c939199674bfb642",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-whole-city-happiness--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.192,
-      "frames": 258,
+      "durationSeconds": 9.504,
+      "frames": 396,
       "sampleRates": [
         24000
       ],
-      "bytes": 37152,
-      "sha256": "7b90cc9d9a6bb536747bae3e9f94e5d1b829259db68ceb3c3c6c82cd28e975f9"
+      "bytes": 57024,
+      "sha256": "0f829214726e1b373fcf0bc45d917fa5bd0dc8133e7644f028adc55fe82b5e12"
     },
     {
       "key": "reading-whole-city-happiness--c",
@@ -2046,19 +2046,19 @@
       "questionId": "reading-whole-city-happiness",
       "optionId": "c",
       "correct": false,
-      "text": "苏格拉底认为护卫者失其职责的影响尤其重大，甚至使全城毁灭。",
-      "textSha256": "2035f92289c18df8fe41fcd0acc2d7e40bf7c88fc1cc42ee2ff63998a8f153bf",
+      "text": "苏格拉底也要求其他人做好本职；护卫者影响尤其大，并不使整体论证只剩一个阶层。",
+      "textSha256": "a8cfa54b446c9de3bf1b16b6da5b23c7624799756d064a4809a608068efa2ad6",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-whole-city-happiness--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.816,
-      "frames": 284,
+      "durationSeconds": 8.544,
+      "frames": 356,
       "sampleRates": [
         24000
       ],
-      "bytes": 40896,
-      "sha256": "7238b5b099cc60395e611be9d0a21ad2d8b7242dba0702efd2c56575b8a6ee8f"
+      "bytes": 51264,
+      "sha256": "0e65db344e7df091d58827cd5b6ada208d9ec8ab8835220aea13a808339e2bda"
     },
     {
       "key": "reading-one-city--b",
@@ -2090,19 +2090,19 @@
       "questionId": "reading-one-city",
       "optionId": "a",
       "correct": false,
-      "text": "阿得曼托斯提出财富聚集的担心，苏格拉底转而要求注意内部是否统一。",
-      "textSha256": "dccb5d7bcd413ec67c961914671c5ab829ec3bd33970b87a25e2a2d9ad4e39f6",
+      "text": "苏格拉底回应财富聚集的担心时转向贫富敌对，区分资源的集中和实际的统一。",
+      "textSha256": "d79bf19c53cfbf56b834fa3915c8a5c42416160706dd1fa08e3f37dd4d639838",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-one-city--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 7.344,
-      "frames": 306,
+      "durationSeconds": 8.136,
+      "frames": 339,
       "sampleRates": [
         24000
       ],
-      "bytes": 44064,
-      "sha256": "881925d97a938b9596ade9a3ecd745c9c5f3197064651706796b690e124b8aeb"
+      "bytes": 48816,
+      "sha256": "583c44ce8bcb8597f5e8f35b24f7aacaf11c7f1890f12f878891f565ea5d4f93"
     },
     {
       "key": "reading-one-city--c",
@@ -2112,19 +2112,19 @@
       "questionId": "reading-one-city",
       "optionId": "c",
       "correct": false,
-      "text": "这段从贫富与对立谈统一，未以人口太少作为理由。",
-      "textSha256": "1593f667821bbcd32d8fc66bd29156597d3273a71a54957619669e7b3f19ae08",
+      "text": "本页用的是相互敌对与内部分裂；职业有区别并不等同于这里的政治对立。",
+      "textSha256": "96840218c726c6c5734d9c2f4f647ff8537c2607798c846601d17c3e72d18826",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-one-city--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.304,
-      "frames": 221,
+      "durationSeconds": 7.44,
+      "frames": 310,
       "sampleRates": [
         24000
       ],
-      "bytes": 31824,
-      "sha256": "c4eb932a1e098ed20df18695588efa6ab4be23c152f9a9b67336850442970321"
+      "bytes": 44640,
+      "sha256": "8c06f960eb6ef48bbb64555a30c3e4ffa8fb8e20070d26ad97cdadaf6caf1153"
     },
     {
       "key": "reading-education-foundation--c",
@@ -2156,19 +2156,19 @@
       "questionId": "reading-education-foundation",
       "optionId": "a",
       "correct": false,
-      "text": "本页把重点集中到教育和培养，没有提出逐项命令的办法。",
-      "textSha256": "d6bdb2bd8e3d2cb202ea990158f8c7cd5f79cc385f10ecaa1bc7f78ca485763e",
+      "text": "本段把教育放在能处理许多事务的条件位置；先列尽条文再期待通达，把这个关系倒置了。",
+      "textSha256": "9093d5bb37491488fac9ed91610b3c97c851f4cda204aaaa68dd0cec287765b1",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-education-foundation--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.832,
-      "frames": 243,
+      "durationSeconds": 8.88,
+      "frames": 370,
       "sampleRates": [
         24000
       ],
-      "bytes": 34992,
-      "sha256": "3de9484fd0a7e816ac53971961ba7f757f3425a4cb29e6b5e88dd71dc665867d"
+      "bytes": 53280,
+      "sha256": "a4973a7abb213f97ce1becb3b1a4ae03262731781f969b37c9420fb19c508e22"
     },
     {
       "key": "reading-education-foundation--b",
@@ -2178,19 +2178,19 @@
       "questionId": "reading-education-foundation",
       "optionId": "b",
       "correct": false,
-      "text": "良好教育正是这里的中心条件，不能从论证中删去。",
-      "textSha256": "f086895a35581292b53279a386e6356858c1adf90345af8a4c18b90e8a25f2cf",
+      "text": "轮子比拟联结培养、身体素质和再次接受教育，并没有让其中一次成果替代后续培养。",
+      "textSha256": "d487881410fd0f6fc3cf7f266c30725d9d9687552ae882b2f6a393efdc70f206",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-education-foundation--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.304,
-      "frames": 221,
+      "durationSeconds": 8.592,
+      "frames": 358,
       "sampleRates": [
         24000
       ],
-      "bytes": 31824,
-      "sha256": "299becd78bdb0b18585d3b40ada4364db11ed34a97f25b482443a1c23e3d7494"
+      "bytes": 51552,
+      "sha256": "e1c33a68ea0ec89a5241fb8341ecd6391178e23092c52c5b056f6fe95fdce6d5"
     },
     {
       "key": "reading-education-not-rules-alone--a",
@@ -2288,19 +2288,19 @@
       "questionId": "reading-courage-preserving",
       "optionId": "a",
       "correct": false,
-      "text": "“无论在什么情形之下”恰要求这些处境中也能保持。",
-      "textSha256": "38880af0f2ff11762580032c722aa89a08106ef84a61f150a5c80d72e2116057",
+      "text": "本页限定为法律通过教育建立的可怕事物信念；仅有坚持，并不足以满足这里的定义。",
+      "textSha256": "8e8fc42f36238993e7e6dc2bfdde4eb1e2cde1a6d42d5c01776c0c69035487ef",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-courage-preserving--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.184,
-      "frames": 216,
+      "durationSeconds": 8.208,
+      "frames": 342,
       "sampleRates": [
         24000
       ],
-      "bytes": 31104,
-      "sha256": "a8961ccfa84341b6eadf4a58e077aca75665e766ba8561110a7739ecf4dbb01e"
+      "bytes": 49248,
+      "sha256": "94c8bbc26474e4f7fc29a2ba03887915da174bea8dbfc1e368376d87c55ce2ef"
     },
     {
       "key": "reading-courage-preserving--c",
@@ -2310,19 +2310,19 @@
       "questionId": "reading-courage-preserving",
       "optionId": "c",
       "correct": false,
-      "text": "本页限定为通过法律和教育建立的关于可怕事物的信念，不是任意畏惧。",
-      "textSha256": "f63f11df73e550f20c422b6c6a8878c577174df8cc3f873387e7fb954280f6c1",
+      "text": "勇敢被解释成在快乐、苦恼等处境中保持信念；一时大胆不能替代所保持的判断。",
+      "textSha256": "8f1d59ead3fb55c03c68458c27c2d1a4017f5af8469326d4c054650209d99b18",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-courage-preserving--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 7.104,
-      "frames": 296,
+      "durationSeconds": 8.424,
+      "frames": 351,
       "sampleRates": [
         24000
       ],
-      "bytes": 42624,
-      "sha256": "cf30a77e92a2d702a3908cc4e0e345a4f2eef16fb8b6f9947fd939264906dc2d"
+      "bytes": 50544,
+      "sha256": "1d213c9a00acce33dfff2338422b9dd4b5f775c07f74f6fb67ddbba94a2f7f8b"
     },
     {
       "key": "reading-moderation-throughout--c",
@@ -2354,19 +2354,19 @@
       "questionId": "reading-moderation-throughout",
       "optionId": "a",
       "correct": false,
-      "text": "本页特意说明节制不是仅靠一个部分起作用，而是贯穿全体。",
-      "textSha256": "3a42ea2d949589663899c58909fd8f5efc4794ab48ff67bedb251e25c1865d48",
+      "text": "苏格拉底用智慧、勇敢作对照，明确指出节制的作用是贯穿全体并协调各部分。",
+      "textSha256": "b09e81864e1a5bd6fe4ae0c492ffd5a76014bce1ee8458f5ad9e516a93115d52",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-moderation-throughout--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.096,
-      "frames": 254,
+      "durationSeconds": 8.424,
+      "frames": 351,
       "sampleRates": [
         24000
       ],
-      "bytes": 36576,
-      "sha256": "b447849982387a816cdefe4b51569a1e1000e300d5bf68984575abf27aa50cbc"
+      "bytes": 50544,
+      "sha256": "bcdeb0b32feb3a03ef158fe610c7f1a7fdf308ea11ebc436ba42cf6ea45f3da6"
     },
     {
       "key": "reading-moderation-throughout--b",
@@ -2376,19 +2376,19 @@
       "questionId": "reading-moderation-throughout",
       "optionId": "b",
       "correct": false,
-      "text": "本页用和谐的音阶作比拟，强调一致性与协调，方向与争执相反。",
-      "textSha256": "27b941d6c3ee929fe2970ab1ac3168c8e488f6d1a3416913d2387ab3daff3c3b",
+      "text": "本页仍区分各部分及统治关系；一致的是对谁应统治的认可，不是能力被变得相同。",
+      "textSha256": "fe6725cebcd343ebaa153257fdb385935b0ce30a2d53ba5ad69f7088727e8dc8",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-moderation-throughout--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.744,
-      "frames": 281,
+      "durationSeconds": 8.64,
+      "frames": 360,
       "sampleRates": [
         24000
       ],
-      "bytes": 40464,
-      "sha256": "5b61c28c535882230a74b50018513ec5b96ae5a94f0864cfd61338b4cc120b60"
+      "bytes": 51840,
+      "sha256": "4fc9c671ea5af30858f6b152e54fb0b2f8f348681d4dd91a118d8c6f45758eda"
     },
     {
       "key": "reading-correlative-qualification--a",
@@ -2420,19 +2420,19 @@
       "questionId": "reading-correlative-qualification",
       "optionId": "b",
       "correct": false,
-      "text": "本页先确认较大是相关名称，正与较小相联系。",
-      "textSha256": "db9875358432eae1773fd2f5c580b734256140f80eee11618891be82939ad8b1",
+      "text": "大得多、某时较大等例子分别要求相应的相关者；本段正让我们留意限定怎样配对。",
+      "textSha256": "73932781c6ed702414cdce8137de893f4741940c555bdad2535cc13a545ac808",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-correlative-qualification--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.208,
-      "frames": 217,
+      "durationSeconds": 8.424,
+      "frames": 351,
       "sampleRates": [
         24000
       ],
-      "bytes": 31248,
-      "sha256": "62209a7c2873374f663f4eda0c3e94acb4c37af80cbf3861a49a3f076cc236f3"
+      "bytes": 50544,
+      "sha256": "0d0ecccad43006c05a2dafb261082ad67c87b812eb4b45f3345725e3a21e4261"
     },
     {
       "key": "reading-correlative-qualification--c",
@@ -2442,19 +2442,19 @@
       "questionId": "reading-correlative-qualification",
       "optionId": "c",
       "correct": false,
-      "text": "限定词在例子里仍有对应关系，并没有取消相互关联。",
-      "textSha256": "efdb022f009c641d74f07e26f936d16d248c081aab0afaf2911ef4173b72bfb3",
+      "text": "好东西的异议引出这一步，但大小的例子先澄清关系及其限定，尚未由好坏决定每种对应。",
+      "textSha256": "6253362e981aeb8dc12423d5da44d5f48e0da63044f5653f0dfb5907e0593cb3",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-correlative-qualification--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 5.616,
-      "frames": 234,
+      "durationSeconds": 9.144,
+      "frames": 381,
       "sampleRates": [
         24000
       ],
-      "bytes": 33696,
-      "sha256": "1b7e7920f1b515bf51b7c6473511b432eb26db112b68b5a756ba970acdcc251c"
+      "bytes": 54864,
+      "sha256": "0543ad56fd192cad57667137bfb5e0d1b4c4b96f9a975ffc3fb7388f402e2875"
     },
     {
       "key": "reading-person-city-functions--b",
@@ -2464,19 +2464,19 @@
       "questionId": "reading-person-city-functions",
       "optionId": "b",
       "correct": true,
-      "text": "同一思路在两个层次展开：国家里不同部分各司其职，个人内部的各种品质也各起其作用。",
-      "textSha256": "62f867025aafa80dcc87a60f4a65546df1976136b83ff3d6fe74d844cd1d1b51",
+      "text": "在双方已同意国家与个人内部部分相对应的前提下，苏格拉底把各做各的事用于个人的各种品质。这一步依赖该对应关系，并非仅因用词相同就能推出结论。",
+      "textSha256": "754963d818b7cb9d5634a9a4f8399d614951e599d0616bde91cae73859291898",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-person-city-functions--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.072,
-      "frames": 378,
+      "durationSeconds": 15.36,
+      "frames": 640,
       "sampleRates": [
         24000
       ],
-      "bytes": 54432,
-      "sha256": "39323ab54cf6c4d8af179dc7134e0b1cca2e7490786675e7be879a18f48c3661"
+      "bytes": 92160,
+      "sha256": "b98b4e369862a76d64bff759ece8efeceec3575e262cc08d8cc67833844b1cec"
     },
     {
       "key": "reading-person-city-functions--a",
@@ -2486,19 +2486,19 @@
       "questionId": "reading-person-city-functions",
       "optionId": "a",
       "correct": false,
-      "text": "本页依据国家与个人内部品质的对应关系，没有用财富作判断标准。",
-      "textSha256": "2c5fbc455a1b676c1cad3410c373a799b187b4c6a869d03da20b60ff4c702964",
+      "text": "本页将城邦的关系转到个人内部的各种品质；职业归属不能代替这一层的检验。",
+      "textSha256": "a26e7f86e3709e4d8cac070fae05d14de30b1d9e7beb5097b94c9220b19d20ef",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "reading-person-city-functions--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 6.744,
-      "frames": 281,
+      "durationSeconds": 7.896,
+      "frames": 329,
       "sampleRates": [
         24000
       ],
-      "bytes": 40464,
-      "sha256": "905d794807edcbcb2930f0a418b6024511da09e470f021665e1ebe2cfce7f481"
+      "bytes": 47376,
+      "sha256": "d6c959329a9a6b7d2ebc406e7b12261d330201db14cf42e563aea838cd6d5d58"
     },
     {
       "key": "reading-person-city-functions--c",
@@ -2530,19 +2530,19 @@
       "questionId": "bonus-check-trial-gate",
       "optionId": "b",
       "correct": true,
-      "text": "他请求审判者容许平常的说话方式，把注意力放在真实与正当上。说得动听或使人同情，都不能代替这种判断。",
-      "textSha256": "1566f62ee23dc2e73ccca4f091ae368d671c6cd65e1ba214e17f189fc88a81bb",
+      "text": "开场将说话方式与判断标准分开：不要求擅长法庭辞令，仍要求说话真实、审判公正。",
+      "textSha256": "d349d7f3d575197b69c98b25020570b0bca81e8424c7dff3118b684a39d7e1dc",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-trial-gate--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 11.28,
-      "frames": 470,
+      "durationSeconds": 9.192,
+      "frames": 383,
       "sampleRates": [
         24000
       ],
-      "bytes": 67680,
-      "sha256": "49dbc40c680300f934b29ab336970ca232fc61419762102aadcf31a08d660d20"
+      "bytes": 55152,
+      "sha256": "81e95967566e5dd238fe930556104a9908bac31e91b2edc892e2ba0597e2497a"
     },
     {
       "key": "bonus-check-trial-gate--a",
@@ -2552,19 +2552,19 @@
       "questionId": "bonus-check-trial-gate",
       "optionId": "a",
       "correct": false,
-      "text": "他说自己不熟悉法庭的说话方式，正是要把语言是否熟练与辩护是否真实分开。熟练本身不能证明正当。",
-      "textSha256": "026edeff2a41a07f2f6caa95a8eb0ca00ae9eac3d45fb9b9d162bba099f0319b",
+      "text": "他说自己不熟悉法庭言辞，随后要求“只看”所说是否正当。熟悉哪种说法不能代替检查内容。",
+      "textSha256": "12e17da08645c5d66633e8e008a0d4f969c49e1da6ea6361642dbd9a9152ae61",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-trial-gate--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.968,
-      "frames": 457,
+      "durationSeconds": 9.864,
+      "frames": 411,
       "sampleRates": [
         24000
       ],
-      "bytes": 65808,
-      "sha256": "49aa7c3cdfcdd4665febfa667a2df60f776f756d75dd3390ce8c116e311a0295"
+      "bytes": 59184,
+      "sha256": "71062bdcdfc62d76f64d2a597130af1977ab4cce99629d291decae7af500f416"
     },
     {
       "key": "bonus-check-trial-gate--c",
@@ -2574,19 +2574,19 @@
       "questionId": "bonus-check-trial-gate",
       "optionId": "c",
       "correct": false,
-      "text": "同情一个人与判断他是否有罪不是同一件事。苏格拉底的开场要求检查事情本身，而不是先衡量求情的力量。",
-      "textSha256": "39139dfdc4b79bd9dc9a6eb22faade7297e5fe297ecfda7181fe6b66488bcb21",
+      "text": "他并未说平常的说法自动真实。“只看我所说的是否正当”仍要求审查具体内容。",
+      "textSha256": "621e2afea72b0a487328288975f48f0c16a9650272462f052ad1b7acf4790cd2",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-trial-gate--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.944,
-      "frames": 456,
+      "durationSeconds": 7.944,
+      "frames": 331,
       "sampleRates": [
         24000
       ],
-      "bytes": 65664,
-      "sha256": "3cdd30209d625eed2561d0ecfa6def7c1543f3623330603ae2f700e5818887ad"
+      "bytes": 47664,
+      "sha256": "d29d5a1555e3d8bab9c2412e383adf08c2acfd8af5c8e4a30bd07cef7984fc58"
     },
     {
       "key": "bonus-check-old-accusations--a",
@@ -2596,19 +2596,19 @@
       "questionId": "bonus-check-old-accusations",
       "optionId": "a",
       "correct": true,
-      "text": "旧日传闻早已进入听众的印象，又不像具名控告那样能当场追问一个说话者。苏格拉底把两类控告分开回应。",
-      "textSha256": "8ba0fc244514b6132985090a4c9be7b6b412275a385dd635a6b48bbccab8b0a5",
+      "text": "正文说明控告流传已久，当初没有答辩者，现在又难以指认、传唤那些人。“和影子交战”概括的就是这个困难。",
+      "textSha256": "a14373c05a140966dea9183632c922f55dbf1f79ca0976ed070f5a3c29172cd3",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-old-accusations--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.968,
-      "frames": 457,
+      "durationSeconds": 10.872,
+      "frames": 453,
       "sampleRates": [
         24000
       ],
-      "bytes": 65808,
-      "sha256": "7847f3cd658ca160de5282dea186c896efb5eca464212130b2959a3976c7554a"
+      "bytes": 65232,
+      "sha256": "6f33be11a71689635e254e1ef0587bb150dbccd1656c47340ddf8c325ab80651"
     },
     {
       "key": "bonus-check-old-accusations--b",
@@ -2618,19 +2618,19 @@
       "questionId": "bonus-check-old-accusations",
       "optionId": "b",
       "correct": false,
-      "text": "这一幕说的是长期传闻与印象，没有说它们已经受到法庭核实。流传得久，不等于已经得到证明。",
-      "textSha256": "4e6e7fbb43f7407f9275d3320b131823bfa83f6b70649ec025273fe63da7cbd8",
+      "text": "流传已久说明印象形成得早；正文并没有说时间使流言取得法律证明力。",
+      "textSha256": "e62103743619bfc01b3947c3e468fb04bc53cb28f97dfbcc9ca31d36e2a326fe",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-old-accusations--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.96,
-      "frames": 415,
+      "durationSeconds": 7.464,
+      "frames": 311,
       "sampleRates": [
         24000
       ],
-      "bytes": 59760,
-      "sha256": "1d1de3a93f47394a222097cfab94ed85bb3b1a30ba8ddff5e27be85695c1365b"
+      "bytes": 44784,
+      "sha256": "26770d1c697d34e0b352a1c5a9b22560d92d8faeb0f3f49171970cc0ffee93e6"
     },
     {
       "key": "bonus-check-old-accusations--c",
@@ -2640,19 +2640,19 @@
       "questionId": "bonus-check-old-accusations",
       "optionId": "c",
       "correct": false,
-      "text": "苏格拉底讲述敌意怎样积累，并没有展示每个反对者的内心。解释一种敌意的来由，不能代替逐一说明所有动机。",
-      "textSha256": "cdeeb8a5740056d3a38094db70032499bd2522df558bdaa1960caead5a162313",
+      "text": "苏格拉底说这些人很多，甚至说不出许多人的名字。把他们当成一位可传唤者，恰好消除了正文强调的困难。",
+      "textSha256": "36c14e00ad5a1dcbc860ef2216446f74cfa44d6cd6f94d19037a6c434890ac17",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-old-accusations--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 11.088,
-      "frames": 462,
+      "durationSeconds": 10.368,
+      "frames": 432,
       "sampleRates": [
         24000
       ],
-      "bytes": 66528,
-      "sha256": "c0193df6c6443914cd357620a53583e400b98c30c0fac1fdb224a93df4cc598b"
+      "bytes": 62208,
+      "sha256": "f8fb30f5ac8609d7dc9c8fe57e02ef9562a0689aa5dbf72a01d2abc48db1e940"
     },
     {
       "key": "bonus-check-charges--c",
@@ -2662,19 +2662,19 @@
       "questionId": "bonus-check-charges",
       "optionId": "c",
       "correct": true,
-      "text": "这一问让美勒托说出谁具有改善青年的能力，再检查“所有人都改善，只有一人损害”的断言。提出困难还不等于法庭已经宣告无罪。",
-      "textSha256": "68214ad5e0d5a6883b2fe174ab7af4db4cff77719fcfa6c5653d0520a4f74d55",
+      "text": "苏格拉底把前面的逐项承认汇成这个概括，美勒托明确确认。这才是随后可以检验的主张。",
+      "textSha256": "412be2e063a2d2f7d1756fc962e164867d22748fe520e764423d13e6463a7eb4",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-charges--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 12.816,
-      "frames": 534,
+      "durationSeconds": 9.504,
+      "frames": 396,
       "sampleRates": [
         24000
       ],
-      "bytes": 76896,
-      "sha256": "6d181fe47d1d062e57910f77016e5d1cccbfa3d29fa0bb747d327a829999c615"
+      "bytes": 57024,
+      "sha256": "a567efec27584b26fd4ece008c55f705554e837444b8e2b54fcf56b1eb73c5f8"
     },
     {
       "key": "bonus-check-charges--a",
@@ -2684,19 +2684,19 @@
       "questionId": "bonus-check-charges",
       "optionId": "a",
       "correct": false,
-      "text": "眼前的盘问先追究谁能使青年变好。支持者的存在与教育影响如何，需要分别说明，不能直接互相代替。",
-      "textSha256": "5587979515b2a76688988e9070629c507d0667dfece913bc93c69579cead9333",
+      "text": "美勒托最初回答“法律”，苏格拉底随即追问“谁首先懂得法律”。答问没有停在法律文字本身。",
+      "textSha256": "73eba80f3ea5c595946e50af2253d99b2e00208b4fc1201528bc7349f37e79ad",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-charges--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.896,
-      "frames": 454,
+      "durationSeconds": 9.048,
+      "frames": 377,
       "sampleRates": [
         24000
       ],
-      "bytes": 65376,
-      "sha256": "003107bb16ebcefc7556c71888504d8aa2345b1329d992b33a2cbd2d21ae7345"
+      "bytes": 54288,
+      "sha256": "eef91920bb3892a8e857d13a18932c15945e92951ae77e871c5e0d3900a69236"
     },
     {
       "key": "bonus-check-charges--b",
@@ -2706,19 +2706,19 @@
       "questionId": "bonus-check-charges",
       "optionId": "b",
       "correct": false,
-      "text": "苏格拉底正在回应控告。他用问题检查它的根据，并不是以尚未判决为由回避说明。",
-      "textSha256": "4b417effa112c9a39ca1eabf1dfe5dd4e32d1c4bab8bf90e49a101ffaea89838",
+      "text": "这是另一种可能看法，但不是美勒托在固定正文中的回答；他承认旁听者、议事会和大会的人都改善青年。",
+      "textSha256": "8ca090dc4980a9457a18a1a8d0710660a63092bfc13d3b8ccb08e38c059d5892",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-charges--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.52,
-      "frames": 355,
+      "durationSeconds": 10.512,
+      "frames": 438,
       "sampleRates": [
         24000
       ],
-      "bytes": 51120,
-      "sha256": "cafc4d61907ced3fc8f54256509def3c4c3e2ccbf2b9cfad812c6ded2e0a600b"
+      "bytes": 63072,
+      "sha256": "06328a9ab697d2066b2abdd1af2055f8d84eadd6e46eb0cd1ddce11f6b442c78"
     },
     {
       "key": "bonus-check-examination--b",
@@ -2728,19 +2728,19 @@
       "questionId": "bonus-check-examination",
       "optionId": "b",
       "correct": true,
-      "text": "苏格拉底要求美勒托说明，这两种指控怎样能够同时成立。这里检查答话是否一致，并没有展开一套完整神学。",
-      "textSha256": "176b551526b2d685f4fec2cb32bc2979cb51814bb8244b46346d46d7d77d3237",
+      "text": "美勒托先说他完全不信神，又承认不能相信神灵之事而不相信神灵。苏格拉底将控状自身的承认并置检查。",
+      "textSha256": "f533dabfb62d0f00342d9246e1ccfe991a69cbbcfa7afc7cd727c273e3d34e33",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-examination--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 11.064,
-      "frames": 461,
+      "durationSeconds": 11.472,
+      "frames": 478,
       "sampleRates": [
         24000
       ],
-      "bytes": 66384,
-      "sha256": "06d73506c0773cf9705f4c862ba362a13b15aacaaa1d8ecd7b826d1e28eb213c"
+      "bytes": 68832,
+      "sha256": "8ba87941e5fa3672e1b3cffcd8ccd44e7818dfc4ab9c44acabde509295652bbf"
     },
     {
       "key": "bonus-check-examination--a",
@@ -2750,19 +2750,19 @@
       "questionId": "bonus-check-examination",
       "optionId": "a",
       "correct": false,
-      "text": "太阳的说法在对话中出现，但盘问随后收拢到神灵之事与完全不信神能否相容，并没有由太阳直接推论所有青年的变化。",
-      "textSha256": "fe5bd8238d305dddbbd42dae63e801886b89086c8c466fbc7d0fda878e158a7a",
+      "text": "开头先区分相信别的神与完全不信神。苏格拉底要求控方说清指控，不能先把两种说法合成同一种。",
+      "textSha256": "09ef5b47dd0b1d8344fc9434c3bc4bd529457194725d125c583ad843e28fe187",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-examination--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 11.4,
-      "frames": 475,
+      "durationSeconds": 10.392,
+      "frames": 433,
       "sampleRates": [
         24000
       ],
-      "bytes": 68400,
-      "sha256": "1dd02f1d42f60f63eebe6482da13b656c3bb96a89a2a522e4a32ea07a8199903"
+      "bytes": 62352,
+      "sha256": "daa98c430cb492065441ca36581c5093ebc074f855684a15738abe6f1a6b534e"
     },
     {
       "key": "bonus-check-examination--c",
@@ -2772,19 +2772,19 @@
       "questionId": "bonus-check-examination",
       "optionId": "c",
       "correct": false,
-      "text": "这两种说法需要区分。苏格拉底正追问控方究竟主张哪一种，不能预先把它们当作毫无区别。",
-      "textSha256": "6604f9b5c6f86a7b7b06f3096013cb2c6ad3b112cd58db6c47b2f83218b6930f",
+      "text": "美勒托在固定正文中回答“不能”，承认相信神灵之事而不信神灵是不可能的。盘问正是利用这一承认。",
+      "textSha256": "500fe79e9f36cebceec0afac82e9ec5eeee570eebd4988c9b6f3c7917d13bc91",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-examination--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.312,
-      "frames": 388,
+      "durationSeconds": 10.08,
+      "frames": 420,
       "sampleRates": [
         24000
       ],
-      "bytes": 55872,
-      "sha256": "689bf217214151b6109d4bca2dc6d5d43b2d23030d7d8a936bab6b6a42df625b"
+      "bytes": 60480,
+      "sha256": "62d9708b8e924b07372866258840eb7885ce8b26e05ad4085b555ca40b092a35"
     },
     {
       "key": "bonus-check-commitment--c",
@@ -2794,19 +2794,19 @@
       "questionId": "bonus-check-commitment",
       "optionId": "c",
       "correct": true,
-      "text": "这个条件由苏格拉底自己假设。他借此说明，关心灵魂与检查生活，在他看来不能因危险就被放弃。",
-      "textSha256": "c06e839c94a3fb0c906a7308bddc946cb83b4cefddd5a201325e1edd3a7b9892",
+      "text": "两次条件式说法清楚表明这是假设。他用它说明：即使面对这一选择，自己仍会服从他理解的神的要求。",
+      "textSha256": "dee979b79acc3f57a9999f6517e5cbb0d363ded183c87f8e2e39d6a470331513",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-commitment--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.416,
-      "frames": 434,
+      "durationSeconds": 10.536,
+      "frames": 439,
       "sampleRates": [
         24000
       ],
-      "bytes": 62496,
-      "sha256": "80819d17726c305516a94f421373bd0dc7f47a22cdbbe3e55c05f2e2b9d5444c"
+      "bytes": 63216,
+      "sha256": "14a00431076fa17f46a975b7598b597fcfc1bb8a07e4150b7772ef5ee5af9e5e"
     },
     {
       "key": "bonus-check-commitment--a",
@@ -2816,19 +2816,19 @@
       "questionId": "bonus-check-commitment",
       "optionId": "a",
       "correct": false,
-      "text": "旁白特意说明，这不是已经提出的交易。若把假设写成法庭事实，就会改变这一幕的叙述。",
-      "textSha256": "212270011312a26e61bcd7c7cde79e9a3b1c07c9cdc7088c528ddf87f45b735c",
+      "text": "本幕以“假如你们对我说”开头，接着说“如果这是”。不能把这段条件式申辩当成已经作出的裁决。",
+      "textSha256": "067555589f77db0f227c0d9ed731f815d396e981a4d5550378112d4d8e633b62",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-commitment--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.784,
-      "frames": 366,
+      "durationSeconds": 8.88,
+      "frames": 370,
       "sampleRates": [
         24000
       ],
-      "bytes": 52704,
-      "sha256": "be84bf5b14dabeefc9444f45023da975acae22a706caf85f424637ca81b9d2a4"
+      "bytes": 53280,
+      "sha256": "26f66f66c7b6575e12f8903903c9249859dd876d420131c99d96e5885d3cc878"
     },
     {
       "key": "bonus-check-commitment--b",
@@ -2838,19 +2838,19 @@
       "questionId": "bonus-check-commitment",
       "optionId": "b",
       "correct": false,
-      "text": "他的回答关心是否应停止自己认定正当的盘问。坚持一种生活，不等于把死亡本身当作目标。",
-      "textSha256": "375d9f4b12a1d0979fdce9e836384765b3fdfc3303b6f42b42cc601955b48902",
+      "text": "他设想的条件要求停止探究，而他的回答恰恰是不肯停止；不是他答应用沉默换自由。",
+      "textSha256": "3a3543cbfc712583375370ab2782897cf0a2580a04e303e367bcc87e928e7d01",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-commitment--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.312,
-      "frames": 388,
+      "durationSeconds": 8.856,
+      "frames": 369,
       "sampleRates": [
         24000
       ],
-      "bytes": 55872,
-      "sha256": "a0df38224934b10116202555c7dfdc265c73e7e159ed6f9135f32388a728b16c"
+      "bytes": 53136,
+      "sha256": "387fc03834c6d1d03753337e18c418b34c9aad8338efcd413a50be283e8ea444"
     },
     {
       "key": "bonus-check-verdict--a",
@@ -2860,19 +2860,19 @@
       "questionId": "bonus-check-verdict",
       "optionId": "a",
       "correct": true,
-      "text": "认定有罪与决定刑罚是前后两步。此时控方请求死刑，苏格拉底的回应发生在具体刑罚确定之前。",
-      "textSha256": "24ca44027a2a976b11478bbdbe4ed293894c187de7b0b5f047f54c87f27393db",
+      "text": "固定正文先记有罪裁决，再以“他提议……我该提出什么”进入待遇与刑罚的问题。两步不能合并。",
+      "textSha256": "89ef21878cefa573edcf8d9e9964ce1801ee793787b3d7dde23565a378c88f42",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-verdict--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.608,
-      "frames": 442,
+      "durationSeconds": 9.192,
+      "frames": 383,
       "sampleRates": [
         24000
       ],
-      "bytes": 63648,
-      "sha256": "adc87882c83efad5e90c9ed03da854a0fd457b0cd87c6b7e9898183f096d72e1"
+      "bytes": 55152,
+      "sha256": "2c07cb1ef9488fbf639810c7a9a2a6fd40022bbb5f8cfa31420a88d82fa3c172"
     },
     {
       "key": "bonus-check-verdict--b",
@@ -2882,19 +2882,19 @@
       "questionId": "bonus-check-verdict",
       "optionId": "b",
       "correct": false,
-      "text": "这一幕明确把认定有罪与决定刑罚分开。如果只剩执行时间，随后的处罚提议与第二次表决就被抹去了。",
-      "textSha256": "3fdd729991816179a54ffcf8b0a2ecce6285d6786870514b534a35860d1161bc",
+      "text": "本幕开头已经说明有罪裁决作出。公餐厅供养是苏格拉底自己的提议，不是法庭给他的先决条件。",
+      "textSha256": "6180f780dfdddc7513098e77f5b5f5aeb6207531ec9d112ce12b80e88521f8f6",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-verdict--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.728,
-      "frames": 447,
+      "durationSeconds": 9.816,
+      "frames": 409,
       "sampleRates": [
         24000
       ],
-      "bytes": 64368,
-      "sha256": "54267725331ad8b577ad4c77a6dc5a370a16ac35ffee5078877c3a1b8ce2aa1f"
+      "bytes": 58896,
+      "sha256": "594c04f2b41cfad941f44ba5cb67b93451d3717d508c69879d015a598334cb15"
     },
     {
       "key": "bonus-check-verdict--c",
@@ -2904,19 +2904,19 @@
       "questionId": "bonus-check-verdict",
       "optionId": "c",
       "correct": false,
-      "text": "这里已经作出了有罪裁决。接下来的分歧围绕应当施加什么刑罚，不是重新寻找控告者。",
-      "textSha256": "10a8b80f301071173bdbdffb56a0b1ff04f5c62bee0dc12d0b251d345cbfbb61",
+      "text": "“他提议死刑，我该提出什么”仍在讨论应受什么处置。有罪裁决没有在这里同时决定具体刑罚。",
+      "textSha256": "2aa2cf66090f9bd03f8176c0245832264623298cd5c084fb6ee54af75c69f1df",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-verdict--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.808,
-      "frames": 367,
+      "durationSeconds": 9.384,
+      "frames": 391,
       "sampleRates": [
         24000
       ],
-      "bytes": 52848,
-      "sha256": "f23d1dc66fbf81e06d1c380f3438d85ddf72e75d0113e357324d1f99dcb6bd32"
+      "bytes": 56304,
+      "sha256": "9047932fe7d317bf867011e6d621ec55757dd8c5e882f257f1221d083939a149"
     },
     {
       "key": "bonus-check-sentence--b",
@@ -2926,19 +2926,19 @@
       "questionId": "bonus-check-sentence",
       "optionId": "b",
       "correct": true,
-      "text": "罚金是苏格拉底最终提出的方案，死刑是法庭的裁定。把自己的处罚提议与法庭决定分开，才能准确理解他怎样走向死亡。",
-      "textSha256": "2503be5e411397024ccda2a772b51a4e41ba6f9c6cedf53c7fe6e5014f3c8e2d",
+      "text": "人物发言提出三十米那并列出担保朋友；接着的叙述才记下法庭判处死刑。这是两种不同主体的决定。",
+      "textSha256": "7727df6e485ecd3ca1ef46aa9c1cac84c55e4b863a75698e1a9dbfb0e90c947b",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-sentence--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 12.456,
-      "frames": 519,
+      "durationSeconds": 10.872,
+      "frames": 453,
       "sampleRates": [
         24000
       ],
-      "bytes": 74736,
-      "sha256": "0e405a50a96533ed2e80a7f2554a89c965b2f069422c4892e08df0674a099cb0"
+      "bytes": 65232,
+      "sha256": "7aa88357f71e7e5c8cbfba7f1d76b58a6c4dc1f1ab6267395f37e6ad516ebd39"
     },
     {
       "key": "bonus-check-sentence--a",
@@ -2948,19 +2948,19 @@
       "questionId": "bonus-check-sentence",
       "optionId": "a",
       "correct": false,
-      "text": "他最终提出的是有朋友担保的三十米那罚金。拒绝沉默或流放，不能改写成他主动提出死刑。",
-      "textSha256": "c57d3f5adbd3c537b0b16f59d65cd680072aa1bc5725a90157c29e10d7910b70",
+      "text": "他最后仍明确提出三十米那并列出担保者，正文没有撤回罚金的发言。死刑由随后法庭的裁决确定。",
+      "textSha256": "b795f3391260c26a673987c454a20ec6d9102106f4cb57e7ce220d6ceedf8808",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-sentence--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.168,
-      "frames": 382,
+      "durationSeconds": 10.368,
+      "frames": 432,
       "sampleRates": [
         24000
       ],
-      "bytes": 55008,
-      "sha256": "d8c1fd758543e059d16c814d934a610a6deb24ed9867b3e9a6a9ff20b807e080"
+      "bytes": 62208,
+      "sha256": "70e45de535651faf81a2c1f5a533ef8297a770c35cbbaaea268b5b18dae92af7"
     },
     {
       "key": "bonus-check-sentence--c",
@@ -2970,19 +2970,19 @@
       "questionId": "bonus-check-sentence",
       "optionId": "c",
       "correct": false,
-      "text": "朋友提供的是罚金担保，并没有因此取得裁决刑罚的权力。本幕仍由法庭通过第二次表决决定刑罚。",
-      "textSha256": "de4c433792cb3bd1dbf5aafdd0110be8c59db1b9486a1856edaca51793068cfb",
+      "text": "朋友担保使罚金提议能够落实，但不等于提议已获法庭接受。正文随后记下的决定仍是死刑。",
+      "textSha256": "75d8f95da9696059bad168ad122c55a41303d5f1b334f3beb68678466402371d",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-sentence--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.344,
-      "frames": 431,
+      "durationSeconds": 9.552,
+      "frames": 398,
       "sampleRates": [
         24000
       ],
-      "bytes": 62064,
-      "sha256": "7575f8a5cbe5bf6cbffe9286f16246a632faf39266f10585c9d3194e7cb2490a"
+      "bytes": 57312,
+      "sha256": "70e9c0d50d38353273d22c44c0bbf8ba477d0e840d8866407287b8f04b47ba6a"
     },
     {
       "key": "bonus-check-escape--c",
@@ -2992,19 +2992,19 @@
       "questionId": "bonus-check-escape",
       "optionId": "c",
       "correct": true,
-      "text": "他没有因自己受难就更换判断标准，而是先问逃走是否正当。朋友的热心与现实危险都重要，却不能替代这一步检查。",
-      "textSha256": "56b705552e755b349ad8a8a1976803c4b2a6838eac967f788010ca8f5cb2a4ef",
+      "text": "他没有把有办法逃走直接当成应当逃走，而是重申从前的理由和活得正当的要求，再检查这次行动。",
+      "textSha256": "92f41898eb47476e2fccd5613e928d551e18f6475421b3ca45ca6646fbe4c3fe",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-escape--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 11.952,
-      "frames": 498,
+      "durationSeconds": 9.696,
+      "frames": 404,
       "sampleRates": [
         24000
       ],
-      "bytes": 71712,
-      "sha256": "aac59691289fdc54d9d8796632c6baaf1bd3fc6a58d1b5e3c93f70177a7033ca"
+      "bytes": 58176,
+      "sha256": "059f28d66f45dd594684b56c52a4aa60200ebbc6f6cdaa0c81bec4f7b91532da"
     },
     {
       "key": "bonus-check-escape--a",
@@ -3014,19 +3014,19 @@
       "questionId": "bonus-check-escape",
       "optionId": "a",
       "correct": false,
-      "text": "朋友的名声确实是克里同的担忧，但苏格拉底不肯只凭别人怎样议论来判定行动是否正当。",
-      "textSha256": "b58a38de0d8fdc86828e03d6a72458ffab9c40cc7b453566db29f13e2655aded",
+      "text": "固定正文已经列出朋友出钱和忒萨利的接待。尚未解决的问题是行动是否正当，不只是资源缺失。",
+      "textSha256": "8f1a5f5307abe0cc0bd95fefc16a1c6c89085a7d0f91e788358265e3a3aa348b",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-escape--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.664,
-      "frames": 361,
+      "durationSeconds": 10.344,
+      "frames": 431,
       "sampleRates": [
         24000
       ],
-      "bytes": 51984,
-      "sha256": "14936aa46f95fa7933bbc9fc2fb3c2268a170682519f8559bd2ea85251d5e806"
+      "bytes": 62064,
+      "sha256": "78c56ceb8d9c7520a68179d8a18d3825be421556689b80a6364ffff4f6d229b6"
     },
     {
       "key": "bonus-check-escape--b",
@@ -3036,19 +3036,19 @@
       "questionId": "bonus-check-escape",
       "optionId": "b",
       "correct": false,
-      "text": "苏格拉底没有把延长生命设为唯一标准。他要求在行动之前，仍检查原先认可的正当理由。",
-      "textSha256": "cbcc607cbe54b5961800e7d8ce59d78d45d0875887bb2e088075c1fe5bb39eb7",
+      "text": "苏格拉底明确问“该不该”，并以“活得好”界定判断标准；这超过了路线安全的比较。",
+      "textSha256": "df713ac70772dd7f5279f98971ca5835dc25d2c61493da6df9e378b56796085c",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-escape--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.24,
-      "frames": 385,
+      "durationSeconds": 8.016,
+      "frames": 334,
       "sampleRates": [
         24000
       ],
-      "bytes": 55440,
-      "sha256": "48fd13c16a52471f2f67e1e3e4c32c1caa009bb9981c3337767c62e604d4df0a"
+      "bytes": 48096,
+      "sha256": "fac60a877eee4a2c239384dca1b159be3f2e28749d5712920557fc87a4bf02c2"
     },
     {
       "key": "bonus-check-laws--a",
@@ -3058,19 +3058,19 @@
       "questionId": "bonus-check-laws",
       "optionId": "a",
       "correct": true,
-      "text": "拟人的法律诉诸养育、生活选择与约定，质问秘密逃走会怎样损害这些关系。这段论证不等于宣布任何权力命令都正当。",
-      "textSha256": "f3b0eea0265c1ce40a35f86cf9d385b106bd27d16151a3a949c9027750697c13",
+      "text": "这段论证由可离开、已经了解、仍然居留，推向行动上的同意。题目要求辨认这个推理，不要求玩家认定它充分。",
+      "textSha256": "d8ccea442bf90c9c094c705b5b40907ccd65de0f21373fab2ac13d3b2ec01730",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-laws--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 11.856,
-      "frames": 494,
+      "durationSeconds": 11.184,
+      "frames": 466,
       "sampleRates": [
         24000
       ],
-      "bytes": 71136,
-      "sha256": "37b52e3e0c98be0447f7759426b82390821599b72597f57199b253b91e1c3903"
+      "bytes": 67104,
+      "sha256": "3a850236f685e1eeeb146902acda6ca4d0294027078259a3854bcaa8d061d015"
     },
     {
       "key": "bonus-check-laws--b",
@@ -3080,19 +3080,19 @@
       "questionId": "bonus-check-laws",
       "optionId": "b",
       "correct": false,
-      "text": "这里提出的是关系与约定的理由，不能用强弱取代它们。苏格拉底也曾拒绝参与不义命令。",
-      "textSha256": "ea4034b31bb747182b6432b285b84686e7c3f06149151d09b40d969b28af9485",
+      "text": "正文强调的是可以带财物离开与行动上的同意，没有说人人作过永不离开的口头誓言。",
+      "textSha256": "7010ce636ac303cf563af0481ae5df11d115b3a3d5a7903424861b30fcb85a6a",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-laws--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.048,
-      "frames": 377,
+      "durationSeconds": 8.4,
+      "frames": 350,
       "sampleRates": [
         24000
       ],
-      "bytes": 54288,
-      "sha256": "11cc4116ad90e33e9222bfc48c6bf10ef3200b1182ff53418e02f41985e0df5a"
+      "bytes": 50400,
+      "sha256": "2e7a81e1164ce6534e2b285e5f86fb03f675b6684caa919f861220e3efe4049f"
     },
     {
       "key": "bonus-check-laws--c",
@@ -3102,19 +3102,19 @@
       "questionId": "bonus-check-laws",
       "optionId": "c",
       "correct": false,
-      "text": "克里同已经指出城邦判得不公。苏格拉底仍要求进一步检查逃走是否伤害既有关系，不能把判错直接等同于逃走正当。",
-      "textSha256": "935b3c8a299bfa93b2166d5b92027087061d2230c726b63e339fc088d4e05224",
+      "text": "苏格拉底已设想“城邦作出不公判决”的反驳；拟法律随后仍讲关系与约定，而非只靠判决绝不出错。",
+      "textSha256": "74ca2873789cc3dfd4ae5013b18de5b857799ee72450c837c2f5ef39a0cd45b7",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-laws--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 11.952,
-      "frames": 498,
+      "durationSeconds": 9.72,
+      "frames": 405,
       "sampleRates": [
         24000
       ],
-      "bytes": 71712,
-      "sha256": "b380eaacbecaaff3cf95443e45dc54eaa27603039edc8bf80253bbbe37cba860"
+      "bytes": 58320,
+      "sha256": "bdab4eb684557c1a3b8078aa1f7342392c7b0d58af1a8664b8fad0f7b0f95fa1"
     },
     {
       "key": "bonus-check-last-day--b",
@@ -3124,19 +3124,19 @@
       "questionId": "bonus-check-last-day",
       "optionId": "b",
       "correct": true,
-      "text": "即使在最后一天，他仍让朋友提出反驳。对说话者的感情不应替代对论证的检查，这也是这场谈话继续展开的条件。",
-      "textSha256": "506be50564c751f7aaa1d1d729a0088a2a83d08090c50635bddf822949cd2455",
+      "text": "本幕的两处节译一致要求检查论证。91b–c把赞同与反驳的条件明说为是否真实，不是出于对人物的感情。",
+      "textSha256": "89729ed93160d32d04c9fd366405c76ef1b7a8f25495e0a98d7cdd4408724f7d",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-last-day--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 11.28,
-      "frames": 470,
+      "durationSeconds": 11.016,
+      "frames": 459,
       "sampleRates": [
         24000
       ],
-      "bytes": 67680,
-      "sha256": "15cd877e66d31177dbcd101388b38cb8a4a1fd22ac6ac3bb2f76d5bc4eeeed9f"
+      "bytes": 66096,
+      "sha256": "8841fc9a812129d83f4e0f7f6abd1673dd3993c6168b4d988830cf3ed8ca560e"
     },
     {
       "key": "bonus-check-last-day--a",
@@ -3146,19 +3146,19 @@
       "questionId": "bonus-check-last-day",
       "optionId": "a",
       "correct": false,
-      "text": "苏格拉底并没有要求朋友用赞同表示照顾。他仍邀请他们说出疑问，检查论证中尚有困难的地方。",
-      "textSha256": "2b4d8f7820801ec62b2c6c72e0d65d5a526944ceea2dd70055c066989f2c0f5b",
+      "text": "西米亚斯正担心造成烦恼，苏格拉底却让他们直说疑问；后来更要求说得不真实时尽力反驳。",
+      "textSha256": "f55f5501f34851b3699a59a89efc2977f6b9101cd429686f38ce45e92e703033",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-last-day--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.72,
-      "frames": 405,
+      "durationSeconds": 9.36,
+      "frames": 390,
       "sampleRates": [
         24000
       ],
-      "bytes": 58320,
-      "sha256": "6b7dc4261adc4b956f38839efc9ce83bdf0006b32ba8732cf6ff0c1390a7644e"
+      "bytes": 56160,
+      "sha256": "748af30f69558df0f489a13a238a0ed26a4c34015901f3b6068eca78e5de9066"
     },
     {
       "key": "bonus-check-last-day--c",
@@ -3168,19 +3168,19 @@
       "questionId": "bonus-check-last-day",
       "optionId": "c",
       "correct": false,
-      "text": "这一幕保留的正是尚待回答的困难。若要求先接受结论，朋友的反驳就失去了真正接受检查的机会。",
-      "textSha256": "ff28a715abbc6f94c96b6a61ebc9d84e505b0e89b77db7303632bbb23ce0770e",
+      "text": "固定正文没有要求先无条件接受结论；它反而指出论证仍有可疑、可攻击的地方。",
+      "textSha256": "2bb2087f0856041f858fc8e5bee5d20333b399dfc44a213f86875a9de9684dd5",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-last-day--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.96,
-      "frames": 415,
+      "durationSeconds": 8.064,
+      "frames": 336,
       "sampleRates": [
         24000
       ],
-      "bytes": 59760,
-      "sha256": "e1d78e7aeeb466059705d737a9e035341caaad794dbb79d942d2b8894832547d"
+      "bytes": 48384,
+      "sha256": "63c18a7691fb6e9268222c1aeb176ffcc6c66fb6866a990ddc36e3948d7f46ab"
     },
     {
       "key": "bonus-check-cup--c",
@@ -3190,19 +3190,19 @@
       "questionId": "bonus-check-cup",
       "optionId": "c",
       "correct": true,
-      "text": "这既是一场死刑的执行，也是一群人的告别。苏格拉底的平静、朋友的挽留与眼泪可以同时存在，不能互相取消。",
-      "textSha256": "717a374ce281b133358f4ba4500fcb0e3b8b845db278a8bd5916f64a39fa80cb",
+      "text": "侍役的发言交代命令来源；随后叙述同时记下平静饮药与在场者落泪。这几项并不互相取消。",
+      "textSha256": "b04eec3cb42c41aadfd24f02d9d0ad6bf7291933b39ff3c62d0d77c8922a8de5",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-cup--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.896,
-      "frames": 454,
+      "durationSeconds": 9.888,
+      "frames": 412,
       "sampleRates": [
         24000
       ],
-      "bytes": 65376,
-      "sha256": "4c330691c45c2368327dbdc227c1ad1a6221517abb1b5390276b9f694406f544"
+      "bytes": 59328,
+      "sha256": "f8c6e8b1ffc161e2ea6dbf42eb5898cf0e8a161f2a38fd6381fb5eddefe24c3a"
     },
     {
       "key": "bonus-check-cup--a",
@@ -3212,19 +3212,19 @@
       "questionId": "bonus-check-cup",
       "optionId": "a",
       "correct": false,
-      "text": "本幕直接写出侍役流泪与朋友的挽留。一个人的平静，不能用来抹去周围人的悲伤。",
-      "textSha256": "487feaa6d5944cc3df0b90393ff055a9e5ccdf7ecb2f4b667ad6499534c08dd9",
+      "text": "侍役明确说自己奉官署命令而来，并说责任在别人。眼泪不能证明判决由他作出，更不能凭此补写懊悔的原因。",
+      "textSha256": "c1c9cb92d30b3d99de26b8882fcba9faf5a2799c420b6119e346e6d871a0f24f",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-cup--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.664,
-      "frames": 361,
+      "durationSeconds": 11.592,
+      "frames": 483,
       "sampleRates": [
         24000
       ],
-      "bytes": 51984,
-      "sha256": "096a5315d6a629410d854b1baf190b37fc18689acd6258b1fa7953709b026023"
+      "bytes": 69552,
+      "sha256": "2a02b22a95f4e906548437b3460bfa561eecba5f814acb88fe6a183e13669f87"
     },
     {
       "key": "bonus-check-cup--b",
@@ -3234,19 +3234,19 @@
       "questionId": "bonus-check-cup",
       "optionId": "b",
       "correct": false,
-      "text": "侍役的态度与刑罚的性质不同。和善并没有改变这仍是监狱执行死刑的事实。",
-      "textSha256": "f8d4d3cced7a0c0358e1120fc81ddf6720cd6a43f70866134eb7ec9798f29708",
+      "text": "固定正文同时写出侍役流泪、朋友忍不住眼泪。一个人的平静不排除其他人的悲伤。",
+      "textSha256": "90690d77af616fa122d88c2e3917b1b60f72617d4966ea49372361bb722b0205",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-cup--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 8.256,
-      "frames": 344,
+      "durationSeconds": 8.424,
+      "frames": 351,
       "sampleRates": [
         24000
       ],
-      "bytes": 49536,
-      "sha256": "7eb30c4d789a2a145bb4130257b6df3ec98af21e3ac183f0ebe8344822a2a213"
+      "bytes": 50544,
+      "sha256": "d63d0321339100055d465c5c995384f58541d73559a9c8a135d8ca849a87dc17"
     },
     {
       "key": "bonus-check-last-words--a",
@@ -3256,19 +3256,19 @@
       "questionId": "bonus-check-last-words",
       "optionId": "a",
       "correct": true,
-      "text": "文本记下了偿还祭献的嘱托，并没有当场说明它的全部含义。保留记载与解释之间的距离，才能继续认真阅读这句末语。",
-      "textSha256": "444c0564262c1fab38c1ea92e6fdb4116ba2e3419a3a7ba092921d46f65ead65",
+      "text": "固定正文记下嘱托、答应及随后的沉默。可以确认这些叙述，而具体象征意义还须另作解释。",
+      "textSha256": "94d22c850d46f4c3f5ebd506fd6d352d70bd63b117f0e13c301bfa457bfa3254",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-last-words--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 11.688,
-      "frames": 487,
+      "durationSeconds": 9.768,
+      "frames": 407,
       "sampleRates": [
         24000
       ],
-      "bytes": 70128,
-      "sha256": "aacb47f5c6e1e4ff483febc3df1bd8c321c9af248867d9698bf1688d41d01be9"
+      "bytes": 58608,
+      "sha256": "2860f759cd87af66dde56c27c214da6cc79764edd9bc742d1ecd322f59529a8b"
     },
     {
       "key": "bonus-check-last-words--b",
@@ -3278,19 +3278,19 @@
       "questionId": "bonus-check-last-words",
       "optionId": "b",
       "correct": false,
-      "text": "这是从末语进一步作出的解释，并不是人物在这里直接说出的完整判断。不能把一种解释当成文本已经明确证明的结论。",
-      "textSha256": "ab57b27fb38c97d08eccbeeee8a8bd7762934d6d14b116f211f706ccb8489de8",
+      "text": "“人生是一种疾病”没有出现在本幕末语中。即使有人提出这种解释，也不能把它当作苏格拉底当场明说的话。",
+      "textSha256": "185eacce9171a2bd0744d7ac79db4b1aba7430b28163d63a9c722f6cfd43a5ac",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-last-words--b.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 11.592,
-      "frames": 483,
+      "durationSeconds": 10.104,
+      "frames": 421,
       "sampleRates": [
         24000
       ],
-      "bytes": 69552,
-      "sha256": "0f0d61771c7d98399840894e83c6dc83ad4b2c12cae5eea99453b0e86862a3f3"
+      "bytes": 60624,
+      "sha256": "68990f768a549edc9fb018b0893ba8781d7a52129c63eeb783de46e2351dd5dd"
     },
     {
       "key": "bonus-check-last-words--c",
@@ -3300,19 +3300,19 @@
       "questionId": "bonus-check-last-words",
       "optionId": "c",
       "correct": false,
-      "text": "意义需要解释，不等于记载应被抹掉。应保留文本写出的嘱托，再分别检查不同解释的根据。",
-      "textSha256": "873d55d7b067c9b79907b9ef2daaa5f98bdfc8df42dd8cdfa6ed1117cbc94864",
+      "text": "克里同已经说“会还上的”。没有回答的是他随后提出的“还有什么别的事”，不能因此抹去先前的答应。",
+      "textSha256": "59766445019b4886770ead6f7a721eb8fbb577b45f907cf774021ec29fb38237",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "bonus-check-last-words--c.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 9.312,
-      "frames": 388,
+      "durationSeconds": 9.264,
+      "frames": 386,
       "sampleRates": [
         24000
       ],
-      "bytes": 55872,
-      "sha256": "2366dd7a19bfad518d6ae9853b45d0f03783d4c3c5cd9dd390f8a40ce8682cc0"
+      "bytes": 55584,
+      "sha256": "fdcd4fc09fe9e87badbaf4b5309d55bee791fe92fece5bb81f8ec536eb2f8cd7"
     }
   ],
   "decodeQA": {
@@ -3320,7 +3320,7 @@
     "decoded": 150,
     "decoder": "Chrome AudioContext",
     "shortestSeconds": 3.672,
-    "longestSeconds": 12.816,
+    "longestSeconds": 15.864,
     "minimumRms": 0.09126616435683457,
     "note": "Every MP3 decoded successfully with a non-silent waveform. This is not a claim of human listening or word-by-word pronunciation transcription."
   }

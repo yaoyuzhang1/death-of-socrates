@@ -42,8 +42,9 @@ test('Every exercise quotes its verified source question and gives immediate, re
  for(const q of questions) {
   const draft=drafts.find(d=>d.id===q.id);
   assert.equal(q.options.length,3,q.id);
-  assert.equal(q.options.find(o=>o.id===q.correctId)?.text,draft.anchor,q.id);
-  assert.ok(q.original.text.replace(/[①-⑳\s]/g,'').includes(draft.anchor.replace(/[①-⑳\s]/g,'')),q.id);
+  const assessedAnchor=draft.assessmentAnchor??draft.anchor;
+  assert.equal(q.options.find(o=>o.id===q.correctId)?.text,assessedAnchor,q.id);
+  assert.ok(q.original.text.replace(/[①-⑳\s]/g,'').includes(assessedAnchor.replace(/[①-⑳\s]/g,'')),q.id);
   assert.equal(q.original.sourcePage,draft.printedPage,q.id);
   assert.ok(q.explanation.length>=30&&q.explanation.length<=100,q.id);
   assert.ok(q.options.every(o=>o.feedback.length>=15&&o.feedback.length<=70),q.id);

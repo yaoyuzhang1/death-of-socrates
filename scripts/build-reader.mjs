@@ -20,7 +20,7 @@ for(const page of pages) {
     if(full && !p.continuesPrevious)full+='\n';
     const start=full.length;
     full+=p.text;
-    spans.push({start,end:full.length,page:page.printedPage,ref:p.ref,book:page.book});
+    spans.push({start,end:full.length,page:page.printedPage,ref:p.ref,book:page.book,stableId:p.stableId});
   }
   pageSpans.set(page.printedPage,{start:spans[firstSpan].start,end:full.length});
 }
@@ -40,7 +40,7 @@ for(const q of questions) {
   assert.equal(new Set(q.options.map(o=>o.id)).size,3,q.id);
   const correct=q.options.find(o=>o.id===q.correctId);
   assert.ok(correct, q.id);
-  assert.ok(clean(q.anchor).includes(clean(correct.text)),`${q.id}: correct choice must quote the actual question`);
+  assert.ok(clean(q.assessmentAnchor??q.anchor).includes(clean(correct.text)),`${q.id}: correct choice must quote the actual question`);
   assert.ok(q.explanation.length>=30&&q.explanation.length<=100,`${q.id}: explanation`);
   assert.ok(q.options.every(o=>o.feedback.length>=15&&o.feedback.length<=70),`${q.id}: feedback`);
   assert.equal(q.pdfPage,q.printedPage+11,`${q.id}: source page`);
@@ -83,7 +83,9 @@ function paragraphs(start,end) {
     if(piece.trim()) {
       const span=spanAt(at);
       const coveredPages=sourcePages(at,at+piece.length);
-      result.push({id:`p-${String(++paragraphId).padStart(4,'0')}`,text:piece,...(span.ref&&span.ref!==previousRef?{ref:span.ref}:{}),...(span.page!==previousPage||coveredPages.length>1?{sourcePage:span.page}:{}),...(coveredPages.length>1?{sourcePages:coveredPages}:{})});
+      // Restored short replies get an additive ID, retaining existing reading anchors.
+      const id=span.stableId??`p-${String(++paragraphId).padStart(4,'0')}`;
+      result.push({id,text:piece,...(span.ref&&span.ref!==previousRef?{ref:span.ref}:{}),...(span.page!==previousPage||coveredPages.length>1?{sourcePage:span.page}:{}),...(coveredPages.length>1?{sourcePages:coveredPages}:{})});
       previousPage=span.page;previousRef=span.ref;
     }
     at+=piece.length;
@@ -108,6 +110,19 @@ const chapters=structure.map((chapter,ci)=>{
       const original={id:`p-${String(++paragraphId).padStart(4,'0')}`,speaker:'苏格拉底',ref:q.sourceRef,sourcePage:q.printedPage,...(coveredPages.length>1?{sourcePages:coveredPages}:{}),text:full.slice(q.start,q.end)};
       const before=paragraphs(cursor,q.start),reply=paragraphs(q.end,immediateEnd);
       units.push({id:`u-${String(++unitId).padStart(3,'0')}`,paragraphs:before,question:{id:q.id,sourceRef:q.sourceRef,prompt:q.prompt,original,options:q.options,correctId:q.correctId,explanation:q.explanation,hint:q.hint},replyCount:reply.length,response:[...reply,...paragraphs(immediateEnd,responseEnd)]});
+      if(q.assessmentAnchor){
+        // Preserve published paragraph IDs while assessing the following, explicitly
+        // qualified source question. Earlier questions and replies remain readable.
+        const unit=units.at(-1);
+        const selected=unit.response.findIndex(p=>anchorClean(p.text.replace(/^苏：/,''))===anchorClean(q.assessmentAnchor));
+        assert.ok(selected>=1,`${q.id}: qualified question must occur in the immediate source discussion`);
+        const target=unit.response[selected];
+        unit.paragraphs.push(unit.question.original,...unit.response.slice(0,selected));
+        unit.question.original={...target,speaker:'苏格拉底',ref:q.sourceRef,sourcePage:q.printedPage};
+        unit.response=unit.response.slice(selected+1);
+        assert.ok(/^[格阿色玻克]：/.test(unit.response[0]?.text??''),`${q.id}: qualified question must retain its reply`);
+        unit.replyCount=1;
+      }
       cursor=responseEnd;
     }
     if(!within.length||cursor<b)units.push({id:`u-${String(++unitId).padStart(3,'0')}`,paragraphs:paragraphs(cursor,b),response:[]});

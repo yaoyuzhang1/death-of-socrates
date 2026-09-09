@@ -14,10 +14,14 @@ import { subscribeFeedback, type FeedbackAudioState } from './feedback-audio.ts'
 import { bonusIntroKey, bonusResponseKey, playBonusIntro, playBonusResponse, stopBonusAudio } from './bonus-audio.ts';
 import './bonus-feedback.css';
 
-type Passage = { speaker: string; text: string };
+type SourceCitationData = { sourceRef?: string; sourceKind?: string; sourceUrl?: string };
+type Passage = { speaker: string; text: string } & SourceCitationData;
+function SourceCitation({ sourceRef, sourceKind, sourceUrl }: SourceCitationData) {
+  return sourceRef ? <small className="bonus-source-citation"><span>{sourceKind}</span>{sourceUrl ? <a href={sourceUrl} target="_blank" rel="noreferrer" onClick={stopBonusAudio}>{sourceRef} ↗</a> : <span>{sourceRef}</span>}</small> : null;
+}
 function Passages({ passages }: { passages: Passage[] }) {
   return <div className="bonus-passages">{passages.map((passage, index) => <p className={passage.speaker === '旁白' ? 'bonus-narration' : passage.speaker === '苏格拉底' ? 'bonus-socrates' : 'bonus-dialogue'} key={index}>
-    <span className="bonus-speaker">{passage.speaker}</span><span>{passage.text}</span>
+    <span className="bonus-speaker">{passage.speaker}</span><span>{passage.text}</span><SourceCitation {...passage} />
   </p>)}</div>;
 }
 
@@ -116,7 +120,7 @@ export default function BonusChapter({ save, units, onUpdate, onExit, study, aud
     {ending ? <section className="bonus-ending" data-testid="bonus-ending">
       <p className="eyebrow">苏格拉底之死 · 对话结束</p><h1 ref={heading} tabIndex={-1}>{content.ending.title}</h1>
       <Passages passages={content.ending.passages} />
-      <div className="bonus-journal">{content.ending.journal.map(entry => <section key={entry.title}><h2>{entry.title}</h2><p>{entry.text}</p></section>)}</div>
+      <div className="bonus-journal">{content.ending.journal.map(entry => <section key={entry.title}><h2>{entry.title}</h2><p>{entry.text}</p><SourceCitation {...entry} /></section>)}</div>
       <section className="bonus-challenge-summary"><div><h2>把十二幕中的判断接起来</h2><p>已读懂 {checkedCount} / 12 处。先前的对话选择与通关记录都保留；还可以对照原作，再完成一轮判断。</p></div><button onClick={beginChallenge} data-testid="bonus-start-challenge"><RotateCcw size={17} />{checkedCount < 12 ? '挑战十二幕' : '回看十二幕的判断'}</button></section>
       <h2>你曾从这些问题走近他</h2>
       <div className="bonus-recollection">{content.scenes.map((item, index) => <button onClick={() => navigate(index)} key={item.id}><span>{String(index + 1).padStart(2, '0')} · {item.title}</span><strong>{item.question.options.find(option => option.id === save.bonus.choices[item.id])?.text}</strong><small>已探索 {save.bonus.visited[item.id]?.length ?? 0} / 3 个角度 <ArrowRight size={15} /></small></button>)}</div>
@@ -125,7 +129,7 @@ export default function BonusChapter({ save, units, onUpdate, onExit, study, aud
       <header className="bonus-scene-heading"><p className="eyebrow">苏格拉底之死 · 第 {save.bonus.cursor + 1} 幕 / {content.scenes.length}</p><h1 ref={heading} tabIndex={-1}>{scene.title}</h1><p>{scene.place}</p></header>
       <progress className="bonus-progress" value={Object.keys(save.bonus.choices).length} max={content.scenes.length} aria-label="隐藏章节进度" />
       {art && <SceneImage key={art.id} assetId={art.id} scene={{ file: art.file, alt: art.alt, focalY: 50, kind: 'bonus' }} compact={false} />}
-      {save.bonus.cursor === 0 && <p className="bonus-intro">这是一次场景化改写。先选一个谈话角度，听完回应，再判断自己是否理解了本幕。谈话角度不计对错；理解检查答对后继续，所有首次记录都会保留。</p>}
+      {save.bonus.cursor === 0 && <p className="bonus-intro">{content.notice}</p>}
       <div className="bonus-reading-tools"><span>{challengeMode ? '十二幕判断挑战' : '对话与判断'} · 已读懂 {checkedCount} / 12 处</span>{save.bonus.completed && !challengeMode && <button className="text-button" onClick={() => { stopBonusAudio(); setEnding(true); }} data-testid="bonus-return-ending">回到故事结尾</button>}<button className="text-button" disabled={!audio.voice} onClick={() => introPlaying ? stopBonusAudio() : playBonusIntro(scene.id, scene.passages.length, audio)}>{introPlaying ? <Square size={15} /> : <Volume2 size={17} />}{introPlaying ? '停止本幕朗读' : '朗读本幕'}</button></div>
       <article aria-label="隐藏章节对话"><Passages passages={scene.passages} /></article>
       <section className="bonus-question" aria-labelledby="bonus-prompt">
@@ -143,7 +147,7 @@ export default function BonusChapter({ save, units, onUpdate, onExit, study, aud
       </section>
       {response && <div className={`bonus-response${feedbackRun ? ' bonus-response-animate' : ''}`} ref={feedback} tabIndex={-1} key={`${scene.id}:${response.id}:${feedbackRun}`} data-testid="bonus-response" aria-live={audio.voice ? 'off' : 'polite'}>
         <div className="bonus-response-heading"><span className="bonus-response-symbol" aria-hidden="true"><MessageCircle size={24} /></span><div><h3>{feedbackRun ? '谈话继续了' : '回看这段回应'}</h3><p>这一角度已经留下，接着看看你怎样理解。</p></div></div>
-        <p className="eyebrow">关于：{response.text}</p><Passages passages={response.response} /><p className="bonus-source-note">{response.note}</p>
+        <p className="eyebrow">关于：{response.text}</p><Passages passages={response.response} /><p className="bonus-source-note">{response.note}<SourceCitation sourceRef={response.noteSourceRef} sourceKind={response.noteSourceKind} sourceUrl={response.noteSourceUrl} /></p>
         <div className="bonus-response-audio"><button className="text-button" disabled={!audio.voice} onClick={() => responsePlaying ? stopBonusAudio() : playBonusResponse(scene.id, response.id, response.response.length, Boolean(response.note), audio)}>{responsePlaying ? <Square size={15} /> : <Volume2 size={17} />}{responsePlaying ? '停止回应配音' : '重听这段回应'}</button><span role="status">{!audio.voice ? '配音已关闭' : responsePlaying ? '普通话回应正在播放' : voice.key?.startsWith(bonusResponseKey(scene.id, response.id)) && (voice.status === 'error' || voice.status === 'blocked') ? '配音暂时无法播放，点击重听可重试。' : '按人物声线朗读 · 可随时重听'}</span></div>
       </div>}
       {response && study.ready && <LearningCheck key={check.id} check={check} record={study.records[check.id]} onAnswer={id => study.answer(check, id)} audio={audio} />}

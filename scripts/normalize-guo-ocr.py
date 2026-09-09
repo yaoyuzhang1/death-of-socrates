@@ -102,6 +102,12 @@ for n in range(12,188):
     printed=n-11
     pages.append({'printedPage':printed,'pdfPage':n,'book':1 if printed<44 else 2 if printed<82 else 3 if printed<132 else 4,'paragraphs':paragraphs,'notes':notes})
     debug.append({'printedPage':printed,'bodyLeft':round(base),'footnoteY':round(rule),'paragraphCount':len(paragraphs),'characters':sum(len(p['text']) for p in paragraphs),'notes':len(notes),'ignored':ignored})
+from source_review_corrections import apply_review
+review_log=apply_review(pages,json.loads((ROOT/'content/source/guo-1986-review-corrections.json').read_text(encoding='utf-8')))
+(LOCAL/'review-correction-log.json').write_text(json.dumps(review_log,ensure_ascii=False,indent=2),encoding='utf-8')
+for report,page in zip(debug,pages):
+    report['paragraphCount']=len(page['paragraphs'])
+    report['characters']=sum(len(p['text']) for p in page['paragraphs'])
 source={'edition':'郭斌和、张竹明译《理想国》，商务印书馆，1986年8月第一版','pdfSha256':hashlib.sha256(PDF.read_bytes()).hexdigest(),'scope':'第一至四卷，印刷页1—176，PDF第12—187页','pages':pages}
 (ROOT/'content/source/guo-1986-pages.json').write_text(json.dumps(source,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (LOCAL/'parse-report.json').write_text(json.dumps(debug,ensure_ascii=False,indent=2),encoding='utf-8')

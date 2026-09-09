@@ -3,37 +3,37 @@
   "decoded": 150,
   "decoder": "Chrome AudioContext",
   "shortestSeconds": 3.672,
-  "longestSeconds": 12.816,
+  "longestSeconds": 15.864,
   "minimumRms": 0.09126616435683457,
   "note": "Every MP3 decoded successfully with a non-silent waveform. This is not a claim of human listening or word-by-word pronunciation transcription.",
   "recordings": [
     {
       "key": "reading-willing-listeners--a",
-      "durationSeconds": 7.44,
+      "durationSeconds": 11.664,
       "channels": 1,
-      "rms": 0.10198076764648037,
-      "peak": 0.6357814073562622
+      "rms": 0.10923105598090473,
+      "peak": 0.672053337097168
     },
     {
       "key": "reading-willing-listeners--b",
-      "durationSeconds": 5.616,
+      "durationSeconds": 7.248,
       "channels": 1,
-      "rms": 0.10934257314871328,
-      "peak": 0.6264488101005554
+      "rms": 0.10916034677216124,
+      "peak": 0.5921405553817749
     },
     {
       "key": "reading-willing-listeners--c",
-      "durationSeconds": 6.624,
+      "durationSeconds": 6.768,
       "channels": 1,
-      "rms": 0.10248704163186889,
-      "peak": 0.6171950101852417
+      "rms": 0.09890274492307308,
+      "peak": 0.6414120197296143
     },
     {
       "key": "reading-return-conditions--b",
-      "durationSeconds": 6.048,
+      "durationSeconds": 14.064,
       "channels": 1,
-      "rms": 0.10701181012605988,
-      "peak": 0.5547574758529663
+      "rms": 0.10410145326362318,
+      "peak": 0.8232211470603943
     },
     {
       "key": "reading-return-conditions--a",
@@ -44,38 +44,38 @@
     },
     {
       "key": "reading-return-conditions--c",
-      "durationSeconds": 6.72,
+      "durationSeconds": 7.44,
       "channels": 1,
-      "rms": 0.09767420845985687,
-      "peak": 0.6322657465934753
+      "rms": 0.10467594271281568,
+      "peak": 0.6365737318992615
     },
     {
       "key": "reading-stronger-definition--c",
-      "durationSeconds": 9.096,
+      "durationSeconds": 11.592,
       "channels": 1,
-      "rms": 0.1021212034457345,
-      "peak": 0.6034711003303528
+      "rms": 0.10151810611163332,
+      "peak": 0.6033945679664612
     },
     {
       "key": "reading-stronger-definition--a",
-      "durationSeconds": 6.48,
+      "durationSeconds": 7.44,
       "channels": 1,
-      "rms": 0.09375029952774688,
-      "peak": 0.5315632224082947
+      "rms": 0.10174351837266174,
+      "peak": 0.6220795512199402
     },
     {
       "key": "reading-stronger-definition--b",
-      "durationSeconds": 5.52,
+      "durationSeconds": 7.032,
       "channels": 1,
-      "rms": 0.10357213573958901,
-      "peak": 0.5801655650138855
+      "rms": 0.10205886693212662,
+      "peak": 0.5849369764328003
     },
     {
       "key": "reading-craft-object--a",
-      "durationSeconds": 7.968,
+      "durationSeconds": 14.4,
       "channels": 1,
-      "rms": 0.09707655039700827,
-      "peak": 0.5524755716323853
+      "rms": 0.10692372409622747,
+      "peak": 0.6053869128227234
     },
     {
       "key": "reading-craft-object--b",
@@ -86,59 +86,59 @@
     },
     {
       "key": "reading-craft-object--c",
-      "durationSeconds": 6.624,
+      "durationSeconds": 7.2,
       "channels": 1,
-      "rms": 0.10141484742122686,
-      "peak": 0.6605174541473389
+      "rms": 0.10507681875399032,
+      "peak": 0.6585906744003296
     },
     {
       "key": "reading-shepherd-objection--b",
-      "durationSeconds": 8.544,
+      "durationSeconds": 13.2,
       "channels": 1,
-      "rms": 0.10753871824172898,
-      "peak": 0.602770209312439
+      "rms": 0.10675627012106566,
+      "peak": 0.7038064002990723
     },
     {
       "key": "reading-shepherd-objection--a",
-      "durationSeconds": 5.4,
+      "durationSeconds": 8.16,
       "channels": 1,
-      "rms": 0.09186235124092579,
-      "peak": 0.5489994287490845
+      "rms": 0.10470237077952577,
+      "peak": 0.6033750176429749
     },
     {
       "key": "reading-shepherd-objection--c",
-      "durationSeconds": 5.592,
+      "durationSeconds": 9.024,
       "channels": 1,
-      "rms": 0.11354263840046253,
-      "peak": 0.6415660381317139
+      "rms": 0.11941781731172595,
+      "peak": 0.821948766708374
     },
     {
       "key": "reading-claim-needs-proof--c",
-      "durationSeconds": 8.112,
+      "durationSeconds": 14.04,
       "channels": 1,
-      "rms": 0.10729245435576797,
-      "peak": 0.5574567317962646
+      "rms": 0.10507563747992889,
+      "peak": 0.6338967680931091
     },
     {
       "key": "reading-claim-needs-proof--a",
-      "durationSeconds": 4.992,
+      "durationSeconds": 7.296,
       "channels": 1,
-      "rms": 0.1078752946591526,
-      "peak": 0.646127462387085
+      "rms": 0.10473818171476408,
+      "peak": 0.6403983235359192
     },
     {
       "key": "reading-claim-needs-proof--b",
-      "durationSeconds": 5.52,
+      "durationSeconds": 8.544,
       "channels": 1,
-      "rms": 0.0938862965275541,
-      "peak": 0.5493624806404114
+      "rms": 0.10147489751424124,
+      "peak": 0.6579418778419495
     },
     {
       "key": "reading-outdo-groups--a",
-      "durationSeconds": 8.448,
+      "durationSeconds": 13.992,
       "channels": 1,
-      "rms": 0.10330703321577503,
-      "peak": 0.5638261437416077
+      "rms": 0.10974628746978006,
+      "peak": 0.7952238321304321
     },
     {
       "key": "reading-outdo-groups--b",
@@ -156,10 +156,10 @@
     },
     {
       "key": "reading-knowledge-agreement--b",
-      "durationSeconds": 8.424,
+      "durationSeconds": 15.864,
       "channels": 1,
-      "rms": 0.10599356645737214,
-      "peak": 0.5343751311302185
+      "rms": 0.10702351740738335,
+      "peak": 0.6189403533935547
     },
     {
       "key": "reading-knowledge-agreement--a",
@@ -177,10 +177,10 @@
     },
     {
       "key": "reading-glaucon-demand--c",
-      "durationSeconds": 8.712,
+      "durationSeconds": 12.816,
       "channels": 1,
-      "rms": 0.11113701805284179,
-      "peak": 0.8130668997764587
+      "rms": 0.1148477470864583,
+      "peak": 0.6926661729812622
     },
     {
       "key": "reading-glaucon-demand--a",
@@ -198,31 +198,31 @@
     },
     {
       "key": "reading-unrestricted-power--a",
-      "durationSeconds": 9.936,
+      "durationSeconds": 14.568,
       "channels": 1,
-      "rms": 0.10861143315848286,
-      "peak": 0.6027190089225769
+      "rms": 0.10700749025195071,
+      "peak": 0.6922516822814941
     },
     {
       "key": "reading-unrestricted-power--b",
-      "durationSeconds": 5.832,
+      "durationSeconds": 8.136,
       "channels": 1,
-      "rms": 0.09517077441021694,
-      "peak": 0.50327467918396
+      "rms": 0.10088990778222832,
+      "peak": 0.5351054668426514
     },
     {
       "key": "reading-unrestricted-power--c",
-      "durationSeconds": 6.096,
+      "durationSeconds": 6.864,
       "channels": 1,
-      "rms": 0.0987105872857392,
-      "peak": 0.6011699438095093
+      "rms": 0.10173342352067755,
+      "peak": 0.6998805403709412
     },
     {
       "key": "reading-reputation-advantage--b",
-      "durationSeconds": 9,
+      "durationSeconds": 15.048,
       "channels": 1,
-      "rms": 0.11079035262508163,
-      "peak": 0.569257378578186
+      "rms": 0.10586258393050572,
+      "peak": 0.6275704503059387
     },
     {
       "key": "reading-reputation-advantage--a",
@@ -240,10 +240,10 @@
     },
     {
       "key": "reading-appearance-inference--c",
-      "durationSeconds": 10.488,
+      "durationSeconds": 14.352,
       "channels": 1,
-      "rms": 0.11141586921299704,
-      "peak": 0.6531223654747009
+      "rms": 0.10324833974365895,
+      "peak": 0.7281160950660706
     },
     {
       "key": "reading-appearance-inference--a",
@@ -254,17 +254,17 @@
     },
     {
       "key": "reading-appearance-inference--b",
-      "durationSeconds": 5.496,
+      "durationSeconds": 8.136,
       "channels": 1,
-      "rms": 0.10749159484796744,
-      "peak": 0.7185279726982117
+      "rms": 0.10996817878672344,
+      "peak": 0.6625086665153503
     },
     {
       "key": "reading-inner-effect--a",
-      "durationSeconds": 7.56,
+      "durationSeconds": 12.624,
       "channels": 1,
-      "rms": 0.10406342526489315,
-      "peak": 0.5916968584060669
+      "rms": 0.10492331991260322,
+      "peak": 0.6163437962532043
     },
     {
       "key": "reading-inner-effect--b",
@@ -275,10 +275,10 @@
     },
     {
       "key": "reading-inner-effect--c",
-      "durationSeconds": 6.984,
+      "durationSeconds": 9.768,
       "channels": 1,
-      "rms": 0.10384748905716955,
-      "peak": 0.6667532920837402
+      "rms": 0.11142829464550459,
+      "peak": 0.818222165107727
     },
     {
       "key": "reading-justice-still-open--b",
@@ -289,17 +289,17 @@
     },
     {
       "key": "reading-justice-still-open--a",
-      "durationSeconds": 4.776,
+      "durationSeconds": 9.216,
       "channels": 1,
-      "rms": 0.1042027350573939,
-      "peak": 0.6506590843200684
+      "rms": 0.10400662513393463,
+      "peak": 0.767044186592102
     },
     {
       "key": "reading-justice-still-open--c",
-      "durationSeconds": 4.992,
+      "durationSeconds": 8.16,
       "channels": 1,
-      "rms": 0.10784475409013658,
-      "peak": 0.5324562191963196
+      "rms": 0.10226220365625709,
+      "peak": 0.5829880833625793
     },
     {
       "key": "reading-war-craft--c",
@@ -310,24 +310,24 @@
     },
     {
       "key": "reading-war-craft--a",
-      "durationSeconds": 6.072,
+      "durationSeconds": 8.016,
       "channels": 1,
-      "rms": 0.11535732602604395,
-      "peak": 0.6283178329467773
+      "rms": 0.10462030362336618,
+      "peak": 0.7284479737281799
     },
     {
       "key": "reading-war-craft--b",
-      "durationSeconds": 5.736,
+      "durationSeconds": 7.224,
       "channels": 1,
-      "rms": 0.1098921713566081,
-      "peak": 0.6830456852912903
+      "rms": 0.1044614242358833,
+      "peak": 0.6305496096611023
     },
     {
       "key": "reading-stories-shape--a",
-      "durationSeconds": 8.184,
+      "durationSeconds": 14.736,
       "channels": 1,
-      "rms": 0.10825588985703113,
-      "peak": 0.6524184346199036
+      "rms": 0.10595278034004481,
+      "peak": 0.704429030418396
     },
     {
       "key": "reading-stories-shape--b",
@@ -338,17 +338,17 @@
     },
     {
       "key": "reading-stories-shape--c",
-      "durationSeconds": 6,
+      "durationSeconds": 8.712,
       "channels": 1,
-      "rms": 0.10386217504550244,
-      "peak": 0.5509577393531799
+      "rms": 0.1054502014772195,
+      "peak": 0.631050169467926
     },
     {
       "key": "reading-hero-lament--b",
-      "durationSeconds": 8.904,
+      "durationSeconds": 12.816,
       "channels": 1,
-      "rms": 0.10953743677168945,
-      "peak": 0.686176061630249
+      "rms": 0.10451633658028077,
+      "peak": 0.6057390570640564
     },
     {
       "key": "reading-hero-lament--a",
@@ -359,10 +359,10 @@
     },
     {
       "key": "reading-hero-lament--c",
-      "durationSeconds": 6.384,
+      "durationSeconds": 7.824,
       "channels": 1,
-      "rms": 0.1023115306164756,
-      "peak": 0.5991387367248535
+      "rms": 0.1051060320054212,
+      "peak": 0.6085770130157471
     },
     {
       "key": "reading-falsehood-medicine--c",
@@ -387,24 +387,24 @@
     },
     {
       "key": "reading-achilles-character--a",
-      "durationSeconds": 8.232,
+      "durationSeconds": 11.976,
       "channels": 1,
-      "rms": 0.10201830695385164,
-      "peak": 0.591554582118988
+      "rms": 0.10705786249858253,
+      "peak": 0.7282200455665588
     },
     {
       "key": "reading-achilles-character--b",
-      "durationSeconds": 7.008,
+      "durationSeconds": 7.776,
       "channels": 1,
-      "rms": 0.0987488812083371,
-      "peak": 0.6100439429283142
+      "rms": 0.10058427005321226,
+      "peak": 0.6144022345542908
     },
     {
       "key": "reading-achilles-character--c",
-      "durationSeconds": 5.376,
+      "durationSeconds": 9.936,
       "channels": 1,
-      "rms": 0.09984077201241463,
-      "peak": 0.534482479095459
+      "rms": 0.11334012794943102,
+      "peak": 0.6101955771446228
     },
     {
       "key": "reading-content-and-form--b",
@@ -415,17 +415,17 @@
     },
     {
       "key": "reading-content-and-form--a",
-      "durationSeconds": 6.312,
+      "durationSeconds": 7.872,
       "channels": 1,
-      "rms": 0.11280782231428808,
-      "peak": 0.6964660286903381
+      "rms": 0.11249187285545606,
+      "peak": 0.7093515396118164
     },
     {
       "key": "reading-content-and-form--c",
-      "durationSeconds": 5.208,
+      "durationSeconds": 7.176,
       "channels": 1,
-      "rms": 0.10431987230718456,
-      "peak": 0.5979481935501099
+      "rms": 0.10348001384332663,
+      "peak": 0.5894960165023804
     },
     {
       "key": "reading-know-not-imitate--c",
@@ -478,17 +478,17 @@
     },
     {
       "key": "reading-music-selection--a",
-      "durationSeconds": 6.216,
+      "durationSeconds": 8.256,
       "channels": 1,
-      "rms": 0.1088526733747005,
-      "peak": 0.6252586841583252
+      "rms": 0.11093520733179418,
+      "peak": 0.6751482486724854
     },
     {
       "key": "reading-music-selection--c",
-      "durationSeconds": 4.512,
+      "durationSeconds": 7.656,
       "channels": 1,
-      "rms": 0.10605711738427002,
-      "peak": 0.5491208434104919
+      "rms": 0.10433644346707382,
+      "peak": 0.63951575756073
     },
     {
       "key": "reading-letters-and-virtues--c",
@@ -548,10 +548,10 @@
     },
     {
       "key": "reading-flexible-training--c",
-      "durationSeconds": 5.328,
+      "durationSeconds": 8.28,
       "channels": 1,
-      "rms": 0.1072255677536629,
-      "peak": 0.5977348685264587
+      "rms": 0.11416411571422572,
+      "peak": 0.6853665113449097
     },
     {
       "key": "reading-lawsuit-living--c",
@@ -576,24 +576,24 @@
     },
     {
       "key": "reading-asclepius-story--a",
-      "durationSeconds": 8.064,
+      "durationSeconds": 15.576,
       "channels": 1,
-      "rms": 0.10825464004710617,
-      "peak": 0.657253086566925
+      "rms": 0.1098176471502921,
+      "peak": 0.6990116238594055
     },
     {
       "key": "reading-asclepius-story--b",
-      "durationSeconds": 4.344,
+      "durationSeconds": 8.328,
       "channels": 1,
-      "rms": 0.1104934892904107,
-      "peak": 0.5864351987838745
+      "rms": 0.10925499355088078,
+      "peak": 0.6001046299934387
     },
     {
       "key": "reading-asclepius-story--c",
-      "durationSeconds": 6.408,
+      "durationSeconds": 7.056,
       "channels": 1,
-      "rms": 0.10262058719104974,
-      "peak": 0.6661553978919983
+      "rms": 0.10351396241657251,
+      "peak": 0.6030306816101074
     },
     {
       "key": "reading-guardians-constancy--b",
@@ -625,38 +625,38 @@
     },
     {
       "key": "reading-guardian-happiness-objection--a",
-      "durationSeconds": 5.448,
+      "durationSeconds": 7.992,
       "channels": 1,
-      "rms": 0.10219451246058145,
-      "peak": 0.6249033212661743
+      "rms": 0.10819096276876923,
+      "peak": 0.8116792440414429
     },
     {
       "key": "reading-guardian-happiness-objection--b",
-      "durationSeconds": 5.64,
+      "durationSeconds": 7.272,
       "channels": 1,
-      "rms": 0.10571610450462819,
-      "peak": 0.6517430543899536
+      "rms": 0.10153524673496717,
+      "peak": 0.5846925377845764
     },
     {
       "key": "reading-whole-city-happiness--a",
-      "durationSeconds": 7.392,
+      "durationSeconds": 15.384,
       "channels": 1,
-      "rms": 0.1068332489282895,
-      "peak": 0.657925546169281
+      "rms": 0.10622989698748077,
+      "peak": 0.67535001039505
     },
     {
       "key": "reading-whole-city-happiness--b",
-      "durationSeconds": 6.192,
+      "durationSeconds": 9.504,
       "channels": 1,
-      "rms": 0.11743633994690411,
-      "peak": 0.6211376786231995
+      "rms": 0.11478795471363723,
+      "peak": 0.6344523429870605
     },
     {
       "key": "reading-whole-city-happiness--c",
-      "durationSeconds": 6.816,
+      "durationSeconds": 8.544,
       "channels": 1,
-      "rms": 0.10316603472707123,
-      "peak": 0.6583629250526428
+      "rms": 0.0997242122877694,
+      "peak": 0.6367748379707336
     },
     {
       "key": "reading-one-city--b",
@@ -667,17 +667,17 @@
     },
     {
       "key": "reading-one-city--a",
-      "durationSeconds": 7.344,
+      "durationSeconds": 8.136,
       "channels": 1,
-      "rms": 0.09555362390657483,
-      "peak": 0.6466501951217651
+      "rms": 0.09849488973022574,
+      "peak": 0.7378702759742737
     },
     {
       "key": "reading-one-city--c",
-      "durationSeconds": 5.304,
+      "durationSeconds": 7.44,
       "channels": 1,
-      "rms": 0.10777990290239173,
-      "peak": 0.5840228796005249
+      "rms": 0.11133911711428106,
+      "peak": 0.5980601906776428
     },
     {
       "key": "reading-education-foundation--c",
@@ -688,17 +688,17 @@
     },
     {
       "key": "reading-education-foundation--a",
-      "durationSeconds": 5.832,
+      "durationSeconds": 8.88,
       "channels": 1,
-      "rms": 0.1060738579296713,
-      "peak": 0.5685385465621948
+      "rms": 0.10520929190875382,
+      "peak": 0.6820499300956726
     },
     {
       "key": "reading-education-foundation--b",
-      "durationSeconds": 5.304,
+      "durationSeconds": 8.592,
       "channels": 1,
-      "rms": 0.10622501737971703,
-      "peak": 0.6446546912193298
+      "rms": 0.09990702883492834,
+      "peak": 0.7793537974357605
     },
     {
       "key": "reading-education-not-rules-alone--a",
@@ -730,17 +730,17 @@
     },
     {
       "key": "reading-courage-preserving--a",
-      "durationSeconds": 5.184,
+      "durationSeconds": 8.208,
       "channels": 1,
-      "rms": 0.10586685888806728,
-      "peak": 0.48008471727371216
+      "rms": 0.106900953846196,
+      "peak": 0.6225186586380005
     },
     {
       "key": "reading-courage-preserving--c",
-      "durationSeconds": 7.104,
+      "durationSeconds": 8.424,
       "channels": 1,
-      "rms": 0.10732014779012956,
-      "peak": 0.6310449838638306
+      "rms": 0.10154681490122727,
+      "peak": 0.6202446222305298
     },
     {
       "key": "reading-moderation-throughout--c",
@@ -751,17 +751,17 @@
     },
     {
       "key": "reading-moderation-throughout--a",
-      "durationSeconds": 6.096,
+      "durationSeconds": 8.424,
       "channels": 1,
-      "rms": 0.1077540966354448,
-      "peak": 0.6204210519790649
+      "rms": 0.10843499338248305,
+      "peak": 0.684687614440918
     },
     {
       "key": "reading-moderation-throughout--b",
-      "durationSeconds": 6.744,
+      "durationSeconds": 8.64,
       "channels": 1,
-      "rms": 0.1086008921315064,
-      "peak": 0.6164272427558899
+      "rms": 0.10652930371562516,
+      "peak": 0.6313648819923401
     },
     {
       "key": "reading-correlative-qualification--a",
@@ -772,31 +772,31 @@
     },
     {
       "key": "reading-correlative-qualification--b",
-      "durationSeconds": 5.208,
+      "durationSeconds": 8.424,
       "channels": 1,
-      "rms": 0.10323475113829943,
-      "peak": 0.5978618860244751
+      "rms": 0.10296527125617108,
+      "peak": 0.6331900954246521
     },
     {
       "key": "reading-correlative-qualification--c",
-      "durationSeconds": 5.616,
+      "durationSeconds": 9.144,
       "channels": 1,
-      "rms": 0.10574212892527281,
-      "peak": 0.5786150097846985
+      "rms": 0.1053814062152706,
+      "peak": 0.6943475604057312
     },
     {
       "key": "reading-person-city-functions--b",
-      "durationSeconds": 9.072,
+      "durationSeconds": 15.36,
       "channels": 1,
-      "rms": 0.11002973205004007,
-      "peak": 0.9165341854095459
+      "rms": 0.10882703616644496,
+      "peak": 0.6611227989196777
     },
     {
       "key": "reading-person-city-functions--a",
-      "durationSeconds": 6.744,
+      "durationSeconds": 7.896,
       "channels": 1,
-      "rms": 0.1104495237952672,
-      "peak": 0.6120602488517761
+      "rms": 0.1041843099329539,
+      "peak": 0.6153855919837952
     },
     {
       "key": "reading-person-city-functions--c",
@@ -807,255 +807,255 @@
     },
     {
       "key": "bonus-check-trial-gate--b",
-      "durationSeconds": 11.28,
+      "durationSeconds": 9.192,
       "channels": 1,
-      "rms": 0.10239676445680991,
-      "peak": 0.6683188676834106
+      "rms": 0.10022148113136903,
+      "peak": 0.558757483959198
     },
     {
       "key": "bonus-check-trial-gate--a",
-      "durationSeconds": 10.968,
+      "durationSeconds": 9.864,
       "channels": 1,
-      "rms": 0.10429010729152806,
-      "peak": 0.6971710324287415
+      "rms": 0.09962965492328847,
+      "peak": 0.6007174849510193
     },
     {
       "key": "bonus-check-trial-gate--c",
-      "durationSeconds": 10.944,
+      "durationSeconds": 7.944,
       "channels": 1,
-      "rms": 0.10261055669669346,
-      "peak": 0.6291272044181824
+      "rms": 0.103169560850929,
+      "peak": 0.5877580642700195
     },
     {
       "key": "bonus-check-old-accusations--a",
-      "durationSeconds": 10.968,
+      "durationSeconds": 10.872,
       "channels": 1,
-      "rms": 0.10492346221254555,
-      "peak": 0.6837164163589478
+      "rms": 0.10347020731059714,
+      "peak": 0.609088659286499
     },
     {
       "key": "bonus-check-old-accusations--b",
-      "durationSeconds": 9.96,
+      "durationSeconds": 7.464,
       "channels": 1,
-      "rms": 0.11373210651285416,
-      "peak": 0.6886256337165833
+      "rms": 0.11842057912094876,
+      "peak": 0.7436250448226929
     },
     {
       "key": "bonus-check-old-accusations--c",
-      "durationSeconds": 11.088,
+      "durationSeconds": 10.368,
       "channels": 1,
-      "rms": 0.1069286422279939,
-      "peak": 0.7061755657196045
+      "rms": 0.10007705697778378,
+      "peak": 0.6640853881835938
     },
     {
       "key": "bonus-check-charges--c",
-      "durationSeconds": 12.816,
+      "durationSeconds": 9.504,
       "channels": 1,
-      "rms": 0.105587915265306,
-      "peak": 0.6082642674446106
+      "rms": 0.10299417400595157,
+      "peak": 0.6612081527709961
     },
     {
       "key": "bonus-check-charges--a",
-      "durationSeconds": 10.896,
+      "durationSeconds": 9.048,
       "channels": 1,
-      "rms": 0.10846315777052082,
-      "peak": 0.6134104132652283
+      "rms": 0.1090759142993472,
+      "peak": 0.6716345548629761
     },
     {
       "key": "bonus-check-charges--b",
-      "durationSeconds": 8.52,
+      "durationSeconds": 10.512,
       "channels": 1,
-      "rms": 0.09827694617321286,
-      "peak": 0.6431897282600403
+      "rms": 0.10116394906966503,
+      "peak": 0.6106215715408325
     },
     {
       "key": "bonus-check-examination--b",
-      "durationSeconds": 11.064,
+      "durationSeconds": 11.472,
       "channels": 1,
-      "rms": 0.10384350563731733,
-      "peak": 0.6348006725311279
+      "rms": 0.10628961441875755,
+      "peak": 0.6772776246070862
     },
     {
       "key": "bonus-check-examination--a",
-      "durationSeconds": 11.4,
+      "durationSeconds": 10.392,
       "channels": 1,
-      "rms": 0.11095225364909521,
-      "peak": 0.5220061540603638
+      "rms": 0.10233611002931846,
+      "peak": 0.6184060573577881
     },
     {
       "key": "bonus-check-examination--c",
-      "durationSeconds": 9.312,
+      "durationSeconds": 10.08,
       "channels": 1,
-      "rms": 0.11244560728088888,
-      "peak": 0.6429041028022766
+      "rms": 0.1168592400625928,
+      "peak": 0.609460175037384
     },
     {
       "key": "bonus-check-commitment--c",
-      "durationSeconds": 10.416,
+      "durationSeconds": 10.536,
       "channels": 1,
-      "rms": 0.10283736062047442,
-      "peak": 0.6298900246620178
+      "rms": 0.101040402598849,
+      "peak": 0.6658135652542114
     },
     {
       "key": "bonus-check-commitment--a",
-      "durationSeconds": 8.784,
+      "durationSeconds": 8.88,
       "channels": 1,
-      "rms": 0.10200103724068779,
-      "peak": 0.6082550883293152
+      "rms": 0.115111983561514,
+      "peak": 0.6607585549354553
     },
     {
       "key": "bonus-check-commitment--b",
-      "durationSeconds": 9.312,
+      "durationSeconds": 8.856,
       "channels": 1,
-      "rms": 0.11256053620982313,
-      "peak": 0.6617432832717896
+      "rms": 0.09542794971962205,
+      "peak": 0.6183025240898132
     },
     {
       "key": "bonus-check-verdict--a",
-      "durationSeconds": 10.608,
+      "durationSeconds": 9.192,
       "channels": 1,
-      "rms": 0.10115693134631723,
-      "peak": 0.6700406074523926
+      "rms": 0.09982893362829842,
+      "peak": 0.643018364906311
     },
     {
       "key": "bonus-check-verdict--b",
-      "durationSeconds": 10.728,
+      "durationSeconds": 9.816,
       "channels": 1,
-      "rms": 0.11288069911243165,
-      "peak": 0.6875061988830566
+      "rms": 0.10129371477359007,
+      "peak": 0.778535783290863
     },
     {
       "key": "bonus-check-verdict--c",
-      "durationSeconds": 8.808,
+      "durationSeconds": 9.384,
       "channels": 1,
-      "rms": 0.10405706378803367,
-      "peak": 0.5959087610244751
+      "rms": 0.10289910572711296,
+      "peak": 0.6744627952575684
     },
     {
       "key": "bonus-check-sentence--b",
-      "durationSeconds": 12.456,
+      "durationSeconds": 10.872,
       "channels": 1,
-      "rms": 0.092754164552748,
-      "peak": 0.6493059992790222
+      "rms": 0.10365874895690182,
+      "peak": 0.6969760060310364
     },
     {
       "key": "bonus-check-sentence--a",
-      "durationSeconds": 9.168,
+      "durationSeconds": 10.368,
       "channels": 1,
-      "rms": 0.10131480827196501,
-      "peak": 0.6132663488388062
+      "rms": 0.11002464419660934,
+      "peak": 0.6207583546638489
     },
     {
       "key": "bonus-check-sentence--c",
-      "durationSeconds": 10.344,
+      "durationSeconds": 9.552,
       "channels": 1,
-      "rms": 0.10576385058912911,
-      "peak": 0.6652905344963074
+      "rms": 0.09862001696215512,
+      "peak": 0.6372783780097961
     },
     {
       "key": "bonus-check-escape--c",
-      "durationSeconds": 11.952,
+      "durationSeconds": 9.696,
       "channels": 1,
-      "rms": 0.10419767356066134,
-      "peak": 0.6653003692626953
+      "rms": 0.10099503314140446,
+      "peak": 0.6248583793640137
     },
     {
       "key": "bonus-check-escape--a",
-      "durationSeconds": 8.664,
+      "durationSeconds": 10.344,
       "channels": 1,
-      "rms": 0.11363283919433766,
-      "peak": 0.5521785616874695
+      "rms": 0.10453986750822802,
+      "peak": 0.7363128066062927
     },
     {
       "key": "bonus-check-escape--b",
-      "durationSeconds": 9.24,
+      "durationSeconds": 8.016,
       "channels": 1,
-      "rms": 0.10932412205758159,
-      "peak": 0.6268877983093262
+      "rms": 0.1012853975115052,
+      "peak": 0.6428331136703491
     },
     {
       "key": "bonus-check-laws--a",
-      "durationSeconds": 11.856,
+      "durationSeconds": 11.184,
       "channels": 1,
-      "rms": 0.11283065452996323,
-      "peak": 0.6677539348602295
+      "rms": 0.11106161605160916,
+      "peak": 0.614952802658081
     },
     {
       "key": "bonus-check-laws--b",
-      "durationSeconds": 9.048,
+      "durationSeconds": 8.4,
       "channels": 1,
-      "rms": 0.10410311797292032,
-      "peak": 0.6527884006500244
+      "rms": 0.10199726824255013,
+      "peak": 0.648158609867096
     },
     {
       "key": "bonus-check-laws--c",
-      "durationSeconds": 11.952,
+      "durationSeconds": 9.72,
       "channels": 1,
-      "rms": 0.1053463439916099,
-      "peak": 0.6897854804992676
+      "rms": 0.10188408038684504,
+      "peak": 0.5950854420661926
     },
     {
       "key": "bonus-check-last-day--b",
-      "durationSeconds": 11.28,
+      "durationSeconds": 11.016,
       "channels": 1,
-      "rms": 0.09386990343902972,
-      "peak": 0.5860259532928467
+      "rms": 0.11004136640005406,
+      "peak": 0.7244025468826294
     },
     {
       "key": "bonus-check-last-day--a",
-      "durationSeconds": 9.72,
+      "durationSeconds": 9.36,
       "channels": 1,
-      "rms": 0.10427793925079491,
-      "peak": 0.6496379971504211
+      "rms": 0.10620492533889622,
+      "peak": 0.6487941741943359
     },
     {
       "key": "bonus-check-last-day--c",
-      "durationSeconds": 9.96,
+      "durationSeconds": 8.064,
       "channels": 1,
-      "rms": 0.10679098136019526,
-      "peak": 0.618906557559967
+      "rms": 0.10639060284727066,
+      "peak": 0.5711105465888977
     },
     {
       "key": "bonus-check-cup--c",
-      "durationSeconds": 10.896,
+      "durationSeconds": 9.888,
       "channels": 1,
-      "rms": 0.10093479239957015,
-      "peak": 0.6604806780815125
+      "rms": 0.10488595213818896,
+      "peak": 0.8327550292015076
     },
     {
       "key": "bonus-check-cup--a",
-      "durationSeconds": 8.664,
+      "durationSeconds": 11.592,
       "channels": 1,
-      "rms": 0.11463956280830093,
-      "peak": 0.7301831245422363
+      "rms": 0.11380972654845713,
+      "peak": 0.6869202256202698
     },
     {
       "key": "bonus-check-cup--b",
-      "durationSeconds": 8.256,
+      "durationSeconds": 8.424,
       "channels": 1,
-      "rms": 0.10205322139738901,
-      "peak": 0.6769567131996155
+      "rms": 0.1073803696905081,
+      "peak": 0.5480040311813354
     },
     {
       "key": "bonus-check-last-words--a",
-      "durationSeconds": 11.688,
+      "durationSeconds": 9.768,
       "channels": 1,
-      "rms": 0.11014717418902314,
-      "peak": 0.6840311288833618
+      "rms": 0.10229730223921826,
+      "peak": 0.5212605595588684
     },
     {
       "key": "bonus-check-last-words--b",
-      "durationSeconds": 11.592,
+      "durationSeconds": 10.104,
       "channels": 1,
-      "rms": 0.10931001823083711,
-      "peak": 0.5134397149085999
+      "rms": 0.1092891946009322,
+      "peak": 0.7324897050857544
     },
     {
       "key": "bonus-check-last-words--c",
-      "durationSeconds": 9.312,
+      "durationSeconds": 9.264,
       "channels": 1,
-      "rms": 0.10842951712682221,
-      "peak": 0.6442978382110596
+      "rms": 0.09915673361098927,
+      "peak": 0.6545053720474243
     }
   ]
 }

@@ -1,6 +1,7 @@
 import type { Paragraph, Question, Unit } from './model.ts';
+import { VERSION4_LAYOUT, type FrozenV4Side } from './legacy-v4-pages.ts';
 
-export type ReadingFragment = Paragraph & { sourceId: string; fragmentIndex: number };
+export type ReadingFragment = Paragraph & { sourceId: string; fragmentIndex: number; fragmentOffset: number };
 export type ReadingPage =
   | { id: string; kind: 'text'; side: 'before' | 'after'; paragraphs: ReadingFragment[] }
   | { id: string; kind: 'question'; question: Question };
@@ -31,7 +32,7 @@ function fragments(paragraph: Paragraph, legacy = false): ReadingFragment[] {
   pieces.push(remaining);
   return pieces.map((text, fragmentIndex) => ({
     ...paragraph, id: `${paragraph.id}--fragment-${fragmentIndex}`, text,
-    sourceId: paragraph.id, fragmentIndex,
+    sourceId: paragraph.id, fragmentIndex, fragmentOffset: pieces.slice(0,fragmentIndex).reduce((sum,piece)=>sum+piece.length,0),
   }));
 }
 
@@ -74,7 +75,7 @@ function textPages(unitId: string, side: 'before' | 'after', paragraphs: readonl
   return result;
 }
 
-/** Frozen version-4 boundaries are used only to recover an existing reader's source position. */
+/** Old algorithm is retained only for unpublished/custom corpora absent from the frozen table. */
 function version4TextPages(unitId: string, side: 'before' | 'after', paragraphs: readonly Paragraph[]): ReadingPage[] {
   const result: ReadingPage[] = [];
   let page: ReadingFragment[] = [];
@@ -107,7 +108,33 @@ export function makeReadingPages(unit: Unit): ReadingPage[] {
   return pages;
 }
 
+function version4Layout(unit: Unit) {
+  return Object.hasOwn(VERSION4_LAYOUT, unit.id) ? VERSION4_LAYOUT[unit.id] : undefined;
+}
+
 export function makeVersion4ReadingPages(unit: Unit): ReadingPage[] {
+  const frozen = version4Layout(unit);
+  if (frozen) {
+    // These are position descriptors for validation/migration, not a reconstruction of old text.
+    // In particular, corrected text must never determine the number or location of old pages.
+    const describe = (side: 'before' | 'after'): ReadingPage[] => {
+      const paragraphs = sideParagraphs(unit, side);
+      return frozen[side].pages.map(([sourceIndex, offset], index) => {
+        const sourceId = frozen[side].sources[sourceIndex][0];
+        const paragraph = paragraphs.find(part => part.id === sourceId) ?? { id: sourceId, text: '' };
+        return {
+          id: `${unit.id}-${side}-${index}`, kind: 'text', side,
+          paragraphs: [{ ...paragraph, id: `${sourceId}--v4-anchor-${offset}`,
+            text: paragraph.text.slice(offset), sourceId, fragmentIndex: index, fragmentOffset: offset }],
+        };
+      });
+    };
+    const pages = describe('before');
+    if (frozen.questionId && unit.question) {
+      pages.push({ id: `${unit.id}-question`, kind: 'question', question: unit.question });
+    }
+    return [...pages, ...describe('after')];
+  }
   const pages = version4TextPages(unit.id, 'before', unit.paragraphs);
   if (unit.question) pages.push({ id: `${unit.id}-question`, kind: 'question', question: unit.question });
   pages.push(...version4TextPages(unit.id, 'after', [
@@ -116,26 +143,65 @@ export function makeVersion4ReadingPages(unit: Unit): ReadingPage[] {
   return pages;
 }
 
-/** Map the first visible character, so denser pages never skip the text an old save was reading. */
+function sideParagraphs(unit: Unit, side: 'before' | 'after'): readonly Paragraph[] {
+  return side === 'before' ? unit.paragraphs : [...(unit.question ? [unit.question.original] : []), ...unit.response];
+}
+
+/** Content change detector, not a security hash. Offsets use JS's UTF-16 character indexing. */
+function sourceFingerprint(text: string): string {
+  let hash = 0x811c9dc5;
+  for (let index = 0; index < text.length; index++) hash = Math.imul(hash ^ text.charCodeAt(index), 0x01000193) >>> 0;
+  return `${text.length}:${hash.toString(16).padStart(8, '0')}`;
+}
+
+function conservativeAnchor(paragraphs: readonly Paragraph[], frozen: FrozenV4Side, sourceId: string, offset: number) {
+  const known = new Set(frozen.sources.map(([id]) => id));
+  const sourceIndex = frozen.sources.findIndex(([id]) => id === sourceId);
+  let index = paragraphs.findIndex(part => part.id === sourceId);
+  if (index < 0) {
+    // A removed anchor cannot justify jumping to a later paragraph. Resume from an earlier
+    // surviving paragraph, or the beginning of this side; never cross a question gate.
+    for (let previous = sourceIndex - 1; previous >= 0 && index < 0; previous--) {
+      index = paragraphs.findIndex(part => part.id === frozen.sources[previous][0]);
+    }
+    index = Math.max(0, index);
+    offset = 0;
+  } else if (sourceFingerprint(paragraphs[index].text) !== frozen.sources[sourceIndex][1]) {
+    // OCR repairs can insert, remove or replace characters before the old offset. Re-reading
+    // the changed paragraph is safer than treating that offset as the same source character.
+    offset = 0;
+  }
+  while (index > 0 && !known.has(paragraphs[index - 1].id)) {
+    index--;
+    offset = 0;
+  }
+  return { sourceId: paragraphs[index]?.id, offset };
+}
+
+/** Map a published first-visible character, conservatively re-reading text repaired since v4. */
 export function migrateVersion4Page(unit: Unit, oldIndex: number): number {
   const oldPages = makeVersion4ReadingPages(unit);
   const currentPages = makeReadingPages(unit);
   const oldPage = oldPages[oldIndex];
   if (!oldPage) return 0;
   if (oldPage.kind === 'question') return currentPages.findIndex(page => page.kind === 'question');
-  const anchor = oldPage.paragraphs[0];
-  const oldOffset = oldPages.slice(0, oldIndex)
-    .flatMap(page => page.kind === 'text' ? page.paragraphs : [])
-    .filter(fragment => fragment.sourceId === anchor.sourceId)
-    .reduce((count, fragment) => count + fragment.text.length, 0);
-  let offset = 0;
+  const oldAnchor = oldPage.paragraphs[0];
+  const frozen = version4Layout(unit);
+  const anchor = frozen
+    ? conservativeAnchor(sideParagraphs(unit, oldPage.side), frozen[oldPage.side], oldAnchor.sourceId, oldAnchor.fragmentOffset)
+    : { sourceId: oldAnchor.sourceId, offset: oldAnchor.fragmentOffset };
+  let firstSourcePage = -1;
   for (const [index, page] of currentPages.entries()) {
     if (page.kind !== 'text' || page.side !== oldPage.side) continue;
     for (const fragment of page.paragraphs) {
       if (fragment.sourceId !== anchor.sourceId) continue;
-      if (oldOffset < offset + fragment.text.length || (!fragment.text.length && oldOffset === offset)) return index;
-      offset += fragment.text.length;
+      if (firstSourcePage < 0) firstSourcePage = index;
+      if (anchor.offset >= fragment.fragmentOffset &&
+        (anchor.offset < fragment.fragmentOffset + fragment.text.length ||
+          (!fragment.text.length && anchor.offset === fragment.fragmentOffset))) return index;
     }
   }
-  return 0;
+  if (firstSourcePage >= 0) return firstSourcePage;
+  const sameSide = currentPages.findIndex(page => page.kind === 'text' && page.side === oldPage.side);
+  return sameSide >= 0 ? sameSide : Math.max(0, currentPages.findIndex(page => page.kind === 'question'));
 }

@@ -10,3 +10,4 @@
 .paged-reading .passage-brief p{display:inline}
 .paged-reading .role-narration{padding-block:10px}
 @media(max-width:640px){.paged-reading .dialogue-panel{padding:9px 12px;margin-bottom:7px}.paged-reading .passage-brief .speaker{margin-right:9px}}
+.dialogue-panel .inline-narration{color:var(--muted);font-family:"Segoe UI","Microsoft YaHei",sans-serif;font-size:.94em}

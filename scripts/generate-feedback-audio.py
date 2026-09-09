@@ -138,7 +138,7 @@ async def generate(args) -> None:
                 try:
                     communicate = edge_tts.Communicate(spec["text"], VOICE, rate=RATE,
                                                       connect_timeout=15, receive_timeout=45)
-                    await communicate.save(str(temporary))
+                    await asyncio.wait_for(communicate.save(str(temporary)), timeout=60)
                     data = temporary.read_bytes()
                     info = mp3_info(data)
                     temporary.replace(path)

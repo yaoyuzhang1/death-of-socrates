@@ -1,0 +1,1681 @@
+{
+  "version": 1,
+  "scope": "Hidden chapter only; source translation and editorial material are distinguished. All judged answers refer only to fixed scene passages.",
+  "anchorOffsetScheme": {
+    "origin": 0,
+    "unit": "UTF-16 code units",
+    "textNormalization": "replace(/\\s+/g, ' '); no trim",
+    "comparison": "case-insensitive",
+    "sourceHashInput": "original UTF-8 decoded text before normalization"
+  },
+  "sourceKinds": {
+    "原作节译": "从原作人物实际发言忠实节译；段内可删节，不增添论点。",
+    "原作节述": "压缩原作叙述或数轮已定位答问，不冒充直接对白。",
+    "编辑连接": "场景/节选位置的项目说明，不属于人物原话。",
+    "编辑说明": "选项后解释与文本边界说明，不冒充原作发言。"
+  },
+  "sources": [
+    {
+      "id": "A",
+      "title": "《申辩篇》",
+      "url": "https://classics.mit.edu/Plato/apology.html",
+      "file": "content/bonus/reference/jowett-apology.txt",
+      "sha256": "bc0fefd0fc25232b026d6886e8f86112af52eb414b65d275fb0ef5959ff2ed2b"
+    },
+    {
+      "id": "C",
+      "title": "《克里同篇》",
+      "url": "https://classics.mit.edu/Plato/crito.html",
+      "file": "content/bonus/reference/jowett-crito.txt",
+      "sha256": "8e70ae7257dce35e0c2268b351e13ab6e2ff2d9d8521d28c5e4654e54278ef52"
+    },
+    {
+      "id": "P",
+      "title": "《斐多篇》",
+      "url": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "file": "content/bonus/reference/jowett-phaedo.txt",
+      "sha256": "90a7ac89d9f6b9ef9ff9f9be05af9fc9266edab706d7c6adf8d154a1631a62c0"
+    },
+    {
+      "id": "H",
+      "title": "《斐多篇》",
+      "url": "https://www.gutenberg.org/files/13726/13726-h/13726-h.htm",
+      "file": "content/bonus/reference/cary-phaedo-118a.txt",
+      "sha256": "87868d11fc9983d0c7043a2c902e1d577522d633119cc8d09ef2b4189397ff09"
+    }
+  ],
+  "segments": [
+    {
+      "path": "scenes[0].passages[0]",
+      "sourceRef": "《申辩篇》17a–18a",
+      "sourceKind": "编辑连接",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "Socrates' Defense",
+      "anchorOffset": 180,
+      "textSha256": "a0732d5e997600222fce67f74343818b76c01f482cdabc03f5c827466a573f6f"
+    },
+    {
+      "path": "scenes[0].passages[1]",
+      "sourceRef": "《申辩篇》17a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "their persuasive words almost made me forget who I was",
+      "anchorOffset": 305,
+      "textSha256": "8e0506cf0891985bccb3df81a13c3dfb3c545b22eafc406caa15570e81f41453"
+    },
+    {
+      "path": "scenes[0].passages[2]",
+      "sourceRef": "《申辩篇》17c–18a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "let the judge decide justly and the speaker speak truly",
+      "anchorOffset": 2331,
+      "textSha256": "e5f44f30533ce1f5b896ad425d3a43f0d430a35ddd5627ae492d842a5e247c37"
+    },
+    {
+      "path": "scenes[0].question.options[0].response[0]",
+      "sourceRef": "《申辩篇》35b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "his duty is, not to make a present of justice",
+      "anchorOffset": 44054,
+      "textSha256": "0e016605d6cc7051336a20d19b7a2443373f8b70fdbcff8a10165939d91c82dd"
+    },
+    {
+      "path": "scenes[0].question.options[0].note",
+      "sourceRef": "《申辩篇》35b–c",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "he has sworn that he will judge according to the laws",
+      "anchorOffset": 44127,
+      "textSha256": "37b4a11fa05f4755e84626cacadec05123d8e869b6caf7c82446fdf8e2fbd94e"
+    },
+    {
+      "path": "scenes[0].question.options[1].response[0]",
+      "sourceRef": "《申辩篇》34d–35a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "I will not bring any of them hither in order to petition you",
+      "anchorOffset": 42407,
+      "textSha256": "e8674b5c89f61e6018c112e1a88408ee57421aa9b00ac479b03e16643f7c9d9f"
+    },
+    {
+      "path": "scenes[0].question.options[1].note",
+      "sourceRef": "《申辩篇》34d–35a",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "I have a family, yes, and sons",
+      "anchorOffset": 42274,
+      "textSha256": "b60b32f71a2c4c7c2d1d363917f33de4c2941ff87fff9efb2661c442006349e6"
+    },
+    {
+      "path": "scenes[0].question.options[2].response[0]",
+      "sourceRef": "《申辩篇》33a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "anyone, whether he be rich or poor, may ask and answer me",
+      "anchorOffset": 38618,
+      "textSha256": "6fd29fd82c95a2d08a6e3147a7dfc548a9c500f235da5661833aad8d2c4d102a"
+    },
+    {
+      "path": "scenes[0].question.options[2].note",
+      "sourceRef": "《申辩篇》33a–b",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "I have no regular disciples",
+      "anchorOffset": 38387,
+      "textSha256": "43e449ca8dbf218be2d56ddce161b821b6afef453bc574bbd584f4c67a8b3f15"
+    },
+    {
+      "path": "scenes[1].passages[0]",
+      "sourceRef": "《申辩篇》18a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "first, I have to reply to the older charges",
+      "anchorOffset": 2392,
+      "textSha256": "b0431dd17c1b32ed77c22ac696b1dd94e8d6dabff37c21172f136d2df5785836"
+    },
+    {
+      "path": "scenes[1].passages[1]",
+      "sourceRef": "《申辩篇》18c–e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "their names I do not know and cannot tell",
+      "anchorOffset": 3430,
+      "textSha256": "8fc5cf5fa279e47f96dbdc49368735e59ad2364682093d23b1e7e51497143f10"
+    },
+    {
+      "path": "scenes[1].passages[2]",
+      "sourceRef": "《申辩篇》18d–19a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "fight with shadows in my own defence",
+      "anchorOffset": 3825,
+      "textSha256": "9bb67bc4a97590db42481b3f1b966b3a53db528b5b0e51ed6cb685a963137947"
+    },
+    {
+      "path": "scenes[1].question.options[0].response[0]",
+      "sourceRef": "《申辩篇》20e–21b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "What can the god mean? and what is the interpretation of this riddle?",
+      "anchorOffset": 9728,
+      "textSha256": "bcc79a6cefdd60279feb8a286c0275451b92e059866e40f238167d3d82c6528d"
+    },
+    {
+      "path": "scenes[1].question.options[0].response[1]",
+      "sourceRef": "《申辩篇》21b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "Here is a man who is wiser than I am",
+      "anchorOffset": 10201,
+      "textSha256": "984f643d7f619ca41265805dd7d2f802d221e403b73e96fecb1734ed652421b0"
+    },
+    {
+      "path": "scenes[1].question.options[0].note",
+      "sourceRef": "《申辩篇》20e–21c",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "I might go to the god with a refutation in my hand",
+      "anchorOffset": 10127,
+      "textSha256": "5aae82e1474a5edf3db105df16ceb8cbab3e53de5dd0c48e4ed545578921422b"
+    },
+    {
+      "path": "scenes[1].question.options[1].response[0]",
+      "sourceRef": "《申辩篇》21d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "I neither know nor think that I know",
+      "anchorOffset": 11046,
+      "textSha256": "68f27ba8545e11aedc421b4a26e87dd7e266b40806517618c0b4ed9d5e41d2ec"
+    },
+    {
+      "path": "scenes[1].question.options[1].note",
+      "sourceRef": "《申辩篇》21c–d",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "he knows nothing, and thinks that he knows",
+      "anchorOffset": 11002,
+      "textSha256": "bc2b63ca2d0dbe8db01d285bb5f4224f7821fb46cba76fbe1b7a3f48c96389d8"
+    },
+    {
+      "path": "scenes[1].question.options[2].response[0]",
+      "sourceRef": "《申辩篇》23c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "instead of being angry with themselves are angry with me",
+      "anchorOffset": 15318,
+      "textSha256": "fd413373a86fbeeb96293f33ef92ab98ccfe6b1cfb8ae28a861558f1bf312cd4"
+    },
+    {
+      "path": "scenes[1].question.options[2].note",
+      "sourceRef": "《申辩篇》23c–d",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "they often imitate me, and examine others themselves",
+      "anchorOffset": 15094,
+      "textSha256": "a697c8545004c006b72c5b6e0b1a8d332fd77d24f90105018f433a0ded1a8500"
+    },
+    {
+      "path": "scenes[2].passages[0]",
+      "sourceRef": "《申辩篇》24b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "corrupter of the youth, and he does not believe in the gods of the state",
+      "anchorOffset": 17158,
+      "textSha256": "9633333eb4573b8ea19e0d6980c497bb553dd33d85fb8522c13e79589dfd190f"
+    },
+    {
+      "path": "scenes[2].passages[1]",
+      "sourceRef": "《申辩篇》24c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "tell the judges who their improver is",
+      "anchorOffset": 18024,
+      "textSha256": "fa818a449b99cb204d36169a98b07b1df49b293041505db851035a86f1237522"
+    },
+    {
+      "path": "scenes[2].passages[2]",
+      "sourceRef": "《申辩篇》24d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "The laws.",
+      "anchorOffset": 18309,
+      "textSha256": "4a60c817fa7bd7579b143fc0294448ebe03a2baaaf9feb39cdedd562a88327f7"
+    },
+    {
+      "path": "scenes[2].passages[3]",
+      "sourceRef": "《申辩篇》24d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "who the person is, who, in the first place, knows the laws",
+      "anchorOffset": 18376,
+      "textSha256": "10ec6673aaca3de0241cc3287596fe5a1fa5a2199c862b1d55a442b0308a4728"
+    },
+    {
+      "path": "scenes[2].passages[4]",
+      "sourceRef": "《申辩篇》24d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "The judges, Socrates, who are present in court",
+      "anchorOffset": 18436,
+      "textSha256": "505c7e220722082ca136c90b447fb68a2bf0cf934b31f34c0ad38f92bd3fea54"
+    },
+    {
+      "path": "scenes[2].passages[5]",
+      "sourceRef": "《申辩篇》24d–25a",
+      "sourceKind": "原作节述",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "Yes, the senators improve them",
+      "anchorOffset": 18819,
+      "textSha256": "bbc3b258c3abe88836969c6ede44c456b3665b6b697f5458441b464fbfae0214"
+    },
+    {
+      "path": "scenes[2].passages[6]",
+      "sourceRef": "《申辩篇》25a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "Then every Athenian improves and elevates them",
+      "anchorOffset": 18963,
+      "textSha256": "b3b90216b67896c66e398006373781002abc571dec6f17ee08c1a2054753c9c0"
+    },
+    {
+      "path": "scenes[2].passages[7]",
+      "sourceRef": "《申辩篇》25a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "That is what I stoutly affirm",
+      "anchorOffset": 19102,
+      "textSha256": "e29ae3ea6772884ead3f297fc3bee1817055a8d1c3a9089906dedbcd79ce1ab6"
+    },
+    {
+      "path": "scenes[2].question.options[0].response[0]",
+      "sourceRef": "《申辩篇》25a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "One man is able to do them good, or at least not many",
+      "anchorOffset": 19359,
+      "textSha256": "43f7050b9b7bf95a1bacd9585aa56484c04bbfd27e9b893c4e0d150d104107c9"
+    },
+    {
+      "path": "scenes[2].question.options[0].note",
+      "sourceRef": "《申辩篇》25a–b",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "the trainer of horses, that is to say, does them good",
+      "anchorOffset": 19416,
+      "textSha256": "99d43c49d4d9c4b28ec0a3a3d3aebdee89bc633d67dc422eaa10f0a492daac3d"
+    },
+    {
+      "path": "scenes[2].question.options[1].response[0]",
+      "sourceRef": "《申辩篇》25d–26a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "If my offence is unintentional",
+      "anchorOffset": 21187,
+      "textSha256": "80279309bfafc46d733aa8b1f267d5c7b40333e24d1b5ec2620b2a4d8bc42d41"
+    },
+    {
+      "path": "scenes[2].question.options[1].note",
+      "sourceRef": "《申辩篇》25c–26a",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "which is a place not of instruction, but of punishment",
+      "anchorOffset": 21542,
+      "textSha256": "aeaea7892c055684683be23169d8e3336bdf639368830e08db886957c7defe11"
+    },
+    {
+      "path": "scenes[2].question.options[2].response[0]",
+      "sourceRef": "《申辩篇》33d–34a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "those of them who have grown up",
+      "anchorOffset": 39573,
+      "textSha256": "4787130b9b50ec5d6f6844b75de1655daccc98eb565ef119d7003d24faf292a4"
+    },
+    {
+      "path": "scenes[2].question.options[2].response[1]",
+      "sourceRef": "《申辩篇》34a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "let him still produce them, if he has forgotten",
+      "anchorOffset": 40803,
+      "textSha256": "2a3834fa9b1301dc6cb800902a09987858687f233222549370dc8b0ef8b9cd07"
+    },
+    {
+      "path": "scenes[2].question.options[2].note",
+      "sourceRef": "《申辩篇》33d–34b",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "what evil their families suffered at my hands",
+      "anchorOffset": 39858,
+      "textSha256": "0efe4e07ceb5d5704820663f1f2b33929622b60c6b46711bbd6f7d72bbd43b7a"
+    },
+    {
+      "path": "scenes[3].passages[0]",
+      "sourceRef": "《申辩篇》26c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "Or, do you mean to say that I am an atheist simply",
+      "anchorOffset": 22504,
+      "textSha256": "2acb516f275315eb2887de25ec407a588a951341bed7e4e31039c6a022433af2"
+    },
+    {
+      "path": "scenes[3].passages[1]",
+      "sourceRef": "《申辩篇》26c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "you are a complete atheist",
+      "anchorOffset": 22607,
+      "textSha256": "d5395b7359b4c7a4e71730a58f7b49e5f47b2f8c979e8ea4c3968771bb7c6788"
+    },
+    {
+      "path": "scenes[3].passages[2]",
+      "sourceRef": "《申辩篇》27c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "Can a man believe in spiritual and divine agencies",
+      "anchorOffset": 24957,
+      "textSha256": "eee91fcdf1e77fdcd3856ff536434ccc8297f542c3f225d97d6afc793bbf2102"
+    },
+    {
+      "path": "scenes[3].passages[3]",
+      "sourceRef": "《申辩篇》27c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "He cannot.",
+      "anchorOffset": 25041,
+      "textSha256": "e2ab0f2e6b0fc521110db248e1cfcc49e049ee2997585ff3480175acd86aae6b"
+    },
+    {
+      "path": "scenes[3].passages[4]",
+      "sourceRef": "《申辩篇》27c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "you swear in the indictment that I teach and believe in divine or spiritual agencies",
+      "anchorOffset": 25142,
+      "textSha256": "7c94844ae446814e98bf4ff6d1fb8575f455c1e16c2eaad96ce2efee01773263"
+    },
+    {
+      "path": "scenes[3].question.options[0].response[0]",
+      "sourceRef": "《申辩篇》26d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "the sun is stone, and the moon earth",
+      "anchorOffset": 22881,
+      "textSha256": "64ec9730679be304be49db59c92b937cb7ecc8a17eda44fb01ad676142ccb89e"
+    },
+    {
+      "path": "scenes[3].question.options[0].response[1]",
+      "sourceRef": "《申辩篇》26d–e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "you think that you are accusing Anaxagoras",
+      "anchorOffset": 22935,
+      "textSha256": "df8f13e221a2b135ef8e5cca6fe5493a393c94d728111ca01f49df7e9455d696"
+    },
+    {
+      "path": "scenes[3].question.options[0].note",
+      "sourceRef": "《申辩篇》26d–e",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "those doctrines are found in the books of Anaxagoras",
+      "anchorOffset": 23089,
+      "textSha256": "8ad412668e76e30f751b2b8f59c5c64599858999c20d051b9ceaa4c002d008a4"
+    },
+    {
+      "path": "scenes[3].question.options[1].response[0]",
+      "sourceRef": "《申辩篇》27d–e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "You might as well affirm the existence of mules",
+      "anchorOffset": 26049,
+      "textSha256": "f02554e3fea4d552b8ddb0241aefeecefc413d991f3c5197cb1a8632fb1b15ea"
+    },
+    {
+      "path": "scenes[3].question.options[1].note",
+      "sourceRef": "《申辩篇》27d–28a",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "necessarily implies the existence of their parents",
+      "anchorOffset": 25997,
+      "textSha256": "3e89c0533f9104b00d652e8a67510641d6b84e0e20f3d401a9d5aca462728ca5"
+    },
+    {
+      "path": "scenes[3].question.options[2].response[0]",
+      "sourceRef": "《申辩篇》31c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "always forbids me to do something which I am going to do, but never commands me",
+      "anchorOffset": 35208,
+      "textSha256": "4493851242addb4e39084210f08a7fadae6381cce64912780aba7141dad4df08"
+    },
+    {
+      "path": "scenes[3].question.options[2].note",
+      "sourceRef": "《申辩篇》31c–d",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "This sign I have had ever since I was a child",
+      "anchorOffset": 35119,
+      "textSha256": "2d765e3e8827781208af8ab8be6c3d62b025842d09ba58197c126f3fb3cf712e"
+    },
+    {
+      "path": "scenes[4].passages[0]",
+      "sourceRef": "《申辩篇》29c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "if this was the condition on which you let me go",
+      "anchorOffset": 30202,
+      "textSha256": "6c07c6aaedc0d20fa48d62ce6875327ce64a782fe7d94d59a72895e3d4e0698f"
+    },
+    {
+      "path": "scenes[4].passages[1]",
+      "sourceRef": "《申辩篇》29d–e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "I shall obey God rather than you",
+      "anchorOffset": 30309,
+      "textSha256": "c7d83a9d0ecd905b99229f4bca66b63608dab1d1deeff448adfcba1130b96db7"
+    },
+    {
+      "path": "scenes[4].passages[2]",
+      "sourceRef": "《申辩篇》29e–30a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "so little about wisdom and truth and the greatest improvement of the soul",
+      "anchorOffset": 30697,
+      "textSha256": "13c13749c774797f6aedf10e11bcf6cdf298e9172b5dbf3ed0a4bb5c5a244c2b"
+    },
+    {
+      "path": "scenes[4].question.options[0].response[0]",
+      "sourceRef": "《申辩篇》29a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "this fear of death is indeed the pretence of wisdom",
+      "anchorOffset": 29008,
+      "textSha256": "eb463e0a724635f85165a4b3acba41e5681fe92633455dde6f8a9786ddd88ba2"
+    },
+    {
+      "path": "scenes[4].question.options[0].note",
+      "sourceRef": "《申辩篇》29a–b",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "no one knows whether death",
+      "anchorOffset": 29133,
+      "textSha256": "bc61aa878ef0ef93962d589e675d021924273374505e629b3c23c9a4a77b2d51"
+    },
+    {
+      "path": "scenes[4].question.options[1].response[0]",
+      "sourceRef": "《申辩篇》30e–31a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "a great and noble steed",
+      "anchorOffset": 33401,
+      "textSha256": "54d4ea6c06309764ce0f923194d3edb4e22b04f56c908c51e2458778647a2ab1"
+    },
+    {
+      "path": "scenes[4].question.options[1].response[1]",
+      "sourceRef": "《申辩篇》31a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "irritated at being suddenly awakened",
+      "anchorOffset": 33782,
+      "textSha256": "75fceedd498bd47b5baaf4addfa9a4e720e78974367859f617e96badb620267c"
+    },
+    {
+      "path": "scenes[4].question.options[1].note",
+      "sourceRef": "《申辩篇》30e–31a",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "arousing and persuading and reproaching you",
+      "anchorOffset": 33627,
+      "textSha256": "13ee40ac0ad403d4d7767b7f02648961977576da168f78ff73efd297126c6d13"
+    },
+    {
+      "path": "scenes[4].question.options[2].response[0]",
+      "sourceRef": "《申辩篇》32c–e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "the other four went to Salamis and fetched Leon, but I went quietly home",
+      "anchorOffset": 37701,
+      "textSha256": "5efa701d961be10406102435462094bf391a6cda612644b374534182e95a6937"
+    },
+    {
+      "path": "scenes[4].question.options[2].note",
+      "sourceRef": "《申辩篇》32c–e",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "did not frighten me into doing wrong",
+      "anchorOffset": 37627,
+      "textSha256": "da46da6cf722047c7e12f428dcdf7ef174da4139d14b0569c11f7d5e574612fb"
+    },
+    {
+      "path": "scenes[5].passages[0]",
+      "sourceRef": "《申辩篇》35e–36a",
+      "sourceKind": "原作节述",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "The jury finds Socrates guilty.",
+      "anchorOffset": 44951,
+      "textSha256": "d215d96f9c0e65f9cd95051e8e51ee39f9d53a36d633e226ef471341a7391e80"
+    },
+    {
+      "path": "scenes[5].passages[1]",
+      "sourceRef": "《申辩篇》36a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "am only surprised that the votes are so nearly equal",
+      "anchorOffset": 45130,
+      "textSha256": "529303b4adc0b009bf2ba6e270aed4a4b9e14373bfe427ee1eb30672818f85e9"
+    },
+    {
+      "path": "scenes[5].passages[2]",
+      "sourceRef": "《申辩篇》36b–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "And what shall I propose on my part",
+      "anchorOffset": 45649,
+      "textSha256": "7652e29a6a288c32a37fcf5b427d1c050f4da85f8be0ac016572d50496ec9d02"
+    },
+    {
+      "path": "scenes[5].passages[3]",
+      "sourceRef": "《申辩篇》36d–e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "maintenance in the Prytaneum is the just return",
+      "anchorOffset": 47256,
+      "textSha256": "586c0b4dc6e7b33c45fa9494f8b1efd8ae648c45cbcb199d097cc36eb280aab6"
+    },
+    {
+      "path": "scenes[5].question.options[0].response[0]",
+      "sourceRef": "《申辩篇》36d–e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "he only gives you the appearance of happiness",
+      "anchorOffset": 47126,
+      "textSha256": "459d51f25aa193e01b34a23d6543dd21e331e8988d596b9035d6c7d3e9deb99e"
+    },
+    {
+      "path": "scenes[5].question.options[0].note",
+      "sourceRef": "《申辩篇》36d–e",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "and I give you the reality",
+      "anchorOffset": 47173,
+      "textSha256": "c0a5b55c8faab94d7e1a7f2215280ad9515f977ed7a20999747cb6ad7d128800"
+    },
+    {
+      "path": "scenes[5].question.options[1].response[0]",
+      "sourceRef": "《申辩篇》37a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "I am convinced that I never intentionally wronged anyone",
+      "anchorOffset": 47468,
+      "textSha256": "c2498a52e7abedd1ae401e9873f633930f43a87c3d21f77354571a385173789d"
+    },
+    {
+      "path": "scenes[5].question.options[1].note",
+      "sourceRef": "《申辩篇》37a–b",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "I will assuredly not wrong myself",
+      "anchorOffset": 47911,
+      "textSha256": "d3f446cfca301dd288336193f6c42aaccf84509f2bc5a48d04ce086f8efe0a9b"
+    },
+    {
+      "path": "scenes[5].question.options[2].response[0]",
+      "sourceRef": "《申辩篇》28a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "not Meletus, nor yet Anytus, but the envy and detraction",
+      "anchorOffset": 26742,
+      "textSha256": "5b22da2bf72787b24275bf1bea24b3ed46a84c9f878e67eee7961e495738ac68"
+    },
+    {
+      "path": "scenes[5].question.options[2].note",
+      "sourceRef": "《申辩篇》28a–b",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "which has been the death of many good men",
+      "anchorOffset": 26813,
+      "textSha256": "d1969613df085df76593705324c1123174845b70343c8c526d6dc528e2f1abbb"
+    },
+    {
+      "path": "scenes[6].passages[0]",
+      "sourceRef": "《申辩篇》37e–38a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "the life which is unexamined is not worth living",
+      "anchorOffset": 49846,
+      "textSha256": "507fadb736b2900f400cc36d288dcbc8391d12007ebb82b56df15810b8a7f7b1"
+    },
+    {
+      "path": "scenes[6].passages[1]",
+      "sourceRef": "《申辩篇》38b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "Plato, Crito, Critobulus, and Apollodorus",
+      "anchorOffset": 50358,
+      "textSha256": "d5fc6583c6d2c0413551294460bdf4bd9df6cb5a30fdf1e66ddbafeffac9a862"
+    },
+    {
+      "path": "scenes[6].passages[2]",
+      "sourceRef": "《申辩篇》38b–c",
+      "sourceKind": "原作节述",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "The jury condemns Socrates to death.",
+      "anchorOffset": 50574,
+      "textSha256": "ac4a56206b94cdf009b506d7eda8146c0f320a617bed774b974d682ae3ffeea9"
+    },
+    {
+      "path": "scenes[6].question.options[0].response[0]",
+      "sourceRef": "《申辩篇》38e–39b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "The difficulty, my friends, is not in avoiding death",
+      "anchorOffset": 52276,
+      "textSha256": "a9f851dfccfb5e37976b5150dd8b116b2dfa19e31fb3631684d0bea1a35d9d9c"
+    },
+    {
+      "path": "scenes[6].question.options[0].note",
+      "sourceRef": "《申辩篇》38e–39b",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "but in avoiding unrighteousness",
+      "anchorOffset": 52330,
+      "textSha256": "d20c261f6ae558e402d633e134e4758fa36df24db3ad4ff3d3153c6850155de3"
+    },
+    {
+      "path": "scenes[6].question.options[1].response[0]",
+      "sourceRef": "《申辩篇》40c–e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "there is great reason to hope that death is a good",
+      "anchorOffset": 55422,
+      "textSha256": "a7073885a03742dc51bc91c26c24e3a8dd2a7f2a55b5cfbf180c8c7b17669d85"
+    },
+    {
+      "path": "scenes[6].question.options[1].response[1]",
+      "sourceRef": "《申辩篇》40e–41b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "if death is the journey to another place",
+      "anchorOffset": 56362,
+      "textSha256": "2a80b051471192f4619393ac3cd999a7ae1ee1bbb2d9787199cbd2382c73dbcf"
+    },
+    {
+      "path": "scenes[6].question.options[1].note",
+      "sourceRef": "《申辩篇》40c–41c",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "either death is a state of nothingness",
+      "anchorOffset": 55499,
+      "textSha256": "d4e567475454f97ff9156dfae03b5035ede06c5d188a10f682bf8e93504a4054"
+    },
+    {
+      "path": "scenes[6].question.options[2].response[0]",
+      "sourceRef": "《申辩篇》41e–42a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "When my sons are grown up",
+      "anchorOffset": 58461,
+      "textSha256": "71e5195117d9675c0b953f2fc4f7350222c04f3fa9d341129753128da974862e"
+    },
+    {
+      "path": "scenes[6].question.options[2].note",
+      "sourceRef": "《申辩篇》41e–42a",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
+      "referenceFile": "content/bonus/reference/jowett-apology.txt",
+      "anchor": "if they seem to care about riches",
+      "anchorOffset": 58594,
+      "textSha256": "6c407156dc84809012b21d370021545e5da942d81ae51d1641f5fa074a3c56b3"
+    },
+    {
+      "path": "scenes[7].passages[0]",
+      "sourceRef": "《斐多篇》58b–c",
+      "sourceKind": "原作节述",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "the city is not allowed to be polluted by public executions",
+      "anchorOffset": 1660,
+      "textSha256": "7e7e55e4255d75e7d4af954b5a6c80b9fe03a6f7a637a4b14d4c917e00edfb9e"
+    },
+    {
+      "path": "scenes[7].passages[1]",
+      "sourceRef": "《克里同篇》43a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "WHY have you come at this hour",
+      "anchorOffset": 326,
+      "textSha256": "fe25e663f7843967c3cf6d3a2de6c84401efa1e89f0d55b11a43c2e2a5da6044"
+    },
+    {
+      "path": "scenes[7].passages[2]",
+      "sourceRef": "《克里同篇》43a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "The dawn is breaking.",
+      "anchorOffset": 445,
+      "textSha256": "c1a41c4e0dbd87de6e25a85ae359c8c7c3ec7fa0843e5c85fa2063375814511b"
+    },
+    {
+      "path": "scenes[7].passages[3]",
+      "sourceRef": "《克里同篇》44b、45a–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "there are friends of mine in Thessaly",
+      "anchorOffset": 5341,
+      "textSha256": "c98077edc41ed74bb2a73f2848d5b58a04aed37e28e4f923bdbc688be1aefd19"
+    },
+    {
+      "path": "scenes[7].passages[4]",
+      "sourceRef": "《克里同篇》46b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "whatever the reason may be which upon reflection appears to me to be the best",
+      "anchorOffset": 7435,
+      "textSha256": "848c181d9933fb3bc4826ca205c2d6a84ca393bad9c16752ed5b8b1c7e78cf28"
+    },
+    {
+      "path": "scenes[7].passages[5]",
+      "sourceRef": "《克里同篇》48b–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "not life, but a good life, is to be chiefly valued",
+      "anchorOffset": 12230,
+      "textSha256": "3a6407e5b1f10d70080680f0a6f0b5d1fe3b90a526aa674b63bd52fb1225280b"
+    },
+    {
+      "path": "scenes[7].question.options[0].response[0]",
+      "sourceRef": "《克里同篇》48a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "But the many can kill us",
+      "anchorOffset": 11960,
+      "textSha256": "f07bd4b44b73639d201fbf34d4a75868e9ab374600133302ad094b4160978acf"
+    },
+    {
+      "path": "scenes[7].question.options[0].response[1]",
+      "sourceRef": "《克里同篇》48a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "that will clearly be the answer",
+      "anchorOffset": 12006,
+      "textSha256": "7811f14cfc7309f59aba1363a2aed709d266f9c75eb9271d62de08a1986c97a2"
+    },
+    {
+      "path": "scenes[7].question.options[0].response[2]",
+      "sourceRef": "《克里同篇》48b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "the old argument is, as I conceive, unshaken as ever",
+      "anchorOffset": 12094,
+      "textSha256": "3371731b958f2786d8352afa5d1726a920dfb62b2411ef4cb804ed302f979b52"
+    },
+    {
+      "path": "scenes[7].question.options[0].note",
+      "sourceRef": "《克里同篇》47a–48b",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "the one man who has understanding of just and unjust",
+      "anchorOffset": 11680,
+      "textSha256": "e13d8c1ba828f93f37fd0a8807c25371ff7abc999eb76854b162056bcd468d92"
+    },
+    {
+      "path": "scenes[7].question.options[1].response[0]",
+      "sourceRef": "《克里同篇》44b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "value money more than the life of a friend",
+      "anchorOffset": 3113,
+      "textSha256": "07b9389ab95a6cb4b93593e0f3f4999683b4d4f332478ac1580f3970f6978df9"
+    },
+    {
+      "path": "scenes[7].question.options[1].response[1]",
+      "sourceRef": "《克里同篇》45c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "No man should bring children into the world",
+      "anchorOffset": 5937,
+      "textSha256": "70fb9dd636e7163a15ceef90dd56181a416bfecb5ab32160ba78413052ed34f6"
+    },
+    {
+      "path": "scenes[7].question.options[1].note",
+      "sourceRef": "《克里同篇》44b–c、45c–d",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "their nurture and education",
+      "anchorOffset": 6025,
+      "textSha256": "2d7ab5ad5a48481566f541df396f3895da6215e3c8a137a14fab0e0ca9464b0b"
+    },
+    {
+      "path": "scenes[7].question.options[2].response[0]",
+      "sourceRef": "《克里同篇》49b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "Nor when injured injure in return",
+      "anchorOffset": 14617,
+      "textSha256": "57a24426fb5e3775ad01b51f4743b235e22233811d98bb00f5519d5db068c72f"
+    },
+    {
+      "path": "scenes[7].question.options[2].response[1]",
+      "sourceRef": "《克里同篇》49b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "Clearly not.",
+      "anchorOffset": 14711,
+      "textSha256": "14e99ec3cb58ba2dd21064fe9a0380ec46e4dd881ca1b46626415e091d1074ab"
+    },
+    {
+      "path": "scenes[7].question.options[2].response[2]",
+      "sourceRef": "《克里同篇》49c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "whether you really mean what you are saying",
+      "anchorOffset": 15131,
+      "textSha256": "a1e00de4a1ec9aa34a9d4f543ed5270a2878308496e5baf9394151c3c351a628"
+    },
+    {
+      "path": "scenes[7].question.options[2].note",
+      "sourceRef": "《克里同篇》49b–e",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "shall that be the premise of our agreement",
+      "anchorOffset": 15598,
+      "textSha256": "c2ffc42227828b5b190e367b7c0b32b9a8662e6e526381e7b9d44874d01b3ab0"
+    },
+    {
+      "path": "scenes[8].passages[0]",
+      "sourceRef": "《克里同篇》50a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "Imagine that I am about to play truant",
+      "anchorOffset": 16515,
+      "textSha256": "5991c7fc98953889eb984b3f4b3e26a59e964ea78e31e9c50333fd6ad0c9e399"
+    },
+    {
+      "path": "scenes[8].passages[1]",
+      "sourceRef": "《克里同篇》50b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "Yes; but the State has injured us and given an unjust sentence",
+      "anchorOffset": 17223,
+      "textSha256": "1b4e506c27235cbbbcb25a4817e3f1174adf9c6e9b481829d6769fbc20802679"
+    },
+    {
+      "path": "scenes[8].passages[2]",
+      "sourceRef": "《克里同篇》50b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "Very good, Socrates.",
+      "anchorOffset": 17312,
+      "textSha256": "7af57247242da7c11c8308adb507df652c954ccfa3e24fc9a828c56309cbf73a"
+    },
+    {
+      "path": "scenes[8].passages[3]",
+      "sourceRef": "《克里同篇》51d–52a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "has entered into an implied contract",
+      "anchorOffset": 20805,
+      "textSha256": "578b8b33087bca7b8174ec42eedb01c746852f09ac6062d966d9f39246b948ec"
+    },
+    {
+      "path": "scenes[8].passages[4]",
+      "sourceRef": "《克里同篇》52e–53a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "having had seventy years to think of them",
+      "anchorOffset": 23312,
+      "textSha256": "cc9288ff55182b3e2c64513eee176fc3b5a427277d93b3db0e86f187cc67a87f"
+    },
+    {
+      "path": "scenes[8].question.options[0].response[0]",
+      "sourceRef": "《克里同篇》51b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "he must change their view of what is just",
+      "anchorOffset": 19719,
+      "textSha256": "0988d1b5d2262016d166fc4e543db04c65b66e59fff3d2d6445262fddf03b463"
+    },
+    {
+      "path": "scenes[8].question.options[0].note",
+      "sourceRef": "《克里同篇》51b–c",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "he must do what his city and his country order him",
+      "anchorOffset": 19664,
+      "textSha256": "1948831d9a1bedc093a4e6a44ca306758365da913778b2c3f56ffe6655403542"
+    },
+    {
+      "path": "scenes[8].question.options[1].response[0]",
+      "sourceRef": "《克里同篇》54b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "a victim, not of the laws, but of men",
+      "anchorOffset": 27164,
+      "textSha256": "7d52e813511ccf75f32ce70cc8e332c76ec810faac6d50f1f9a74a20ca941a01"
+    },
+    {
+      "path": "scenes[8].question.options[1].note",
+      "sourceRef": "《克里同篇》54b–c",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "returning evil for evil, and injury for injury",
+      "anchorOffset": 27224,
+      "textSha256": "f4c83ffb703f05d8fd0d64d2c49f9b443f344d7e5a5583bdcc832962d2f04098"
+    },
+    {
+      "path": "scenes[8].question.options[2].response[0]",
+      "sourceRef": "《克里同篇》54d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "Yet speak, if you have anything to say",
+      "anchorOffset": 27937,
+      "textSha256": "fa04eb167db69e2daf660c5309ed05031881c5dc4ad08a36513fe8c55639d4f4"
+    },
+    {
+      "path": "scenes[8].question.options[2].response[1]",
+      "sourceRef": "《克里同篇》54d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "I have nothing to say, Socrates",
+      "anchorOffset": 27981,
+      "textSha256": "182d0eea7ee8d12e9cef5facc51c2a9f39d0871aef465cedfc2d7311a4a738ca"
+    },
+    {
+      "path": "scenes[8].question.options[2].response[2]",
+      "sourceRef": "《克里同篇》54e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "let me follow the intimations of the will of God",
+      "anchorOffset": 28024,
+      "textSha256": "ac380ad605663ad4c018ee7a4ccceab94282a6f3bf30fb83507bf6286dfd1767"
+    },
+    {
+      "path": "scenes[8].question.options[2].note",
+      "sourceRef": "《克里同篇》54d–e",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
+      "referenceFile": "content/bonus/reference/jowett-crito.txt",
+      "anchor": "anything more which you will say will be in vain",
+      "anchorOffset": 27887,
+      "textSha256": "7491ffead0d0ff4115b8d2912b1c5bb7266da44d8abaa44acf1e3e5742cc1bb2"
+    },
+    {
+      "path": "scenes[9].passages[0]",
+      "sourceRef": "《斐多篇》59e–60b",
+      "sourceKind": "原作节述",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "began to bend and rub his leg",
+      "anchorOffset": 5773,
+      "textSha256": "329bf52cd30c966f2df2f01b59d113ae4fa1ebf212e9e50d08df7b035d87df7e"
+    },
+    {
+      "path": "scenes[9].passages[1]",
+      "sourceRef": "《斐多篇》84c–d",
+      "sourceKind": "编辑连接",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "much is still open to suspicion and attack",
+      "anchorOffset": 63913,
+      "textSha256": "c33562649bc876d45e0c9846ab1eecab751fa2be8ca333c323893449e9574d9a"
+    },
+    {
+      "path": "scenes[9].passages[2]",
+      "sourceRef": "《斐多篇》84c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "do not hesitate to say exactly what you think",
+      "anchorOffset": 64132,
+      "textSha256": "7b93bd0ead5a3f1c6ffbe36bc89b08e3fea02ccb695ce558f1abd6b07b45d7ec"
+    },
+    {
+      "path": "scenes[9].passages[3]",
+      "sourceRef": "《斐多篇》84d–85a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "fearing that our importunity might be troublesome",
+      "anchorOffset": 64509,
+      "textSha256": "7c9b85495dd2e9e2966d9db8440f0cd9701827935d478821c517cde820d20ff2"
+    },
+    {
+      "path": "scenes[9].passages[4]",
+      "sourceRef": "《斐多篇》85a–b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "speak and ask anything which you like",
+      "anchorOffset": 66032,
+      "textSha256": "4dc3a795e895e39e211345c92ec695b72ffebf277ac5f3b58bd0300eddd0ecc6"
+    },
+    {
+      "path": "scenes[9].passages[5]",
+      "sourceRef": "《斐多篇》91b–c",
+      "sourceKind": "编辑连接",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "be thinking of the truth and not of Socrates",
+      "anchorOffset": 80582,
+      "textSha256": "bfa440784cb86f744d90cd102c7c56aeec3e1c1d5fc8f467467b082582f892cf"
+    },
+    {
+      "path": "scenes[9].passages[6]",
+      "sourceRef": "《斐多篇》91b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "agree with me, if I seem to you to be speaking the truth",
+      "anchorOffset": 80628,
+      "textSha256": "cf03ec40852adc9f158c6a047c46a0e7f7200543f9dd76b9396bcec80770babf"
+    },
+    {
+      "path": "scenes[9].question.options[0].response[0]",
+      "sourceRef": "《斐多篇》86b–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "the soul, though most divine, like other harmonies",
+      "anchorOffset": 68717,
+      "textSha256": "71ffed3fe62938cdefb132c5ae45c99e47f1300794089c409a5fd1942e5bb429"
+    },
+    {
+      "path": "scenes[9].question.options[0].response[1]",
+      "sourceRef": "《斐多篇》86d–e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "before we answer him, we had better also hear what Cebes",
+      "anchorOffset": 69331,
+      "textSha256": "5c7bac13502533644125bca3d8c84cac2802bd236f578d4339f7be019686f9a5"
+    },
+    {
+      "path": "scenes[9].question.options[0].note",
+      "sourceRef": "《斐多篇》86b–e",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "first perishes in that which is called death",
+      "anchorOffset": 69032,
+      "textSha256": "172950bf0cbbcc3d5b10f65f1dc8dff98ce425a45decaf4f4fdad80224d54123"
+    },
+    {
+      "path": "scenes[9].question.options[1].response[0]",
+      "sourceRef": "《斐多篇》87a–88b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "was himself outlived by the last",
+      "anchorOffset": 71480,
+      "textSha256": "1c7566876d62b27311c5a8d19d416361b4d5c849aef3ecc8f206d09b47d554fe"
+    },
+    {
+      "path": "scenes[9].question.options[1].note",
+      "sourceRef": "《斐多篇》87a–88b",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "unless he is able to prove that the soul is altogether immortal",
+      "anchorOffset": 73132,
+      "textSha256": "32a7db1259aa0a941c6811e49708c7759b3a404bf80aaa7dcc14d5493567fa9e"
+    },
+    {
+      "path": "scenes[9].question.options[2].response[0]",
+      "sourceRef": "《斐多篇》61c–62c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "a man should wait, and not take his own life",
+      "anchorOffset": 11297,
+      "textSha256": "882c3082cffcc0546b7792908fdaf829635a376df9f73d2d37869bc45641259a"
+    },
+    {
+      "path": "scenes[9].question.options[2].note",
+      "sourceRef": "《斐多篇》61c–62c",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "until God summons him, as he is now summoning me",
+      "anchorOffset": 11342,
+      "textSha256": "4ef80a469d75afef88d2a1edc5fa04c87262ad95f5eb4e3122a8cd622b5ad551"
+    },
+    {
+      "path": "scenes[10].passages[0]",
+      "sourceRef": "《斐多篇》115b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "anything to say about your children",
+      "anchorOffset": 136808,
+      "textSha256": "98e69a3f5b5251c1a471cb8f05d0b53f53af0fb51527adf26caf3eedc7f5959d"
+    },
+    {
+      "path": "scenes[10].passages[1]",
+      "sourceRef": "《斐多篇》115b–c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "the warmth of your professions will be of no avail",
+      "anchorOffset": 137249,
+      "textSha256": "e93a1e2601414be4980510bc7ee57c2d3ef93c9ee070eb627f3aa60bda8fdfa0"
+    },
+    {
+      "path": "scenes[10].passages[2]",
+      "sourceRef": "《斐多篇》116a–c",
+      "sourceKind": "原作节述",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "he then dismissed them and returned to us",
+      "anchorOffset": 139273,
+      "textSha256": "39ef68c8cd2ce9fe2f62d5d427e9ca44726e177fc9e96f8db08dc67a33aa845a"
+    },
+    {
+      "path": "scenes[10].passages[3]",
+      "sourceRef": "《斐多篇》116c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "in obedience to the authorities, I bid them drink the poison",
+      "anchorOffset": 139762,
+      "textSha256": "32442ff12ecee23cfb6af45fb4f3edc208526c585568525f6a3a600e7c5a441f"
+    },
+    {
+      "path": "scenes[10].passages[4]",
+      "sourceRef": "《斐多篇》116d",
+      "sourceKind": "原作节述",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "Then bursting into tears he turned away",
+      "anchorOffset": 140026,
+      "textSha256": "8fff79e2f2cd50057da5b2f756c0359135cacaf72148bec961744cfb33a74915"
+    },
+    {
+      "path": "scenes[10].passages[5]",
+      "sourceRef": "《斐多篇》116d–e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "How charming the man is",
+      "anchorOffset": 140194,
+      "textSha256": "b1f947399c91383905c8d790abc6cc713d5d7193d61d7c1e27dbb3f176b704b7"
+    },
+    {
+      "path": "scenes[10].passages[6]",
+      "sourceRef": "《斐多篇》117b–d",
+      "sourceKind": "原作节述",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "Socrates alone retained his calmness",
+      "anchorOffset": 142855,
+      "textSha256": "b9cbcb17d88f3961feb4b6999a39171fde4fa362670d4cf750fae27e620f1dbb"
+    },
+    {
+      "path": "scenes[10].question.options[0].response[0]",
+      "sourceRef": "《斐多篇》116e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "do not hasten then, there is still time",
+      "anchorOffset": 140727,
+      "textSha256": "578b02a8903c3acb1034fd90c2a0b8892455f8dd1f98eb33b3e52a81adb51894"
+    },
+    {
+      "path": "scenes[10].question.options[0].response[1]",
+      "sourceRef": "《斐多篇》116e–117a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "I do not think that I should gain anything",
+      "anchorOffset": 140934,
+      "textSha256": "2faa7953df55a65850fa74feac072c24ce2754443a1310dc20f1341a8da69252"
+    },
+    {
+      "path": "scenes[10].question.options[0].note",
+      "sourceRef": "《斐多篇》116e–117a",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "they think that they will gain by the delay",
+      "anchorOffset": 140851,
+      "textSha256": "ac1d6fd6b697c576264998d18f8b2284b68ee6f131155f2e71735cb54f66c72d"
+    },
+    {
+      "path": "scenes[10].question.options[1].response[0]",
+      "sourceRef": "《斐多篇》117c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "at the thought of my own calamity in having lost such a companion",
+      "anchorOffset": 142539,
+      "textSha256": "cb6bf727fb4569017dad5f3b406314200f03f261b05bcdf7172425bd247df5d1"
+    },
+    {
+      "path": "scenes[10].question.options[1].note",
+      "sourceRef": "《斐多篇》117c–d",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "I was not weeping over him",
+      "anchorOffset": 142507,
+      "textSha256": "1d764395eb8c46f75fa950a3c916ec4cd95728306b8e28c23261f6a7d8840e09"
+    },
+    {
+      "path": "scenes[10].question.options[2].response[0]",
+      "sourceRef": "《斐多篇》115c",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "in what way would you have us bury you",
+      "anchorOffset": 137338,
+      "textSha256": "02117faf541e71c40d54017a5f6f2f382705ea2c8ff356148da5742cc680e7e0"
+    },
+    {
+      "path": "scenes[10].question.options[2].response[1]",
+      "sourceRef": "《斐多篇》115c–d",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "only you must get hold of me",
+      "anchorOffset": 137404,
+      "textSha256": "f2833295cde343020e99f9e3f05b8750f5367a68f97660efa54f0375dbd9f4a1"
+    },
+    {
+      "path": "scenes[10].question.options[2].note",
+      "sourceRef": "《斐多篇》115c–d",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "he fancies that I am the other Socrates",
+      "anchorOffset": 137635,
+      "textSha256": "ec703508dfabf653958b470c5a7abea2296e26aa4d91a0c861f851d9dd6a6036"
+    },
+    {
+      "path": "scenes[11].passages[0]",
+      "sourceRef": "《斐多篇》117e–118a",
+      "sourceKind": "原作节述",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "he uncovered his face",
+      "anchorOffset": 143679,
+      "textSha256": "a991d7ede091d7d0878fd0fa2e3d847acf16d6a6b5db7a1937a10e4eba6c31c6"
+    },
+    {
+      "path": "scenes[11].passages[1]",
+      "sourceRef": "《斐多篇》118a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://www.gutenberg.org/files/13726/13726-h/13726-h.htm",
+      "referenceFile": "content/bonus/reference/cary-phaedo-118a.txt",
+      "anchor": "Crito, we owe a cock",
+      "anchorOffset": 122,
+      "textSha256": "4b3bdd422b7e1fb305ea3f0807ac3e16c1311d118339f997997b9803c98cd6e5"
+    },
+    {
+      "path": "scenes[11].passages[2]",
+      "sourceRef": "《斐多篇》118a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "The debt shall be paid",
+      "anchorOffset": 143847,
+      "textSha256": "3fdedd37e60713704fc71ef1155572acc29a503fcdfb966661410c7d245b06cf"
+    },
+    {
+      "path": "scenes[11].passages[3]",
+      "sourceRef": "《斐多篇》118a",
+      "sourceKind": "原作节述",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "Crito closed his eyes and mouth",
+      "anchorOffset": 144047,
+      "textSha256": "abb79801d8f820ac11b02800747b3329ec32f2d8d4db4586c780b4e3efd362b8"
+    },
+    {
+      "path": "scenes[11].passages[4]",
+      "sourceRef": "《斐多篇》118a",
+      "sourceKind": "编辑连接",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "Such was the end, Echecrates, of our friend",
+      "anchorOffset": 144080,
+      "textSha256": "43460de9092d30e0837c2eef023d959c122b3b4ec03d2d3139f59fe03d02ab8d"
+    },
+    {
+      "path": "scenes[11].question.options[0].response[0]",
+      "sourceRef": "《斐多篇》118a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "the wisest, and justest, and best of all the men",
+      "anchorOffset": 144147,
+      "textSha256": "cb64ffd03c294715f15bc5b7a650045ba2e48099bf36ba62870f4f4d5fff2cbc"
+    },
+    {
+      "path": "scenes[11].question.options[0].note",
+      "sourceRef": "《斐多篇》118a",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "Such was the end, Echecrates, of our friend",
+      "anchorOffset": 144080,
+      "textSha256": "509945fd2fa58dc5c066761936c2185fca141a68b68f3a58fcf85645b296c7ad"
+    },
+    {
+      "path": "scenes[11].question.options[1].response[0]",
+      "sourceRef": "《斐多篇》115e",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "say that you are burying my body only",
+      "anchorOffset": 138636,
+      "textSha256": "6eeb14745c1174aed02842b92af74013b873385e5b1df3f00b5ec812d5ac6a9c"
+    },
+    {
+      "path": "scenes[11].question.options[1].note",
+      "sourceRef": "《斐多篇》115c–e",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "do with that as is usual, and as you think best",
+      "anchorOffset": 138679,
+      "textSha256": "20fbc93b7e5f0c3d0792e127f5b92a4d6d6ed06938549490213ac6cf39c54109"
+    },
+    {
+      "path": "scenes[11].question.options[2].response[0]",
+      "sourceRef": "《斐多篇》57a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "Were you yourself, Phaedo, in the prison",
+      "anchorOffset": 290,
+      "textSha256": "5dabee68374e962cd4e1620a33807055506ca2ab0bd615e4f6f791e3f000ccc6"
+    },
+    {
+      "path": "scenes[11].question.options[2].response[1]",
+      "sourceRef": "《斐多篇》57a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "Yes, Echecrates, I was.",
+      "anchorOffset": 390,
+      "textSha256": "a7de101ffa6a5985e78506277388f7f43e811758ab57a084a32cfdfaffe74307"
+    },
+    {
+      "path": "scenes[11].question.options[2].response[2]",
+      "sourceRef": "《斐多篇》59b",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "Plato, if I am not mistaken, was ill",
+      "anchorOffset": 3894,
+      "textSha256": "e50d5a7b3164bfbca230b5391d268abe409dfb903ec5c7c53eff86bd8311963e"
+    },
+    {
+      "path": "scenes[11].question.options[2].note",
+      "sourceRef": "《斐多篇》57a–59b",
+      "sourceKind": "编辑说明",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "PLACE OF THE NARRATION: Phlius",
+      "anchorOffset": 247,
+      "textSha256": "dbe81c9c9a3b5f52e10f5ce3db1b12374cffbd9af978340fa98ad3f775dd1b24"
+    },
+    {
+      "path": "ending.passages[0]",
+      "sourceRef": "《斐多篇》118a",
+      "sourceKind": "原作节译",
+      "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
+      "referenceFile": "content/bonus/reference/jowett-phaedo.txt",
+      "anchor": "the wisest, and justest, and best of all the men",
+      "anchorOffset": 144147,
+      "textSha256": "cb64ffd03c294715f15bc5b7a650045ba2e48099bf36ba62870f4f4d5fff2cbc"
+    }
+  ],
+  "checks": [
+    {
+      "id": "bonus-check-trial-gate",
+      "sceneId": "trial-gate",
+      "correctId": "b",
+      "evidencePassages": [
+        1,
+        2
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-old-accusations",
+      "sceneId": "old-accusations",
+      "correctId": "a",
+      "evidencePassages": [
+        0,
+        1,
+        2
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-charges",
+      "sceneId": "charges",
+      "correctId": "c",
+      "evidencePassages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-examination",
+      "sceneId": "examination",
+      "correctId": "b",
+      "evidencePassages": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-commitment",
+      "sceneId": "commitment",
+      "correctId": "c",
+      "evidencePassages": [
+        0,
+        1,
+        2
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-verdict",
+      "sceneId": "verdict",
+      "correctId": "a",
+      "evidencePassages": [
+        0,
+        2,
+        3
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-sentence",
+      "sceneId": "sentence",
+      "correctId": "b",
+      "evidencePassages": [
+        1,
+        2
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-escape",
+      "sceneId": "escape",
+      "correctId": "c",
+      "evidencePassages": [
+        3,
+        4,
+        5
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-laws",
+      "sceneId": "laws",
+      "correctId": "a",
+      "evidencePassages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-last-day",
+      "sceneId": "last-day",
+      "correctId": "b",
+      "evidencePassages": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-cup",
+      "sceneId": "cup",
+      "correctId": "c",
+      "evidencePassages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "dependency": "fixed-passages-only"
+    },
+    {
+      "id": "bonus-check-last-words",
+      "sceneId": "last-words",
+      "correctId": "a",
+      "evidencePassages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "dependency": "fixed-passages-only"
+    }
+  ]
+}

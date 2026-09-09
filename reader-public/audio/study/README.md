@@ -1,20 +1,11 @@
-# 新增理解检查的解释配音
+# 理解检查解释配音
 
-本目录包含正篇38道检查、隐藏章节12道检查，共50题、150段解释的完整配音。正篇114段，隐藏章节36段；完整文稿见 `docs/new-feedback-script.md`。
+主篇38题、隐藏章节12题，共150段标准普通话解释。文字已按2026-09-09来源审查修订；完整文稿见 [解释文稿](../../../docs/new-feedback-script.md)。
 
-150段静态MP3均已生成，清单为 `complete: true`。总时长1137.168秒（18分57.168秒），总大小6,823,008字节。每段长3.672—12.816秒。游戏按检查与选项编号播放对应录音；解释文字同时保留。
+清单 complete 为 true，总时长 1314.024 秒，总大小 7,884,144 字节。
 
-重新生成或核对时，可在已安装 `edge-tts` 的Python环境中，从项目根目录运行：
+使用 Microsoft zh-CN-XiaoxiaoNeural，语速 -3%。正确时逐字朗读 explanation，错误时逐字朗读所选 feedback；未经确认不播放。文件名为检查ID--选项ID.mp3。
 
-```text
-python scripts/generate-study-audio.py --concurrency 3
-python scripts/generate-study-audio.py --verify
-```
+生成：python scripts/generate-study-audio.py --concurrency 3；仅本地核验：添加 --verify。缓存按准确文字、声线和文件散列验证，只重录发生变化的文字。
 
-生成器使用标准普通话声线 `zh-CN-XiaoxiaoNeural`，语速 `-3%`。选对时朗读该题的 `explanation`，选错时朗读所选选项的 `feedback`，不改写原有说明。文件名为 `<检查ID>--<选项ID>.mp3`。
-
-缓存逐项检查准确文字、声线、音频SHA-256和MPEG完整性，只为缺失或内容变化的条目重新请求录音。`--verify` 已通过150/150项核对；该核对过程不访问网络，也不改写清单。空清单不会被误判为已完成。
-
-全部150段也已通过Chrome真实解码及非静音波形检查，最小均方根振幅为0.091266。逐段记录见 `decode-qa.json`，清单内同时保留检查摘要。这些自动检查不声称经过人工逐字听校。
-
-录音或清单更新后，执行项目测试并重新构建、发布。测试强制核对全部150段录音、准确文字和文件；沿用既有命名的录音无需逐题修改播放代码。运行时不下载整份校验清单。
+150段均通过MPEG完整性、Chrome解码及非静音波形检查，逐段数据见 decode-qa.json。这些自动检查不等于人工逐字听校。

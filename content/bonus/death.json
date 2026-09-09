@@ -2,25 +2,31 @@
   "id": "death-of-socrates",
   "title": "苏格拉底之死",
   "subtitle": "从法庭到最后一次谈话",
-  "notice": "本章依据柏拉图《申辩篇》《克里同篇》《斐多篇》作中文戏剧化改编，人物对话与动作经过压缩、重组，并非庭审实录，也非郭斌和、张竹明《理想国》译文。每个选择打开一种谈话角度，不计对错；你可以回看其他回答。",
+  "notice": "本章据柏拉图《申辩篇》《克里同篇》《斐多篇》作中文节选，人物对白主要由Jowett历史英译忠实节译。每段标明原作位置、节译或节述；编辑连接另作标记。这里不是郭斌和、张竹明《理想国》译文，也不是完整庭审实录。先选不计对错的谈话角度，再完成只依据本幕固定正文的理解判断。",
   "sources": [
     {
       "id": "apology",
       "title": "柏拉图《申辩篇》",
       "url": "https://classics.mit.edu/Plato/apology.html",
-      "reference": "17a–42a；参考 Benjamin Jowett 英译"
+      "reference": "17a–42a；Benjamin Jowett历史英译，本项目中文节译"
     },
     {
       "id": "crito",
       "title": "柏拉图《克里同篇》",
       "url": "https://classics.mit.edu/Plato/crito.html",
-      "reference": "43a–54e；参考 Benjamin Jowett 英译"
+      "reference": "43a–54e；Benjamin Jowett历史英译，本项目中文节译"
     },
     {
       "id": "phaedo",
       "title": "柏拉图《斐多篇》",
       "url": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
-      "reference": "57a–118a；参考 Benjamin Jowett 英译，并核对 Perseus 段落编号"
+      "reference": "57a–118a；Benjamin Jowett历史英译，本项目中文节译"
+    },
+    {
+      "id": "phaedo-cary",
+      "title": "《斐多篇》118a末语核对",
+      "url": "https://www.gutenberg.org/files/13726/13726-h/13726-h.htm",
+      "reference": "Henry Cary历史英译；仅核对末语复数“我们”"
     }
   ],
   "scenes": [
@@ -28,58 +34,85 @@
       "id": "trial-gate",
       "title": "法庭上的陌生人",
       "place": "公元前399年 · 雅典法庭",
-      "sourceRef": "《申辩篇》17a–18a、34c–35d",
+      "sourceRef": "《申辩篇》17a–18a；可选节译33a–b、34d–35c",
       "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
       "illustrationId": "trial-gate",
       "passages": [
         {
           "speaker": "旁白",
-          "text": "庭上的议论声渐渐低下。苏格拉底已经七十多岁。他望向审判他的雅典公民，开口的语调仍像平日在广场交谈。"
+          "text": "【编辑说明】雅典法庭。以下从《申辩篇》开场节译，省略处不补写动作。",
+          "sourceRef": "《申辩篇》17a–18a",
+          "sourceKind": "编辑连接",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "苏格拉底",
-          "text": "控告者说得动听，连我都差点忘了自己是谁。可请你们听听，哪些话是真的。"
+          "text": "雅典人啊，控告者的言辞对你们起了什么作用，我不知道；可是他们说得那么有说服力，连我都几乎忘了自己是谁。然而，他们几乎没有说一句真话。",
+          "sourceRef": "《申辩篇》17a–b",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "苏格拉底",
-          "text": "我第一次站在这里。不熟悉法庭的说话方式。请容许我照平常的样子说话，把注意力放在事情是否正当上。"
+          "text": "我已经七十多岁，却是第一次上法庭，完全不熟悉这里的说话方式。请不要计较我说得好不好，只看我所说的是否正当：审判者应作公正的判断，说话者应说真实的话。",
+          "sourceRef": "《申辩篇》17c–18a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         }
       ],
       "question": {
-        "prompt": "走近这场申辩，你想先听哪一件事？",
+        "prompt": "他的申辩从这里展开。你想接着读哪一处？",
         "options": [
           {
             "id": "a",
-            "text": "他为什么不用更动人的言辞？",
+            "text": "说服审判者与向他求情，有什么区别？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "审判者应当依法律判断。我该说明事情，不能只求他们因为可怜我而改变裁决。"
+                "text": "审判者坐在那里，不是把正义当作礼物送人，而是作出判断。他宣誓按照法律审判，不是按照自己的好恶。我们不该使他习惯违背誓言。",
+                "sourceRef": "《申辩篇》35b–c",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "他把说服与求情分开；这是一种自我辩护的立场，并不保证陪审者会接受。"
+            "note": "这里的理由是审判职责与誓言；并非断言真实的话必然能使自己获释。",
+            "noteSourceRef": "《申辩篇》35b–c",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "b",
-            "text": "朋友和家人能不能帮他？",
+            "text": "他怎样解释不带孩子到庭上求情？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "我有儿子，也有朋友。但我不会把孩子带到你们面前，让他们的眼泪替我证明无罪。"
+                "text": "我也有儿子，一共三个，一个已长大，两个还小；但我不会带他们来求你们释放我。我认为，那样做会使我自己、你们和整个城邦蒙羞。",
+                "sourceRef": "《申辩篇》34d–35a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "《申辩篇》写到朋友在场，也写到他拒绝让家人哭求；他并非孤身无援。"
+            "note": "他明确说自己有家人，又说明不把他们带到庭上求情。没有把亲人缺席解释成无人支持。",
+            "noteSourceRef": "《申辩篇》34d–35a",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "c",
-            "text": "这就是那天完整的庭审吗？",
+            "text": "他向哪些人开放自己的问答？",
             "response": [
               {
-                "speaker": "旁白",
-                "text": "留下来的，是柏拉图写成的《申辩篇》。我们主要听见苏格拉底的辩护，听不全控方的发言，更听不见每位陪审者的心声。"
+                "speaker": "苏格拉底",
+                "text": "无论年轻人还是老年人，愿意听我说话的，都可以来。我并不是只和给钱的人谈，不和不给钱的人谈；无论贫富，都可以问我、回答我，听我说话。",
+                "sourceRef": "《申辩篇》33a–b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "本章沿着柏拉图的叙事进入事件，不能把它当作逐字庭审记录。"
+            "note": "这一段澄清谈话的开放方式及是否收费，不把旁听者直接写成他正式收授的学生。",
+            "noteSourceRef": "《申辩篇》33a–b",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           }
         ]
       }
@@ -88,58 +121,92 @@
       "id": "old-accusations",
       "title": "先于控状的声音",
       "place": "法庭 · 回顾多年的名声",
-      "sourceRef": "《申辩篇》18a–24b",
+      "sourceRef": "《申辩篇》18a–19a；可选节译20e–23d",
       "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
       "illustrationId": "old-accusations",
       "passages": [
         {
           "speaker": "苏格拉底",
-          "text": "我还有一些更早的控告者。他们说我探究天上地下的事，把坏的道理说成好的。这些话，你们有些人从小时候就在听。"
-        },
-        {
-          "speaker": "旁白",
-          "text": "他停了一下。多年传闻没有一个可以当场传唤、逐句追问的共同说话者。"
+          "text": "我得先回答较早的控告和较早的控告者，再回答后来的。前者从你们小时候起就说，有一个苏格拉底，研究天上地下的事情，把较坏的理由说成较好的。",
+          "sourceRef": "《申辩篇》18a–b",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "苏格拉底",
-          "text": "年轻人喜欢听我检查那些自以为有知识的人，也学着这样追问。被问住的人恼火，常把这笔账记到我身上。"
+          "text": "这些人很多，控告又由来已久。当时只有控告，却没有人替我答辩。最难的是，除了碰巧知道的一位喜剧诗人，我甚至说不出他们的名字。",
+          "sourceRef": "《申辩篇》18c–e",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "我不能把他们叫到这里盘问；为自己辩护，就像和影子交战，只管发问，却没有人回答。",
+          "sourceRef": "《申辩篇》18d–19a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         }
       ],
       "question": {
-        "prompt": "这层旧日声名，从哪一处追问？",
+        "prompt": "旧日声名如何形成？选择一段原作中的说明。",
         "options": [
           {
             "id": "a",
-            "text": "他为什么开始检查别人的知识？",
+            "text": "神谕为什么反而引出了一连串追问？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "朋友带回神谕，说没有人比我更有智慧。我不明白，便去寻找比我更有智慧的人。有人确有本领，却以为自己对其他大事也都明白。"
+                "text": "凯勒丰问德尔斐的神谕，有没有人比我更有智慧，女祭司回答说没有。我听见后想：神是什么意思？我知道自己没有什么智慧。他说我最有智慧，这个谜是什么意思？",
+                "sourceRef": "《申辩篇》20e–21b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+              },
+              {
+                "speaker": "苏格拉底",
+                "text": "我想，只要找到一个比我更有智慧的人，就能拿着反证去对神说：这个人比我有智慧，而你却说我是最有智慧的。",
+                "sourceRef": "《申辩篇》21b–c",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "这是他在法庭上讲述的神谕与探问经历，不是旁白替神谕作真实性担保。"
+            "note": "神谕在这里成为要解释、要检验的难题。神谕及探问经历是苏格拉底在申辩中的自述。",
+            "noteSourceRef": "《申辩篇》20e–21c",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "b",
-            "text": "旧日传闻就是正式罪名吗？",
+            "text": "不知道与自以为知道，差别在哪里？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "不是同一件事。我得先回应这些影子，再转向今天具名控告我的人。"
+                "text": "我想，我们两人也许都不知道什么真正美好而善的事；但他不知道，却以为知道。我不知道，也不以为知道。在这一点上，我似乎比他稍有智慧。",
+                "sourceRef": "《申辩篇》21d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "喜剧形象、长期嫌恶与正式起诉有联系，但不能混成一张罪状。"
+            "note": "比较的关键是对自身知识的判断，不是宣称苏格拉底已经掌握了全部答案。",
+            "noteSourceRef": "《申辩篇》21c–d",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "c",
-            "text": "难道每位反对者都是因为丢了脸？",
+            "text": "年轻人模仿盘问，为什么使他招怨？",
             "response": [
               {
-                "speaker": "旁白",
-                "text": "苏格拉底以受盘问者的恼怒说明敌意怎样积累。作品让我们听见他的解释，却没有交出所有反对者的动机。"
+                "speaker": "苏格拉底",
+                "text": "有闲暇的富家青年自愿跟着我，喜欢听那些自以为有知识的人受盘问，也常模仿我去盘问别人。被他们问住的人不恼自己，却恼我，说是苏格拉底败坏了青年。",
+                "sourceRef": "《申辩篇》23c–d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "这种解释值得理解，也有视角的边界；不能据此读出整个雅典的内心。"
+            "note": "这是他关于敌意积累的解释；不应把它改写成每位陪审员投票动机的完整记录。",
+            "noteSourceRef": "《申辩篇》23c–d",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           }
         ]
       }
@@ -148,66 +215,127 @@
       "id": "charges",
       "title": "谁使青年变好",
       "place": "法庭 · 回应正式控告",
-      "sourceRef": "《申辩篇》23e–26a、34a–b",
+      "sourceRef": "《申辩篇》24b–25a；可选节译25b–26a、33d–34b",
       "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
       "illustrationId": "charges",
       "passages": [
         {
+          "speaker": "苏格拉底",
+          "text": "现在转向美勒托和他的同伴。控状大意是：苏格拉底败坏青年，不信城邦所信的神，却信别的、新的神灵。让我们逐项检查。",
+          "sourceRef": "《申辩篇》24b–c",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "美勒托，告诉审判者，谁使青年变好？既然你已经找出败坏他们的人，你一定也知道谁使他们变好。",
+          "sourceRef": "《申辩篇》24c–d",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+        },
+        {
+          "speaker": "美勒托",
+          "text": "法律。",
+          "sourceRef": "《申辩篇》24d",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "我问的不是这个，而是谁首先懂得法律。",
+          "sourceRef": "《申辩篇》24d",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+        },
+        {
+          "speaker": "美勒托",
+          "text": "在座的审判者，苏格拉底。",
+          "sourceRef": "《申辩篇》24d",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+        },
+        {
           "speaker": "旁白",
-          "text": "美勒托提出控告，阿尼图斯和吕孔支持他。罪状指向败坏青年，以及不信城邦所信的神、却引入新的神灵。苏格拉底转向美勒托。"
+          "text": "苏格拉底再问旁听者、议事会成员和公民大会中的人；美勒托都回答说，他们也使青年变好。",
+          "sourceRef": "《申辩篇》24d–25a",
+          "sourceKind": "原作节述",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "苏格拉底",
-          "text": "你说我使青年变坏。那么，谁使他们变好？"
+          "text": "那么，所有雅典人都使青年变好，只有我一个人败坏他们？你是这样断言的吗？",
+          "sourceRef": "《申辩篇》25a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "美勒托",
-          "text": "法律。这里的审判者也使他们变好，旁听者、议事会、公民大会也是。"
-        },
-        {
-          "speaker": "苏格拉底",
-          "text": "那么，所有雅典人都使他们变好，只有我一个使他们变坏？"
-        },
-        {
-          "speaker": "美勒托",
-          "text": "正是这样。"
+          "text": "我坚决这样说。",
+          "sourceRef": "《申辩篇》25a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         }
       ],
       "question": {
-        "prompt": "听到这里，你想继续哪一段盘问？",
+        "prompt": "沿着这次盘问，再检查哪一处？",
         "options": [
           {
             "id": "a",
-            "text": "借驯马来检查“所有人都会教好”？",
+            "text": "驯马的类比怎样质疑“大家都能改善”？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "马也是这样吗？谁都能使马变好，只有一个人会损害它？通常恰是少数懂得训练的人使它变好。"
+                "text": "马也是这样的吗？一个人把马弄坏，其他人都使它们变好？还是正相反：只有一个或少数几个驯马的人能使马变好，其他和马打交道的人往往使它们变坏？",
+                "sourceRef": "《申辩篇》25a–b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "这个比拟质疑美勒托过于整齐的断言；它本身尚未证明苏格拉底的每项教育影响。"
+            "note": "类比要求说明改善需要怎样的本领；它提出了反驳，不等于独自证明整个控告为假。",
+            "noteSourceRef": "《申辩篇》25a–b",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "b",
-            "text": "如果败坏青年是无意的呢？",
+            "text": "“故意败坏”与“无意败坏”，会导向什么不同回应？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "我怎会愿意让身边的人变坏，再来伤害自己？若我是不知不觉做错了，你该私下教我改正，为什么直接把我带上法庭？"
+                "text": "你说我故意败坏身边的人。可坏人会伤害同他相处的人；难道我不知道，把身边的人变坏，也可能使自己受害？若我无意犯错，你就该私下教导、劝告我，而不是把我带到惩罚人的地方。",
+                "sourceRef": "《申辩篇》25d–26a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "他提出有意或无意的两难，要求控方说明责任；这是辩护论证，不是裁决结果。"
+            "note": "这一节译合并“会受害”与“应教导”两步；它是苏格拉底的辩护论证，不作现代法律规则的陈述。",
+            "noteSourceRef": "《申辩篇》25c–26a",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "c",
-            "text": "不能只看说得巧，有具体证人吗？",
+            "text": "他要求怎样的证人来检验“败坏青年”？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "若有青年后来发现被我教坏，或者他们的家人受到伤害，现在就该站出来。我看见的那些家属，却愿意支持我。"
+                "text": "如果我败坏过青年，他们如今长大，发现我曾给他们坏的劝告，就该来控告我；如果他们自己不来，他们的父亲、兄弟或其他亲属也该说出，一家人从我这里受了什么害。",
+                "sourceRef": "《申辩篇》33d–34a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+              },
+              {
+                "speaker": "苏格拉底",
+                "text": "美勒托若忘了提出这样的证人，现在仍可以提出，我愿意让给他发言的机会。",
+                "sourceRef": "《申辩篇》34a–b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "这段证人诉求见34a–b；它补充盘问，却仍属于《申辩篇》保留下来的单方陈述。"
+            "note": "他把控告落到可指认的受害经历与证言上；支持者在场本身不是全部论证。",
+            "noteSourceRef": "《申辩篇》33d–34b",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           }
         ]
       }
@@ -216,62 +344,106 @@
       "id": "examination",
       "title": "神灵与无神",
       "place": "法庭 · 盘问美勒托",
-      "sourceRef": "《申辩篇》26b–28a、31c–d",
+      "sourceRef": "《申辩篇》26b–27d；可选节译26d–e、27d–28a、31c–d",
       "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
       "illustrationId": "examination",
       "passages": [
         {
           "speaker": "苏格拉底",
-          "text": "你究竟说我相信另外一些神，还是说我完全不相信任何神？"
+          "text": "你究竟是说，我相信某些神，只是不信城邦所信的神；还是说我完全不信神，并教别人也不信？",
+          "sourceRef": "《申辩篇》26c",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "美勒托",
-          "text": "我说你完全不信神。你还说太阳是石头，月亮是土。"
+          "text": "后者；你完全不信神。",
+          "sourceRef": "《申辩篇》26c",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "苏格拉底",
-          "text": "你以为你在控告阿那克萨戈拉吗？他的书并不难买到。现在请回答，你是否又说我相信神灵之事？"
+          "text": "有人能相信神灵之事，却不相信神灵吗？",
+          "sourceRef": "《申辩篇》27c",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
-          "speaker": "旁白",
-          "text": "谈话越收越窄：同一份控告里出现的几种说法，能不能放在一起？"
+          "speaker": "美勒托",
+          "text": "不能。",
+          "sourceRef": "《申辩篇》27c",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "可你在控状里宣誓说，我教人相信神灵之事，自己也相信；新旧都一样。如果我相信神灵之事，就必然相信神灵，而神灵不是神，就是神的子女。",
+          "sourceRef": "《申辩篇》27c–d",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         }
       ],
       "question": {
-        "prompt": "选择一个角度，听完这轮盘问。",
+        "prompt": "这两种控告怎样相遇？选择一处进一步的盘问。",
         "options": [
           {
             "id": "a",
-            "text": "信神灵之事，却完全不信神灵？",
+            "text": "太阳和月亮的说法，属于谁的著作？",
             "response": [
               {
+                "speaker": "美勒托",
+                "text": "他不相信太阳和月亮是神，说太阳是石头，月亮是土。",
+                "sourceRef": "《申辩篇》26d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+              },
+              {
                 "speaker": "苏格拉底",
-                "text": "有人相信与马有关的事，却不相信马吗？神灵若是神，或被说成神的子嗣，承认神灵而否认一切神，又怎样相容？"
+                "text": "亲爱的美勒托，你以为自己在控告阿那克萨戈拉吧！这些说法写在他的书里。青年还需要特地向我学这些吗？",
+                "sourceRef": "《申辩篇》26d–e",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "他抓住美勒托答话中的不一致，而没有在这里给出一套完整的神学。"
+            "note": "此处辨认被归给苏格拉底的学说来源，随后原作才继续盘问信神的问题。",
+            "noteSourceRef": "《申辩篇》26d–e",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "b",
-            "text": "他常提到的“神的征兆”是什么？",
+            "text": "相信神的子女，能否同时否认神存在？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "从小时候起，我就有时听到一种阻止的声音。它拦住我将要做的事，却不命令我去做什么。"
+                "text": "如果神灵是神的子女，无论母亲是宁芙还是别的，你能说有神的子女，却没有神吗？这就像说有骡子，却没有马和驴。",
+                "sourceRef": "《申辩篇》27d–e",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "31c–d将这个征兆说成一种阻止行动的声音；这是苏格拉底对自身经历的报告。"
+            "note": "他检查控方已经承认的说法能否相容，不是凭这个类比证明一套完整的神学。",
+            "noteSourceRef": "《申辩篇》27d–28a",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "c",
-            "text": "盘问占上风，就足以无罪吗？",
+            "text": "他所说的神的征兆，是怎样的？",
             "response": [
               {
-                "speaker": "旁白",
-                "text": "美勒托的回答显出困难，法庭却还要作出自己的判断。一次反驳是否奏效，与陪审投票怎样结束，是两件事。"
+                "speaker": "苏格拉底",
+                "text": "从小以来，我常有一种声音来到；每次出现，总是阻止我做正要做的某件事，却从不命令我去做什么。",
+                "sourceRef": "《申辩篇》31c–d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "控状中的“不信城邦的神”也不等于抽象的“否认一切神”；不要抹去这一区别。"
+            "note": "这是他自己对征兆的描述。这里不增加旁人也能听到的神谕声音或超自然事件。",
+            "noteSourceRef": "《申辩篇》31c–d",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           }
         ]
       }
@@ -280,58 +452,92 @@
       "id": "commitment",
       "title": "如果以沉默换自由",
       "place": "法庭 · 苏格拉底提出的假设",
-      "sourceRef": "《申辩篇》28b–30e、32a–e",
+      "sourceRef": "《申辩篇》29c–30b；可选节译29a–b、30e–31a、32c–e",
       "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
       "illustrationId": "commitment",
       "passages": [
         {
           "speaker": "苏格拉底",
-          "text": "假如你们说：这次放你走，但你不许再这样盘问；再被抓到就得死。我会怎样回答？"
-        },
-        {
-          "speaker": "旁白",
-          "text": "这不是法庭已经提出的交易。他自己把一个可能的条件摆到众人面前。"
+          "text": "假如你们对我说：“苏格拉底，这次放过你，但不许再这样探究；若再被发现，就得死。”如果这是释放我的条件，我会这样回答。",
+          "sourceRef": "《申辩篇》29c–d",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "苏格拉底",
-          "text": "雅典人，我敬重你们，却会服从神，继续检查自己和别人。我仍要问：为什么如此关心财富和名声，却不先关心灵魂怎样变好？"
+          "text": "雅典人啊，我尊敬你们，也爱你们；但我宁愿服从神，而不是你们。只要还有生命和力量，我就不会停止哲学的探究，也不会停止劝告、检查遇见的人。",
+          "sourceRef": "《申辩篇》29d–e",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "朋友，你是雅典这个以智慧和力量著称的大城邦的公民，却尽力求取金钱、名声和荣誉，不关心智慧、真实和使灵魂尽可能好，你不觉得羞愧吗？",
+          "sourceRef": "《申辩篇》29e–30a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         }
       ],
       "question": {
-        "prompt": "面对这个假设，你想问他什么？",
+        "prompt": "他坚持这种生活的理由，在哪一处说得更清楚？",
         "options": [
           {
             "id": "a",
-            "text": "你不害怕死亡吗？",
+            "text": "害怕死亡，怎样也可能是一种自以为知？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "把死亡当成已经知道的最大灾祸，也可能是在不知道时自以为知道。我知道作恶不对，不能因为害怕一个未知的结果，就去做它。"
+                "text": "害怕死亡，就是以为自己有其实没有的智慧，以为知道其实不知道的事。没有人知道死亡是否反而是最大的善，却害怕它，仿佛确知它是最大的恶。",
+                "sourceRef": "《申辩篇》29a–b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "这里比较的是未知的死亡与他认定的不义；不是宣布死亡值得追求。"
+            "note": "论点针对把未知当成已知；不能倒过来读成他已经证明死亡必定是善。",
+            "noteSourceRef": "《申辩篇》29a–b",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "b",
-            "text": "这样的坚持，在行动中出现过吗？",
+            "text": "“牛虻”的比喻怎样说明他对城邦的作用？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "三十人执政时，命令我去抓萨拉米斯的莱昂，把他送去处死。其余人去了，我回家了。那次拒绝也可能使我送命。"
+                "text": "城邦好像一匹高大优良的马，因为太大而行动迟缓，需要牛虻来唤醒。我整天到处依附着你们，唤醒、劝告、责备你们。",
+                "sourceRef": "《申辩篇》30e–31a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+              },
+              {
+                "speaker": "苏格拉底",
+                "text": "你们也许像从睡梦中被叫醒的人一样恼怒，一掌把我打死，便又睡下去。",
+                "sourceRef": "《申辩篇》31a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "他以32c–e的事件说明自己曾拒绝不义命令，不能把他的立场概括为逢命必从。"
+            "note": "这是苏格拉底对自身公共作用的比拟，不是旁白证实所有雅典人都拒绝思考。",
+            "noteSourceRef": "《申辩篇》30e–31a",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "c",
-            "text": "为什么把盘问看作对城邦有益？",
+            "text": "他曾怎样面对一项自己认为不义的命令？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "一匹高大却迟钝的马，需要牛虻把它唤醒。我这样四处追问，是希望你们愿意照料自己，不只照料自己拥有的东西。"
+                "text": "三十人统治时，他们命令我和另外四人去萨拉米斯抓莱昂，要处死他。那四人去了，我却径直回家。那强权没能吓得我去做不正当的事。",
+                "sourceRef": "《申辩篇》32c–e",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "牛虻的比喻说明他如何理解自己的使命，并不替城邦每个人确认同样的感受。"
+            "note": "节译保留他拒绝协助抓捕的具体行为，不把他写成只要权力命令就一概服从的人。",
+            "noteSourceRef": "《申辩篇》32c–e",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           }
         ]
       }
@@ -340,58 +546,92 @@
       "id": "verdict",
       "title": "有罪之后",
       "place": "法庭 · 第一次表决结束",
-      "sourceRef": "《申辩篇》35e–37a",
+      "sourceRef": "《申辩篇》35e–36e；可选节译36d–37b、28a–b",
       "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
       "illustrationId": "verdict",
       "passages": [
         {
           "speaker": "旁白",
-          "text": "表决认定苏格拉底有罪。接下来还要决定刑罚。美勒托请求判处死刑，苏格拉底需要提出自己的方案。"
+          "text": "法庭表决，认定苏格拉底有罪；作品接着转入他对刑罚的提议。",
+          "sourceRef": "《申辩篇》35e–36a",
+          "sourceKind": "原作节述",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "苏格拉底",
-          "text": "我原以为两边的票数会相差得更多。现在，我该说自己应当得到什么？"
+          "text": "雅典人啊，这次有罪表决并没有使我大为吃惊。我吃惊的是双方票数这样接近；我原以为反对我的票会多得多。",
+          "sourceRef": "《申辩篇》36a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "苏格拉底",
-          "text": "我一直劝人先关心自身的德性。若按我认为自己应得的来回答，倒该是公费供养，让一个贫穷的人有闲暇继续做这件事。"
+          "text": "他提议判我死刑。那么，我该提出什么？我该得到什么，或付出什么？一个贫穷的、使你们受益的人，需要闲暇来劝导你们，应当得到什么合适的回报？",
+          "sourceRef": "《申辩篇》36b–d",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "没有什么比在公餐厅由城邦供养更合适了。如果要按公正来估定我的待遇，我提出的就是这个。",
+          "sourceRef": "《申辩篇》36d–e",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         }
       ],
       "question": {
-        "prompt": "这一刻，哪件事让你想停下来？",
+        "prompt": "这项出人意料的提议，有哪些原作中的理由？",
         "options": [
           {
             "id": "a",
-            "text": "有罪裁决已经等于死刑了吗？",
-            "response": [
-              {
-                "speaker": "旁白",
-                "text": "还没有。认定有罪与选择刑罚是先后两步。苏格拉底的处罚建议，发生在这两次决定之间。"
-              }
-            ],
-            "note": "把两个阶段分开，才能看见他如何回应刑罚，而非把判罪到死亡写成一个瞬间。"
-          },
-          {
-            "id": "b",
-            "text": "为什么到这时还提出公费供养？",
+            "text": "为什么他把自己的作用与竞技胜利者相比？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "你们也许听来像挑衅。但我若确信没有故意伤害谁，怎能为了显得顺从，就说自己理当受到坏的待遇？"
+                "text": "奥林匹亚的获胜者使你们看起来幸福，我却使你们真正幸福；他不缺供养，我却需要。如果我应得一份回报，公餐厅的供养才是合适的。",
+                "sourceRef": "《申辩篇》36d–e",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "这是作品给出的自我说明。语气的实际效果、每名陪审者如何理解，都不能据此定论。"
+            "note": "这是一项自我评价及回报类比。保留它的大胆，不把“真正幸福”当作游戏替他证明的事实。",
+            "noteSourceRef": "《申辩篇》36d–e",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
+          },
+          {
+            "id": "b",
+            "text": "不承认自己故意害人，怎样影响处罚提议？",
+            "response": [
+              {
+                "speaker": "苏格拉底",
+                "text": "你们也许觉得我这样说是在逞强。并非如此：我确信自己没有故意伤害过任何人。我既然没有伤害别人，也不会伤害自己，说自己理当受到某种恶的待遇。",
+                "sourceRef": "《申辩篇》37a–b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+              }
+            ],
+            "note": "这里的理由是他确信自己没有故意害人，所以也不肯说自己理当受害。是否接受这个前提，与辨认他的论证需要分开。",
+            "noteSourceRef": "《申辩篇》37a–b",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "c",
-            "text": "能不能知道谁为何投了有罪票？",
+            "text": "他在申辩中怎样解释自己面对的敌意？",
             "response": [
               {
-                "speaker": "旁白",
-                "text": "作品留下了裁决与苏格拉底的反应，没有逐张选票的解释。旧日敌意、正式指控与申辩方式不能被算成一份确切的动机比例。"
+                "speaker": "苏格拉底",
+                "text": "若我终于被毁掉，我知道毁掉我的不会只是美勒托或阿尼图斯，而是众人的嫉妒和诽谤。它们已经毁掉许多好人，也还会毁掉别人；我大概不会是最后一个。",
+                "sourceRef": "《申辩篇》28a–b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "结局已知，不表示它的每一个原因都已被证实。"
+            "note": "此角度回读表决前的一段申辩，不是表决后公布了陪审员的真实动机。",
+            "noteSourceRef": "《申辩篇》28a–b",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           }
         ]
       }
@@ -400,62 +640,92 @@
       "id": "sentence",
       "title": "刑罚的另一种提议",
       "place": "法庭 · 第二次表决前后",
-      "sourceRef": "《申辩篇》37b–42a",
+      "sourceRef": "《申辩篇》37e–38c；可选节译38e–39b、40c–41c、41e–42a",
       "sourceUrl": "https://classics.mit.edu/Plato/apology.html",
       "illustrationId": "sentence",
       "passages": [
         {
           "speaker": "苏格拉底",
-          "text": "流放到别处，难道当地人就一定愿意听我谈话？若让我保持沉默，又违背了我认为应当过的生活。"
-        },
-        {
-          "speaker": "旁白",
-          "text": "他谈到自己付得起的小额罚金。柏拉图、克里同等朋友提出担保，金额提高为三十米那。"
+          "text": "有人也许会说：“苏格拉底，你不能闭口不言，到外邦安静地生活吗？”如果我说，那是违背神的命令，你们不会信；如果我说，每天谈论德性、检查自己和别人，是人最大的好处，未经检查的生活不值得过，你们更不会信。",
+          "sourceRef": "《申辩篇》37e–38a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "苏格拉底",
-          "text": "那就以三十米那为我的提议。他们愿意作担保。"
+          "text": "我想自己付得起一米那，就提议罚这个数目。可是这里的柏拉图、克里同、克里托布洛和阿波罗多洛要我提出三十米那，他们愿作担保。那就三十米那吧。",
+          "sourceRef": "《申辩篇》38b",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         },
         {
           "speaker": "旁白",
-          "text": "第二次表决后，法庭选择了死刑。申辩结束，朋友们还围在他身边。"
+          "text": "刑罚表决后，法庭判处死刑。作品随后记下苏格拉底对这个判决的答话。",
+          "sourceRef": "《申辩篇》38b–c",
+          "sourceKind": "原作节述",
+          "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
         }
       ],
       "question": {
-        "prompt": "离开法庭前，再听一段回答。",
+        "prompt": "判决之后，继续读他向在场者说的话。",
         "options": [
           {
             "id": "a",
-            "text": "他是否主动要求了死刑？",
+            "text": "他怎样区分逃过死亡与逃过不义？",
             "response": [
               {
-                "speaker": "旁白",
-                "text": "他没有把死刑作为自己的处罚提议。最终提出的是有朋友担保的罚金；死刑由法庭裁定。"
+                "speaker": "苏格拉底",
+                "text": "无论战场还是法庭，人都不该用尽一切办法逃避死亡。朋友们，难的不是逃过死亡，而是逃过不义；不义跑得比死亡更快。",
+                "sourceRef": "《申辩篇》38e–39b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "拒绝某些自救手段、接受判决与要求被处死，不能混为一谈。"
+            "note": "这句话解释他为何不肯采取任何自救手段，不表示死刑是由他自己提出或裁决的。",
+            "noteSourceRef": "《申辩篇》38e–39b",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "b",
-            "text": "被判死刑之后，他向朋友说什么？",
+            "text": "死亡的两种可能，怎样被用来说明希望？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "只要办手续的人还没有忙完，我们就再谈谈。死亡也许像无梦的睡眠，也许像迁往另一处；我不能自称已经知道。"
+                "text": "死亡无非是两种情形之一：或者死者完全没有知觉，或者照人们所说，是灵魂从这里迁到别处。如果没有知觉，就像没有梦的熟睡，那会是多大的收获！",
+                "sourceRef": "《申辩篇》40c–e",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
+              },
+              {
+                "speaker": "苏格拉底",
+                "text": "如果死亡是迁往另一处，那里的死者也都在那里，能同他们谈论、检查谁有智慧，岂不是很大的幸福？",
+                "sourceRef": "《申辩篇》40e–41b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "40c–41c以两种可能说明希望，并非确证死后世界的旅行指南。"
+            "note": "原作分别以“如果”展开两种可能。节译不把其中一种写成已获证明的死后见闻。",
+            "noteSourceRef": "《申辩篇》40c–41c",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           },
           {
             "id": "c",
-            "text": "谈话会随判决一起结束吗？",
+            "text": "他把怎样的检查交给未来的人？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "将来我的儿子长大，如果他们把钱财看得比德性重，也请你们这样检查他们；别因为是我的儿子就放过。"
+                "text": "等我的儿子长大，若他们关心金钱或其他东西胜过德性，请像我责备你们那样责备他们。若他们没有什么，却自以为了不起，也请责备他们没有关心应关心的事。",
+                "sourceRef": "《申辩篇》41e–42a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
               }
             ],
-            "note": "41e–42a把最后的嘱托交回仍活着的人，关心的是以后怎样生活。"
+            "note": "这里的嘱托延续了检查生活的要求，没有增加“别因为是我的儿子就放过”的新台词。",
+            "noteSourceRef": "《申辩篇》41e–42a",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/apology.html"
           }
         ]
       }
@@ -464,66 +734,141 @@
       "id": "escape",
       "title": "拂晓的来访",
       "place": "监狱 · 行刑之前",
-      "sourceRef": "《克里同篇》43a–49e；《斐多篇》58a–c",
+      "sourceRef": "《克里同篇》43a–b、44b–48d；背景《斐多篇》58b–c",
       "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
       "illustrationId": "escape",
       "passages": [
         {
           "speaker": "旁白",
-          "text": "赴提洛岛的祭船归来之前，雅典暂停执行死刑。等待期间，克里同在拂晓进入牢房，坐在熟睡的老友身边。"
-        },
-        {
-          "speaker": "克里同",
-          "text": "醒了？苏格拉底，时间不多了。钱有人出，离开后也有人接应。跟我们走吧。你还得抚养孩子，不能把他们留下。"
+          "text": "雅典规定，在赴提洛岛的祭船返回前不执行死刑；判决与行刑之间因此隔了一段时间。",
+          "sourceRef": "《斐多篇》58b–c",
+          "sourceKind": "原作节述",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         },
         {
           "speaker": "苏格拉底",
-          "text": "你的热心很可贵。但我们得检查，这样做是不是正当。不能只因如今轮到我受难，就扔掉以前认可的理由。"
+          "text": "克里同，你怎么这个时候来？一定还很早吧。",
+          "sourceRef": "《克里同篇》43a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
+        },
+        {
+          "speaker": "克里同",
+          "text": "是的，天刚亮。",
+          "sourceRef": "《克里同篇》43a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
+        },
+        {
+          "speaker": "克里同",
+          "text": "亲爱的苏格拉底，再听我一次，逃走吧。我的钱财可以给你用；若你不愿动用我的，西米亚斯、克贝和其他朋友也愿意出钱。我在忒萨利有朋友，会接待、保护你。",
+          "sourceRef": "《克里同篇》44b、45a–c",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "亲爱的克里同，你的热心如果是正当的，就很可贵；如果不正当，越热心，害处就越大。所以我们得检查该不该这样做。我一向只服从经过考虑、显得最好的理由；如今遭了这件事，也不能抛开从前的理由。",
+          "sourceRef": "《克里同篇》46b–c",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "最应重视的不是活着，而是活得好。活得好，就是活得正当、光明正大。依据这些，我们再问：不经雅典人同意逃走，究竟该不该？",
+          "sourceRef": "《克里同篇》48b–d",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
         }
       ],
       "question": {
-        "prompt": "你想让他们先面对哪一重困难？",
+        "prompt": "逃走的劝说与反问，接着落在哪一处？",
         "options": [
           {
             "id": "a",
-            "text": "先活下来，再讨论，不行吗？",
+            "text": "众人能够处死人，是否就应听从众人的判断？",
             "response": [
               {
+                "speaker": "苏格拉底",
+                "text": "我们该顾的是懂得正义与不义者的判断，以及真理本身，而不是众人怎样说。可是有人会说：“众人能杀死我们。”",
+                "sourceRef": "《克里同篇》48a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
+              },
+              {
                 "speaker": "克里同",
-                "text": "人们的决定真的能使你死去。"
+                "text": "是的，苏格拉底，他们显然会这样回答。",
+                "sourceRef": "《克里同篇》48a–b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
               },
               {
                 "speaker": "苏格拉底",
-                "text": "能。但我们以前同意，重要的是活得正当。眼下要问的，正是逃走有没有违背这一点。"
+                "text": "这是真的；然而，我看来，从前的论证仍然站得住。",
+                "sourceRef": "《克里同篇》48b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
               }
             ],
-            "note": "46b–48d将紧迫的生存问题放回他们先前同意的判断标准中。"
+            "note": "这不是否认众人有处死人的力量，而是区分这种力量与对正义的知识。",
+            "noteSourceRef": "《克里同篇》47a–48b",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/crito.html"
           },
           {
             "id": "b",
-            "text": "朋友和孩子将承担什么？",
+            "text": "克里同怎样提出朋友与子女的责任？",
             "response": [
               {
                 "speaker": "克里同",
-                "text": "别人会以为我们爱钱胜过朋友。孩子失去父亲，又怎么办？"
+                "text": "不了解你我的人会以为，我本来肯花钱就能救你，却不愿意。难道还有比被认为爱钱胜过朋友性命更坏的名声吗？",
+                "sourceRef": "《克里同篇》44b–c",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
               },
               {
-                "speaker": "苏格拉底",
-                "text": "这些事我们得面对，但不能仅凭别人会怎样说，就决定事情正不正当。"
+                "speaker": "克里同",
+                "text": "你原能抚养和教育孩子，却离开他们，让他们碰运气。一个人若不愿把养育孩子的责任坚持到底，就不该把孩子带到世上来。",
+                "sourceRef": "《克里同篇》45c–d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
               }
             ],
-            "note": "克里同提出的家庭责任与朋友风险是真实的劝说理由；本章保留这种压力。"
+            "note": "这里保留克里同自己的劝说力度；苏格拉底随后仍要求按行动是否正当来检查这些理由。",
+            "noteSourceRef": "《克里同篇》44b–c、45c–d",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/crito.html"
           },
           {
             "id": "c",
-            "text": "受到不义，就能以不义回应吗？",
+            "text": "受到伤害以后，报复的原则是否改变？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "我们以前说，不该作恶，也不该以伤害报复伤害。你如今还同意吗？如果同意，再问这次逃走会不会伤害不该伤害的东西。"
+                "text": "我们不应作不义的事。那么，即使受了不义，也不该像多数人所想的那样以不义回报，因为我们不该伤害任何人，是不是？",
+                "sourceRef": "《克里同篇》49b–c",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
+              },
+              {
+                "speaker": "克里同",
+                "text": "显然不该。",
+                "sourceRef": "《克里同篇》49b–c",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
+              },
+              {
+                "speaker": "苏格拉底",
+                "text": "无论受到什么恶，都不该报复，也不该以恶报恶。克里同，你得仔细想，你是否真同意这个起点。",
+                "sourceRef": "《克里同篇》49c–d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
               }
             ],
-            "note": "49b–e先确立不以恶报恶；它还需要下一步论证，才能推出不应逃走。"
+            "note": "这是两人进一步论证的共同起点。仅同意不以恶报恶，还没有完成逃走是否不义的论证。",
+            "noteSourceRef": "《克里同篇》49b–e",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/crito.html"
           }
         ]
       }
@@ -532,62 +877,113 @@
       "id": "laws",
       "title": "让法律开口",
       "place": "牢房 · 一场想象中的问答",
-      "sourceRef": "《克里同篇》50a–54e；对照《申辩篇》32c–e",
+      "sourceRef": "《克里同篇》50a–53a；可选节译51b–c、54b–e",
       "sourceUrl": "https://classics.mit.edu/Plato/crito.html",
       "illustrationId": "laws",
       "passages": [
         {
           "speaker": "苏格拉底",
-          "text": "设想我们正要出门，城邦的法律走来问我：你打算让个人随自己的意思，取消已经作出的裁决吗？这样，法律还有力量吗？"
+          "text": "设想我正要逃走，法律和城邦来到面前，问我：“苏格拉底，你打算做什么？一个城邦的判决若没有效力，被个人随意取消，这个城邦还能存在、不被推翻吗？”",
+          "sourceRef": "《克里同篇》50a–b",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "我们也许会回答：“可是城邦伤害了我们，作出了不公的判决。”如果我这样说呢？",
+          "sourceRef": "《克里同篇》50b",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
         },
         {
           "speaker": "克里同",
-          "text": "可城邦判得不公，伤害了你。"
+          "text": "这样说很好，苏格拉底。",
+          "sourceRef": "《克里同篇》50b",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
         },
         {
           "speaker": "苏格拉底（拟法律）",
-          "text": "你在这里生活了七十年，了解我们的安排，本可以带着财物离开。你选择留下，如今却要单方面破坏你以行动认可的约定？"
+          "text": "我们允许每个成年公民，在了解城邦及其法律后，若不满意，带着自己的财物到愿去的地方。但谁看过我们怎样司法、怎样治理，仍然留下，就已经用行动同意服从我们的安排。",
+          "sourceRef": "《克里同篇》51d–52a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
+        },
+        {
+          "speaker": "苏格拉底（拟法律）",
+          "text": "你有七十年可以考虑这些约定，并非仓促、受强迫或受欺骗才同意的。如果不满意，你本可离开。如今你却要背弃这些约定吗？",
+          "sourceRef": "《克里同篇》52e–53a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
         }
       ],
       "question": {
-        "prompt": "这段想象中的陈词，你想从哪里再听一遍？",
+        "prompt": "让这场设想中的问答继续。",
         "options": [
           {
             "id": "a",
-            "text": "判错了，也不允许提出异议吗？",
+            "text": "法律陈词给“说服”留下什么位置？",
             "response": [
               {
                 "speaker": "苏格拉底（拟法律）",
-                "text": "你可以说服城邦什么才是正当的。但若没有说服，就要考虑你已承认的关系与约定，不能把秘密逃走当成毫无伤害的事。"
+                "text": "在战场、法庭或别的地方，一个人应做城邦和祖国命令的事，或者使它改变对正当事情的看法。既然不能对父母施暴，就更不能对祖国施暴。",
+                "sourceRef": "《克里同篇》51b–c",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
               }
             ],
-            "note": "50a–52a以说服、养育和约定展开论证。它是否充分，可以继续讨论；这里没有替所有制度下结论。"
+            "note": "节译保留原作强烈的服从要求和“说服”的另一项要求，不用温和的编辑概括代替它。其理由是否充分仍可讨论。",
+            "noteSourceRef": "《克里同篇》51b–c",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/crito.html"
           },
           {
             "id": "b",
-            "text": "这与他曾拒绝抓人，矛盾吗？",
+            "text": "法律如何区分“受了不义”与“做出不义”？",
             "response": [
               {
-                "speaker": "旁白",
-                "text": "《申辩篇》中的他拒绝参与杀害莱昂；这里的他认为逃走会违背正当约定。两处都诉诸不作恶，却面对不同的行动。"
+                "speaker": "苏格拉底（拟法律）",
+                "text": "你如今离去，是受害者，不是作恶者；伤害你的是人，不是法律。若你以恶报恶、以伤害报伤害，破坏同我们的约定，就会伤害最不该伤害的东西。",
+                "sourceRef": "《克里同篇》54b–c",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
               }
             ],
-            "note": "不同作品之间的张力不应抹平，更不能简化成“任何权力的命令都必须服从”。"
+            "note": "这是拟法律陈词自身的区分，不把它当作旁白已证明法律完全无错的结论。",
+            "noteSourceRef": "《克里同篇》54b–c",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/crito.html"
           },
           {
             "id": "c",
-            "text": "克里同还有机会反驳吗？",
+            "text": "谈话结束前，克里同还能说什么？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "这些话在我耳中回响。但如果你认为还能说服我，就说吧。"
+                "text": "这些话像秘仪中的笛声一样，在我的耳中回响，使我听不进别的话。我知道你再说也徒然；但如果你还有话，仍请说。",
+                "sourceRef": "《克里同篇》54d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
               },
               {
                 "speaker": "克里同",
-                "text": "苏格拉底，我没有别的话了。"
+                "text": "苏格拉底，我没有什么可说的了。",
+                "sourceRef": "《克里同篇》54d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
+              },
+              {
+                "speaker": "苏格拉底",
+                "text": "那么，就让我们照这样做吧；神正引导我们走这条路。",
+                "sourceRef": "《克里同篇》54e",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
               }
             ],
-            "note": "54d–e以克里同无话可说结束谈话。苏格拉底留下；这是人物的决定，不是要求玩家宣誓服从。"
+            "note": "这里保留他认定论证已决定行动的语气，不把结尾润饰成没有结束判断的开放讨论。",
+            "noteSourceRef": "《克里同篇》54d–e",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://classics.mit.edu/Plato/crito.html"
           }
         ]
       }
@@ -596,62 +992,120 @@
       "id": "last-day",
       "title": "最后一天，仍可反驳",
       "place": "牢房 · 祭船已经归来",
-      "sourceRef": "《斐多篇》59e–60c、61c–62c、84c–91c",
+      "sourceRef": "《斐多篇》59e–60b、84c–85b、91b–c；可选节译61c–62c、86b–88b",
       "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
       "illustrationId": "last-day",
       "passages": [
         {
           "speaker": "旁白",
-          "text": "这一天，朋友们来得更早。脚镣刚解开，苏格拉底揉着腿，从痛苦消退后的舒服谈起。随后，他们讨论灵魂与死亡。"
+          "text": "祭船已经回来。这天朋友们获准入内时，苏格拉底的脚镣刚解除；他坐起，揉着腿，谈到痛苦与快乐的相接。",
+          "sourceRef": "《斐多篇》59e–60b",
+          "sourceKind": "原作节述",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         },
         {
-          "speaker": "西米亚斯",
-          "text": "我和克贝都还有疑问。只是今天再来反驳你，怕使你难受。"
+          "speaker": "旁白",
+          "text": "【编辑说明】下面转到灵魂论证之后；原作中间的长篇讨论在此略去。",
+          "sourceRef": "《斐多篇》84c–d",
+          "sourceKind": "编辑连接",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         },
         {
           "speaker": "苏格拉底",
-          "text": "说吧。论证还留着许多可以检查的地方。别因为是我在说，就少关心真实一些。"
+          "text": "这个论证仍有许多可疑、可攻击的地方。若你们对它还有疑问，不要迟疑，直说自己的想法；若有更好的意见，也让我们听见。",
+          "sourceRef": "《斐多篇》84c–d",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+        },
+        {
+          "speaker": "西米亚斯",
+          "text": "我承认，我们心里确有疑问，彼此都催对方来问；但我们又怕在你眼下的境况里，这样纠缠会使你烦恼。",
+          "sourceRef": "《斐多篇》84d–85a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "若连你们都劝服不了，仍把我看成比平时更苦恼的人，我怎么能劝服别人？别顾虑这些；只要十一人官署还允许，你们愿意说什么、问什么，就说吧。",
+          "sourceRef": "《斐多篇》85a–b",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+        },
+        {
+          "speaker": "旁白",
+          "text": "【编辑说明】两人的反驳之后，苏格拉底再提出下列要求。",
+          "sourceRef": "《斐多篇》91b–c",
+          "sourceKind": "编辑连接",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+        },
+        {
+          "speaker": "苏格拉底",
+          "text": "请把真实放在心上，不要把苏格拉底放在心上。若我说得真实，就赞同我；若不真实，就尽力反驳我，免得我由于热切，既骗了自己，也骗了你们。",
+          "sourceRef": "《斐多篇》91b–c",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         }
       ],
       "question": {
-        "prompt": "在这场最后的谈话中，选择一处疑问。",
+        "prompt": "回到他们提出的困难，读哪一段？",
         "options": [
           {
             "id": "a",
-            "text": "灵魂会不会像琴的和谐？",
+            "text": "无形的和谐，为什么仍可能先于琴消失？",
             "response": [
               {
                 "speaker": "西米亚斯",
-                "text": "和谐看不见，也很美；但琴毁坏了，和谐可能先消失。身体与灵魂，会不会也是这样？"
+                "text": "假如灵魂是身体各部分的和谐，那么身体受损、弦过松或过紧时，灵魂虽然最为神圣，也会像其他和谐那样立刻消失；身体的残余却可能保留很久。对此我们怎样回答？",
+                "sourceRef": "《斐多篇》86b–d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               },
               {
                 "speaker": "苏格拉底",
-                "text": "这个反驳有力量。我们再把克贝的困难也听完。"
+                "text": "西米亚斯的进攻是有力量的。不过，在回答他之前，也先听听克贝对论证有什么异议。",
+                "sourceRef": "《斐多篇》86d–e",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               }
             ],
-            "note": "85e–86d提出和谐比拟。原作随后细致回应，本章不把一段短对话冒充全部证明。"
+            "note": "反驳质疑从无形、神圣直接推出不灭；原作随后另用论证回答，并未在这一问处已经解决。",
+            "noteSourceRef": "《斐多篇》86b–e",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
           },
           {
             "id": "b",
-            "text": "比身体长久，等于永远不灭吗？",
+            "text": "比许多身体长久，为什么仍不等于不灭？",
             "response": [
               {
                 "speaker": "克贝",
-                "text": "织工能穿破许多件衣服，却仍可能先于最后一件衣服死去。灵魂即使更长久，也还不能直接说它永远存在。"
+                "text": "一个织工织过、穿破许多件衣服；他比那些衣服长久，却仍会死在最后一件衣服之前。灵魂即使经历许多身体，也还不能据此断定，它最终不会疲乏、彻底消失。",
+                "sourceRef": "《斐多篇》87a–88b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               }
             ],
-            "note": "87a–88b把多次存续与不会毁灭分开。最后的日子里，异议仍得到认真倾听。"
+            "note": "织工类比区分存续多次与绝不毁灭，节译保留的正是这项尚待证明的要求。",
+            "noteSourceRef": "《斐多篇》87a–88b",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
           },
           {
             "id": "c",
-            "text": "谈论死亡，是在劝人结束生命吗？",
+            "text": "哲学家迎接死亡，是否意味着可以自行结束生命？",
             "response": [
               {
                 "speaker": "苏格拉底",
-                "text": "我们谈哲学与死亡，也说人不应自行结束生命。今天我要离去，是雅典人的判决。"
+                "text": "秘传的说法把人比作囚徒，不得自行打开牢门逃走；这层深意我还不很明白。不过，我也相信神看顾我们，我们是神的所有物。人该等候，不应自行结束生命，直到神来召唤，正像如今召唤我一样。",
+                "sourceRef": "《斐多篇》61c–62c",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               }
             ],
-            "note": "61c–62c明确留下这一限制；不能把苏格拉底面对处刑的态度变成劝人求死的话。"
+            "note": "此处回读较早的限制。它区分哲学与死亡的关系和自行结束生命，不扩写成操作或劝诱。",
+            "noteSourceRef": "《斐多篇》61c–62c",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
           }
         ]
       }
@@ -660,66 +1114,127 @@
       "id": "cup",
       "title": "日落之前",
       "place": "牢房 · 黄昏",
-      "sourceRef": "《斐多篇》115a–117e",
+      "sourceRef": "《斐多篇》115b–117d；可选节译115c–d、116e–117a、117d–e",
       "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
       "illustrationId": "cup",
       "passages": [
         {
           "speaker": "克里同",
-          "text": "关于孩子，或别的事情，你还要我们做什么？"
+          "text": "苏格拉底，关于孩子，或其他我们能为你做的事，你还有什么吩咐？",
+          "sourceRef": "《斐多篇》115b",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         },
         {
           "speaker": "苏格拉底",
-          "text": "还是从前说的那些：认真照料你们自己。口头答应了，生活却仍旧不加照料，也不会有什么用。"
+          "text": "没有什么特别的。还是我一向说的：照料好你们自己。若不照料自己，不按我们从前说过的去生活，口头上再热切地答应也无济于事。",
+          "sourceRef": "《斐多篇》115b–c",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         },
         {
           "speaker": "旁白",
-          "text": "他沐浴、与家人道别。狱中侍役来告知行刑时刻，转身流泪。随后，执行刑罚的人带来一杯毒药。"
+          "text": "苏格拉底沐浴后，与孩子及家中的妇女交谈，交代一些事，送他们离开，再回到朋友们中间。十一人官署的侍役随后进来。",
+          "sourceRef": "《斐多篇》116a–c",
+          "sourceKind": "原作节述",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+        },
+        {
+          "speaker": "侍役",
+          "text": "我奉官署的命令，告诉人们该饮药了。别人会对我发怒、咒骂，我知道你不会这样；你知道责任在别人，不在我。再会了，尽力承受这件不得不承受的事吧。",
+          "sourceRef": "《斐多篇》116c–d",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+        },
+        {
+          "speaker": "旁白",
+          "text": "说完，侍役流着泪转身出去了。",
+          "sourceRef": "《斐多篇》116d",
+          "sourceKind": "原作节述",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         },
         {
           "speaker": "苏格拉底",
-          "text": "那个人多么和善，这些日子常来与我交谈。现在也为我哭了。"
+          "text": "这人多么和善！自从我到监狱，他常来看我，有时同我谈话，待我很好。现在你们看，他又多么真切地为我悲伤。",
+          "sourceRef": "《斐多篇》116d–e",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+        },
+        {
+          "speaker": "旁白",
+          "text": "随后，苏格拉底平静地接过杯子，饮下执行死刑的毒药。看见他喝完，朋友们再也忍不住眼泪；斐多蒙住脸哭起来。",
+          "sourceRef": "《斐多篇》117b–d",
+          "sourceKind": "原作节述",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         }
       ],
       "question": {
-        "prompt": "先听完哪一段告别？",
+        "prompt": "回读告别中的几段问答。",
         "options": [
           {
             "id": "a",
-            "text": "克里同希望再等一会儿。",
+            "text": "克里同劝他再等一会儿，他怎样回答？",
             "response": [
               {
                 "speaker": "克里同",
-                "text": "太阳还在山上。别人听到吩咐，也会再吃点东西，多等一会儿。"
+                "text": "太阳还在山头。有些人在接到吩咐后，还吃喝，直到很晚才饮药。别着急，还来得及。",
+                "sourceRef": "《斐多篇》116e",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               },
               {
                 "speaker": "苏格拉底",
-                "text": "他们认为这样有益。我若把已经无多的时间抓在手里，也不觉得有什么所得。"
+                "text": "那些人这样做有他们的理由，因为他们以为有所收获；我不这样做，也有我的理由。我不觉得晚一点饮下能有什么收获。",
+                "sourceRef": "《斐多篇》116e–117a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               }
             ],
-            "note": "116e–117a呈现朋友的挽留与他的回答，不把延缓或悲伤写成可耻的行为。"
+            "note": "这回答说明他对延缓的判断，不把它改成适用于所有临终者的行为标准。",
+            "noteSourceRef": "《斐多篇》116e–117a",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
           },
           {
             "id": "b",
-            "text": "朋友们怎样承受这一刻？",
+            "text": "斐多说自己的眼泪是为谁而流？",
             "response": [
               {
                 "speaker": "斐多",
-                "text": "看见他饮下，我们再也忍不住。我蒙住脸哭，是为自己将失去这样的朋友。阿波罗多洛早就在哭，这时更止不住了。"
+                "text": "眼泪不由自主地流下来，我蒙住脸，为自己哭。我不是为他哭，而是为自己将失去这样一位朋友的遭遇而哭。",
+                "sourceRef": "《斐多篇》117c–d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               }
             ],
-            "note": "117c–e保留了临终者的平静与朋友的痛苦，两种感受同时存在。"
+            "note": "保留斐多对自己悲伤的直接说明，不替其他每个人编写同一个心理原因。",
+            "noteSourceRef": "《斐多篇》117c–d",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
           },
           {
             "id": "c",
-            "text": "刑罚怎样成为真正的死亡？",
+            "text": "“怎样埋葬你”为什么引出他的反问？",
             "response": [
               {
-                "speaker": "旁白",
-                "text": "他在监狱中饮下执行死刑的毒药。后来身体逐渐失去感觉，他躺了下来。侍役查看他的身体，朋友守在一旁。"
+                "speaker": "克里同",
+                "text": "我们该怎样埋葬你？",
+                "sourceRef": "《斐多篇》115c",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+              },
+              {
+                "speaker": "苏格拉底",
+                "text": "随你们喜欢，只要你们能抓住我，不让我从你们手里走掉。克里同还不能相信，我就是一直同你们说话、论证的这个苏格拉底；他以为我是那个不久便成为尸体的苏格拉底。",
+                "sourceRef": "《斐多篇》115c–d",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               }
             ],
-            "note": "117e–118a通过身体的变化与在场者的动作，叙述刑罚怎样终结一个人的生命。"
+            "note": "此角度回读沐浴以前的对话，联系原作对人、灵魂和遗体的区分；不是在饮药以后新增一次谈话。",
+            "noteSourceRef": "《斐多篇》115c–d",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
           }
         ]
       }
@@ -728,62 +1243,113 @@
       "id": "last-words",
       "title": "一项尚未履行的嘱托",
       "place": "牢房 · 最后的声音",
-      "sourceRef": "《斐多篇》117e–118a；57a–59b",
+      "sourceRef": "《斐多篇》117e–118a；回读57a–59b",
       "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp",
       "illustrationId": "last-words",
       "passages": [
         {
           "speaker": "旁白",
-          "text": "苏格拉底饮下毒药后，躺卧在朋友身旁。身体渐渐冷下来。他揭开脸上的覆盖物，又唤了一声克里同。"
+          "text": "苏格拉底躺下后，身体渐冷。他揭开脸上的覆盖物，说了最后一句话。",
+          "sourceRef": "《斐多篇》117e–118a",
+          "sourceKind": "原作节述",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         },
         {
           "speaker": "苏格拉底",
-          "text": "克里同，我们还欠阿斯克勒庇俄斯一只公鸡。记着还上，别忘了。"
+          "text": "克里同，我们欠阿斯克勒庇俄斯一只公鸡。请还上，不要忘记。",
+          "sourceRef": "《斐多篇》118a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://www.gutenberg.org/files/13726/13726-h/13726-h.htm"
         },
         {
           "speaker": "克里同",
-          "text": "会还上的。看一看，还有没有别的吩咐？"
+          "text": "会还上的。还有什么别的事吗？",
+          "sourceRef": "《斐多篇》118a",
+          "sourceKind": "原作节译",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         },
         {
           "speaker": "旁白",
-          "text": "没有回答。片刻之后，克里同替他合上了眼睛和嘴。斐多把这一天的谈话，讲给了不在场的人听。"
+          "text": "这个问题没有得到回答。片刻以后，他动了一下；侍役揭开覆盖物，他的眼睛已经凝住。克里同合上了他的眼睛和嘴。",
+          "sourceRef": "《斐多篇》118a",
+          "sourceKind": "原作节述",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+        },
+        {
+          "speaker": "旁白",
+          "text": "【编辑说明】原作接着以斐多对朋友的评价结束，没有在这段末语之后说明公鸡嘱托的含义。",
+          "sourceRef": "《斐多篇》118a",
+          "sourceKind": "编辑连接",
+          "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
         }
       ],
       "question": {
-        "prompt": "合上故事前，你想留下哪一页札记？",
+        "prompt": "回到记述这场死亡的声音，留下哪一段？",
         "options": [
           {
             "id": "a",
-            "text": "记下最后一句话，也保留它的疑问。",
+            "text": "末语之后，原作到底还记了什么？",
             "response": [
               {
-                "speaker": "旁白",
-                "text": "阿斯克勒庇俄斯是医治之神。公鸡的嘱托究竟指哪一种偿还或感谢？文本没有当场解释。不能仅凭它，就断定苏格拉底认为整个人生是一种疾病。"
+                "speaker": "斐多",
+                "text": "厄刻克拉底，这就是我们这位朋友的结局。在我所知道的人中，我确可称他为最有智慧、最正义、最好的人。",
+                "sourceRef": "《斐多篇》118a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               }
             ],
-            "note": "末语有多种解释；这里保留118a的嘱托，不指定唯一的象征答案。"
+            "note": "最后是斐多对朋友的评价，而不是对公鸡象征意义的解释；记述与解释需要分开。",
+            "noteSourceRef": "《斐多篇》118a",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
           },
           {
             "id": "b",
-            "text": "分清他的理由，与判他死刑的原因。",
+            "text": "他怎样要求朋友称呼将被安葬的遗体？",
             "response": [
               {
-                "speaker": "旁白",
-                "text": "我们听到了正式控告、两次裁决，也听到他拒绝停止盘问、拒绝逃走的理由。这些线索相接，却不能被压成“他自己想死”或“所有人都恨智慧”。"
+                "speaker": "苏格拉底",
+                "text": "亲爱的克里同，振作些。你只须说，你埋葬的是我的身体；至于身体，就照惯例，按你认为最好的办法处理。",
+                "sourceRef": "《斐多篇》115e",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               }
             ],
-            "note": "法律程序、社会敌意与个人判断，是这个结局中需要分别理解的层次。"
+            "note": "此处回读告别时关于遗体的嘱托，不把它拼接成118a之后又说出的遗言。",
+            "noteSourceRef": "《斐多篇》115c–e",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
           },
           {
             "id": "c",
-            "text": "记住这一切由谁讲述。",
+            "text": "这一天的见闻由谁转述？",
             "response": [
               {
-                "speaker": "旁白",
-                "text": "《斐多篇》让斐多回忆那一天，并说柏拉图因病不在场。读到的既是对朋友的追忆，也是柏拉图写成的哲学作品。"
+                "speaker": "厄刻克拉底",
+                "text": "斐多，苏格拉底在狱中饮下毒药的那天，你本人在场吗？",
+                "sourceRef": "《斐多篇》57a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+              },
+              {
+                "speaker": "斐多",
+                "text": "是的，厄刻克拉底，我在场。",
+                "sourceRef": "《斐多篇》57a",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
+              },
+              {
+                "speaker": "斐多",
+                "text": "柏拉图，我想，是病了。",
+                "sourceRef": "《斐多篇》59b",
+                "sourceKind": "原作节译",
+                "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
               }
             ],
-            "note": "57a–59b设置了转述框架。这个隐藏章节又作了一次改编，不能取代三部原作。"
+            "note": "这是回到《斐多篇》开头的叙述框架；厄刻克拉底是听转述的人，不能画成牢房里的探望者。",
+            "noteSourceRef": "《斐多篇》57a–59b",
+            "noteSourceKind": "编辑说明",
+            "noteSourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
           }
         ]
       }
@@ -793,26 +1359,41 @@
     "title": "谈话留给了在场的人",
     "passages": [
       {
-        "speaker": "旁白",
-        "text": "牢房里的声音停了。控告、申辩、逃走的邀请和最后的疑问，留在了不同人的记忆里。你已走完这条叙事，也可以回到任何一场，听另一种追问。"
+        "speaker": "斐多",
+        "text": "厄刻克拉底，这就是我们这位朋友的结局。在我所知道的人中，我确可称他为最有智慧、最正义、最好的人。",
+        "sourceRef": "《斐多篇》118a",
+        "sourceKind": "原作节译",
+        "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
       }
     ],
     "journal": [
       {
         "title": "为何受审",
-        "text": "正式控告涉及败坏青年与不敬城邦之神；旧日名声及敌意是苏格拉底在申辩中给出的背景解释。"
+        "text": "《申辩篇》区分早年流言与败坏青年、不敬城邦之神的正式控告。对敌意的解释属于苏格拉底的申辩，不是陪审员逐人的说明。",
+        "sourceRef": "《申辩篇》18a–19a、23c–24c",
+        "sourceKind": "编辑说明",
+        "sourceUrl": "https://classics.mit.edu/Plato/apology.html"
       },
       {
-        "title": "为何没有逃走",
-        "text": "他仍以不作恶为判断标准，并接受了关于法律与约定的论证。这不等于他认为任何命令都正当。"
+        "title": "为何不逃走",
+        "text": "《克里同篇》从活得正当、不以恶报恶，谈到法律与约定。理解他的理由，与断定这些理由已解决一切政治服从问题，是两回事。",
+        "sourceRef": "《克里同篇》48b–54e",
+        "sourceKind": "编辑说明",
+        "sourceUrl": "https://classics.mit.edu/Plato/crito.html"
       },
       {
-        "title": "如何离世",
-        "text": "法庭先判有罪，再判死刑；祭船归来后在监狱执行。他与朋友交谈、告别，饮下毒药，最后留下偿还祭献的嘱托。"
+        "title": "怎样离世",
+        "text": "《申辩篇》分别记下有罪与死刑裁决；《斐多篇》交代延期、告别、饮药和最后的嘱托。",
+        "sourceRef": "《申辩篇》35e–38c；《斐多篇》58b–c、115b–118a",
+        "sourceKind": "原作节述",
+        "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
       },
       {
-        "title": "仍可回到原作",
-        "text": "三部作品各自保留了更完整的辩论、反驳和叙事。对苏格拉底的理解，还可以在这些页码里继续。"
+        "title": "回到完整原作",
+        "text": "以上是三部作品的节选。灵魂论证等长段落已经省略；每段出处可帮助继续阅读原作的前后文。",
+        "sourceRef": "《申辩篇》17a–42a；《克里同篇》43a–54e；《斐多篇》57a–118a",
+        "sourceKind": "编辑连接",
+        "sourceUrl": "https://sourcebooks.web.fordham.edu/ancient/plato-phaedo.asp"
       }
     ]
   }

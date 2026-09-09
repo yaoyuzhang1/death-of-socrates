@@ -1,32 +1,16 @@
-import type { Corpus, Paragraph } from './model.ts';
+import type { Paragraph } from './model.ts';
 import { SourcePageLink } from './SourceViewer.tsx';
 
-export type PassageRole = { kind: 'socrates' | 'dialogue' | 'narration'; name: string };
-const names: Record<string, string> = { 苏: '苏格拉底', 克: '克法洛斯', 玻: '玻勒马霍斯', 格: '格劳孔', 阿: '阿得曼托斯', 色: '色拉叙马霍斯', 克勒: '克勒托丰', 格劳孔: '格劳孔' };
-
-export function passageRoles(corpus: Corpus): Map<string, PassageRole> {
-  const roles = new Map<string, PassageRole>();
-  let current: PassageRole = { kind: 'narration', name: '叙述' };
-  let narration = false;
-  for (const chapter of corpus.chapters) for (const section of chapter.sections) for (const unit of section.units) {
-    for (const paragraph of [...unit.paragraphs, ...(unit.question ? [unit.question.original] : []), ...unit.response]) {
-      if (/^[〔［]/u.test(paragraph.text)) narration = true;
-      const prefix = paragraph.text.match(/^[·]?([^：]{1,6})：/)?.[1]?.replace(/（.*）/, '');
-      if (narration) current = { kind: 'narration', name: '叙述' };
-      else if (prefix && names[prefix]) current = { kind: prefix === '苏' ? 'socrates' : 'dialogue', name: names[prefix] };
-      roles.set(paragraph.id, current);
-      if (/[〕］]/u.test(paragraph.text)) narration = false;
-    }
-  }
-  return roles;
-}
+import { passageRuns, type PassageRole } from './passage-roles.ts';
+export { passageRoles } from './passage-roles.ts';
+export type { PassageRole } from './passage-roles.ts';
 
 export default function ReadingPassage({ paragraph, role, continuation = false, sourceId, showSource = true }: {
-  paragraph: Paragraph; role?: PassageRole; continuation?: boolean; sourceId?: string; showSource?: boolean;
+  paragraph: Paragraph & { fragmentOffset?: number }; role?: PassageRole; continuation?: boolean; sourceId?: string; showSource?: boolean;
 }) {
   const pages = paragraph.sourcePages ?? (paragraph.sourcePage ? [paragraph.sourcePage] : []);
   return <div className={`passage dialogue-panel role-${role?.kind ?? 'dialogue'}${paragraph.text.length <= 90 ? ' passage-brief' : ''}`} data-paragraph-id={paragraph.id} data-source-id={sourceId ?? paragraph.id}>
     <div className="speaker"><span className="speaker-name">{role?.name ?? paragraph.speaker ?? '对话'}{continuation && <small> · 续</small>}</span>{paragraph.ref && <span>{paragraph.ref}</span>}{showSource && pages.map(page => <SourcePageLink key={page} page={page} />)}</div>
-    <p>{paragraph.text}</p>
+    <p>{passageRuns(paragraph.text, role, paragraph.fragmentOffset ?? 0).map((run,index)=><span key={index} className={run.narration ? 'inline-narration' : undefined}>{run.text}</span>)}</p>
   </div>;
 }

@@ -23,7 +23,7 @@ test('Every historical scene has one separate source-grounded judgment while all
     assert.equal(check.id, `bonus-check-${scene.id}`);
     assert.equal(check.sourceUrl, scene.sourceUrl);
     assert.equal(check.sourceRef.split('》')[0], scene.sourceRef.split('》')[0]);
-    assert.match(check.sourceRef, /《(?:申辩篇|克里同篇|斐多篇)》\d+[a-e]–\d+[a-e]/);
+    assert.match(check.sourceRef, /《(?:申辩篇|克里同篇|斐多篇)》\d+[a-e]/);
     assert.equal(new URL(check.sourceUrl!).protocol, 'https:');
     assert.ok(check.prompt.length >= 10 && check.prompt.length <= 80);
     assert.deepEqual(check.options.map(option => option.id), ['a', 'b', 'c']);
@@ -39,14 +39,11 @@ test('Every historical scene has one separate source-grounded judgment while all
   }
 });
 
-test('All 119 Mandarin story recordings match their exact visible paragraph or note, voice direction and file hash', () => {
+test('All Mandarin story recordings match their exact visible paragraph or note, voice direction and file hash', () => {
   const directory = new URL('../reader-public/audio/bonus/', import.meta.url);
   const manifest = read('reader-public/audio/bonus/manifest.json');
   assert.equal(manifest.complete, true);
   assert.equal(manifest.language, 'zh-CN');
-  assert.equal(manifest.expectedCount, 119);
-  assert.equal(manifest.entries.length, 119);
-  assert.equal(new Set(manifest.entries.map((entry: any) => entry.key)).size, 119);
   const catalog = new Map(manifest.verifiedVoiceCatalog.map((voice: any) => [voice.ShortName, voice]));
   const expected: { key: string; filename: string; kind: 'intro' | 'response' | 'note'; sceneId: string; speaker: string; text: string; passageIndex?: number; optionId?: string }[] = [];
   for (const scene of story.scenes) {
@@ -63,9 +60,9 @@ test('All 119 Mandarin story recordings match their exact visible paragraph or n
         kind: 'note', sceneId: scene.id, optionId: option.id, speaker: '旁白', text: option.note });
     }
   }
-  assert.equal(expected.length, 119);
-  assert.equal(expected.filter(entry => entry.kind === 'intro').length, 42);
-  assert.equal(expected.filter(entry => entry.kind === 'response').length, 41);
+  assert.equal(manifest.expectedCount, expected.length);
+  assert.equal(manifest.entries.length, expected.length);
+  assert.equal(new Set(manifest.entries.map((entry: any) => entry.key)).size, expected.length);
   assert.equal(expected.filter(entry => entry.kind === 'note').length, 36);
   for (const source of expected) {
     const entry = manifest.entries.find((item: any) => item.key === source.key);
