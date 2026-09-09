@@ -92,20 +92,26 @@ function failure(error: unknown, key: string, token: number) {
  * incorrect -> option.feedback. No unselected answer is requested or spoken.
  */
 export function playFeedback(question: Question, choiceId: string, options: FeedbackAudioOptions = {}): void {
-  stopFeedback();
   const option = question.options.find(item => item.id === choiceId);
   const key = `${question.id}--${choiceId}`;
   if (!option) {
+    stopFeedback();
     publish({ status: 'error', key, message: '未找到这项解释。' });
     return;
   }
+  playRecordedFeedback(key, `${import.meta.env.BASE_URL}audio/feedback/${encodeURIComponent(key)}.mp3`, choiceId === question.correctId, options);
+}
+
+/** Shared result cue and recorded speech for source questions and understanding checks. */
+export function playRecordedFeedback(key: string, src: string, correct: boolean, options: FeedbackAudioOptions = {}): void {
+  stopFeedback();
   const { sound = true, voice = true } = options;
   const volume = Number.isFinite(options.volume) ? Math.min(1, Math.max(0, options.volume!)) : 0.8;
   if ((!sound && !voice) || volume === 0) return;
   const token = generation;
   publish({ status: 'playing', key });
   if (sound) {
-    void playCue(choiceId === question.correctId, volume, token).catch(error => {
+    void playCue(correct, volume, token).catch(error => {
       // If recorded speech plays successfully, its result controls the shared state.
       if (!voice) failure(error, key, token);
     });
@@ -116,7 +122,7 @@ export function playFeedback(question: Question, choiceId: string, options: Feed
     }, 300);
     return;
   }
-  const audio = new Audio(`${import.meta.env.BASE_URL}audio/feedback/${encodeURIComponent(key)}.mp3`);
+  const audio = new Audio(src);
   audio.preload = 'auto';
   audio.volume = volume;
   activeAudio = audio;

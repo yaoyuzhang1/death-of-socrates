@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "provider": "Microsoft Edge online TTS",
+  "language": "zh-CN",
+  "expectedCount": 150,
+  "complete": false,
+  "entries": []
+}

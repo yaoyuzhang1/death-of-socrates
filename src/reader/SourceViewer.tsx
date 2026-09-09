@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties, type MouseEvent, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, ExternalLink, X, ZoomIn, ZoomOut } from 'lucide-react';
+import { stopFeedback } from './feedback-audio.ts';
 import './source-viewer.css';
 
 const LAST_PAGE = 176;
@@ -58,6 +59,7 @@ function SourceViewer({ target, onClose }: { target: SourceTarget; onClose: () =
   const imageUrl = `${import.meta.env.BASE_URL}facsimile/page-${String(page).padStart(3, '0')}.webp${imageAttempt ? `?retry=${imageAttempt}` : ''}`;
 
   useEffect(() => {
+    stopFeedback();
     const dialog = dialogRef.current;
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';

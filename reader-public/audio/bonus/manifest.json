@@ -1,0 +1,2458 @@
+{
+  "version": 1,
+  "provider": "Microsoft Edge online TTS",
+  "language": "zh-CN",
+  "generatedAt": "2026-09-09T08:18:03.056932+00:00",
+  "expectedCount": 119,
+  "complete": true,
+  "scriptRule": "Each intro/response paragraph and note uses exact source text without speaker labels or added words. Only confirmed options may play response/note recordings.",
+  "verifiedVoiceCatalog": [
+    {
+      "ShortName": "zh-CN-XiaoxiaoNeural",
+      "Gender": "Female",
+      "Locale": "zh-CN"
+    },
+    {
+      "ShortName": "zh-CN-YunxiNeural",
+      "Gender": "Male",
+      "Locale": "zh-CN"
+    },
+    {
+      "ShortName": "zh-CN-YunyangNeural",
+      "Gender": "Male",
+      "Locale": "zh-CN"
+    }
+  ],
+  "entries": [
+    {
+      "key": "trial-gate--a--p0",
+      "kind": "response",
+      "sceneId": "trial-gate",
+      "speaker": "苏格拉底",
+      "text": "审判者应当依法律判断。我该说明事情，不能只求他们因为可怜我而改变裁决。",
+      "textSha256": "6bb7d6ecd502aa82bf4b82433a7d9a4a15025676496c05473bc0978ec2f686a4",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/trial-gate--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.544,
+      "frames": 356,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 51264,
+      "sha256": "ea4576ad95ab0cf965b238879182bf5aa90a113799329e95fd1f224555695c4e"
+    },
+    {
+      "key": "trial-gate--b--p0",
+      "kind": "response",
+      "sceneId": "trial-gate",
+      "speaker": "苏格拉底",
+      "text": "我有儿子，也有朋友。但我不会把孩子带到你们面前，让他们的眼泪替我证明无罪。",
+      "textSha256": "22275c8bc6c9a1c0dbaf904d07518ddf742d94e06686f31e5269661a6e0a5913",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/trial-gate--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.208,
+      "frames": 342,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 49248,
+      "sha256": "a731940baac475bcde46d06b88df1f5879f10c0f122f4d62135a9b874e47a6b3"
+    },
+    {
+      "key": "trial-gate--c--p0",
+      "kind": "response",
+      "sceneId": "trial-gate",
+      "speaker": "旁白",
+      "text": "留下来的，是柏拉图写成的《申辩篇》。我们主要听见苏格拉底的辩护，听不全控方的发言，更听不见每位陪审者的心声。",
+      "textSha256": "d60e6cafa6602665000b619e5bced41f27a2f63d96d074bc1266add82c35d47f",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/trial-gate--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.112,
+      "frames": 463,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 66672,
+      "sha256": "2eca16b2686c26feb998d31bcfd5c4c01ebac4c5ccf739d50552d9f098e09954"
+    },
+    {
+      "key": "old-accusations--a--p0",
+      "kind": "response",
+      "sceneId": "old-accusations",
+      "speaker": "苏格拉底",
+      "text": "朋友带回神谕，说没有人比我更有智慧。我不明白，便去寻找比我更有智慧的人。有人确有本领，却以为自己对其他大事也都明白。",
+      "textSha256": "b545799287d68da836fa53b5696d1459e3aaad3c7ec85a42dd81cf1f9ac44412",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/old-accusations--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 13.104,
+      "frames": 546,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 78624,
+      "sha256": "2494b78f09dff989402a54cc9d981eaa49d0fbcd4042803a1b4bbba2c9a64375"
+    },
+    {
+      "key": "old-accusations--b--p0",
+      "kind": "response",
+      "sceneId": "old-accusations",
+      "speaker": "苏格拉底",
+      "text": "不是同一件事。我得先回应这些影子，再转向今天具名控告我的人。",
+      "textSha256": "9fbf8f7f698ac055824120d39c70b9eba5a8aa5488a700b94850cb1532a4fde5",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/old-accusations--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.336,
+      "frames": 264,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 38016,
+      "sha256": "f1e0de38093c55c1df18b7d84f7494b5ee177be705ffd03ae6524bf5eb12fed9"
+    },
+    {
+      "key": "old-accusations--c--p0",
+      "kind": "response",
+      "sceneId": "old-accusations",
+      "speaker": "旁白",
+      "text": "苏格拉底以受盘问者的恼怒说明敌意怎样积累。作品让我们听见他的解释，却没有交出所有反对者的动机。",
+      "textSha256": "1912843a1ffe7036e6a0b4e74336ac2e7d88260f5aef701cc8ac14fc9e0a9238",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/old-accusations--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.512,
+      "frames": 438,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 63072,
+      "sha256": "01fbb8cd0a1cf810e1b6150b02c6a52cb5bd1682e5988a143629589ef9709b08"
+    },
+    {
+      "key": "charges--a--p0",
+      "kind": "response",
+      "sceneId": "charges",
+      "speaker": "苏格拉底",
+      "text": "马也是这样吗？谁都能使马变好，只有一个人会损害它？通常恰是少数懂得训练的人使它变好。",
+      "textSha256": "f531e2979f1f7f44be04ba163320af17b6cc5f151a029a8ba287bdf042be822c",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/charges--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.648,
+      "frames": 402,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 57888,
+      "sha256": "870a07f2eab72e30857dece11f25301a5ba45a7804cb755001ad35f837c2c295"
+    },
+    {
+      "key": "charges--b--p0",
+      "kind": "response",
+      "sceneId": "charges",
+      "speaker": "苏格拉底",
+      "text": "我怎会愿意让身边的人变坏，再来伤害自己？若我是不知不觉做错了，你该私下教我改正，为什么直接把我带上法庭？",
+      "textSha256": "7601ed86559c16b5d6a52b890c2eedb8ad5964e3cd95d70e7aa10912f78cf8ff",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/charges--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.304,
+      "frames": 471,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 67824,
+      "sha256": "22aaca673c1b9f74b0f2f8dfed9f9958386724d24cd42b65a646c83a795108d2"
+    },
+    {
+      "key": "charges--c--p0",
+      "kind": "response",
+      "sceneId": "charges",
+      "speaker": "苏格拉底",
+      "text": "若有青年后来发现被我教坏，或者他们的家人受到伤害，现在就该站出来。我看见的那些家属，却愿意支持我。",
+      "textSha256": "832ce401993845ee08da6bb42e04884fb33f814dedb6aaa8627748e1e511295c",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/charges--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.56,
+      "frames": 440,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 63360,
+      "sha256": "1640d11fc73a63a7a43b0c1ce2bc28a3806190fbf24b5b312dbf4ef42824581a"
+    },
+    {
+      "key": "examination--a--p0",
+      "kind": "response",
+      "sceneId": "examination",
+      "speaker": "苏格拉底",
+      "text": "有人相信与马有关的事，却不相信马吗？神灵若是神，或被说成神的子嗣，承认神灵而否认一切神，又怎样相容？",
+      "textSha256": "00dd0fac9f723cbb88536b0d7ff19c3944c8049a307512de80076f101dcae1fa",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/examination--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.664,
+      "frames": 486,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 69984,
+      "sha256": "ed7704264468eb35d7f89e6c2b71128ce09dc0abd1860923c9310b784a857802"
+    },
+    {
+      "key": "examination--b--p0",
+      "kind": "response",
+      "sceneId": "examination",
+      "speaker": "苏格拉底",
+      "text": "从小时候起，我就有时听到一种阻止的声音。它拦住我将要做的事，却不命令我去做什么。",
+      "textSha256": "f1a9c65c17223cb03ed67e9f815f54b45654fe11dafa0bcfcbee990a0afb9654",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/examination--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.592,
+      "frames": 358,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 51552,
+      "sha256": "33128f211e67f2bf32cabda066229d8443c89ce068bedd868ae0de6fa3f5008c"
+    },
+    {
+      "key": "examination--c--p0",
+      "kind": "response",
+      "sceneId": "examination",
+      "speaker": "旁白",
+      "text": "美勒托的回答显出困难，法庭却还要作出自己的判断。一次反驳是否奏效，与陪审投票怎样结束，是两件事。",
+      "textSha256": "fc2a4c0a9c199e0e8e42f91d1bd81fd3b74400a1a9aec55e0cb51977992d91bd",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/examination--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.016,
+      "frames": 459,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 66096,
+      "sha256": "44595a158e9896f436ed181f9fae91d9a28a01130f4e9a3cae8f66f0c8ec8fba"
+    },
+    {
+      "key": "commitment--a--p0",
+      "kind": "response",
+      "sceneId": "commitment",
+      "speaker": "苏格拉底",
+      "text": "把死亡当成已经知道的最大灾祸，也可能是在不知道时自以为知道。我知道作恶不对，不能因为害怕一个未知的结果，就去做它。",
+      "textSha256": "0687acec747c4606977b0829106a612fda66395a0a424e67d3f685625522dde5",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/commitment--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.544,
+      "frames": 481,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 69264,
+      "sha256": "7aa41175c22dca2c91c86d31c1bfba87b74087b109dfb492bb2db5b0f8132d0d"
+    },
+    {
+      "key": "commitment--b--p0",
+      "kind": "response",
+      "sceneId": "commitment",
+      "speaker": "苏格拉底",
+      "text": "三十人执政时，命令我去抓萨拉米斯的莱昂，把他送去处死。其余人去了，我回家了。那次拒绝也可能使我送命。",
+      "textSha256": "ea112583b63ef09148c2e9bc8a7429cd7cf9863638fdfb243cf24fc1c878e640",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/commitment--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.184,
+      "frames": 466,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 67104,
+      "sha256": "f6dab90ac2204ae9e695926a0b9e27550973bbf79fe1a4f7023ca8844ccef19c"
+    },
+    {
+      "key": "commitment--c--p0",
+      "kind": "response",
+      "sceneId": "commitment",
+      "speaker": "苏格拉底",
+      "text": "一匹高大却迟钝的马，需要牛虻把它唤醒。我这样四处追问，是希望你们愿意照料自己，不只照料自己拥有的东西。",
+      "textSha256": "9a927aec0d1a93e62f09c594f1af009ef39e6f6e236d9a0d3fa684c02e37c618",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/commitment--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.296,
+      "frames": 429,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 61776,
+      "sha256": "40a17644b5c14d139f05e04f47d56267ea731c3ec3e8e90d3bba32807c1c7754"
+    },
+    {
+      "key": "verdict--a--p0",
+      "kind": "response",
+      "sceneId": "verdict",
+      "speaker": "旁白",
+      "text": "还没有。认定有罪与选择刑罚是先后两步。苏格拉底的处罚建议，发生在这两次决定之间。",
+      "textSha256": "5be61a709b55ea325e4ff8372bf64f43c2a5cd3acb921d9c19dc9082f64b35e3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/verdict--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.84,
+      "frames": 410,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59040,
+      "sha256": "579a88ac178e6bbd21291bc7eb01a69f7bc16390103d79863d986c4f5556cbc5"
+    },
+    {
+      "key": "verdict--b--p0",
+      "kind": "response",
+      "sceneId": "verdict",
+      "speaker": "苏格拉底",
+      "text": "你们也许听来像挑衅。但我若确信没有故意伤害谁，怎能为了显得顺从，就说自己理当受到坏的待遇？",
+      "textSha256": "7a3da35882d6762a12a7919bebc819f63d9b0106c19ed4af667999ae3d907392",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/verdict--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.44,
+      "frames": 435,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 62640,
+      "sha256": "71ccdf3cb278e7bdd5c9cc91edfb44d3ae2c66ac05687d240f8f3f8a2a67680d"
+    },
+    {
+      "key": "verdict--c--p0",
+      "kind": "response",
+      "sceneId": "verdict",
+      "speaker": "旁白",
+      "text": "作品留下了裁决与苏格拉底的反应，没有逐张选票的解释。旧日敌意、正式指控与申辩方式不能被算成一份确切的动机比例。",
+      "textSha256": "f7366aca8282fc87f5bdcf91e43137ad715ef789f424775555faf8d768b07535",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/verdict--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.904,
+      "frames": 496,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 71424,
+      "sha256": "fc1b57367a8c1b8513410bc9afdde6672b82e2ec3d5ac9137d0864f6f5be06cf"
+    },
+    {
+      "key": "sentence--a--p0",
+      "kind": "response",
+      "sceneId": "sentence",
+      "speaker": "旁白",
+      "text": "他没有把死刑作为自己的处罚提议。最终提出的是有朋友担保的罚金；死刑由法庭裁定。",
+      "textSha256": "6ef42d6d98177777c1b44a70fc4baaefc6ce8f536aa6ca6f67e9ab742aa2c8f9",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/sentence--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.024,
+      "frames": 376,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 54144,
+      "sha256": "ab5c2f4b76661de12a289ffe606a61a073df0b79c89cfa89e9d96d2379b0c116"
+    },
+    {
+      "key": "sentence--b--p0",
+      "kind": "response",
+      "sceneId": "sentence",
+      "speaker": "苏格拉底",
+      "text": "只要办手续的人还没有忙完，我们就再谈谈。死亡也许像无梦的睡眠，也许像迁往另一处；我不能自称已经知道。",
+      "textSha256": "242fb2730ca1ea18029e55ac6a21916a8c31df21a98e1969e67e3e182443c92f",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/sentence--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.896,
+      "frames": 454,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 65376,
+      "sha256": "7040276a0c5e8a653fbd0587a289d6108c453bce6c3fc4cfb058bd365d01e0e6"
+    },
+    {
+      "key": "sentence--c--p0",
+      "kind": "response",
+      "sceneId": "sentence",
+      "speaker": "苏格拉底",
+      "text": "将来我的儿子长大，如果他们把钱财看得比德性重，也请你们这样检查他们；别因为是我的儿子就放过。",
+      "textSha256": "4a21ef91d4d29687a5e3932b31384f4e95e6b425e68578159f5e253973b8ca80",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/sentence--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.616,
+      "frames": 359,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 51696,
+      "sha256": "c26b460118ead07b83de8d8fc74ba6731f7b3cebdddaca71a49971b9bad4ba6e"
+    },
+    {
+      "key": "escape--a--p0",
+      "kind": "response",
+      "sceneId": "escape",
+      "speaker": "克里同",
+      "text": "人们的决定真的能使你死去。",
+      "textSha256": "463d53901d208e1bcb27594f42697e7675459489c365a3b42ae2a3d8fadb3d77",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-7%",
+      "filename": "responses/escape--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 3.072,
+      "frames": 128,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 18432,
+      "sha256": "327da7a688f682e1fe64924e4537b34965903663d3af2979d4c6c4f49dab17c0"
+    },
+    {
+      "key": "escape--a--p1",
+      "kind": "response",
+      "sceneId": "escape",
+      "speaker": "苏格拉底",
+      "text": "能。但我们以前同意，重要的是活得正当。眼下要问的，正是逃走有没有违背这一点。",
+      "textSha256": "58f77f6e029f5b1f9b37c33482511abb5c1a63d40bf05da9287e53594b2fc411",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/escape--a--p1.mp3",
+      "optionId": "a",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.672,
+      "frames": 403,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 58032,
+      "sha256": "ca72d0519892ba3bf145077555b601b83905fc7b6f0cb2064acbef1d0657745f"
+    },
+    {
+      "key": "escape--b--p0",
+      "kind": "response",
+      "sceneId": "escape",
+      "speaker": "克里同",
+      "text": "别人会以为我们爱钱胜过朋友。孩子失去父亲，又怎么办？",
+      "textSha256": "c38eded32d88d8dca569ba62fb0e528da4fac3f7d6c305198bdf5ff45aa267c1",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-7%",
+      "filename": "responses/escape--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 5.856,
+      "frames": 244,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 35136,
+      "sha256": "0e5eb95cfc94ffabc8cf6c601eb92ed2f5d141333a51f1dc9c04777491c11c2b"
+    },
+    {
+      "key": "escape--b--p1",
+      "kind": "response",
+      "sceneId": "escape",
+      "speaker": "苏格拉底",
+      "text": "这些事我们得面对，但不能仅凭别人会怎样说，就决定事情正不正当。",
+      "textSha256": "e7df254d976ecd5951f3c5d6acc0bc7c8223bb315f8519f0031d9a5040148592",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/escape--b--p1.mp3",
+      "optionId": "b",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.792,
+      "frames": 283,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 40752,
+      "sha256": "d873041ae11e8f4a319bd19d7f7e759fc6d9acf8764009d9c512103158682efa"
+    },
+    {
+      "key": "escape--c--p0",
+      "kind": "response",
+      "sceneId": "escape",
+      "speaker": "苏格拉底",
+      "text": "我们以前说，不该作恶，也不该以伤害报复伤害。你如今还同意吗？如果同意，再问这次逃走会不会伤害不该伤害的东西。",
+      "textSha256": "2b24474e6891035dc83acadba857bac6db9f606dc476cb1abfaf797562b5b693",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/escape--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 12.456,
+      "frames": 519,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 74736,
+      "sha256": "94e9908693bfa2ef922e3be3f56a8f451c3e9a4b98bdc066a542e8cd86a741bb"
+    },
+    {
+      "key": "laws--a--p0",
+      "kind": "response",
+      "sceneId": "laws",
+      "speaker": "苏格拉底（拟法律）",
+      "text": "你可以说服城邦什么才是正当的。但若没有说服，就要考虑你已承认的关系与约定，不能把秘密逃走当成毫无伤害的事。",
+      "textSha256": "f07c79041fd3f09a9b5c398205a581a3d00c25cb5dd40ad04ed5709480d60022",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/laws--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.28,
+      "frames": 470,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 67680,
+      "sha256": "3b36e1ec1c204aa455997870edf6c47a1c7c3dfd0bdebb725e770560a8e1d474"
+    },
+    {
+      "key": "laws--b--p0",
+      "kind": "response",
+      "sceneId": "laws",
+      "speaker": "旁白",
+      "text": "《申辩篇》中的他拒绝参与杀害莱昂；这里的他认为逃走会违背正当约定。两处都诉诸不作恶，却面对不同的行动。",
+      "textSha256": "2f890e7510fc81e4da6b7b80c5867eef313120214bb24e4dcabcc8882f47a781",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/laws--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.472,
+      "frames": 478,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 68832,
+      "sha256": "54fda1e86c3374125f5c430715bf46cb6fe3d61f857d92a1cbb0f1b0e16b8a87"
+    },
+    {
+      "key": "laws--c--p0",
+      "kind": "response",
+      "sceneId": "laws",
+      "speaker": "苏格拉底",
+      "text": "这些话在我耳中回响。但如果你认为还能说服我，就说吧。",
+      "textSha256": "4ab519662c24097e1f818ddda5a93951af06ecdbac5c7aaa19eed9afc3e8deec",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/laws--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.336,
+      "frames": 264,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 38016,
+      "sha256": "0216e835280fefb9e96ee9f7e1178fd1cca96bc01e09493fb28c0fb6ea145523"
+    },
+    {
+      "key": "laws--c--p1",
+      "kind": "response",
+      "sceneId": "laws",
+      "speaker": "克里同",
+      "text": "苏格拉底，我没有别的话了。",
+      "textSha256": "255c483c57c316a65563132eee009be32247fcf242c169679213b5f3f2a4df48",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-7%",
+      "filename": "responses/laws--c--p1.mp3",
+      "optionId": "c",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 2.76,
+      "frames": 115,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 16560,
+      "sha256": "369c4567f1864ac9f21be1f005a2e4bf76c9dd2e633e0749b372af99c84dc30d"
+    },
+    {
+      "key": "last-day--a--p0",
+      "kind": "response",
+      "sceneId": "last-day",
+      "speaker": "西米亚斯",
+      "text": "和谐看不见，也很美；但琴毁坏了，和谐可能先消失。身体与灵魂，会不会也是这样？",
+      "textSha256": "5280083ed9898f3eaff71a7b0523129ba964f68cda239ab322aea98388669cd7",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-3%",
+      "filename": "responses/last-day--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.496,
+      "frames": 354,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 50976,
+      "sha256": "468c8d43723aa7ea7b24cf194038b4c0c7f7105ec03806517c0c8f62799d4df1"
+    },
+    {
+      "key": "last-day--a--p1",
+      "kind": "response",
+      "sceneId": "last-day",
+      "speaker": "苏格拉底",
+      "text": "这个反驳有力量。我们再把克贝的困难也听完。",
+      "textSha256": "a5dbe275cca96b02a08f3e45c10d853b8041efcd408338ac6aab1fd3cd737f4e",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/last-day--a--p1.mp3",
+      "optionId": "a",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 4.944,
+      "frames": 206,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 29664,
+      "sha256": "e32c2de8deab274d573260f2b1f58d76490b94a3db29c3b89d98d62a374bcd75"
+    },
+    {
+      "key": "last-day--b--p0",
+      "kind": "response",
+      "sceneId": "last-day",
+      "speaker": "克贝",
+      "text": "织工能穿破许多件衣服，却仍可能先于最后一件衣服死去。灵魂即使更长久，也还不能直接说它永远存在。",
+      "textSha256": "749b815887fa55d129dee119193541087583555900d9651a291fda14644b3cb8",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-3%",
+      "filename": "responses/last-day--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.2,
+      "frames": 425,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 61200,
+      "sha256": "d2bd198b0ae87e1fb38042772345107840545207f48757f0911c41153fee4b29"
+    },
+    {
+      "key": "last-day--c--p0",
+      "kind": "response",
+      "sceneId": "last-day",
+      "speaker": "苏格拉底",
+      "text": "我们谈哲学与死亡，也说人不应自行结束生命。今天我要离去，是雅典人的判决。",
+      "textSha256": "25d5bb69afa9c3e2a06cd6d000dd67919bb1dd0b26f63d83d4396d96cd2a66c7",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/last-day--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.256,
+      "frames": 344,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 49536,
+      "sha256": "5b5916f5b9f3ae2dbef32650c62999bce5de49ae4c937a3c3768a99ab4eb1a1e"
+    },
+    {
+      "key": "cup--a--p0",
+      "kind": "response",
+      "sceneId": "cup",
+      "speaker": "克里同",
+      "text": "太阳还在山上。别人听到吩咐，也会再吃点东西，多等一会儿。",
+      "textSha256": "3b380db157011b464c7c4912539740da0a4a9011313c3e6ea20ac0aeca1c28dd",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-7%",
+      "filename": "responses/cup--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.216,
+      "frames": 259,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 37296,
+      "sha256": "90635c484c1b9c22095ea697017428d98170764f0f31a2df48907e382209fc24"
+    },
+    {
+      "key": "cup--a--p1",
+      "kind": "response",
+      "sceneId": "cup",
+      "speaker": "苏格拉底",
+      "text": "他们认为这样有益。我若把已经无多的时间抓在手里，也不觉得有什么所得。",
+      "textSha256": "8589604edb30889023a090b2fd5e97ab14d1511b01ab3806d92a51306e858d89",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "responses/cup--a--p1.mp3",
+      "optionId": "a",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.08,
+      "frames": 295,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 42480,
+      "sha256": "aa9d3fb963fd6bd216495e93fbedf190dc68e57fa095e12ed36443f387726e8e"
+    },
+    {
+      "key": "cup--b--p0",
+      "kind": "response",
+      "sceneId": "cup",
+      "speaker": "斐多",
+      "text": "看见他饮下，我们再也忍不住。我蒙住脸哭，是为自己将失去这样的朋友。阿波罗多洛早就在哭，这时更止不住了。",
+      "textSha256": "9ade7b30e8e496916af6b944f9ed4c62b4cc14771cbe60c6a422f4f8bad44ca5",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-3%",
+      "filename": "responses/cup--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.608,
+      "frames": 442,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 63648,
+      "sha256": "9b57aacbbec9fbcf6c655fce3b26aa946899017cdcacc78afd1050aa742d6319"
+    },
+    {
+      "key": "cup--c--p0",
+      "kind": "response",
+      "sceneId": "cup",
+      "speaker": "旁白",
+      "text": "他在监狱中饮下执行死刑的毒药。后来身体逐渐失去感觉，他躺了下来。侍役查看他的身体，朋友守在一旁。",
+      "textSha256": "6078609404397f8edff3c34c5b2c469704032fae4d7ffd2ed8de650b1c02727a",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/cup--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.088,
+      "frames": 462,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 66528,
+      "sha256": "53e34af81c3e9f70133e9945fbbe13c24ba8421c529d2e68366e53bf04d644ce"
+    },
+    {
+      "key": "last-words--a--p0",
+      "kind": "response",
+      "sceneId": "last-words",
+      "speaker": "旁白",
+      "text": "阿斯克勒庇俄斯是医治之神。公鸡的嘱托究竟指哪一种偿还或感谢？文本没有当场解释。不能仅凭它，就断定苏格拉底认为整个人生是一种疾病。",
+      "textSha256": "4c104eb1d55c2dec0c31ee08d45ceadd941aae39fa2f645f14e256b15e3bebb1",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/last-words--a--p0.mp3",
+      "optionId": "a",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 15.36,
+      "frames": 640,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 92160,
+      "sha256": "de0a111951177e3b3f67d0700eb500375a5a11477d148dc4707e634fd07ff995"
+    },
+    {
+      "key": "last-words--b--p0",
+      "kind": "response",
+      "sceneId": "last-words",
+      "speaker": "旁白",
+      "text": "我们听到了正式控告、两次裁决，也听到他拒绝停止盘问、拒绝逃走的理由。这些线索相接，却不能被压成“他自己想死”或“所有人都恨智慧”。",
+      "textSha256": "d8bb1484e39454174d7b481e40e89910162c92973dd7c145615594407b0ed705",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/last-words--b--p0.mp3",
+      "optionId": "b",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 13.464,
+      "frames": 561,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 80784,
+      "sha256": "bcb084815dfe9e8526a0dea40b920c54e593932daf66f328a7b701c50d05be2c"
+    },
+    {
+      "key": "last-words--c--p0",
+      "kind": "response",
+      "sceneId": "last-words",
+      "speaker": "旁白",
+      "text": "《斐多篇》让斐多回忆那一天，并说柏拉图因病不在场。读到的既是对朋友的追忆，也是柏拉图写成的哲学作品。",
+      "textSha256": "e49a6f16a0b3bfda205e2ceac5e2917a3d218861f3f9f07ea94fcfb30796c398",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "responses/last-words--c--p0.mp3",
+      "optionId": "c",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.256,
+      "frames": 469,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 67536,
+      "sha256": "771d0ae4510ba273f447fc9f2a081b080102a51c09b2a68b776d63a776f305d3"
+    },
+    {
+      "key": "trial-gate--intro--p0",
+      "kind": "intro",
+      "sceneId": "trial-gate",
+      "speaker": "旁白",
+      "text": "庭上的议论声渐渐低下。苏格拉底已经七十多岁。他望向审判他的雅典公民，开口的语调仍像平日在广场交谈。",
+      "textSha256": "d8e1025cd65c7257677c4d3c3b1efee759631252bd114507a01ea772061b7d3d",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/trial-gate--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.856,
+      "frames": 494,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 71136,
+      "sha256": "ced2628d5f3312e51a7b603445cde8b7de1f3b9814c8e93054d5af801a394d95"
+    },
+    {
+      "key": "trial-gate--intro--p1",
+      "kind": "intro",
+      "sceneId": "trial-gate",
+      "speaker": "苏格拉底",
+      "text": "控告者说得动听，连我都差点忘了自己是谁。可请你们听听，哪些话是真的。",
+      "textSha256": "604f0967e279d2284fe03be7f194e8a5deecb0dbc1bea7f6ca6e8dc7ebbea589",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/trial-gate--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.992,
+      "frames": 333,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47952,
+      "sha256": "357383101a781261d71d3ab814f29efbd9d19667e44d5f73fce50f6d0ca06475"
+    },
+    {
+      "key": "trial-gate--intro--p2",
+      "kind": "intro",
+      "sceneId": "trial-gate",
+      "speaker": "苏格拉底",
+      "text": "我第一次站在这里。不熟悉法庭的说话方式。请容许我照平常的样子说话，把注意力放在事情是否正当上。",
+      "textSha256": "60ad538a168fb6485bc5440bbfa935e035e731dcf5f9c878fdd110bc31643d1c",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/trial-gate--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.44,
+      "frames": 435,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 62640,
+      "sha256": "a6f9144481be5ebf8a26d37e5ffe79a426fb239b5b30f765400c50f150f355d1"
+    },
+    {
+      "key": "old-accusations--intro--p0",
+      "kind": "intro",
+      "sceneId": "old-accusations",
+      "speaker": "苏格拉底",
+      "text": "我还有一些更早的控告者。他们说我探究天上地下的事，把坏的道理说成好的。这些话，你们有些人从小时候就在听。",
+      "textSha256": "5ee5e1f5d3748755cdbf3dd2bf1c0158bc0cf1ed7d85a4f836027816b97dfbe0",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/old-accusations--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.328,
+      "frames": 472,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 67968,
+      "sha256": "6db97cb8b54a30941053590567922eac71a7d61a96ccc5f88b61de27df287f9e"
+    },
+    {
+      "key": "old-accusations--intro--p1",
+      "kind": "intro",
+      "sceneId": "old-accusations",
+      "speaker": "旁白",
+      "text": "他停了一下。多年传闻没有一个可以当场传唤、逐句追问的共同说话者。",
+      "textSha256": "c6e9b2b17b7c09ae21d6ee3ca1183f90d6d267bb7b490f08b9477448854868c8",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/old-accusations--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.344,
+      "frames": 306,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 44064,
+      "sha256": "ea26e51edaa22216ffa6b34895e8388f9dd84f76fd159f50e805bd8922b891d1"
+    },
+    {
+      "key": "old-accusations--intro--p2",
+      "kind": "intro",
+      "sceneId": "old-accusations",
+      "speaker": "苏格拉底",
+      "text": "年轻人喜欢听我检查那些自以为有知识的人，也学着这样追问。被问住的人恼火，常把这笔账记到我身上。",
+      "textSha256": "53f398102e6eef8dcaae2a89dbbc8b070ee01c7c2000056b01c922a2470dbc17",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/old-accusations--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.792,
+      "frames": 408,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 58752,
+      "sha256": "9778b47ee26a9cabb637f8ac6831e422bcd01d1b90f79627fc2d08e683476c14"
+    },
+    {
+      "key": "charges--intro--p0",
+      "kind": "intro",
+      "sceneId": "charges",
+      "speaker": "旁白",
+      "text": "美勒托提出控告，阿尼图斯和吕孔支持他。罪状指向败坏青年，以及不信城邦所信的神、却引入新的神灵。苏格拉底转向美勒托。",
+      "textSha256": "ed766744576b160ae891ed5605c2a1b69bbfa560d2232cdf680e0b5425165707",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/charges--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 13.56,
+      "frames": 565,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 81360,
+      "sha256": "99446615d2674b02a23b262dca8cb5e0a655205ca6b298403bb116d9e249b4aa"
+    },
+    {
+      "key": "charges--intro--p1",
+      "kind": "intro",
+      "sceneId": "charges",
+      "speaker": "苏格拉底",
+      "text": "你说我使青年变坏。那么，谁使他们变好？",
+      "textSha256": "3ea85519dbaa7a261751aa2a104e11ad9b7457aca174b27f809bcc299049a660",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/charges--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 5.736,
+      "frames": 239,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 34416,
+      "sha256": "6532da01fe1535fcf31512b211d64d508935cdbcbeff610f3bf795a2a6a2ae2f"
+    },
+    {
+      "key": "charges--intro--p2",
+      "kind": "intro",
+      "sceneId": "charges",
+      "speaker": "美勒托",
+      "text": "法律。这里的审判者也使他们变好，旁听者、议事会、公民大会也是。",
+      "textSha256": "ef264c928cd71f4c03b89545b29137abdbbd1aabf4b6a7c8ba3254e99e2eba32",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-3%",
+      "filename": "intro/charges--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.96,
+      "frames": 290,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 41760,
+      "sha256": "f380723b76ff9b384ee6449c4b774f54c8742426cfdc92b1d71ebf65e5b7164a"
+    },
+    {
+      "key": "charges--intro--p3",
+      "kind": "intro",
+      "sceneId": "charges",
+      "speaker": "苏格拉底",
+      "text": "那么，所有雅典人都使他们变好，只有我一个使他们变坏？",
+      "textSha256": "32039ba17b076e2b006b1eed123b7d8e80e86359823da13072320f8b2a125d97",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/charges--intro--p3.mp3",
+      "passageIndex": 3,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.096,
+      "frames": 254,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 36576,
+      "sha256": "20fd85dc25f299b0a465113acaf55ccd19b5eb02c186fd2533846101b375c0de"
+    },
+    {
+      "key": "charges--intro--p4",
+      "kind": "intro",
+      "sceneId": "charges",
+      "speaker": "美勒托",
+      "text": "正是这样。",
+      "textSha256": "874925260a77d19fbd4ae8d64a452b2861cbb09ab84b74f0af403bda8d6a7e0f",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-3%",
+      "filename": "intro/charges--intro--p4.mp3",
+      "passageIndex": 4,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 1.488,
+      "frames": 62,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 8928,
+      "sha256": "2baf2baaffafdd98baccb78a0303aa0def59ad10b84a60532838039006843e6e"
+    },
+    {
+      "key": "examination--intro--p0",
+      "kind": "intro",
+      "sceneId": "examination",
+      "speaker": "苏格拉底",
+      "text": "你究竟说我相信另外一些神，还是说我完全不相信任何神？",
+      "textSha256": "f2a5229ba9b641e81d3de9c3d98a98ce8724c715ea0ecb68d881950c727b20e8",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/examination--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 5.712,
+      "frames": 238,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 34272,
+      "sha256": "72ef4d3c1b7c27d9f68d7695f2f0478bc546cef8dc1798d3b3189970496ed9ea"
+    },
+    {
+      "key": "examination--intro--p1",
+      "kind": "intro",
+      "sceneId": "examination",
+      "speaker": "美勒托",
+      "text": "我说你完全不信神。你还说太阳是石头，月亮是土。",
+      "textSha256": "73cd0bb5fc03f03642f2b86cff35561df67d539c539c69fcdc9c8b790c201b88",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-3%",
+      "filename": "intro/examination--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 5.712,
+      "frames": 238,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 34272,
+      "sha256": "ad5d6639a270277eae00702cc5fe89c0330ed069679e54f98a9d004352d4a45b"
+    },
+    {
+      "key": "examination--intro--p2",
+      "kind": "intro",
+      "sceneId": "examination",
+      "speaker": "苏格拉底",
+      "text": "你以为你在控告阿那克萨戈拉吗？他的书并不难买到。现在请回答，你是否又说我相信神灵之事？",
+      "textSha256": "958fb4ab16b4be415b52ec8002dbde020300f3ff05a7874ed2b64249a49e76f5",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/examination--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.512,
+      "frames": 438,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 63072,
+      "sha256": "dead19ce5dfe0db65d31be360dd08ff60640af64cc432ff263f184fbd055bbfc"
+    },
+    {
+      "key": "examination--intro--p3",
+      "kind": "intro",
+      "sceneId": "examination",
+      "speaker": "旁白",
+      "text": "谈话越收越窄：同一份控告里出现的几种说法，能不能放在一起？",
+      "textSha256": "177db83aa2aba9d906c7bc8c625bee82291ce978fd471c4a064e2aaebcf0e571",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/examination--intro--p3.mp3",
+      "passageIndex": 3,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.456,
+      "frames": 269,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 38736,
+      "sha256": "557eac948563887b36a3edb6ab87312528d93f64103bc630fc6608fe4c2537dd"
+    },
+    {
+      "key": "commitment--intro--p0",
+      "kind": "intro",
+      "sceneId": "commitment",
+      "speaker": "苏格拉底",
+      "text": "假如你们说：这次放你走，但你不许再这样盘问；再被抓到就得死。我会怎样回答？",
+      "textSha256": "2ccc5b4d2d451207e042191011bb4feb4aad83c44dcb221b495aef91d1ce52b0",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/commitment--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.64,
+      "frames": 360,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 51840,
+      "sha256": "8538052011f17e049ca7e0254a8a5c392999949aeeda0066a1091978381cbfac"
+    },
+    {
+      "key": "commitment--intro--p1",
+      "kind": "intro",
+      "sceneId": "commitment",
+      "speaker": "旁白",
+      "text": "这不是法庭已经提出的交易。他自己把一个可能的条件摆到众人面前。",
+      "textSha256": "5e17751da82e7d79ac24de0e2e109a87c1c2c20b21b0720ae297002de8dc5ade",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/commitment--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.248,
+      "frames": 302,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 43488,
+      "sha256": "223b58d9a26c4d6cc11044fc0eb6cfde7ca32e5906c206463895abbea5bf8e70"
+    },
+    {
+      "key": "commitment--intro--p2",
+      "kind": "intro",
+      "sceneId": "commitment",
+      "speaker": "苏格拉底",
+      "text": "雅典人，我敬重你们，却会服从神，继续检查自己和别人。我仍要问：为什么如此关心财富和名声，却不先关心灵魂怎样变好？",
+      "textSha256": "10cae138ff77ad494142d4235a171d2ff963f253ac9b36a186687374f196c8a5",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/commitment--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 13.32,
+      "frames": 555,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 79920,
+      "sha256": "2a75816ff860de8c416129fa186172103102b3a4ee01bcef4b137100454ee79f"
+    },
+    {
+      "key": "verdict--intro--p0",
+      "kind": "intro",
+      "sceneId": "verdict",
+      "speaker": "旁白",
+      "text": "表决认定苏格拉底有罪。接下来还要决定刑罚。美勒托请求判处死刑，苏格拉底需要提出自己的方案。",
+      "textSha256": "f5b72962d1729a04b2b55bf85cb5d0a3d47ca9ac519fa1a62951767cc1934f82",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/verdict--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.56,
+      "frames": 440,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 63360,
+      "sha256": "95b9fa9db7a5695f8d2e88f8b59723caccb09dc2401ca56f5318adf82ce03f0c"
+    },
+    {
+      "key": "verdict--intro--p1",
+      "kind": "intro",
+      "sceneId": "verdict",
+      "speaker": "苏格拉底",
+      "text": "我原以为两边的票数会相差得更多。现在，我该说自己应当得到什么？",
+      "textSha256": "7e243e90c7859cc7fecceccdb9a60fb8bcfdf627fdfc5e7eb3926047d9b0f74d",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/verdict--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.968,
+      "frames": 332,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47808,
+      "sha256": "dda355424f0b04a6eac22208e97f94a9253a7e57b664191c110da2b213564bbf"
+    },
+    {
+      "key": "verdict--intro--p2",
+      "kind": "intro",
+      "sceneId": "verdict",
+      "speaker": "苏格拉底",
+      "text": "我一直劝人先关心自身的德性。若按我认为自己应得的来回答，倒该是公费供养，让一个贫穷的人有闲暇继续做这件事。",
+      "textSha256": "6bedd3525b6447835abead4ee9263333b881cf5a607f785eb8c917f41555ee4e",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/verdict--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.4,
+      "frames": 475,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 68400,
+      "sha256": "6eddaa2f0ddb90eac8f1f50fe0d6b28fd85f134ffdc3ac4e10d87c9a7effb87b"
+    },
+    {
+      "key": "sentence--intro--p0",
+      "kind": "intro",
+      "sceneId": "sentence",
+      "speaker": "苏格拉底",
+      "text": "流放到别处，难道当地人就一定愿意听我谈话？若让我保持沉默，又违背了我认为应当过的生活。",
+      "textSha256": "6321ff0241478f9817a4cea7758ef09d5cbb3bf9b9c0e3ea090d7e5529c82be2",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/sentence--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.672,
+      "frames": 403,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 58032,
+      "sha256": "9c96875151aaba7941894b567ddc8f2b68a037af83111f968eef8bf39ccb3f5c"
+    },
+    {
+      "key": "sentence--intro--p1",
+      "kind": "intro",
+      "sceneId": "sentence",
+      "speaker": "旁白",
+      "text": "他谈到自己付得起的小额罚金。柏拉图、克里同等朋友提出担保，金额提高为三十米那。",
+      "textSha256": "ef1a89d13449ca0c0c789b2705fdb7865d4599c27bcb26c627c737f177fd0f60",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/sentence--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.808,
+      "frames": 367,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 52848,
+      "sha256": "551bbeeedd7829d00dea3720c2c99b9dee3ed982c045a0d210d6fd1f493c33b1"
+    },
+    {
+      "key": "sentence--intro--p2",
+      "kind": "intro",
+      "sceneId": "sentence",
+      "speaker": "苏格拉底",
+      "text": "那就以三十米那为我的提议。他们愿意作担保。",
+      "textSha256": "a94ba4ff6abc3fc861505f51cf4bcdbf697791cb8b19d761a0357c65b47475db",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/sentence--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 5.304,
+      "frames": 221,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 31824,
+      "sha256": "d20e5625e9954486aa33569a00f2a43b54096952d480a08cbaa1c42037744cd5"
+    },
+    {
+      "key": "sentence--intro--p3",
+      "kind": "intro",
+      "sceneId": "sentence",
+      "speaker": "旁白",
+      "text": "第二次表决后，法庭选择了死刑。申辩结束，朋友们还围在他身边。",
+      "textSha256": "7223a069ba16079f9e47f079512293c53442f7372ee6fdda6f5be4145ec96196",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/sentence--intro--p3.mp3",
+      "passageIndex": 3,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.224,
+      "frames": 301,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 43344,
+      "sha256": "0fdf92e52038346a1f2935e5f49b49d040f0ffff033d422250ae7efac65a2887"
+    },
+    {
+      "key": "escape--intro--p0",
+      "kind": "intro",
+      "sceneId": "escape",
+      "speaker": "旁白",
+      "text": "赴提洛岛的祭船归来之前，雅典暂停执行死刑。等待期间，克里同在拂晓进入牢房，坐在熟睡的老友身边。",
+      "textSha256": "751a8abccbc350238e504a9d583c6105f1a85d8f56a1432c067f30fe91ae8fc6",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/escape--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.92,
+      "frames": 455,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 65520,
+      "sha256": "c4bc7031fd81a803a5a1362958fc7c89ee0650f7ddc8fe43965b021e240e638f"
+    },
+    {
+      "key": "escape--intro--p1",
+      "kind": "intro",
+      "sceneId": "escape",
+      "speaker": "克里同",
+      "text": "醒了？苏格拉底，时间不多了。钱有人出，离开后也有人接应。跟我们走吧。你还得抚养孩子，不能把他们留下。",
+      "textSha256": "90af9959b26c2a391fe51dc7f79c89dab5381576695d6a2178c4c702fc2eca8b",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-7%",
+      "filename": "intro/escape--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.76,
+      "frames": 490,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 70560,
+      "sha256": "4effd009ec77545cfbb24cfe09f2b0632806ae5d10931e11d1a407da139a1266"
+    },
+    {
+      "key": "escape--intro--p2",
+      "kind": "intro",
+      "sceneId": "escape",
+      "speaker": "苏格拉底",
+      "text": "你的热心很可贵。但我们得检查，这样做是不是正当。不能只因如今轮到我受难，就扔掉以前认可的理由。",
+      "textSha256": "2ebf4961615d32c6a61988c10e4b540d2382a38fcee6d1e6d8887abf2c677832",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/escape--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.248,
+      "frames": 427,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 61488,
+      "sha256": "72f16069dfebc0f812b5e2936eb76106d83d957c8094965b14727c5658977cd5"
+    },
+    {
+      "key": "laws--intro--p0",
+      "kind": "intro",
+      "sceneId": "laws",
+      "speaker": "苏格拉底",
+      "text": "设想我们正要出门，城邦的法律走来问我：你打算让个人随自己的意思，取消已经作出的裁决吗？这样，法律还有力量吗？",
+      "textSha256": "e84e9550c6afb738619ea53e3d14112e68e0104ed8204e0f50e09edabebedbb5",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/laws--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.88,
+      "frames": 495,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 71280,
+      "sha256": "14a62d56dcb368c9390bdd815d463b629e6766accc4ddd02f46b15f6234b41e4"
+    },
+    {
+      "key": "laws--intro--p1",
+      "kind": "intro",
+      "sceneId": "laws",
+      "speaker": "克里同",
+      "text": "可城邦判得不公，伤害了你。",
+      "textSha256": "564127ba97131a4986b33eb360c7f4160be7b25485307cd62c206d4f148a62bc",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-7%",
+      "filename": "intro/laws--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 2.976,
+      "frames": 124,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 17856,
+      "sha256": "7e49d6ec67c360f353f1dc1634b1e39a5989ba31ee362c526bc98942a8ab7505"
+    },
+    {
+      "key": "laws--intro--p2",
+      "kind": "intro",
+      "sceneId": "laws",
+      "speaker": "苏格拉底（拟法律）",
+      "text": "你在这里生活了七十年，了解我们的安排，本可以带着财物离开。你选择留下，如今却要单方面破坏你以行动认可的约定？",
+      "textSha256": "8740b75651aa45e817300934ee0125097c5e526cf9a30dfcaa51c7a824154721",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/laws--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.376,
+      "frames": 474,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 68256,
+      "sha256": "78d1692601a08623cab71280f19d0bb04211e687db25906f0ed512efb89ae76d"
+    },
+    {
+      "key": "last-day--intro--p0",
+      "kind": "intro",
+      "sceneId": "last-day",
+      "speaker": "旁白",
+      "text": "这一天，朋友们来得更早。脚镣刚解开，苏格拉底揉着腿，从痛苦消退后的舒服谈起。随后，他们讨论灵魂与死亡。",
+      "textSha256": "8709558bcc0a1f4c4232664106eff9201a581531bc6324b5f36e9c0f8fd5f502",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/last-day--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.88,
+      "frames": 495,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 71280,
+      "sha256": "89e67eafd6da60e3bb7868a398ba108951ca54dfbf295f3c36cd21dd0d7a9262"
+    },
+    {
+      "key": "last-day--intro--p1",
+      "kind": "intro",
+      "sceneId": "last-day",
+      "speaker": "西米亚斯",
+      "text": "我和克贝都还有疑问。只是今天再来反驳你，怕使你难受。",
+      "textSha256": "de3ff9aced761d8e21c3412fc726b13a3b1fcbe1afc16dbcf310f1c85392bd53",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-3%",
+      "filename": "intro/last-day--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 5.712,
+      "frames": 238,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 34272,
+      "sha256": "73cad7ebde2b88582b69e6cbf4ed3750e08b0660f06e866d61df4fd5df2e9500"
+    },
+    {
+      "key": "last-day--intro--p2",
+      "kind": "intro",
+      "sceneId": "last-day",
+      "speaker": "苏格拉底",
+      "text": "说吧。论证还留着许多可以检查的地方。别因为是我在说，就少关心真实一些。",
+      "textSha256": "44f216498d5ecbf4ae4ba7af05508d798a65d4b5acfdfd86d172a0aa029da870",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/last-day--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.376,
+      "frames": 349,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 50256,
+      "sha256": "acfc5510afd7a70503e773409ad4801d4935ca19fdd1ffa3ed2a26a8285058c6"
+    },
+    {
+      "key": "cup--intro--p0",
+      "kind": "intro",
+      "sceneId": "cup",
+      "speaker": "克里同",
+      "text": "关于孩子，或别的事情，你还要我们做什么？",
+      "textSha256": "f7817ad9f4e8f408bb9179b038fdfdeff629f214115dc610242b031cc98432b5",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-7%",
+      "filename": "intro/cup--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 3.96,
+      "frames": 165,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 23760,
+      "sha256": "c917880607525997d0fea6f0fe1451d3b3c028fc0a598eae494fb320760590eb"
+    },
+    {
+      "key": "cup--intro--p1",
+      "kind": "intro",
+      "sceneId": "cup",
+      "speaker": "苏格拉底",
+      "text": "还是从前说的那些：认真照料你们自己。口头答应了，生活却仍旧不加照料，也不会有什么用。",
+      "textSha256": "c01427969d8c98872bc7d34484f78d353204ca2c641e63917b0b3e560422b7f9",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/cup--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.84,
+      "frames": 410,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59040,
+      "sha256": "927715a8569e1d591a58c625700624e46aa119ad486cd2b992c8d4b105836248"
+    },
+    {
+      "key": "cup--intro--p2",
+      "kind": "intro",
+      "sceneId": "cup",
+      "speaker": "旁白",
+      "text": "他沐浴、与家人道别。狱中侍役来告知行刑时刻，转身流泪。随后，执行刑罚的人带来一杯毒药。",
+      "textSha256": "0df771e04d80c168eee7f2a92b61a315135540c0b7c71a5d5e3cc176737e02e5",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/cup--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.584,
+      "frames": 441,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 63504,
+      "sha256": "0998634ebaecdfb251ad97110c6b8262dcfa82d96f41d8a2b8f6ed3927bd1826"
+    },
+    {
+      "key": "cup--intro--p3",
+      "kind": "intro",
+      "sceneId": "cup",
+      "speaker": "苏格拉底",
+      "text": "那个人多么和善，这些日子常来与我交谈。现在也为我哭了。",
+      "textSha256": "968f94a2b6e9c4c2c37a8bf7fd488a506875f1a08da1b571bb2863e192348f4f",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/cup--intro--p3.mp3",
+      "passageIndex": 3,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.48,
+      "frames": 270,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 38880,
+      "sha256": "3ccea10634326e6a65ac82fface10bbd22edf5c6c263f2cdeba4d020a2b583e4"
+    },
+    {
+      "key": "last-words--intro--p0",
+      "kind": "intro",
+      "sceneId": "last-words",
+      "speaker": "旁白",
+      "text": "苏格拉底饮下毒药后，躺卧在朋友身旁。身体渐渐冷下来。他揭开脸上的覆盖物，又唤了一声克里同。",
+      "textSha256": "72146855d788c568e0fbc0671367653c4aab5b581c60670e977ebbb3440697fb",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/last-words--intro--p0.mp3",
+      "passageIndex": 0,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.344,
+      "frames": 431,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 62064,
+      "sha256": "4ba0bf5db6c017d5542ed9bc0d6b95c33704699448502372d35c2fd0752b992b"
+    },
+    {
+      "key": "last-words--intro--p1",
+      "kind": "intro",
+      "sceneId": "last-words",
+      "speaker": "苏格拉底",
+      "text": "克里同，我们还欠阿斯克勒庇俄斯一只公鸡。记着还上，别忘了。",
+      "textSha256": "6b849d92f385fe5034fee11e62b81d1ceb1ef5041020085957427a341b2ba01d",
+      "voice": "zh-CN-YunxiNeural",
+      "rate": "-5%",
+      "filename": "intro/last-words--intro--p1.mp3",
+      "passageIndex": 1,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.032,
+      "frames": 293,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 42192,
+      "sha256": "c6c1030f9ce82f86e0f7a1cb73be765fbcb0dc2e94d39073330bf1d7628d035e"
+    },
+    {
+      "key": "last-words--intro--p2",
+      "kind": "intro",
+      "sceneId": "last-words",
+      "speaker": "克里同",
+      "text": "会还上的。看一看，还有没有别的吩咐？",
+      "textSha256": "86afdce6ffd0c8a1142467bff23d7fc9851359c07c1c328464db37704d799b1d",
+      "voice": "zh-CN-YunyangNeural",
+      "rate": "-7%",
+      "filename": "intro/last-words--intro--p2.mp3",
+      "passageIndex": 2,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 4.464,
+      "frames": 186,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 26784,
+      "sha256": "bab8556ffaf1f40512ca617a9112926acec2d8bde7ff1fb38800f2964535fdc0"
+    },
+    {
+      "key": "last-words--intro--p3",
+      "kind": "intro",
+      "sceneId": "last-words",
+      "speaker": "旁白",
+      "text": "没有回答。片刻之后，克里同替他合上了眼睛和嘴。斐多把这一天的谈话，讲给了不在场的人听。",
+      "textSha256": "17e2563e0b25e665dde02d1dbe77905f378408bb4b3c98ef3a2f1262e3b7bedd",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "intro/last-words--intro--p3.mp3",
+      "passageIndex": 3,
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.032,
+      "frames": 418,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 60192,
+      "sha256": "12db6bdb7f0329d02c6af8ab0acfb6a094b64d4d4e43146d4e53dabd4f810457"
+    },
+    {
+      "key": "trial-gate--a--note",
+      "kind": "note",
+      "sceneId": "trial-gate",
+      "speaker": "旁白",
+      "text": "他把说服与求情分开；这是一种自我辩护的立场，并不保证陪审者会接受。",
+      "textSha256": "4a32fef8791ba25410d1e3a5fab7f050b2b2b549186f04aad8a76beea2f24138",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/trial-gate--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.296,
+      "frames": 304,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 43776,
+      "sha256": "8b3afc04cebe03f2bcb193313711fc6d210ff08ca87158c854c7d51b07daaafc"
+    },
+    {
+      "key": "trial-gate--b--note",
+      "kind": "note",
+      "sceneId": "trial-gate",
+      "speaker": "旁白",
+      "text": "《申辩篇》写到朋友在场，也写到他拒绝让家人哭求；他并非孤身无援。",
+      "textSha256": "4f776cdca0af885324229b11f6826611681ec5dabda3bd90e0b57509ed933fb3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/trial-gate--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.32,
+      "frames": 305,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 43920,
+      "sha256": "c3a1559880d0498bcbf0d834bd6cb5178f773ca76dacd69532589659ce23944f"
+    },
+    {
+      "key": "trial-gate--c--note",
+      "kind": "note",
+      "sceneId": "trial-gate",
+      "speaker": "旁白",
+      "text": "本章沿着柏拉图的叙事进入事件，不能把它当作逐字庭审记录。",
+      "textSha256": "c5ad171d5da568b6f13e7d793e31b9e2b2ef3cbfe537b7fdbf329c9cec612f6b",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/trial-gate--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.048,
+      "frames": 252,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 36288,
+      "sha256": "a5c93061df588c265287f11ca5ca84863b30175987975dc3107a6dc1e2d9db30"
+    },
+    {
+      "key": "old-accusations--a--note",
+      "kind": "note",
+      "sceneId": "old-accusations",
+      "speaker": "旁白",
+      "text": "这是他在法庭上讲述的神谕与探问经历，不是旁白替神谕作真实性担保。",
+      "textSha256": "8d2f5a182e89a404bf9340f9128cbb964f970c5afc20c249f0e54e9097d600bb",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/old-accusations--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.032,
+      "frames": 293,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 42192,
+      "sha256": "ceb5a87aacdbd3a7cabfdf043a5e03de558514264645b2ba2be39508669d533a"
+    },
+    {
+      "key": "old-accusations--b--note",
+      "kind": "note",
+      "sceneId": "old-accusations",
+      "speaker": "旁白",
+      "text": "喜剧形象、长期嫌恶与正式起诉有联系，但不能混成一张罪状。",
+      "textSha256": "3dcef67d5d5e9eac8cef96907a0d466208984bafd03facf166ece8e82ffa2de9",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/old-accusations--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.6,
+      "frames": 275,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 39600,
+      "sha256": "3aab579cb3a5ccae5514704a14daa8efef7cf97d330ba1944ff2efdad315cce1"
+    },
+    {
+      "key": "old-accusations--c--note",
+      "kind": "note",
+      "sceneId": "old-accusations",
+      "speaker": "旁白",
+      "text": "这种解释值得理解，也有视角的边界；不能据此读出整个雅典的内心。",
+      "textSha256": "c077ba2295026558cbdc4f7bc15b45577ede2f8240d379f6ad2753c3446c597d",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/old-accusations--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.936,
+      "frames": 289,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 41616,
+      "sha256": "2e33bec423503d30de47a534a26c52e0571db332717400e38d1c0f602b2afaf0"
+    },
+    {
+      "key": "charges--a--note",
+      "kind": "note",
+      "sceneId": "charges",
+      "speaker": "旁白",
+      "text": "这个比拟质疑美勒托过于整齐的断言；它本身尚未证明苏格拉底的每项教育影响。",
+      "textSha256": "4b03b68b8e62e01788b51bce3c0416ffe49c19a8e61aa6acf12be7bbf6c821d7",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/charges--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.968,
+      "frames": 332,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47808,
+      "sha256": "c763936a7fe8dba90f78fdedb9d654a9acebc6847e8ef6ffa2acb3249f0306dd"
+    },
+    {
+      "key": "charges--b--note",
+      "kind": "note",
+      "sceneId": "charges",
+      "speaker": "旁白",
+      "text": "他提出有意或无意的两难，要求控方说明责任；这是辩护论证，不是裁决结果。",
+      "textSha256": "70c4a1469633eec8b57f99a38999eec414ed3ed52ee67d64c2b37c61f5640830",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/charges--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.992,
+      "frames": 333,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47952,
+      "sha256": "1476cff4e8abe3a435a49d4b603d556c2101e63a8816382e82a9247b85ae11e5"
+    },
+    {
+      "key": "charges--c--note",
+      "kind": "note",
+      "sceneId": "charges",
+      "speaker": "旁白",
+      "text": "这段证人诉求见34a–b；它补充盘问，却仍属于《申辩篇》保留下来的单方陈述。",
+      "textSha256": "e18f16d4b8c73bbc0c9fc3199f0b6c5f9a69427598196fe51099e2433027fa1e",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/charges--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.968,
+      "frames": 332,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47808,
+      "sha256": "a1e85a07e31684c2d89d68d9fa02c6973fad1b61e6de56556ea3f0fd0013df49"
+    },
+    {
+      "key": "examination--a--note",
+      "kind": "note",
+      "sceneId": "examination",
+      "speaker": "旁白",
+      "text": "他抓住美勒托答话中的不一致，而没有在这里给出一套完整的神学。",
+      "textSha256": "1c80178dae600cab70347b8fed174120fca67b660194bd21e13a9d79c3791a53",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/examination--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.528,
+      "frames": 272,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 39168,
+      "sha256": "c5d6403547f67f3da2cd4d74b874dc263f8d75a7986cd7684e2035338ad79f80"
+    },
+    {
+      "key": "examination--b--note",
+      "kind": "note",
+      "sceneId": "examination",
+      "speaker": "旁白",
+      "text": "31c–d将这个征兆说成一种阻止行动的声音；这是苏格拉底对自身经历的报告。",
+      "textSha256": "bce6f21a6526996f482ee2b6b32174d5ea9386e21299b112cfb6d5099f1ac61f",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/examination--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.256,
+      "frames": 344,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 49536,
+      "sha256": "d1fb6b0ce6b9be9639de608b3d23d29a2cc74067e236767bb52dd8ed9601e742"
+    },
+    {
+      "key": "examination--c--note",
+      "kind": "note",
+      "sceneId": "examination",
+      "speaker": "旁白",
+      "text": "控状中的“不信城邦的神”也不等于抽象的“否认一切神”；不要抹去这一区别。",
+      "textSha256": "5830404ee02a20c37214c3ad4a218f9b146380273093201f29b2c3d21b4370e3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/examination--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.84,
+      "frames": 285,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 41040,
+      "sha256": "28814c16421e6110f89eb0d4cc498a432e040a953eb39d990af03525000d0e5b"
+    },
+    {
+      "key": "commitment--a--note",
+      "kind": "note",
+      "sceneId": "commitment",
+      "speaker": "旁白",
+      "text": "这里比较的是未知的死亡与他认定的不义；不是宣布死亡值得追求。",
+      "textSha256": "cbf451a6f61227ec9ed888984f84bb1780fc350dfcb59f466e621b5157871fa0",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/commitment--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.744,
+      "frames": 281,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 40464,
+      "sha256": "2824b6c38911bb72f9f397530f4b4da65b59e425a9edec7d205e6228b19f0b00"
+    },
+    {
+      "key": "commitment--b--note",
+      "kind": "note",
+      "sceneId": "commitment",
+      "speaker": "旁白",
+      "text": "他以32c–e的事件说明自己曾拒绝不义命令，不能把他的立场概括为逢命必从。",
+      "textSha256": "a55570ca4decfdfd99737e8bcdb8a27a85c5eeb003035a0b981d30a973309c79",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/commitment--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.824,
+      "frames": 326,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 46944,
+      "sha256": "aed1eb1ebbfc66751866c0a226d6eb40cce43e1c02e568a78c6f89109fa341f9"
+    },
+    {
+      "key": "commitment--c--note",
+      "kind": "note",
+      "sceneId": "commitment",
+      "speaker": "旁白",
+      "text": "牛虻的比喻说明他如何理解自己的使命，并不替城邦每个人确认同样的感受。",
+      "textSha256": "ccd80516fdeb7f9da55890f15f7e88dbf6fcc62ec012680a826f50754959bca7",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/commitment--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.464,
+      "frames": 311,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 44784,
+      "sha256": "aab5cb4baeebcd98964959d563ba2ff1bffde6e78001c7f40235fb8308173ade"
+    },
+    {
+      "key": "verdict--a--note",
+      "kind": "note",
+      "sceneId": "verdict",
+      "speaker": "旁白",
+      "text": "把两个阶段分开，才能看见他如何回应刑罚，而非把判罪到死亡写成一个瞬间。",
+      "textSha256": "4f9db00ae7b17a2f94bf056a5487a839b0300027427cc8e0f977b78ef1db7563",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/verdict--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.968,
+      "frames": 332,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47808,
+      "sha256": "d382472f0d70f666b75b8ad029769b16d80dc28c6406e9ab86cc7d26819afff2"
+    },
+    {
+      "key": "verdict--b--note",
+      "kind": "note",
+      "sceneId": "verdict",
+      "speaker": "旁白",
+      "text": "这是作品给出的自我说明。语气的实际效果、每名陪审者如何理解，都不能据此定论。",
+      "textSha256": "ba528ce536ff25a129e7c0bf6bcdbc9c8222e20abd4ed552787c260812243cb2",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/verdict--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.664,
+      "frames": 361,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 51984,
+      "sha256": "89a374edb7c744432fadfa11aae693eec7c2435c26c74c975d8081ea59c0e09f"
+    },
+    {
+      "key": "verdict--c--note",
+      "kind": "note",
+      "sceneId": "verdict",
+      "speaker": "旁白",
+      "text": "结局已知，不表示它的每一个原因都已被证实。",
+      "textSha256": "709247e15dbed5d70c4d7364315e78ee10ea09865ba37644845566ec11992674",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/verdict--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 4.8,
+      "frames": 200,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 28800,
+      "sha256": "627160ad5daf20e4203f1a157fea642458d833827ae260a19a245b4ff6d3c2f7"
+    },
+    {
+      "key": "sentence--a--note",
+      "kind": "note",
+      "sceneId": "sentence",
+      "speaker": "旁白",
+      "text": "拒绝某些自救手段、接受判决与要求被处死，不能混为一谈。",
+      "textSha256": "e9b6d3a3a071f64266bb79e524f60c75ef3751d215a7db93c7cb5a1d7fc6a922",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/sentence--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.288,
+      "frames": 262,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 37728,
+      "sha256": "b26cf6433bfd1f3a04f367fba95bc190622f40d4fb4ee77f691c9e993ab0fe57"
+    },
+    {
+      "key": "sentence--b--note",
+      "kind": "note",
+      "sceneId": "sentence",
+      "speaker": "旁白",
+      "text": "40c–41c以两种可能说明希望，并非确证死后世界的旅行指南。",
+      "textSha256": "a81fcd69352ef6d70b3b8b89b3eefc482f177cae416ffbe862d1b80efe7ce33a",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/sentence--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.224,
+      "frames": 301,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 43344,
+      "sha256": "507fce38f4158f599aa4db89d221fb65c5bc5a0c79c983095e70e0431f80bd9b"
+    },
+    {
+      "key": "sentence--c--note",
+      "kind": "note",
+      "sceneId": "sentence",
+      "speaker": "旁白",
+      "text": "41e–42a把最后的嘱托交回仍活着的人，关心的是以后怎样生活。",
+      "textSha256": "c4ce312c30894bec8b80ecebc4fa5109f5ea1b4896b4f9103e6fb3068dae3663",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/sentence--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.344,
+      "frames": 306,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 44064,
+      "sha256": "e27c91d05ba625a5a1163fe30a297f8f1035195b62ea7a90fa737480fcc0dcd8"
+    },
+    {
+      "key": "escape--a--note",
+      "kind": "note",
+      "sceneId": "escape",
+      "speaker": "旁白",
+      "text": "46b–48d将紧迫的生存问题放回他们先前同意的判断标准中。",
+      "textSha256": "b72caccc45830db587cae731f366ee0a65c2e59b0c82d888acc01930f5ef4eb5",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/escape--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.864,
+      "frames": 286,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 41184,
+      "sha256": "bd0f0f29b011728fd8ec3927e506ccb663446f23255de524657b2f261d944d14"
+    },
+    {
+      "key": "escape--b--note",
+      "kind": "note",
+      "sceneId": "escape",
+      "speaker": "旁白",
+      "text": "克里同提出的家庭责任与朋友风险是真实的劝说理由；本章保留这种压力。",
+      "textSha256": "e099ed4a169ee927104a37de1ef8d21839816d8193d8c61b21ba74d1e93cab3d",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/escape--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.488,
+      "frames": 312,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 44928,
+      "sha256": "459155878f4a640e3dede6506e1c0ae8eed6d5ee9c8ba2520e7bf45f924495c0"
+    },
+    {
+      "key": "escape--c--note",
+      "kind": "note",
+      "sceneId": "escape",
+      "speaker": "旁白",
+      "text": "49b–e先确立不以恶报恶；它还需要下一步论证，才能推出不应逃走。",
+      "textSha256": "d3202145ef92bbb764b90d99c76ed838487c81e4d6af5a0c50215922ddfe77ef",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/escape--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.056,
+      "frames": 294,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 42336,
+      "sha256": "02a67cda6e5c00b25f66648c379947efdc21634169ab754e3e7b2470c707cf06"
+    },
+    {
+      "key": "laws--a--note",
+      "kind": "note",
+      "sceneId": "laws",
+      "speaker": "旁白",
+      "text": "50a–52a以说服、养育和约定展开论证。它是否充分，可以继续讨论；这里没有替所有制度下结论。",
+      "textSha256": "89d9271e0952a1cd15e12d21a43800fee0921eeb411a41a3cf936ab2522d019d",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/laws--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.68,
+      "frames": 445,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 64080,
+      "sha256": "ee878ee09893cad19862c5ad20d6825709e373bdba9bcbfdbd706e916fb913b0"
+    },
+    {
+      "key": "laws--b--note",
+      "kind": "note",
+      "sceneId": "laws",
+      "speaker": "旁白",
+      "text": "不同作品之间的张力不应抹平，更不能简化成“任何权力的命令都必须服从”。",
+      "textSha256": "1a5868ae9cc66f64485a39e56462a427e21ecb291ffdc42d5cca33abae34572f",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/laws--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.608,
+      "frames": 317,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 45648,
+      "sha256": "a53cad87d1c63ba835d2611df7d971cdc619953bae59ee9e4618c19da5336310"
+    },
+    {
+      "key": "laws--c--note",
+      "kind": "note",
+      "sceneId": "laws",
+      "speaker": "旁白",
+      "text": "54d–e以克里同无话可说结束谈话。苏格拉底留下；这是人物的决定，不是要求玩家宣誓服从。",
+      "textSha256": "b7fda26a289cc4a5ed65d02f5f82d12a0cded062dfbee7ac7e578079b046fb28",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/laws--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.936,
+      "frames": 414,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59616,
+      "sha256": "ed0c386b5531acaabdbd9ba92bb558842cb859dc3ae48a1db5901ef5fee6aedf"
+    },
+    {
+      "key": "last-day--a--note",
+      "kind": "note",
+      "sceneId": "last-day",
+      "speaker": "旁白",
+      "text": "85e–86d提出和谐比拟。原作随后细致回应，本章不把一段短对话冒充全部证明。",
+      "textSha256": "95d3ba776bb7d11b458105958371ea14fe4d520c373e756459de406396a57a27",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/last-day--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.24,
+      "frames": 385,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 55440,
+      "sha256": "c83107e5fb7eb1664ca1141c24334e1a73d51dfb81c41b971041f21a14619a51"
+    },
+    {
+      "key": "last-day--b--note",
+      "kind": "note",
+      "sceneId": "last-day",
+      "speaker": "旁白",
+      "text": "87a–88b把多次存续与不会毁灭分开。最后的日子里，异议仍得到认真倾听。",
+      "textSha256": "157daaadd8e657bb19397300425da45fe69eba253c2478c4eacfb8b7895d1a4b",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/last-day--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.544,
+      "frames": 356,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 51264,
+      "sha256": "85b2d6871698fd88c4440d8ef517ee19aa2fe2c124328147ea46eb054a7496ad"
+    },
+    {
+      "key": "last-day--c--note",
+      "kind": "note",
+      "sceneId": "last-day",
+      "speaker": "旁白",
+      "text": "61c–62c明确留下这一限制；不能把苏格拉底面对处刑的态度变成劝人求死的话。",
+      "textSha256": "d5ed56091782982de3f0917fff7a60e7fa65ae902ab3c9452f5f85952bcd3ec0",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/last-day--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.592,
+      "frames": 358,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 51552,
+      "sha256": "8919354c4ad6fabdee3ad42cb547a6fcddb6cd2e0d2a4cd3fd4988a4113a2f88"
+    },
+    {
+      "key": "cup--a--note",
+      "kind": "note",
+      "sceneId": "cup",
+      "speaker": "旁白",
+      "text": "116e–117a呈现朋友的挽留与他的回答，不把延缓或悲伤写成可耻的行为。",
+      "textSha256": "d59a0a31e07c93337eedb251ec11486767e3dd154f0e54bf9d646f2d08189d50",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/cup--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.472,
+      "frames": 353,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 50832,
+      "sha256": "d803fb7a4f1c2899e7802fc6a703ab579656748395ac2293758829c286695d45"
+    },
+    {
+      "key": "cup--b--note",
+      "kind": "note",
+      "sceneId": "cup",
+      "speaker": "旁白",
+      "text": "117c–e保留了临终者的平静与朋友的痛苦，两种感受同时存在。",
+      "textSha256": "7e712e3fa22019076bd6a911b46aeb2cfecf0ce2d5bd90452c34998bcb04926c",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/cup--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.864,
+      "frames": 286,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 41184,
+      "sha256": "ba66aa8683e64e03d2c1d0ff98cf4b5724fc9eed181e0e20905ad3ab3ecafff3"
+    },
+    {
+      "key": "cup--c--note",
+      "kind": "note",
+      "sceneId": "cup",
+      "speaker": "旁白",
+      "text": "117e–118a通过身体的变化与在场者的动作，叙述刑罚怎样终结一个人的生命。",
+      "textSha256": "be59bd5a174b082bb7009e3a49b9479102be8673db09a4280de717f18f25e4f5",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/cup--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.616,
+      "frames": 359,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 51696,
+      "sha256": "501accb1fd8fab512906e7cea55b7e661a43d357a455eb75c5947895e3eb15b8"
+    },
+    {
+      "key": "last-words--a--note",
+      "kind": "note",
+      "sceneId": "last-words",
+      "speaker": "旁白",
+      "text": "末语有多种解释；这里保留118a的嘱托，不指定唯一的象征答案。",
+      "textSha256": "49f58dba0e488fecba0d29a0d77b0c0f5559ba34f3b212cefcf4bef4cbf62ac4",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/last-words--a--note.mp3",
+      "optionId": "a",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.768,
+      "frames": 282,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 40608,
+      "sha256": "b2518113ace613105da478a34cbf4f462dc6cb81d87b1d12142ccb1f3e04dd24"
+    },
+    {
+      "key": "last-words--b--note",
+      "kind": "note",
+      "sceneId": "last-words",
+      "speaker": "旁白",
+      "text": "法律程序、社会敌意与个人判断，是这个结局中需要分别理解的层次。",
+      "textSha256": "87025d87fc1caa3090de03152bda01e0e0ea69988b438aec52bb472d06b11f50",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/last-words--b--note.mp3",
+      "optionId": "b",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.224,
+      "frames": 301,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 43344,
+      "sha256": "41aa59a92a8057b3f08d526dea1e3d35ef11776b6cae55514fa01c9dad1a5d72"
+    },
+    {
+      "key": "last-words--c--note",
+      "kind": "note",
+      "sceneId": "last-words",
+      "speaker": "旁白",
+      "text": "57a–59b设置了转述框架。这个隐藏章节又作了一次改编，不能取代三部原作。",
+      "textSha256": "2456ac459cf62bd45d9ccbe497d25dff1e58a7929e06273c12ecaf68c6139f9e",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "notes/last-words--c--note.mp3",
+      "optionId": "c",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.784,
+      "frames": 366,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 52704,
+      "sha256": "720368896268227ffa0e142ec18398206a18c3244330759b65f57d9a332ae01a"
+    }
+  ],
+  "decodeQA": {
+    "status": "passed",
+    "decoded": 119,
+    "decoder": "Chrome AudioContext",
+    "shortestSeconds": 1.488,
+    "longestSeconds": 15.36,
+    "minimumRms": 0.04007943633615652,
+    "note": "Every MP3 decoded successfully with a non-silent waveform. This is not a claim of human listening or word-by-word pronunciation transcription."
+  }
+}

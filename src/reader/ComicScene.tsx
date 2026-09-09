@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { Expand, X } from 'lucide-react';
 import manifest from '../../reader-public/illustrations/manifest.json';
+import { stopFeedback } from './feedback-audio.ts';
 import './comic-scene.css';
 
 type Scene = { alt: string; file: string; focalY: number; kind: string };
@@ -41,6 +42,7 @@ export function SceneImage({ assetId, scene, compact }: { assetId: string; scene
 function SceneDialog({ imageUrl, alt, onClose, trigger }: { imageUrl: string; alt: string; onClose: () => void; trigger: HTMLButtonElement | null }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   useEffect(() => {
+    stopFeedback();
     const dialog = dialogRef.current;
     const oldOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';

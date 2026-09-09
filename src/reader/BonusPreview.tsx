@@ -5,15 +5,34 @@ import { freshPreviewSave, validatePreviewProgress } from './bonus-preview.ts';
 import { flattenCorpus } from './engine.ts';
 import { BONUS_PREVIEW_STORAGE } from './preview-entry.ts';
 import type { Corpus, Save, Settings } from './model.ts';
+import useStudy from './useStudy.ts';
+import { stopFeedback } from './feedback-audio.ts';
+import type { AudioPreferences } from './QuestionChallenge.tsx';
 import './bonus-preview.css';
+
+const PREVIEW_AUDIO = 'republic-bonus-preview-audio';
+function previewAudio(): AudioPreferences {
+  try {
+    const value = JSON.parse(localStorage.getItem(PREVIEW_AUDIO) ?? 'null');
+    if (typeof value?.voice === 'boolean' && typeof value?.sound === 'boolean') return { voice: value.voice, sound: value.sound };
+  } catch { /* Use audible defaults when storage is unavailable. */ }
+  return { voice: true, sound: true };
+}
 
 export default function BonusPreview() {
   const [corpus, setCorpus] = useState<Corpus | null>(null);
   const [save, setSave] = useState<Save | null>(null);
   const [error, setError] = useState('');
   const [notice, setNotice] = useState('');
+  const study = useStudy(corpus?.edition.id, true);
+  const [audio, setAudio] = useState<AudioPreferences>(previewAudio);
   const current = useRef(save);
   current.current = save;
+  useEffect(() => {
+    stopFeedback();
+    try { localStorage.setItem(PREVIEW_AUDIO, JSON.stringify(audio)); } catch { /* Preferences remain available for this visit. */ }
+    return () => stopFeedback();
+  }, [audio]);
   useEffect(() => {
     const controller = new AbortController();
     fetch(`${import.meta.env.BASE_URL}text/republic.json`, { signal: controller.signal, cache: 'no-cache' })
@@ -51,8 +70,9 @@ export default function BonusPreview() {
     <header className="site-header"><div className="header-inner preview-header"><a className="brand" href={import.meta.env.BASE_URL}><BookOpen size={23} /><span>苏格拉底之死<small>隐藏章节 · 直达体验</small></span></a>
       <nav aria-label="体验阅读设置"><button aria-label="减小字号" disabled={save.settings.fontSize <= 16} onClick={() => update(s => ({ ...s, settings: { ...s.settings, fontSize: Math.max(16, s.settings.fontSize - 2) } }))}>A−</button><button aria-label="增大字号" disabled={save.settings.fontSize >= 32} onClick={() => update(s => ({ ...s, settings: { ...s.settings, fontSize: Math.min(32, s.settings.fontSize + 2) } }))}>A＋</button><button onClick={() => update(s => ({ ...s, settings: { ...s.settings, theme: s.settings.theme === 'paper' ? 'night' : 'paper' } }))}>{save.settings.theme === 'paper' ? '夜间' : '纸色'}</button></nav>
     </div></header>
-    <p className="preview-note">此处的体验进度单独保存，主篇记录保持原样。</p>
+    <div className="preview-tools"><p>此处的体验进度单独保存，主篇记录保持原样。</p><div aria-label="声音设置"><button aria-pressed={audio.voice} onClick={() => setAudio(value => ({ ...value, voice: !value.voice }))}>配音{audio.voice ? '开' : '关'}</button><button aria-pressed={audio.sound} onClick={() => setAudio(value => ({ ...value, sound: !value.sound }))}>提示音{audio.sound ? '开' : '关'}</button></div></div>
     {notice && <div className="notice" role="status">{notice}</div>}
-    <BonusChapter save={save} units={flattenCorpus(corpus)} onUpdate={update} onExit={() => location.assign(import.meta.env.BASE_URL)} preview />
+    {study.notice && <div className="notice" role="status">{study.notice}</div>}
+    {study.ready && <BonusChapter save={save} units={flattenCorpus(corpus)} onUpdate={update} onExit={() => location.assign(import.meta.env.BASE_URL)} study={study} audio={audio} preview />}
   </div>;
 }

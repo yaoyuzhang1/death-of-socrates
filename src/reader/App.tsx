@@ -10,6 +10,11 @@ import ChapterCards from './ChapterCards.tsx';
 import CompletionScreen from './CompletionScreen.tsx';
 import BonusChapter from './BonusChapter.tsx';
 import BonusPreview from './BonusPreview.tsx';
+import LearningCheck from './LearningCheck.tsx';
+import useStudy, { ALL_STUDY_CHECKS } from './useStudy.ts';
+import { createReadingBackup, readReadingBackup } from './reading-backup.ts';
+import learningChecks from '../../content/learning/checks.json';
+import ConversationContext, { getReadingContext } from './ConversationContext.tsx';
 import { BONUS_PREVIEW_HASH } from './preview-entry.ts';
 import { playCelebration, stopCelebration } from './completion-audio.ts';
 import { makeReadingPages } from './pagination.ts';
@@ -54,6 +59,7 @@ export default function App() {
 function ReadingApp() {
   const [corpus, setCorpus] = useState<Corpus | null>(null);
   const [save, setSave] = useState<Save | null>(null);
+  const study = useStudy(corpus?.edition.id);
   const [screen, setScreen] = useState<Screen>('home');
   const [panel, setPanel] = useState<Panel>(null);
   const [audio, setAudio] = useState<AudioPreferences>(() => {
@@ -186,6 +192,11 @@ function ReadingApp() {
   const roles = passageRoles(corpus);
   const resolved = question ? isQuestionResolved(save, question) : true;
   const followingPage = pages[pageIndex + 1];
+  const learningCheck = page.kind === 'text' ? learningChecks.find(check => check.pageId === page.id) : undefined;
+  const completedUnit = getChapterProgress(save, unit.chapter.id).completed > units.filter(u => u.chapter.id === unit.chapter.id && u.index < unit.index).length;
+  const previouslyRead = completedUnit || (page.kind === 'text' && page.side === 'before' && Boolean(question && resolved));
+  const learningRequired = Boolean(learningCheck && !previouslyRead && !study.records[learningCheck.id]?.correct);
+  const learningBlocked = Boolean(learningCheck && (!study.ready || learningRequired));
   const preloadPageId = page.kind === 'text' && followingPage?.kind === 'text' && page.side === followingPage.side ? followingPage.id : undefined;
   const latestIndex = latestUnitIndex(save, units);
   const revisiting = save.cursor < latestIndex;
@@ -231,6 +242,7 @@ function ReadingApp() {
     setScreen('review');
   };
   const turnPage = (index: number) => {
+    if (index > pageIndex && learningBlocked) return;
     stopFeedback();
     update(s => s.cursor !== unit.index || pagePosition(s, unit) !== pageIndex ? s : setPagePosition(s, unit, index));
     setLocationVersion(value => value + 1);
@@ -238,7 +250,7 @@ function ReadingApp() {
   };
   const next = () => {
     stopFeedback();
-    if (screenRef.current !== 'read' || pageIndex < pages.length - 1 || !resolved) return;
+    if (screenRef.current !== 'read' || pageIndex < pages.length - 1 || !resolved || learningBlocked) return;
     const current = saveRef.current;
     if (!current || current.cursor !== unit.index || pagePosition(current, unit) !== pageIndex) return;
     const previouslyComplete = allChaptersComplete(current, units);
@@ -254,7 +266,8 @@ function ReadingApp() {
     update(s => s.cursor !== unit.index || pagePosition(s, unit) !== pageIndex ? s : isQuestionResolved(s, question) ? recordReview(s, units, question.id, choiceId) : submitAnswer(setPagePosition(s, unit, pageIndex), unit, choiceId));
   };
   const exportProgress = () => {
-    const url = URL.createObjectURL(new Blob([JSON.stringify(save, null, 2)], { type: 'application/json' }));
+    const backup = createReadingBackup(save, study.records);
+    const url = URL.createObjectURL(new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }));
     const anchor = document.createElement('a'); anchor.href = url; anchor.download = '理想国-阅读进度.json'; anchor.click(); URL.revokeObjectURL(url);
     setNotice('阅读进度已导出。');
   };
@@ -262,8 +275,9 @@ function ReadingApp() {
     if (!file) return;
     try {
       if (file.size > 1_000_000) throw new Error('进度文件过大。');
-      const imported = validateSave(JSON.parse(await file.text()), corpus);
-      if (!imported) throw new Error('这不是与当前正文匹配的有效进度文件。');
+      const data = JSON.parse(await file.text());
+      const { reading: imported, study: importedStudy } = readReadingBackup(data, corpus, ALL_STUDY_CHECKS);
+      if (importedStudy) study.replace(importedStudy);
       setSave(imported);
       saveRef.current = imported;
       setLocationVersion(version => version + 1);
@@ -285,27 +299,28 @@ function ReadingApp() {
     </div>{screen === 'read' && <div className="progress-track" aria-label={`已读${Math.round(save.completed / units.length * 100)}%`}><span style={{ width: `${save.completed / units.length * 100}%` }} /></div>}</header>
 
     {notice && <div className="notice" role="status"><span>{notice}</span><button aria-label="关闭提示" onClick={() => setNotice('')}><X size={16} /></button></div>}
+    {study.notice && <div className="notice" role="status">{study.notice}</div>}
 
     {screen === 'home' && <main id="main" className="home">
       <section className="hero"><p className="eyebrow">柏拉图 · 原典互动阅读</p><h1>苏格拉底的<span>下一问</span></h1>
         <p className="hero-description">沿着《理想国》逐页阅读，在关键处选择更好的追问。<br className="desktop-break" />八个主题，任选一章开始；每章都记得你读到了哪里。</p>
-        <p className="play-rules">翻一页原文 · 选一个问题 · 听解释 · 再想一步</p>
+        <p className="play-rules">读几轮对话 · 选核心追问 · 检查理解 · 听回应</p>
         <div className="hero-actions"><button className="primary" onClick={start}>{save.started ? '继续阅读' : '开始阅读'}<ArrowRight size={19} /></button>{save.started && <span className="resume-note">第{numerals[unit.chapterIndex]}章 · {unit.section.title}</span>}</div>
         {revisiting && <button className="text-button latest-home" onClick={() => goTo(latestIndex)}>回到最新进度 <ArrowRight size={15} /></button>}
-        <div className="book-facts"><span>第一至四卷</span><span>{corpus.chapters.length} 个主题章</span><span>{totalQuestions} 次追问</span><span>约 {(characterCount / 10000).toFixed(1)} 万字</span></div>
+        <div className="book-facts"><span>第一至四卷</span><span>{corpus.chapters.length} 个主题章</span><span>{totalQuestions} 次核心追问</span><span>{learningChecks.length} 处理解检查</span><span>约 {(characterCount / 10000).toFixed(1)} 万字</span></div>
       </section>
       {save.started && <section className="journey-panel" aria-label="我的进度">
         <div className="journey-counts"><p><strong>{overall.answered}<small> / {overall.total}</small></strong><span>已遇到的追问</span></p><p><strong>{overall.correct}</strong><span>首次选中原问</span></p><p><strong>{overall.remainingReview}</strong><span>待重练</span></p></div>
         {overall.answered > 0 && <div className="round-invitation"><div><h2>{overall.remainingReview ? '再试试那些没选中的问题' : '换个顺序，再想一轮'}</h2><p>每轮最多五问，先练尚未选中的题。随时返回原来的阅读位置。</p></div><button onClick={() => startReview()}><RotateCcw size={16} /> 开始一轮重练</button></div>}
       </section>}
       <section className="home-contents" aria-labelledby="contents-title"><div className="section-heading"><h2 id="contents-title">从日常判断，读到城邦与灵魂</h2><p>八章并列开放 · 已完成 {completedChapters} / 8 章。切换章节时，页码、答题与书签都会保留。</p></div>
-        <ChapterCards corpus={corpus} units={units} save={save} onEnter={chooseChapter} />
+        <ChapterCards corpus={corpus} units={units} save={save} study={study.records} onEnter={chooseChapter} />
       </section>
       {complete ? <section className="home-unlock"><Check size={23} /><div><h2>八章已读完 · 新的对话已开启</h2><p>回看阅读足迹，或进入隐藏章节《苏格拉底之死》。</p></div><button className="primary" onClick={openCompletion}>查看八章总结 <ArrowRight size={17} /></button></section> : <p className="unlock-hint">完成全部八章后，一段隐藏的对话将为你开启。<span>{completedChapters} / 8</span></p>}
       <footer className="home-footer"><p>{corpus.edition.label}</p><button className="text-button" onClick={() => openPanel('source')}>底本与阅读说明 <ChevronRight size={15} /></button><p className="small">进度保存在当前浏览器中。无需登录。</p></footer>
     </main>}
 
-    {screen === 'read' && <main id="main" className="reading-shell paged-reading" ref={readerTop} tabIndex={-1}>
+    {screen === 'read' && <div className="context-layout"><ConversationContext {...getReadingContext(unit, page, roles)} /><main id="main" className="reading-shell paged-reading" ref={readerTop} tabIndex={-1}>
       {revisiting && <div className="return-latest"><span>正在回看已读内容</span><button className="text-button" onClick={() => goTo(latestIndex)}>回到最新进度 <ArrowRight size={15} /></button></div>}
       <div className="reading-location"><button className="text-button" onClick={() => openPanel('contents')}>第{numerals[unit.chapterIndex]}章 · {unit.chapter.title}</button><button className={`icon-button bookmark-button ${save.bookmarks.includes(unit.id) ? 'bookmarked' : ''}`} aria-label={save.bookmarks.includes(unit.id) ? '移除书签' : '添加书签'} title="书签" onClick={() => update(s => ({ ...s, bookmarks: s.bookmarks.includes(unit.id) ? s.bookmarks.filter(id => id !== unit.id) : [...s.bookmarks, unit.id] }))}><Bookmark size={19} fill={save.bookmarks.includes(unit.id) ? 'currentColor' : 'none'} /></button></div>
       {firstOfChapter && pageIndex === 0 && <section className="chapter-intro"><p className="eyebrow">第{numerals[unit.chapterIndex]}章 / {corpus.chapters.length}章</p><h1>{unit.chapter.title}</h1><p>{unit.chapter.range}</p></section>}
@@ -315,15 +330,18 @@ function ReadingApp() {
       <article className="reading-text page-content" aria-label="原典正文" key={unit.id + ':' + pageIndex} data-page-index={pageIndex} data-page-kind={page.kind}>
         {page.kind === 'text' ? <div className="text-page">{page.paragraphs.map(fragment => <ReadingPassage key={fragment.id} paragraph={fragment} sourceId={fragment.sourceId} role={roles.get(fragment.sourceId)} continuation={fragment.fragmentIndex > 0} />)}</div> : <QuestionChallenge question={page.question} seed={save.seed} resolved={resolved} onAttempt={attemptQuestion} onContinue={() => turnPage(pageIndex + 1)} audio={audio} />}
       </article>
+      {learningCheck && study.ready && <LearningCheck key={learningCheck.id} check={learningCheck} record={study.records[learningCheck.id]} onAnswer={id => study.answer(learningCheck, id)} audio={audio} />}
+      {learningRequired && <p className="study-lock-note">对照刚读过的内容，完成这处理解检查后继续。</p>}
       <footer className="reading-navigation page-navigation"><button className="text-button" disabled={pageIndex === 0 && firstOfChapter} onClick={() => pageIndex > 0 ? turnPage(pageIndex - 1) : goTo(save.cursor - 1)}><ArrowLeft size={17} />上一页</button>
-        {page.kind === 'text' && (pageIndex < pages.length - 1 ? <button className="primary" onClick={() => turnPage(pageIndex + 1)} data-testid="next-page">{pages[pageIndex + 1].kind === 'question' ? '试着问一问' : '下一页'}<ArrowRight size={18} /></button> : <button className="primary" onClick={next} data-testid="next-unit">{lastOfChapter ? '完成本章' : '继续下一节'}<ArrowRight size={18} /></button>)}
+        {page.kind === 'text' && (pageIndex < pages.length - 1 ? <button className="primary" disabled={learningBlocked} onClick={() => turnPage(pageIndex + 1)} data-testid="next-page">{pages[pageIndex + 1].kind === 'question' ? '试着问一问' : '下一页'}<ArrowRight size={18} /></button> : <button className="primary" disabled={learningBlocked} onClick={next} data-testid="next-unit">{lastOfChapter ? '完成本章' : '继续下一节'}<ArrowRight size={18} /></button>)}
         {page.kind === 'question' && !resolved && <span className="reading-pause">选对问题，再继续原文。</span>}
       </footer>
       <div className="reading-footnote"><span>第{chapterNumber}章 · 阅读位置 {units.filter(u => u.chapter.id === unit.chapter.id && u.index <= save.cursor).length} / {units.filter(u => u.chapter.id === unit.chapter.id).length}</span><button className="text-button" onClick={() => openPanel('source')}>底本说明</button></div>
-    </main>}
+    </main></div>}
 
     {screen === 'chapter-end' && <main id="main" className="chapter-end"><p className="eyebrow">本章已读完</p><h1>{summary.title}</h1><p className="chapter-conclusion">{summary.range}</p>
       <div className="chapter-score"><div><strong>{summaryStats.correct}<span> / {summaryStats.total}</span></strong><p>首次答对</p></div><p>直接揭示 {summaryStats.revealed} 题</p></div>
+      <p className="study-summary">理解检查已完成 {learningChecks.filter(check => check.chapterId === summary.id && study.records[check.id]?.correct).length} / {learningChecks.filter(check => check.chapterId === summary.id).length} 处。首次判断与重答记录分别保留。</p>
       <div className="chapter-round"><p>本章的讨论已读完。可以任选其他章节，也可以把这一章的追问再练一轮。</p><button onClick={() => startReview(summary.id)}><RotateCcw size={16} /> 重练本章</button></div>
       <h2>再看一眼这些追问</h2><div className="review-questions">{units.filter(u => u.chapter.id === summary.id && u.question).map(u => <button key={u.id} onClick={() => goTo(u.index)}><span>{u.question!.sourceRef}</span><strong>{u.question!.original.text}</strong><ArrowRight size={17} /></button>)}</div>
       <p className="end-note">八章已完成 {completedChapters} / 8。每一章的阅读与作答记录都会各自保留。</p>
@@ -331,7 +349,7 @@ function ReadingApp() {
     </main>}
 
     {screen === 'complete' && complete && <CompletionScreen corpus={corpus} units={units} save={save} onBonus={openBonus} onHome={goHome} onReview={() => startReview()} onChapter={chooseChapter} onEnableVoice={() => setAudio(value => ({ ...value, voice: true }))} />}
-    {screen === 'bonus' && complete && <BonusChapter save={save} units={units} onUpdate={update} onExit={() => setScreen('complete')} />}
+    {screen === 'bonus' && complete && study.ready && <BonusChapter save={save} units={units} study={study} audio={audio} onUpdate={update} onExit={() => setScreen('complete')} />}
 
     {screen === 'review' && <ReviewRound key={reviewSession} corpus={corpus} save={save} questionIds={reviewIds} onAnswer={(id, choiceId) => update(s => recordReview(s, units, id, choiceId))} onClose={() => setScreen(reviewReturn)} audio={audio} returnLabel={reviewReturn === 'home' ? '返回首页' : reviewReturn === 'chapter-end' ? '返回本章小结' : reviewReturn === 'complete' ? '返回八章总结' : '返回阅读'} />}
 
@@ -345,10 +363,10 @@ function ReadingApp() {
           return <li key={section.id}><button disabled={!accessible} onClick={() => goTo(index)}>{section.title}{accessible ? <ChevronRight size={16} /> : <small>本章尚未读到</small>}</button></li>;
         })}</ul></li>)}</ol></>}
       {panel === 'settings' && <div className="settings-panel"><section><h3>正文字号</h3><div className="font-control"><button aria-label="减小字号" disabled={save.settings.fontSize <= 16} onClick={() => update(s => ({ ...s, settings: { ...s.settings, fontSize: Math.max(16, s.settings.fontSize - 2) } }))}>A−</button><output>{save.settings.fontSize}px</output><button aria-label="增大字号" disabled={save.settings.fontSize >= 32} onClick={() => update(s => ({ ...s, settings: { ...s.settings, fontSize: Math.min(32, s.settings.fontSize + 2) } }))}>A＋</button></div><p className="font-sample">从一个更好的问题，开始一段更清楚的思考。</p></section>
-        <section><h3>声音反馈</h3><div className="audio-setting"><span>选项解释与通关祝贺 · 普通话</span><button aria-pressed={audio.voice} onClick={() => setAudio(value => ({ ...value, voice: !value.voice }))}>{audio.voice ? '已开启' : '已关闭'}</button></div><div className="audio-setting"><span>答对、答错提示音</span><button aria-pressed={audio.sound} onClick={() => setAudio(value => ({ ...value, sound: !value.sound }))}>{audio.sound ? '已开启' : '已关闭'}</button></div><p>确认选择后播放解释，完成八章时播放祝贺。离开对应页面时停止。</p></section>
+        <section><h3>声音反馈</h3><div className="audio-setting"><span>解释、角色回应与通关祝贺 · 普通话</span><button aria-pressed={audio.voice} onClick={() => setAudio(value => ({ ...value, voice: !value.voice }))}>{audio.voice ? '已开启' : '已关闭'}</button></div><div className="audio-setting"><span>答对、答错提示音</span><button aria-pressed={audio.sound} onClick={() => setAudio(value => ({ ...value, sound: !value.sound }))}>{audio.sound ? '已开启' : '已关闭'}</button></div><p>确认后播放对应回应或解释，候选项保持安静。切页、打开菜单和离开时停止。</p></section>
         <section><h3>阅读背景</h3><div className="segmented">{(['paper', 'night'] as const).map(theme => <button key={theme} aria-pressed={save.settings.theme === theme} onClick={() => update(s => ({ ...s, settings: { ...s.settings, theme } }))}>{theme === 'paper' ? '纸色' : '夜间'}</button>)}</div></section>
-        <section><h3>进度备份</h3><p>八章各自的阅读位置、首次作答、重练、书签及隐藏章节进度保存在本机。换浏览器前，可以导出一份备份。</p><div className="backup-actions"><button onClick={exportProgress}>导出进度</button><button onClick={() => fileRef.current?.click()}>导入进度</button><input ref={fileRef} type="file" accept=".json,application/json" className="sr-only" aria-label="选择进度文件" onChange={e => importProgress(e.target.files?.[0])} /></div></section>
-        <section>{confirmReset ? <><p>重新开始会清除本浏览器中的阅读与答题记录。可以先导出备份。</p><div className="backup-actions"><button onClick={() => { saveRef.current = createSave(corpus); setSave(saveRef.current); setScreen('home'); setPanel(null); setConfirmReset(false); }}>确认重新开始</button><button onClick={() => setConfirmReset(false)}>保留进度</button></div></> : <button className="text-button" onClick={() => setConfirmReset(true)}>重新开始阅读</button>}</section>
+        <section><h3>进度备份</h3><p>八章各自的阅读位置、首次作答、重练、书签、理解检查及隐藏章节记录都会一并导出。旧版进度文件也可以继续导入。</p><div className="backup-actions"><button disabled={!study.ready} onClick={exportProgress}>导出进度</button><button disabled={!study.ready} onClick={() => fileRef.current?.click()}>导入进度</button><input ref={fileRef} type="file" accept=".json,application/json" className="sr-only" aria-label="选择进度文件" onChange={e => importProgress(e.target.files?.[0])} /></div></section>
+        <section>{confirmReset ? <><p>重新开始会清除本浏览器中的阅读、答题与理解检查记录。可以先导出备份。</p><div className="backup-actions"><button onClick={() => { saveRef.current = createSave(corpus); setSave(saveRef.current); study.reset(); setScreen('home'); setPanel(null); setConfirmReset(false); }}>确认重新开始</button><button onClick={() => setConfirmReset(false)}>保留进度</button></div></> : <button className="text-button" onClick={() => setConfirmReset(true)}>重新开始阅读</button>}</section>
       </div>}
       {panel === 'source' && <div className="source-panel"><p className="eyebrow">柏拉图 · 理想国</p><h3>{corpus.edition.label}</h3><p>{corpus.edition.description}</p><p>译文：{corpus.edition.translator}</p><ul>{corpus.edition.notes.map(note => <li key={note}>{note}</li>)}</ul><p>{corpus.edition.license}</p><a href={corpus.edition.sourceUrl} target="_blank" rel="noreferrer">出版社书目信息 ↗</a><p><a href={`${import.meta.env.BASE_URL}text/parallel.html`} target="_blank" rel="noreferrer">书页与连续全文（含后文） ↗</a> · <a href={`${import.meta.env.BASE_URL}TEXT-LICENSE.txt`} target="_blank" rel="noreferrer">署名与文本说明 ↗</a></p><hr /><h3>关于追问练习</h3><p>原问对应选项取自本译本；另两项是围绕同一对象、条件或关系作的小幅改写。作答后揭示原句，说明它怎样承接本段对话。选项比较与说明属于编辑文字。</p><p>所有选择都接回相同的原典。八个主题章可独立进入；每章内部的原文、对话次序及后续论证保持不变。隐藏章节另据《申辩篇》《克里同篇》《斐多篇》作场景化改写，逐场注明来源，不属于本译本正文。</p></div>}
     </Modal>}
