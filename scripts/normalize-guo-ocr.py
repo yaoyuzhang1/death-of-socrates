@@ -104,6 +104,9 @@ for n in range(12,188):
     debug.append({'printedPage':printed,'bodyLeft':round(base),'footnoteY':round(rule),'paragraphCount':len(paragraphs),'characters':sum(len(p['text']) for p in paragraphs),'notes':len(notes),'ignored':ignored})
 from source_review_corrections import apply_review
 review_log=apply_review(pages,json.loads((ROOT/'content/source/guo-1986-review-corrections.json').read_text(encoding='utf-8')))
+from apply_scan_review import apply_scan_reviews
+scan_review_log=apply_scan_reviews(pages, allow_applied=True)
+(LOCAL/'scan-review-regeneration-log.json').write_text(json.dumps(scan_review_log,ensure_ascii=False,indent=2),encoding='utf-8')
 (LOCAL/'review-correction-log.json').write_text(json.dumps(review_log,ensure_ascii=False,indent=2),encoding='utf-8')
 for report,page in zip(debug,pages):
     report['paragraphCount']=len(page['paragraphs'])

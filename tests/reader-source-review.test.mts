@@ -7,6 +7,44 @@ import { passageRoles,passageRuns } from '../src/reader/passage-roles.ts';
 const read=(file:string)=>JSON.parse(readFileSync(new URL('../'+file,import.meta.url),'utf8'));
 const digest=(text:string)=>createHash('sha256').update(text).digest('hex');
 
+test('Discarded page-edge OCR never becomes dialogue or reuses published paragraph identities',()=>{
+  const units=flattenCorpus(read('reader-public/text/republic.json'));
+  const paragraphs=units.flatMap(u=>[...u.paragraphs,...(u.question?[u.question.original]:[]),...u.response]);
+  for(const retired of read('content/source/retired-paragraph-ids.json')) {
+    assert.ok(!paragraphs.some(p=>p.id===retired.id));
+    const page=read('content/source/guo-1986-pages.json').pages.find((p:any)=>p.printedPage===retired.printedPage);
+    assert.ok(!page.paragraphs.some((p:any)=>p.text===retired.discardedOcr));
+  }
+  assert.equal(paragraphs.find(p=>p.id==='p-4083')?.text,'格：好象是的。');
+  const firstBookTen=units.find(u=>u.question?.original.id==='p-4085')!;
+  assert.ok(firstBookTen);
+  assert.equal(firstBookTen.question!.original.sourcePage,387);
+  assert.equal(firstBookTen.question!.original.text,'苏：你能告诉我，模仿一般地说是什么吗？');
+  assert.equal(firstBookTen.paragraphs[0].id,'p-4086');
+});
+
+test('Numerals inside the geometrical argument and original note diagrams survive source rendering',()=>{
+  const source=read('content/source/guo-1986-pages.json');
+  const body=(page:number)=>source.pages.find((p:any)=>p.printedPage===page).paragraphs.map((p:any)=>p.text).join('');
+  assert.ok(body(316).includes('其4对3的基本比例，和5结合，再乘三次'));
+  assert.ok(body(316).includes('（各减“1”）'));
+  assert.ok(body(316).includes('（各减“2”）'));
+  assert.ok(body(421).includes('“命运”三女神③'));
+  const notes=read('content/source/note-facsimiles.json');
+  const parallel=read('reader-public/text/parallel.json');
+  const html=readFileSync(new URL('../reader-public/text/parallel.html',import.meta.url),'utf8');
+  assert.equal(notes.sourcePdfSha256,source.pdfSha256);
+  assert.equal(notes.pages.length,24);
+  for(const entry of notes.pages) {
+    const bytes=readFileSync(new URL('../reader-public/'+entry.file,import.meta.url));
+    assert.equal(createHash('sha256').update(bytes).digest('hex'),entry.sha256);
+    assert.equal(parallel.pages.find((p:any)=>p.printedPage===entry.printedPage).noteFacsimile.file,entry.file);
+    const section=html.slice(html.indexOf(`<section id="p${entry.printedPage}">`),html.indexOf('</section>',html.indexOf(`<section id="p${entry.printedPage}">`)));
+    assert.ok(section.includes(`src="../${entry.file}"`),entry.file);
+    assert.ok(!section.includes('本页译者注（扫描可核对）'),'ambiguous OCR is not presented as verified note text');
+  }
+});
+
 test('The sameness challenge assesses the explicitly qualified original question, after the preliminary exchange is readable',()=>{
   const unit=flattenCorpus(read('reader-public/text/republic.json')).find(u=>u.question?.id==='book4-same-form')!;
   assert.ok(unit.paragraphs.some(p=>p.id==='p-1657'&&p.text.includes('虽有同一名称而不相同')));

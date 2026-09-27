@@ -6,7 +6,9 @@ import './source-viewer.css';
 // The ten books end on printed page 426; the following pages are indices.
 const LAST_PAGE = 426;
 type SourceTarget = { page: number; trigger: HTMLAnchorElement; scrollX: number; scrollY: number; fontSize: string };
-type NotesByPage = Map<number, string[]>;
+type NoteFacsimile = { file: string; width: number; height: number };
+type PageNotes = { notes: string[]; noteFacsimile?: NoteFacsimile };
+type NotesByPage = Map<number, PageNotes>;
 type NotesState = { status: 'loading' | 'error' } | { status: 'ready'; pages: NotesByPage };
 let cachedNotes: NotesByPage | null = null;
 
@@ -14,10 +16,17 @@ const SourceViewerContext = createContext<((target: SourceTarget) => void) | nul
 
 function notesFromSource(data: unknown): NotesByPage {
   if (!data || typeof data !== 'object' || !('pages' in data) || !Array.isArray(data.pages)) throw new Error('书页数据不完整。');
-  const pages = new Map<number, string[]>();
+  const pages: NotesByPage = new Map();
   for (const value of data.pages) {
-    if (!value || typeof value !== 'object' || !Number.isInteger(value.printedPage) || !Array.isArray(value.notes) || !value.notes.every((note: unknown) => typeof note === 'string')) throw new Error('书页数据不完整。');
-    pages.set(value.printedPage, value.notes);
+    if (!value || typeof value !== 'object' || !Number.isInteger(value.printedPage) || value.printedPage < 1 || value.printedPage > LAST_PAGE || !Array.isArray(value.notes) || !value.notes.every((note: unknown) => typeof note === 'string')) throw new Error('书页数据不完整。');
+    let noteFacsimile: NoteFacsimile | undefined;
+    if ('noteFacsimile' in value) {
+      const image = value.noteFacsimile;
+      const expectedFile = `facsimile/notes/page-${String(value.printedPage).padStart(3, '0')}.webp`;
+      if (!image || typeof image !== 'object' || image.file !== expectedFile || !Number.isSafeInteger(image.width) || !Number.isSafeInteger(image.height) || image.width < 1 || image.height < 1 || image.width > 8192 || image.height > 8192) throw new Error('译者注影像数据不完整。');
+      noteFacsimile = { file: image.file, width: image.width, height: image.height };
+    }
+    pages.set(value.printedPage, { notes: value.notes, ...(noteFacsimile ? { noteFacsimile } : {}) });
   }
   if (Array.from({ length: LAST_PAGE }, (_, i) => i + 1).some(page => !pages.has(page))) throw new Error('书页数据不完整。');
   return pages;
@@ -47,6 +56,8 @@ function SourceViewer({ target, onClose }: { target: SourceTarget; onClose: () =
   const [zoomed, setZoomed] = useState(false);
   const [imageAttempt, setImageAttempt] = useState(0);
   const [imageState, setImageState] = useState<{ key: string; status: 'ready' | 'error' } | null>(null);
+  const [noteImageAttempt, setNoteImageAttempt] = useState(0);
+  const [noteImageState, setNoteImageState] = useState<{ key: string; status: 'ready' | 'error' } | null>(null);
   const [notes, setNotes] = useState<NotesState>(() => cachedNotes ? { status: 'ready', pages: cachedNotes } : { status: 'loading' });
   const [notesAttempt, setNotesAttempt] = useState(0);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -56,8 +67,20 @@ function SourceViewer({ target, onClose }: { target: SourceTarget; onClose: () =
   const descriptionId = useId();
   const imageKey = `${page}-${imageAttempt}`;
   const imageStatus = imageState?.key === imageKey ? imageState.status : 'loading';
-  const pageNotes = notes.status === 'ready' ? notes.pages.get(page) ?? [] : [];
-  const imageUrl = `${import.meta.env.BASE_URL}facsimile/page-${String(page).padStart(3, '0')}.webp${imageAttempt ? `?retry=${imageAttempt}` : ''}`;
+  const pageNotes = notes.status === 'ready' ? notes.pages.get(page)?.notes ?? [] : [];
+  const noteFacsimile = notes.status === 'ready' ? notes.pages.get(page)?.noteFacsimile : undefined;
+  const noteImageKey = `${page}-${noteFacsimile?.file ?? ''}-${noteImageAttempt}`;
+  const noteImageStatus = noteImageState?.key === noteImageKey ? noteImageState.status : 'loading';
+  const fullImageUrl = `${import.meta.env.BASE_URL}facsimile/page-${String(page).padStart(3, '0')}.webp`;
+  const imageUrl = `${fullImageUrl}${imageAttempt ? `?retry=${imageAttempt}` : ''}`;
+  const noteImageUrl = noteFacsimile ? `${import.meta.env.BASE_URL}${noteFacsimile.file}${noteImageAttempt ? `?retry=${noteImageAttempt}` : ''}` : '';
+  const imageKeyRef = useRef(imageKey);
+  const noteImageKeyRef = useRef(noteImageKey);
+
+  useLayoutEffect(() => {
+    imageKeyRef.current = imageKey;
+    noteImageKeyRef.current = noteImageKey;
+  }, [imageKey, noteImageKey]);
 
   useEffect(() => {
     stopFeedback();
@@ -104,6 +127,9 @@ function SourceViewer({ target, onClose }: { target: SourceTarget; onClose: () =
     setPage(next);
     setZoomed(false);
     setImageAttempt(0);
+    setImageState(null);
+    setNoteImageAttempt(0);
+    setNoteImageState(null);
     stageRef.current?.scrollTo({ top: 0, left: 0 });
     bodyRef.current?.scrollTo({ top: 0, left: 0 });
   };
@@ -141,13 +167,22 @@ function SourceViewer({ target, onClose }: { target: SourceTarget; onClose: () =
         {imageStatus === 'loading' && <p className="source-viewer-status" role="status">正在加载第 {page} 页…</p>}
         {imageStatus === 'error' && <div className="source-viewer-status" role="alert"><p>第 {page} 页扫描图暂时未能加载。</p><button type="button" onClick={() => setImageAttempt(value => value + 1)}>重新加载书页</button></div>}
         <img key={imageKey} src={imageUrl} alt={`郭斌和、张竹明译《理想国》，商务印书馆1986年版，第 ${page} 页扫描图`} width={1428} height={2020} hidden={imageStatus !== 'ready'} draggable={false}
-          onLoad={() => setImageState({ key: imageKey, status: 'ready' })} onError={() => setImageState({ key: imageKey, status: 'error' })} />
+          onLoad={() => { if (imageKeyRef.current === imageKey) setImageState({ key: imageKey, status: 'ready' }); }} onError={() => { if (imageKeyRef.current === imageKey) setImageState({ key: imageKey, status: 'error' }); }} />
       </div>
       <section className="source-viewer-notes" aria-labelledby={`${titleId}-notes`}>
         <h3 id={`${titleId}-notes`}>第 {page} 页 · 译者注</h3>
         {notes.status === 'loading' && <p role="status">正在加载译者注…</p>}
         {notes.status === 'error' && <div role="alert"><p>译者注暂时未能加载，可先查看上方扫描图。</p><button type="button" onClick={() => setNotesAttempt(value => value + 1)}>重新加载译者注</button></div>}
-        {notes.status === 'ready' && (pageNotes.length ? pageNotes.map((note, index) => <p key={`${page}-${index}`}>{note}</p>) : <p className="source-viewer-empty">本页没有译者注。</p>)}
+        {notes.status === 'ready' && (noteFacsimile ? <div className="source-viewer-note-image">
+          <p className="source-viewer-note-caption">本页译者注按原版影像呈现。</p>
+          {noteImageStatus === 'loading' && <p className="source-viewer-note-caption" role="status">正在加载译注影像…</p>}
+          {noteImageStatus === 'error' && <div className="source-viewer-note-fallback" role="alert"><p>译注影像暂时未能加载，可查看上方完整扫描。</p><button type="button" onClick={() => setNoteImageAttempt(value => value + 1)}>重新加载译注影像</button></div>}
+          <a className="source-viewer-note-facsimile" href={fullImageUrl} target="_blank" rel="noreferrer" hidden={noteImageStatus !== 'ready'} title={`打开原书第 ${page} 页完整扫描`}>
+            <img key={noteImageKey} src={noteImageUrl} alt={`原书第 ${page} 页译者注原版影像，点击打开完整扫描`} width={noteFacsimile.width} height={noteFacsimile.height} draggable={false}
+              onLoad={() => { if (noteImageKeyRef.current === noteImageKey) setNoteImageState({ key: noteImageKey, status: 'ready' }); }} onError={() => { if (noteImageKeyRef.current === noteImageKey) setNoteImageState({ key: noteImageKey, status: 'error' }); }} />
+          </a>
+          <a className="source-viewer-note-full" href={fullImageUrl} target="_blank" rel="noreferrer">打开完整扫描图 <ExternalLink size={13} /></a>
+        </div> : pageNotes.length ? pageNotes.map((note, index) => <p key={`${page}-${index}`}>{note}</p>) : <p className="source-viewer-empty">本页没有译者注。</p>)}
       </section>
     </div>
     <footer className="source-viewer-footer"><span>左右键翻页 · Esc 返回阅读</span><a href={`${import.meta.env.BASE_URL}text/parallel.html#p${page}`} target="_blank" rel="noreferrer">打开连续全文 <ExternalLink size={13} /></a></footer>

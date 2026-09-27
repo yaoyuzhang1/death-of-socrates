@@ -135,7 +135,9 @@ test('The revised corpus retains 47 source questions and 273 pages while compreh
   assert.equal(core.length, 47);
   assert.equal(pages.length, 273);
   const text = pages.flatMap(page => page.kind === 'text' ? page.paragraphs.map(paragraph => paragraph.text) : []).join('');
-  assert.equal(text.length, 83876);
+  // The 2026-09-27 scan review repairs omissions and removes spurious dash
+  // characters. The 47 question identities below remain unchanged.
+  assert.equal(text.length, 83860);
   const identities=core.map(question=>({id:question.id,correctId:question.correctId,original:question.original.text,correctText:question.options.find(option=>option.id===question.correctId)!.text}));
   assert.equal(createHash('sha256').update(JSON.stringify(identities)).digest('hex'), '6f1db64ed06506e142878e85302d94031bff6fe1b482001114dc891d9393a5b1', 'verified source questions and stable answer identities include the explicitly qualified sameness question');
   const coreIds = new Set(core.map(question => question.id));

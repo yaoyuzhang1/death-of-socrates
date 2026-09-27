@@ -21,6 +21,15 @@
 .source-viewer-notes p{line-height:1.9;white-space:pre-line;margin-bottom:12px}
 .source-viewer-notes p:last-child{margin-bottom:0}
 .source-viewer-empty{color:var(--muted);font-size:13px}
+.source-viewer-note-image{min-width:0}
+.source-viewer-note-caption{font-size:13px;color:var(--muted)}
+.source-viewer-note-facsimile{display:block;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:#fff}
+.source-viewer-note-facsimile[hidden]{display:none}
+.source-viewer-note-facsimile:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.source-viewer-note-facsimile img{display:block;width:100%;height:auto;max-width:100%}
+.source-viewer-note-full{display:inline-flex;align-items:center;gap:6px;min-height:40px;margin-top:6px;font-size:13px;text-underline-offset:4px}
+.source-viewer-note-fallback{font-size:14px;color:var(--muted);padding:10px 0}
+.source-viewer-note-fallback button{font-size:13px;min-height:40px}
 .source-viewer-footer{border-top:1px solid var(--line);padding:13px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;font-size:12px;flex-shrink:0}
 .source-viewer-footer>span{color:var(--muted);font-size:11px}
 .source-viewer-footer a{display:inline-flex;align-items:center;gap:6px;text-underline-offset:4px;min-height:28px}

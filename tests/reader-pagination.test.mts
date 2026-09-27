@@ -187,7 +187,10 @@ test('all frozen v4 positions keep their question side and unchanged source anch
       }
     }
   }
-  assert.ok(exactAnchors > 700);
+  // Source corrections legitimately change old fingerprints. Verify every
+  // frozen position above, rather than assuming a minimum of unedited anchors.
+  assert.equal(exactAnchors + repairedAnchors, 743);
+  assert.ok(exactAnchors > 0);
   assert.ok(repairedAnchors > 0, 'the real corrected corpus must exercise conservative migration');
 });
 

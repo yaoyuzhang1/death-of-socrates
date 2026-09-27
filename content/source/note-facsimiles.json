@@ -1,0 +1,365 @@
+{
+  "sourcePdfSha256": "4d8d8c8a9c29ca24edaba68ac418aa68e9b8739e2fe47004c34b0cbea33a739b",
+  "pages": [
+    {
+      "printedPage": 67,
+      "pdfPage": 78,
+      "file": "facsimile/notes/page-067.webp",
+      "crop": [
+        140,
+        1791,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 188,
+      "sha256": "89732ffc1dd52568dea28f4e71718423fb8fcbe15cd2b6cde376aa9915da68ad",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 91,
+      "pdfPage": 102,
+      "file": "facsimile/notes/page-091.webp",
+      "crop": [
+        140,
+        1428,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 551,
+      "sha256": "7dcb74436940b73703c7928d9907bafc2016dfff598ee1b8621e234d345d3ea7",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 105,
+      "pdfPage": 116,
+      "file": "facsimile/notes/page-105.webp",
+      "crop": [
+        140,
+        1716,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 263,
+      "sha256": "890310885c50a511658ed8827fe1da2be56c6443fe2c38bfb220f6751343a663",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 108,
+      "pdfPage": 119,
+      "file": "facsimile/notes/page-108.webp",
+      "crop": [
+        140,
+        1666,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 313,
+      "sha256": "d7223ac0f76701317c878bf0d651f558a18bbf158261e017857e90c0b3d9408d",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 125,
+      "pdfPage": 136,
+      "file": "facsimile/notes/page-125.webp",
+      "crop": [
+        140,
+        1723,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 256,
+      "sha256": "af057e1228fda363c53483a467faff58c38ba1befd17774a0e007b9da8b1a309",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 139,
+      "pdfPage": 150,
+      "file": "facsimile/notes/page-139.webp",
+      "crop": [
+        140,
+        1618,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 361,
+      "sha256": "c8937c334b87feef5bcbea2452faa341dc16d07121730fd81a79e69ede73636f",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 157,
+      "pdfPage": 168,
+      "file": "facsimile/notes/page-157.webp",
+      "crop": [
+        140,
+        1719,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 260,
+      "sha256": "451e7b15ec6e54a77ef8dc658d23266077207819c83ad035796018a2e8bfa496",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 158,
+      "pdfPage": 169,
+      "file": "facsimile/notes/page-158.webp",
+      "crop": [
+        140,
+        1660,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 319,
+      "sha256": "daf2631db4d48b1e445bfe9b553a9d52bd3bce4bfd597104a76f1a829241cb82",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 165,
+      "pdfPage": 176,
+      "file": "facsimile/notes/page-165.webp",
+      "crop": [
+        140,
+        1737,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 242,
+      "sha256": "d3ce18528d0982e17a9c3441f6cd3d04b4d0c601079ec9b97f9bbf85d4a1bb59",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 181,
+      "pdfPage": 192,
+      "file": "facsimile/notes/page-181.webp",
+      "crop": [
+        140,
+        1722,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 257,
+      "sha256": "9f6c6b7c824c403397ae9df7576c75eb53a93d50a4830d6f0b7754f09b5abac7",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 203,
+      "pdfPage": 214,
+      "file": "facsimile/notes/page-203.webp",
+      "crop": [
+        140,
+        1796,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 183,
+      "sha256": "2524d8508a71dffe2c7e66fce93b2210c327899fb7453e0bc4aa2775f4f8e194",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 222,
+      "pdfPage": 233,
+      "file": "facsimile/notes/page-222.webp",
+      "crop": [
+        140,
+        1796,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 183,
+      "sha256": "6a6214357f39a43bae4ca71597194281f2763bdb59ea8222327ad59ccb57c34a",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 233,
+      "pdfPage": 244,
+      "file": "facsimile/notes/page-233.webp",
+      "crop": [
+        140,
+        1819,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 160,
+      "sha256": "cc58aaedf1c6654e51d7bd1330fcdd30f344f130bd3c82d43be114f1365e469a",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 242,
+      "pdfPage": 253,
+      "file": "facsimile/notes/page-242.webp",
+      "crop": [
+        140,
+        1737,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 242,
+      "sha256": "c6c237e21205c5152ba518a3c3e73dc8c86a789430a4b49c0986825148d3863e",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 243,
+      "pdfPage": 254,
+      "file": "facsimile/notes/page-243.webp",
+      "crop": [
+        140,
+        1660,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 319,
+      "sha256": "fc3401600b6440926f3927c01aeb3aeb4a071fa7c9b13325bd212d6973622d30",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 263,
+      "pdfPage": 274,
+      "file": "facsimile/notes/page-263.webp",
+      "crop": [
+        140,
+        1812,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 167,
+      "sha256": "8b2cc9c42d3a2dd73c5e37a8e5af5b28da9029f4392d61d75982db6c9f46bf3b",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 344,
+      "pdfPage": 355,
+      "file": "facsimile/notes/page-344.webp",
+      "crop": [
+        140,
+        1804,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 175,
+      "sha256": "10d87f7934d7137af3b287897f848c360ff49c774998792da26b717114f54cd5",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 380,
+      "pdfPage": 391,
+      "file": "facsimile/notes/page-380.webp",
+      "crop": [
+        140,
+        1527,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 452,
+      "sha256": "5efd97e8191305a34825dc2789bbb18b9c8713e942dc933a2d3379f11f798e5d",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 395,
+      "pdfPage": 406,
+      "file": "facsimile/notes/page-395.webp",
+      "crop": [
+        140,
+        1677,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 302,
+      "sha256": "67ccab49f61d243c5b8790a7e9ef7f5d0a45390fc604189b19079d7205fc8e9a",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 418,
+      "pdfPage": 429,
+      "file": "facsimile/notes/page-418.webp",
+      "crop": [
+        140,
+        1727,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 252,
+      "sha256": "66dfe1cb2950e31b0046a8abf5883167dd3c175601c661afd53cc8b527a42bf6",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 421,
+      "pdfPage": 432,
+      "file": "facsimile/notes/page-421.webp",
+      "crop": [
+        140,
+        888,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 1091,
+      "sha256": "518e447baaa96f20fdafc972a793f8d1c2800c9c91cac3d82e683e0c63431705",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 424,
+      "pdfPage": 435,
+      "file": "facsimile/notes/page-424.webp",
+      "crop": [
+        140,
+        1638,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 341,
+      "sha256": "cb2ca347eef9856ea13b97aaa5e01d9b9c5fdc66d9d98a173e2000415e92dc21",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 425,
+      "pdfPage": 436,
+      "file": "facsimile/notes/page-425.webp",
+      "crop": [
+        140,
+        1541,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 438,
+      "sha256": "e52c46517411866476a7e29733060865816d77bbc2a57744e18a32c635443dc5",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    },
+    {
+      "printedPage": 426,
+      "pdfPage": 437,
+      "file": "facsimile/notes/page-426.webp",
+      "crop": [
+        140,
+        1720,
+        1360,
+        1979
+      ],
+      "width": 1220,
+      "height": 259,
+      "sha256": "b1418dbcc5d6a9c16387d386ad4895d93429254ef3ae6357d86e142c9c2b50de",
+      "reason": "按原版影像呈现希腊文、重音字形和复杂图注，不把未可靠校对的识别字符当作译者原文。"
+    }
+  ]
+}

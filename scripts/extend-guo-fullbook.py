@@ -102,6 +102,9 @@ for n in range(188,438):
     book=max(book for book,start in starts.items() if n-11>=start)
     pages.append({'printedPage':n-11,'pdfPage':n,'book':book,'paragraphs':paragraphs,'notes':notes})
     report.append({'printedPage':n-11,'book':book,'bodyLeft':round(base),'footnoteY':round(r),'paragraphCount':len(paragraphs),'characters':sum(len(p['text']) for p in paragraphs),'notes':len(notes),'ignored':ignored,'lineMap':line_map})
+from apply_scan_review import apply_scan_reviews
+scan_review_log=apply_scan_reviews(pages, allow_applied=True)
+(OUT/'scan-review-regeneration-log.json').write_text(json.dumps(scan_review_log,ensure_ascii=False,indent=2),encoding='utf-8')
 result={**existing,'scope':'第一至十卷，完整对话正文印刷页1—426，PDF第12—437页（不含译者引言、附录索引及版本简目）','pages':old+pages}
 assert hashlib.sha256(json.dumps(result['pages'][:176],ensure_ascii=False,sort_keys=True).encode()).hexdigest()==old_digest
 (OUT/'draft-pages.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

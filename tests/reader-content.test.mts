@@ -160,9 +160,11 @@ test('Original book facsimiles remain complete and game illustrations and audio 
  const audio=names.filter(n=>/\.(mp3|wav|ogg|m4a|mp4)$/i.test(n));
  assert.ok(audio.every(n=>/^audio[\\/]/.test(n)));
  const images=names.filter(n=>/\.(png|jpg|jpeg|webp)$/i.test(n));
- const facsimiles=images.filter(n=>/^facsimile[\\/]/.test(n));
+ const facsimiles=images.filter(n=>/^facsimile[\\/]page-\d{3}\.webp$/.test(n));
  assert.equal(facsimiles.length,426);
- assert.ok(facsimiles.every(n=>/^facsimile[\\/]page-\d{3}\.webp$/.test(n)));
+ const noteScans=images.filter(n=>/^facsimile[\\/]notes[\\/]page-\d{3}\.webp$/.test(n));
+ assert.equal(noteScans.length,24);
+ assert.ok(images.filter(n=>/^facsimile[\\/]/.test(n)).every(n=>facsimiles.includes(n)||noteScans.includes(n)));
  assert.ok(images.every(n=>/^facsimile[\\/]|^illustrations[\\/]/.test(n)));
  assert.ok(!JSON.stringify(corpus).includes('voice-manifest'));
  assert.ok(!JSON.stringify(corpus).includes('endingId'));
