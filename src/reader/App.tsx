@@ -24,6 +24,7 @@ import './style.css';
 import './play.css';
 import './paged-reader.css';
 import './parallel-chapters.css';
+import './visual-home.css';
 
 const STORAGE_KEY = 'republic-reading-v2';
 const SCREEN_KEY = 'republic-screen-v6';
@@ -220,6 +221,7 @@ function ReadingApp() {
     update(s => enterChapter(rememberScroll(s), units, chapterId));
     setLocationVersion(version => version + 1);
     setSummaryId(null); setPanel(null); setScreen('read');
+    requestAnimationFrame(() => readerTop.current?.focus({ preventScroll: true }));
   };
   const goTo = (index: number) => {
     update(s => { const moved = navigate(rememberScroll(s), units, index); return setPagePosition(moved, units[moved.cursor], pagePosition(moved, units[moved.cursor])); });
@@ -306,34 +308,34 @@ function ReadingApp() {
     {notice && <div className="notice" role="status"><span>{notice}</span><button aria-label="关闭提示" onClick={() => setNotice('')}><X size={16} /></button></div>}
     {study.notice && <div className="notice" role="status">{study.notice}</div>}
 
-    {screen === 'home' && <main id="main" className="home">
-      <section className="hero"><p className="eyebrow">柏拉图 · 原典互动阅读</p><h1>苏格拉底的<span>下一问</span></h1>
-        <p className="hero-description">沿着《理想国》逐页阅读，在关键处比较更好的追问。<br className="desktop-break" />{coverage}，{corpus.chapters.length}个完整主题。可以按顺序读，也可以从兴趣开始。</p>
-        <p className="play-rules">读几轮对话 · 选核心追问 · 检查理解 · 听回应</p>
+    {screen === 'home' && <main id="main" className="home visual-home">
+      <section className="hero visual-hero"><div className="visual-hero-copy"><p className="eyebrow">全十卷 · {corpus.chapters.length}个独立章节</p><h1>苏格拉底的<span>下一问</span></h1>
+        <p className="hero-description">读原典，选一个更好的问题。</p>
         <div className="hero-actions"><button className="primary" onClick={start}>{save.started ? '继续阅读' : '从第一章开始'}<ArrowRight size={19} /></button>{save.started && <span className="resume-note">第{chapterNumeral(chapterNumber)}章 · {unit.section.title}</span>}<a className="text-button" href="#contents-title">选择感兴趣的章节 <ChevronRight size={16} /></a></div>
         {revisiting && <button className="text-button latest-home" onClick={() => goTo(latestIndex)}>回到最新进度 <ArrowRight size={15} /></button>}
-        <div className="book-facts"><span>{coverage}</span><span>{corpus.chapters.length} 个主题章</span><span>{totalQuestions} 次核心追问</span><span>{learningChecks.length} 处理解检查</span><span>约 {(characterCount / 10000).toFixed(1)} 万字</span></div>
+        </div><figure className="visual-hero-art"><img src={`${import.meta.env.BASE_URL}illustrations/chapter-covers/good-v2.webp`} alt="苏格拉底向青年展开谈话，阳光照亮眼前的陶器与海面。" width={1672} height={941} fetchPriority="high" decoding="async" /><figcaption>场景插画</figcaption></figure>
       </section>
-      <ReaderIntroduction />
+      <section className="home-contents" aria-labelledby="contents-title"><div className="section-heading"><h2 id="contents-title">翻开一章</h2><p>自由选择 · 已读完 {completedChapters} / {corpus.chapters.length} 章</p></div>
+        <ChapterExplorer corpus={corpus} units={units} save={save} study={study.records} onEnter={chooseChapter} />
+      </section>
+      <div className="home-reading-help"><ReaderIntroduction />
+      <details className="home-records"><summary>阅读记录与全书信息</summary><div className="book-facts"><span>{coverage}</span><span>{corpus.chapters.length} 个主题章</span><span>{totalQuestions} 次核心追问</span><span>{learningChecks.length} 处理解检查</span><span>约 {(characterCount / 10000).toFixed(1)} 万字</span></div>
       {save.started && (overall.answered > 0 || save.completed > 0) && <section className="journey-panel" aria-label="我的进度">
         <div className="journey-counts"><p><strong>{overall.answered}<small> / {overall.total}</small></strong><span>已遇到的追问</span></p><p><strong>{overall.correct}</strong><span>首次选中原问</span></p><p><strong>{overall.remainingReview}</strong><span>待重练</span></p></div>
         {overall.answered > 0 && <div className="round-invitation"><div><h2>{overall.remainingReview ? '再试试那些没选中的问题' : '换个顺序，再想一轮'}</h2><p>每轮最多五问，先练尚未选中的题。随时返回原来的阅读位置。</p></div><button onClick={() => startReview()}><RotateCcw size={16} /> 开始一轮重练</button></div>}
-      </section>}
-      <section className="home-contents" aria-labelledby="contents-title"><div className="section-heading"><h2 id="contents-title">选一段完整的讨论</h2><p>全部章节自由开放 · 已完成 {completedChapters} / {corpus.chapters.length} 章。各章的页码、答题与书签都会保留。</p></div>
-        <ChapterExplorer corpus={corpus} units={units} save={save} study={study.records} onEnter={chooseChapter} />
-      </section>
+      </section>}</details></div>
       {complete && <section className="home-unlock"><Check size={23} /><div><h2>{coverage}已读完</h2><p>回看各章的阅读足迹，再检验那些仍值得追问的理由。</p></div><button className="primary" onClick={openCompletion}>查看全书总结 <ArrowRight size={17} /></button></section>}
       {bonusUnlocked ? <section className="home-unlock"><BookOpen size={23} /><div><h2>阅读彩蛋 · 苏格拉底之死</h2><p>前八章的阅读里程碑已完成。这个入口会一直保留，可以随时继续全书。</p><button className="text-button" onClick={() => { setAudio(value => ({ ...value, voice: true })); playCelebration('milestone'); }}><Play size={14} />播放里程碑祝贺</button></div><button className="primary" onClick={openBonus}>{save.bonus.completed ? '重访隐藏章节' : Object.keys(save.bonus.choices).length ? '继续隐藏章节' : '进入隐藏章节'}<ArrowRight size={17} /></button></section> : <p className="unlock-hint">读完第一至四卷的前八个主题章后，将开启彩蛋《苏格拉底之死》。全书章节始终可自由选择。</p>}
       <footer className="home-footer"><p>{corpus.edition.label}</p><button className="text-button" onClick={() => openPanel('source')}>底本与阅读说明 <ChevronRight size={15} /></button><p className="small">进度保存在当前浏览器中。无需登录。</p></footer>
     </main>}
 
-    {screen === 'read' && <div className="context-layout"><ConversationContext {...getReadingContext(unit, page, roles)} /><main id="main" className="reading-shell paged-reading" ref={readerTop} tabIndex={-1}>
+    {screen === 'read' && <div className="context-layout"><ConversationContext {...getReadingContext(unit, page, roles)} /><main id="main" className="reading-shell paged-reading" aria-label={`第${chapterNumeral(chapterNumber)}章 · ${unit.chapter.title}`} ref={readerTop} tabIndex={-1}>
       {revisiting && <div className="return-latest"><span>正在回看已读内容</span><button className="text-button" onClick={() => goTo(latestIndex)}>回到最新进度 <ArrowRight size={15} /></button></div>}
       <div className="reading-location"><button className="text-button" onClick={() => openPanel('contents')}>第{chapterNumeral(chapterNumber)}章 · {unit.chapter.title}</button><div className="reading-location-actions"><button className="text-button" onClick={() => openPanel('guide')}>本章导引</button><button className={`icon-button bookmark-button ${save.bookmarks.includes(unit.id) ? 'bookmarked' : ''}`} aria-label={save.bookmarks.includes(unit.id) ? '移除书签' : '添加书签'} title="书签" onClick={() => update(s => ({ ...s, bookmarks: s.bookmarks.includes(unit.id) ? s.bookmarks.filter(id => id !== unit.id) : [...s.bookmarks, unit.id] }))}><Bookmark size={19} fill={save.bookmarks.includes(unit.id) ? 'currentColor' : 'none'} /></button></div></div>
-      {firstOfChapter && pageIndex === 0 && <><section className="chapter-intro"><p className="eyebrow">第{chapterNumeral(chapterNumber)}章 / {corpus.chapters.length}章</p><h1>{unit.chapter.title}</h1><p>{unit.chapter.range}</p></section><ChapterOpening chapter={unit.chapter} /></>}
+      {firstOfChapter && pageIndex === 0 && <ChapterOpening chapter={unit.chapter} headingLevel={1} />}
       <div className="reading-section-heading"><h2>{unit.section.title}</h2><span>{unit.section.range}</span></div>
       <div className="page-position" aria-label="当前阅读页"><span>{page.kind === 'question' ? '追问时刻' : '原文阅读'}</span><span>本节 {pageIndex + 1} / {pages.length} 页</span><progress value={pageIndex + 1} max={pages.length} /></div>
-      <ComicScene chapterId={unit.chapter.id} pageId={page.id} nextPageId={preloadPageId} compact={page.kind === 'question'} />
+      {!(firstOfChapter && pageIndex === 0) && <ComicScene chapterId={unit.chapter.id} pageId={page.id} nextPageId={preloadPageId} compact={page.kind === 'question'} />}
       <article className="reading-text page-content" aria-label="原典正文" key={unit.id + ':' + pageIndex} data-page-index={pageIndex} data-page-kind={page.kind}>
         {page.kind === 'text' ? <div className="text-page">{page.paragraphs.map(fragment => <ReadingPassage key={fragment.id} paragraph={fragment} sourceId={fragment.sourceId} role={roles.get(fragment.sourceId)} continuation={fragment.fragmentIndex > 0} />)}</div> : <QuestionChallenge question={page.question} seed={save.seed} resolved={resolved} onAttempt={attemptQuestion} onContinue={() => turnPage(pageIndex + 1)} audio={audio} />}
       </article>
@@ -346,7 +348,7 @@ function ReadingApp() {
       <div className="reading-footnote"><span>第{chapterNumber}章 · 阅读位置 {units.filter(u => u.chapter.id === unit.chapter.id && u.index <= save.cursor).length} / {units.filter(u => u.chapter.id === unit.chapter.id).length}</span><button className="text-button" onClick={() => openPanel('source')}>底本说明</button></div>
     </main></div>}
 
-    {screen === 'chapter-end' && <main id="main" className="chapter-end"><p className="eyebrow">本章已读完</p><h1>{summary.title}</h1><p className="chapter-conclusion">{summary.range}</p>
+    {screen === 'chapter-end' && <main id="main" className="chapter-end">
       <ChapterRecap chapter={summary} chapters={corpus.chapters} onEnter={chooseChapter} />
       {bonusUnlocked && !complete && <section className="milestone-unlock"><p className="eyebrow">阅读里程碑</p><h2>隐藏对话已经开启</h2><p>前八个主题的记录全部保留。可以先读《苏格拉底之死》，也可以继续第五至十卷。</p><div className="completion-actions"><button onClick={openBonus}>进入隐藏章节 <ArrowRight size={16} /></button><button onClick={() => { setAudio(value => ({ ...value, voice: true })); playCelebration('milestone'); }}><Play size={15} />播放里程碑祝贺</button></div></section>}
       <div className="chapter-score"><div><strong>{summaryStats.correct}<span> / {summaryStats.total}</span></strong><p>首次答对</p></div><p>直接揭示 {summaryStats.revealed} 题</p></div>
@@ -363,7 +365,7 @@ function ReadingApp() {
     {screen === 'review' && <ReviewRound key={reviewSession} corpus={corpus} save={save} questionIds={reviewIds} onAnswer={(id, choiceId) => update(s => recordReview(s, units, id, choiceId))} onClose={() => setScreen(reviewReturn)} audio={audio} returnLabel={reviewReturn === 'home' ? '返回首页' : reviewReturn === 'chapter-end' ? '返回本章小结' : reviewReturn === 'complete' ? '返回全书总结' : '返回阅读'} />}
 
     {panel && <Modal title={panel === 'contents' ? '阅读目录' : panel === 'settings' ? '阅读设置' : panel === 'guide' ? '本章阅读导引' : '底本与阅读说明'} onClose={() => setPanel(null)}>
-      {panel === 'guide' && <><h3>{unit.chapter.title}</h3><ChapterOpening chapter={unit.chapter} /><p className="guide-boundary">这里说明讨论的背景，不给出待答题的答案。理解一项论证，可以与评价是否同意它分开。</p></>}
+      {panel === 'guide' && <><ChapterOpening chapter={unit.chapter} /><p className="guide-boundary">这里说明讨论的背景，不给出待答题的答案。理解一项论证，可以与评价是否同意它分开。</p></>}
       {panel === 'contents' && <><p className="panel-intro">{corpus.chapters.length}章可自由选择，每章内部沿原文顺序阅读。切换章节不会覆盖其他章节的记录。首次进入时可查看本章的简短导引。</p>
         {save.started && <div className="toc-current"><button onClick={() => goTo(latestIndex)}>回到本章最新进度<small>{units[latestIndex].chapter.title} · {units[latestIndex].section.title}</small></button></div>}
         {save.bookmarks.length > 0 && <section className="bookmark-list"><h3>我的书签</h3>{save.bookmarks.map(id => { const u = units.find(u => u.id === id)!; return <button key={id} onClick={() => goTo(u.index)}><Bookmark size={15} />{u.chapter.title} · {u.section.title}</button>; })}</section>}

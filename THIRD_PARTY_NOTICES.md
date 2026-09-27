@@ -16,7 +16,7 @@
 
 ## 程序与依赖
 
-`reader-public/illustrations/` 中的62幅主篇漫画及 `reader-public/illustrations/bonus/` 中的12幅隐藏章节漫画，均由本项目通过内置图像生成工具制作，并非原书插图；创作约束、提示词与文件清单见 [docs/art-direction.md](docs/art-direction.md)。
+`reader-public/illustrations/` 中包含62幅正文漫画、`chapter-covers/` 中4幅新增封面，以及 `bonus/` 中12幅隐藏章节漫画：主篇共66幅，全部共78幅。20个章节封面分别采用16幅既有图和4幅新增图，封面选择见 `content/art/chapter-covers-v2.json`。这些图均由本项目通过内置图像生成工具制作，并非原书插图；人物外貌、光照、构图及选择意象属于编辑创作，不作为原典事件复原的声明。创作约束、提示词与文件清单见 [docs/art-direction.md](docs/art-direction.md) 及 [新版封面生成记录](docs/chapter-cover-prompts-v2.md)。
 
 `reader-public/audio/feedback/` 为微软在线语音服务 `zh-CN-XiaoxiaoNeural` 生成的285条编辑解释录音；`reader-public/audio/completion/` 另含八章里程碑及二十章全书完成两条祝贺。`reader-public/audio/bonus/` 包含148段隐藏章节普通话正文、人物回应与说明，采用晓晓、云希、云扬声线。`reader-public/audio/study/` 包含101道理解判断的303段选项解释（主篇89道、隐藏章12道），采用晓晓标准普通话声线，只朗读已经确认的选项反馈。精确文本、声线与文件校验分别见各目录的 `manifest.json`。这些声音由项目合成制作，不表示原译者、出版方或历史人物参与录制。
 

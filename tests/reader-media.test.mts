@@ -58,6 +58,18 @@ test('Every reading page has a verified source-mapped color illustration, and pa
     if (page.kind === 'question') assert.equal(manifest.assets[id].kind, 'conversation', 'no illustrated answer examples on question pages');
     if (index) assert.notEqual(id, manifest.pages[pages[index - 1].id], `fresh picture on page turn ${page.id}`);
   }
+  const covers = JSON.parse(readFileSync(new URL('../content/art/chapter-covers-v2.json', import.meta.url), 'utf8'));
+  assert.deepEqual(covers.map((cover: any) => cover.chapterId), corpus.chapters.map(chapter => chapter.id));
+  assert.equal(new Set(covers.map((cover: any) => cover.file)).size, corpus.chapters.length, 'chapter identities have distinct covers');
+  for (const [index, cover] of covers.entries()) {
+    assert.equal(cover.number, index + 1);
+    assert.ok(cover.alt && ['conversation', 'example'].includes(cover.kind));
+    const bytes = readFileSync(new URL(cover.file, directory));
+    assert.equal(bytes.subarray(0, 4).toString(), 'RIFF');
+    assert.equal(bytes.subarray(8, 12).toString(), 'WEBP');
+    assert.ok(bytes.length > 10_000 && bytes.length < 1_000_000);
+    hashes.add(sha(bytes));
+  }
   const names = readdirSync(directory, { recursive: true }).map(String);
   assert.equal(names.filter(name => name.endsWith('.webp') && !/^bonus[\\/]/.test(name)).length, hashes.size);
   assert.ok(!names.some(name => /\.(png|jpe?g)$/i.test(name)), 'uncompressed originals stay outside the distributed game');

@@ -1,0 +1,22 @@
+[
+  {"chapterId":"obligations","number":1,"file":"progression/early-02-cephalus.webp","kind":"conversation","alt":"克法洛斯在家中与苏格拉底交谈，年轻人坐在一旁倾听。"},
+  {"chapterId":"rule","number":2,"file":"progression/early-05-interruption.webp","kind":"conversation","alt":"色拉叙马霍斯倾身加入争论，苏格拉底与同伴转向他。"},
+  {"chapterId":"life","number":3,"file":"progression/early-09-lyre.webp","kind":"example","alt":"演奏者拨动里拉琴，呈现谈话中技艺与协调的图景。"},
+  {"chapterId":"worth","number":4,"file":"progression/early-14-ring-story.webp","kind":"example","alt":"牧羊人坐在同伴之间转动手中戒指，呈现格劳孔讲述的故事。"},
+  {"chapterId":"city","number":5,"file":"progression/late-city-crafts.webp","kind":"example","alt":"城邦中不同工匠正在劳作，呈现谈话中的共同生活构想。"},
+  {"chapterId":"education","number":6,"file":"progression/late-education-music.webp","kind":"example","alt":"古希腊青年学习音乐，呈现对教育和性格的讨论。"},
+  {"chapterId":"guardians","number":7,"file":"progression/late-guardians-shared.webp","kind":"example","alt":"护卫者共同用餐，呈现原文的生活安排构想。"},
+  {"chapterId":"soul","number":8,"file":"progression/late-soul-dye.webp","kind":"example","alt":"染工在染缸旁处理羊毛，呈现原文关于保持色彩的比喻。"},
+  {"chapterId":"community","number":9,"file":"soul.webp","kind":"conversation","alt":"苏格拉底与青年围坐，继续讨论共同生活的难题。"},
+  {"chapterId":"philosophers","number":10,"file":"progression/early-16-socrates-brothers.webp","kind":"conversation","alt":"苏格拉底面对格劳孔与阿得曼托斯，仔细听取疑问。"},
+  {"chapterId":"philosopher-city","number":11,"file":"progression/fullbook-ship.webp","kind":"example","alt":"古希腊航船上，水手争执而掌握航行知识的人观察海天；这是谈话中的航船比喻。"},
+  {"chapterId":"good","number":12,"file":"chapter-covers/good-v2.webp","kind":"example","alt":"阳光照亮海边的石材、树叶与陶器，呈现原文谈论的可见世界。"},
+  {"chapterId":"cave","number":13,"file":"progression/fullbook-cave.webp","kind":"example","alt":"洞穴中的囚徒面向墙上影子，矮墙后有人搬运物件；这是原文的洞穴寓言。"},
+  {"chapterId":"dialectic","number":14,"file":"progression/dialogue-15.webp","kind":"conversation","alt":"苏格拉底与格劳孔在院中认真推敲教育的步骤。"},
+  {"chapterId":"regimes","number":15,"file":"progression/late-guardians-continuity.webp","kind":"conversation","alt":"阿得曼托斯与苏格拉底相对交谈，其他人继续倾听。"},
+  {"chapterId":"democracy","number":16,"file":"chapter-covers/regimes-v2.webp","kind":"example","alt":"古希腊广场中，不同年龄的公民正在彼此争论；这是政制讨论的场景表现。"},
+  {"chapterId":"tyrant","number":17,"file":"progression/dialogue-16.webp","kind":"conversation","alt":"苏格拉底与青年倾身交谈，讨论僭主生活的内在处境。"},
+  {"chapterId":"pleasure","number":18,"file":"progression/late-soul-search.webp","kind":"conversation","alt":"参与谈话的人认真倾听与思量，继续比较不同生活的快乐。"},
+  {"chapterId":"imitation","number":19,"file":"chapter-covers/imitation-v2.webp","kind":"example","alt":"古希腊画家描画一张木床，观察者比较画中形象与实物；这是原文摹仿讨论的图景。"},
+  {"chapterId":"destiny","number":20,"file":"chapter-covers/destiny-v2.webp","kind":"example","note":"编辑封面 · 选择的意象","alt":"编辑想象的封面：古希腊衣着的人手持未展开的卷轴，在星空下思量；卷轴是选择的视觉意象。"}
+]
