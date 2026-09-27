@@ -9,14 +9,14 @@ import { makeReadingPages } from '../src/reader/pagination.ts';
 const corpus: Corpus = JSON.parse(readFileSync(new URL('../reader-public/text/republic.json', import.meta.url), 'utf8'));
 const sha = (value: string | Buffer) => createHash('sha256').update(value).digest('hex');
 
-test('All 141 Mandarin recordings match the exact explanation for their selected option', () => {
+test('All Mandarin recordings match the exact explanation for their selected option', () => {
   const directory = new URL('../reader-public/audio/feedback/', import.meta.url);
   const manifest = JSON.parse(readFileSync(new URL('manifest.json', directory), 'utf8'));
   assert.equal(manifest.complete, true);
   assert.equal(manifest.language, 'zh-CN');
   assert.equal(manifest.voice, 'zh-CN-XiaoxiaoNeural');
-  assert.equal(manifest.entries.length, 141);
-  assert.equal(new Set(manifest.entries.map((entry: any) => entry.key)).size, 141);
+  assert.equal(manifest.entries.length, 285);
+  assert.equal(new Set(manifest.entries.map((entry: any) => entry.key)).size, 285);
   const expected = flattenCorpus(corpus).flatMap(unit => unit.question ? unit.question.options.map(option => ({ question: unit.question!, option })) : []);
   for (const { question, option } of expected) {
     const key = `${question.id}--${option.id}`;
@@ -90,7 +90,10 @@ test('The unlocked epilogue has twelve distinct illustrated scenes and verified 
   assert.equal(manifest.language, 'zh-CN');
   assert.equal(manifest.voice, 'zh-CN-XiaoxiaoNeural');
   assert.equal(manifest.textSha256, sha(manifest.text));
-  assert.ok(manifest.text.includes('恭喜你') && manifest.text.includes('隐藏章节《苏格拉底之死》已经开启'));
+  assert.ok(manifest.text.includes('恭喜你') && manifest.text.includes('十卷、二十个主题章节'));
+  const milestone = JSON.parse(readFileSync(new URL('milestone-manifest.json', audioDir), 'utf8'));
+  assert.ok(milestone.text.includes('八章') && milestone.text.includes('隐藏章节《苏格拉底之死》已经开启'));
+  assert.equal(sha(readFileSync(new URL(milestone.filename, audioDir))), milestone.sha256);
   const bytes = readFileSync(new URL(manifest.filename, audioDir));
   assert.equal(bytes.length, manifest.bytes);
   assert.equal(sha(bytes), manifest.sha256);

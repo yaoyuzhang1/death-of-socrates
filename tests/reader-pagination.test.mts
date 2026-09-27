@@ -12,6 +12,7 @@ const corpus = JSON.parse(readFileSync(new URL('../reader-public/text/republic.j
 test('coherent dialogue pages retain all source characters, order and metadata within bounded reading lengths', () => {
   const before = JSON.stringify(corpus);
   let textPageCount = 0;
+  let legacyTextPageCount = 0;
   for (const unit of flattenCorpus(corpus)) {
     const pages = makeReadingPages(unit);
     const source = [...unit.paragraphs, ...(unit.question ? [unit.question.original] : []), ...unit.response];
@@ -37,6 +38,7 @@ test('coherent dialogue pages retain all source characters, order and metadata w
     for (const page of pages) {
       if (page.kind !== 'text') continue;
       textPageCount++;
+      if (unit.chapterIndex < 8) legacyTextPageCount++;
       assert.ok(page.paragraphs.length >= 1 && page.paragraphs.length <= 12, page.id);
       assert.ok(page.paragraphs.reduce((sum, paragraph) => sum + paragraph.text.length, 0) <= 760, page.id);
     }
@@ -53,7 +55,8 @@ test('coherent dialogue pages retain all source characters, order and metadata w
     }
     assert.deepEqual(makeReadingPages(unit), pages, 'pagination is stable across calls');
   }
-  assert.equal(textPageCount, 226);
+  assert.equal(legacyTextPageCount, 226, 'published first-eight-chapter pagination remains stable');
+  assert.ok(textPageCount > legacyTextPageCount, 'the remaining six books are paginated too');
   assert.equal(JSON.stringify(corpus), before);
 });
 
@@ -127,7 +130,7 @@ test('published v4 metadata is an immutable 743-text-page snapshot, independent 
     'source edits must not regenerate the published page boundary table');
   let oldTextPages = 0;
   let oldQuestions = 0;
-  for (const unit of flattenCorpus(corpus)) {
+  for (const unit of flattenCorpus(corpus).filter(unit => unit.chapterIndex < 8)) {
     const frozen = VERSION4_LAYOUT[unit.id];
     assert.ok(frozen, unit.id);
     const oldPages = makeVersion4ReadingPages(unit);
@@ -153,7 +156,7 @@ test('published v4 metadata is an immutable 743-text-page snapshot, independent 
 test('all frozen v4 positions keep their question side and unchanged source anchors map exactly', () => {
   let exactAnchors = 0;
   let repairedAnchors = 0;
-  for (const unit of flattenCorpus(corpus)) {
+  for (const unit of flattenCorpus(corpus).filter(unit => unit.chapterIndex < 8)) {
     const frozen = VERSION4_LAYOUT[unit.id];
     const oldPages = makeVersion4ReadingPages(unit);
     const pages = makeReadingPages(unit);

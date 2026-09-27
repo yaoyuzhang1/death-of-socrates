@@ -116,7 +116,7 @@ export default function BonusChapter({ save, units, onUpdate, onExit, study, aud
   };
 
   return <div className="context-layout bonus-context-layout"><ConversationContext {...getBonusContext(scene)} /><main id="main" className="bonus-shell" data-testid="bonus-chapter">
-    <div className="bonus-location"><button className="text-button" onClick={onExit}><ArrowLeft size={16} />{preview ? '返回主篇' : '八章总结'}</button><span>隐藏章节 · {Object.keys(save.bonus.choices).length} / {content.scenes.length} 场已探索</span></div>
+    <div className="bonus-location"><button className="text-button" onClick={onExit}><ArrowLeft size={16} />返回主篇</button><span>隐藏章节 · {Object.keys(save.bonus.choices).length} / {content.scenes.length} 场已探索</span></div>
     {ending ? <section className="bonus-ending" data-testid="bonus-ending">
       <p className="eyebrow">苏格拉底之死 · 对话结束</p><h1 ref={heading} tabIndex={-1}>{content.ending.title}</h1>
       <Passages passages={content.ending.passages} />

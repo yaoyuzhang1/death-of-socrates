@@ -4,7 +4,7 @@
 
 ## 当前中文底本
 
-柏拉图《理想国》，郭斌和、张竹明译，商务印书馆，1986年8月第一版、北京第一次印刷，统一书号2017·366。本游戏采用第一至四卷，印刷页1—176。
+柏拉图《理想国》，郭斌和、张竹明译，商务印书馆，1986年8月第一版、北京第一次印刷，统一书号2017·366。本游戏采用完整第一至十卷，印刷页1—426；主题划分、阅读导引及章末回顾另标为编辑内容。
 
 `content/source/guo-1986-pages.json`、生成的当前正文/书页对照数据、`reader-public/facsimile/` 以及题目中的直接原文引句，均来源于这一中文出版译本。译文及书页权利归相应权利人。项目不以 MIT 或 CC BY-SA 重新授权它们，也不声称出版社或译者认可本游戏。编辑加工包括 OCR 整理、录入校正、版面分段、主题组织、追问练习和题后解释；整理记录见 [docs/sources.md](docs/sources.md)。
 
@@ -16,9 +16,9 @@
 
 ## 程序与依赖
 
-`reader-public/illustrations/` 中的60幅主篇漫画及 `reader-public/illustrations/bonus/` 中的12幅隐藏章节漫画，均由本项目通过内置图像生成工具制作，并非原书插图；创作约束、提示词与文件清单见 [docs/art-direction.md](docs/art-direction.md)。
+`reader-public/illustrations/` 中的62幅主篇漫画及 `reader-public/illustrations/bonus/` 中的12幅隐藏章节漫画，均由本项目通过内置图像生成工具制作，并非原书插图；创作约束、提示词与文件清单见 [docs/art-direction.md](docs/art-direction.md)。
 
-`reader-public/audio/feedback/` 为微软在线语音服务 `zh-CN-XiaoxiaoNeural` 生成的141条编辑解释录音；`reader-public/audio/completion/` 另含1条八章完成祝贺。`reader-public/audio/bonus/` 包含119段隐藏章节普通话正文、人物回应与说明，采用晓晓、云希、云扬声线。`reader-public/audio/study/` 包含50道理解判断的150段选项解释，采用晓晓标准普通话声线，只朗读已经确认的选项反馈。精确文本、声线与文件校验分别见各目录的 `manifest.json`。这些声音由项目合成制作，不表示原译者、出版方或历史人物参与录制。
+`reader-public/audio/feedback/` 为微软在线语音服务 `zh-CN-XiaoxiaoNeural` 生成的285条编辑解释录音；`reader-public/audio/completion/` 另含八章里程碑及二十章全书完成两条祝贺。`reader-public/audio/bonus/` 包含148段隐藏章节普通话正文、人物回应与说明，采用晓晓、云希、云扬声线。`reader-public/audio/study/` 包含101道理解判断的303段选项解释（主篇89道、隐藏章12道），采用晓晓标准普通话声线，只朗读已经确认的选项反馈。精确文本、声线与文件校验分别见各目录的 `manifest.json`。这些声音由项目合成制作，不表示原译者、出版方或历史人物参与录制。
 
 `content/bonus/death.json` 是本项目依据柏拉图《申辩篇》《克里同篇》《斐多篇》另作的中文戏剧化改编，包含场景对白、探索选项、回应及札记。它不属于郭斌和、张竹明《理想国》译文。参考底本主要是 Benjamin Jowett 历史英译，并辅助核对 Perseus 和 Harvard Center for Hellenic Studies 的原作段落；逐幕出处和材料使用方式见 [docs/death-sources.md](docs/death-sources.md)。网站链接用于追溯来源，不表示相关机构为本游戏背书。
 

@@ -35,6 +35,12 @@ const artDirectory = new URL('../content/art/', import.meta.url);
 const supplied = readdirSync(artDirectory).filter(name => name.endsWith('-scenes.json')).sort()
   .flatMap(name => JSON.parse(readFileSync(new URL(name, artDirectory), 'utf8')) as Art[]);
 const artworks = [...legacy, ...supplied].map(art => ({ ...art, file: art.file.replace(/^illustrations\//, '') }));
+const continuation = JSON.parse(readFileSync(new URL('fullbook-conversations.json', artDirectory), 'utf8'));
+function continuedConversation(art: Art, unit: typeof units[number]) {
+  if (unit.chapterIndex < 8 || art.kind !== 'conversation') return false;
+  const roles = continuation.adeimantusChapters.includes(unit.chapter.id) ? continuation.adeimantus : continuation.glaucon;
+  return [...continuation.all, ...roles].includes(art.id);
+}
 if (new Set(artworks.map(art => art.id)).size !== artworks.length) throw new Error('Duplicate artwork ID');
 const assets = Object.fromEntries(artworks.map(art => {
   if (!/^[a-z0-9/-]+\.webp$/.test(art.file) || art.file.includes('..')) throw new Error(`Invalid artwork path: ${art.file}`);
@@ -53,11 +59,11 @@ for (const unit of units) for (const page of makeReadingPages(unit)) {
   const last = page.kind === 'text' ? page.paragraphs.at(-1)!.sourceId : page.question.original.id;
   const start = sourceNumber(first), end = sourceNumber(last);
   // A question can only use the gathering itself. Example scenes never reveal its answer.
-  let candidates = artworks.filter(art =>
+  let candidates = artworks.filter(art => continuedConversation(art, unit) || (
     (art.chapterId === unit.chapter.id || art.chapterIds?.includes(unit.chapter.id)) &&
     (!art.sectionIds.length || art.sectionIds.includes(unit.section.id)) &&
     (page.kind !== 'question' || art.kind === 'conversation') &&
-    sourceNumber(art.sourceStart) <= end && sourceNumber(art.sourceEnd) >= start);
+    sourceNumber(art.sourceStart) <= end && sourceNumber(art.sourceEnd) >= start));
   if (!candidates.length) { missing.push(page.id); continue; }
   const withoutPrevious = candidates.filter(art => art.id !== previousId);
   if (withoutPrevious.length) candidates = withoutPrevious;

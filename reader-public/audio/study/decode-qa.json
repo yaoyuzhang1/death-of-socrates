@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "decoded": 150,
+  "decoded": 303,
   "decoder": "Chrome AudioContext",
   "shortestSeconds": 3.672,
   "longestSeconds": 15.864,
@@ -804,6 +804,1077 @@
       "channels": 1,
       "rms": 0.10903003038666184,
       "peak": 0.6480135321617126
+    },
+    {
+      "key": "learn-full-community-education--a",
+      "durationSeconds": 8.592,
+      "channels": 1,
+      "rms": 0.10478754760665243,
+      "peak": 0.5442342758178711
+    },
+    {
+      "key": "learn-full-community-education--b",
+      "durationSeconds": 7.776,
+      "channels": 1,
+      "rms": 0.10722645299949943,
+      "peak": 0.6091452836990356
+    },
+    {
+      "key": "learn-full-community-education--c",
+      "durationSeconds": 8.256,
+      "channels": 1,
+      "rms": 0.1054609856618282,
+      "peak": 0.6885889768600464
+    },
+    {
+      "key": "learn-full-community-difference--b",
+      "durationSeconds": 7.944,
+      "channels": 1,
+      "rms": 0.10051504014521331,
+      "peak": 0.6022111177444458
+    },
+    {
+      "key": "learn-full-community-difference--a",
+      "durationSeconds": 7.392,
+      "channels": 1,
+      "rms": 0.0945868899669106,
+      "peak": 0.6112580299377441
+    },
+    {
+      "key": "learn-full-community-difference--c",
+      "durationSeconds": 8.376,
+      "channels": 1,
+      "rms": 0.0925579821669231,
+      "peak": 0.561263382434845
+    },
+    {
+      "key": "learn-full-community-challenge--c",
+      "durationSeconds": 9.12,
+      "channels": 1,
+      "rms": 0.10349682320209665,
+      "peak": 0.6956428289413452
+    },
+    {
+      "key": "learn-full-community-challenge--a",
+      "durationSeconds": 8.232,
+      "channels": 1,
+      "rms": 0.10068361794427952,
+      "peak": 0.7126314640045166
+    },
+    {
+      "key": "learn-full-community-challenge--b",
+      "durationSeconds": 7.104,
+      "channels": 1,
+      "rms": 0.09784781760572034,
+      "peak": 0.5611634254455566
+    },
+    {
+      "key": "learn-full-community-unity--a",
+      "durationSeconds": 9.816,
+      "channels": 1,
+      "rms": 0.11606593433641843,
+      "peak": 0.7441046833992004
+    },
+    {
+      "key": "learn-full-community-unity--b",
+      "durationSeconds": 7.296,
+      "channels": 1,
+      "rms": 0.10512265692133779,
+      "peak": 0.6763131022453308
+    },
+    {
+      "key": "learn-full-community-unity--c",
+      "durationSeconds": 8.304,
+      "channels": 1,
+      "rms": 0.1043106318144647,
+      "peak": 0.7226316928863525
+    },
+    {
+      "key": "learn-full-philosophers-model--b",
+      "durationSeconds": 9.624,
+      "channels": 1,
+      "rms": 0.10899436469231413,
+      "peak": 0.5941166877746582
+    },
+    {
+      "key": "learn-full-philosophers-model--a",
+      "durationSeconds": 7.968,
+      "channels": 1,
+      "rms": 0.10976989543313154,
+      "peak": 0.6735681891441345
+    },
+    {
+      "key": "learn-full-philosophers-model--c",
+      "durationSeconds": 7.8,
+      "channels": 1,
+      "rms": 0.10683587706510464,
+      "peak": 0.6571638584136963
+    },
+    {
+      "key": "learn-full-philosophers-curiosity--c",
+      "durationSeconds": 9.456,
+      "channels": 1,
+      "rms": 0.10109526749011694,
+      "peak": 0.6684443354606628
+    },
+    {
+      "key": "learn-full-philosophers-curiosity--a",
+      "durationSeconds": 8.904,
+      "channels": 1,
+      "rms": 0.10895646674206894,
+      "peak": 0.7187472581863403
+    },
+    {
+      "key": "learn-full-philosophers-curiosity--b",
+      "durationSeconds": 8.64,
+      "channels": 1,
+      "rms": 0.10139053324713615,
+      "peak": 0.5745657682418823
+    },
+    {
+      "key": "learn-full-philosophers-dream--a",
+      "durationSeconds": 8.4,
+      "channels": 1,
+      "rms": 0.0991639506678867,
+      "peak": 0.5989572405815125
+    },
+    {
+      "key": "learn-full-philosophers-dream--b",
+      "durationSeconds": 7.752,
+      "channels": 1,
+      "rms": 0.10289649326454617,
+      "peak": 0.5476884841918945
+    },
+    {
+      "key": "learn-full-philosophers-dream--c",
+      "durationSeconds": 7.752,
+      "channels": 1,
+      "rms": 0.10758520493368866,
+      "peak": 0.7199670076370239
+    },
+    {
+      "key": "learn-full-philosophers-capacity--b",
+      "durationSeconds": 9.384,
+      "channels": 1,
+      "rms": 0.10764974017313642,
+      "peak": 0.6628822684288025
+    },
+    {
+      "key": "learn-full-philosophers-capacity--a",
+      "durationSeconds": 9.024,
+      "channels": 1,
+      "rms": 0.11353220934930743,
+      "peak": 0.8548206090927124
+    },
+    {
+      "key": "learn-full-philosophers-capacity--c",
+      "durationSeconds": 8.016,
+      "channels": 1,
+      "rms": 0.10653365051039453,
+      "peak": 0.8126183152198792
+    },
+    {
+      "key": "learn-full-philosopher-city-pilot--c",
+      "durationSeconds": 9.936,
+      "channels": 1,
+      "rms": 0.10905085483456038,
+      "peak": 0.6792405843734741
+    },
+    {
+      "key": "learn-full-philosopher-city-pilot--a",
+      "durationSeconds": 7.704,
+      "channels": 1,
+      "rms": 0.10638952413401925,
+      "peak": 0.5846855640411377
+    },
+    {
+      "key": "learn-full-philosopher-city-pilot--b",
+      "durationSeconds": 8.52,
+      "channels": 1,
+      "rms": 0.11232899748857164,
+      "peak": 0.6299185156822205
+    },
+    {
+      "key": "learn-full-philosopher-city-crowd--a",
+      "durationSeconds": 8.904,
+      "channels": 1,
+      "rms": 0.1010470700567629,
+      "peak": 0.5836320519447327
+    },
+    {
+      "key": "learn-full-philosopher-city-crowd--b",
+      "durationSeconds": 8.52,
+      "channels": 1,
+      "rms": 0.10609354001598906,
+      "peak": 0.8447413444519043
+    },
+    {
+      "key": "learn-full-philosopher-city-crowd--c",
+      "durationSeconds": 7.416,
+      "channels": 1,
+      "rms": 0.0986878136065533,
+      "peak": 0.5173963308334351
+    },
+    {
+      "key": "learn-full-philosopher-city-beast--b",
+      "durationSeconds": 12.168,
+      "channels": 1,
+      "rms": 0.11038614716580952,
+      "peak": 0.639937162399292
+    },
+    {
+      "key": "learn-full-philosopher-city-beast--a",
+      "durationSeconds": 8.184,
+      "channels": 1,
+      "rms": 0.1023810285922091,
+      "peak": 0.5466617345809937
+    },
+    {
+      "key": "learn-full-philosopher-city-beast--c",
+      "durationSeconds": 8.904,
+      "channels": 1,
+      "rms": 0.10468052526501455,
+      "peak": 0.7444695830345154
+    },
+    {
+      "key": "learn-full-philosopher-city-shelter--c",
+      "durationSeconds": 9.096,
+      "channels": 1,
+      "rms": 0.11003154265371216,
+      "peak": 0.6742336750030518
+    },
+    {
+      "key": "learn-full-philosopher-city-shelter--a",
+      "durationSeconds": 8.904,
+      "channels": 1,
+      "rms": 0.10718379352918908,
+      "peak": 0.5789471864700317
+    },
+    {
+      "key": "learn-full-philosopher-city-shelter--b",
+      "durationSeconds": 9.384,
+      "channels": 1,
+      "rms": 0.1137551240267515,
+      "peak": 0.6971464157104492
+    },
+    {
+      "key": "learn-full-good-test--a",
+      "durationSeconds": 9.6,
+      "channels": 1,
+      "rms": 0.10517666039451874,
+      "peak": 0.5514337420463562
+    },
+    {
+      "key": "learn-full-good-test--b",
+      "durationSeconds": 8.76,
+      "channels": 1,
+      "rms": 0.10185191483167869,
+      "peak": 0.7175410985946655
+    },
+    {
+      "key": "learn-full-good-test--c",
+      "durationSeconds": 8.496,
+      "channels": 1,
+      "rms": 0.10261033711573594,
+      "peak": 0.7629868388175964
+    },
+    {
+      "key": "learn-full-good-aim--b",
+      "durationSeconds": 13.032,
+      "channels": 1,
+      "rms": 0.10772649517165396,
+      "peak": 0.6712547540664673
+    },
+    {
+      "key": "learn-full-good-aim--a",
+      "durationSeconds": 7.632,
+      "channels": 1,
+      "rms": 0.10665338454996774,
+      "peak": 0.5633184313774109
+    },
+    {
+      "key": "learn-full-good-aim--c",
+      "durationSeconds": 8.28,
+      "channels": 1,
+      "rms": 0.11588439412899529,
+      "peak": 0.7359732985496521
+    },
+    {
+      "key": "learn-full-good-light--c",
+      "durationSeconds": 9.624,
+      "channels": 1,
+      "rms": 0.10802940990718203,
+      "peak": 0.6724931001663208
+    },
+    {
+      "key": "learn-full-good-light--a",
+      "durationSeconds": 8.328,
+      "channels": 1,
+      "rms": 0.10399884783886572,
+      "peak": 0.6494125127792358
+    },
+    {
+      "key": "learn-full-good-light--b",
+      "durationSeconds": 7.68,
+      "channels": 1,
+      "rms": 0.10633815150708587,
+      "peak": 0.711759626865387
+    },
+    {
+      "key": "learn-full-good-hypothesis--a",
+      "durationSeconds": 9,
+      "channels": 1,
+      "rms": 0.10350783067396088,
+      "peak": 0.6443257927894592
+    },
+    {
+      "key": "learn-full-good-hypothesis--b",
+      "durationSeconds": 8.904,
+      "channels": 1,
+      "rms": 0.10395516253572307,
+      "peak": 0.5670052766799927
+    },
+    {
+      "key": "learn-full-good-hypothesis--c",
+      "durationSeconds": 8.784,
+      "channels": 1,
+      "rms": 0.103329517766329,
+      "peak": 0.5919207334518433
+    },
+    {
+      "key": "learn-full-cave-shadows--b",
+      "durationSeconds": 9.432,
+      "channels": 1,
+      "rms": 0.10687450060753478,
+      "peak": 0.5984706878662109
+    },
+    {
+      "key": "learn-full-cave-shadows--a",
+      "durationSeconds": 6.576,
+      "channels": 1,
+      "rms": 0.10062352000493055,
+      "peak": 0.7156997919082642
+    },
+    {
+      "key": "learn-full-cave-shadows--c",
+      "durationSeconds": 7.752,
+      "channels": 1,
+      "rms": 0.11137033116103598,
+      "peak": 0.8348507881164551
+    },
+    {
+      "key": "learn-full-cave-adjustment--c",
+      "durationSeconds": 9.432,
+      "channels": 1,
+      "rms": 0.1097503955877784,
+      "peak": 0.6820864081382751
+    },
+    {
+      "key": "learn-full-cave-adjustment--a",
+      "durationSeconds": 8.28,
+      "channels": 1,
+      "rms": 0.10483363055153051,
+      "peak": 0.5561420321464539
+    },
+    {
+      "key": "learn-full-cave-adjustment--b",
+      "durationSeconds": 7.296,
+      "channels": 1,
+      "rms": 0.10571515989521502,
+      "peak": 0.6573473215103149
+    },
+    {
+      "key": "learn-full-cave-turning--a",
+      "durationSeconds": 9.432,
+      "channels": 1,
+      "rms": 0.11306367108541705,
+      "peak": 0.708651065826416
+    },
+    {
+      "key": "learn-full-cave-turning--b",
+      "durationSeconds": 7.128,
+      "channels": 1,
+      "rms": 0.11439031653363887,
+      "peak": 0.7992629408836365
+    },
+    {
+      "key": "learn-full-cave-turning--c",
+      "durationSeconds": 7.416,
+      "channels": 1,
+      "rms": 0.10827774745849447,
+      "peak": 0.6817324757575989
+    },
+    {
+      "key": "learn-full-cave-return--b",
+      "durationSeconds": 10.008,
+      "channels": 1,
+      "rms": 0.10576037447485745,
+      "peak": 0.669761061668396
+    },
+    {
+      "key": "learn-full-cave-return--a",
+      "durationSeconds": 8.184,
+      "channels": 1,
+      "rms": 0.10456643571024735,
+      "peak": 0.648577094078064
+    },
+    {
+      "key": "learn-full-cave-return--c",
+      "durationSeconds": 7.32,
+      "channels": 1,
+      "rms": 0.10217434477046627,
+      "peak": 0.6582004427909851
+    },
+    {
+      "key": "learn-full-dialectic-contrast--c",
+      "durationSeconds": 8.736,
+      "channels": 1,
+      "rms": 0.10882810409928265,
+      "peak": 0.6128005981445312
+    },
+    {
+      "key": "learn-full-dialectic-contrast--a",
+      "durationSeconds": 9.48,
+      "channels": 1,
+      "rms": 0.11166802644916939,
+      "peak": 0.7973692417144775
+    },
+    {
+      "key": "learn-full-dialectic-contrast--b",
+      "durationSeconds": 8.976,
+      "channels": 1,
+      "rms": 0.11305241181423721,
+      "peak": 0.6959215998649597
+    },
+    {
+      "key": "learn-full-dialectic-geometry--a",
+      "durationSeconds": 9.384,
+      "channels": 1,
+      "rms": 0.10332728988832947,
+      "peak": 0.6463596224784851
+    },
+    {
+      "key": "learn-full-dialectic-geometry--b",
+      "durationSeconds": 8.28,
+      "channels": 1,
+      "rms": 0.10962778966038379,
+      "peak": 0.7074005603790283
+    },
+    {
+      "key": "learn-full-dialectic-geometry--c",
+      "durationSeconds": 8.424,
+      "channels": 1,
+      "rms": 0.11232448931239214,
+      "peak": 0.6487141251564026
+    },
+    {
+      "key": "learn-full-dialectic-account--b",
+      "durationSeconds": 9.528,
+      "channels": 1,
+      "rms": 0.10468112667552101,
+      "peak": 0.6078833341598511
+    },
+    {
+      "key": "learn-full-dialectic-account--a",
+      "durationSeconds": 8.376,
+      "channels": 1,
+      "rms": 0.11570073207528306,
+      "peak": 0.6580934524536133
+    },
+    {
+      "key": "learn-full-dialectic-account--c",
+      "durationSeconds": 6.24,
+      "channels": 1,
+      "rms": 0.11556209143686966,
+      "peak": 0.6601171493530273
+    },
+    {
+      "key": "learn-full-dialectic-play--c",
+      "durationSeconds": 13.032,
+      "channels": 1,
+      "rms": 0.10862189432659974,
+      "peak": 0.7289001941680908
+    },
+    {
+      "key": "learn-full-dialectic-play--a",
+      "durationSeconds": 8.088,
+      "channels": 1,
+      "rms": 0.1146272749600279,
+      "peak": 0.8216872215270996
+    },
+    {
+      "key": "learn-full-dialectic-play--b",
+      "durationSeconds": 8.376,
+      "channels": 1,
+      "rms": 0.10094121166433764,
+      "peak": 0.7267661094665527
+    },
+    {
+      "key": "learn-full-regimes-habit--a",
+      "durationSeconds": 11.928,
+      "channels": 1,
+      "rms": 0.10325240945163543,
+      "peak": 0.6871850490570068
+    },
+    {
+      "key": "learn-full-regimes-habit--b",
+      "durationSeconds": 7.272,
+      "channels": 1,
+      "rms": 0.10104407006242709,
+      "peak": 0.7007652521133423
+    },
+    {
+      "key": "learn-full-regimes-habit--c",
+      "durationSeconds": 8.76,
+      "channels": 1,
+      "rms": 0.10688895229870708,
+      "peak": 0.699796199798584
+    },
+    {
+      "key": "learn-full-regimes-honor--b",
+      "durationSeconds": 8.712,
+      "channels": 1,
+      "rms": 0.1018742062584303,
+      "peak": 0.7453693747520447
+    },
+    {
+      "key": "learn-full-regimes-honor--a",
+      "durationSeconds": 8.856,
+      "channels": 1,
+      "rms": 0.10651270000092883,
+      "peak": 0.6763264536857605
+    },
+    {
+      "key": "learn-full-regimes-honor--c",
+      "durationSeconds": 9.432,
+      "channels": 1,
+      "rms": 0.11038401101782933,
+      "peak": 0.7343605160713196
+    },
+    {
+      "key": "learn-full-regimes-wealth--c",
+      "durationSeconds": 8.496,
+      "channels": 1,
+      "rms": 0.10373091539174518,
+      "peak": 0.5607537031173706
+    },
+    {
+      "key": "learn-full-regimes-wealth--a",
+      "durationSeconds": 6.792,
+      "channels": 1,
+      "rms": 0.09586164889159572,
+      "peak": 0.6647063493728638
+    },
+    {
+      "key": "learn-full-regimes-wealth--b",
+      "durationSeconds": 7.92,
+      "channels": 1,
+      "rms": 0.10075707964437547,
+      "peak": 0.5776247978210449
+    },
+    {
+      "key": "learn-full-regimes-restraint--a",
+      "durationSeconds": 10.8,
+      "channels": 1,
+      "rms": 0.10334065041032138,
+      "peak": 0.6895338296890259
+    },
+    {
+      "key": "learn-full-regimes-restraint--b",
+      "durationSeconds": 9.36,
+      "channels": 1,
+      "rms": 0.1041597092093958,
+      "peak": 0.8530318737030029
+    },
+    {
+      "key": "learn-full-regimes-restraint--c",
+      "durationSeconds": 9.624,
+      "channels": 1,
+      "rms": 0.10372796404353192,
+      "peak": 0.8354349136352539
+    },
+    {
+      "key": "learn-full-democracy-variety--b",
+      "durationSeconds": 8.688,
+      "channels": 1,
+      "rms": 0.1118990871267613,
+      "peak": 0.6049525737762451
+    },
+    {
+      "key": "learn-full-democracy-variety--a",
+      "durationSeconds": 7.488,
+      "channels": 1,
+      "rms": 0.11001775908912738,
+      "peak": 0.6697200536727905
+    },
+    {
+      "key": "learn-full-democracy-variety--c",
+      "durationSeconds": 6.48,
+      "channels": 1,
+      "rms": 0.12102930081453896,
+      "peak": 0.7534467577934265
+    },
+    {
+      "key": "learn-full-democracy-necessary--c",
+      "durationSeconds": 14.52,
+      "channels": 1,
+      "rms": 0.11251163443876443,
+      "peak": 0.7109729647636414
+    },
+    {
+      "key": "learn-full-democracy-necessary--a",
+      "durationSeconds": 8.352,
+      "channels": 1,
+      "rms": 0.11196598389132033,
+      "peak": 0.7096927762031555
+    },
+    {
+      "key": "learn-full-democracy-necessary--b",
+      "durationSeconds": 7.368,
+      "channels": 1,
+      "rms": 0.1052256252446413,
+      "peak": 0.7810840606689453
+    },
+    {
+      "key": "learn-full-democracy-equality--a",
+      "durationSeconds": 8.208,
+      "channels": 1,
+      "rms": 0.10591825989003284,
+      "peak": 0.6225044131278992
+    },
+    {
+      "key": "learn-full-democracy-equality--b",
+      "durationSeconds": 7.512,
+      "channels": 1,
+      "rms": 0.11171630929720841,
+      "peak": 0.6540500521659851
+    },
+    {
+      "key": "learn-full-democracy-equality--c",
+      "durationSeconds": 8.256,
+      "channels": 1,
+      "rms": 0.10934989003867701,
+      "peak": 0.7124173045158386
+    },
+    {
+      "key": "learn-full-democracy-excess--b",
+      "durationSeconds": 9.984,
+      "channels": 1,
+      "rms": 0.1041032630068057,
+      "peak": 0.7551108598709106
+    },
+    {
+      "key": "learn-full-democracy-excess--a",
+      "durationSeconds": 8.304,
+      "channels": 1,
+      "rms": 0.11420459698679959,
+      "peak": 0.5842090249061584
+    },
+    {
+      "key": "learn-full-democracy-excess--c",
+      "durationSeconds": 7.872,
+      "channels": 1,
+      "rms": 0.10745058325349188,
+      "peak": 0.678646445274353
+    },
+    {
+      "key": "learn-full-tyrant-dream--c",
+      "durationSeconds": 13.896,
+      "channels": 1,
+      "rms": 0.10979667555078576,
+      "peak": 0.7125438451766968
+    },
+    {
+      "key": "learn-full-tyrant-dream--a",
+      "durationSeconds": 8.184,
+      "channels": 1,
+      "rms": 0.10231153518812054,
+      "peak": 0.607844889163971
+    },
+    {
+      "key": "learn-full-tyrant-dream--b",
+      "durationSeconds": 7.176,
+      "channels": 1,
+      "rms": 0.10667798534267049,
+      "peak": 0.7052481174468994
+    },
+    {
+      "key": "learn-full-tyrant-dominance--a",
+      "durationSeconds": 9.264,
+      "channels": 1,
+      "rms": 0.106827502453917,
+      "peak": 0.7438771724700928
+    },
+    {
+      "key": "learn-full-tyrant-dominance--b",
+      "durationSeconds": 7.368,
+      "channels": 1,
+      "rms": 0.10523121661410575,
+      "peak": 0.6088879704475403
+    },
+    {
+      "key": "learn-full-tyrant-dominance--c",
+      "durationSeconds": 8.328,
+      "channels": 1,
+      "rms": 0.10323057848957935,
+      "peak": 0.6875230073928833
+    },
+    {
+      "key": "learn-full-tyrant-fear--b",
+      "durationSeconds": 11.88,
+      "channels": 1,
+      "rms": 0.10929485942518888,
+      "peak": 0.7527572512626648
+    },
+    {
+      "key": "learn-full-tyrant-fear--a",
+      "durationSeconds": 8.16,
+      "channels": 1,
+      "rms": 0.10347257603570724,
+      "peak": 0.5951090455055237
+    },
+    {
+      "key": "learn-full-tyrant-fear--c",
+      "durationSeconds": 8.232,
+      "channels": 1,
+      "rms": 0.11399224308807247,
+      "peak": 0.9756564497947693
+    },
+    {
+      "key": "learn-full-tyrant-condition--c",
+      "durationSeconds": 10.488,
+      "channels": 1,
+      "rms": 0.10980655882963522,
+      "peak": 0.6193214654922485
+    },
+    {
+      "key": "learn-full-tyrant-condition--a",
+      "durationSeconds": 8.184,
+      "channels": 1,
+      "rms": 0.11412654721048897,
+      "peak": 0.6698553562164307
+    },
+    {
+      "key": "learn-full-tyrant-condition--b",
+      "durationSeconds": 7.704,
+      "channels": 1,
+      "rms": 0.11119421689371757,
+      "peak": 0.6786862015724182
+    },
+    {
+      "key": "learn-full-pleasure-three--a",
+      "durationSeconds": 8.64,
+      "channels": 1,
+      "rms": 0.10538302590561467,
+      "peak": 0.5410568714141846
+    },
+    {
+      "key": "learn-full-pleasure-three--b",
+      "durationSeconds": 9.024,
+      "channels": 1,
+      "rms": 0.10256711136587421,
+      "peak": 0.6442245244979858
+    },
+    {
+      "key": "learn-full-pleasure-three--c",
+      "durationSeconds": 7.848,
+      "channels": 1,
+      "rms": 0.10056424612306937,
+      "peak": 0.5661489367485046
+    },
+    {
+      "key": "learn-full-pleasure-judge--b",
+      "durationSeconds": 13.152,
+      "channels": 1,
+      "rms": 0.10618834663956901,
+      "peak": 0.7461598515510559
+    },
+    {
+      "key": "learn-full-pleasure-judge--a",
+      "durationSeconds": 10.248,
+      "channels": 1,
+      "rms": 0.1125751762642418,
+      "peak": 0.7781497240066528
+    },
+    {
+      "key": "learn-full-pleasure-judge--c",
+      "durationSeconds": 6.744,
+      "channels": 1,
+      "rms": 0.10494685456060068,
+      "peak": 0.5288183689117432
+    },
+    {
+      "key": "learn-full-pleasure-neutral--c",
+      "durationSeconds": 13.44,
+      "channels": 1,
+      "rms": 0.10589138671350809,
+      "peak": 0.6293429732322693
+    },
+    {
+      "key": "learn-full-pleasure-neutral--a",
+      "durationSeconds": 7.776,
+      "channels": 1,
+      "rms": 0.10039180918812819,
+      "peak": 0.765265703201294
+    },
+    {
+      "key": "learn-full-pleasure-neutral--b",
+      "durationSeconds": 6.192,
+      "channels": 1,
+      "rms": 0.1110673554197369,
+      "peak": 0.6576937437057495
+    },
+    {
+      "key": "learn-full-pleasure-image--a",
+      "durationSeconds": 8.016,
+      "channels": 1,
+      "rms": 0.10587932737308647,
+      "peak": 0.6095995903015137
+    },
+    {
+      "key": "learn-full-pleasure-image--b",
+      "durationSeconds": 7.944,
+      "channels": 1,
+      "rms": 0.1011632224302349,
+      "peak": 0.7380586862564087
+    },
+    {
+      "key": "learn-full-pleasure-image--c",
+      "durationSeconds": 8.568,
+      "channels": 1,
+      "rms": 0.10869955882522127,
+      "peak": 0.8283144235610962
+    },
+    {
+      "key": "learn-full-imitation-mirror--b",
+      "durationSeconds": 9.024,
+      "channels": 1,
+      "rms": 0.10139673179608114,
+      "peak": 0.6244521141052246
+    },
+    {
+      "key": "learn-full-imitation-mirror--a",
+      "durationSeconds": 7.32,
+      "channels": 1,
+      "rms": 0.1043356884916798,
+      "peak": 0.645930290222168
+    },
+    {
+      "key": "learn-full-imitation-mirror--c",
+      "durationSeconds": 8.184,
+      "channels": 1,
+      "rms": 0.10085351444200397,
+      "peak": 0.7856215834617615
+    },
+    {
+      "key": "learn-full-imitation-use--c",
+      "durationSeconds": 11.136,
+      "channels": 1,
+      "rms": 0.11030670553887671,
+      "peak": 0.5818525552749634
+    },
+    {
+      "key": "learn-full-imitation-use--a",
+      "durationSeconds": 7.728,
+      "channels": 1,
+      "rms": 0.10744617786404426,
+      "peak": 0.7718605399131775
+    },
+    {
+      "key": "learn-full-imitation-use--b",
+      "durationSeconds": 9.384,
+      "channels": 1,
+      "rms": 0.10594048344179656,
+      "peak": 0.7694014310836792
+    },
+    {
+      "key": "learn-full-imitation-measure--a",
+      "durationSeconds": 8.688,
+      "channels": 1,
+      "rms": 0.10693832687623726,
+      "peak": 0.6059263348579407
+    },
+    {
+      "key": "learn-full-imitation-measure--b",
+      "durationSeconds": 7.656,
+      "channels": 1,
+      "rms": 0.10231698414304874,
+      "peak": 0.7505933046340942
+    },
+    {
+      "key": "learn-full-imitation-measure--c",
+      "durationSeconds": 7.848,
+      "channels": 1,
+      "rms": 0.11257289406601398,
+      "peak": 0.7052182555198669
+    },
+    {
+      "key": "learn-full-imitation-emotion--b",
+      "durationSeconds": 9.792,
+      "channels": 1,
+      "rms": 0.1033313717165182,
+      "peak": 0.6963661909103394
+    },
+    {
+      "key": "learn-full-imitation-emotion--a",
+      "durationSeconds": 8.04,
+      "channels": 1,
+      "rms": 0.10127782180108294,
+      "peak": 0.6461279392242432
+    },
+    {
+      "key": "learn-full-imitation-emotion--c",
+      "durationSeconds": 8.424,
+      "channels": 1,
+      "rms": 0.10173257999966696,
+      "peak": 0.6708136796951294
+    },
+    {
+      "key": "learn-full-destiny-evil--c",
+      "durationSeconds": 9.216,
+      "channels": 1,
+      "rms": 0.11329891481916429,
+      "peak": 0.6567472815513611
+    },
+    {
+      "key": "learn-full-destiny-evil--a",
+      "durationSeconds": 7.944,
+      "channels": 1,
+      "rms": 0.10637282264393805,
+      "peak": 0.6194950938224792
+    },
+    {
+      "key": "learn-full-destiny-evil--b",
+      "durationSeconds": 8.568,
+      "channels": 1,
+      "rms": 0.11348970564946126,
+      "peak": 0.8542390465736389
+    },
+    {
+      "key": "learn-full-destiny-rewards--a",
+      "durationSeconds": 15,
+      "channels": 1,
+      "rms": 0.10465011463384462,
+      "peak": 0.6786785125732422
+    },
+    {
+      "key": "learn-full-destiny-rewards--b",
+      "durationSeconds": 9.432,
+      "channels": 1,
+      "rms": 0.11263327648961353,
+      "peak": 0.621029257774353
+    },
+    {
+      "key": "learn-full-destiny-rewards--c",
+      "durationSeconds": 8.304,
+      "channels": 1,
+      "rms": 0.10417593502225804,
+      "peak": 0.6902069449424744
+    },
+    {
+      "key": "learn-full-destiny-choice--b",
+      "durationSeconds": 10.008,
+      "channels": 1,
+      "rms": 0.09862542651903407,
+      "peak": 0.5845025777816772
+    },
+    {
+      "key": "learn-full-destiny-choice--a",
+      "durationSeconds": 7.752,
+      "channels": 1,
+      "rms": 0.09865592824924158,
+      "peak": 0.5633065104484558
+    },
+    {
+      "key": "learn-full-destiny-choice--c",
+      "durationSeconds": 8.064,
+      "channels": 1,
+      "rms": 0.10210386049972026,
+      "peak": 0.6828525066375732
+    },
+    {
+      "key": "learn-full-destiny-ordinary--c",
+      "durationSeconds": 9.744,
+      "channels": 1,
+      "rms": 0.09708595891003258,
+      "peak": 0.6073494553565979
+    },
+    {
+      "key": "learn-full-destiny-ordinary--a",
+      "durationSeconds": 7.872,
+      "channels": 1,
+      "rms": 0.10493177976495605,
+      "peak": 0.5536779165267944
+    },
+    {
+      "key": "learn-full-destiny-ordinary--b",
+      "durationSeconds": 9.144,
+      "channels": 1,
+      "rms": 0.10066802130514993,
+      "peak": 0.7203200459480286
+    },
+    {
+      "key": "learn-full-destiny-ending--a",
+      "durationSeconds": 10.104,
+      "channels": 1,
+      "rms": 0.10500539158207901,
+      "peak": 0.6315433382987976
+    },
+    {
+      "key": "learn-full-destiny-ending--b",
+      "durationSeconds": 7.992,
+      "channels": 1,
+      "rms": 0.10954894918080646,
+      "peak": 0.6211550831794739
+    },
+    {
+      "key": "learn-full-destiny-ending--c",
+      "durationSeconds": 7.176,
+      "channels": 1,
+      "rms": 0.1094542218083713,
+      "peak": 0.6464931964874268
+    },
+    {
+      "key": "learn-full-community-war-limits--b",
+      "durationSeconds": 14.112,
+      "channels": 1,
+      "rms": 0.11033086670424913,
+      "peak": 0.6693072319030762
+    },
+    {
+      "key": "learn-full-community-war-limits--a",
+      "durationSeconds": 11.208,
+      "channels": 1,
+      "rms": 0.10841689877631464,
+      "peak": 0.6086440682411194
+    },
+    {
+      "key": "learn-full-community-war-limits--c",
+      "durationSeconds": 10.224,
+      "channels": 1,
+      "rms": 0.11174159027385612,
+      "peak": 0.921794056892395
+    },
+    {
+      "key": "learn-full-dialectic-astronomy-model--c",
+      "durationSeconds": 15.576,
+      "channels": 1,
+      "rms": 0.10526794299843575,
+      "peak": 0.6687849164009094
+    },
+    {
+      "key": "learn-full-dialectic-astronomy-model--a",
+      "durationSeconds": 11.304,
+      "channels": 1,
+      "rms": 0.10932827925077092,
+      "peak": 0.6516726016998291
+    },
+    {
+      "key": "learn-full-dialectic-astronomy-model--b",
+      "durationSeconds": 9.216,
+      "channels": 1,
+      "rms": 0.1127063138612634,
+      "peak": 0.8037503361701965
     },
     {
       "key": "bonus-check-trial-gate--b",

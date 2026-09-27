@@ -1,7 +1,7 @@
 """Generate exact option explanations with Microsoft Edge's standard Mandarin voice.
 
 Run with the existing voice virtualenv (edge-tts); --limit 1 creates a first
-sample, --verify checks all 141 assets without using the network. Generated
+sample, --verify checks all current assets without using the network. Generated
 recordings are reused only when their exact text, voice and SHA-256 match.
 """
 from __future__ import annotations
@@ -65,8 +65,9 @@ def mp3_info(data: bytes) -> dict:
 
 def scripts() -> list[dict]:
     result = []
-    for book in range(1, 5):
-        questions = json.loads((ROOT / "content" / "questions" / f"book{book}.json").read_text(encoding="utf-8"))
+    files = sorted((ROOT / "content" / "questions").glob("book*.json"), key=lambda p: int(p.stem[4:]))
+    for path in files:
+        questions = json.loads(path.read_text(encoding="utf-8"))
         for question in questions:
             options = sorted(question["options"], key=lambda option: option["id"] != question["correctId"])
             for option in options:
@@ -76,7 +77,7 @@ def scripts() -> list[dict]:
                 result.append({"key": key, "questionId": question["id"], "optionId": option["id"],
                                "correct": correct, "text": text, "textSha256": digest(text.encode("utf-8")),
                                "voice": VOICE, "rate": RATE, "filename": f"{key}.mp3"})
-    assert len(result) == 141 and len({entry["key"] for entry in result}) == 141
+    assert result and len({entry["key"] for entry in result}) == len(result)
     return result
 
 

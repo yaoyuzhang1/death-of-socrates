@@ -131,6 +131,22 @@ export function allChaptersComplete(save: Save, units: readonly ReadingUnit[]): 
   return units.length > 0 && units.every(unit => isUnitComplete(save, unit));
 }
 
+/** The original eight-chapter milestone remains earned when later books are appended. */
+export const LEGACY_BONUS_CHAPTER_IDS = [
+  'obligations', 'rule', 'life', 'worth', 'city', 'education', 'guardians', 'soul',
+] as const;
+
+function hasLegacyChapterPrefix(chapterIds: readonly string[]): boolean {
+  return LEGACY_BONUS_CHAPTER_IDS.every((id, index) => chapterIds[index] === id);
+}
+
+export function isBonusUnlocked(save: Save, units: readonly ReadingUnit[]): boolean {
+  const chapterIds = [...new Set(units.map(unit => unit.chapter.id))];
+  if (!hasLegacyChapterPrefix(chapterIds)) return allChaptersComplete(save, units);
+  const required = units.filter(unit => (LEGACY_BONUS_CHAPTER_IDS as readonly string[]).includes(unit.chapter.id));
+  return required.length > 0 && required.every(unit => isUnitComplete(save, unit));
+}
+
 function activeProgress(save: Save, unit: ReadingUnit, scroll = save.scroll): Record<string, ChapterProgress> {
   return { ...save.chapterProgress, [unit.chapter.id]: {
     ...getChapterProgress(save, unit.chapter.id), started: true, cursor: unit.index, scroll,
@@ -166,26 +182,43 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
     const legacy = oldVersion || input.version === 3;
     const previousPages = input.version === 4;
     const parallel = input.version === 6;
+    const priorEdition = corpus.edition.id === 'republic-guo-zhang-1986-full-2026-09-27' &&
+      input.editionId === 'republic-guo-zhang-1986-2026-09-09' &&
+      hasLegacyChapterPrefix(corpus.chapters.map(chapter => chapter.id));
     const commonKeys = [
       'version', 'editionId', 'seed', 'started', 'cursor', 'completed', 'answers',
       'hints', 'bookmarks', 'scroll', 'settings', 'updatedAt',
     ];
     if (!keysAre(input, oldVersion ? commonKeys : [...commonKeys, 'reading', 'reviews', ...(legacy ? [] : ['resolved', 'pages']), ...(parallel ? ['chapterProgress', 'bonus'] : [])])) return null;
-    if ((!legacy && !previousPages && !parallel && input.version !== 5) || input.editionId !== corpus.edition.id || !validSeed(input.seed) ||
+    if ((!legacy && !previousPages && !parallel && input.version !== 5) ||
+      (input.editionId !== corpus.edition.id && !priorEdition) || !validSeed(input.seed) ||
       typeof input.started !== 'boolean' || !integerIn(input.cursor, 0, units.length - 1) ||
       !integerIn(input.completed, 0, units.length) || (!parallel && input.cursor > input.completed) ||
       !validDate(input.updatedAt)) return null;
     if (typeof input.scroll !== 'number' || !Number.isFinite(input.scroll) || input.scroll < 0 || input.scroll > 10_000_000) return null;
     const savedCursor = input.cursor;
     const savedCompleted = input.completed;
+    if (priorEdition && (!(LEGACY_BONUS_CHAPTER_IDS as readonly string[]).includes(units[savedCursor].chapter.id) ||
+      savedCompleted > units.filter(unit => (LEGACY_BONUS_CHAPTER_IDS as readonly string[]).includes(unit.chapter.id)).length)) return null;
     const chapterProgress: Record<string, ChapterProgress> = {};
-    if (parallel && (!record(input.chapterProgress) || !keysAre(input.chapterProgress, corpus.chapters.map(chapter => chapter.id)))) return null;
+    const chapterIds = corpus.chapters.map(chapter => chapter.id);
+    // Accept only the precisely identified prior release, not arbitrary missing chapter records.
+    const appendedChapters = parallel && chapterIds.length > LEGACY_BONUS_CHAPTER_IDS.length &&
+      hasLegacyChapterPrefix(chapterIds) && record(input.chapterProgress) &&
+      keysAre(input.chapterProgress, LEGACY_BONUS_CHAPTER_IDS);
+    if (parallel && (!record(input.chapterProgress) ||
+      (!appendedChapters && !keysAre(input.chapterProgress, chapterIds)))) return null;
+    if (priorEdition && parallel && !appendedChapters) return null;
+    if (appendedChapters && !(LEGACY_BONUS_CHAPTER_IDS as readonly string[]).includes(units[savedCursor].chapter.id)) return null;
     for (const chapter of corpus.chapters) {
       const selected = units.filter(unit => unit.chapter.id === chapter.id);
       const first = selected[0].index;
       const active: boolean = units[savedCursor].chapter.id === chapter.id;
       const completed = Math.max(0, Math.min(selected.length, savedCompleted - first));
-      const progress: unknown = parallel ? (input.chapterProgress as Record<string, unknown>)[chapter.id] : {
+      const progress: unknown = parallel ?
+        (appendedChapters && !own(input.chapterProgress as object, chapter.id) ?
+          { completed: 0, cursor: first, started: false, scroll: 0 } :
+          (input.chapterProgress as Record<string, unknown>)[chapter.id]) : {
         completed, cursor: active ? input.cursor : selected[Math.min(completed, selected.length - 1)].index,
         started: completed > 0 || (active && input.started), scroll: active && !previousPages ? input.scroll : 0,
       };
@@ -366,7 +399,7 @@ export function validateSave(input: unknown, corpus: Corpus): Save | null {
         !keysAre(bonus.visited, BONUS_SCENE_IDS.slice(0, choiceCount)) ||
         bonus.cursor > Math.min(choiceCount, BONUS_SCENE_IDS.length - 1) ||
         (bonus.completed && choiceCount !== BONUS_SCENE_IDS.length) ||
-        (!allChaptersComplete(result, units) && (choiceCount || bonus.cursor !== 0 || bonus.completed))) return null;
+        (!isBonusUnlocked(result, units) && (choiceCount || bonus.cursor !== 0 || bonus.completed))) return null;
       const choices: Record<string, string> = {};
       const visited: Record<string, string[]> = {};
       for (const id of BONUS_SCENE_IDS.slice(0, choiceCount)) {

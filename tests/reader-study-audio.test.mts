@@ -4,11 +4,11 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
 const hash = (input: string | Buffer) => createHash('sha256').update(input).digest('hex');
-test('all 150 study explanations have exact text, Mandarin voice and verified playable files', () => {
+test('all study explanations have exact text, Mandarin voice and verified playable files', () => {
   const manifest = JSON.parse(readFileSync('reader-public/audio/study/manifest.json', 'utf8'));
   const checks = ['content/learning/checks.json', 'content/bonus/checks.json'].flatMap(path => JSON.parse(readFileSync(path, 'utf8')));
   assert.equal(manifest.expectedCount, checks.length * 3);
-  assert.equal(manifest.expectedCount, 150);
+  assert.ok(manifest.expectedCount > 150);
   assert.equal(manifest.language, 'zh-CN');
   assert.equal(manifest.complete, true);
   assert.equal(manifest.entries.length, manifest.expectedCount);

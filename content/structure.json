@@ -377,5 +377,257 @@
         }
       }
     ]
+  },
+  {
+    "id": "community",
+    "title": "共同生活与护卫者",
+    "subtitle": "能力、分工与共同的生活",
+    "range": "第五卷 · 449a—471c（可实现性之前）",
+    "start": {
+      "page": 177
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "community-opening",
+        "title": "共同生活与护卫者",
+        "start": {
+          "page": 177
+        }
+      }
+    ]
+  },
+  {
+    "id": "philosophers",
+    "title": "哲学家为何统治",
+    "subtitle": "理想能否实现，谁算哲学家",
+    "range": "第五卷 · 471c—480a",
+    "start": {
+      "page": 211,
+      "before": "但是，如果我们让你这样滔滔不绝地讲下去"
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "philosophers-opening",
+        "title": "哲学家为何统治",
+        "start": {
+          "page": 211,
+          "before": "但是，如果我们让你这样滔滔不绝地讲下去"
+        }
+      }
+    ]
+  },
+  {
+    "id": "philosopher-city",
+    "title": "哲学家与现实城邦",
+    "subtitle": "天性、环境与统治的可能",
+    "range": "第六卷 · 484a—502d（教育之前）",
+    "start": {
+      "page": 228
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "philosopher-city-opening",
+        "title": "哲学家与现实城邦",
+        "start": {
+          "page": 228
+        }
+      }
+    ]
+  },
+  {
+    "id": "good",
+    "title": "善、太阳与线段",
+    "subtitle": "知识要以什么为标准",
+    "range": "第六卷 · 502d—511e",
+    "start": {
+      "page": 256,
+      "before": "既然这个问题好不容易结束了"
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "good-opening",
+        "title": "善、太阳与线段",
+        "start": {
+          "page": 256,
+          "before": "既然这个问题好不容易结束了"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cave",
+    "title": "走出洞穴，返回洞穴",
+    "subtitle": "教育、转向与公共责任",
+    "range": "第七卷 · 514a—521c",
+    "start": {
+      "page": 272
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "cave-opening",
+        "title": "走出洞穴，返回洞穴",
+        "start": {
+          "page": 272
+        }
+      }
+    ]
+  },
+  {
+    "id": "dialectic",
+    "title": "学习的阶梯与辩证法",
+    "subtitle": "从具体学科到追问前提",
+    "range": "第七卷 · 521c—541b",
+    "start": {
+      "page": 281,
+      "before": "于是，你愿意让我们来研究如下的问题吗？"
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "dialectic-opening",
+        "title": "学习的阶梯与辩证法",
+        "start": {
+          "page": 281,
+          "before": "于是，你愿意让我们来研究如下的问题吗？"
+        }
+      }
+    ]
+  },
+  {
+    "id": "regimes",
+    "title": "荣誉、财富与政制变化",
+    "subtitle": "国家的变化与人的性格",
+    "range": "第八卷 · 543a—555b",
+    "start": {
+      "page": 312
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "regimes-opening",
+        "title": "荣誉、财富与政制变化",
+        "start": {
+          "page": 312
+        }
+      }
+    ]
+  },
+  {
+    "id": "democracy",
+    "title": "自由怎样走向专制",
+    "subtitle": "平民政治、欲望与权力",
+    "range": "第八卷 · 555b—569c",
+    "start": {
+      "page": 328,
+      "before": "我们下一步看来要讨论平民政治的起源和本性"
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "democracy-opening",
+        "title": "自由怎样走向专制",
+        "start": {
+          "page": 328,
+          "before": "我们下一步看来要讨论平民政治的起源和本性"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tyrant",
+    "title": "僭主与受奴役的灵魂",
+    "subtitle": "欲望、控制与生活境况",
+    "range": "第九卷 · 571a—580d（第二个证明之前）",
+    "start": {
+      "page": 352
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "tyrant-opening",
+        "title": "僭主与受奴役的灵魂",
+        "start": {
+          "page": 352
+        }
+      }
+    ]
+  },
+  {
+    "id": "pleasure",
+    "title": "快乐、判断与正义生活",
+    "subtitle": "比较快乐所需的依据",
+    "range": "第九卷 · 580d—592b",
+    "start": {
+      "page": 366,
+      "before": "很好。那么，这是我们的证明之一。"
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "pleasure-opening",
+        "title": "快乐、判断与正义生活",
+        "start": {
+          "page": 366,
+          "before": "很好。那么，这是我们的证明之一。"
+        }
+      }
+    ]
+  },
+  {
+    "id": "imitation",
+    "title": "诗歌、摹仿与心灵",
+    "subtitle": "形象、知识与情感的力量",
+    "range": "第十卷 · 595a—608c（报偿之前）",
+    "start": {
+      "page": 387
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "imitation-opening",
+        "title": "诗歌、摹仿与心灵",
+        "start": {
+          "page": 387
+        }
+      }
+    ]
+  },
+  {
+    "id": "destiny",
+    "title": "灵魂、报偿与选择",
+    "subtitle": "回到正义生活的选择",
+    "range": "第十卷 · 608c—621d",
+    "start": {
+      "page": 409,
+      "before": "但是，你知道，我们还没有论述至善所能赢得的最大报酬"
+    },
+    "introduction": "",
+    "conclusion": "",
+    "sections": [
+      {
+        "id": "destiny-opening",
+        "title": "灵魂、报偿与选择",
+        "start": {
+          "page": 409,
+          "before": "但是，你知道，我们还没有论述至善所能赢得的最大报酬"
+        }
+      }
+    ]
   }
 ]

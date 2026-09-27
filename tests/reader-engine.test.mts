@@ -6,7 +6,8 @@ import {
   readingBatches, readingPosition, setReadingPosition, setReadingMode,
   recordReview, reviewQueue, progressStats,
   isQuestionResolved, pagePosition, setPagePosition,
-  enterChapter, getChapterProgress, latestUnitIndex, isUnitAccessible, allChaptersComplete, setScrollPosition,
+  enterChapter, getChapterProgress, latestUnitIndex, isUnitAccessible, allChaptersComplete, isBonusUnlocked,
+  LEGACY_BONUS_CHAPTER_IDS, setScrollPosition,
 } from '../src/reader/engine.ts';
 import { makeReadingPages, makeVersion4ReadingPages } from '../src/reader/pagination.ts';
 import { BONUS_SCENE_IDS, type Corpus, type Question, type Save, type Unit } from '../src/reader/model.ts';
@@ -949,4 +950,111 @@ test('bonus progress is locked until every main chapter is finished and imports 
   assert.deepEqual(switched.bonus, completeBonus);
   restored.bonus.visited[firstScene].push('a');
   assert.deepEqual(saved.bonus.visited[firstScene], ['c']);
+});
+
+function fullBookMigrationFixture(): { prior: Corpus; expanded: Corpus } {
+  const eight = eightChapterCorpus();
+  const prior: Corpus = {
+    ...eight,
+    edition: { ...eight.edition, id: 'republic-guo-zhang-1986-2026-09-09' },
+    chapters: eight.chapters.map((chapter, index) => ({ ...chapter, id: LEGACY_BONUS_CHAPTER_IDS[index] })),
+  };
+  const added = Array.from({ length: 12 }, (_, index) => ({
+    id: `fullbook-new-${index}`, title: `新增主题 ${index}`, subtitle: '', range: '', introduction: '', conclusion: '',
+    sections: [{ id: `new-section-${index}`, title: '', range: '',
+      units: [unit(`new-unit-${index}`, question(`new-question-${index}`))] }],
+  }));
+  return { prior, expanded: { ...prior,
+    edition: { ...prior.edition, id: 'republic-guo-zhang-1986-full-2026-09-27' },
+    chapters: [...prior.chapters, ...added],
+  } };
+}
+
+test('the exact prior eight-chapter save migrates to the full book without losing a wrong first answer or starting appended chapters', () => {
+  const { prior, expanded } = fullBookMigrationFixture();
+  const before = flattenCorpus(prior);
+  const after = flattenCorpus(expanded);
+  let save = createSave(prior, 'fullbook-partial-migration');
+  save = finishChapter(save, prior, 'soul');
+  save = enterChapter(save, before, 'obligations');
+  const current = before[save.cursor];
+  const questionPage = makeReadingPages(current).findIndex(page => page.kind === 'question');
+  save = setPagePosition(save, current, questionPage);
+  save = submitAnswer(save, current, current.question!.options[1].id);
+  save = setScrollPosition({ ...save, bookmarks: [current.id] }, current, 537);
+  const snapshot = exported(save);
+  const migrated = validateSave(snapshot, expanded)!;
+  assert.ok(migrated);
+  assert.equal(migrated.editionId, expanded.edition.id);
+  for (const key of ['seed', 'cursor', 'completed', 'answers', 'resolved', 'pages', 'reading', 'reviews',
+    'hints', 'bookmarks', 'scroll', 'settings', 'updatedAt', 'bonus']) {
+    assert.deepEqual(migrated[key as keyof Save], save[key as keyof Save], key);
+  }
+  for (const chapterId of LEGACY_BONUS_CHAPTER_IDS) assert.deepEqual(migrated.chapterProgress[chapterId], save.chapterProgress[chapterId]);
+  for (const chapter of expanded.chapters.slice(8)) {
+    const first = after.find(unit => unit.chapter.id === chapter.id)!;
+    assert.deepEqual(migrated.chapterProgress[chapter.id], { completed: 0, cursor: first.index, started: false, scroll: 0 });
+    assert.ok(isUnitAccessible(migrated, first));
+  }
+  assert.equal(isBonusUnlocked(migrated, after), false);
+  assert.equal(isQuestionResolved(migrated, current.question!), false);
+  assert.equal(advance(migrated, after), migrated);
+  assert.deepEqual(validateSave(exported(migrated), expanded), migrated, 'expanded saves import normally after migration');
+  assert.deepEqual(snapshot, exported(save), 'validation never mutates the supplied old backup');
+});
+
+test('the eight-chapter hidden reward survives expansion and remains distinct from all twenty chapters completion', () => {
+  const { prior, expanded } = fullBookMigrationFixture();
+  let old = createSave(prior, 'fullbook-earned-reward');
+  for (const id of LEGACY_BONUS_CHAPTER_IDS) old = finishChapter(old, prior, id);
+  const scene = BONUS_SCENE_IDS[0];
+  old.bonus = { cursor: 0, completed: false, choices: { [scene]: 'b' }, visited: { [scene]: ['b', 'a'] } };
+  const after = flattenCorpus(expanded);
+  let migrated = validateSave(exported(old), expanded)!;
+  assert.ok(migrated);
+  assert.equal(isBonusUnlocked(migrated, after), true);
+  assert.equal(allChaptersComplete(migrated, after), false);
+  assert.deepEqual(migrated.bonus, old.bonus);
+  assert.deepEqual(validateSave(exported(migrated), expanded), migrated);
+  for (const chapter of expanded.chapters.slice(8)) migrated = finishChapter(migrated, expanded, chapter.id);
+  assert.equal(allChaptersComplete(migrated, after), true);
+  assert.deepEqual(migrated.answers, { ...old.answers, ...Object.fromEntries(Object.entries(migrated.answers).filter(([id]) => id.startsWith('new-question-'))) });
+  assert.deepEqual(migrated.bonus, old.bonus);
+  assert.ok(validateSave(exported(migrated), expanded));
+
+  let freshExpanded = createSave(expanded, 'fullbook-new-reader');
+  for (const id of LEGACY_BONUS_CHAPTER_IDS) freshExpanded = finishChapter(freshExpanded, expanded, id);
+  assert.equal(isBonusUnlocked(freshExpanded, after), true, 'new players earn the same original milestone');
+  assert.equal(allChaptersComplete(freshExpanded, after), false);
+});
+
+test('full-book migration rejects arbitrary missing chapter records, unrelated editions and fabricated new-book progress', () => {
+  const { prior, expanded } = fullBookMigrationFixture();
+  const old = exported(createSave(prior, 'fullbook-strict-migration'));
+  const absent = structuredClone(old);
+  delete absent.chapterProgress.education;
+  const unknown = structuredClone(old);
+  unknown.chapterProgress.extra = { completed: 0, cursor: 0, started: false, scroll: 0 };
+  for (const invalid of [absent, unknown, { ...old, editionId: 'some-unrelated-edition' },
+    { ...old, cursor: flattenCorpus(prior).length }, { ...old, completed: flattenCorpus(prior).length + 1 }]) {
+    assert.equal(validateSave(invalid, expanded), null);
+  }
+  const freshExpanded = exported(createSave(expanded, 'new-book-record-missing'));
+  delete freshExpanded.chapterProgress['fullbook-new-5'];
+  assert.equal(validateSave(freshExpanded, expanded), null, 'a damaged new save is not mistaken for the precise prior release');
+});
+
+test('the pre-parallel version 5 prior-edition prefix still migrates into the full book', () => {
+  const { prior, expanded } = fullBookMigrationFixture();
+  let old = createSave(prior, 'fullbook-v5');
+  for (const id of LEGACY_BONUS_CHAPTER_IDS) old = finishChapter(old, prior, id);
+  const legacy = { ...oldExport(old), version: 5 };
+  const migrated = validateSave(legacy, expanded)!;
+  assert.ok(migrated);
+  assert.equal(migrated.editionId, expanded.edition.id);
+  assert.deepEqual(migrated.answers, old.answers);
+  assert.equal(migrated.completed, old.completed);
+  assert.equal(isBonusUnlocked(migrated, flattenCorpus(expanded)), true);
+  assert.equal(allChaptersComplete(migrated, flattenCorpus(expanded)), false);
+  for (const chapter of expanded.chapters.slice(8)) assert.equal(migrated.chapterProgress[chapter.id].completed, 0);
 });

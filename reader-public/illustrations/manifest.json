@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "editionId": "republic-guo-zhang-1986-2026-09-09",
+  "editionId": "republic-guo-zhang-1986-full-2026-09-27",
   "paginationVersion": 5,
   "assets": {
     "arrival": {
@@ -338,6 +338,22 @@
       "focalY": 45,
       "bytes": 238540,
       "sha256": "9a79afa5c56041d4c281a1ff7413ff76d9798c86c7485bd32b1b6bb189483025"
+    },
+    "fullbook-cave": {
+      "file": "progression/fullbook-cave.webp",
+      "alt": "谈话中的洞穴图景：囚徒面向墙上阴影，身后矮墙上的器物在火光前经过。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 332214,
+      "sha256": "2cee87e7cc07b52fbd62842c62c80b7c7c3d60ce173808d621e727680526d91e"
+    },
+    "fullbook-ship": {
+      "file": "progression/fullbook-ship.webp",
+      "alt": "谈话中的航船图景：水手争夺掌舵，船主被围住，真正的领航者在一旁研究星空。",
+      "kind": "example",
+      "focalY": 45,
+      "bytes": 360030,
+      "sha256": "23bd0a04a83c4f819712d3a3e5bb4c2841973845617a7c19b277c7934fded61b"
     },
     "late-city-crafts": {
       "file": "progression/late-city-crafts.webp",
@@ -757,7 +773,353 @@
     "u-053-before-1": "late-soul-search",
     "u-053-question": "dialogue-08",
     "u-053-after-0": "dialogue-15",
-    "u-053-after-1": "late-soul-close"
+    "u-053-after-1": "late-soul-close",
+    "u-054-before-0": "early-16-socrates-brothers",
+    "u-054-before-1": "dialogue-16",
+    "u-054-before-2": "soul",
+    "u-054-before-3": "late-soul-search",
+    "u-054-before-4": "late-soul-close",
+    "u-054-question": "early-16-socrates-brothers",
+    "u-054-after-0": "dialogue-15",
+    "u-055-before-0": "late-soul-search",
+    "u-055-before-1": "dialogue-16",
+    "u-055-before-2": "late-soul-close",
+    "u-055-before-3": "early-16-socrates-brothers",
+    "u-055-before-4": "soul",
+    "u-055-before-5": "late-soul-search",
+    "u-055-question": "dialogue-15",
+    "u-055-after-0": "late-soul-close",
+    "u-056-before-0": "early-16-socrates-brothers",
+    "u-056-before-1": "dialogue-16",
+    "u-056-before-2": "late-soul-search",
+    "u-056-before-3": "late-soul-close",
+    "u-056-before-4": "soul",
+    "u-056-before-5": "early-16-socrates-brothers",
+    "u-056-before-6": "dialogue-15",
+    "u-056-before-7": "late-soul-search",
+    "u-056-before-8": "late-soul-close",
+    "u-056-question": "dialogue-16",
+    "u-056-after-0": "early-16-socrates-brothers",
+    "u-057-before-0": "late-soul-search",
+    "u-057-before-1": "soul",
+    "u-057-before-2": "late-soul-close",
+    "u-057-before-3": "dialogue-15",
+    "u-057-before-4": "early-16-socrates-brothers",
+    "u-057-before-5": "late-soul-search",
+    "u-057-before-6": "dialogue-16",
+    "u-057-before-7": "late-soul-close",
+    "u-057-question": "early-16-socrates-brothers",
+    "u-057-after-0": "soul",
+    "u-057-after-1": "late-soul-search",
+    "u-057-after-2": "dialogue-15",
+    "u-057-after-3": "late-soul-close",
+    "u-057-after-4": "early-16-socrates-brothers",
+    "u-057-after-5": "dialogue-16",
+    "u-057-after-6": "late-soul-search",
+    "u-057-after-7": "late-soul-close",
+    "u-057-after-8": "soul",
+    "u-058-before-0": "early-16-socrates-brothers",
+    "u-058-before-1": "dialogue-15",
+    "u-058-question": "late-soul-search",
+    "u-058-after-0": "late-soul-close",
+    "u-059-before-0": "dialogue-16",
+    "u-059-before-1": "early-16-socrates-brothers",
+    "u-059-before-2": "late-soul-search",
+    "u-059-before-3": "soul",
+    "u-059-question": "late-soul-close",
+    "u-059-after-0": "dialogue-15",
+    "u-060-before-0": "early-16-socrates-brothers",
+    "u-060-before-1": "late-soul-search",
+    "u-060-before-2": "dialogue-16",
+    "u-060-before-3": "late-soul-close",
+    "u-060-question": "early-16-socrates-brothers",
+    "u-060-after-0": "soul",
+    "u-061-before-0": "late-soul-search",
+    "u-061-before-1": "dialogue-15",
+    "u-061-before-2": "late-soul-close",
+    "u-061-before-3": "early-16-socrates-brothers",
+    "u-061-before-4": "dialogue-16",
+    "u-061-question": "late-soul-search",
+    "u-061-after-0": "late-soul-close",
+    "u-061-after-1": "soul",
+    "u-062-before-0": "late-guardians-continuity",
+    "u-062-before-1": "early-16-socrates-brothers",
+    "u-062-question": "late-soul-close",
+    "u-062-after-0": "late-guardians-continuity",
+    "u-063-before-0": "early-16-socrates-brothers",
+    "u-063-before-1": "late-soul-close",
+    "u-063-before-2": "soul",
+    "u-063-before-3": "late-guardians-continuity",
+    "u-063-before-4": "early-16-socrates-brothers",
+    "u-063-before-5": "late-soul-close",
+    "u-063-before-6": "fullbook-ship",
+    "u-063-question": "late-guardians-continuity",
+    "u-063-after-0": "early-16-socrates-brothers",
+    "u-064-before-0": "late-soul-close",
+    "u-064-before-1": "soul",
+    "u-064-before-2": "late-guardians-continuity",
+    "u-064-before-3": "early-16-socrates-brothers",
+    "u-064-before-4": "late-soul-close",
+    "u-064-before-5": "late-guardians-continuity",
+    "u-064-question": "early-16-socrates-brothers",
+    "u-064-after-0": "late-soul-close",
+    "u-065-before-0": "soul",
+    "u-065-before-1": "late-guardians-continuity",
+    "u-065-before-2": "early-16-socrates-brothers",
+    "u-065-before-3": "late-soul-close",
+    "u-065-before-4": "late-guardians-continuity",
+    "u-065-before-5": "early-16-socrates-brothers",
+    "u-065-before-6": "late-soul-close",
+    "u-065-before-7": "soul",
+    "u-065-before-8": "late-guardians-continuity",
+    "u-065-before-9": "early-16-socrates-brothers",
+    "u-065-before-10": "late-soul-close",
+    "u-065-question": "late-guardians-continuity",
+    "u-065-after-0": "early-16-socrates-brothers",
+    "u-066-before-0": "late-soul-close",
+    "u-066-before-1": "soul",
+    "u-066-before-2": "late-guardians-continuity",
+    "u-066-before-3": "early-16-socrates-brothers",
+    "u-066-question": "late-soul-close",
+    "u-066-after-0": "late-guardians-continuity",
+    "u-067-before-0": "early-16-socrates-brothers",
+    "u-067-before-1": "late-soul-close",
+    "u-067-question": "soul",
+    "u-067-after-0": "late-guardians-continuity",
+    "u-068-before-0": "early-16-socrates-brothers",
+    "u-068-before-1": "late-soul-close",
+    "u-068-question": "late-guardians-continuity",
+    "u-068-after-0": "early-16-socrates-brothers",
+    "u-069-before-0": "late-soul-close",
+    "u-069-before-1": "soul",
+    "u-069-before-2": "late-guardians-continuity",
+    "u-069-before-3": "early-16-socrates-brothers",
+    "u-069-before-4": "late-soul-close",
+    "u-069-question": "late-guardians-continuity",
+    "u-069-after-0": "early-16-socrates-brothers",
+    "u-069-after-1": "late-soul-close",
+    "u-069-after-2": "soul",
+    "u-070-before-0": "fullbook-cave",
+    "u-070-question": "late-soul-search",
+    "u-070-after-0": "dialogue-15",
+    "u-071-before-0": "dialogue-16",
+    "u-071-before-1": "early-16-socrates-brothers",
+    "u-071-before-2": "late-soul-close",
+    "u-071-question": "late-soul-search",
+    "u-071-after-0": "soul",
+    "u-072-before-0": "early-16-socrates-brothers",
+    "u-072-before-1": "dialogue-15",
+    "u-072-question": "late-soul-close",
+    "u-072-after-0": "dialogue-16",
+    "u-073-before-0": "late-soul-search",
+    "u-073-before-1": "early-16-socrates-brothers",
+    "u-073-before-2": "late-soul-close",
+    "u-073-question": "soul",
+    "u-073-after-0": "dialogue-15",
+    "u-074-before-0": "late-soul-search",
+    "u-074-before-1": "early-16-socrates-brothers",
+    "u-074-before-2": "dialogue-16",
+    "u-074-before-3": "late-soul-close",
+    "u-074-before-4": "late-soul-search",
+    "u-074-question": "early-16-socrates-brothers",
+    "u-074-after-0": "soul",
+    "u-075-before-0": "dialogue-15",
+    "u-075-before-1": "late-soul-close",
+    "u-075-before-2": "late-soul-search",
+    "u-075-before-3": "dialogue-16",
+    "u-075-question": "early-16-socrates-brothers",
+    "u-075-after-0": "late-soul-close",
+    "u-076-before-0": "late-soul-search",
+    "u-076-before-1": "soul",
+    "u-076-before-2": "dialogue-15",
+    "u-076-before-3": "early-16-socrates-brothers",
+    "u-076-before-4": "late-soul-close",
+    "u-076-before-5": "dialogue-16",
+    "u-076-before-6": "late-soul-search",
+    "u-076-before-7": "early-16-socrates-brothers",
+    "u-076-before-8": "late-soul-close",
+    "u-076-question": "soul",
+    "u-076-after-0": "dialogue-15",
+    "u-077-before-0": "late-soul-search",
+    "u-077-before-1": "early-16-socrates-brothers",
+    "u-077-before-2": "dialogue-16",
+    "u-077-before-3": "late-soul-close",
+    "u-077-before-4": "late-soul-search",
+    "u-077-before-5": "early-16-socrates-brothers",
+    "u-077-before-6": "soul",
+    "u-077-before-7": "dialogue-15",
+    "u-077-question": "late-soul-close",
+    "u-077-after-0": "late-soul-search",
+    "u-077-after-1": "dialogue-16",
+    "u-077-after-2": "early-16-socrates-brothers",
+    "u-078-before-0": "late-guardians-continuity",
+    "u-078-before-1": "late-soul-close",
+    "u-078-question": "soul",
+    "u-078-after-0": "early-16-socrates-brothers",
+    "u-079-before-0": "late-guardians-continuity",
+    "u-079-before-1": "late-soul-close",
+    "u-079-before-2": "early-16-socrates-brothers",
+    "u-079-question": "late-guardians-continuity",
+    "u-079-after-0": "late-soul-close",
+    "u-080-before-0": "soul",
+    "u-080-before-1": "early-16-socrates-brothers",
+    "u-080-before-2": "late-guardians-continuity",
+    "u-080-before-3": "late-soul-close",
+    "u-080-before-4": "early-16-socrates-brothers",
+    "u-080-before-5": "late-guardians-continuity",
+    "u-080-before-6": "late-soul-close",
+    "u-080-question": "soul",
+    "u-080-after-0": "early-16-socrates-brothers",
+    "u-081-before-0": "late-guardians-continuity",
+    "u-081-before-1": "late-soul-close",
+    "u-081-before-2": "early-16-socrates-brothers",
+    "u-081-before-3": "late-guardians-continuity",
+    "u-081-question": "late-soul-close",
+    "u-081-after-0": "soul",
+    "u-081-after-1": "early-16-socrates-brothers",
+    "u-082-before-0": "late-guardians-continuity",
+    "u-082-before-1": "late-soul-close",
+    "u-082-before-2": "early-16-socrates-brothers",
+    "u-082-question": "late-guardians-continuity",
+    "u-082-after-0": "late-soul-close",
+    "u-083-before-0": "soul",
+    "u-083-before-1": "early-16-socrates-brothers",
+    "u-083-before-2": "late-guardians-continuity",
+    "u-083-question": "late-soul-close",
+    "u-083-after-0": "early-16-socrates-brothers",
+    "u-084-before-0": "late-guardians-continuity",
+    "u-084-before-1": "late-soul-close",
+    "u-084-before-2": "soul",
+    "u-084-before-3": "early-16-socrates-brothers",
+    "u-084-before-4": "late-guardians-continuity",
+    "u-084-before-5": "late-soul-close",
+    "u-084-question": "early-16-socrates-brothers",
+    "u-084-after-0": "late-guardians-continuity",
+    "u-085-before-0": "late-soul-close",
+    "u-085-before-1": "soul",
+    "u-085-before-2": "early-16-socrates-brothers",
+    "u-085-before-3": "late-guardians-continuity",
+    "u-085-before-4": "late-soul-close",
+    "u-085-before-5": "early-16-socrates-brothers",
+    "u-085-question": "late-guardians-continuity",
+    "u-085-after-0": "late-soul-close",
+    "u-085-after-1": "soul",
+    "u-085-after-2": "early-16-socrates-brothers",
+    "u-085-after-3": "late-guardians-continuity",
+    "u-085-after-4": "late-soul-close",
+    "u-085-after-5": "early-16-socrates-brothers",
+    "u-085-after-6": "late-guardians-continuity",
+    "u-085-after-7": "late-soul-close",
+    "u-086-before-0": "late-soul-search",
+    "u-086-question": "dialogue-15",
+    "u-086-after-0": "dialogue-16",
+    "u-087-before-0": "soul",
+    "u-087-before-1": "early-16-socrates-brothers",
+    "u-087-before-2": "late-soul-close",
+    "u-087-before-3": "late-soul-search",
+    "u-087-question": "dialogue-15",
+    "u-087-after-0": "early-16-socrates-brothers",
+    "u-088-before-0": "dialogue-16",
+    "u-088-before-1": "late-soul-close",
+    "u-088-before-2": "late-soul-search",
+    "u-088-before-3": "soul",
+    "u-088-before-4": "early-16-socrates-brothers",
+    "u-088-before-5": "dialogue-15",
+    "u-088-question": "late-soul-close",
+    "u-088-after-0": "late-soul-search",
+    "u-089-before-0": "dialogue-16",
+    "u-089-before-1": "early-16-socrates-brothers",
+    "u-089-before-2": "late-soul-close",
+    "u-089-before-3": "soul",
+    "u-089-question": "late-soul-search",
+    "u-089-after-0": "dialogue-15",
+    "u-089-after-1": "early-16-socrates-brothers",
+    "u-090-before-0": "late-soul-close",
+    "u-090-before-1": "dialogue-16",
+    "u-090-before-2": "late-soul-search",
+    "u-090-question": "early-16-socrates-brothers",
+    "u-090-after-0": "soul",
+    "u-091-before-0": "late-soul-close",
+    "u-091-before-1": "dialogue-15",
+    "u-091-before-2": "late-soul-search",
+    "u-091-before-3": "early-16-socrates-brothers",
+    "u-091-before-4": "dialogue-16",
+    "u-091-question": "late-soul-close",
+    "u-091-after-0": "late-soul-search",
+    "u-092-before-0": "soul",
+    "u-092-before-1": "early-16-socrates-brothers",
+    "u-092-before-2": "dialogue-15",
+    "u-092-question": "late-soul-close",
+    "u-092-after-0": "late-soul-search",
+    "u-093-before-0": "dialogue-16",
+    "u-093-before-1": "early-16-socrates-brothers",
+    "u-093-before-2": "late-soul-close",
+    "u-093-before-3": "soul",
+    "u-093-before-4": "late-soul-search",
+    "u-093-before-5": "dialogue-15",
+    "u-093-before-6": "early-16-socrates-brothers",
+    "u-093-before-7": "late-soul-close",
+    "u-093-question": "dialogue-16",
+    "u-093-after-0": "late-soul-search",
+    "u-093-after-1": "early-16-socrates-brothers",
+    "u-093-after-2": "soul",
+    "u-093-after-3": "late-soul-close",
+    "u-094-before-0": "dialogue-15",
+    "u-094-question": "late-soul-search",
+    "u-094-after-0": "early-16-socrates-brothers",
+    "u-095-before-0": "dialogue-16",
+    "u-095-before-1": "late-soul-close",
+    "u-095-before-2": "late-soul-search",
+    "u-095-before-3": "soul",
+    "u-095-before-4": "early-16-socrates-brothers",
+    "u-095-before-5": "dialogue-15",
+    "u-095-question": "late-soul-close",
+    "u-095-after-0": "late-soul-search",
+    "u-096-before-0": "dialogue-16",
+    "u-096-before-1": "early-16-socrates-brothers",
+    "u-096-before-2": "late-soul-close",
+    "u-096-before-3": "soul",
+    "u-096-before-4": "late-soul-search",
+    "u-096-before-5": "dialogue-15",
+    "u-096-question": "early-16-socrates-brothers",
+    "u-096-after-0": "late-soul-close",
+    "u-097-before-0": "dialogue-16",
+    "u-097-before-1": "late-soul-search",
+    "u-097-before-2": "early-16-socrates-brothers",
+    "u-097-before-3": "soul",
+    "u-097-before-4": "late-soul-close",
+    "u-097-before-5": "dialogue-15",
+    "u-097-before-6": "late-soul-search",
+    "u-097-before-7": "early-16-socrates-brothers",
+    "u-097-before-8": "dialogue-16",
+    "u-097-question": "late-soul-close",
+    "u-097-after-0": "late-soul-search",
+    "u-098-before-0": "soul",
+    "u-098-question": "early-16-socrates-brothers",
+    "u-098-after-0": "dialogue-15",
+    "u-099-before-0": "late-soul-close",
+    "u-099-before-1": "late-soul-search",
+    "u-099-before-2": "dialogue-16",
+    "u-099-question": "early-16-socrates-brothers",
+    "u-099-after-0": "late-soul-close",
+    "u-100-before-0": "soul",
+    "u-100-before-1": "late-soul-search",
+    "u-100-before-2": "dialogue-15",
+    "u-100-question": "early-16-socrates-brothers",
+    "u-100-after-0": "late-soul-close",
+    "u-101-before-0": "dialogue-16",
+    "u-101-before-1": "late-soul-search",
+    "u-101-question": "early-16-socrates-brothers",
+    "u-101-after-0": "soul",
+    "u-101-after-1": "late-soul-close",
+    "u-101-after-2": "dialogue-15",
+    "u-101-after-3": "late-soul-search",
+    "u-101-after-4": "early-16-socrates-brothers",
+    "u-101-after-5": "dialogue-16",
+    "u-101-after-6": "late-soul-close",
+    "u-101-after-7": "late-soul-search",
+    "u-101-after-8": "soul",
+    "u-101-after-9": "early-16-socrates-brothers"
   },
   "pageSources": {
     "u-001-before-0": {
@@ -2670,13 +3032,2435 @@
       "first": "p-1851",
       "last": "p-1862",
       "kind": "text"
+    },
+    "u-054-before-0": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1864",
+      "last": "p-1871",
+      "kind": "text"
+    },
+    "u-054-before-1": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1872",
+      "last": "p-1881",
+      "kind": "text"
+    },
+    "u-054-before-2": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1882",
+      "last": "p-1888",
+      "kind": "text"
+    },
+    "u-054-before-3": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1889",
+      "last": "p-1900",
+      "kind": "text"
+    },
+    "u-054-before-4": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1901",
+      "last": "p-1910",
+      "kind": "text"
+    },
+    "u-054-question": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1863",
+      "last": "p-1863",
+      "kind": "question"
+    },
+    "u-054-after-0": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1863",
+      "last": "p-1912",
+      "kind": "text"
+    },
+    "u-055-before-0": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1914",
+      "last": "p-1921",
+      "kind": "text"
+    },
+    "u-055-before-1": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1922",
+      "last": "p-1933",
+      "kind": "text"
+    },
+    "u-055-before-2": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1934",
+      "last": "p-1942",
+      "kind": "text"
+    },
+    "u-055-before-3": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1943",
+      "last": "p-1951",
+      "kind": "text"
+    },
+    "u-055-before-4": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1952",
+      "last": "p-1963",
+      "kind": "text"
+    },
+    "u-055-before-5": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1964",
+      "last": "p-1975",
+      "kind": "text"
+    },
+    "u-055-question": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1913",
+      "last": "p-1913",
+      "kind": "question"
+    },
+    "u-055-after-0": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1913",
+      "last": "p-1976",
+      "kind": "text"
+    },
+    "u-056-before-0": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1978",
+      "last": "p-1989",
+      "kind": "text"
+    },
+    "u-056-before-1": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1990",
+      "last": "p-2001",
+      "kind": "text"
+    },
+    "u-056-before-2": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2002",
+      "last": "p-2012",
+      "kind": "text"
+    },
+    "u-056-before-3": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2013",
+      "last": "p-2017",
+      "kind": "text"
+    },
+    "u-056-before-4": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2018",
+      "last": "p-2029",
+      "kind": "text"
+    },
+    "u-056-before-5": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2030",
+      "last": "p-2041",
+      "kind": "text"
+    },
+    "u-056-before-6": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2042",
+      "last": "p-2053",
+      "kind": "text"
+    },
+    "u-056-before-7": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2054",
+      "last": "p-2065",
+      "kind": "text"
+    },
+    "u-056-before-8": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2066",
+      "last": "p-2073",
+      "kind": "text"
+    },
+    "u-056-question": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1977",
+      "last": "p-1977",
+      "kind": "question"
+    },
+    "u-056-after-0": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-1977",
+      "last": "p-2074",
+      "kind": "text"
+    },
+    "u-057-before-0": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2076",
+      "last": "p-2087",
+      "kind": "text"
+    },
+    "u-057-before-1": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2088",
+      "last": "p-2099",
+      "kind": "text"
+    },
+    "u-057-before-2": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2100",
+      "last": "p-2111",
+      "kind": "text"
+    },
+    "u-057-before-3": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2112",
+      "last": "p-2120",
+      "kind": "text"
+    },
+    "u-057-before-4": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2121",
+      "last": "p-2131",
+      "kind": "text"
+    },
+    "u-057-before-5": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2132",
+      "last": "p-2143",
+      "kind": "text"
+    },
+    "u-057-before-6": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2144",
+      "last": "p-2152",
+      "kind": "text"
+    },
+    "u-057-before-7": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2153",
+      "last": "p-2159",
+      "kind": "text"
+    },
+    "u-057-question": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2075",
+      "last": "p-2075",
+      "kind": "question"
+    },
+    "u-057-after-0": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2075",
+      "last": "p-2170",
+      "kind": "text"
+    },
+    "u-057-after-1": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2171",
+      "last": "p-2182",
+      "kind": "text"
+    },
+    "u-057-after-2": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2183",
+      "last": "p-2194",
+      "kind": "text"
+    },
+    "u-057-after-3": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2195",
+      "last": "p-2206",
+      "kind": "text"
+    },
+    "u-057-after-4": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2207",
+      "last": "p-2218",
+      "kind": "text"
+    },
+    "u-057-after-5": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2219",
+      "last": "p-2226",
+      "kind": "text"
+    },
+    "u-057-after-6": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2227",
+      "last": "p-2238",
+      "kind": "text"
+    },
+    "u-057-after-7": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2239",
+      "last": "p-2248",
+      "kind": "text"
+    },
+    "u-057-after-8": {
+      "chapterId": "community",
+      "sectionId": "community-opening",
+      "first": "p-2249",
+      "last": "p-2258",
+      "kind": "text"
+    },
+    "u-058-before-0": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2260",
+      "last": "p-2261",
+      "kind": "text"
+    },
+    "u-058-before-1": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2262",
+      "last": "p-2268",
+      "kind": "text"
+    },
+    "u-058-question": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2259",
+      "last": "p-2259",
+      "kind": "question"
+    },
+    "u-058-after-0": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2259",
+      "last": "p-2269",
+      "kind": "text"
+    },
+    "u-059-before-0": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2271",
+      "last": "p-2281",
+      "kind": "text"
+    },
+    "u-059-before-1": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2282",
+      "last": "p-2289",
+      "kind": "text"
+    },
+    "u-059-before-2": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2290",
+      "last": "p-2297",
+      "kind": "text"
+    },
+    "u-059-before-3": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2298",
+      "last": "p-2304",
+      "kind": "text"
+    },
+    "u-059-question": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2270",
+      "last": "p-2270",
+      "kind": "question"
+    },
+    "u-059-after-0": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2270",
+      "last": "p-2305",
+      "kind": "text"
+    },
+    "u-060-before-0": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2307",
+      "last": "p-2315",
+      "kind": "text"
+    },
+    "u-060-before-1": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2316",
+      "last": "p-2327",
+      "kind": "text"
+    },
+    "u-060-before-2": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2328",
+      "last": "p-2338",
+      "kind": "text"
+    },
+    "u-060-before-3": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2339",
+      "last": "p-2350",
+      "kind": "text"
+    },
+    "u-060-question": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2306",
+      "last": "p-2306",
+      "kind": "question"
+    },
+    "u-060-after-0": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2306",
+      "last": "p-2351",
+      "kind": "text"
+    },
+    "u-061-before-0": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2353",
+      "last": "p-2364",
+      "kind": "text"
+    },
+    "u-061-before-1": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2365",
+      "last": "p-2376",
+      "kind": "text"
+    },
+    "u-061-before-2": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2377",
+      "last": "p-2388",
+      "kind": "text"
+    },
+    "u-061-before-3": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2389",
+      "last": "p-2400",
+      "kind": "text"
+    },
+    "u-061-before-4": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2401",
+      "last": "p-2408",
+      "kind": "text"
+    },
+    "u-061-question": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2352",
+      "last": "p-2352",
+      "kind": "question"
+    },
+    "u-061-after-0": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2352",
+      "last": "p-2418",
+      "kind": "text"
+    },
+    "u-061-after-1": {
+      "chapterId": "philosophers",
+      "sectionId": "philosophers-opening",
+      "first": "p-2419",
+      "last": "p-2430",
+      "kind": "text"
+    },
+    "u-062-before-0": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2432",
+      "last": "p-2439",
+      "kind": "text"
+    },
+    "u-062-before-1": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2440",
+      "last": "p-2445",
+      "kind": "text"
+    },
+    "u-062-question": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2431",
+      "last": "p-2431",
+      "kind": "question"
+    },
+    "u-062-after-0": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2431",
+      "last": "p-2446",
+      "kind": "text"
+    },
+    "u-063-before-0": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2448",
+      "last": "p-2459",
+      "kind": "text"
+    },
+    "u-063-before-1": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2460",
+      "last": "p-2471",
+      "kind": "text"
+    },
+    "u-063-before-2": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2472",
+      "last": "p-2483",
+      "kind": "text"
+    },
+    "u-063-before-3": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2484",
+      "last": "p-2495",
+      "kind": "text"
+    },
+    "u-063-before-4": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2496",
+      "last": "p-2506",
+      "kind": "text"
+    },
+    "u-063-before-5": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2507",
+      "last": "p-2513",
+      "kind": "text"
+    },
+    "u-063-before-6": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2514",
+      "last": "p-2514",
+      "kind": "text"
+    },
+    "u-063-question": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2447",
+      "last": "p-2447",
+      "kind": "question"
+    },
+    "u-063-after-0": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2447",
+      "last": "p-2516",
+      "kind": "text"
+    },
+    "u-064-before-0": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2518",
+      "last": "p-2529",
+      "kind": "text"
+    },
+    "u-064-before-1": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2530",
+      "last": "p-2541",
+      "kind": "text"
+    },
+    "u-064-before-2": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2542",
+      "last": "p-2551",
+      "kind": "text"
+    },
+    "u-064-before-3": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2552",
+      "last": "p-2563",
+      "kind": "text"
+    },
+    "u-064-before-4": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2564",
+      "last": "p-2573",
+      "kind": "text"
+    },
+    "u-064-before-5": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2574",
+      "last": "p-2578",
+      "kind": "text"
+    },
+    "u-064-question": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2517",
+      "last": "p-2517",
+      "kind": "question"
+    },
+    "u-064-after-0": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2517",
+      "last": "p-2579",
+      "kind": "text"
+    },
+    "u-065-before-0": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2581",
+      "last": "p-2590",
+      "kind": "text"
+    },
+    "u-065-before-1": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2591",
+      "last": "p-2602",
+      "kind": "text"
+    },
+    "u-065-before-2": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2603",
+      "last": "p-2614",
+      "kind": "text"
+    },
+    "u-065-before-3": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2615",
+      "last": "p-2619",
+      "kind": "text"
+    },
+    "u-065-before-4": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2620",
+      "last": "p-2628",
+      "kind": "text"
+    },
+    "u-065-before-5": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2629",
+      "last": "p-2637",
+      "kind": "text"
+    },
+    "u-065-before-6": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2638",
+      "last": "p-2645",
+      "kind": "text"
+    },
+    "u-065-before-7": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2646",
+      "last": "p-2651",
+      "kind": "text"
+    },
+    "u-065-before-8": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2652",
+      "last": "p-2661",
+      "kind": "text"
+    },
+    "u-065-before-9": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2662",
+      "last": "p-2673",
+      "kind": "text"
+    },
+    "u-065-before-10": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2674",
+      "last": "p-2684",
+      "kind": "text"
+    },
+    "u-065-question": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2580",
+      "last": "p-2580",
+      "kind": "question"
+    },
+    "u-065-after-0": {
+      "chapterId": "philosopher-city",
+      "sectionId": "philosopher-city-opening",
+      "first": "p-2580",
+      "last": "p-2695",
+      "kind": "text"
+    },
+    "u-066-before-0": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2697",
+      "last": "p-2701",
+      "kind": "text"
+    },
+    "u-066-before-1": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2702",
+      "last": "p-2712",
+      "kind": "text"
+    },
+    "u-066-before-2": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2713",
+      "last": "p-2722",
+      "kind": "text"
+    },
+    "u-066-before-3": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2723",
+      "last": "p-2729",
+      "kind": "text"
+    },
+    "u-066-question": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2696",
+      "last": "p-2696",
+      "kind": "question"
+    },
+    "u-066-after-0": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2696",
+      "last": "p-2730",
+      "kind": "text"
+    },
+    "u-067-before-0": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2732",
+      "last": "p-2743",
+      "kind": "text"
+    },
+    "u-067-before-1": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2744",
+      "last": "p-2753",
+      "kind": "text"
+    },
+    "u-067-question": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2731",
+      "last": "p-2731",
+      "kind": "question"
+    },
+    "u-067-after-0": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2731",
+      "last": "p-2754",
+      "kind": "text"
+    },
+    "u-068-before-0": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2756",
+      "last": "p-2766",
+      "kind": "text"
+    },
+    "u-068-before-1": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2767",
+      "last": "p-2778",
+      "kind": "text"
+    },
+    "u-068-question": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2755",
+      "last": "p-2755",
+      "kind": "question"
+    },
+    "u-068-after-0": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2755",
+      "last": "p-2779",
+      "kind": "text"
+    },
+    "u-069-before-0": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2781",
+      "last": "p-2792",
+      "kind": "text"
+    },
+    "u-069-before-1": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2793",
+      "last": "p-2804",
+      "kind": "text"
+    },
+    "u-069-before-2": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2805",
+      "last": "p-2811",
+      "kind": "text"
+    },
+    "u-069-before-3": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2812",
+      "last": "p-2823",
+      "kind": "text"
+    },
+    "u-069-before-4": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2824",
+      "last": "p-2830",
+      "kind": "text"
+    },
+    "u-069-question": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2780",
+      "last": "p-2780",
+      "kind": "question"
+    },
+    "u-069-after-0": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2780",
+      "last": "p-2837",
+      "kind": "text"
+    },
+    "u-069-after-1": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2838",
+      "last": "p-2842",
+      "kind": "text"
+    },
+    "u-069-after-2": {
+      "chapterId": "good",
+      "sectionId": "good-opening",
+      "first": "p-2843",
+      "last": "p-2845",
+      "kind": "text"
+    },
+    "u-070-before-0": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2847",
+      "last": "p-2851",
+      "kind": "text"
+    },
+    "u-070-question": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2846",
+      "last": "p-2846",
+      "kind": "question"
+    },
+    "u-070-after-0": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2846",
+      "last": "p-2852",
+      "kind": "text"
+    },
+    "u-071-before-0": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2854",
+      "last": "p-2863",
+      "kind": "text"
+    },
+    "u-071-before-1": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2864",
+      "last": "p-2870",
+      "kind": "text"
+    },
+    "u-071-before-2": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2871",
+      "last": "p-2877",
+      "kind": "text"
+    },
+    "u-071-question": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2853",
+      "last": "p-2853",
+      "kind": "question"
+    },
+    "u-071-after-0": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2853",
+      "last": "p-2878",
+      "kind": "text"
+    },
+    "u-072-before-0": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2880",
+      "last": "p-2882",
+      "kind": "text"
+    },
+    "u-072-before-1": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2883",
+      "last": "p-2888",
+      "kind": "text"
+    },
+    "u-072-question": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2879",
+      "last": "p-2879",
+      "kind": "question"
+    },
+    "u-072-after-0": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2879",
+      "last": "p-2890",
+      "kind": "text"
+    },
+    "u-073-before-0": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2892",
+      "last": "p-2899",
+      "kind": "text"
+    },
+    "u-073-before-1": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2900",
+      "last": "p-2908",
+      "kind": "text"
+    },
+    "u-073-before-2": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2909",
+      "last": "p-2911",
+      "kind": "text"
+    },
+    "u-073-question": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2891",
+      "last": "p-2891",
+      "kind": "question"
+    },
+    "u-073-after-0": {
+      "chapterId": "cave",
+      "sectionId": "cave-opening",
+      "first": "p-2891",
+      "last": "p-2920",
+      "kind": "text"
+    },
+    "u-074-before-0": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2922",
+      "last": "p-2933",
+      "kind": "text"
+    },
+    "u-074-before-1": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2934",
+      "last": "p-2944",
+      "kind": "text"
+    },
+    "u-074-before-2": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2945",
+      "last": "p-2955",
+      "kind": "text"
+    },
+    "u-074-before-3": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2956",
+      "last": "p-2966",
+      "kind": "text"
+    },
+    "u-074-before-4": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2967",
+      "last": "p-2975",
+      "kind": "text"
+    },
+    "u-074-question": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2921",
+      "last": "p-2921",
+      "kind": "question"
+    },
+    "u-074-after-0": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2921",
+      "last": "p-2977",
+      "kind": "text"
+    },
+    "u-075-before-0": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2979",
+      "last": "p-2990",
+      "kind": "text"
+    },
+    "u-075-before-1": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2991",
+      "last": "p-2998",
+      "kind": "text"
+    },
+    "u-075-before-2": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2999",
+      "last": "p-3010",
+      "kind": "text"
+    },
+    "u-075-before-3": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3011",
+      "last": "p-3016",
+      "kind": "text"
+    },
+    "u-075-question": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2978",
+      "last": "p-2978",
+      "kind": "question"
+    },
+    "u-075-after-0": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-2978",
+      "last": "p-3018",
+      "kind": "text"
+    },
+    "u-076-before-0": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3020",
+      "last": "p-3031",
+      "kind": "text"
+    },
+    "u-076-before-1": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3032",
+      "last": "p-3043",
+      "kind": "text"
+    },
+    "u-076-before-2": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3044",
+      "last": "p-3055",
+      "kind": "text"
+    },
+    "u-076-before-3": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3056",
+      "last": "p-3066",
+      "kind": "text"
+    },
+    "u-076-before-4": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3067",
+      "last": "p-3075",
+      "kind": "text"
+    },
+    "u-076-before-5": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3076",
+      "last": "p-3086",
+      "kind": "text"
+    },
+    "u-076-before-6": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3087",
+      "last": "p-3097",
+      "kind": "text"
+    },
+    "u-076-before-7": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3098",
+      "last": "p-3108",
+      "kind": "text"
+    },
+    "u-076-before-8": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3109",
+      "last": "p-3114",
+      "kind": "text"
+    },
+    "u-076-question": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3019",
+      "last": "p-3019",
+      "kind": "question"
+    },
+    "u-076-after-0": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3019",
+      "last": "p-3115",
+      "kind": "text"
+    },
+    "u-077-before-0": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3117",
+      "last": "p-3119",
+      "kind": "text"
+    },
+    "u-077-before-1": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3120",
+      "last": "p-3128",
+      "kind": "text"
+    },
+    "u-077-before-2": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3129",
+      "last": "p-3140",
+      "kind": "text"
+    },
+    "u-077-before-3": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3141",
+      "last": "p-3148",
+      "kind": "text"
+    },
+    "u-077-before-4": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3149",
+      "last": "p-3159",
+      "kind": "text"
+    },
+    "u-077-before-5": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3160",
+      "last": "p-3171",
+      "kind": "text"
+    },
+    "u-077-before-6": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3172",
+      "last": "p-3183",
+      "kind": "text"
+    },
+    "u-077-before-7": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3184",
+      "last": "p-3192",
+      "kind": "text"
+    },
+    "u-077-question": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3116",
+      "last": "p-3116",
+      "kind": "question"
+    },
+    "u-077-after-0": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3116",
+      "last": "p-3203",
+      "kind": "text"
+    },
+    "u-077-after-1": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3204",
+      "last": "p-3213",
+      "kind": "text"
+    },
+    "u-077-after-2": {
+      "chapterId": "dialectic",
+      "sectionId": "dialectic-opening",
+      "first": "p-3214",
+      "last": "p-3222",
+      "kind": "text"
+    },
+    "u-078-before-0": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3224",
+      "last": "p-3230",
+      "kind": "text"
+    },
+    "u-078-before-1": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3231",
+      "last": "p-3242",
+      "kind": "text"
+    },
+    "u-078-question": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3223",
+      "last": "p-3223",
+      "kind": "question"
+    },
+    "u-078-after-0": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3223",
+      "last": "p-3244",
+      "kind": "text"
+    },
+    "u-079-before-0": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3246",
+      "last": "p-3251",
+      "kind": "text"
+    },
+    "u-079-before-1": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3252",
+      "last": "p-3252",
+      "kind": "text"
+    },
+    "u-079-before-2": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3252",
+      "last": "p-3257",
+      "kind": "text"
+    },
+    "u-079-question": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3245",
+      "last": "p-3245",
+      "kind": "question"
+    },
+    "u-079-after-0": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3245",
+      "last": "p-3258",
+      "kind": "text"
+    },
+    "u-080-before-0": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3260",
+      "last": "p-3268",
+      "kind": "text"
+    },
+    "u-080-before-1": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3269",
+      "last": "p-3278",
+      "kind": "text"
+    },
+    "u-080-before-2": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3279",
+      "last": "p-3289",
+      "kind": "text"
+    },
+    "u-080-before-3": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3290",
+      "last": "p-3298",
+      "kind": "text"
+    },
+    "u-080-before-4": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3299",
+      "last": "p-3310",
+      "kind": "text"
+    },
+    "u-080-before-5": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3311",
+      "last": "p-3321",
+      "kind": "text"
+    },
+    "u-080-before-6": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3322",
+      "last": "p-3333",
+      "kind": "text"
+    },
+    "u-080-question": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3259",
+      "last": "p-3259",
+      "kind": "question"
+    },
+    "u-080-after-0": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3259",
+      "last": "p-3334",
+      "kind": "text"
+    },
+    "u-081-before-0": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3336",
+      "last": "p-3346",
+      "kind": "text"
+    },
+    "u-081-before-1": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3347",
+      "last": "p-3358",
+      "kind": "text"
+    },
+    "u-081-before-2": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3359",
+      "last": "p-3369",
+      "kind": "text"
+    },
+    "u-081-before-3": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3370",
+      "last": "p-3381",
+      "kind": "text"
+    },
+    "u-081-question": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3335",
+      "last": "p-3335",
+      "kind": "question"
+    },
+    "u-081-after-0": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3335",
+      "last": "p-3389",
+      "kind": "text"
+    },
+    "u-081-after-1": {
+      "chapterId": "regimes",
+      "sectionId": "regimes-opening",
+      "first": "p-3390",
+      "last": "p-3397",
+      "kind": "text"
+    },
+    "u-082-before-0": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3399",
+      "last": "p-3409",
+      "kind": "text"
+    },
+    "u-082-before-1": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3410",
+      "last": "p-3420",
+      "kind": "text"
+    },
+    "u-082-before-2": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3421",
+      "last": "p-3426",
+      "kind": "text"
+    },
+    "u-082-question": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3398",
+      "last": "p-3398",
+      "kind": "question"
+    },
+    "u-082-after-0": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3398",
+      "last": "p-3428",
+      "kind": "text"
+    },
+    "u-083-before-0": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3430",
+      "last": "p-3440",
+      "kind": "text"
+    },
+    "u-083-before-1": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3441",
+      "last": "p-3445",
+      "kind": "text"
+    },
+    "u-083-before-2": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3446",
+      "last": "p-3455",
+      "kind": "text"
+    },
+    "u-083-question": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3429",
+      "last": "p-3429",
+      "kind": "question"
+    },
+    "u-083-after-0": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3429",
+      "last": "p-3456",
+      "kind": "text"
+    },
+    "u-084-before-0": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3458",
+      "last": "p-3469",
+      "kind": "text"
+    },
+    "u-084-before-1": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3470",
+      "last": "p-3481",
+      "kind": "text"
+    },
+    "u-084-before-2": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3482",
+      "last": "p-3493",
+      "kind": "text"
+    },
+    "u-084-before-3": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3494",
+      "last": "p-3501",
+      "kind": "text"
+    },
+    "u-084-before-4": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3502",
+      "last": "p-3509",
+      "kind": "text"
+    },
+    "u-084-before-5": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3510",
+      "last": "p-3521",
+      "kind": "text"
+    },
+    "u-084-question": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3457",
+      "last": "p-3457",
+      "kind": "question"
+    },
+    "u-084-after-0": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3457",
+      "last": "p-3522",
+      "kind": "text"
+    },
+    "u-085-before-0": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3524",
+      "last": "p-3533",
+      "kind": "text"
+    },
+    "u-085-before-1": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3534",
+      "last": "p-3541",
+      "kind": "text"
+    },
+    "u-085-before-2": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3542",
+      "last": "p-3553",
+      "kind": "text"
+    },
+    "u-085-before-3": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3554",
+      "last": "p-3565",
+      "kind": "text"
+    },
+    "u-085-before-4": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3566",
+      "last": "p-3577",
+      "kind": "text"
+    },
+    "u-085-before-5": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3578",
+      "last": "p-3589",
+      "kind": "text"
+    },
+    "u-085-question": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3523",
+      "last": "p-3523",
+      "kind": "question"
+    },
+    "u-085-after-0": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3523",
+      "last": "p-3600",
+      "kind": "text"
+    },
+    "u-085-after-1": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3601",
+      "last": "p-3612",
+      "kind": "text"
+    },
+    "u-085-after-2": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3613",
+      "last": "p-3622",
+      "kind": "text"
+    },
+    "u-085-after-3": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3623",
+      "last": "p-3633",
+      "kind": "text"
+    },
+    "u-085-after-4": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3634",
+      "last": "p-3645",
+      "kind": "text"
+    },
+    "u-085-after-5": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3646",
+      "last": "p-3655",
+      "kind": "text"
+    },
+    "u-085-after-6": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3656",
+      "last": "p-3665",
+      "kind": "text"
+    },
+    "u-085-after-7": {
+      "chapterId": "democracy",
+      "sectionId": "democracy-opening",
+      "first": "p-3666",
+      "last": "p-3673",
+      "kind": "text"
+    },
+    "u-086-before-0": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3675",
+      "last": "p-3675",
+      "kind": "text"
+    },
+    "u-086-question": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3674",
+      "last": "p-3674",
+      "kind": "question"
+    },
+    "u-086-after-0": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3674",
+      "last": "p-3676",
+      "kind": "text"
+    },
+    "u-087-before-0": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3678",
+      "last": "p-3685",
+      "kind": "text"
+    },
+    "u-087-before-1": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3686",
+      "last": "p-3692",
+      "kind": "text"
+    },
+    "u-087-before-2": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3693",
+      "last": "p-3699",
+      "kind": "text"
+    },
+    "u-087-before-3": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3700",
+      "last": "p-3711",
+      "kind": "text"
+    },
+    "u-087-question": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3677",
+      "last": "p-3677",
+      "kind": "question"
+    },
+    "u-087-after-0": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3677",
+      "last": "p-3712",
+      "kind": "text"
+    },
+    "u-088-before-0": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3714",
+      "last": "p-3725",
+      "kind": "text"
+    },
+    "u-088-before-1": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3726",
+      "last": "p-3735",
+      "kind": "text"
+    },
+    "u-088-before-2": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3736",
+      "last": "p-3742",
+      "kind": "text"
+    },
+    "u-088-before-3": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3743",
+      "last": "p-3754",
+      "kind": "text"
+    },
+    "u-088-before-4": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3755",
+      "last": "p-3763",
+      "kind": "text"
+    },
+    "u-088-before-5": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3764",
+      "last": "p-3771",
+      "kind": "text"
+    },
+    "u-088-question": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3713",
+      "last": "p-3713",
+      "kind": "question"
+    },
+    "u-088-after-0": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3713",
+      "last": "p-3772",
+      "kind": "text"
+    },
+    "u-089-before-0": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3774",
+      "last": "p-3782",
+      "kind": "text"
+    },
+    "u-089-before-1": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3783",
+      "last": "p-3794",
+      "kind": "text"
+    },
+    "u-089-before-2": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3795",
+      "last": "p-3805",
+      "kind": "text"
+    },
+    "u-089-before-3": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3806",
+      "last": "p-3816",
+      "kind": "text"
+    },
+    "u-089-question": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3773",
+      "last": "p-3773",
+      "kind": "question"
+    },
+    "u-089-after-0": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3773",
+      "last": "p-3827",
+      "kind": "text"
+    },
+    "u-089-after-1": {
+      "chapterId": "tyrant",
+      "sectionId": "tyrant-opening",
+      "first": "p-3828",
+      "last": "p-3837",
+      "kind": "text"
+    },
+    "u-090-before-0": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3839",
+      "last": "p-3848",
+      "kind": "text"
+    },
+    "u-090-before-1": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3849",
+      "last": "p-3860",
+      "kind": "text"
+    },
+    "u-090-before-2": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3861",
+      "last": "p-3871",
+      "kind": "text"
+    },
+    "u-090-question": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3838",
+      "last": "p-3838",
+      "kind": "question"
+    },
+    "u-090-after-0": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3838",
+      "last": "p-3872",
+      "kind": "text"
+    },
+    "u-091-before-0": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3874",
+      "last": "p-3883",
+      "kind": "text"
+    },
+    "u-091-before-1": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3884",
+      "last": "p-3895",
+      "kind": "text"
+    },
+    "u-091-before-2": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3896",
+      "last": "p-3905",
+      "kind": "text"
+    },
+    "u-091-before-3": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3906",
+      "last": "p-3917",
+      "kind": "text"
+    },
+    "u-091-before-4": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3918",
+      "last": "p-3929",
+      "kind": "text"
+    },
+    "u-091-question": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3873",
+      "last": "p-3873",
+      "kind": "question"
+    },
+    "u-091-after-0": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3873",
+      "last": "p-3930",
+      "kind": "text"
+    },
+    "u-092-before-0": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3932",
+      "last": "p-3941",
+      "kind": "text"
+    },
+    "u-092-before-1": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3942",
+      "last": "p-3953",
+      "kind": "text"
+    },
+    "u-092-before-2": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3954",
+      "last": "p-3961",
+      "kind": "text"
+    },
+    "u-092-question": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3931",
+      "last": "p-3931",
+      "kind": "question"
+    },
+    "u-092-after-0": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3931",
+      "last": "p-3962",
+      "kind": "text"
+    },
+    "u-093-before-0": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3964",
+      "last": "p-3975",
+      "kind": "text"
+    },
+    "u-093-before-1": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3976",
+      "last": "p-3985",
+      "kind": "text"
+    },
+    "u-093-before-2": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3986",
+      "last": "p-3997",
+      "kind": "text"
+    },
+    "u-093-before-3": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3998",
+      "last": "p-4009",
+      "kind": "text"
+    },
+    "u-093-before-4": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-4010",
+      "last": "p-4021",
+      "kind": "text"
+    },
+    "u-093-before-5": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-4022",
+      "last": "p-4033",
+      "kind": "text"
+    },
+    "u-093-before-6": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-4034",
+      "last": "p-4043",
+      "kind": "text"
+    },
+    "u-093-before-7": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-4044",
+      "last": "p-4049",
+      "kind": "text"
+    },
+    "u-093-question": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3963",
+      "last": "p-3963",
+      "kind": "question"
+    },
+    "u-093-after-0": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-3963",
+      "last": "p-4059",
+      "kind": "text"
+    },
+    "u-093-after-1": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-4060",
+      "last": "p-4065",
+      "kind": "text"
+    },
+    "u-093-after-2": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-4066",
+      "last": "p-4072",
+      "kind": "text"
+    },
+    "u-093-after-3": {
+      "chapterId": "pleasure",
+      "sectionId": "pleasure-opening",
+      "first": "p-4073",
+      "last": "p-4084",
+      "kind": "text"
+    },
+    "u-094-before-0": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4086",
+      "last": "p-4095",
+      "kind": "text"
+    },
+    "u-094-question": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4085",
+      "last": "p-4085",
+      "kind": "question"
+    },
+    "u-094-after-0": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4085",
+      "last": "p-4097",
+      "kind": "text"
+    },
+    "u-095-before-0": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4099",
+      "last": "p-4108",
+      "kind": "text"
+    },
+    "u-095-before-1": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4109",
+      "last": "p-4118",
+      "kind": "text"
+    },
+    "u-095-before-2": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4119",
+      "last": "p-4130",
+      "kind": "text"
+    },
+    "u-095-before-3": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4131",
+      "last": "p-4142",
+      "kind": "text"
+    },
+    "u-095-before-4": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4143",
+      "last": "p-4154",
+      "kind": "text"
+    },
+    "u-095-before-5": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4155",
+      "last": "p-4163",
+      "kind": "text"
+    },
+    "u-095-question": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4098",
+      "last": "p-4098",
+      "kind": "question"
+    },
+    "u-095-after-0": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4098",
+      "last": "p-4164",
+      "kind": "text"
+    },
+    "u-096-before-0": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4166",
+      "last": "p-4171",
+      "kind": "text"
+    },
+    "u-096-before-1": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4172",
+      "last": "p-4177",
+      "kind": "text"
+    },
+    "u-096-before-2": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4178",
+      "last": "p-4185",
+      "kind": "text"
+    },
+    "u-096-before-3": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4186",
+      "last": "p-4189",
+      "kind": "text"
+    },
+    "u-096-before-4": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4190",
+      "last": "p-4201",
+      "kind": "text"
+    },
+    "u-096-before-5": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4202",
+      "last": "p-4213",
+      "kind": "text"
+    },
+    "u-096-question": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4165",
+      "last": "p-4165",
+      "kind": "question"
+    },
+    "u-096-after-0": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4165",
+      "last": "p-4214",
+      "kind": "text"
+    },
+    "u-097-before-0": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4216",
+      "last": "p-4227",
+      "kind": "text"
+    },
+    "u-097-before-1": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4228",
+      "last": "p-4239",
+      "kind": "text"
+    },
+    "u-097-before-2": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4240",
+      "last": "p-4251",
+      "kind": "text"
+    },
+    "u-097-before-3": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4252",
+      "last": "p-4263",
+      "kind": "text"
+    },
+    "u-097-before-4": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4264",
+      "last": "p-4275",
+      "kind": "text"
+    },
+    "u-097-before-5": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4276",
+      "last": "p-4285",
+      "kind": "text"
+    },
+    "u-097-before-6": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4286",
+      "last": "p-4295",
+      "kind": "text"
+    },
+    "u-097-before-7": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4296",
+      "last": "p-4302",
+      "kind": "text"
+    },
+    "u-097-before-8": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4303",
+      "last": "p-4307",
+      "kind": "text"
+    },
+    "u-097-question": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4215",
+      "last": "p-4215",
+      "kind": "question"
+    },
+    "u-097-after-0": {
+      "chapterId": "imitation",
+      "sectionId": "imitation-opening",
+      "first": "p-4215",
+      "last": "p-4315",
+      "kind": "text"
+    },
+    "u-098-before-0": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4317",
+      "last": "p-4320",
+      "kind": "text"
+    },
+    "u-098-question": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4316",
+      "last": "p-4316",
+      "kind": "question"
+    },
+    "u-098-after-0": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4316",
+      "last": "p-4321",
+      "kind": "text"
+    },
+    "u-099-before-0": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4323",
+      "last": "p-4334",
+      "kind": "text"
+    },
+    "u-099-before-1": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4335",
+      "last": "p-4342",
+      "kind": "text"
+    },
+    "u-099-before-2": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4343",
+      "last": "p-4347",
+      "kind": "text"
+    },
+    "u-099-question": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4322",
+      "last": "p-4322",
+      "kind": "question"
+    },
+    "u-099-after-0": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4322",
+      "last": "p-4348",
+      "kind": "text"
+    },
+    "u-100-before-0": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4350",
+      "last": "p-4358",
+      "kind": "text"
+    },
+    "u-100-before-1": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4359",
+      "last": "p-4369",
+      "kind": "text"
+    },
+    "u-100-before-2": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4370",
+      "last": "p-4375",
+      "kind": "text"
+    },
+    "u-100-question": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4349",
+      "last": "p-4349",
+      "kind": "question"
+    },
+    "u-100-after-0": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4349",
+      "last": "p-4376",
+      "kind": "text"
+    },
+    "u-101-before-0": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4378",
+      "last": "p-4385",
+      "kind": "text"
+    },
+    "u-101-before-1": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4386",
+      "last": "p-4395",
+      "kind": "text"
+    },
+    "u-101-question": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4377",
+      "last": "p-4377",
+      "kind": "question"
+    },
+    "u-101-after-0": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4377",
+      "last": "p-4402",
+      "kind": "text"
+    },
+    "u-101-after-1": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4403",
+      "last": "p-4404",
+      "kind": "text"
+    },
+    "u-101-after-2": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4404",
+      "last": "p-4404",
+      "kind": "text"
+    },
+    "u-101-after-3": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4404",
+      "last": "p-4404",
+      "kind": "text"
+    },
+    "u-101-after-4": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4404",
+      "last": "p-4404",
+      "kind": "text"
+    },
+    "u-101-after-5": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4405",
+      "last": "p-4405",
+      "kind": "text"
+    },
+    "u-101-after-6": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4405",
+      "last": "p-4405",
+      "kind": "text"
+    },
+    "u-101-after-7": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4406",
+      "last": "p-4406",
+      "kind": "text"
+    },
+    "u-101-after-8": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4407",
+      "last": "p-4407",
+      "kind": "text"
+    },
+    "u-101-after-9": {
+      "chapterId": "destiny",
+      "sectionId": "destiny-opening",
+      "first": "p-4408",
+      "last": "p-4409",
+      "kind": "text"
     }
   },
   "coverage": {
-    "pages": 273,
-    "artworks": 60,
-    "usedArtworks": 59,
-    "changedTransitions": 272,
-    "totalTransitions": 272
+    "pages": 619,
+    "artworks": 62,
+    "usedArtworks": 61,
+    "changedTransitions": 618,
+    "totalTransitions": 618
   }
 }

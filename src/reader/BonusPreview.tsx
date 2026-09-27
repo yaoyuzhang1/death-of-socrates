@@ -6,6 +6,7 @@ import { flattenCorpus } from './engine.ts';
 import { BONUS_PREVIEW_STORAGE } from './preview-entry.ts';
 import type { Corpus, Save, Settings } from './model.ts';
 import useStudy from './useStudy.ts';
+import { isStudyEditionCompatible } from './study-storage.ts';
 import { stopFeedback } from './feedback-audio.ts';
 import type { AudioPreferences } from './QuestionChallenge.tsx';
 import './bonus-preview.css';
@@ -43,7 +44,7 @@ export default function BonusPreview() {
           const raw = localStorage.getItem(BONUS_PREVIEW_STORAGE);
           if (raw) {
             const stored = JSON.parse(raw);
-            const bonus = stored.version === 1 && stored.editionId === data.edition.id ? validatePreviewProgress(stored.bonus) : null;
+            const bonus = stored.version === 1 && isStudyEditionCompatible(stored.editionId, data.edition.id) ? validatePreviewProgress(stored.bonus) : null;
             if (bonus) {
               next = freshPreviewSave(data, bonus);
               const settings = stored.settings as Settings | undefined;

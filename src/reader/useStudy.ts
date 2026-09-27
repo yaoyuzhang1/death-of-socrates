@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import checks from '../../content/learning/checks.json';
 import bonusChecks from '../../content/bonus/checks.json';
-import { answerStudy, validateStudyRecords, type LearningCheckData, type StudyRecords } from './learning.ts';
+import { answerStudy, type LearningCheckData, type StudyRecords } from './learning.ts';
+import { readStoredStudy } from './study-storage.ts';
 export const ALL_STUDY_CHECKS: LearningCheckData[] = [...checks, ...bonusChecks];
 export const STUDY_STORAGE = 'republic-study-v1';
 export const PREVIEW_STUDY_STORAGE = 'republic-bonus-preview-study-v1';
@@ -19,8 +20,14 @@ export default function useStudy(editionId: string | undefined, preview = false)
       const raw = localStorage.getItem(key);
       if (raw) {
         const stored = JSON.parse(raw);
-        const valid = stored.version === 1 && stored.editionId === editionId ? validateStudyRecords(stored.records, ALL_STUDY_CHECKS) : null;
-        if (valid) records = valid; else setNotice('理解检查的记录暂时无法恢复，原有阅读与首次作答不受影响。');
+        const valid = readStoredStudy(stored, editionId, ALL_STUDY_CHECKS);
+        if (valid) {
+          records = valid;
+          if (stored.editionId !== editionId) {
+            try { localStorage.setItem(key, JSON.stringify({ version: 1, editionId, records })); }
+            catch { setNotice('旧版理解记录已恢复于本次页面，请在关闭前导出进度。'); }
+          }
+        } else setNotice('理解检查的记录暂时无法恢复，原有阅读与首次作答不受影响。');
       }
     } catch { setNotice('浏览器暂时无法读取理解检查记录。'); }
     const loaded = { editionId, records }; current.current = loaded; setValue(loaded);

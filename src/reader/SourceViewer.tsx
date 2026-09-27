@@ -3,7 +3,8 @@ import { ArrowLeft, ArrowRight, ExternalLink, X, ZoomIn, ZoomOut } from 'lucide-
 import { stopFeedback } from './feedback-audio.ts';
 import './source-viewer.css';
 
-const LAST_PAGE = 176;
+// The ten books end on printed page 426; the following pages are indices.
+const LAST_PAGE = 426;
 type SourceTarget = { page: number; trigger: HTMLAnchorElement; scrollX: number; scrollY: number; fontSize: string };
 type NotesByPage = Map<number, string[]>;
 type NotesState = { status: 'loading' | 'error' } | { status: 'ready'; pages: NotesByPage };

@@ -1,10 +1,10 @@
-import { allChaptersComplete } from './engine.ts';
+import { isBonusUnlocked } from './engine.ts';
 import { BONUS_SCENE_IDS, type ReadingUnit, type Save } from './model.ts';
 
 const own = (value: object, key: PropertyKey) => Object.prototype.hasOwnProperty.call(value, key);
 export type BonusAccess = 'earned' | 'preview';
 const accessible = (save: Save, units: readonly ReadingUnit[], access: BonusAccess) =>
-  access === 'preview' || allChaptersComplete(save, units);
+  access === 'preview' || isBonusUnlocked(save, units);
 
 /** The first unanswered scene is available; later scenes remain closed. */
 export function bonusFrontier(save: Save): number {
@@ -13,7 +13,7 @@ export function bonusFrontier(save: Save): number {
 }
 
 export function chooseBonus(save: Save, units: readonly ReadingUnit[], sceneId: string, optionId: string, access: BonusAccess = 'earned'): Save {
-  if (!accessible(save, units, access)) throw new Error('完成全部八章后，才能进入隐藏章节。');
+  if (!accessible(save, units, access)) throw new Error('完成原第一至第八章后，才能进入隐藏章节。');
   const index = BONUS_SCENE_IDS.findIndex(id => id === sceneId);
   if (index < 0 || index !== save.bonus.cursor || index > bonusFrontier(save)) {
     throw new Error('只能选择当前已经开放的对话。');

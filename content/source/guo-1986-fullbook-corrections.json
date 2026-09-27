@@ -1,0 +1,761 @@
+[
+  {
+    "printedPage": 247,
+    "pdfPage": 258,
+    "action": "insert-line",
+    "new": "苏：因此，阿得曼托斯，剩下来配得上研究哲学的人就只有其",
+    "bbox": {
+      "x": 256,
+      "y": 817,
+      "width": 993,
+      "height": 40
+    },
+    "reason": "整行在RapidOCR漏识；由Windows逐行比对定位，并以扫描图核对"
+  },
+  {
+    "printedPage": 425,
+    "pdfPage": 436,
+    "action": "insert-line",
+    "new": "他们列队走到拉赫西斯跟前。她便给每个灵魂派出一个监护",
+    "bbox": {
+      "x": 186,
+      "y": 1207,
+      "width": 1044,
+      "height": 43
+    },
+    "reason": "恢复漏掉的整行：监护神由已完成的选择派出，并非替灵魂选择"
+  },
+  {
+    "printedPage": 425,
+    "pdfPage": 436,
+    "action": "replace-line",
+    "old": "神，以便引领",
+    "new": "神⑥，以便引领",
+    "reason": "核扫描页恢复第六脚注标记"
+  },
+  {
+    "printedPage": 425,
+    "pdfPage": 436,
+    "action": "replace-line",
+    "old": "引！领到",
+    "new": "引领到",
+    "reason": "核扫描页删除OCR噪声"
+  },
+  {
+    "printedPage": 234,
+    "pdfPage": 245,
+    "action": "replace-line",
+    "old": "引I入了歧途",
+    "new": "引入了歧途",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 272,
+    "pdfPage": 283,
+    "action": "replace-line",
+    "old": "傀戏演员",
+    "new": "傀儡戏演员",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 272,
+    "pdfPage": 283,
+    "action": "replace-line",
+    "old": "设的-一道屏障",
+    "new": "设的一道屏障",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 328,
+    "pdfPage": 339,
+    "action": "replace-line",
+    "old": "盛保全了！",
+    "new": "保全了！",
+    "reason": "卷首卷尾及章节转折原扫描页核对",
+    "forceContinuation": true
+  },
+  {
+    "printedPage": 351,
+    "pdfPage": 362,
+    "action": "replace-line",
+    "old": "主敢于",
+    "new": "僭主敢于",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 351,
+    "pdfPage": 362,
+    "action": "replace-line",
+    "old": "出主是",
+    "new": "出僭主是",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 351,
+    "pdfPage": 362,
+    "action": "replace-line",
+    "old": "真正的主制度",
+    "new": "真正的僭主制度",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 351,
+    "pdfPage": 362,
+    "action": "replace-line",
+    "old": "转向主政治",
+    "new": "转向僭主政治",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 351,
+    "pdfPage": 362,
+    "action": "replace-line",
+    "old": "以及主政治",
+    "new": "以及僭主政治",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 352,
+    "pdfPage": 363,
+    "action": "replace-line",
+    "old": "关于主式个人",
+    "new": "关于僭主式个人",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 352,
+    "pdfPage": 363,
+    "action": "replace-line",
+    "old": "偕主式人物",
+    "new": "僭主式人物",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 352,
+    "pdfPage": 363,
+    "action": "replace-line",
+    "old": "快乐？·",
+    "new": "快乐？",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 365,
+    "pdfPage": 376,
+    "action": "replace-line",
+    "old": "偕主型",
+    "new": "僭主型",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 365,
+    "pdfPage": 376,
+    "action": "replace-line",
+    "old": "臂主暴君",
+    "new": "僭主暴君",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 365,
+    "pdfPage": 376,
+    "action": "replace-line",
+    "old": "僧主暴君",
+    "new": "僭主暴君",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 365,
+    "pdfPage": 376,
+    "action": "replace-line",
+    "old": "真正的僧",
+    "new": "真正的僭",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 387,
+    "pdfPage": 398,
+    "action": "replace-line",
+    "old": "它绝拒绝",
+    "new": "它绝对拒绝",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 387,
+    "pdfPage": 398,
+    "action": "replace-line",
+    "old": "深人些",
+    "new": "深入些",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 387,
+    "pdfPage": 398,
+    "action": "replace-line",
+    "old": "我自已也不",
+    "new": "我自己也不",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 425,
+    "pdfPage": 436,
+    "action": "replace-line",
+    "old": "自已套上",
+    "new": "自己套上",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 425,
+    "pdfPage": 436,
+    "action": "replace-line",
+    "old": "拈间的结果",
+    "new": "拈阄的结果",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 426,
+    "pdfPage": 437,
+    "action": "replace-line",
+    "old": "“必然\"",
+    "new": "“必然”",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 426,
+    "pdfPage": 437,
+    "action": "replace-line",
+    "old": "自已睁开眼晴",
+    "new": "自己睁开眼睛",
+    "reason": "卷首卷尾及章节转折原扫描页核对"
+  },
+  {
+    "printedPage": 182,
+    "action": "replace-line",
+    "old": "第-一件",
+    "new": "第一件",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 182,
+    "action": "replace-line",
+    "old": "说能于其中的几种",
+    "new": "说能干其中的几种",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 182,
+    "action": "replace-line",
+    "old": "逐渐深人",
+    "new": "逐渐深入",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 196,
+    "action": "replace-line",
+    "old": "取得一一致意见",
+    "new": "取得一致意见",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 196,
+    "action": "replace-line",
+    "old": "我们自已",
+    "new": "我们自己",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 197,
+    "action": "replace-line",
+    "old": "而不和恶的足迹一致，",
+    "new": "而不和恶的足迹一致？",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 204,
+    "action": "replace-line",
+    "old": "建立起来呢，如果可能",
+    "new": "建立起来呢？如果可能",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 213,
+    "action": "replace-line",
+    "old": "一切的-切",
+    "new": "一切的一切",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 236,
+    "action": "replace-line",
+    "old": "崂叻鬼",
+    "new": "唠叨鬼",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 262,
+    "action": "replace-line",
+    "old": "长人了的人",
+    "new": "长久了的人",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 262,
+    "action": "replace-line",
+    "old": "，阿：",
+    "new": "阿：",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 264,
+    "action": "replace-line",
+    "old": "感觉一一一我们不说所有其他的感觉一一一",
+    "new": "感觉——我们不说所有其他的感觉——",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 275,
+    "action": "replace-line",
+    "old": "眼晴",
+    "new": "眼睛",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 275,
+    "action": "replace-line",
+    "old": "禁中的伙伴",
+    "new": "禁锢中的伙伴",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 275,
+    "action": "replace-line",
+    "old": "再过因徒生活",
+    "new": "再过囚徒生活",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 277,
+    "action": "replace-line",
+    "old": "原因引起的：～是",
+    "new": "原因引起的：一是",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 277,
+    "action": "replace-line",
+    "old": "视觉的呢？·于是",
+    "new": "视觉的呢？于是",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 277,
+    "action": "replace-line",
+    "old": "眼晴",
+    "new": "眼睛",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 280,
+    "action": "replace-line",
+    "old": "住在上面的）",
+    "new": "住在上面的）？",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 286,
+    "action": "replace-line",
+    "old": "信息的东百",
+    "new": "信息的东西",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 286,
+    "action": "replace-line",
+    "old": "视也看见",
+    "new": "视觉也看见",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 286,
+    "action": "replace-line",
+    "old": "分高开来看",
+    "new": "分离开来看",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 289,
+    "action": "replace-line",
+    "old": "哪-种数",
+    "new": "哪一种数",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 289,
+    "action": "replace-line",
+    "old": "—-—既然其中“_”",
+    "new": "——既然其中“一”",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 289,
+    "action": "replace-line",
+    "old": "“一\"",
+    "new": "“一”",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 300,
+    "action": "replace-line",
+    "old": "眼晴",
+    "new": "眼睛",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 345,
+    "action": "replace-line",
+    "old": "一个保护人变成主",
+    "new": "一个保护人变成僭主",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 361,
+    "action": "replace-line",
+    "old": "一个被偕主统治的国家",
+    "new": "一个被僭主统治的国家",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 364,
+    "action": "replace-line",
+    "old": "他的财富奴隶-一起从城市里",
+    "new": "他的财富奴隶一起从城市里",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 408,
+    "action": "replace-line",
+    "old": "别的什么格律一一它可以",
+    "new": "别的什么格律——它可以",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 369,
+    "action": "replace-line",
+    "old": "经验、知识.推理",
+    "new": "经验、知识、推理",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 369,
+    "action": "replace-line",
+    "old": "经验.知识.推理",
+    "new": "经验、知识、推理",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 369,
+    "action": "replace-line",
+    "old": "经验、知识，推理",
+    "new": "经验、知识、推理",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 369,
+    "action": "replace-line",
+    "old": "经验，知识，推理",
+    "new": "经验、知识、推理",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 408,
+    "action": "replace-line",
+    "old": "当诗已经申辩了自已的理由",
+    "new": "当诗已经申辩了自己的理由",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 235,
+    "action": "replace-line",
+    "old": "从没学过，航海术",
+    "new": "从没学过航海术",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 235,
+    "action": "replace-line",
+    "old": "说不出自已",
+    "new": "说不出自己",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 236,
+    "action": "replace-line",
+    "old": "础础怪事",
+    "new": "咄咄怪事",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 273,
+    "action": "replace-line",
+    "old": "因徒",
+    "new": "囚徒",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 273,
+    "action": "replace-line",
+    "old": "解除禁，",
+    "new": "解除禁锢，",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 273,
+    "action": "replace-line",
+    "old": "解除了桔",
+    "new": "解除了桎梏",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 280,
+    "action": "replace-line",
+    "old": "两种生活の",
+    "new": "两种生活①",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 307,
+    "action": "replace-line",
+    "old": "那些媚之徒",
+    "new": "那些谄媚之徒",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 379,
+    "action": "replace-line",
+    "old": "王者和臀主",
+    "new": "王者和僭主",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 379,
+    "action": "replace-line",
+    "old": "王者的生活比主的生活",
+    "new": "王者的生活比僭主的生活",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 379,
+    "action": "replace-line",
+    "old": "偕主的生活",
+    "new": "僭主的生活",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 379,
+    "action": "replace-line",
+    "old": "因此偕主",
+    "new": "因此僭主",
+    "reason": "Original page image visually checked; source/core-question audit 2026-09-27"
+  },
+  {
+    "printedPage": 206,
+    "action": "replace-line",
+    "old": "由于胆法",
+    "new": "由于胆怯",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 207,
+    "action": "replace-line",
+    "old": "每-一个人",
+    "new": "每一个人",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 207,
+    "action": "replace-line",
+    "old": "每一一个人",
+    "new": "每一个人",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 207,
+    "action": "replace-line",
+    "old": "他们荣誉.",
+    "new": "他们荣誉。",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 207,
+    "action": "replace-line",
+    "old": "好极了.",
+    "new": "好极了。",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 207,
+    "action": "replace-line",
+    "old": "战死沙场，一一如果",
+    "new": "战死沙场，——如果",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 207,
+    "action": "replace-line",
+    "old": "绝对可以.",
+    "new": "绝对可以。",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 207,
+    "action": "replace-line",
+    "old": "保卫下民的救星”",
+    "new": "保卫下民的救星”？",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 208,
+    "action": "replace-line",
+    "old": "还是，一一不但",
+    "new": "还是，——不但",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 208,
+    "action": "replace-line",
+    "old": "互不历害",
+    "new": "互不伤害",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 208,
+    "action": "replace-line",
+    "old": "成风。-~-还是这样合平正义",
+    "new": "成风。——还是这样合乎正义",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 208,
+    "action": "replace-line",
+    "old": "自已的奴隶",
+    "new": "自己的奴隶",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 209,
+    "action": "replace-line",
+    "old": "卑鄙龈",
+    "new": "卑鄙龌龊",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 209,
+    "action": "replace-line",
+    "old": "我们一一定要禁止抢劫死户",
+    "new": "我们一定要禁止抢劫死尸",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 209,
+    "action": "replace-line",
+    "old": "关于躁敌方",
+    "new": "关于蹂躏敌方",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 209,
+    "action": "replace-line",
+    "old": "既不能踩土地",
+    "new": "既不能蹂躏土地",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 209,
+    "action": "replace-line",
+    "old": "名称~“战争”",
+    "new": "名称——“战争”",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 209,
+    "action": "replace-line",
+    "old": "“内订”",
+    "new": "“内讧”",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 209,
+    "action": "replace-line",
+    "old": "对外的冲突可称为“战争”",
+    "new": "对外的冲突可称为“战争”。",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 294,
+    "action": "replace-line",
+    "old": "向下转。，",
+    "new": "向下转。",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 294,
+    "action": "replace-line",
+    "old": "用眼晴学习",
+    "new": "用眼睛学习",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 294,
+    "action": "replace-line",
+    "old": "最美最准磅者",
+    "new": "最美最准确者",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 294,
+    "action": "replace-line",
+    "old": "真实的数一切真实图形",
+    "new": "真实的数和一切真实图形",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 294,
+    "action": "replace-line",
+    "old": "真实者是仪能",
+    "new": "真实者是仅能",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 294,
+    "action": "replace-line",
+    "old": "用睛眼是着不见的",
+    "new": "用睛眼是看不见的",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 295,
+    "action": "replace-line",
+    "old": "画家或已画匠",
+    "new": "画家或画匠",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 295,
+    "action": "replace-line",
+    "old": "并月正确地",
+    "new": "并且正确地",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 296,
+    "action": "replace-line",
+    "old": "我们自已的事情",
+    "new": "我们自己的事情",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  },
+  {
+    "printedPage": 296,
+    "action": "replace-line",
+    "old": "隔璧邻居",
+    "new": "隔壁邻居",
+    "reason": "Complete original-page visual review for reading-pacing understanding checks, 2026-09-27; retain original translation wording"
+  }
+]

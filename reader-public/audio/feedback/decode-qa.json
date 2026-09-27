@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "decoded": 141,
+  "decoded": 285,
   "decoder": "Chrome AudioContext",
-  "shortestSeconds": 6.672,
-  "longestSeconds": 18.888,
-  "minimumRms": 0.09612181948663524,
+  "shortestSeconds": 6.624,
+  "longestSeconds": 19.032,
+  "minimumRms": 0.09501975113851126,
   "note": "Every MP3 decoded successfully with a non-silent waveform. This is not a claim of human listening or word-by-word pronunciation transcription.",
   "recordings": [
     {
@@ -709,10 +709,10 @@
     },
     {
       "key": "book3-believing-the-story--a",
-      "durationSeconds": 10.248,
+      "durationSeconds": 10.968,
       "channels": 1,
-      "rms": 0.10814393868491103,
-      "peak": 0.6242297887802124
+      "rms": 0.10683774051782828,
+      "peak": 0.6473470330238342
     },
     {
       "key": "book3-believing-the-story--b",
@@ -993,6 +993,1014 @@
       "channels": 1,
       "rms": 0.10974647482497199,
       "peak": 0.6554350852966309
+    },
+    {
+      "key": "book5-women-capacity--b",
+      "durationSeconds": 17.16,
+      "channels": 1,
+      "rms": 0.11106053922721597,
+      "peak": 0.7071137428283691
+    },
+    {
+      "key": "book5-women-capacity--a",
+      "durationSeconds": 7.128,
+      "channels": 1,
+      "rms": 0.0998870655232873,
+      "peak": 0.5993170142173767
+    },
+    {
+      "key": "book5-women-capacity--c",
+      "durationSeconds": 7.704,
+      "channels": 1,
+      "rms": 0.09990031287429778,
+      "peak": 0.5382626056671143
+    },
+    {
+      "key": "book5-feasible-best--c",
+      "durationSeconds": 15.672,
+      "channels": 1,
+      "rms": 0.10406411728610372,
+      "peak": 0.7664570212364197
+    },
+    {
+      "key": "book5-feasible-best--a",
+      "durationSeconds": 8.112,
+      "channels": 1,
+      "rms": 0.10540721405061296,
+      "peak": 0.5463880896568298
+    },
+    {
+      "key": "book5-feasible-best--b",
+      "durationSeconds": 7.152,
+      "channels": 1,
+      "rms": 0.10590930376203646,
+      "peak": 0.6282416582107544
+    },
+    {
+      "key": "book5-common-good-standard--a",
+      "durationSeconds": 18,
+      "channels": 1,
+      "rms": 0.1133840637811051,
+      "peak": 0.7069215178489685
+    },
+    {
+      "key": "book5-common-good-standard--b",
+      "durationSeconds": 7.44,
+      "channels": 1,
+      "rms": 0.10832576073091478,
+      "peak": 0.556093156337738
+    },
+    {
+      "key": "book5-common-good-standard--c",
+      "durationSeconds": 7.608,
+      "channels": 1,
+      "rms": 0.10605884205475807,
+      "peak": 0.6503366231918335
+    },
+    {
+      "key": "book5-human-possibility--b",
+      "durationSeconds": 14.904,
+      "channels": 1,
+      "rms": 0.11476344112452345,
+      "peak": 0.734565019607544
+    },
+    {
+      "key": "book5-human-possibility--a",
+      "durationSeconds": 8.16,
+      "channels": 1,
+      "rms": 0.10377805429831656,
+      "peak": 0.5601868629455566
+    },
+    {
+      "key": "book5-human-possibility--c",
+      "durationSeconds": 7.68,
+      "channels": 1,
+      "rms": 0.09971613830913331,
+      "peak": 0.5366658568382263
+    },
+    {
+      "key": "book5-model-painter--c",
+      "durationSeconds": 15.336,
+      "channels": 1,
+      "rms": 0.1066448516546226,
+      "peak": 0.7220911383628845
+    },
+    {
+      "key": "book5-model-painter--a",
+      "durationSeconds": 8.496,
+      "channels": 1,
+      "rms": 0.10506559347247259,
+      "peak": 0.7662363648414612
+    },
+    {
+      "key": "book5-model-painter--b",
+      "durationSeconds": 8.88,
+      "channels": 1,
+      "rms": 0.09663961414058311,
+      "peak": 0.6005538105964661
+    },
+    {
+      "key": "book5-love-whole--a",
+      "durationSeconds": 16.488,
+      "channels": 1,
+      "rms": 0.10384516642267316,
+      "peak": 0.683009684085846
+    },
+    {
+      "key": "book5-love-whole--b",
+      "durationSeconds": 8.424,
+      "channels": 1,
+      "rms": 0.09501975113851126,
+      "peak": 0.5165826082229614
+    },
+    {
+      "key": "book5-love-whole--c",
+      "durationSeconds": 7.584,
+      "channels": 1,
+      "rms": 0.10605157775861428,
+      "peak": 0.7287644147872925
+    },
+    {
+      "key": "book5-opinion-faculty--b",
+      "durationSeconds": 15.936,
+      "channels": 1,
+      "rms": 0.10955576836761242,
+      "peak": 0.7370767593383789
+    },
+    {
+      "key": "book5-opinion-faculty--a",
+      "durationSeconds": 7.608,
+      "channels": 1,
+      "rms": 0.11182485388938666,
+      "peak": 0.7903794050216675
+    },
+    {
+      "key": "book5-opinion-faculty--c",
+      "durationSeconds": 8.208,
+      "channels": 1,
+      "rms": 0.10160700462087863,
+      "peak": 0.6346044540405273
+    },
+    {
+      "key": "book5-double-half--c",
+      "durationSeconds": 15,
+      "channels": 1,
+      "rms": 0.10752710644632028,
+      "peak": 0.7163397669792175
+    },
+    {
+      "key": "book5-double-half--a",
+      "durationSeconds": 7.272,
+      "channels": 1,
+      "rms": 0.10437671783918616,
+      "peak": 0.6004689335823059
+    },
+    {
+      "key": "book5-double-half--b",
+      "durationSeconds": 7.008,
+      "channels": 1,
+      "rms": 0.1093955125267763,
+      "peak": 0.7318018078804016
+    },
+    {
+      "key": "book6-joint-qualities--b",
+      "durationSeconds": 16.416,
+      "channels": 1,
+      "rms": 0.10639707549625024,
+      "peak": 0.6774933934211731
+    },
+    {
+      "key": "book6-joint-qualities--a",
+      "durationSeconds": 8.088,
+      "channels": 1,
+      "rms": 0.10974484924037799,
+      "peak": 0.6934366226196289
+    },
+    {
+      "key": "book6-joint-qualities--c",
+      "durationSeconds": 8.544,
+      "channels": 1,
+      "rms": 0.10503531748923564,
+      "peak": 0.596558153629303
+    },
+    {
+      "key": "book6-ship-judgment--c",
+      "durationSeconds": 14.544,
+      "channels": 1,
+      "rms": 0.10637788755104623,
+      "peak": 0.7077872157096863
+    },
+    {
+      "key": "book6-ship-judgment--a",
+      "durationSeconds": 8.112,
+      "channels": 1,
+      "rms": 0.09966523950924303,
+      "peak": 0.5356316566467285
+    },
+    {
+      "key": "book6-ship-judgment--b",
+      "durationSeconds": 8.136,
+      "channels": 1,
+      "rms": 0.10174158212267222,
+      "peak": 0.6528128385543823
+    },
+    {
+      "key": "book6-popular-proof--a",
+      "durationSeconds": 15.336,
+      "channels": 1,
+      "rms": 0.10338595426170376,
+      "peak": 0.6319718956947327
+    },
+    {
+      "key": "book6-popular-proof--b",
+      "durationSeconds": 6.648,
+      "channels": 1,
+      "rms": 0.09577698034339152,
+      "peak": 0.5201429128646851
+    },
+    {
+      "key": "book6-popular-proof--c",
+      "durationSeconds": 7.152,
+      "channels": 1,
+      "rms": 0.10556649892197434,
+      "peak": 0.5872781872749329
+    },
+    {
+      "key": "book6-difficult-impossible--b",
+      "durationSeconds": 14.856,
+      "channels": 1,
+      "rms": 0.1094213726194126,
+      "peak": 0.727479875087738
+    },
+    {
+      "key": "book6-difficult-impossible--a",
+      "durationSeconds": 6.624,
+      "channels": 1,
+      "rms": 0.09950857437191325,
+      "peak": 0.57845538854599
+    },
+    {
+      "key": "book6-difficult-impossible--c",
+      "durationSeconds": 7.848,
+      "channels": 1,
+      "rms": 0.10373585616550524,
+      "peak": 0.6684305667877197
+    },
+    {
+      "key": "book6-good-use--c",
+      "durationSeconds": 16.416,
+      "channels": 1,
+      "rms": 0.11319473387091011,
+      "peak": 0.813728928565979
+    },
+    {
+      "key": "book6-good-use--a",
+      "durationSeconds": 7.56,
+      "channels": 1,
+      "rms": 0.11002405782778603,
+      "peak": 0.6225219368934631
+    },
+    {
+      "key": "book6-good-use--b",
+      "durationSeconds": 6.792,
+      "channels": 1,
+      "rms": 0.10636321110290071,
+      "peak": 0.606552004814148
+    },
+    {
+      "key": "book6-knowledge-claim--a",
+      "durationSeconds": 15.384,
+      "channels": 1,
+      "rms": 0.10563223420849112,
+      "peak": 0.672320544719696
+    },
+    {
+      "key": "book6-knowledge-claim--b",
+      "durationSeconds": 8.184,
+      "channels": 1,
+      "rms": 0.1087537228824893,
+      "peak": 0.5995315313339233
+    },
+    {
+      "key": "book6-knowledge-claim--c",
+      "durationSeconds": 8.856,
+      "channels": 1,
+      "rms": 0.1007492701421677,
+      "peak": 0.6545296907424927
+    },
+    {
+      "key": "book6-sense-condition--b",
+      "durationSeconds": 16.344,
+      "channels": 1,
+      "rms": 0.10649149500475494,
+      "peak": 0.7430109977722168
+    },
+    {
+      "key": "book6-sense-condition--a",
+      "durationSeconds": 7.632,
+      "channels": 1,
+      "rms": 0.09745574986588863,
+      "peak": 0.5303938984870911
+    },
+    {
+      "key": "book6-sense-condition--c",
+      "durationSeconds": 8.568,
+      "channels": 1,
+      "rms": 0.10608308060972746,
+      "peak": 0.9369627237319946
+    },
+    {
+      "key": "book6-image-relation--c",
+      "durationSeconds": 15.264,
+      "channels": 1,
+      "rms": 0.10753377406833366,
+      "peak": 0.7750187516212463
+    },
+    {
+      "key": "book6-image-relation--a",
+      "durationSeconds": 7.752,
+      "channels": 1,
+      "rms": 0.1136653933871748,
+      "peak": 0.6176264882087708
+    },
+    {
+      "key": "book6-image-relation--b",
+      "durationSeconds": 7.536,
+      "channels": 1,
+      "rms": 0.11082410742451665,
+      "peak": 0.6474623084068298
+    },
+    {
+      "key": "book7-prisoner-access--b",
+      "durationSeconds": 14.16,
+      "channels": 1,
+      "rms": 0.10413580387448475,
+      "peak": 0.7117778062820435
+    },
+    {
+      "key": "book7-prisoner-access--a",
+      "durationSeconds": 8.184,
+      "channels": 1,
+      "rms": 0.11173469533762305,
+      "peak": 0.5749156475067139
+    },
+    {
+      "key": "book7-prisoner-access--c",
+      "durationSeconds": 8.208,
+      "channels": 1,
+      "rms": 0.10429212044125519,
+      "peak": 0.6422619819641113
+    },
+    {
+      "key": "book7-return-adaptation--c",
+      "durationSeconds": 16.56,
+      "channels": 1,
+      "rms": 0.10506624436839765,
+      "peak": 0.7789794206619263
+    },
+    {
+      "key": "book7-return-adaptation--a",
+      "durationSeconds": 7.944,
+      "channels": 1,
+      "rms": 0.10235406122931386,
+      "peak": 0.6946519017219543
+    },
+    {
+      "key": "book7-return-adaptation--b",
+      "durationSeconds": 7.32,
+      "channels": 1,
+      "rms": 0.11045641857878798,
+      "peak": 0.8487001061439514
+    },
+    {
+      "key": "book7-two-blindnesses--a",
+      "durationSeconds": 16.344,
+      "channels": 1,
+      "rms": 0.10657606228666508,
+      "peak": 0.7782403230667114
+    },
+    {
+      "key": "book7-two-blindnesses--b",
+      "durationSeconds": 7.632,
+      "channels": 1,
+      "rms": 0.11130309031216078,
+      "peak": 0.621105968952179
+    },
+    {
+      "key": "book7-two-blindnesses--c",
+      "durationSeconds": 7.848,
+      "channels": 1,
+      "rms": 0.1089185683256264,
+      "peak": 0.7663085460662842
+    },
+    {
+      "key": "book7-rotation-reason--b",
+      "durationSeconds": 17.328,
+      "channels": 1,
+      "rms": 0.10823240156527848,
+      "peak": 0.8160757422447205
+    },
+    {
+      "key": "book7-rotation-reason--a",
+      "durationSeconds": 7.848,
+      "channels": 1,
+      "rms": 0.10678874610664224,
+      "peak": 0.8001458644866943
+    },
+    {
+      "key": "book7-rotation-reason--c",
+      "durationSeconds": 8.112,
+      "channels": 1,
+      "rms": 0.10189191106740549,
+      "peak": 0.5388734340667725
+    },
+    {
+      "key": "book7-touch-meaning--c",
+      "durationSeconds": 15.072,
+      "channels": 1,
+      "rms": 0.10626081102159572,
+      "peak": 0.641768217086792
+    },
+    {
+      "key": "book7-touch-meaning--a",
+      "durationSeconds": 8.016,
+      "channels": 1,
+      "rms": 0.1026589934107144,
+      "peak": 0.584045946598053
+    },
+    {
+      "key": "book7-touch-meaning--b",
+      "durationSeconds": 7.728,
+      "channels": 1,
+      "rms": 0.11207842680742247,
+      "peak": 0.7605465054512024
+    },
+    {
+      "key": "book7-number-object--a",
+      "durationSeconds": 14.904,
+      "channels": 1,
+      "rms": 0.10546101282118084,
+      "peak": 0.6439536213874817
+    },
+    {
+      "key": "book7-number-object--b",
+      "durationSeconds": 7.824,
+      "channels": 1,
+      "rms": 0.1076235576276215,
+      "peak": 0.5320128202438354
+    },
+    {
+      "key": "book7-number-object--c",
+      "durationSeconds": 8.928,
+      "channels": 1,
+      "rms": 0.10537775601196736,
+      "peak": 0.5618107318878174
+    },
+    {
+      "key": "book7-premise-knowledge--b",
+      "durationSeconds": 17.304,
+      "channels": 1,
+      "rms": 0.10166994913283284,
+      "peak": 0.7855115532875061
+    },
+    {
+      "key": "book7-premise-knowledge--a",
+      "durationSeconds": 8.448,
+      "channels": 1,
+      "rms": 0.1046329400746364,
+      "peak": 0.6033340096473694
+    },
+    {
+      "key": "book7-premise-knowledge--c",
+      "durationSeconds": 8.208,
+      "channels": 1,
+      "rms": 0.11291772546995264,
+      "peak": 0.6019236445426941
+    },
+    {
+      "key": "book7-unsettled-belief--c",
+      "durationSeconds": 15.768,
+      "channels": 1,
+      "rms": 0.10770182000045556,
+      "peak": 0.7248522043228149
+    },
+    {
+      "key": "book7-unsettled-belief--a",
+      "durationSeconds": 7.32,
+      "channels": 1,
+      "rms": 0.11237405574491709,
+      "peak": 0.6057283282279968
+    },
+    {
+      "key": "book7-unsettled-belief--b",
+      "durationSeconds": 8.208,
+      "channels": 1,
+      "rms": 0.11029223134208303,
+      "peak": 0.5769396424293518
+    },
+    {
+      "key": "book8-comparison-purpose--a",
+      "durationSeconds": 17.856,
+      "channels": 1,
+      "rms": 0.10777962356860453,
+      "peak": 0.6477604508399963
+    },
+    {
+      "key": "book8-comparison-purpose--b",
+      "durationSeconds": 9.144,
+      "channels": 1,
+      "rms": 0.10562978508553518,
+      "peak": 0.580859899520874
+    },
+    {
+      "key": "book8-comparison-purpose--c",
+      "durationSeconds": 9.768,
+      "channels": 1,
+      "rms": 0.10939743171914369,
+      "peak": 0.7676355838775635
+    },
+    {
+      "key": "book8-intermediate-regime--b",
+      "durationSeconds": 16.968,
+      "channels": 1,
+      "rms": 0.10628703186664845,
+      "peak": 0.6769883632659912
+    },
+    {
+      "key": "book8-intermediate-regime--a",
+      "durationSeconds": 11.232,
+      "channels": 1,
+      "rms": 0.10892287962401791,
+      "peak": 0.6031671762466431
+    },
+    {
+      "key": "book8-intermediate-regime--c",
+      "durationSeconds": 9.504,
+      "channels": 1,
+      "rms": 0.09986469234577729,
+      "peak": 0.550832986831665
+    },
+    {
+      "key": "book8-division-consistency--c",
+      "durationSeconds": 16.896,
+      "channels": 1,
+      "rms": 0.10975087911601285,
+      "peak": 0.7361854910850525
+    },
+    {
+      "key": "book8-division-consistency--a",
+      "durationSeconds": 10.632,
+      "channels": 1,
+      "rms": 0.10872287373596488,
+      "peak": 0.559476375579834
+    },
+    {
+      "key": "book8-division-consistency--b",
+      "durationSeconds": 10.2,
+      "channels": 1,
+      "rms": 0.1094272769387899,
+      "peak": 0.8346503376960754
+    },
+    {
+      "key": "book8-character-evidence--a",
+      "durationSeconds": 17.64,
+      "channels": 1,
+      "rms": 0.10792018596508388,
+      "peak": 0.7297584414482117
+    },
+    {
+      "key": "book8-character-evidence--b",
+      "durationSeconds": 11.376,
+      "channels": 1,
+      "rms": 0.10363473979473385,
+      "peak": 0.665389358997345
+    },
+    {
+      "key": "book8-character-evidence--c",
+      "durationSeconds": 9.912,
+      "channels": 1,
+      "rms": 0.11015443895571754,
+      "peak": 0.5762564539909363
+    },
+    {
+      "key": "book8-democratic-life--b",
+      "durationSeconds": 17.16,
+      "channels": 1,
+      "rms": 0.1059962925179943,
+      "peak": 0.7103634476661682
+    },
+    {
+      "key": "book8-democratic-life--a",
+      "durationSeconds": 11.064,
+      "channels": 1,
+      "rms": 0.10345573786285986,
+      "peak": 0.5822702646255493
+    },
+    {
+      "key": "book8-democratic-life--c",
+      "durationSeconds": 8.688,
+      "channels": 1,
+      "rms": 0.10835529846615148,
+      "peak": 0.5994214415550232
+    },
+    {
+      "key": "book8-necessary-desires--c",
+      "durationSeconds": 17.208,
+      "channels": 1,
+      "rms": 0.10623102646121893,
+      "peak": 0.6621552109718323
+    },
+    {
+      "key": "book8-necessary-desires--a",
+      "durationSeconds": 9.648,
+      "channels": 1,
+      "rms": 0.1164998016757856,
+      "peak": 0.6959348320960999
+    },
+    {
+      "key": "book8-necessary-desires--b",
+      "durationSeconds": 9.576,
+      "channels": 1,
+      "rms": 0.11083997344884688,
+      "peak": 0.603249728679657
+    },
+    {
+      "key": "book8-excess-and-collapse--a",
+      "durationSeconds": 17.52,
+      "channels": 1,
+      "rms": 0.11324521083790669,
+      "peak": 0.7542973756790161
+    },
+    {
+      "key": "book8-excess-and-collapse--b",
+      "durationSeconds": 9.312,
+      "channels": 1,
+      "rms": 0.10324819378678925,
+      "peak": 0.681406557559967
+    },
+    {
+      "key": "book8-excess-and-collapse--c",
+      "durationSeconds": 9.336,
+      "channels": 1,
+      "rms": 0.1067320134151854,
+      "peak": 0.6035081744194031
+    },
+    {
+      "key": "book8-protector-transformation--b",
+      "durationSeconds": 17.448,
+      "channels": 1,
+      "rms": 0.11404854764281297,
+      "peak": 0.7369284629821777
+    },
+    {
+      "key": "book8-protector-transformation--a",
+      "durationSeconds": 9.504,
+      "channels": 1,
+      "rms": 0.10920732747764833,
+      "peak": 0.7603309750556946
+    },
+    {
+      "key": "book8-protector-transformation--c",
+      "durationSeconds": 7.92,
+      "channels": 1,
+      "rms": 0.10887095619978479,
+      "peak": 0.6691305637359619
+    },
+    {
+      "key": "book9-origin-character-life--c",
+      "durationSeconds": 18.264,
+      "channels": 1,
+      "rms": 0.10870868124298601,
+      "peak": 0.759019136428833
+    },
+    {
+      "key": "book9-origin-character-life--a",
+      "durationSeconds": 9.768,
+      "channels": 1,
+      "rms": 0.10897201683398655,
+      "peak": 0.5690560340881348
+    },
+    {
+      "key": "book9-origin-character-life--b",
+      "durationSeconds": 10.608,
+      "channels": 1,
+      "rms": 0.10369186549227696,
+      "peak": 0.799593448638916
+    },
+    {
+      "key": "book9-desires-and-resources--a",
+      "durationSeconds": 17.76,
+      "channels": 1,
+      "rms": 0.10481072655686927,
+      "peak": 0.8376719951629639
+    },
+    {
+      "key": "book9-desires-and-resources--b",
+      "durationSeconds": 9.792,
+      "channels": 1,
+      "rms": 0.11293258805679583,
+      "peak": 0.7237201929092407
+    },
+    {
+      "key": "book9-desires-and-resources--c",
+      "durationSeconds": 11.136,
+      "channels": 1,
+      "rms": 0.11169678311254597,
+      "peak": 0.6508910059928894
+    },
+    {
+      "key": "book9-whole-city-freedom--b",
+      "durationSeconds": 18.744,
+      "channels": 1,
+      "rms": 0.10923508457797217,
+      "peak": 0.7286721467971802
+    },
+    {
+      "key": "book9-whole-city-freedom--a",
+      "durationSeconds": 10.68,
+      "channels": 1,
+      "rms": 0.10766063125746991,
+      "peak": 0.6790844798088074
+    },
+    {
+      "key": "book9-whole-city-freedom--c",
+      "durationSeconds": 10.416,
+      "channels": 1,
+      "rms": 0.10731817335123743,
+      "peak": 0.9716794490814209
+    },
+    {
+      "key": "book9-isolated-master--c",
+      "durationSeconds": 18.624,
+      "channels": 1,
+      "rms": 0.10524777476167703,
+      "peak": 0.7083064317703247
+    },
+    {
+      "key": "book9-isolated-master--a",
+      "durationSeconds": 10.224,
+      "channels": 1,
+      "rms": 0.10674171528332825,
+      "peak": 0.6362965703010559
+    },
+    {
+      "key": "book9-isolated-master--b",
+      "durationSeconds": 9.864,
+      "channels": 1,
+      "rms": 0.09831237675457624,
+      "peak": 0.8261376619338989
+    },
+    {
+      "key": "book9-judgment-criteria--a",
+      "durationSeconds": 18.216,
+      "channels": 1,
+      "rms": 0.10735731498674068,
+      "peak": 0.9594447612762451
+    },
+    {
+      "key": "book9-judgment-criteria--b",
+      "durationSeconds": 9.936,
+      "channels": 1,
+      "rms": 0.10995716868186546,
+      "peak": 0.5804206728935242
+    },
+    {
+      "key": "book9-judgment-criteria--c",
+      "durationSeconds": 10.344,
+      "channels": 1,
+      "rms": 0.10310715789349958,
+      "peak": 0.5717618465423584
+    },
+    {
+      "key": "book9-relief-and-pleasure--b",
+      "durationSeconds": 18.648,
+      "channels": 1,
+      "rms": 0.10576121901168624,
+      "peak": 0.8070235848426819
+    },
+    {
+      "key": "book9-relief-and-pleasure--a",
+      "durationSeconds": 9.96,
+      "channels": 1,
+      "rms": 0.10742487919954931,
+      "peak": 0.6318380236625671
+    },
+    {
+      "key": "book9-relief-and-pleasure--c",
+      "durationSeconds": 8.784,
+      "channels": 1,
+      "rms": 0.10464463563614741,
+      "peak": 0.63618403673172
+    },
+    {
+      "key": "book9-real-filling--c",
+      "durationSeconds": 19.032,
+      "channels": 1,
+      "rms": 0.1110717952745096,
+      "peak": 0.6802370548248291
+    },
+    {
+      "key": "book9-real-filling--a",
+      "durationSeconds": 10.32,
+      "channels": 1,
+      "rms": 0.0991075264383197,
+      "peak": 0.6300691962242126
+    },
+    {
+      "key": "book9-real-filling--b",
+      "durationSeconds": 9.504,
+      "channels": 1,
+      "rms": 0.10966910321359775,
+      "peak": 0.6567318439483643
+    },
+    {
+      "key": "book9-profit-and-inner-cost--a",
+      "durationSeconds": 18.96,
+      "channels": 1,
+      "rms": 0.10980537332634885,
+      "peak": 0.7506558895111084
+    },
+    {
+      "key": "book9-profit-and-inner-cost--b",
+      "durationSeconds": 9.6,
+      "channels": 1,
+      "rms": 0.1111109942945985,
+      "peak": 0.6493251323699951
+    },
+    {
+      "key": "book9-profit-and-inner-cost--c",
+      "durationSeconds": 9.072,
+      "channels": 1,
+      "rms": 0.11187885649814386,
+      "peak": 0.7134977579116821
+    },
+    {
+      "key": "book10-imitation-definition--b",
+      "durationSeconds": 18.576,
+      "channels": 1,
+      "rms": 0.10677718169665217,
+      "peak": 0.7151334881782532
+    },
+    {
+      "key": "book10-imitation-definition--a",
+      "durationSeconds": 9.288,
+      "channels": 1,
+      "rms": 0.10764945256208218,
+      "peak": 0.7801929116249084
+    },
+    {
+      "key": "book10-imitation-definition--c",
+      "durationSeconds": 8.88,
+      "channels": 1,
+      "rms": 0.11341482239701971,
+      "peak": 0.6715512871742249
+    },
+    {
+      "key": "book10-imitation-object--c",
+      "durationSeconds": 18.408,
+      "channels": 1,
+      "rms": 0.10727572768302598,
+      "peak": 0.7401307821273804
+    },
+    {
+      "key": "book10-imitation-object--a",
+      "durationSeconds": 9.96,
+      "channels": 1,
+      "rms": 0.10675004228538237,
+      "peak": 0.7264371514320374
+    },
+    {
+      "key": "book10-imitation-object--b",
+      "durationSeconds": 9.888,
+      "channels": 1,
+      "rms": 0.10351128263546969,
+      "peak": 0.6467623114585876
+    },
+    {
+      "key": "book10-imitation-and-knowledge--a",
+      "durationSeconds": 18.792,
+      "channels": 1,
+      "rms": 0.11141544590821334,
+      "peak": 0.7313145995140076
+    },
+    {
+      "key": "book10-imitation-and-knowledge--b",
+      "durationSeconds": 10.704,
+      "channels": 1,
+      "rms": 0.11188575826705063,
+      "peak": 0.6572281122207642
+    },
+    {
+      "key": "book10-imitation-and-knowledge--c",
+      "durationSeconds": 9.648,
+      "channels": 1,
+      "rms": 0.10755732989172465,
+      "peak": 0.6332061886787415
+    },
+    {
+      "key": "book10-poetry-return--b",
+      "durationSeconds": 17.376,
+      "channels": 1,
+      "rms": 0.10579638869772823,
+      "peak": 0.6676285862922668
+    },
+    {
+      "key": "book10-poetry-return--a",
+      "durationSeconds": 9.384,
+      "channels": 1,
+      "rms": 0.11025538095288934,
+      "peak": 0.6334018707275391
+    },
+    {
+      "key": "book10-poetry-return--c",
+      "durationSeconds": 9.048,
+      "channels": 1,
+      "rms": 0.10669035910590317,
+      "peak": 0.6295307278633118
+    },
+    {
+      "key": "book10-time-horizon--c",
+      "durationSeconds": 18.192,
+      "channels": 1,
+      "rms": 0.10897424998506615,
+      "peak": 0.755379855632782
+    },
+    {
+      "key": "book10-time-horizon--a",
+      "durationSeconds": 9.96,
+      "channels": 1,
+      "rms": 0.10604502376835254,
+      "peak": 0.6445332169532776
+    },
+    {
+      "key": "book10-time-horizon--b",
+      "durationSeconds": 9.288,
+      "channels": 1,
+      "rms": 0.11298409310221728,
+      "peak": 0.5775256752967834
+    },
+    {
+      "key": "book10-soul-destruction--a",
+      "durationSeconds": 17.736,
+      "channels": 1,
+      "rms": 0.11236326779174328,
+      "peak": 0.6898603439331055
+    },
+    {
+      "key": "book10-soul-destruction--b",
+      "durationSeconds": 10.632,
+      "channels": 1,
+      "rms": 0.1067400863966492,
+      "peak": 0.6760618686676025
+    },
+    {
+      "key": "book10-soul-destruction--c",
+      "durationSeconds": 9.24,
+      "channels": 1,
+      "rms": 0.11662808442446704,
+      "peak": 0.7072654962539673
+    },
+    {
+      "key": "book10-rewards-restored--b",
+      "durationSeconds": 18.768,
+      "channels": 1,
+      "rms": 0.10815057221111732,
+      "peak": 0.7311602234840393
+    },
+    {
+      "key": "book10-rewards-restored--a",
+      "durationSeconds": 9.432,
+      "channels": 1,
+      "rms": 0.10601094485316273,
+      "peak": 0.5982981324195862
+    },
+    {
+      "key": "book10-rewards-restored--c",
+      "durationSeconds": 9.48,
+      "channels": 1,
+      "rms": 0.11375645386184774,
+      "peak": 0.670017421245575
+    },
+    {
+      "key": "book10-human-rewards--c",
+      "durationSeconds": 18.936,
+      "channels": 1,
+      "rms": 0.11165318572054367,
+      "peak": 0.6958948969841003
+    },
+    {
+      "key": "book10-human-rewards--a",
+      "durationSeconds": 9.864,
+      "channels": 1,
+      "rms": 0.10795071676520004,
+      "peak": 0.6680866479873657
+    },
+    {
+      "key": "book10-human-rewards--b",
+      "durationSeconds": 9.768,
+      "channels": 1,
+      "rms": 0.10952003565509393,
+      "peak": 0.5920230746269226
     }
   ]
 }

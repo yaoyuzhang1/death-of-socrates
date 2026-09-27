@@ -4,26 +4,26 @@
   "language": "zh-CN",
   "voice": "zh-CN-XiaoxiaoNeural",
   "rate": "-3%",
-  "text": "恭喜你，完成了《理想国》的八章阅读。你走过了四卷原文，也一次次停下来，认真比较一个问题该怎样提出。阅读的终点，也是继续追问的起点。现在，隐藏章节《苏格拉底之死》已经开启。我们一起回到雅典，看看他为何接受审判，又如何走过生命的最后一天。",
-  "textSha256": "1d1ef8b845159e57b9ecc258002afe888a42a58536e514829eced93cd2b0be48",
+  "text": "恭喜你，完成了《理想国》十卷、二十个主题章节的阅读。从日常义务到城邦与灵魂，从洞穴与学习到政制、快乐和生活的选择，你一次次停下来辨析问题、检验理由。完成阅读并不意味着所有争论都已结束。你可以沿着自己的阅读足迹回看原文，再练曾经犹豫的追问，继续思考怎样过一种正义而有智慧的生活。",
+  "textSha256": "87ee31a3a2491879ec57f768579a049e8796e97a1cc97e204c2cc804b534a00e",
   "filename": "completion.mp3",
-  "sha256": "0c48bd553862a48018c3bfb3a4bd638ce6171483af71d0db43c92904d2d87522",
-  "generatedAt": "2026-09-09T06:55:37.648130+00:00",
+  "sha256": "c2b71c4413eafd2fc19fd6834bbc9763961feaada9405bc31c7cd8c2c165892e",
+  "generatedAt": "2026-09-27T06:53:17.683459+00:00",
   "mimeType": "audio/mpeg",
-  "durationSeconds": 25.68,
-  "frames": 1070,
+  "durationSeconds": 30.12,
+  "frames": 1255,
   "sampleRates": [
     24000
   ],
-  "bytes": 154080,
+  "bytes": 180720,
   "decodeQA": {
     "status": "passed",
     "decoder": "Chrome AudioContext",
-    "durationSeconds": 25.68,
+    "durationSeconds": 30.12,
     "channels": 1,
     "sampleRate": 48000,
-    "rms": 0.0991785914484965,
-    "peak": 0.6288447380065918,
+    "rms": 0.10826676458590202,
+    "peak": 0.7260914444923401,
     "note": "MPEG integrity and decoded waveform checks; no claim of human listening or pronunciation transcription."
   }
 }

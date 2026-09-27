@@ -10,7 +10,7 @@ const pageScenes: Record<string, string> = manifest.pages;
 
 export default function ComicScene({ chapterId, pageId, nextPageId, compact = false, conversationOnly = false }: { chapterId: string; pageId?: string; nextPageId?: string; compact?: boolean; conversationOnly?: boolean }) {
   const requestedId = pageId && pageScenes[pageId] ? pageScenes[pageId] : chapterId;
-  const assetId = conversationOnly && scenes[requestedId]?.kind === 'example' ? chapterId : requestedId;
+  const assetId = conversationOnly && scenes[requestedId]?.kind === 'example' ? (scenes[chapterId] ? chapterId : 'soul') : requestedId;
   const scene = scenes[assetId];
   const followingScene = nextPageId ? scenes[pageScenes[nextPageId]] : undefined;
   const nextFile = conversationOnly && followingScene?.kind === 'example' ? undefined : followingScene?.file;

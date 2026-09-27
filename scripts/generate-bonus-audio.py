@@ -103,10 +103,24 @@ async def generate(args) -> None:
         return
     import edge_tts
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    voices = await edge_tts.list_voices()
     names = {entry['voice'] for entry in expected}
-    catalog = [{key: voice[key] for key in ('ShortName', 'Gender', 'Locale')}
-               for voice in voices if voice['ShortName'] in names]
+    # Resume a verified catalog along with the exact-text audio cache. Fetching
+    # the same voice list for every retry creates a separate network failure
+    # that can stop otherwise resumable synthesis before the first clip.
+    cached = previous_manifest.get('verifiedVoiceCatalog') or []
+    catalog = [voice for voice in cached if voice.get('ShortName') in names
+               and voice.get('Locale') == 'zh-CN' and voice.get('Gender')]
+    if {voice['ShortName'] for voice in catalog} != names:
+        for attempt in range(3):
+            try:
+                voices = await asyncio.wait_for(edge_tts.list_voices(), timeout=45)
+                break
+            except Exception:
+                if attempt == 2:
+                    raise
+                await asyncio.sleep(1 + attempt)
+        catalog = [{key: voice[key] for key in ('ShortName', 'Gender', 'Locale')}
+                   for voice in voices if voice['ShortName'] in names]
     assert {voice['ShortName'] for voice in catalog} == names, 'A required standard Mandarin voice is unavailable'
     assert all(voice['Locale'] == 'zh-CN' for voice in catalog)
     pending = [spec for spec in expected if spec['key'] not in entries and (args.kind == 'all' or spec['kind'] == args.kind)]

@@ -4,8 +4,8 @@
   "language": "zh-CN",
   "voice": "zh-CN-XiaoxiaoNeural",
   "rate": "-3%",
-  "generatedAt": "2026-09-09T11:12:18.188783+00:00",
-  "expectedCount": 141,
+  "generatedAt": "2026-09-27T07:18:07.695347+00:00",
+  "expectedCount": 285,
   "complete": true,
   "scriptRule": "correct: question.explanation; incorrect: selected option.feedback; exact text, no additions",
   "entries": [
@@ -1914,19 +1914,19 @@
       "questionId": "book3-believing-the-story",
       "optionId": "a",
       "correct": false,
-      "text": "这在问传播的效果是否达到目的；赞成分工与相信出生故事仍是两回事，不能由效果代替可信性的考察。",
-      "textSha256": "e70ebeda6388cebb74f3f4919d14cdbb597bcb5390b6e93499bdc1a01be086d0",
+      "text": "赞成分工与相信出生故事是两回事；只确认赞成的效果，还没有说明人们会不会相信故事，以及怎样使他们相信。",
+      "textSha256": "ed17f2ca0dfa1481c392a1b80576f02041702bb976aa5d8f191372f59cbe965b",
       "voice": "zh-CN-XiaoxiaoNeural",
       "rate": "-3%",
       "filename": "book3-believing-the-story--a.mp3",
       "mimeType": "audio/mpeg",
-      "durationSeconds": 10.248,
-      "frames": 427,
+      "durationSeconds": 10.968,
+      "frames": 457,
       "sampleRates": [
         24000
       ],
-      "bytes": 61488,
-      "sha256": "284261e3718f3695ee63beaf01494855fff9e5e00fb6fcf8e725b1f213de2a9d"
+      "bytes": 65808,
+      "sha256": "1f30f4a63722b51e47b622a99ca3d4c78aeb154e5896e1850f416cd90fa6d928"
     },
     {
       "key": "book3-believing-the-story--b",
@@ -2687,15 +2687,2751 @@
       ],
       "bytes": 59760,
       "sha256": "b3ac68300dae469e1e4a67597712424ac1591ef43d9639be394be1733edc014f"
+    },
+    {
+      "key": "book5-women-capacity--b",
+      "questionId": "book5-women-capacity",
+      "optionId": "b",
+      "correct": true,
+      "text": "原问在嘲笑与习俗之外，区分全部、不能和部分能胜任几种可能，再追问战争是否包括在内。它要求讨论具体职务与能力的关系；这一步本身还没有证明两性在一切方面相同。",
+      "textSha256": "836acd4473cff8664e231b736784607d041be8d2cbb4a843c7ca29c10e4ee91b",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-women-capacity--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.16,
+      "frames": 715,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 102960,
+      "sha256": "a5c829976b810eb736951743ddd9015b38fab9880fc5211c6b3f678e90619456"
+    },
+    {
+      "key": "book5-women-capacity--a",
+      "questionId": "book5-women-capacity",
+      "optionId": "a",
+      "correct": false,
+      "text": "社会接受程度影响推行，却还没有回答女子的天性是否适合相应职务。",
+      "textSha256": "f6a35ef9e8931efa44dc470b2e7a5abfea787f9122d083476d53ae495cdad49a",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-women-capacity--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.128,
+      "frames": 297,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 42768,
+      "sha256": "cdb9475980d84daf09b266963f6a0bfcaa09fa4893b707b744d692d183f30463"
+    },
+    {
+      "key": "book5-women-capacity--c",
+      "questionId": "book5-women-capacity",
+      "optionId": "c",
+      "correct": false,
+      "text": "体力是值得考察的条件，但不能不区分职务，就让一个总体差别决定所有能力。",
+      "textSha256": "a7f4c01b85c376434111e8592cce6772f09bd17475a6cb7cea13ce407e770a60",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-women-capacity--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.704,
+      "frames": 321,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 46224,
+      "sha256": "5ef8d28a13be210ac143f3df9401fe76b81e1209b9e89dff272e783e2c9fd894"
+    },
+    {
+      "key": "book5-feasible-best--c",
+      "questionId": "book5-feasible-best",
+      "optionId": "c",
+      "correct": true,
+      "text": "双方先讨论建议是否合乎自然，原问随后把可行性与优越性分成两个问题。即使第一项得到同意，第二项仍须说明；问得好在于不把行得通直接当作最好。",
+      "textSha256": "743712b436ab81ff88c79942740f637d69c70842c3fc148e910a6697eb74a795",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-feasible-best--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 15.672,
+      "frames": 653,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 94032,
+      "sha256": "b5179f10050c5c0a763785d5397b26c8be1d084ed78c2e8400efeef7da0cadfb"
+    },
+    {
+      "key": "book5-feasible-best--a",
+      "questionId": "book5-feasible-best",
+      "optionId": "a",
+      "correct": false,
+      "text": "历史例子能帮助检验可行性，但缺少先例也不能单独决定建议可行或不可行。",
+      "textSha256": "8e52d9b8daf89dea51ea98f5469e160d71df26af203af1417ebca6bc47253bc7",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-feasible-best--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.112,
+      "frames": 338,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 48672,
+      "sha256": "1992bd82ccfa3ed86de7f0f2101d5f2d173cb63d77c3735eb2b23506e8e32ace"
+    },
+    {
+      "key": "book5-feasible-best--b",
+      "questionId": "book5-feasible-best",
+      "optionId": "b",
+      "correct": false,
+      "text": "合乎自然是本段已讨论的理由；它还不能省去对建议是否最好的单独比较。",
+      "textSha256": "6ef917ea52447cc71e22679d3bd42311749391fc46ea187ef7e83a85d0ca7848",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-feasible-best--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.152,
+      "frames": 298,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 42912,
+      "sha256": "5dea76b3dc6409955c84097c3cca5327844da17e1e783d5134a65dc34d656473"
+    },
+    {
+      "key": "book5-common-good-standard--a",
+      "questionId": "book5-common-good-standard",
+      "optionId": "a",
+      "correct": true,
+      "text": "原问没有让最好停留在赞同上，而是先找评价制度的善恶标准，再检验具体建议。随后双方以团结和分裂展开论证；这里说明的是论证次序，并未凭设定标准就证明该政策正确。",
+      "textSha256": "94010c436afda9e2eaab0d68a8acd45684bce7cc7da98e369d33fc5e26e7272c",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-common-good-standard--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18,
+      "frames": 750,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 108000,
+      "sha256": "5ec997c9b9e9b31769edf01e1a216967768f731515f2951bfd2dc681344219b4"
+    },
+    {
+      "key": "book5-common-good-standard--b",
+      "questionId": "book5-common-good-standard",
+      "optionId": "b",
+      "correct": false,
+      "text": "比较现存制度值得做，但拥护人数本身尚不能给出立法应追求什么的标准。",
+      "textSha256": "652e3ddb40640bd8d0e7669de63eb2014ed12441433af689032fcd0687e88733",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-common-good-standard--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.44,
+      "frames": 310,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 44640,
+      "sha256": "5a2c34928dcb46f7230dbabcbb0be8e74d60c0f8fa208094b5516befb7a4760f"
+    },
+    {
+      "key": "book5-common-good-standard--c",
+      "questionId": "book5-common-good-standard",
+      "optionId": "c",
+      "correct": false,
+      "text": "制度协调是一种理由，却还不能代替对城邦至善的说明和对建议结果的检验。",
+      "textSha256": "794c91773d07fd0f2f947b61c2e80051250b8cd69c5c55d00361d19e00a7d06c",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-common-good-standard--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.608,
+      "frames": 317,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 45648,
+      "sha256": "dd787b1bffa83fc6a0957d188d7577eedc6b86dfdc87df6251ec4440806d3a01"
+    },
+    {
+      "key": "book5-human-possibility--b",
+      "questionId": "book5-human-possibility",
+      "optionId": "b",
+      "correct": true,
+      "text": "原问把讨论从共同生活的好处转向能否实现以及如何实现。它没有把动物类比直接当成人类可行性的证明；对可能性的说明仍需要后面的具体安排和条件。",
+      "textSha256": "389470c811138e3169fdb7f7455d42a3068c126604b1729de11dcee134aa5050",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-human-possibility--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 14.904,
+      "frames": 621,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 89424,
+      "sha256": "ae803e7b1d47055d9f3cc72e22d160ebf70e834ace0aca9e5c8f666b4a61d003"
+    },
+    {
+      "key": "book5-human-possibility--a",
+      "questionId": "book5-human-possibility",
+      "optionId": "a",
+      "correct": false,
+      "text": "动物的例子提供类比，却还没有说明人的关系具备同样条件，不能直接照搬全部安排。",
+      "textSha256": "37607bc0e79d235d7b933e4641faa0a5ab04a300282b304f52036c07419558f9",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-human-possibility--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.16,
+      "frames": 340,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 48960,
+      "sha256": "61c92e0604329a7a753c1517944821c45675bbcf16b770ee36098d52a7d741a2"
+    },
+    {
+      "key": "book5-human-possibility--c",
+      "questionId": "book5-human-possibility",
+      "optionId": "c",
+      "correct": false,
+      "text": "预期好处值得讨论，但喜欢这些好处还不能说明共同关系可以怎样建立起来。",
+      "textSha256": "172a270178e34acd726c49551ca75e25ca1a894f5e5f7696161d1221be52da86",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-human-possibility--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.68,
+      "frames": 320,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 46080,
+      "sha256": "be15440505d1e334ea73cf0aaec1a2e03ae169968794bd1b42d7f75db75d5935"
+    },
+    {
+      "key": "book5-model-painter--c",
+      "questionId": "book5-model-painter",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问用画家的例子区分描画理想样板与证明样板实际存在。类比的作用是检查两种要求是否相同；它并没有由画可以画出，便证明理想城邦一定能够实现。",
+      "textSha256": "16bc3d664d002e9eb55fa765c8c63ba6508fa2407d551d00510ae168d5448a2c",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-model-painter--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 15.336,
+      "frames": 639,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 92016,
+      "sha256": "3091d2f329d7fa8b3d32c69a764fade939dd8a7bc9a5bb7c63278f53a3e0a14b"
+    },
+    {
+      "key": "book5-model-painter--a",
+      "questionId": "book5-model-painter",
+      "optionId": "a",
+      "correct": false,
+      "text": "赞赏可以说明观众的反应，却没有回答样板的价值是否取决于现实中完全相同的对象。",
+      "textSha256": "bc6c51b50e3e6587b7c94346b9637c59c30d303751dfe7b8f1930794c93908b1",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-model-painter--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.496,
+      "frames": 354,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 50976,
+      "sha256": "bff33cd3db35d02750945c6a817610f8ffda872c93e358e3de77d978f67bb8da"
+    },
+    {
+      "key": "book5-model-painter--b",
+      "questionId": "book5-model-painter",
+      "optionId": "b",
+      "correct": false,
+      "text": "这把样板评价与现实存在捆在一起，正是原问借画家例子要检验而非直接接受的要求。",
+      "textSha256": "587f6aeed079a2d736c8abca0244e782d1ca000e7c25ed8b6d7af125e8134468",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-model-painter--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.88,
+      "frames": 370,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 53280,
+      "sha256": "9b0996a74d4a5decd83a802120026a272a3dfc263f2b366d2902bb32ec112fca"
+    },
+    {
+      "key": "book5-love-whole--a",
+      "questionId": "book5-love-whole",
+      "optionId": "a",
+      "correct": true,
+      "text": "原问先澄清爱好是面向全部还是只面向部分，再把这一点用于爱智者。随后格劳孔还提出爱听、爱看的人作为异议，所以喜爱全部也尚未独自完成哲学家的定义。",
+      "textSha256": "bb6c62c794570316e1b326047abffec69ace81b3c3c996ab75ff0beb093c0a66",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-love-whole--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 16.488,
+      "frames": 687,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 98928,
+      "sha256": "960eae5eab52c5261ae2e8a6edf76e0610ae8986dbb4993db24808e373f7d5be"
+    },
+    {
+      "key": "book5-love-whole--b",
+      "questionId": "book5-love-whole",
+      "optionId": "b",
+      "correct": false,
+      "text": "投入时间可供观察，但这里还须澄清爱好所指的对象范围，时间多少不能替代这一点。",
+      "textSha256": "3cb160f015d6d0cca4e3c1b28bbd2cf24832eb3244e88544bcd57ae39cdc5255",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-love-whole--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.424,
+      "frames": 351,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 50544,
+      "sha256": "430c9a45e3324a995985edf0c94de22527150de6725684e70c1357a161c8981b"
+    },
+    {
+      "key": "book5-love-whole--c",
+      "questionId": "book5-love-whole",
+      "optionId": "c",
+      "correct": false,
+      "text": "说出喜欢的部分还没有说明爱智的范围；原问正要求检查部分与全部的区别。",
+      "textSha256": "c233b25f0394496a95828a0bd2937f5a7ea0ea293be21f485f2dbdbaf1e78687",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-love-whole--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.584,
+      "frames": 316,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 45504,
+      "sha256": "a84284be38a4fa5cd39e9d43479af1fa40b7c400d0903682288f4b017d40da30"
+    },
+    {
+      "key": "book5-opinion-faculty--b",
+      "questionId": "book5-opinion-faculty",
+      "optionId": "b",
+      "correct": true,
+      "text": "这里的它指刚刚提到的意见。原问虽只要求二选一，却迫使双方说明能力的区别；后面再用能力的作用和对象展开判断，不能仅凭知识与意见名称不同就认定答案。",
+      "textSha256": "cb7bb549777ffa6f60e43b68b8cb21f86e7447ead9c4cf83f1bee72a4c863974",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-opinion-faculty--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 15.936,
+      "frames": 664,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 95616,
+      "sha256": "cc2159e8fb6bb958bca2781716a3f08f0b5fb80a67d96add15c93d1a1205377d"
+    },
+    {
+      "key": "book5-opinion-faculty--a",
+      "questionId": "book5-opinion-faculty",
+      "optionId": "a",
+      "correct": false,
+      "text": "赞同的难易可以比较，但不能据此决定意见与知识是否具有同样的作用与对象。",
+      "textSha256": "9b23a1fd26d5373905d06447ef1cb9bdb89109b6afc303709f7b18ee79e377a0",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-opinion-faculty--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.608,
+      "frames": 317,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 45648,
+      "sha256": "b15de9c5e5319c99da6ee0f85288f62af071651d7569628af2f038ef45c4a120"
+    },
+    {
+      "key": "book5-opinion-faculty--c",
+      "questionId": "book5-opinion-faculty",
+      "optionId": "c",
+      "correct": false,
+      "text": "用词可能相同，仍须考察能力本身；词语的一致不能代替对意见与知识的区分。",
+      "textSha256": "7c16a38191ff7b250d8f965172e7846e2d1a4bfd6297d8f9eebaa228198cb5f8",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-opinion-faculty--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.208,
+      "frames": 342,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 49248,
+      "sha256": "cda30a2f9da8db81d786f65b288bfbcf272ad80787067874537b82b94dcf8357"
+    },
+    {
+      "key": "book5-double-half--c",
+      "questionId": "book5-double-half",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问让同一物分别相对于不同东西呈现双倍与一半，检查性质判断所依赖的比较关系。两个判断的参照不同，并非证明同一物在同一关系中自相矛盾。",
+      "textSha256": "45cb9d92d0426e3721324daff287c90f9a84b40dfcd33263d1ed7979eb778cae",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-double-half--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 15,
+      "frames": 625,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 90000,
+      "sha256": "dda26f23c493f7c8913e6ed1331973d6d8f84ee1a18f53f101489201a97cd878"
+    },
+    {
+      "key": "book5-double-half--a",
+      "questionId": "book5-double-half",
+      "optionId": "a",
+      "correct": false,
+      "text": "这把相对某物的大直接当成不随比较对象改变的特点，尚未检验比较关系。",
+      "textSha256": "172f2ff22c3752b2c708848efed057c0de4df015d4cff70961f1f6351fe9a74d",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-double-half--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.272,
+      "frames": 303,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 43632,
+      "sha256": "4411d89531300d973a0e43e321016c2f448fc1d1a50464c44e9a2922c4f5d8a1"
+    },
+    {
+      "key": "book5-double-half--b",
+      "questionId": "book5-double-half",
+      "optionId": "b",
+      "correct": false,
+      "text": "测量便利值得考虑，但这里要问同一物的判断能否随着参照对象改变。",
+      "textSha256": "51c1c528a94df36c02c39ad5f2be5ca5c9de0c749bc28f3edd65cbdbde210307",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book5-double-half--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.008,
+      "frames": 292,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 42048,
+      "sha256": "7aa24f918cd3341e54fc1a2c9232ea7fb3a68af7290fbf1a2846aae176d32bac"
+    },
+    {
+      "key": "book6-joint-qualities--b",
+      "questionId": "book6-joint-qualities",
+      "optionId": "b",
+      "correct": true,
+      "text": "前面比较哲学家与有经验、有德行的人，原问转向同一个人怎样兼有两方面优点。它使选人标准不至于在知识与实践德行之间任意替换，随后才检查适合哲学的天性。",
+      "textSha256": "de2d2d2f31398839c2bb9f11b6e7b69caaa203df33fefc519d345d2ee4303f80",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-joint-qualities--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 16.416,
+      "frames": 684,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 98496,
+      "sha256": "42d7365e95e727a4298d260385ffd95c0278ad1a5e4bef7f72e902df13482a32"
+    },
+    {
+      "key": "book6-joint-qualities--a",
+      "questionId": "book6-joint-qualities",
+      "optionId": "a",
+      "correct": false,
+      "text": "赞赏程度未必说明护卫所需的能力，更未解决两方面条件能否在同一人身上结合。",
+      "textSha256": "b0cf448abf2bffb358995970bafa5f0b9f49b1468c7d1dfb90d08ffe07351bab",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-joint-qualities--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.088,
+      "frames": 337,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 48528,
+      "sha256": "0b76dde1c75ff59925f759a46b6a53f8c885ffbb74c7834bf897594f324613ce"
+    },
+    {
+      "key": "book6-joint-qualities--c",
+      "questionId": "book6-joint-qualities",
+      "optionId": "c",
+      "correct": false,
+      "text": "分别找到两类人尚不能说明同一护卫满足双方提出的两项要求，结合条件仍须检查。",
+      "textSha256": "74beecd79e309f809e209a925e2416a39eb579ae01ccd2589a40c415cbc7bd66",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-joint-qualities--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.544,
+      "frames": 356,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 51264,
+      "sha256": "5cd289c01ba6aa952ef3c6018fb07860ec58f425cc3683bad410c6b1951dfd80"
+    },
+    {
+      "key": "book6-ship-judgment--c",
+      "questionId": "book6-ship-judgment",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问在船上争权的比喻中追问真正航海家的处境，解释无用这一评价怎样产生。它区分能力不足与能力不被采用，不能凭不被采用就证明没有能力。",
+      "textSha256": "e3623629e2b91299421a9d5ef14d4d5570398470b1fd5b8febcf3e08bdf5c8d2",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-ship-judgment--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 14.544,
+      "frames": 606,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 87264,
+      "sha256": "68ab382fffcbcd9ba57fd48140c88dc377a5384e06e5381aa3470fe6f9b13e41"
+    },
+    {
+      "key": "book6-ship-judgment--a",
+      "questionId": "book6-ship-judgment",
+      "optionId": "a",
+      "correct": false,
+      "text": "推举能显示支持情况，但不能单独判断航海本领，船上权力关系也会影响评价。",
+      "textSha256": "bc98084e4a60d03fe850b5269c492f0a57138ff5a2caf6891a041412c9c1341f",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-ship-judgment--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.112,
+      "frames": 338,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 48672,
+      "sha256": "131e8c9e071a7b8e72be5b59b034cde7212bdda6218ad9f1f2cff46b61b7920c"
+    },
+    {
+      "key": "book6-ship-judgment--b",
+      "questionId": "book6-ship-judgment",
+      "optionId": "b",
+      "correct": false,
+      "text": "掌权愿望并不等于航海知识；这样选择仍没有检查实际能力与水手评价的差别。",
+      "textSha256": "2fa3e389543420bb988f3948d8dbdb6b7af5d78877d54e3f552d60d9c017d28e",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-ship-judgment--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.136,
+      "frames": 339,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 48816,
+      "sha256": "2c9100a58cfe861d10bb4ef758ebde246c6acc79fc417b6e47e72eba792bcdd8"
+    },
+    {
+      "key": "book6-popular-proof--a",
+      "questionId": "book6-popular-proof",
+      "optionId": "a",
+      "correct": true,
+      "text": "这个反问带有批评语气，但所检查的关键是：知道群众喜欢什么，是否足以知道什么善美。反馈要求补出两者之间的理由，并不由此断言凡受欢迎的东西都不好。",
+      "textSha256": "7e42be4439a566f57df5f5070183ab24c773806a9003a7b3a9d29acc36a00ddb",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-popular-proof--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 15.336,
+      "frames": 639,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 92016,
+      "sha256": "17f165cb042d54333addd28af81cfc2679c29b971b8cfa5e5aa72a675d972897"
+    },
+    {
+      "key": "book6-popular-proof--b",
+      "questionId": "book6-popular-proof",
+      "optionId": "b",
+      "correct": false,
+      "text": "预测赞赏是了解偏好，却还没有给出偏好对象确实善美的理由。",
+      "textSha256": "48a99c9bde2c0c51e69d437c77f80e8682f25e3bfd4f9004aae3bc8f42d1d801",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-popular-proof--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.648,
+      "frames": 277,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 39888,
+      "sha256": "b3d4ec7c87a57ec81d50ce6e2607f322413a2238f4a2d089974594280c2dfbb7"
+    },
+    {
+      "key": "book6-popular-proof--c",
+      "questionId": "book6-popular-proof",
+      "optionId": "c",
+      "correct": false,
+      "text": "持久性说明一种偏好的稳定程度；它自身仍不足以证明对象善或美。",
+      "textSha256": "1454c27fd38a66df107182194f93a78b406288a2d3e655a60301f254af043dd6",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-popular-proof--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.152,
+      "frames": 298,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 42912,
+      "sha256": "369b85dc06abef15e266b3d9de4834600b5a594ee6de07da54dd8097462b77cf"
+    },
+    {
+      "key": "book6-difficult-impossible--b",
+      "questionId": "book6-difficult-impossible",
+      "optionId": "b",
+      "correct": true,
+      "text": "原问把很困难与永远无一例外地区分开来，检验反对者是否作出了过强断言。它回应绝不可能的说法，并不因此证明这样的统治者或城邦已经实际出现。",
+      "textSha256": "df5aa2ae754cc3cedc24b32f3665b27113c06d611830923bea3bfc4b02b6a0f0",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-difficult-impossible--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 14.856,
+      "frames": 619,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 89136,
+      "sha256": "7325fbd6d964c341ca647700c8b1ccd59195bdfac1f2e03c2fc1eb5780fe9c7e"
+    },
+    {
+      "key": "book6-difficult-impossible--a",
+      "questionId": "book6-difficult-impossible",
+      "optionId": "a",
+      "correct": false,
+      "text": "困难还不是不可能；要排除一切例子，需要比指出困难更强的论证。",
+      "textSha256": "3695717e555978ddda12e17a078ef4cdfee8723f9e18af01c9bc3eec150671c1",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-difficult-impossible--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.624,
+      "frames": 276,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 39744,
+      "sha256": "21b3036eba0f40c43907c8ca9dc21754f513e9986808657990c643d060bbff78"
+    },
+    {
+      "key": "book6-difficult-impossible--c",
+      "questionId": "book6-difficult-impossible",
+      "optionId": "c",
+      "correct": false,
+      "text": "失败数量能说明风险，却不能单独排除可能的例外，也不能省去对条件的考察。",
+      "textSha256": "61489efb4ad107b9e2457968bb147d861df76c09125d5785ab0f721655f54c9d",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-difficult-impossible--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.848,
+      "frames": 327,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47088,
+      "sha256": "9b8eab7973f909205926c20b9f97af211649d8db66d6b876497a3261ce86b612"
+    },
+    {
+      "key": "book6-good-use--c",
+      "questionId": "book6-good-use",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问检验拥有和知识的数量是否足以说明益处，把讨论引向善的理念在本段论证中的作用。这里展示苏格拉底的理由，不把不知道善便全无益处宣布为无需论证的现代常识。",
+      "textSha256": "460b2df2d6dd6152ca776bf2e8621c4a3cd16492b0f370e5707e92dc42291987",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-good-use--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 16.416,
+      "frames": 684,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 98496,
+      "sha256": "42a21ca92c6039d21cfb07f5f5d413ba405ea52936d181802a05f0dedf5b25db"
+    },
+    {
+      "key": "book6-good-use--a",
+      "questionId": "book6-good-use",
+      "optionId": "a",
+      "correct": false,
+      "text": "数量能说明拥有多少，仍没有回答这些东西以何种方式有益，以及是否是善的。",
+      "textSha256": "75c3d803543a10653428d96ecaf853184dd3218ea041fe66626b4e9d0312bc0f",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-good-use--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.56,
+      "frames": 315,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 45360,
+      "sha256": "4e81621ae1857d451391ec4b17eb70bb2dd4a9359cac850badd5dac76768a4ea"
+    },
+    {
+      "key": "book6-good-use--b",
+      "questionId": "book6-good-use",
+      "optionId": "b",
+      "correct": false,
+      "text": "学习成本值得计算，但困难程度自身不能决定知识的益处与价值。",
+      "textSha256": "dec869200709550ad7359af1f96ddc57dd026071350a18dcccc9fbf518a65ae4",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-good-use--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 6.792,
+      "frames": 283,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 40752,
+      "sha256": "7e98208e6799ce152ea2eeac223a495d719c77b096b18a37df196d671ce43e41"
+    },
+    {
+      "key": "book6-knowledge-claim--a",
+      "questionId": "book6-knowledge-claim",
+      "optionId": "a",
+      "correct": true,
+      "text": "原问针对不懂却装作懂的谈论，区分知识的主张与意见的表达。阿得曼托斯接着允许把所想作为意见谈，所以这一问并不要求人在不确定时一律保持沉默。",
+      "textSha256": "a30ff8deb5b97581a00b83d047dd2d76892528d7cb4ad61e44e985c158ccc5d7",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-knowledge-claim--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 15.384,
+      "frames": 641,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 92304,
+      "sha256": "44ec4c6f1584a2caf9290bf6bbea439cf62ad1981c13bc5710ec0061f07098d9"
+    },
+    {
+      "key": "book6-knowledge-claim--b",
+      "questionId": "book6-knowledge-claim",
+      "optionId": "b",
+      "correct": false,
+      "text": "自信和流畅能影响听众，但尚不能证明说话者懂得对象，需要检查理由和知识。",
+      "textSha256": "94af8beaa118ab8ff0ad17394c6b5b3a2af4ee1b34baa6e960b9ef17786b94e0",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-knowledge-claim--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.184,
+      "frames": 341,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 49104,
+      "sha256": "bc66c4b346b9ba4a1ef03d5747e6d26728d4d25ef33d70453d6c130e3e4fc6fb"
+    },
+    {
+      "key": "book6-knowledge-claim--c",
+      "questionId": "book6-knowledge-claim",
+      "optionId": "c",
+      "correct": false,
+      "text": "这把区分意见与知识变成禁止一切意见；阿得曼托斯接着承认以意见的身份谈论也无妨。",
+      "textSha256": "219a30b65e99fa89136a5065285cc4b7b8d5196da512d6e76b8e44fc52084edd",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-knowledge-claim--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.856,
+      "frames": 369,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 53136,
+      "sha256": "0b6dac23e108053ca73b777508d13ad1b3eb7d9ebfa44011c8379eb6bada49dc"
+    },
+    {
+      "key": "book6-sense-condition--b",
+      "questionId": "book6-sense-condition",
+      "optionId": "b",
+      "correct": true,
+      "text": "原问检验感官与对象之外的必要条件，随后引出视觉需要光的比较。格劳孔关于声音的回答依据当时看法，译注也指出这一点；提问的结构不使该回答成为现代声学结论。",
+      "textSha256": "7258e6bb2661948c111956083220978ec4e5440a5192d87f63ec12bec074b58e",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-sense-condition--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 16.344,
+      "frames": 681,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 98064,
+      "sha256": "5415a2aa58ddaa5e2ff5804cf4f7455abaaeafef9656f1d6cde967fd239074e2"
+    },
+    {
+      "key": "book6-sense-condition--a",
+      "questionId": "book6-sense-condition",
+      "optionId": "a",
+      "correct": false,
+      "text": "同属感觉不等于全部条件相同，还须分别检查器官与对象之外的必要条件。",
+      "textSha256": "bfe17efb1363ff72d70d34fb1b14bd3f7608ec728af3bc586a2d54f991ad0058",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-sense-condition--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.632,
+      "frames": 318,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 45792,
+      "sha256": "c4930df93afcd56d260e857a9614b8f8c937477f206c5563db58bb4407e0ec00"
+    },
+    {
+      "key": "book6-sense-condition--c",
+      "questionId": "book6-sense-condition",
+      "optionId": "c",
+      "correct": false,
+      "text": "外形的比较不能独自说明感知所需条件；这里须问缺少某条件时是否还能发生感知。",
+      "textSha256": "d41fb3a2b97fa31dded0fc223572b209bfee3e52ac7cf81a3c49ecf759b4cf67",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-sense-condition--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.568,
+      "frames": 357,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 51408,
+      "sha256": "8a7cf7e9d1984548b7b430e400c67d0c4a825de7db57bed70b961597eb6f970b"
+    },
+    {
+      "key": "book6-image-relation--c",
+      "questionId": "book6-image-relation",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问把线喻中的两组关系明确对应，要求格劳孔同意的是一个具体类比。类比帮助组织讨论，但仅说影象与实物如此，还不等于独自证明意见与知识的全部关系。",
+      "textSha256": "001c4837b788ea935935c5c2fea2544e26befeeb66b0d9216b89a593fac22346",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-image-relation--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 15.264,
+      "frames": 636,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 91584,
+      "sha256": "7d693010a378c083becccf14774ab4ee0fec182e18c65334d1ab00c576fa9584"
+    },
+    {
+      "key": "book6-image-relation--a",
+      "questionId": "book6-image-relation",
+      "optionId": "a",
+      "correct": false,
+      "text": "同为可见还不能抹去影象与所映实物的区别，也没有说明意见与知识如何对应。",
+      "textSha256": "b236b658293a9ba203b1bf09de4f3e2bcfe14ddb3ca7f7add3dd7a5827fdf46b",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-image-relation--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.752,
+      "frames": 323,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 46512,
+      "sha256": "504cfdca79051480d4a7c98901f27ffd80cc8d6f00ac717d33f0edf253753b0d"
+    },
+    {
+      "key": "book6-image-relation--b",
+      "questionId": "book6-image-relation",
+      "optionId": "b",
+      "correct": false,
+      "text": "观看时明亮不等于对象更真实；这一标准没有检验影象对实物的依赖关系。",
+      "textSha256": "9cbfc3acfe753e135ddf6a82f62af0e02863d329c8e94d24448a2792c82dd548",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book6-image-relation--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.536,
+      "frames": 314,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 45216,
+      "sha256": "50ee8b7233842a1b6601ae303fce57750b2ff9f2893c96302ad4899909f0380e"
+    },
+    {
+      "key": "book7-prisoner-access--b",
+      "questionId": "book7-prisoner-access",
+      "optionId": "b",
+      "correct": true,
+      "text": "原问先检查囚徒实际能看到什么，不先凭他们的判断取笑他们。它把信息范围与处境联系起来，为后面解释为何把影象当作真实对象准备条件。",
+      "textSha256": "e7b985384f0686852906c029b85f93e5ebd86f7a79b77f159e295ddd9f4eda2f",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-prisoner-access--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 14.16,
+      "frames": 590,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 84960,
+      "sha256": "578c59f6c55efee66c8ccb20be437319127739d687ead4c246751787a652e65f"
+    },
+    {
+      "key": "book7-prisoner-access--a",
+      "questionId": "book7-prisoner-access",
+      "optionId": "a",
+      "correct": false,
+      "text": "熟悉影象能说明记忆和辨认能力，却不能单独说明他们看到了影象所代表的全部事物。",
+      "textSha256": "be7381f351bc76e754c4f4e2520794c72e765ef835ab91a363414d2e7207b5c0",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-prisoner-access--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.184,
+      "frames": 341,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 49104,
+      "sha256": "2dc3e2f93d45201ba7702d70c5654c9549e76465d3aad950343c71cdaa9d39be"
+    },
+    {
+      "key": "book7-prisoner-access--c",
+      "questionId": "book7-prisoner-access",
+      "optionId": "c",
+      "correct": false,
+      "text": "留下的愿望不是可见范围的依据；这里需要考察姿势、光源与洞壁怎样限制视觉。",
+      "textSha256": "136f5ef80e4ed6592b61d29af744840f46c300319f91d0597c39ecb1939600a4",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-prisoner-access--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.208,
+      "frames": 342,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 49248,
+      "sha256": "ffae6e4ef0de7a01a7e3d8162ccc26c3d23db4f06a14393ed8d29f63d9f1b34c"
+    },
+    {
+      "key": "book7-return-adaptation--c",
+      "questionId": "book7-return-adaptation",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问把出洞后的经历与突然回到黑暗中的表现联系起来，检查看不清是否来自条件改变。后文指出需要重新习惯黑暗，避免把暂时的不适应直接当成学习使人失去能力。",
+      "textSha256": "bc01631c7c9926b3133a6a1a3d1fe71b568fae0fd6f44b93ea105ef3fc674990",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-return-adaptation--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 16.56,
+      "frames": 690,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 99360,
+      "sha256": "c29808a108a6baa54a55d1d9fc1c87179831d9a67e8a7a333da48e42975a20c1"
+    },
+    {
+      "key": "book7-return-adaptation--a",
+      "questionId": "book7-return-adaptation",
+      "optionId": "a",
+      "correct": false,
+      "text": "一次暂时看不清还不足以判断永久损坏，必须检查环境改变及适应时间的影响。",
+      "textSha256": "2850597014e93bb17c2920ba855b03b1c2971aeb64e7d9fd23f8de7a82156ea4",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-return-adaptation--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.944,
+      "frames": 331,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47664,
+      "sha256": "a64e7fc0b3017d9bfa6e9743a8c823b9de07fec3050f14cb503c316034981fbe"
+    },
+    {
+      "key": "book7-return-adaptation--b",
+      "questionId": "book7-return-adaptation",
+      "optionId": "b",
+      "correct": false,
+      "text": "赞同人数反映洞内评价，不能替代对光暗变化和视力暂时不适应的解释。",
+      "textSha256": "aacb75d9612af71f6de1c056d3ab4b515225c9d1ce83a8e9fc0b60fbdfa3f7ab",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-return-adaptation--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.32,
+      "frames": 305,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 43920,
+      "sha256": "0b7ebf12a00707340c0f568ca33cc67d75ad1a12ca81391237600dcaf3c076e2"
+    },
+    {
+      "key": "book7-two-blindnesses--a",
+      "questionId": "book7-two-blindnesses",
+      "optionId": "a",
+      "correct": true,
+      "text": "原问为迷盲提出两种相反的成因，要求先区分从暗到亮和从亮到暗的变化，再评价表现。它使暂时看不清不被当作唯一结论的证据，洞穴比喻仍需按本段的类比理解。",
+      "textSha256": "9416e1e9c1109bdc028195d2678c64dd9eb01f374c623cd9f2b8253f5b82c3eb",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-two-blindnesses--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 16.344,
+      "frames": 681,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 98064,
+      "sha256": "25fc202caf9aa7d4ef00ef1bd02d857c7d11d39e2527d9ec93de75e20c5c1c09"
+    },
+    {
+      "key": "book7-two-blindnesses--b",
+      "questionId": "book7-two-blindnesses",
+      "optionId": "b",
+      "correct": false,
+      "text": "把所有看不清都归为退步，省略了从暗到亮与从亮到暗两种不同的可能原因。",
+      "textSha256": "7148e67364cf1d575e7840d5014bd2b13424a98580c8941bf4ae00b60ffab861",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-two-blindnesses--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.632,
+      "frames": 318,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 45792,
+      "sha256": "c3a63b753f63c43e07256694aea7b0e57033a593b8d875e04248315e97be7dbe"
+    },
+    {
+      "key": "book7-two-blindnesses--c",
+      "questionId": "book7-two-blindnesses",
+      "optionId": "c",
+      "correct": false,
+      "text": "原有声望不能解释眼前的变化；这里要检查所处条件与经历，而不只依赖评价。",
+      "textSha256": "456ecdd9255b28deebddcbd2fb24c6a7537c7a20fd60a65f71ee6f790a739f6f",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-two-blindnesses--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.848,
+      "frames": 327,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47088,
+      "sha256": "c16c105936cb39d7743d3993a577d521a3280b20984aa8dd55d06d60da5582af"
+    },
+    {
+      "key": "book7-rotation-reason--b",
+      "questionId": "book7-rotation-reason",
+      "optionId": "b",
+      "correct": true,
+      "text": "原问紧接城邦培养人才及轮值分担的说明，检验这套理由能否得到学生接受。它带有劝服意味，依赖双方关于正义与培育之恩的前提，不应把回答当成任何强制任职都公正的证明。",
+      "textSha256": "34c47f2c0f5608f2048da248d11b319b2f20cf8f40956ce95dfcb1a8b1dba68e",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-rotation-reason--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.328,
+      "frames": 722,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 103968,
+      "sha256": "4d5d98d7b61a2fdf2d48ea6edcc5dad54f27afc5af882cf0af04f951f26b6199"
+    },
+    {
+      "key": "book7-rotation-reason--a",
+      "questionId": "book7-rotation-reason",
+      "optionId": "a",
+      "correct": false,
+      "text": "把掌权当奖赏会改变本段提出的职责理由，也不能替代对为何分担管理的说明。",
+      "textSha256": "c87152263dca3d8e4853f28e86cdc450ceae48a512eb2c5201e0288fffb598c5",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-rotation-reason--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.848,
+      "frames": 327,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47088,
+      "sha256": "69a4eb362d025c1d212f63cdb85e9d16ccebd01de2d016efa2140d7e6dc231d2"
+    },
+    {
+      "key": "book7-rotation-reason--c",
+      "questionId": "book7-rotation-reason",
+      "optionId": "c",
+      "correct": false,
+      "text": "时间安排涉及负担大小，但本段仍须说明分担职责的理由，不能只凭工时作答。",
+      "textSha256": "cc744d6316996dc710a28ef4d0a90e97f58508a83d77333ca4e92e441f7c12ee",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-rotation-reason--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.112,
+      "frames": 338,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 48672,
+      "sha256": "3ffd06bf1a3c78af57e468624d37d44a242b54663b5bfab99fc1a33a86760077"
+    },
+    {
+      "key": "book7-touch-meaning--c",
+      "questionId": "book7-touch-meaning",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问从并置的感觉转向含义的澄清，为后面召集理性研究作准备。它提示检查判断内容，并未证明物体不可能在不同部位或关系中同时显得硬和软。",
+      "textSha256": "d688e557b9eb2ed4e1123712d2f652f737598bb5a6abc0a6657fabf7e426dc47",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-touch-meaning--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 15.072,
+      "frames": 628,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 90432,
+      "sha256": "77225f58aa0c39cce5611784b3031f2cf6a564c8ffb88eb93b50f38cd20566b7"
+    },
+    {
+      "key": "book7-touch-meaning--a",
+      "questionId": "book7-touch-meaning",
+      "optionId": "a",
+      "correct": false,
+      "text": "强烈程度不能自动决定含义；需先查两种感受是否在说同一方面、同一关系。",
+      "textSha256": "5e6da73508f6e367a32703f2135cbe8a096892a0bd61c83c789caf6ac47901f8",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-touch-meaning--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.016,
+      "frames": 334,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 48096,
+      "sha256": "0fcab15af097fda5989b2a530cac4ce29f822438c3941b7c6f1b841a23333959"
+    },
+    {
+      "key": "book7-touch-meaning--b",
+      "questionId": "book7-touch-meaning",
+      "optionId": "b",
+      "correct": false,
+      "text": "赞同人数并不能说明硬是什么意思，也没有解释同一物体为何给出两种信息。",
+      "textSha256": "216d74eabbe4b4a8edbc09c24387befe8bed0d34b419a2d97d9d15b2d483c0b1",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-touch-meaning--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.728,
+      "frames": 322,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 46368,
+      "sha256": "ef750e82dbecd4f24197206253856619c532667edc47f764ddd0ac38dd5512d2"
+    },
+    {
+      "key": "book7-number-object--a",
+      "questionId": "book7-number-object",
+      "optionId": "a",
+      "correct": true,
+      "text": "原问被放在一个假想追问中，要求算术研究者说明自己讨论的是怎样的数。下文以理性把握纯数作答；好处在于先澄清对象，而非只比较计算快慢。",
+      "textSha256": "0c0a0eb2727b84643bf1603e4b147f7c34b20db1554ffc254a3f76ee5d7f5319",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-number-object--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 14.904,
+      "frames": 621,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 89424,
+      "sha256": "05fef8479cc976d428d68a8cb21fd842cb6c43571110972d65b67c0223a8a507"
+    },
+    {
+      "key": "book7-number-object--b",
+      "questionId": "book7-number-object",
+      "optionId": "b",
+      "correct": false,
+      "text": "速度能衡量计算熟练程度，却还没有说明这里讨论的是感官对象还是纯数。",
+      "textSha256": "4f8e65195974a87ee2fa818ad4f94d70130b145f674fffe01eaf8e48f2ff71c8",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-number-object--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.824,
+      "frames": 326,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 46944,
+      "sha256": "47e6fcaac4c0508e4941b387d81925f56d280b0afd8f7268ff6d559f539e270f"
+    },
+    {
+      "key": "book7-number-object--c",
+      "questionId": "book7-number-object",
+      "optionId": "c",
+      "correct": false,
+      "text": "统计对象数量之前，要先澄清数的种类及所说的一，否则仍可能在不同对象间换用概念。",
+      "textSha256": "84ec7e094be15f60f63a49a319224df763a7617022cbf0eeb9ba6912823d5594",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-number-object--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.928,
+      "frames": 372,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 53568,
+      "sha256": "872b32581eab1924355156a54f855aa048a513e2ef3dce1eb30a585d5c0be63e"
+    },
+    {
+      "key": "book7-premise-knowledge--b",
+      "questionId": "book7-premise-knowledge",
+      "optionId": "b",
+      "correct": true,
+      "text": "原问检查前提未经说明时，一致的推导是否就构成知识，推动讨论转向假设的根据。它不等于否定条件推理的有效性；能由假设推出结论，与知道假设为何成立是不同要求。",
+      "textSha256": "d107a2336e6d2a0b5172bf5102764375a9f2458e7c87a9c86fd99534cdb896d3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-premise-knowledge--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.304,
+      "frames": 721,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 103824,
+      "sha256": "4e8ff5046c942ffc750b50664e679a15adfdc2e7bd0c83d12510536e0a0cdbe3"
+    },
+    {
+      "key": "book7-premise-knowledge--a",
+      "questionId": "book7-premise-knowledge",
+      "optionId": "a",
+      "correct": false,
+      "text": "内部一致不单独提供前提的根据；原问正检验从一致到知识之间还欠什么说明。",
+      "textSha256": "27e7a7f95f2b30de596f0da6d10adfc2502da722b9e298fa686d8175eb466dc4",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-premise-knowledge--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.448,
+      "frames": 352,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 50688,
+      "sha256": "4aa249891f8e8a266ad4bc1e2eb556c4d3f41431c86545d5fd1ffe6c778a911f"
+    },
+    {
+      "key": "book7-premise-knowledge--c",
+      "questionId": "book7-premise-knowledge",
+      "optionId": "c",
+      "correct": false,
+      "text": "共同使用说明接受范围，但不能替代前提的论证，也不能单独决定结论是否为知识。",
+      "textSha256": "b58a6db9f9e5bd62607ca456a4f5304a12ffe059a13dd7ebbaa56cae16394372",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-premise-knowledge--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.208,
+      "frames": 342,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 49248,
+      "sha256": "851f4ab72b072cbdfa26488875003c08fd8e3305b768f4e3abc0d7e84d3074c1"
+    },
+    {
+      "key": "book7-unsettled-belief--c",
+      "questionId": "book7-unsettled-belief",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问关注旧信条失去约束、真理却未找到的中间处境，解释本段为何讨论辩证教育的次序。这里分析的是一个设想的风险，并非宣布所有怀疑传统的人必定堕落。",
+      "textSha256": "a72e8230e43fb9b57c83942445ad74731bf6113ffa16e0d056a0111cc6708f14",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-unsettled-belief--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 15.768,
+      "frames": 657,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 94608,
+      "sha256": "2232a235a490ab5e704cde6835b56eff6ab3d1eeb77245a1bb9357c991157d4b"
+    },
+    {
+      "key": "book7-unsettled-belief--a",
+      "questionId": "book7-unsettled-belief",
+      "optionId": "a",
+      "correct": false,
+      "text": "推翻旧说尚不等于找到新真理；本段正关注两者之间可能出现的空缺。",
+      "textSha256": "82d89a45c12b56602303f543f24f9b9598d73c76c070b32469d7fc09f27108a9",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-unsettled-belief--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.32,
+      "frames": 305,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 43920,
+      "sha256": "6d8c20de2e928403507cb181fce938f6b5df981cbba627253becf2b96bfa02af"
+    },
+    {
+      "key": "book7-unsettled-belief--b",
+      "questionId": "book7-unsettled-belief",
+      "optionId": "b",
+      "correct": false,
+      "text": "辩论胜负不能单独决定生活根据，还须考察旧信条被动摇后有什么理由能够接替。",
+      "textSha256": "4360e8946441b5f37a11df5020a80ab2efb27b29679a52ab2f4652cb924671ec",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book7-unsettled-belief--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.208,
+      "frames": 342,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 49248,
+      "sha256": "fbbdbd164451f479a56729773f411efb8f49a5e70d68e736fd3065f2b4e37013"
+    },
+    {
+      "key": "book8-comparison-purpose--a",
+      "questionId": "book8-comparison-purpose",
+      "optionId": "a",
+      "correct": true,
+      "text": "原问让政制与性格的分类服务于最初的生活问题：比较正义与不正义本身的幸福和痛苦。列举名称不是终点，公众赞扬和国家力量也不能代替这一比较；各类型是否准确仍须后文考察。",
+      "textSha256": "9f124ff3a6209dee29c7dae33f28453418a584a4b4a8a62619515482d73d0ce6",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-comparison-purpose--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.856,
+      "frames": 744,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 107136,
+      "sha256": "94fed249b0b61f275a344fdaf93341a102275ccbf43f54ffbc34dbbd2af9fdfe"
+    },
+    {
+      "key": "book8-comparison-purpose--b",
+      "questionId": "book8-comparison-purpose",
+      "optionId": "b",
+      "correct": false,
+      "text": "土地、人口可以比较国家的规模和力量，但还没有检验纯粹正义与不正义的生活哪一种较幸福。",
+      "textSha256": "057eb9e182db9eec0bc234162a44673baa403a2f645f696623c57c16ccacd505",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-comparison-purpose--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.144,
+      "frames": 381,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 54864,
+      "sha256": "8e3d631db44aee590a1e7cfecba586fbc9862c55a6f58d820e95063c13ea49ef"
+    },
+    {
+      "key": "book8-comparison-purpose--c",
+      "questionId": "book8-comparison-purpose",
+      "optionId": "c",
+      "correct": false,
+      "text": "赞扬可说明社会评价，却不能直接作为生活好坏的依据，尤其不能用它代替此处要比较的幸福与痛苦。",
+      "textSha256": "09f43f91684941786faaaeeb71cb55f850697479b416ece08467626938e6dbec",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-comparison-purpose--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.768,
+      "frames": 407,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 58608,
+      "sha256": "531705c7c2a2fa65f41f895c76da8f74a3ceb4ef8dced7bcedf485bfab24bfe3"
+    },
+    {
+      "key": "book8-intermediate-regime--b",
+      "questionId": "book8-intermediate-regime",
+      "optionId": "b",
+      "correct": true,
+      "text": "前文既描述保卫自由转为奴役，又保留一些旧安排。原问先提出中间类型，随后才逐项比对它像前者、像后者和自身特有的地方；这是待展开的分类，不是仅凭一个变化定名。",
+      "textSha256": "f273a3e1e9e2de2312d56e0ec377c1c9a15d75d647d2f9b9834b765ceeae1d62",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-intermediate-regime--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 16.968,
+      "frames": 707,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 101808,
+      "sha256": "e989933bef9e643bb4fb894fc6218cc1719054125bfc86e2cf8bf4faa4390bcf"
+    },
+    {
+      "key": "book8-intermediate-regime--a",
+      "questionId": "book8-intermediate-regime",
+      "optionId": "a",
+      "correct": false,
+      "text": "部分人的愿望是变化的条件之一，却不能说明妥协后的全体安排；只看这一集团会漏掉私人占有和奴役自由人的变化。",
+      "textSha256": "c22efb3f664f5c539516ff648e66e64b0115504aab2d9dc78968914a880e9041",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-intermediate-regime--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.232,
+      "frames": 468,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 67392,
+      "sha256": "2b0090acea04200ff0ae35a621c758b8a033c51d1e4dbb6b782d7fb2cc92a83b"
+    },
+    {
+      "key": "book8-intermediate-regime--c",
+      "questionId": "book8-intermediate-regime",
+      "optionId": "c",
+      "correct": false,
+      "text": "私人占有是重要变化，却不能单独穷尽制度特征，还需检查它保留了什么、是否已有其他共同特征。",
+      "textSha256": "3833d4b395570db8996dddd53da650c4b80044ed18cb686e13c2fb735fdf62d3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-intermediate-regime--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.504,
+      "frames": 396,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 57024,
+      "sha256": "c7a614e829ed65869d0c82bf25936a84734a3f90bde00f79be0ff1904058061e"
+    },
+    {
+      "key": "book8-division-consistency--c",
+      "questionId": "book8-division-consistency",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问用先前责备兼业的原则检查寡头制度中的新现象，避免换了制度就换标准。它检验的是双方既有分工要求的应用，并非无需进一步讨论就证明现实中一切兼业都不可行。",
+      "textSha256": "9bea40d668cce76b1fdeec42421350efb96386a9078c1ba0dabf992b2782d200",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-division-consistency--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 16.896,
+      "frames": 704,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 101376,
+      "sha256": "da658fd0a557f43b56c0b4f8c51a0404f57a12586a006e4cead12f0c4d7771a5"
+    },
+    {
+      "key": "book8-division-consistency--a",
+      "questionId": "book8-division-consistency",
+      "optionId": "a",
+      "correct": false,
+      "text": "收入关系到谋生，却尚未检查兼业是否符合前面接受的专门从事原则，挣钱多少不能代替这项一致性检验。",
+      "textSha256": "ad097ad6fd5f0f692c96b67855289dfad7a8c856d5ba6ad650bf8bc6e7b370cf",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-division-consistency--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.632,
+      "frames": 443,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 63792,
+      "sha256": "56349f9fb9eeee3b4016f7b45e31a8ee12690d7579cd1b740fea25c512a65b19"
+    },
+    {
+      "key": "book8-division-consistency--b",
+      "questionId": "book8-division-consistency",
+      "optionId": "b",
+      "correct": false,
+      "text": "荣誉的安排可能影响参与，但在讨论如何奖励之前，仍需检查这种兼业本身是否违背此前的分工要求。",
+      "textSha256": "ef38595d43c17371227f259f3d446510eeccea4c218ddea0070088646977dee4",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-division-consistency--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.2,
+      "frames": 425,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 61200,
+      "sha256": "62145a478ca2180e604dc468ba555a06408b766ee6633827d42cf53a759975aa"
+    },
+    {
+      "key": "book8-character-evidence--a",
+      "questionId": "book8-character-evidence",
+      "optionId": "a",
+      "correct": true,
+      "text": "前文说一些欲望仍存在，只是受控制压下。原问要求说明从何处可见，随后以监护孤儿和为非作歹不受惩罚作检验场景；它把关于性格的断言接到具体证据，而不只重复名声。",
+      "textSha256": "f2fae8efeafb2d2bcba6d7dc15216878f31cd03261874a41e628367a5ea769e0",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-character-evidence--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.64,
+      "frames": 735,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 105840,
+      "sha256": "d9f313522d32333559c281b37545fb864e7886400340cb32ad5491fbb5e95fbd"
+    },
+    {
+      "key": "book8-character-evidence--b",
+      "questionId": "book8-character-evidence",
+      "optionId": "b",
+      "correct": false,
+      "text": "传播名声可扩大社会评价，却已把赞扬当成可靠根据；在未检查隐蔽欲望和具体行为时，还不能据此确认品格。",
+      "textSha256": "1c1e104e47670376a7fd34a9bf6e86ce7ff3425637da767bff6a1ffb4cb94aa2",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-character-evidence--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.376,
+      "frames": 474,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 68256,
+      "sha256": "2cfc1d03bed37c680f3fd4e8f21bab3c0d389289012bce1b05b543ebe9ae1a54"
+    },
+    {
+      "key": "book8-character-evidence--c",
+      "questionId": "book8-character-evidence",
+      "optionId": "c",
+      "correct": false,
+      "text": "省钱可以显示某种克制，却不能单凭积蓄量判断克制的原因，更不能确定不受惩罚时仍会怎样行动。",
+      "textSha256": "11cfe68e61e008dedc01f30cc2a5a4bf948c4b1cd45dcfe26e7929d146c2e4db",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-character-evidence--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.912,
+      "frames": 413,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59472,
+      "sha256": "443be0685943d41e7c383122e001e61c5b48c6db1bd372510fff40c9c07c3ba4"
+    },
+    {
+      "key": "book8-democratic-life--b",
+      "questionId": "book8-democratic-life",
+      "optionId": "b",
+      "correct": true,
+      "text": "前面说明平民怎样取得权力，原问转而检查制度下的生活和性质，接着讨论自由及不同生活计划。这样把政制的起源、日常运行与人物性格分开，不以获胜经过代替制度描述。",
+      "textSha256": "41417b20e26f90b4281f9ca8b6c57b3896e17566fff23186d805fba0a9f04433",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-democratic-life--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.16,
+      "frames": 715,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 102960,
+      "sha256": "e43687f3d35d29b304f3f3902079e8450be965c889f476da79b1890b3e0e4606"
+    },
+    {
+      "key": "book8-democratic-life--a",
+      "questionId": "book8-democratic-life",
+      "optionId": "a",
+      "correct": false,
+      "text": "最富者只是一部分人的处境，财富也未被说明为生活好坏的完整标准；据此排序不能代替对一般生活方式的考察。",
+      "textSha256": "6fef9d248d23661a56e51060c82cd5fce1c8a791ae46a6c69008788ada01bcc2",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-democratic-life--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.064,
+      "frames": 461,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 66384,
+      "sha256": "9f6df3770c73be43184628489e8aa1dd7a384e367f66ce5bbae4600b3f63794d"
+    },
+    {
+      "key": "book8-democratic-life--c",
+      "questionId": "book8-democratic-life",
+      "optionId": "c",
+      "correct": false,
+      "text": "庆祝可以反映政治记忆，却仍在胜利事件周围，未考察制度建立后的人们能怎样生活和选择。",
+      "textSha256": "95995a1f839fac2a9556ee1ab72849f88967e8b3e9842b443c1d88d103e5f3ef",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-democratic-life--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.688,
+      "frames": 362,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 52128,
+      "sha256": "2764c292f846a26c3bf4bbaac5b352561d6e68362d00df61dcceb1959dc990c4"
+    },
+    {
+      "key": "book8-necessary-desires--c",
+      "questionId": "book8-necessary-desires",
+      "optionId": "c",
+      "correct": true,
+      "text": "讨论已用了不必要的快乐这个名称，原问要求先定义再应用。双方随后以不可避免、有益及可戒除等标准分辨；这些是本段采用的标准，不等于花钱少或主观喜欢就足以决定类别。",
+      "textSha256": "f0121809ad14636b4f4dc250e0e1395857c856f7579537a3c3feffb11feeb13e",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-necessary-desires--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.208,
+      "frames": 717,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 103248,
+      "sha256": "cb48f7f7ca6fb81576ca45edf8d32bff247312357260ecdfcd884dd12fcba040"
+    },
+    {
+      "key": "book8-necessary-desires--a",
+      "questionId": "book8-necessary-desires",
+      "optionId": "a",
+      "correct": false,
+      "text": "费用可以说明欲望的经济负担，却不能直接区分是否不可避免或有益，必要与不必要的含义仍未说清。",
+      "textSha256": "899a4f87f1c9208a3e6065cfa28c16a4eabc9be01db9ef069c58571cccbfd3c8",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-necessary-desires--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.648,
+      "frames": 402,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 57888,
+      "sha256": "178cb411873106ab22ae86ccd39abad40aac9a7b0b6937541168e2563a40837e"
+    },
+    {
+      "key": "book8-necessary-desires--b",
+      "questionId": "book8-necessary-desires",
+      "optionId": "b",
+      "correct": false,
+      "text": "喜好强弱能描写个人倾向，但喜欢得强烈并不等于必要，当前使用的两个类别仍需先得到说明。",
+      "textSha256": "a75943e93cef569c8482d748e1e4d778b9f0521f84f6fe01e2f35bf0ddec690a",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-necessary-desires--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.576,
+      "frames": 399,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 57456,
+      "sha256": "738e05314e820ede26934db3b1671cd0a9413116935603c09faff91bc2452954"
+    },
+    {
+      "key": "book8-excess-and-collapse--a",
+      "questionId": "book8-excess-and-collapse",
+      "optionId": "a",
+      "correct": true,
+      "text": "原问不只把两次更替并列，还追问新制度是否也因过度追求其所称的善而受损。随后给出的自由解释是本段的论证主张，仍需其条件和理由支持，不能当成现代民主必然崩溃的定论。",
+      "textSha256": "c7e8622ee00c680e8d1144685966d952a4b3b077887048077dde09e7a42057a3",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-excess-and-collapse--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.52,
+      "frames": 730,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 105120,
+      "sha256": "e1e4fa9670557f5ef940b08a8bda0e458ab1955c04515e8ad59c02399904f571"
+    },
+    {
+      "key": "book8-excess-and-collapse--b",
+      "questionId": "book8-excess-and-collapse",
+      "optionId": "b",
+      "correct": false,
+      "text": "财富仍可考察，但照搬寡头制的标准还没有检查新制度所重视的东西，两个对象的条件可能不同。",
+      "textSha256": "a35d85cf6ead8c1c28405d3a887aec3652304ae850cd3534407f9a49b8e60d91",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-excess-and-collapse--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.312,
+      "frames": 388,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 55872,
+      "sha256": "58211dd38874e9903722a09b9ade13f61c5f24d37d0ed3c03225275bc8072837"
+    },
+    {
+      "key": "book8-excess-and-collapse--c",
+      "questionId": "book8-excess-and-collapse",
+      "optionId": "c",
+      "correct": false,
+      "text": "持续时间和外援可用于比较，却尚未给出内部变化的机制，不能替代本段对目标及其限度的检查。",
+      "textSha256": "b512eaea9bad75067d3da90f29085453dfb82a5b0cebaff1cef3aaad71b6f97d",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-excess-and-collapse--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.336,
+      "frames": 389,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 56016,
+      "sha256": "b01efa949623be29a87bf790568f9f70e5810d511414c21eeb5e06115569afcb"
+    },
+    {
+      "key": "book8-protector-transformation--b",
+      "questionId": "book8-protector-transformation",
+      "optionId": "b",
+      "correct": true,
+      "text": "保护这个名称还不能说明此人始终在保护人民。原问寻找发生转变的关键，后文用狼的故事类比诬告和流血等行为；寓言帮助呈现危险，不是以一则故事独自证明所有政治转变。",
+      "textSha256": "6261826e9e272846cd021fb7fc95e082f0c634f9e2b1b4085becddb0c5537174",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-protector-transformation--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.448,
+      "frames": 727,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 104688,
+      "sha256": "f1ffda29cdb8340114a8da6fb15a1bb9085715143b429e8823ab51f5697e6c5c"
+    },
+    {
+      "key": "book8-protector-transformation--a",
+      "questionId": "book8-protector-transformation",
+      "optionId": "a",
+      "correct": false,
+      "text": "赞扬涉及威望，却不能单凭拥护增加来分清保护与暴虐，仍须检查他怎样对待同胞及反对者。",
+      "textSha256": "564624e93aa3d0d02fe49dda41f46900242846c6c80873a5f4798726be8f30f4",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-protector-transformation--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.504,
+      "frames": 396,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 57024,
+      "sha256": "eb3a2f4f0ad0301bae44f04f8eabe5c05cbe2b8919ba536fb3599e930c528b31"
+    },
+    {
+      "key": "book8-protector-transformation--c",
+      "questionId": "book8-protector-transformation",
+      "optionId": "c",
+      "correct": false,
+      "text": "人数和讲话效果可以说明影响力，但都不能代替对保护者究竟做了什么的检查。",
+      "textSha256": "9ff007095e0f9320cc4a505e2bcd9fc36e82c3adf7dec4dfcaab5b588a9a1487",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book8-protector-transformation--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 7.92,
+      "frames": 330,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 47520,
+      "sha256": "942d3a74b2199dc1b64f5d9e148b50a8b3639cf16a2ac4b34b1a309f19f54117"
+    },
+    {
+      "key": "book9-origin-character-life--c",
+      "questionId": "book9-origin-character-life",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问明确本卷的三层任务：说明形成过程，考察性格，再判断生活是否幸福。外在权势和威严不能独自回答这些问题；接下来先补充欲望分析，正是为性格及生活的判断准备理由。",
+      "textSha256": "1d5d4eabdb5d71b0f9664c62b6d94a4c94298b1a543de8802313ab57ba890905",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-origin-character-life--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.264,
+      "frames": 761,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 109584,
+      "sha256": "4bd9ff3ca38307d1bc6ac0e6da9da64d87acdd5c65b9eb446c102b04947ff0c0"
+    },
+    {
+      "key": "book9-origin-character-life--a",
+      "questionId": "book9-origin-character-life",
+      "optionId": "a",
+      "correct": false,
+      "text": "财产、名声和人口提供外在比较，却尚未分清欲望怎样形成性格，以及这种性格怎样影响生活。",
+      "textSha256": "e960c8a89070474ebdf40529c6437301b99c59031b73801c3c1e1b3b3a720d92",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-origin-character-life--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.768,
+      "frames": 407,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 58608,
+      "sha256": "5bd6d81559d12afd1b9073e1ba4f8c1e584c2a7d7425f4b2d14a610219e6bee6"
+    },
+    {
+      "key": "book9-origin-character-life--b",
+      "questionId": "book9-origin-character-life",
+      "optionId": "b",
+      "correct": false,
+      "text": "旁观印象与政治支持值得了解，但不能代替对当事人心灵及幸福的考察，尤其容易把威严当作生活的答案。",
+      "textSha256": "f5caae37eeff4b8c2da1574d0b3b195ab477a9f542b9abf7aed69029c3d8e555",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-origin-character-life--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.608,
+      "frames": 442,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 63648,
+      "sha256": "da263089cd1e95cc828c702d0d6423f79cce17553c675c45a550ea598178be4f"
+    },
+    {
+      "key": "book9-desires-and-resources--a",
+      "questionId": "book9-desires-and-resources",
+      "optionId": "a",
+      "correct": true,
+      "text": "前文描述一种激情统摄其他欲望，原问进一步确认不断增加的满足需求。后文才考察财产耗尽、借贷和强取的情形；这是显明推论中的需求前提，而非从享乐表象直接判定幸福。",
+      "textSha256": "5a95d8874815a74afd87c38d00ceeb7a6781a11a4fecafc3628d58a354d13013",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-desires-and-resources--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.76,
+      "frames": 740,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 106560,
+      "sha256": "2a9d5c7fef406299fc6e00a605dbab59e61be69dcf36f9744aa33f322459040f"
+    },
+    {
+      "key": "book9-desires-and-resources--b",
+      "questionId": "book9-desires-and-resources",
+      "optionId": "b",
+      "correct": false,
+      "text": "强烈不等于必要，前文已经区分过必要与不必要的欲望；改变分类还未说明这些欲望提出了多少满足要求。",
+      "textSha256": "a9a847526a26faa88a948772f44cd1239359aec3e67d576a7b5e970c0a0dc834",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-desires-and-resources--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.792,
+      "frames": 408,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 58752,
+      "sha256": "dcba1cea4cd9d9026519f32e1cedaf0dc0729f6b8fe38499e27b38323725490f"
+    },
+    {
+      "key": "book9-desires-and-resources--c",
+      "questionId": "book9-desires-and-resources",
+      "optionId": "c",
+      "correct": false,
+      "text": "出现先后可以描述形成过程，却不能据此决定满足需求或排除后来欲望；这里需要说明它们对生活提出什么要求。",
+      "textSha256": "7b12cea04f851ceb6e822c87c33e87b1932c711bef87cdbbdc3d5849b4703020",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-desires-and-resources--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 11.136,
+      "frames": 464,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 66816,
+      "sha256": "dc357de0f0a78f4629bc95a7d0b766e1c02cdb83a7c979708eeab03efca3fb93"
+    },
+    {
+      "key": "book9-whole-city-freedom--b",
+      "questionId": "book9-whole-city-freedom",
+      "optionId": "b",
+      "correct": true,
+      "text": "前文要求观察整个城邦及个人的内在状况，原问因此询问整体自由而非统治者的威仪。随后仍须分清少数主人和受奴役的多数，并说明城邦与心灵的对应，不能把有权发令直接当成自由。",
+      "textSha256": "565ea497ed4ac1c5d2aa072f5dd664190346bd4111f2495e0c8929cf6e4528cf",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-whole-city-freedom--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.744,
+      "frames": 781,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 112464,
+      "sha256": "f53d130b9df890bc729f8f80db38f7e2c0a6552270ed8e59cae1832c0088ca51"
+    },
+    {
+      "key": "book9-whole-city-freedom--a",
+      "questionId": "book9-whole-city-freedom",
+      "optionId": "a",
+      "correct": false,
+      "text": "命令数量可以反映权力表现，但尚未判断整个城邦能否做自己真正想做的事，统治能力与整体自由须分开。",
+      "textSha256": "60a60cb94b4eebcb0c3ed9c60a5fd9ed4ab17ffc0c3d48184fc436839a6cc476",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-whole-city-freedom--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.68,
+      "frames": 445,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 64080,
+      "sha256": "17c2488453b802b02507667de6323760a4b93315033a55cb3995189993c1ec67"
+    },
+    {
+      "key": "book9-whole-city-freedom--c",
+      "questionId": "book9-whole-city-freedom",
+      "optionId": "c",
+      "correct": false,
+      "text": "随从的享受只是部分人的处境，不能独自代表国家整体；前文正要求不被统治者及少数随从的外表迷惑。",
+      "textSha256": "41cfee8a84b82df1722da06cb3a9e3d0b9d94d3b43d341ab37dc8fa96489c934",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-whole-city-freedom--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.416,
+      "frames": 434,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 62496,
+      "sha256": "04974893e329ba61670ed3a66b40af65831d0b8fbb8e7baf80ca584388b548ed"
+    },
+    {
+      "key": "book9-isolated-master--c",
+      "questionId": "book9-isolated-master",
+      "optionId": "c",
+      "correct": true,
+      "text": "普通主人不害怕奴隶，前文把这归于城邦保护。原问设想保留拥有物而拿掉这种保护，再问处境怎样；它帮助区分拥有与安全。神力迁移是条件设想，不是证明僭主处境的历史事实。",
+      "textSha256": "5abea32cb7dd02fadf72b3812564dbc0bccd407235b0bf8a53785207550b047a",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-isolated-master--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.624,
+      "frames": 776,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 111744,
+      "sha256": "d4dda4304a2941765d46e5c2cfad6a610c7bf40f1fbbb5801985d7765b5a2ce5"
+    },
+    {
+      "key": "book9-isolated-master--a",
+      "questionId": "book9-isolated-master",
+      "optionId": "a",
+      "correct": false,
+      "text": "财富和服务可说明所得，却没有检查城邦保护的作用，容易在未改变条件时把人数和拥有直接当作安全。",
+      "textSha256": "59f53520bce266138b7a710dd74f06bdf64152e25960dc81db40556eb9eec0b7",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-isolated-master--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.224,
+      "frames": 426,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 61344,
+      "sha256": "53713015cd2e66b7ea90ea61c9801f2293171794dabc7aae0f6db634a3aca0ad"
+    },
+    {
+      "key": "book9-isolated-master--b",
+      "questionId": "book9-isolated-master",
+      "optionId": "b",
+      "correct": false,
+      "text": "带走财物的比例可以考察损失，但即使财富与奴隶都带走了，外部救助的缺失仍是这里待检查的条件。",
+      "textSha256": "313149b845331c53c9b4d6dbe077ffb7e65f5f48900fabd58286837dec37500c",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-isolated-master--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.864,
+      "frames": 411,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59184,
+      "sha256": "e83f38f04a17ec473e1a32ed5b55816a2706b36e05ea83002cfe7c5f9b637e5d"
+    },
+    {
+      "key": "book9-judgment-criteria--a",
+      "questionId": "book9-judgment-criteria",
+      "optionId": "a",
+      "correct": true,
+      "text": "三种人各称自己的生活最快乐，仅重复各自偏好不能解决分歧。原问先提出可以共同检查的评判依据，再比较谁有相应经验与推理；哲学家的资格仍须后续理由支持，而非因为他的身份。",
+      "textSha256": "855be01006456e599fd3a946455f3a69e5f4bd813e4edfc6e3318c3c639aaa99",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-judgment-criteria--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.216,
+      "frames": 759,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 109296,
+      "sha256": "a1ccbca5e820c1e3499702de0582a181d4d265e84f54e92c66c38c2adc16d06e"
+    },
+    {
+      "key": "book9-judgment-criteria--b",
+      "questionId": "book9-judgment-criteria",
+      "optionId": "b",
+      "correct": false,
+      "text": "喜欢的人数能说明流行程度，却不能独自表明评价者能否比较三种快乐，判断资格仍需另外说明。",
+      "textSha256": "39d7034ed68d4bdc92ba4f1c41997ade95ef98d94c8614f47586dcf27c1110eb",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-judgment-criteria--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.936,
+      "frames": 414,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59616,
+      "sha256": "d35c7e608732c0e9d8a34ca4c2ae80b89df35fcaebfd6a3880b694b0b2538f27"
+    },
+    {
+      "key": "book9-judgment-criteria--c",
+      "questionId": "book9-judgment-criteria",
+      "optionId": "c",
+      "correct": false,
+      "text": "钱财和荣誉正是部分人偏爱的东西；直接拿它们排序，会先采用一方标准而尚未说明为何大家都应接受。",
+      "textSha256": "af7ea2040fe93a59a181a6657b228c1436c5580e0f1d1de84398532725d8ae36",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-judgment-criteria--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.344,
+      "frames": 431,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 62064,
+      "sha256": "702eaa3382ee2b64859c98079aa6e45a7a5581a7dcf8b75f326061e19ac8465d"
+    },
+    {
+      "key": "book9-relief-and-pleasure--b",
+      "questionId": "book9-relief-and-pleasure",
+      "optionId": "b",
+      "correct": true,
+      "text": "双方已经把平静列为非苦非乐的中间状态，后来却因比较起点不同把它称作苦或乐。原问检查这些说法能否同时按同一意义成立；这个辨析依赖本段采用的分类，不是否认摆脱痛苦的可贵。",
+      "textSha256": "fba8bcc59519590d6bfa8e0ee650e12534daa110b6d1ea6577c366edd09f2ab8",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-relief-and-pleasure--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.648,
+      "frames": 777,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 111888,
+      "sha256": "e093d619e65d048bb3764c4d99bf4075e3da8984bd0734788490846a2e24a510"
+    },
+    {
+      "key": "book9-relief-and-pleasure--a",
+      "questionId": "book9-relief-and-pleasure",
+      "optionId": "a",
+      "correct": false,
+      "text": "喜爱强度值得了解，却不能单独决定平静是否就是快乐；当前须核对同一状态为何被作出相反评价。",
+      "textSha256": "17c70d95a0955e3e729da1b59f328f95846019fc4575a6d9bfddce6875edd99c",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-relief-and-pleasure--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.96,
+      "frames": 415,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59760,
+      "sha256": "7e86cf8f3c2e0f4996ec9a05c6b44fc8913c1e8fcd8db61ba9409b987c16c4d5"
+    },
+    {
+      "key": "book9-relief-and-pleasure--c",
+      "questionId": "book9-relief-and-pleasure",
+      "optionId": "c",
+      "correct": false,
+      "text": "等待时间能描述期望，但没有检查无苦、无乐与平静的关系，因而未解决前后分类的冲突。",
+      "textSha256": "32c6353f79bf7ab78ac5f741310289e521634e86604073f25016fd1c47f9ef7c",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-relief-and-pleasure--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.784,
+      "frames": 366,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 52704,
+      "sha256": "629aab45038c6566911b89e288e6b82045854f4045529ae18fbe97315b936a9c"
+    },
+    {
+      "key": "book9-real-filling--c",
+      "questionId": "book9-real-filling",
+      "optionId": "c",
+      "correct": true,
+      "text": "前文以饥渴和无知说明两类空缺，原问不只说二者都能得到满足，还比较充实是否因对象不同而不同。后文须用不变与变化等前提说明何者更实在，不能由这个问法本身证明知识快乐最高。",
+      "textSha256": "c48849803d9d8667f1814810d9ba3bf35825c42821be57cab535b1e3d1dae15c",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-real-filling--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 19.032,
+      "frames": 793,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 114192,
+      "sha256": "a2c197f193f7144cbb724698fd6647f21a54f515d88e2b7014c4b3f2d573c6be"
+    },
+    {
+      "key": "book9-real-filling--a",
+      "questionId": "book9-real-filling",
+      "optionId": "a",
+      "correct": false,
+      "text": "时间和即时满足可以比较体验，却尚未检查充实的真实程度与所充实之物的关系，不能直接替代该标准。",
+      "textSha256": "97e54c4e22ef1542783847299514eff4ff39ed1194331fa8f7601bf6acb07b10",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-real-filling--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.32,
+      "frames": 430,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 61920,
+      "sha256": "deb5a80bfa2c746e21bcd11573669d94d3fa6b3f6db596993b4b456369c83d79"
+    },
+    {
+      "key": "book9-real-filling--b",
+      "questionId": "book9-real-filling",
+      "optionId": "b",
+      "correct": false,
+      "text": "费用可说明取得条件，但费用多少与充实是否真实并不是同一问题，二者的关系仍须另作说明。",
+      "textSha256": "399fbca702772197eb04845782d80a82248116aa4807cb49b7acf3f63c00e3e6",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-real-filling--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.504,
+      "frames": 396,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 57024,
+      "sha256": "88700552d37aee0f893a88320be79095ef57d43128854accf8957822e487e025"
+    },
+    {
+      "key": "book9-profit-and-inner-cost--a",
+      "questionId": "book9-profit-and-inner-cost",
+      "optionId": "a",
+      "correct": true,
+      "text": "原问接回有正义名声却行不义是否有利的挑战，同时考察得钱与心灵内部代价。它让利益判断不只计算外在所得；这种代价的说明依赖前面关于灵魂秩序的论证，不能仅靠怪兽比喻就算证明。",
+      "textSha256": "e1c4f0c1d37279ffd98da8e81d8e7b1ef4a94bd12ab4f48a7451984cce43906c",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-profit-and-inner-cost--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.96,
+      "frames": 790,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 113760,
+      "sha256": "ff9367931a7f638458cf1b1739092d6ed10cb99eb77043cacd605fe914c517b4"
+    },
+    {
+      "key": "book9-profit-and-inner-cost--b",
+      "questionId": "book9-profit-and-inner-cost",
+      "optionId": "b",
+      "correct": false,
+      "text": "所得多少可以核算外在利益，但没有考虑同一行为对心灵的作用；未被发现不能自动消除这项代价。",
+      "textSha256": "7f78382747daa2f6794a4791dfa98f6763519f75b1c22af57e674c646d05e36f",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-profit-and-inner-cost--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.6,
+      "frames": 400,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 57600,
+      "sha256": "8a3cd919045a5a13189d1424cf1de6f81d2d278c438e1a7c85acb6556744ee5a"
+    },
+    {
+      "key": "book9-profit-and-inner-cost--c",
+      "questionId": "book9-profit-and-inner-cost",
+      "optionId": "c",
+      "correct": false,
+      "text": "赞扬反映声誉，却仍是外在评价，尚未说明心灵最善部分受奴役是否使当事人的生活更好。",
+      "textSha256": "d8e644d80959d8c44e41eab7c15d92d413135a8568d3a5e408eda475d052becf",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book9-profit-and-inner-cost--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.072,
+      "frames": 378,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 54432,
+      "sha256": "ba88c83f816bdc43926ff23fb18857ff4be5320aadb87a8a7bc4dc783e289149"
+    },
+    {
+      "key": "book10-imitation-definition--b",
+      "questionId": "book10-imitation-definition",
+      "optionId": "b",
+      "correct": true,
+      "text": "苏格拉底先承认自己敬爱荷马，又提出模仿可能影响心灵。原问把讨论转到模仿究竟是什么，使评价需要对象和理由；后面的分析仍须支持危害主张，敬爱或批评作者都不能代替论证。",
+      "textSha256": "2610f167da7d1c90d79eda34d77ac9aabdd9189f88b71a3bf6b142ae9b37ff39",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-imitation-definition--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.576,
+      "frames": 774,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 111456,
+      "sha256": "6bf7d9096f4d4f9b735b1aacab293c35feda55cbe5ba20f87110135a777118c1"
+    },
+    {
+      "key": "book10-imitation-definition--a",
+      "questionId": "book10-imitation-definition",
+      "optionId": "a",
+      "correct": false,
+      "text": "动听与否可以考察艺术效果，但没有说明模仿是什么，尚不足以检验它是否有前文所说的影响。",
+      "textSha256": "8b1894308f58426354f6f5a750d13a48b93a329dea2a7de2169999350317f49d",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-imitation-definition--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.288,
+      "frames": 387,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 55728,
+      "sha256": "c95bd7424afd7e8d68bed720dc177b8e99deffeb33610dba72badedb9e8e9e44"
+    },
+    {
+      "key": "book10-imitation-definition--c",
+      "questionId": "book10-imitation-definition",
+      "optionId": "c",
+      "correct": false,
+      "text": "喜好可以说明接受情况，但同样没有界定模仿，不能仅凭受欢迎就回答它对心灵是否有益。",
+      "textSha256": "c7b1136a8c9a2c08be029b68953e6322e6132f3e127d283f82c5a5f61ba72fd8",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-imitation-definition--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 8.88,
+      "frames": 370,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 53280,
+      "sha256": "83145945fdfb6500934708f59153e20ff0397fc959e23a61474d4cf4c1468852"
+    },
+    {
+      "key": "book10-imitation-object--c",
+      "questionId": "book10-imitation-object",
+      "optionId": "c",
+      "correct": true,
+      "text": "前文把同一张床的不同外观与床本身区分开。原问据此追问画家模仿哪一层，使影像与真实不只成为标签。结论依赖本段的层次区分，并不单由看出外观差别就判定所有绘画没有价值。",
+      "textSha256": "c487346f021b3825c4bb8633c38207c3384921591c88933ad8383311bcabf362",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-imitation-object--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.408,
+      "frames": 767,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 110448,
+      "sha256": "aa04e33a1b735e0fff1b56d086c1f03e75f6b45161374b6e08ac6dea627ea02f"
+    },
+    {
+      "key": "book10-imitation-object--a",
+      "questionId": "book10-imitation-object",
+      "optionId": "a",
+      "correct": false,
+      "text": "画面角度影响表现，却还没有分清改变的是对象自身还是外观；观者喜欢哪种角度不能替代这项区分。",
+      "textSha256": "7109205bf505d8e494d1f5bbae420eef06668c14f1b2c79a3a93dac32dfa18d6",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-imitation-object--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.96,
+      "frames": 415,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59760,
+      "sha256": "f447d1695ba28d69c5274218de4a760d9239714ed8bcf4d166aa81ffa059016c"
+    },
+    {
+      "key": "book10-imitation-object--b",
+      "questionId": "book10-imitation-object",
+      "optionId": "b",
+      "correct": false,
+      "text": "颜色与记忆关系到画面效果，但尚未检验模仿所依据的对象是什么，表现方法与认识对象须分开。",
+      "textSha256": "5f32e295f38c3fc178f3d7e192103f5a4c2aaa0c39aa6191895dcb5bb482b1e5",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-imitation-object--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.888,
+      "frames": 412,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59328,
+      "sha256": "9937acaee2a7d152168d4692c8322036f6398c3972ea75b1c620bef962bbf4bb"
+    },
+    {
+      "key": "book10-imitation-and-knowledge--a",
+      "questionId": "book10-imitation-and-knowledge",
+      "optionId": "a",
+      "correct": true,
+      "text": "使用者因使用而有经验，制造者在听从使用者时可有正确意见。原问分别检查模仿者是否具备这两条根据，不把画得像等同于知道用途；作者对所有模仿者的概括仍需这些论证前提支持。",
+      "textSha256": "f1056d9a7bf79570ac57fe07b783ca1c301bd85950b1784320baec43d4ba9c28",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-imitation-and-knowledge--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.792,
+      "frames": 783,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 112752,
+      "sha256": "e11d6b453943ab62e68e58eadb59fbf74d9101cee15f2e13f670795cf73b5c84"
+    },
+    {
+      "key": "book10-imitation-and-knowledge--b",
+      "questionId": "book10-imitation-and-knowledge",
+      "optionId": "b",
+      "correct": false,
+      "text": "相像与赞扬可以评价某种表现能力，却不能独自说明器具为何正确，作品效果和判断根据仍是两项考察。",
+      "textSha256": "a2b95fee2fe73989ea691889542ee4f6ec80af7574d1ee692f27b1f45ca31559",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-imitation-and-knowledge--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.704,
+      "frames": 446,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 64224,
+      "sha256": "c96f0efdbd9afd8012e93f0dfda8a53b49eefd82a6843834633c99838427c13e"
+    },
+    {
+      "key": "book10-imitation-and-knowledge--c",
+      "questionId": "book10-imitation-and-knowledge",
+      "optionId": "c",
+      "correct": false,
+      "text": "数量与时间反映熟练或投入，但不能单凭画得多来确认有使用经验或正确意见，知识根据仍未建立。",
+      "textSha256": "23ba456b75d1d22fd4e71f50b4acbea5ffbbc8f291d1a145b9a8cd50936a75bb",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-imitation-and-knowledge--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.648,
+      "frames": 402,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 57888,
+      "sha256": "4cfa6db511096c78f0e7be505d0f5472739e8ce755f02c84cf6a22998ed63e1c"
+    },
+    {
+      "key": "book10-poetry-return--b",
+      "questionId": "book10-poetry-return",
+      "optionId": "b",
+      "correct": true,
+      "text": "前文允许诗证明自己对有秩序的生活有益，原问再检查它能否据此回来。这样的条件使结论有重新审查的入口，随后也允许爱诗者用散文辩护；它不把喜爱诗本身当成充分理由。",
+      "textSha256": "bbbd2a766367fee14edc42f7a09d04f32261893ad194cd9b1efcfb29341aa146",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-poetry-return--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.376,
+      "frames": 724,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 104256,
+      "sha256": "729ea6b2a852b74f7599a782ae52c32d1349d7b3a05a5e2e81b7d1233b6a5057"
+    },
+    {
+      "key": "book10-poetry-return--a",
+      "questionId": "book10-poetry-return",
+      "optionId": "a",
+      "correct": false,
+      "text": "悦耳关系到诗的吸引力，但没有回应有益的论证要求，决定是否回来仍需要检查它能提出怎样的理由。",
+      "textSha256": "b04aea05d20f6d8c116a32494448d43ac0e793aeb0ae92e12bfacb0019118c06",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-poetry-return--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.384,
+      "frames": 391,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 56304,
+      "sha256": "f6861b9398b22e1c068261296b73077fa1b9a94a76a4e7d73a59b980e07e5eeb"
+    },
+    {
+      "key": "book10-poetry-return--c",
+      "questionId": "book10-poetry-return",
+      "optionId": "c",
+      "correct": false,
+      "text": "喜爱是这段承认的困难，却不能代替诗对自身益处的说明；受欢迎与论证成立仍需分开。",
+      "textSha256": "083916234b02c48a91200827e596ed77d402e84da898e50c3605624275ba09c6",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-poetry-return--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.048,
+      "frames": 377,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 54288,
+      "sha256": "861e6131e9c27882ffc7252007156c2974b264ada550f3735fb2356aa616987a"
+    },
+    {
+      "key": "book10-time-horizon--c",
+      "questionId": "book10-time-horizon",
+      "optionId": "c",
+      "correct": true,
+      "text": "原问先检查不朽事物应按怎样的时间范围考察，随后格劳孔追问不朽的对象，论证才转到灵魂。这不是已经证成灵魂不死；其作用是显明扩大时间尺度所依赖的条件，并提出证明任务。",
+      "textSha256": "61614bd397a7add5683d0b5f4c365676079c396a74771b78bf90b5feecff25b2",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-time-horizon--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.192,
+      "frames": 758,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 109152,
+      "sha256": "83211712dd065aaa63101aac71b0efec242e761225e0e4b2f0c98fc26e8b215d"
+    },
+    {
+      "key": "book10-time-horizon--a",
+      "questionId": "book10-time-horizon",
+      "optionId": "a",
+      "correct": false,
+      "text": "某几年的感受可以观察，却不能在未说明范围时代表全部生活；当前需要澄清时间尺度及所谈对象。",
+      "textSha256": "df008e73c88b5ccb66c5c5344b74e9058f819f3124fc2f7572c187a7c39c865d",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-time-horizon--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.96,
+      "frames": 415,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59760,
+      "sha256": "67ef4ff1f928b8a3b09c82c357b802e7a16d9bc4549cbcc8c4b2e6358a9c89e0"
+    },
+    {
+      "key": "book10-time-horizon--b",
+      "questionId": "book10-time-horizon",
+      "optionId": "b",
+      "correct": false,
+      "text": "称赞数量能说明评价，但未回答为什么要扩大观察时间，不能代替关于对象是否不朽的论证任务。",
+      "textSha256": "f2e4a4db734d96d8b3ea78613389d23c41260d461774f4f3715bc37a480d6441",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-time-horizon--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.288,
+      "frames": 387,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 55728,
+      "sha256": "4785874bec2714393646d3fbc2d8962376dba8ad7eea6599f9532b4735b96e36"
+    },
+    {
+      "key": "book10-soul-destruction--a",
+      "questionId": "book10-soul-destruction",
+      "optionId": "a",
+      "correct": true,
+      "text": "前文要求区分不正义本身的作用与被人捉住处刑，原问因此检查内在的恶是否会毁灭灵魂。身体和灵魂的对应及特有恶的原则仍是论证前提，不能把排除一个混淆当作独立证明不死。",
+      "textSha256": "b0bc19eb68f6e2d37667ae97289c69b749e84c8192dff6f74064a0493daf7c13",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-soul-destruction--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 17.736,
+      "frames": 739,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 106416,
+      "sha256": "fb1f05ef85643e9f0465246514e31ef232914f23e6d35d9eec7b7466235ff111"
+    },
+    {
+      "key": "book10-soul-destruction--b",
+      "questionId": "book10-soul-destruction",
+      "optionId": "b",
+      "correct": false,
+      "text": "惩罚和死亡有因果关联，但还未说明外来的杀害与灵魂自身的恶怎样不同，身体死亡不能直接回答灵魂问题。",
+      "textSha256": "ba508a84f4b690ffcea00c7499d4a0125e16fccdf51dc4fbf0f027c4158166c6",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-soul-destruction--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 10.632,
+      "frames": 443,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 63792,
+      "sha256": "667ab441425f43e79c97fe72fdbf49a426c400216bacc16d0b77408c2505258f"
+    },
+    {
+      "key": "book10-soul-destruction--c",
+      "questionId": "book10-soul-destruction",
+      "optionId": "c",
+      "correct": false,
+      "text": "损失可说明一种后果，却不是灵魂自身是否崩解的判据；这里的毁灭含义及其原因仍须先分清。",
+      "textSha256": "049ce7a06b412b706531fdf59c57a30e4f231ff44e7e3a7c45013957a78746ea",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-soul-destruction--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.24,
+      "frames": 385,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 55440,
+      "sha256": "af8217c21e766fc8ba112f477d54cde4e180a0ebb5f04331fb6a8d8a0dc35717"
+    },
+    {
+      "key": "book10-rewards-restored--b",
+      "questionId": "book10-rewards-restored",
+      "optionId": "b",
+      "correct": true,
+      "text": "本身是否有益这一任务在对话中被认为已完成，原问才要求重新加入报酬，随后回顾正义者可被误认不义的暂时让步。它澄清讨论程序，不是用回报代替此前证明，也不独自证成人神必给报酬。",
+      "textSha256": "23b818ea528bacb4c09babbb33f08ab428819a7544cffd226638816fa61f4d07",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-rewards-restored--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.768,
+      "frames": 782,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 112608,
+      "sha256": "afb4470e62857fb009e831cc6c7b5802bd0168eeadd1d1c8e7bb9ef17af3453d"
+    },
+    {
+      "key": "book10-rewards-restored--a",
+      "questionId": "book10-rewards-restored",
+      "optionId": "a",
+      "correct": false,
+      "text": "赞扬属于外在回报，不能倒过来替代先前单独考察正义本身的任务，二者在讨论中有不同位置。",
+      "textSha256": "c780d82656a70cffbbf0454877a9af6671931f51c690e6e836b2a37d58e24629",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-rewards-restored--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.432,
+      "frames": 393,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 56592,
+      "sha256": "936820c1b7149788c994e1bc877af9f88a0109ee69a4ae07a59a19cd5f07909d"
+    },
+    {
+      "key": "book10-rewards-restored--c",
+      "questionId": "book10-rewards-restored",
+      "optionId": "c",
+      "correct": false,
+      "text": "报酬数量不是正义的定义，按所得直接命名会混淆行为性质与回报，未回应先前的名实错位设想。",
+      "textSha256": "1192aa45dbcd323caedbd8fd3c832e855439b413ef5353e7a5ed752b92ec60a9",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-rewards-restored--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.48,
+      "frames": 395,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 56880,
+      "sha256": "1bb01b200aecd549bdb19e30f0eee6387de22c5a8cce7d316f8fc32d2cbd7a97"
+    },
+    {
+      "key": "book10-human-rewards--c",
+      "questionId": "book10-human-rewards",
+      "optionId": "c",
+      "correct": true,
+      "text": "前面依双方接受的神观说明神的照顾，原问转而另查人间，后文以跑完全程的比赛作比。区分来源能避免照搬理由；关于最后终获荣誉的说法仍是本段主张，不等于现实中每个正义者都必得奖赏。",
+      "textSha256": "d3ef7c69965ce0336db6bc0cb270442269a293569a7db67b9c0cffdb99817335",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-human-rewards--c.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 18.936,
+      "frames": 789,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 113616,
+      "sha256": "5172e05928a28ed8598b908264cf0caf9df1b7a8c9f99aa2f26dd5c87e4ecf1e"
+    },
+    {
+      "key": "book10-human-rewards--a",
+      "questionId": "book10-human-rewards",
+      "optionId": "a",
+      "correct": false,
+      "text": "神的评价与人的认识是不同条件，前者不能直接保证后者，此处还需要另考察人间怎样判断和回报。",
+      "textSha256": "7783554a328d1179005a7eef20b400c3888f41717766c5b88fcf8089cf5cd213",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-human-rewards--a.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.864,
+      "frames": 411,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 59184,
+      "sha256": "2bda5417b4219b753d3998a202cc1541482fe6fb12b5fe006a4b92b777576163"
+    },
+    {
+      "key": "book10-human-rewards--b",
+      "questionId": "book10-human-rewards",
+      "optionId": "b",
+      "correct": false,
+      "text": "称赞可表明外在名声，却不能用人数多少决定正义本身，前面正是把这些不同因素暂时分开来检验。",
+      "textSha256": "05263a95d8c6d0c88639fe4da4c1ab2e02f41e79c6ab8623f299f0e4b3c95ff2",
+      "voice": "zh-CN-XiaoxiaoNeural",
+      "rate": "-3%",
+      "filename": "book10-human-rewards--b.mp3",
+      "mimeType": "audio/mpeg",
+      "durationSeconds": 9.768,
+      "frames": 407,
+      "sampleRates": [
+        24000
+      ],
+      "bytes": 58608,
+      "sha256": "862723bbd40e53aa6180ad137785357b7e21542aa06b997bca2712e05c342aa4"
     }
   ],
   "decodeQA": {
     "status": "passed",
-    "decoded": 141,
+    "decoded": 285,
     "decoder": "Chrome AudioContext",
-    "shortestSeconds": 6.672,
-    "longestSeconds": 18.888,
-    "minimumRms": 0.09612181948663524,
+    "shortestSeconds": 6.624,
+    "longestSeconds": 19.032,
+    "minimumRms": 0.09501975113851126,
     "note": "Every MP3 decoded successfully with a non-silent waveform. This is not a claim of human listening or word-by-word pronunciation transcription."
   }
 }

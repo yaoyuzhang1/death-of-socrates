@@ -34,6 +34,18 @@ const backgrounds: Record<string, string> = {
   education: '众人仍围坐在原处，谈话进入护卫者的培养问题。文中提到的故事、职业与活动不是新的现场。',
   guardians: '众人仍在玻勒马霍斯家中。关于卫士和城邦的讨论由在场的朋友继续接话。',
   soul: '仍是同一次聚谈。苏格拉底与格劳孔交替发问、应答，其他友人在旁。',
+  community: '聚谈仍在玻勒马霍斯家中。朋友们要求补充共同生活的安排，谈话暂缓了原先的政制话题。',
+  philosophers: '众人仍在同一处聚谈。哲学家与城邦的关系是讨论对象，人物并未来到另一座城邦。',
+  'philosopher-city': '苏格拉底与阿得曼托斯继续讨论哲学的性格及其在现实城邦中的处境。船与掌舵是谈话中的比喻。',
+  good: '聚谈仍在原处。太阳、线段及可见与可知事物，是苏格拉底用于说明认识关系的比喻与区分。',
+  cave: '人物仍在家中谈话。洞穴是苏格拉底设想的比喻，不是对话者已经走入的新场景。',
+  dialectic: '苏格拉底与格劳孔接着讨论学习次序和辩证训练，文中列举的学习活动是教育构想的内容。',
+  regimes: '仍是同一次聚谈。不同政制与相应的个人性格被并置考察，众人没有移往这些城邦。',
+  democracy: '苏格拉底与阿得曼托斯继续比较政制和人的欲望。文中的自由、领袖和僭主是讨论的对象。',
+  tyrant: '谈话仍在原处。僭主式的人与实际取得统治权的僭主，分别接受生活与灵魂的考察。',
+  pleasure: '苏格拉底与格劳孔从不同生活转向快乐与判断的比较，其他朋友仍在旁听。',
+  imitation: '聚谈进入第十卷，重新讨论诗与摹仿。床、画作、诗歌和剧场是论证中的例子。',
+  destiny: '苏格拉底在同一次聚谈中继续讲述灵魂、报偿与厄尔故事。故事中的地点不同于人物实际谈话的地点。',
 };
 
 export function getReadingContext(unit: ReadingUnit, page: ReadingPage, roles: Map<string, PassageRole>): DialogueContext {
@@ -51,8 +63,8 @@ export function getReadingContext(unit: ReadingUnit, page: ReadingPage, roles: M
   const currentPosition = chapterPassages.findIndex(paragraph => paragraph.id === (lastId ?? unit.question?.original.id));
   const departurePosition = chapterPassages.findIndex(paragraph => paragraph.id === 'p-0045');
   const cephalusPresent = unit.chapter.id === 'obligations' && !harbor && departurePosition >= 0 && currentPosition >= 0 && currentPosition < departurePosition;
-  let defaults = chapterPeople[unit.chapter.id] ?? ['苏格拉底'];
-  let background = backgrounds[unit.chapter.id];
+  let defaults = chapterPeople[unit.chapter.id] ?? ['苏格拉底', '格劳孔'];
+  let background = backgrounds[unit.chapter.id] ?? '众人仍在玻勒马霍斯家中继续同一次聚谈。文中构想与比喻的场景是讨论内容。';
   if (harbor) {
     defaults = ['苏格拉底', '格劳孔', '玻勒马霍斯', '阿得曼托斯'];
     background = '苏格拉底与格劳孔参加祭会后准备回城，途中遇见了前来挽留他们的朋友。';

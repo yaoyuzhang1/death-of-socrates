@@ -9,17 +9,18 @@ const read=(path:string)=>JSON.parse(readFileSync(new URL(`../${path}`,import.me
 const corpus:Corpus=read('reader-public/text/republic.json');
 const coverage=read('reader-public/text/coverage.json');
 const source=read('content/source/guo-1986-pages.json');
-const drafts=[1,2,3,4].flatMap(b=>read(`content/questions/book${b}.json`));
+const drafts=Array.from({length:10},(_,i)=>i+1).flatMap(b=>read(`content/questions/book${b}.json`));
 const units=flattenCorpus(corpus);
 const compact=(text:string)=>text.replace(/\s/g,'');
 const textOf=(list:typeof units)=>list.flatMap(u=>[...u.paragraphs,...(u.question?[u.question.original]:[]),...u.response]).map(p=>p.text).join('');
-test('All 176 source pages reach the reader once and in order, including uninterrupted cross-page speeches',()=>{
+test('All 426 source pages reach the reader once and in order, including uninterrupted cross-page speeches',()=>{
  const text=source.pages.flatMap((p:any)=>p.paragraphs.map((r:any)=>r.text)).join('');
  assert.equal(compact(textOf(units)),compact(text));
- assert.deepEqual(source.pages.map((p:any)=>p.printedPage),Array.from({length:176},(_,i)=>i+1));
+ assert.deepEqual(source.pages.map((p:any)=>p.printedPage),Array.from({length:426},(_,i)=>i+1));
  assert.deepEqual(coverage.printedPages,source.pages.map((p:any)=>p.printedPage));
  assert.equal(coverage.sha256,createHash('sha256').update(compact(text)).digest('hex'));
- assert.equal(coverage.pageCount,176);
+ assert.equal(coverage.pageCount,426);
+ assert.deepEqual([...new Set(source.pages.map((p:any)=>p.book))],Array.from({length:10},(_,i)=>i+1));
  assert.match(textOf(units),/克法洛斯/);
  assert.match(textOf(units),/阿得曼托斯/);
  assert.match(textOf(units),/郭斌和|苏格拉底/);
@@ -35,7 +36,7 @@ test('Every exercise quotes its verified source question and gives immediate, re
  assert.equal(new Set(paragraphs.map(p=>p.id)).size,paragraphs.length);
  assert.equal(new Set(units.map(u=>u.id)).size,units.length);
  const questions=units.flatMap(u=>u.question?[u.question]:[]);
- assert.equal(questions.length,47);
+ assert.equal(questions.length,95);
  assert.equal(questions.length,drafts.length);
  assert.equal(coverage.questionCount,questions.length);
  assert.equal(new Set(questions.map(q=>q.id)).size,questions.length);
@@ -51,7 +52,8 @@ test('Every exercise quotes its verified source question and gives immediate, re
   assert.equal(q.prompt,'下面哪句话更像一个好问题？',q.id);
   assert.equal(q.hint,'',q.id);
  }
- assert.deepEqual(corpus.chapters.map(c=>c.id),['obligations','rule','life','worth','city','education','guardians','soul']);
+ assert.deepEqual(corpus.chapters.slice(0,8).map(c=>c.id),['obligations','rule','life','worth','city','education','guardians','soul']);
+ assert.equal(corpus.chapters.length,20);
  assert.ok(corpus.chapters.every(c=>units.some(u=>u.chapter.id===c.id&&u.question)));
  assert.ok(corpus.chapters.every(c=>c.introduction===''&&c.conclusion===''));
  for(const id of ['book3-conceded-conclusion','book3-song-words-standard','book3-letters-and-images','book3-testing-convictions','book4-city-limit'])assert.ok(!questions.some(q=>q.id===id));
@@ -103,7 +105,7 @@ test('Cross-page passages expose each source page without duplicating the text',
  for(const p of passages.filter(p=>p.sourcePages)) {
   assert.equal(p.sourcePages![0],p.sourcePage);
   assert.equal(new Set(p.sourcePages).size,p.sourcePages!.length);
-  for(const page of p.sourcePages!) assert.ok(page>=1&&page<=176);
+  for(const page of p.sourcePages!) assert.ok(page>=1&&page<=426);
  }
 });
 test('Every source question can be corrected after an initial mistake without changing the complete journey',()=>{
@@ -149,8 +151,8 @@ test('The full short-page journey reaches every source page and question with co
   save=advance(save,units);
   assert.ok(validateSave(save,corpus),unit.id);
  }
- assert.equal(save.completed,53);
- assert.equal(save.resolved.length,47);
+ assert.equal(save.completed,units.length);
+ assert.equal(save.resolved.length,95);
  assert.equal(body.join(''),textOf(units));
 });
 test('Original book facsimiles remain complete and game illustrations and audio stay in separate asset directories',()=>{
@@ -159,7 +161,7 @@ test('Original book facsimiles remain complete and game illustrations and audio 
  assert.ok(audio.every(n=>/^audio[\\/]/.test(n)));
  const images=names.filter(n=>/\.(png|jpg|jpeg|webp)$/i.test(n));
  const facsimiles=images.filter(n=>/^facsimile[\\/]/.test(n));
- assert.equal(facsimiles.length,176);
+ assert.equal(facsimiles.length,426);
  assert.ok(facsimiles.every(n=>/^facsimile[\\/]page-\d{3}\.webp$/.test(n)));
  assert.ok(images.every(n=>/^facsimile[\\/]|^illustrations[\\/]/.test(n)));
  assert.ok(!JSON.stringify(corpus).includes('voice-manifest'));

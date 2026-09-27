@@ -12,10 +12,10 @@ export function stopCelebration() {
   if (current) { current.onended = null; current.onerror = null; current.pause(); current.removeAttribute('src'); current.load(); current = null; }
   publish({ status: 'idle' });
 }
-export function playCelebration() {
+export function playCelebration(kind: 'full' | 'milestone' = 'full') {
   stopCelebration();
   const token = generation;
-  const audio = new Audio(`${import.meta.env.BASE_URL}audio/completion/completion.mp3`);
+  const audio = new Audio(`${import.meta.env.BASE_URL}audio/completion/${kind === 'milestone' ? 'milestone' : 'completion'}.mp3`);
   current = audio; audio.volume = .85;
   const failure = () => { if (generation === token) publish({ status: 'error', message: '点击“播放祝贺”可以重试。' }); };
   audio.onended = () => { if (generation === token) publish({ status: 'idle' }); };

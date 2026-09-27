@@ -1,5 +1,7 @@
 # 阅读场景插图
 
+2026-09-27全书扩展：主篇现62幅、隐藏章12幅。新增航船与洞穴漫画使用内置图像生成，源PNG在本地保留，公开资源作WebP格式转换；两张均已目视检查。完整制作提示、正文锚点及图片路径见[fullbook-scenes.json](../content/art/fullbook-scenes.json)。后六卷的现场谈话继续使用同一聚谈的镜头轮换，图景只进入已引入它的正文页，不用漫画提示追问题的答案。每次翻页换图不代表每页制作了独有原画。
+
 ## 当前版本：随正文推进的漫画
 
 在首批9幅的基础上，使用内置image_gen工具新增51幅原创彩色漫画，逐幅生成独立构图。最终WebP文件保存在`reader-public/illustrations/progression/`；原始PNG保存在本地`.local/art-originals/progression/`。所有画面延续已有角色和赭色、陶土色、灰蓝色的墨线画风，生成后的图像仅作WebP格式编码。

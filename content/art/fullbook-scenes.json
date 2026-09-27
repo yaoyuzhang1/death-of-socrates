@@ -1,0 +1,36 @@
+[
+  {
+    "id": "fullbook-cave",
+    "chapterId": "cave",
+    "sectionIds": [
+      "cave-opening"
+    ],
+    "sourceStart": "p-2847",
+    "sourceEnd": "p-2852",
+    "kind": "example",
+    "alt": "谈话中的洞穴图景：囚徒面向墙上阴影，身后矮墙上的器物在火光前经过。",
+    "file": "illustrations/progression/fullbook-cave.webp",
+    "focalY": 45,
+    "prompt": "Use case: illustration-story. A new wide single-panel mature color graphic-novel visualization of the cave described in Republic VII 514a. Fine ink lines, muted warm ochre, terracotta and teal, subtle paper grain, natural adult anatomy, 16:9. Three restrained adult prisoners in foreground left facing shadows on the front cave wall. BEHIND the prisoners is an elevated walkway with a low partition wall, carriers pass with objects held above the wall. The fire is BEHIND the walkway and carriers, casting object shadows forward onto the wall in front of the prisoners. Preserve this spatial order. Quiet ancient interior, no violence, no modern objects, no text, labels, speech bubbles, logos or watermark. No philosophers enter this imagined scene.",
+    "generator": "Built-in imagegen",
+    "originalLocalFile": ".local/art-originals/fullbook-cave.png",
+    "formatConversion": "RGB WebP, quality 90, method 6; no scene edits or cropping"
+  },
+  {
+    "id": "fullbook-ship",
+    "chapterId": "philosopher-city",
+    "sectionIds": [
+      "philosopher-city-opening"
+    ],
+    "sourceStart": "p-2514",
+    "sourceEnd": "p-2514",
+    "kind": "example",
+    "alt": "谈话中的航船图景：水手争夺掌舵，船主被围住，真正的领航者在一旁研究星空。",
+    "file": "illustrations/progression/fullbook-ship.webp",
+    "focalY": 45,
+    "prompt": "Use case: illustration-story. A new wide single-panel mature color graphic-novel visualization of the ship described in Republic VI 488a. Fine ink, restrained warm ochre and terracotta, muted teal sea and twilight shadows, natural anatomy, 16:9. On an ancient wooden Greek ship, adult sailors argue and struggle over an ancient steering oar beside a large confused ship-owner. At far right, an ignored quiet navigator studies the stars and a simple ancient map. Historical materials, attentive expressions, no modern ship wheel, pirate weapons, philosophers travelling in the scene, text, labels, speech bubbles, logos or watermark.",
+    "generator": "Built-in imagegen",
+    "originalLocalFile": ".local/art-originals/fullbook-ship.png",
+    "formatConversion": "RGB WebP, quality 90, method 6; no scene edits or cropping"
+  }
+]

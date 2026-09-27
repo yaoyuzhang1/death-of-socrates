@@ -10,8 +10,9 @@ import type { LearningCheckData } from '../src/reader/learning.ts';
 type AnchoredCheck = LearningCheckData & { chapterId: string; pageId: string; sourceIds: string[] };
 const read = (path: string) => JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), 'utf8'));
 const corpus: Corpus = read('reader-public/text/republic.json');
-const checks: AnchoredCheck[] = read('content/learning/checks.json');
-const units = flattenCorpus(corpus);
+// Keep the published eight-chapter regression checks distinct from the appended books.
+const checks: AnchoredCheck[] = read('content/learning/checks.json').filter((check: AnchoredCheck) => !check.id.startsWith('learn-full-'));
+const units = flattenCorpus(corpus).filter(unit => unit.chapterIndex < 8);
 const pages = units.flatMap(unit => makeReadingPages(unit).map(page => ({ ...page, chapterId: unit.chapter.id })));
 const core = units.flatMap(unit => unit.question ? [unit.question] : []);
 
@@ -117,10 +118,10 @@ function longestGap(chapterId: string, includeChecks: boolean) {
 }
 
 test('All chapters get contextual pauses while long fourth and sixth chapter gaps are filled proportionally', () => {
-  const counts = corpus.chapters.map(chapter => checks.filter(check => check.chapterId === chapter.id).length);
+  const counts = corpus.chapters.slice(0,8).map(chapter => checks.filter(check => check.chapterId === chapter.id).length);
   assert.deepEqual(counts, [2, 4, 2, 5, 2, 13, 6, 4]);
   assert.ok(new Set(counts).size > 3, 'allocation must reflect reading load rather than eight equal quotas');
-  for (const chapter of corpus.chapters) {
+  for (const chapter of corpus.chapters.slice(0,8)) {
     const before = longestGap(chapter.id, false), after = longestGap(chapter.id, true);
     assert.ok(after.maxChars <= 1900, `${chapter.id}: ${after.maxChars} unbroken characters`);
     assert.ok(after.maxPages <= 5, `${chapter.id}: ${after.maxPages} unbroken text pages`);
