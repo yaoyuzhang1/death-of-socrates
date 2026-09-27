@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { Expand, X } from 'lucide-react';
 import manifest from '../../reader-public/illustrations/manifest.json';
 import { stopFeedback } from './feedback-audio.ts';
@@ -27,14 +27,17 @@ export default function ComicScene({ chapterId, pageId, nextPageId, compact = fa
 export function SceneImage({ assetId, scene, compact }: { assetId: string; scene: Scene; compact: boolean }) {
   const [failed, setFailed] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const captionId = useId();
   const trigger = useRef<HTMLButtonElement>(null);
   const imageUrl = `${import.meta.env.BASE_URL}illustrations/${scene.file}`;
-  return <figure className={`comic-scene${compact ? ' comic-scene-compact' : ''}`} data-scene-id={assetId} data-scene-kind={scene.kind} style={{ '--comic-focal-y': `${scene.focalY}%` } as CSSProperties}>
-    {failed ? <div className="comic-scene-fallback"><span>{scene.alt}</span></div> : <button ref={trigger} type="button" className="comic-scene-open" aria-label="放大场景插图" onClick={() => setExpanded(true)}>
+  return <figure className={`comic-scene${compact ? ' comic-scene-compact' : ''}`} data-scene-id={assetId} data-scene-kind={scene.kind}>
+    {failed ? <div className="comic-scene-fallback"><span>{scene.alt}</span></div> : <button ref={trigger} type="button" className="comic-scene-open" aria-label="放大场景插图" aria-describedby={captionId} onClick={() => setExpanded(true)}>
       <img src={imageUrl} alt={scene.alt} width={1672} height={941} decoding="async" onError={() => setFailed(true)} />
-      <span className="comic-scene-expand" aria-hidden="true"><Expand size={15} /></span>
+      <span className="comic-scene-footer">
+        <span id={captionId}>{scene.kind === 'example' ? '谈话中的图景' : '场景插图'}</span>
+        <span className="comic-scene-expand" aria-hidden="true"><Expand size={15} />查看大图</span>
+      </span>
     </button>}
-    {scene.kind === 'example' && <figcaption className="comic-scene-caption">谈话中的图景</figcaption>}
     {expanded && <SceneDialog imageUrl={imageUrl} alt={scene.alt} onClose={() => setExpanded(false)} trigger={trigger.current} />}
   </figure>;
 }
@@ -59,6 +62,6 @@ function SceneDialog({ imageUrl, alt, onClose, trigger }: { imageUrl: string; al
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) onClose();
   }}>
     <div className="comic-scene-dialog-top"><span>场景插图</span><button type="button" className="icon-button" autoFocus aria-label="关闭插图，继续阅读" onClick={onClose}><X size={21} /></button></div>
-    <img src={imageUrl} alt={alt} width={1672} height={941} />
+    <div className="comic-scene-dialog-stage"><img src={imageUrl} alt={alt} width={1672} height={941} /></div>
   </dialog>;
 }

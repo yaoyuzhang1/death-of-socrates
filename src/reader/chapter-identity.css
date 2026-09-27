@@ -1,9 +1,8 @@
 .chapter-guide.chapter-identity,.chapter-recap.chapter-identity{padding:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden;box-shadow:0 7px 22px #18281808;margin:0 0 26px}
-.chapter-identity-art{height:220px;margin:0;position:relative;overflow:hidden;background:var(--accent-soft)}
-.chapter-identity-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
-.chapter-identity-art::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#1020195c,transparent 65%)}
-.chapter-identity-number{position:absolute;z-index:1;left:23px;bottom:14px;font:500 55px/1 Georgia,serif;color:#fff8ed;letter-spacing:.025em;text-shadow:0 2px 12px #0004}
-.chapter-identity-art figcaption{position:absolute;z-index:1;right:16px;bottom:15px;border:1px solid #ffffff66;border-radius:20px;background:#213a3270;color:#fff8ed;font-size:10px;line-height:1.6;padding:3px 9px}
+.chapter-identity-art{display:grid;grid-template-columns:auto 1fr;align-items:center;margin:0;background:var(--accent-soft)}
+.chapter-identity-art img{grid-column:1/-1;display:block;width:100%;height:auto;max-height:min(55svh,460px);object-fit:contain}
+.chapter-identity-number{padding:10px 23px;font:500 29px/1.2 Georgia,serif;color:var(--accent);letter-spacing:.025em}
+.chapter-identity-art figcaption{justify-self:end;color:var(--muted);font-size:10px;line-height:1.6;padding:10px 16px;text-align:right}
 .chapter-identity-body{padding:21px 24px 18px}
 .chapter-identity-kicker{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px 15px;margin:0 0 9px;font-size:11px;line-height:1.8;letter-spacing:.04em;color:var(--accent)}
 .chapter-identity-kicker span{font-size:10px;color:var(--muted);letter-spacing:0}
@@ -21,21 +20,19 @@
 .chapter-identity .chapter-identity-next{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;padding:12px 0 3px;font-size:14px;text-align:left}
 .chapter-identity-next span{display:grid;gap:3px;line-height:1.7}
 .chapter-identity-next small{font-size:10px;color:var(--muted);letter-spacing:.05em}
-.chapter-identity-recap .chapter-identity-art{height:190px}
-.dialog-body .chapter-identity-art{height:160px}
+.chapter-identity-recap .chapter-identity-art img{max-height:min(48svh,380px)}
+.dialog-body .chapter-identity-art img{max-height:min(38svh,300px)}
 .dialog-body .chapter-identity-body{padding:17px 18px 13px}
 .dialog-body .chapter-identity .chapter-identity-title{font-size:23px}
 @media(max-width:640px){
   .chapter-guide.chapter-identity,.chapter-recap.chapter-identity{border-radius:8px;margin-bottom:22px}
-  .chapter-identity-art,.chapter-identity-recap .chapter-identity-art{height:160px}
-  .chapter-identity-number{font-size:44px;left:17px;bottom:12px}
-  .chapter-identity-art figcaption{right:12px;bottom:12px;font-size:9px}
+  .chapter-identity-number{font-size:25px;padding:9px 17px}
+  .chapter-identity-art figcaption{padding:9px 12px;font-size:9px}
   .chapter-identity-body{padding:16px 17px 13px}
   .chapter-identity .chapter-identity-title{font-size:24px;margin-bottom:9px;letter-spacing:.025em}
   .chapter-identity .chapter-identity-focus{font-size:13px;margin-bottom:12px}
   .chapter-identity-kicker{gap:4px 12px;font-size:10px;margin-bottom:7px}
   .chapter-identity-kicker span{font-size:9px}
   .chapter-identity-detail-body>p:not(.editor-label),.chapter-identity-detail-body ol{font-size:12px}
-  .dialog-body .chapter-identity-art{height:140px}
   .dialog-body .chapter-identity-body{padding:15px 16px 11px}
 }

@@ -119,7 +119,7 @@ function SourceViewer({ target, onClose }: { target: SourceTarget; onClose: () =
 
   useLayoutEffect(() => {
     const stage = stageRef.current;
-    if (stage) stage.scrollTo({ left: zoomed ? (stage.scrollWidth - stage.clientWidth) / 2 : 0, top: zoomed ? (stage.scrollHeight - stage.clientHeight) / 2 : 0 });
+    if (stage) stage.scrollTo({ left: zoomed ? (stage.scrollWidth - stage.clientWidth) / 2 : 0, top: 0 });
   }, [zoomed]);
 
   const turnPage = (next: number) => {
